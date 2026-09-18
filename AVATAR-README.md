@@ -146,3 +146,5 @@ python3 export_demo.py
 输出评测扩展：已覆盖五类15条受控探针、三驱动45次输出和六种浏览器组合；范围及未完成项见[输出与浏览器基线](docs/AVATAR-OUTPUT-BASELINE-2026-09-19.md)。
 
 已有捕获可用[本地质量复核页](docs/AVATAR-QUALITY-REVIEW.md)连续播放、逐帧回看和按时间段标注；人工判断与自动检查分开保存，未评估项不会自动计为通过。
+
+[3D结构与运动基线](docs/AVATAR-GEOMETRY-BASELINE.md)覆盖15段1366帧，记录逐帧面积与运动峰值；数值完整性与感知质量分别报告。
