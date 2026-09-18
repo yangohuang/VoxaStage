@@ -16,6 +16,8 @@ api_backends.py test_api_backends.py test_voice_matching.py
 llm_server.py ctl.py asr_ctl.py test_ctl_config.py test_tts_resources.py
 test_dialogue_backends.py test_omni_backend.py test_omni_processor.py test_omni_route.py
 benchmark_avatar.py avatar_eval_metrics.py test_benchmark_avatar.py test_avatar_eval_metrics.py
+prepare_avatar_cases.py avatar_eval_capture.py capture_avatar.py
+test_prepare_avatar_cases.py test_avatar_eval_capture.py test_capture_avatar.py
 requirements.in requirements.lock install_demo.sh export_demo.py
 .env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
 AVATAR-PROTOCOL.md AVATAR-MULTIDRIVER-RESULTS.md
@@ -25,7 +27,7 @@ docs/assets/streamingtalker-idle.png docs/assets/conversation-preview.png'''.spl
 
 def export(output):
     files = [ROOT / name for name in FILES]
-    for directory in ('avatar-web', 'avatar-server', 'video-server', 'omni-server', 'tts-compat', 'docs'):
+    for directory in ('avatar-web', 'avatar-server', 'video-server', 'omni-server', 'tts-compat', 'docs', 'evaluation'):
         for path in (ROOT / directory).rglob('*'):
             if (path.is_file() and not path.is_symlink() and '__pycache__' not in path.parts
                     and path.name != 'requirements.local.lock'
