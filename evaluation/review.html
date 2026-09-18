@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VoxaStage · 质量复核</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,sans-serif;color:#1c303b;background:#f2f5f5}*{box-sizing:border-box}body{margin:0}main{max-width:1160px;margin:auto;padding:28px 24px}h1{font-size:26px;margin:6px 0 12px}h2{font-size:18px;margin:0 0 16px}.eyebrow{font-size:12px;letter-spacing:.16em;color:#427477}.intro{max-width:850px;color:#52646e;line-height:1.6}.layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(310px,1fr);gap:20px;margin-top:24px}.panel{background:white;border:1px solid #dce4e5;border-radius:14px;padding:20px}.stage{height:370px;position:relative;background:#132631;border-radius:10px;overflow:hidden;margin:14px 0}.stage canvas{width:100%;height:100%;position:absolute;inset:0}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.controls{display:flex;gap:8px;margin:12px 0}.controls button{flex:1}label{display:block;font-size:13px;font-weight:600;margin:12px 0 5px}input,select,textarea,button{font:inherit;border:1px solid #bccace;border-radius:7px;padding:9px;background:white;color:inherit}input,select,textarea{width:100%}button{cursor:pointer}button:disabled{opacity:.5;cursor:default}button.primary{background:#226568;border-color:#226568;color:white}textarea{min-height:70px;resize:vertical}audio{width:100%;height:36px}.small{font-size:12px;color:#536972;line-height:1.5}.status{min-height:22px;color:#226568;font-size:14px;margin:10px 0}#error{color:#a52f3e}#frame{padding:0}#confirmed{width:auto}.check{display:flex;align-items:center;gap:8px;font-weight:400}.records{margin-top:20px;overflow:auto}table{border-collapse:collapse;width:100%;font-size:13px}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid #e6ebeb;vertical-align:top}td:last-child{min-width:160px;white-space:pre-wrap}.badge{font-size:12px;border-radius:30px;background:#e6f0ed;color:#285d51;padding:5px 9px}#save{width:100%;margin-top:12px}#export{flex:0 0 auto}.record-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}@media(max-width:780px){main{padding:18px 12px}.layout{grid-template-columns:1fr}.stage{height:340px}}
+</style></head><body><main>
+<div class="eyebrow">VOXASTAGE / LOCAL REVIEW</div><h1>音画质量复核</h1>
+<p class="intro">按原始帧时间重放已保存的样片。可以暂停、逐帧查看，再记录具体时段的问题。样片编号隐藏驱动名称；素材只在本地读取。播放完成不代表质量通过。</p>
+<div class="layout"><section class="panel" aria-label="样片播放">
+<div class="row"><h2>样片</h2><span id="kind" class="badge">等待载入</span></div>
+<label for="clip">选择复核样片</label><select id="clip" disabled></select>
+<div class="stage"><canvas id="portrait" aria-label="2D样片画面"></canvas><canvas id="head" aria-label="3D正面网格画面" hidden></canvas></div>
+<audio id="audio" controls preload="auto"></audio>
+<div class="controls"><button id="previous" disabled>上一帧</button><button id="play" class="primary" disabled>播放</button><button id="next" disabled>下一帧</button></div>
+<label for="frame">逐帧定位 <span id="position">—</span></label><input id="frame" type="range" min="0" max="0" value="0" step="1" disabled>
+<div id="status" class="status" role="status">读取本地捕获清单…</div><div id="error" role="alert"></div>
+<p class="small">2D按原图比例显示；3D使用固定正面视角与现有网格渲染器。此页预载后播放，供帧延迟与在线卡顿应查看独立性能报告。</p>
+</section><section class="panel" aria-label="复核记录"><h2>记录观察</h2>
+<p class="small">没有复核的维度保持未评估。请先试听和观看所选时间段；自动检查与人工判断分别保存。</p>
+<div class="row"><div><label for="reviewer">复核者代号</label><input id="reviewer" maxlength="80" autocomplete="off" placeholder="例如 reviewer-01"></div><div><label for="reviewer-kind">复核来源</label><select id="reviewer-kind"><option value="human">人工复核</option><option value="automated">自动检查</option></select></div></div>
+<label for="dimension">评估维度</label><select id="dimension"><option value="timing">口型时序</option><option value="phonetics">口型内容（需试听）</option><option value="continuity">时序连续 / 抖动</option><option value="appearance">身份与外观（2D）</option><option value="pose">头姿与表情</option></select>
+<div class="row"><div><label for="start">起点 / 秒</label><input id="start" type="number" min="0" step="0.001" value="0"></div><div><label for="end">终点 / 秒</label><input id="end" type="number" min="0" step="0.001"></div></div>
+<div class="controls"><button id="mark-start" disabled>当前时间设为起点</button><button id="mark-end" disabled>当前时间设为终点</button></div>
+<label for="severity">严重程度</label><select id="severity"><option value="">未评估</option><option value="0">0 · 已复核，未观察到问题</option><option value="1">1 · 可察觉，不影响理解</option><option value="2">2 · 持续明显</option><option value="3">3 · 不可用</option></select>
+<label for="notes">现象与依据</label><textarea id="notes" maxlength="2000" placeholder="写明出现什么现象，以及判断依据；不要只写好或差。"></textarea>
+<label class="check"><input id="confirmed" type="checkbox">我已复核上面选定的时间段</label>
+<button id="save" class="primary" disabled>保存本地记录</button><div id="save-status" class="status" role="status"></div>
+</section></div>
+<section class="panel records"><div class="record-head"><h2>已保存的复核记录</h2><button id="export">导出 JSON</button></div><p id="empty" class="small">暂无记录；未评估不计为通过。</p><table><thead><tr><th>样片 / 来源</th><th>范围 / 秒</th><th>维度 / 程度</th><th>观察</th></tr></thead><tbody id="records"></tbody></table></section>
+</main><script type="module" src="/review.mjs"></script></body></html>
