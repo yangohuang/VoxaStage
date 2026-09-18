@@ -43,3 +43,5 @@ const trace = voxaProbe.snapshot();
 - 异常也会执行disconnect；事件/音源记录有上限，`truncated=true`的证据不得用于完整性结论。不要在同一页面无限累积轮次。
 
 成功只支持本次输入、环境和事件边界；必须区分首轮、预加载和重复请求。物理设备回声、人工试听、语音打断、精确采集样本时间及长期稳定性仍需要独立评测。
+
+固定同一段PCM排除ASR/LLM/TTS变化时，可使用[独立播放评测页](FIXED-PLAYBACK-BASELINE.md)，同时查看2D和3D输出。
