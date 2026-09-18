@@ -105,6 +105,8 @@ mkdir -p runtime/numba-cache
 
 ## 验证与边界
 
+新增[数字人适配层基线工具](docs/AVATAR-EVALUATION.md)：统一输入哈希、重复运行、失败计数、PCM与时间戳检查。完整质量与端到端评测按[阶段路线](docs/plans/2026-09-19-roadmap.md)逐步补齐。
+
 已有验收包括真实模型回复、三种驱动的打断恢复、男女声路由和 idle 切换；自动化回归覆盖 **65 项应用 Python 测试、6 项 MiniCPM worker 测试、16 项前端测试**。测试命令：
 
 ```bash

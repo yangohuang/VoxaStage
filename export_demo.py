@@ -15,6 +15,7 @@ dialogue_backends.py omni_backend.py omni_processor.py
 api_backends.py test_api_backends.py test_voice_matching.py
 llm_server.py ctl.py asr_ctl.py test_ctl_config.py test_tts_resources.py
 test_dialogue_backends.py test_omni_backend.py test_omni_processor.py test_omni_route.py
+benchmark_avatar.py avatar_eval_metrics.py test_benchmark_avatar.py test_avatar_eval_metrics.py
 requirements.in requirements.lock install_demo.sh export_demo.py
 .env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
 AVATAR-PROTOCOL.md AVATAR-MULTIDRIVER-RESULTS.md
