@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>VoxaStage · 实时语音数字人</title>
+  <link rel="stylesheet" href="/avatar/static/style.css">
+  <script type="module" src="/avatar/static/app.mjs"></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="/avatar" aria-label="VoxaStage 首页"><span class="brand-mark">声</span><span>VoxaStage<small>REALTIME VOICE / AVATAR</small></span></a>
+      <div class="connection"><span id="connection-dot" class="dot"></span><span id="connection-label">未连接</span></div>
+    </header>
+    <main>
+      <section class="stage" aria-label="数字人画面">
+        <div class="stage-heading"><div><p class="eyebrow">声音，拥有了表情</p><h1>面对面，说说话。</h1></div><span class="version">本地演示</span></div>
+        <div class="viewport">
+          <div class="halo" aria-hidden="true"></div>
+          <canvas id="head" aria-label="由语音驱动的实时三维头部网格"></canvas>
+          <canvas id="portrait" aria-label="由语音驱动的实时二维肖像" hidden></canvas>
+          <video id="idle-video" muted loop playsinline preload="auto" aria-label="数字人待机动画" hidden></video>
+          <div id="placeholder" class="placeholder"><span class="idle-mark" aria-hidden="true">◌</span><p id="placeholder-text">连接后，第一句话会点亮这里</p></div>
+          <div class="viewport-caption"><span class="tiny-dot"></span><span id="stage-label">3D 头部示例 · 非真人形象</span></div>
+        </div>
+        <div class="stage-footer"><div><span class="status-title" id="activity">准备就绪</span><p id="activity-detail">连接服务后，可开启麦克风或发送文字。</p></div><div class="audio-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="controls"><label class="provider-control" for="dialogue-backend"><span>对话模型</span><select id="dialogue-backend"><option value="cascade">Qwen · 级联语音</option></select></label><label class="provider-control" for="provider"><span>数字人驱动</span><select id="provider" aria-describedby="provider-description"><option value="streamingtalker">StreamingTalker · 3D</option></select></label><span id="provider-description" class="sr-only">连接前选择数字人驱动，连接后将锁定。</span><button id="connect" class="primary">连接会话 <span>↗</span></button><button id="microphone" disabled aria-pressed="false">开启麦克风</button><button id="interrupt" disabled>打断</button><button id="disconnect" class="quiet" disabled>断开</button></div>
+      </section>
+      <aside class="conversation" aria-label="对话面板">
+        <div class="panel-heading"><div><p class="eyebrow">CONVERSATION</p><h2>这一次对话</h2></div><span class="local-label">本地运行</span></div>
+        <div id="messages" class="messages" role="log" aria-live="polite" aria-relevant="additions text">
+          <div id="welcome" class="welcome"><span class="welcome-icon" aria-hidden="true">✳</span><h3>从一句问候开始</h3><p>可以直接说话，也可以输入文字。<br>回复的声音与嘴型会同步呈现。</p><div class="suggestion">试试：你好，介绍一下你自己。</div></div>
+        </div>
+        <div id="notice" class="notice" role="status" hidden></div>
+        <form id="text-form"><label class="sr-only" for="text-input">输入消息</label><textarea id="text-input" rows="2" maxlength="500" placeholder="输入一句话…" disabled></textarea><div class="composer-footer"><span>Enter 发送 · Shift + Enter 换行</span><button id="send" class="send" type="submit" disabled aria-label="发送消息">↑</button></div></form>
+        <p class="privacy-note">麦克风由你开启；断开会话后停止采集。</p>
+      </aside>
+    </main>
+    <footer class="page-footer"><span>LOCAL VOICE EXPERIENCE</span><span>实时语音 · 音画同步 · 可随时打断</span></footer>
+  </div>
+</body>
+</html>

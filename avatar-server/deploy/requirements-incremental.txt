@@ -1,0 +1,2 @@
+# Install into the existing StreamingTalker serving environment.
+websockets==15.0.1
