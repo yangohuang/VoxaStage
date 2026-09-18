@@ -1,0 +1,31 @@
+--- a/algorithms/models/diff_ar.py
++++ b/algorithms/models/diff_ar.py
+@@ -1,3 +1,4 @@
++# Local serving overlay: defer visualization import for headless inference.
+ import os
+ import time
+ import torch
+@@ -13,7 +14,6 @@
+ from transformers import Wav2Vec2Model, HubertModel
+ from pytorch_lightning import LightningModule
+ 
+-from utils.demo_utils import animate
+ from algorithms.models.base import BaseTrainer
+ from algorithms.models.architectures import DiffARDecNetwork, VQAutoEncoder
+ from algorithms.metrics.losses import MaskedLosses
+@@ -426,6 +426,8 @@
+                 otherwise, the visualization will be performed in a new thread
+         """
+         # visualize the result only for the first data in the batch
++        from utils.demo_utils import animate
++
+         data_idx = 0
+ 
+         audio_path = batch['file_path'][data_idx]
+@@ -461,4 +463,4 @@
+                     self.cfg.DEMO.FPS,
+                     ),
+                 )
+-            p.start()
+\ No newline at end of file
++            p.start()
