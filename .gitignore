@@ -1,0 +1,15 @@
+.venv/
+.venv-asr/
+.venv-qwen-asr/
+models/
+asr-eval/*.wav
+runtime/
+artifacts/
+__pycache__/
+.env
+dist/
+
+*.pyc
+.pytest_cache/
+.venv*/
+.DS_Store
