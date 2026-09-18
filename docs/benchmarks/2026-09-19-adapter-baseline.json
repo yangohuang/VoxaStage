@@ -1,0 +1,1907 @@
+{
+  "flashhead": {
+    "version": 1,
+    "status": "passed",
+    "passed": true,
+    "mode": "burst",
+    "created_at": "2026-09-18T16:56:44.633554+00:00",
+    "trials": [
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "warmup",
+        "index": 0,
+        "status": "passed",
+        "metrics": {
+          "frames": 184,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.3697613775730133,
+          "wall_s": 6.6915109334513545,
+          "wall_audio_ratio": 0.9118104480399737,
+          "max_receive_gap_s": 0.33511974290013313,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 1,
+        "status": "passed",
+        "metrics": {
+          "frames": 184,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.3463608929887414,
+          "wall_s": 6.668309987522662,
+          "wall_audio_ratio": 0.9086489998838573,
+          "max_receive_gap_s": 0.33354149479418993,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 2,
+        "status": "passed",
+        "metrics": {
+          "frames": 184,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.35979645419865847,
+          "wall_s": 6.681921961717308,
+          "wall_audio_ratio": 0.9105038186852557,
+          "max_receive_gap_s": 0.33597162552177906,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 3,
+        "status": "passed",
+        "metrics": {
+          "frames": 184,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.346813028678298,
+          "wall_s": 6.668148333206773,
+          "wall_audio_ratio": 0.9086269722587567,
+          "max_receive_gap_s": 0.3333675507456064,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "interrupt",
+        "index": 4,
+        "status": "passed",
+        "metrics": {
+          "frames": 1,
+          "received_samples": 960,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.34712700452655554,
+          "wall_s": 0.3496748208999634,
+          "wall_audio_ratio": 0.047648006299922906,
+          "max_receive_gap_s": null,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": null,
+          "prefix_exact": true,
+          "completed": false,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "recovery",
+        "index": 5,
+        "status": "passed",
+        "metrics": {
+          "frames": 184,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.34076074697077274,
+          "wall_s": 6.662127968855202,
+          "wall_audio_ratio": 0.907806614768294,
+          "max_receive_gap_s": 0.33353518042713404,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "warmup",
+        "index": 0,
+        "status": "passed",
+        "metrics": {
+          "frames": 176,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.34393360558897257,
+          "wall_s": 6.345242157578468,
+          "wall_audio_ratio": 0.9013128064742143,
+          "max_receive_gap_s": 0.3354109926149249,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 1,
+        "status": "passed",
+        "metrics": {
+          "frames": 176,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.3518864382058382,
+          "wall_s": 6.352985774166882,
+          "wall_audio_ratio": 0.9024127520123412,
+          "max_receive_gap_s": 0.33479765988886356,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 2,
+        "status": "passed",
+        "metrics": {
+          "frames": 176,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.3429154995828867,
+          "wall_s": 6.3460345435887575,
+          "wall_audio_ratio": 0.9014253613052212,
+          "max_receive_gap_s": 0.3386412961408496,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 3,
+        "status": "passed",
+        "metrics": {
+          "frames": 176,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.348406414501369,
+          "wall_s": 6.349406959488988,
+          "wall_audio_ratio": 0.9019043976546858,
+          "max_receive_gap_s": 0.33329588640481234,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "interrupt",
+        "index": 4,
+        "status": "passed",
+        "metrics": {
+          "frames": 1,
+          "received_samples": 960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.3490929789841175,
+          "wall_s": 0.351512941531837,
+          "wall_audio_ratio": 0.04993081555849957,
+          "max_receive_gap_s": null,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": null,
+          "prefix_exact": true,
+          "completed": false,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "recovery",
+        "index": 5,
+        "status": "passed",
+        "metrics": {
+          "frames": 176,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.3397791190072894,
+          "wall_s": 6.342303264886141,
+          "wall_audio_ratio": 0.9008953501258723,
+          "max_receive_gap_s": 0.3536102715879679,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "warmup",
+        "index": 0,
+        "status": "passed",
+        "metrics": {
+          "frames": 122,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.35943522676825523,
+          "wall_s": 4.200494111515582,
+          "wall_audio_ratio": 0.8635884275319864,
+          "max_receive_gap_s": 0.3367366287857294,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 1,
+        "status": "passed",
+        "metrics": {
+          "frames": 122,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.3483874760568142,
+          "wall_s": 4.189243018627167,
+          "wall_audio_ratio": 0.8612752916585458,
+          "max_receive_gap_s": 0.3382397787645459,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 2,
+        "status": "passed",
+        "metrics": {
+          "frames": 122,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.3452036650851369,
+          "wall_s": 4.186408681795001,
+          "wall_audio_ratio": 0.8606925743821959,
+          "max_receive_gap_s": 0.3466973025351763,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 3,
+        "status": "passed",
+        "metrics": {
+          "frames": 122,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.34842220693826675,
+          "wall_s": 4.190456117503345,
+          "wall_audio_ratio": 0.8615246952103917,
+          "max_receive_gap_s": 0.3355258386582136,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "interrupt",
+        "index": 4,
+        "status": "passed",
+        "metrics": {
+          "frames": 1,
+          "received_samples": 960,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.3431752063333988,
+          "wall_s": 0.34548032097518444,
+          "wall_audio_ratio": 0.0710280265162797,
+          "max_receive_gap_s": null,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": null,
+          "prefix_exact": true,
+          "completed": false,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "recovery",
+        "index": 5,
+        "status": "passed",
+        "metrics": {
+          "frames": 122,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.345117655582726,
+          "wall_s": 4.1873201401904225,
+          "wall_audio_ratio": 0.8608799630325704,
+          "max_receive_gap_s": 0.3331023920327425,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      }
+    ],
+    "summary": [
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "mode": "burst",
+        "attempted": 3,
+        "passed": 3,
+        "failed": 0,
+        "metrics": {
+          "first_media_s": {
+            "n": 3,
+            "p50": 0.346813028678298,
+            "p95": 0.35849811164662243
+          },
+          "wall_s": {
+            "n": 3,
+            "p50": 6.668309987522662,
+            "p95": 6.680560764297843
+          },
+          "wall_audio_ratio": {
+            "n": 3,
+            "p50": 0.9086489998838573,
+            "p95": 0.9103183368051158
+          }
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "mode": "burst",
+        "attempted": 3,
+        "passed": 3,
+        "failed": 0,
+        "metrics": {
+          "first_media_s": {
+            "n": 3,
+            "p50": 0.348406414501369,
+            "p95": 0.3515384358353913
+          },
+          "wall_s": {
+            "n": 3,
+            "p50": 6.349406959488988,
+            "p95": 6.352627892699093
+          },
+          "wall_audio_ratio": {
+            "n": 3,
+            "p50": 0.9019043976546858,
+            "p95": 0.9023619165765757
+          }
+        }
+      },
+      {
+        "provider": "flashhead",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "mode": "burst",
+        "attempted": 3,
+        "passed": 3,
+        "failed": 0,
+        "metrics": {
+          "first_media_s": {
+            "n": 3,
+            "p50": 0.3483874760568142,
+            "p95": 0.3484187338501215
+          },
+          "wall_s": {
+            "n": 3,
+            "p50": 4.189243018627167,
+            "p95": 4.190334807615727
+          },
+          "wall_audio_ratio": {
+            "n": 3,
+            "p50": 0.8612752916585458,
+            "p95": 0.861499754855207
+          }
+        }
+      }
+    ],
+    "scope": "avatar_adapter_receive; not model-only RTF, speech pipeline or device playback",
+    "quality": {
+      "lip_sync": {
+        "measured": false
+      },
+      "identity": {
+        "measured": false
+      },
+      "visual_artifacts": {
+        "measured": false
+      },
+      "browser_playback": {
+        "measured": false
+      },
+      "physical_audio": {
+        "measured": false
+      }
+    },
+    "deployment_label": "FlashHead Lite 9bc03de / RTX4090 shared GPU / preloaded",
+    "provenance": {
+      "python": "3.11.15",
+      "platform": "Linux",
+      "git_commit": "a27a47269037f82fb8cad561004385a735476793",
+      "packages": {
+        "numpy": "2.4.6",
+        "soxr": "1.0.0",
+        "websockets": "17.1",
+        "pillow": "12.3.0",
+        "av": "17.1.0"
+      },
+      "source_sha256": {
+        "benchmark_avatar.py": "9b2d15bc0be52afec35b7ee7416f589bc711904e7cdfb8853ec81b656fb65785",
+        "avatar_eval_metrics.py": "4a4f36751847d40d16ef3620797536553815a5d7a30d0818f909a30f1fcf90b8",
+        "avatar_backend.py": "d206f9692641bbc766566e42096b542b9459562938b6f94d31c5d82a5c92a9f8",
+        "avatar_video_backend.py": "4b262eec927f4bc9cf074c9562da2cc607dab811f3b305ee1dfba7ea469b8217",
+        "dinet_backend.py": "cfcabf1ea6290aa7f354b95dfb7e8fc70caba8523edce23ba4b7571c76531d59",
+        "avatar_providers.py": "2e2ba9e9048b588497f32f0296374369162bd82b51ea2fc5b095e1bec7756ca5"
+      }
+    },
+    "manifest_sha256": "478e1bbca4b99f1c9589001707fee88441b865727b5decbf0f8193a17d05f7b5",
+    "cases": [
+      {
+        "id": "mixed-00",
+        "category": "mixed",
+        "source": "synthetic",
+        "transcript": "介绍一下语音agent技术，重点说说Pipecat和MiniCPM-o的区别。",
+        "transcript_reviewed": false,
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "audio_duration_s": 7.338708333333333
+      },
+      {
+        "id": "mixed-01",
+        "category": "mixed",
+        "source": "synthetic",
+        "transcript": "我想把DINet、FlashHead和StreamingTalker接入同一个语音系统。",
+        "transcript_reviewed": false,
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "audio_duration_s": 7.04
+      },
+      {
+        "id": "mixed-02",
+        "category": "mixed",
+        "source": "synthetic",
+        "transcript": "请解释一下VAD打断和ASR识别有什么区别。",
+        "transcript_reviewed": false,
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "audio_duration_s": 4.864
+      }
+    ],
+    "parameters": {
+      "rounds": 3,
+      "warmup": 1,
+      "timeout_s": 90,
+      "interrupt": true
+    }
+  },
+  "dinet": {
+    "version": 1,
+    "status": "passed",
+    "passed": true,
+    "mode": "burst",
+    "created_at": "2026-09-18T16:58:11.937620+00:00",
+    "trials": [
+      {
+        "provider": "dinet",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "warmup",
+        "index": 0,
+        "status": "passed",
+        "metrics": {
+          "frames": 184,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.0883818594738841,
+          "wall_s": 7.660533366724849,
+          "wall_audio_ratio": 1.043853089504831,
+          "max_receive_gap_s": 0.2616720087826252,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 1,
+        "status": "passed",
+        "metrics": {
+          "frames": 184,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.10582072846591473,
+          "wall_s": 7.680677349679172,
+          "wall_audio_ratio": 1.046597984388148,
+          "max_receive_gap_s": 0.2589393611997366,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 2,
+        "status": "passed",
+        "metrics": {
+          "frames": 184,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.08895434718579054,
+          "wall_s": 7.685874775052071,
+          "wall_audio_ratio": 1.047306205118122,
+          "max_receive_gap_s": 0.2637432236224413,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 3,
+        "status": "passed",
+        "metrics": {
+          "frames": 184,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.09575236774981022,
+          "wall_s": 7.661755063571036,
+          "wall_audio_ratio": 1.0440195625121635,
+          "max_receive_gap_s": 0.2624204345047474,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "interrupt",
+        "index": 4,
+        "status": "passed",
+        "metrics": {
+          "frames": 1,
+          "received_samples": 960,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.08149312250316143,
+          "wall_s": 0.5824455264955759,
+          "wall_audio_ratio": 0.07936621814632357,
+          "max_receive_gap_s": null,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": null,
+          "prefix_exact": true,
+          "completed": false,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "recovery",
+        "index": 5,
+        "status": "passed",
+        "metrics": {
+          "frames": 184,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.07358638104051352,
+          "wall_s": 7.636974461376667,
+          "wall_audio_ratio": 1.0406428644518508,
+          "max_receive_gap_s": 0.26678905356675386,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "warmup",
+        "index": 0,
+        "status": "passed",
+        "metrics": {
+          "frames": 176,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.06499523855745792,
+          "wall_s": 7.4709103545174,
+          "wall_audio_ratio": 1.0612088571757672,
+          "max_receive_gap_s": 0.2612498477101326,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 1,
+        "status": "passed",
+        "metrics": {
+          "frames": 176,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.07988287135958672,
+          "wall_s": 7.43897423800081,
+          "wall_audio_ratio": 1.0566724769887514,
+          "max_receive_gap_s": 0.2803457388654351,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 2,
+        "status": "passed",
+        "metrics": {
+          "frames": 176,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.13265896867960691,
+          "wall_s": 7.467874176800251,
+          "wall_audio_ratio": 1.060777581931854,
+          "max_receive_gap_s": 0.30312452372163534,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 3,
+        "status": "passed",
+        "metrics": {
+          "frames": 176,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.06922623701393604,
+          "wall_s": 7.445796298794448,
+          "wall_audio_ratio": 1.0576415197151205,
+          "max_receive_gap_s": 0.26761888340115547,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "interrupt",
+        "index": 4,
+        "status": "passed",
+        "metrics": {
+          "frames": 1,
+          "received_samples": 960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.1386181190609932,
+          "wall_s": 0.6397512154653668,
+          "wall_audio_ratio": 0.09087375219678506,
+          "max_receive_gap_s": null,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": null,
+          "prefix_exact": true,
+          "completed": false,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "recovery",
+        "index": 5,
+        "status": "passed",
+        "metrics": {
+          "frames": 176,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.07112360745668411,
+          "wall_s": 7.456703515723348,
+          "wall_audio_ratio": 1.059190840301612,
+          "max_receive_gap_s": 0.26709401421248913,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "warmup",
+        "index": 0,
+        "status": "passed",
+        "metrics": {
+          "frames": 122,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.1266194460913539,
+          "wall_s": 5.281315293163061,
+          "wall_audio_ratio": 1.0857967296799056,
+          "max_receive_gap_s": 0.29471225943416357,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 1,
+        "status": "passed",
+        "metrics": {
+          "frames": 122,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.07268604077398777,
+          "wall_s": 5.238826824352145,
+          "wall_audio_ratio": 1.0770614359276613,
+          "max_receive_gap_s": 0.2927240887656808,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 2,
+        "status": "passed",
+        "metrics": {
+          "frames": 122,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.14157457649707794,
+          "wall_s": 5.238480237312615,
+          "wall_audio_ratio": 1.0769901803685475,
+          "max_receive_gap_s": 0.2994690462946892,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 3,
+        "status": "passed",
+        "metrics": {
+          "frames": 122,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.07478355523198843,
+          "wall_s": 5.25493183452636,
+          "wall_audio_ratio": 1.0803724988746628,
+          "max_receive_gap_s": 0.2678152471780777,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "interrupt",
+        "index": 4,
+        "status": "passed",
+        "metrics": {
+          "frames": 1,
+          "received_samples": 960,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.08786323200911283,
+          "wall_s": 0.5888998955488205,
+          "wall_audio_ratio": 0.1210731693151358,
+          "max_receive_gap_s": null,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": null,
+          "prefix_exact": true,
+          "completed": false,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "recovery",
+        "index": 5,
+        "status": "passed",
+        "metrics": {
+          "frames": 122,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.10872097872197628,
+          "wall_s": 5.239962277933955,
+          "wall_audio_ratio": 1.0772948762199743,
+          "max_receive_gap_s": 0.28260756842792034,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      }
+    ],
+    "summary": [
+      {
+        "provider": "dinet",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "mode": "burst",
+        "attempted": 3,
+        "passed": 3,
+        "failed": 0,
+        "metrics": {
+          "first_media_s": {
+            "n": 3,
+            "p50": 0.09575236774981022,
+            "p95": 0.10481389239430428
+          },
+          "wall_s": {
+            "n": 3,
+            "p50": 7.680677349679172,
+            "p95": 7.685355032514781
+          },
+          "wall_audio_ratio": {
+            "n": 3,
+            "p50": 1.046597984388148,
+            "p95": 1.0472353830451246
+          }
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "mode": "burst",
+        "attempted": 3,
+        "passed": 3,
+        "failed": 0,
+        "metrics": {
+          "first_media_s": {
+            "n": 3,
+            "p50": 0.07988287135958672,
+            "p95": 0.12738135894760488
+          },
+          "wall_s": {
+            "n": 3,
+            "p50": 7.445796298794448,
+            "p95": 7.46566638899967
+          },
+          "wall_audio_ratio": {
+            "n": 3,
+            "p50": 1.0576415197151205,
+            "p95": 1.0604639757101806
+          }
+        }
+      },
+      {
+        "provider": "dinet",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "mode": "burst",
+        "attempted": 3,
+        "passed": 3,
+        "failed": 0,
+        "metrics": {
+          "first_media_s": {
+            "n": 3,
+            "p50": 0.07478355523198843,
+            "p95": 0.13489547437056898
+          },
+          "wall_s": {
+            "n": 3,
+            "p50": 5.238826824352145,
+            "p95": 5.253321333508939
+          },
+          "wall_audio_ratio": {
+            "n": 3,
+            "p50": 1.0770614359276613,
+            "p95": 1.0800413925799628
+          }
+        }
+      }
+    ],
+    "scope": "avatar_adapter_receive; not model-only RTF, speech pipeline or device playback",
+    "quality": {
+      "lip_sync": {
+        "measured": false
+      },
+      "identity": {
+        "measured": false
+      },
+      "visual_artifacts": {
+        "measured": false
+      },
+      "browser_playback": {
+        "measured": false
+      },
+      "physical_audio": {
+        "measured": false
+      }
+    },
+    "deployment_label": "DINet existing deployed worker / RTX4090 shared GPU / preloaded",
+    "provenance": {
+      "python": "3.11.15",
+      "platform": "Linux",
+      "git_commit": "a27a47269037f82fb8cad561004385a735476793",
+      "packages": {
+        "numpy": "2.4.6",
+        "soxr": "1.0.0",
+        "websockets": "17.1",
+        "pillow": "12.3.0",
+        "av": "17.1.0"
+      },
+      "source_sha256": {
+        "benchmark_avatar.py": "9b2d15bc0be52afec35b7ee7416f589bc711904e7cdfb8853ec81b656fb65785",
+        "avatar_eval_metrics.py": "4a4f36751847d40d16ef3620797536553815a5d7a30d0818f909a30f1fcf90b8",
+        "avatar_backend.py": "d206f9692641bbc766566e42096b542b9459562938b6f94d31c5d82a5c92a9f8",
+        "avatar_video_backend.py": "4b262eec927f4bc9cf074c9562da2cc607dab811f3b305ee1dfba7ea469b8217",
+        "dinet_backend.py": "cfcabf1ea6290aa7f354b95dfb7e8fc70caba8523edce23ba4b7571c76531d59",
+        "avatar_providers.py": "2e2ba9e9048b588497f32f0296374369162bd82b51ea2fc5b095e1bec7756ca5"
+      }
+    },
+    "manifest_sha256": "478e1bbca4b99f1c9589001707fee88441b865727b5decbf0f8193a17d05f7b5",
+    "cases": [
+      {
+        "id": "mixed-00",
+        "category": "mixed",
+        "source": "synthetic",
+        "transcript": "介绍一下语音agent技术，重点说说Pipecat和MiniCPM-o的区别。",
+        "transcript_reviewed": false,
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "audio_duration_s": 7.338708333333333
+      },
+      {
+        "id": "mixed-01",
+        "category": "mixed",
+        "source": "synthetic",
+        "transcript": "我想把DINet、FlashHead和StreamingTalker接入同一个语音系统。",
+        "transcript_reviewed": false,
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "audio_duration_s": 7.04
+      },
+      {
+        "id": "mixed-02",
+        "category": "mixed",
+        "source": "synthetic",
+        "transcript": "请解释一下VAD打断和ASR识别有什么区别。",
+        "transcript_reviewed": false,
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "audio_duration_s": 4.864
+      }
+    ],
+    "parameters": {
+      "rounds": 3,
+      "warmup": 1,
+      "timeout_s": 90,
+      "interrupt": true
+    }
+  },
+  "streamingtalker": {
+    "version": 1,
+    "status": "passed",
+    "passed": true,
+    "mode": "burst",
+    "created_at": "2026-09-18T16:59:55.854422+00:00",
+    "trials": [
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "warmup",
+        "index": 0,
+        "status": "passed",
+        "metrics": {
+          "frames": 221,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.07807284407317638,
+          "wall_s": 1.5929759312421083,
+          "wall_audio_ratio": 0.21706489192472905,
+          "max_receive_gap_s": 0.06470556184649467,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 1,
+        "status": "passed",
+        "metrics": {
+          "frames": 221,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.08593641314655542,
+          "wall_s": 1.6055537136271596,
+          "wall_audio_ratio": 0.2187787878603287,
+          "max_receive_gap_s": 0.06479654274880886,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 2,
+        "status": "passed",
+        "metrics": {
+          "frames": 221,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.0780438557267189,
+          "wall_s": 1.6156987445428967,
+          "wall_audio_ratio": 0.220161187930605,
+          "max_receive_gap_s": 0.06505318451672792,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 3,
+        "status": "passed",
+        "metrics": {
+          "frames": 221,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.21378478221595287,
+          "wall_s": 1.8871700074523687,
+          "wall_audio_ratio": 0.25715288327792046,
+          "max_receive_gap_s": 0.06558017153292894,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "interrupt",
+        "index": 4,
+        "status": "passed",
+        "metrics": {
+          "frames": 1,
+          "received_samples": 800,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.08247972000390291,
+          "wall_s": 0.5840798495337367,
+          "wall_audio_ratio": 0.07958891715055262,
+          "max_receive_gap_s": null,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": null,
+          "prefix_exact": true,
+          "completed": false,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "mode": "burst",
+        "phase": "recovery",
+        "index": 5,
+        "status": "passed",
+        "metrics": {
+          "frames": 221,
+          "received_samples": 176129,
+          "input_samples": 176129,
+          "audio_duration_s": 7.338708333333333,
+          "first_media_s": 0.19075315073132515,
+          "wall_s": 1.8275569444522262,
+          "wall_audio_ratio": 0.24902978309564824,
+          "max_receive_gap_s": 0.06498657632619143,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "warmup",
+        "index": 0,
+        "status": "passed",
+        "metrics": {
+          "frames": 212,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.0861232066527009,
+          "wall_s": 1.5252982778474689,
+          "wall_audio_ratio": 0.21666168719424272,
+          "max_receive_gap_s": 0.04637202527374029,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 1,
+        "status": "passed",
+        "metrics": {
+          "frames": 212,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.07697419170290232,
+          "wall_s": 1.5363662112504244,
+          "wall_audio_ratio": 0.21823383682534436,
+          "max_receive_gap_s": 0.04597623087465763,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 2,
+        "status": "passed",
+        "metrics": {
+          "frames": 212,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.07687843311578035,
+          "wall_s": 1.516381281428039,
+          "wall_audio_ratio": 0.21539506838466463,
+          "max_receive_gap_s": 0.04665073473006487,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 3,
+        "status": "passed",
+        "metrics": {
+          "frames": 212,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.07715531904250383,
+          "wall_s": 1.5986492577940226,
+          "wall_audio_ratio": 0.2270808604821055,
+          "max_receive_gap_s": 0.046720865182578564,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "interrupt",
+        "index": 4,
+        "status": "passed",
+        "metrics": {
+          "frames": 1,
+          "received_samples": 800,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.08751451876014471,
+          "wall_s": 0.589495294727385,
+          "wall_audio_ratio": 0.0837351270919581,
+          "max_receive_gap_s": null,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": null,
+          "prefix_exact": true,
+          "completed": false,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "mode": "burst",
+        "phase": "recovery",
+        "index": 5,
+        "status": "passed",
+        "metrics": {
+          "frames": 212,
+          "received_samples": 168960,
+          "input_samples": 168960,
+          "audio_duration_s": 7.04,
+          "first_media_s": 0.18520950712263584,
+          "wall_s": 1.7521457029506564,
+          "wall_audio_ratio": 0.24888433280549097,
+          "max_receive_gap_s": 0.055589884519577026,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "warmup",
+        "index": 0,
+        "status": "passed",
+        "metrics": {
+          "frames": 146,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.07671606075018644,
+          "wall_s": 1.1253858655691147,
+          "wall_audio_ratio": 0.23137044933575548,
+          "max_receive_gap_s": 0.04633229412138462,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 1,
+        "status": "passed",
+        "metrics": {
+          "frames": 146,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.07661664672195911,
+          "wall_s": 1.0969998920336366,
+          "wall_audio_ratio": 0.22553451727665227,
+          "max_receive_gap_s": 0.044377963058650494,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 2,
+        "status": "passed",
+        "metrics": {
+          "frames": 146,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.08563336078077555,
+          "wall_s": 1.1491498155519366,
+          "wall_audio_ratio": 0.23625612984209224,
+          "max_receive_gap_s": 0.046204023994505405,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "measured",
+        "index": 3,
+        "status": "passed",
+        "metrics": {
+          "frames": 146,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.0978640466928482,
+          "wall_s": 1.1383120464161038,
+          "wall_audio_ratio": 0.2340279700691003,
+          "max_receive_gap_s": 0.0461860578507185,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "interrupt",
+        "index": 4,
+        "status": "passed",
+        "metrics": {
+          "frames": 1,
+          "received_samples": 800,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.09780648816376925,
+          "wall_s": 0.5997611489146948,
+          "wall_audio_ratio": 0.12330615726042245,
+          "max_receive_gap_s": null,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": null,
+          "prefix_exact": true,
+          "completed": false,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "mode": "burst",
+        "phase": "recovery",
+        "index": 5,
+        "status": "passed",
+        "metrics": {
+          "frames": 146,
+          "received_samples": 116736,
+          "input_samples": 116736,
+          "audio_duration_s": 4.864,
+          "first_media_s": 0.18963182717561722,
+          "wall_s": 1.2367017129436135,
+          "wall_audio_ratio": 0.25425610874663107,
+          "max_receive_gap_s": 0.05660157185047865,
+          "max_pts_error_s": 0.0,
+          "pcm_exact": true,
+          "prefix_exact": true,
+          "completed": true,
+          "playback_measured": false,
+          "lip_sync_measured": false
+        }
+      }
+    ],
+    "summary": [
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-00",
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "mode": "burst",
+        "attempted": 3,
+        "passed": 3,
+        "failed": 0,
+        "metrics": {
+          "first_media_s": {
+            "n": 3,
+            "p50": 0.08593641314655542,
+            "p95": 0.2009999453090131
+          },
+          "wall_s": {
+            "n": 3,
+            "p50": 1.6156987445428967,
+            "p95": 1.8600228811614214
+          },
+          "wall_audio_ratio": {
+            "n": 3,
+            "p50": 0.220161187930605,
+            "p95": 0.2534537137431889
+          }
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-01",
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "mode": "burst",
+        "attempted": 3,
+        "passed": 3,
+        "failed": 0,
+        "metrics": {
+          "first_media_s": {
+            "n": 3,
+            "p50": 0.07697419170290232,
+            "p95": 0.07713720630854368
+          },
+          "wall_s": {
+            "n": 3,
+            "p50": 1.5363662112504244,
+            "p95": 1.5924209531396627
+          },
+          "wall_audio_ratio": {
+            "n": 3,
+            "p50": 0.21823383682534436,
+            "p95": 0.22619615811642937
+          }
+        }
+      },
+      {
+        "provider": "streamingtalker",
+        "case_id": "mixed-02",
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "mode": "burst",
+        "attempted": 3,
+        "passed": 3,
+        "failed": 0,
+        "metrics": {
+          "first_media_s": {
+            "n": 3,
+            "p50": 0.08563336078077555,
+            "p95": 0.09664097810164093
+          },
+          "wall_s": {
+            "n": 3,
+            "p50": 1.1383120464161038,
+            "p95": 1.1480660386383534
+          },
+          "wall_audio_ratio": {
+            "n": 3,
+            "p50": 0.2340279700691003,
+            "p95": 0.23603331386479307
+          }
+        }
+      }
+    ],
+    "scope": "avatar_adapter_receive; not model-only RTF, speech pipeline or device playback",
+    "quality": {
+      "lip_sync": {
+        "measured": false
+      },
+      "identity": {
+        "measured": false
+      },
+      "visual_artifacts": {
+        "measured": false
+      },
+      "browser_playback": {
+        "measured": false
+      },
+      "physical_audio": {
+        "measured": false
+      }
+    },
+    "deployment_label": "StreamingTalker historical baseline / RTX4090 shared GPU / preloaded",
+    "provenance": {
+      "python": "3.11.15",
+      "platform": "Linux",
+      "git_commit": "a27a47269037f82fb8cad561004385a735476793",
+      "packages": {
+        "numpy": "2.4.6",
+        "soxr": "1.0.0",
+        "websockets": "17.1",
+        "pillow": "12.3.0",
+        "av": "17.1.0"
+      },
+      "source_sha256": {
+        "benchmark_avatar.py": "9b2d15bc0be52afec35b7ee7416f589bc711904e7cdfb8853ec81b656fb65785",
+        "avatar_eval_metrics.py": "4a4f36751847d40d16ef3620797536553815a5d7a30d0818f909a30f1fcf90b8",
+        "avatar_backend.py": "d206f9692641bbc766566e42096b542b9459562938b6f94d31c5d82a5c92a9f8",
+        "avatar_video_backend.py": "4b262eec927f4bc9cf074c9562da2cc607dab811f3b305ee1dfba7ea469b8217",
+        "dinet_backend.py": "cfcabf1ea6290aa7f354b95dfb7e8fc70caba8523edce23ba4b7571c76531d59",
+        "avatar_providers.py": "2e2ba9e9048b588497f32f0296374369162bd82b51ea2fc5b095e1bec7756ca5"
+      }
+    },
+    "manifest_sha256": "478e1bbca4b99f1c9589001707fee88441b865727b5decbf0f8193a17d05f7b5",
+    "cases": [
+      {
+        "id": "mixed-00",
+        "category": "mixed",
+        "source": "synthetic",
+        "transcript": "介绍一下语音agent技术，重点说说Pipecat和MiniCPM-o的区别。",
+        "transcript_reviewed": false,
+        "input_sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+        "pcm_sha256": "ec8ad4f4d3691024d9188e354ecbc4ab9997279b44e7861cf218d327db0ea092",
+        "audio_duration_s": 7.338708333333333
+      },
+      {
+        "id": "mixed-01",
+        "category": "mixed",
+        "source": "synthetic",
+        "transcript": "我想把DINet、FlashHead和StreamingTalker接入同一个语音系统。",
+        "transcript_reviewed": false,
+        "input_sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+        "pcm_sha256": "5a03d4f90454618c444ca61aa15e537bbb411cabadb878f0031c6da47332eaa2",
+        "audio_duration_s": 7.04
+      },
+      {
+        "id": "mixed-02",
+        "category": "mixed",
+        "source": "synthetic",
+        "transcript": "请解释一下VAD打断和ASR识别有什么区别。",
+        "transcript_reviewed": false,
+        "input_sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+        "pcm_sha256": "a7a34ea1fa2ce3e0147b52dd6ba02e42d3ffc2a5ceafe259045341db868609b5",
+        "audio_duration_s": 4.864
+      }
+    ],
+    "parameters": {
+      "rounds": 3,
+      "warmup": 1,
+      "timeout_s": 90,
+      "interrupt": true
+    }
+  }
+}
