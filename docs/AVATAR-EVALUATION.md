@@ -8,6 +8,8 @@
 
 初轮同版本实测见[2026-09-19 基线记录](AVATAR-BASELINE-2026-09-19.md)。
 
+后续扩展见[固定PCM播放](FIXED-PLAYBACK-BASELINE.md)、[DINet供帧归因](DINET-DELIVERY-ATTRIBUTION.md)和[自动语音打断](VOICE-INTERRUPTION-BASELINE.md)；各入口独立说明测量边界。
+
 ## 测量边界
 
 | 层次 | 当前入口覆盖 | 不可据此推断 |
