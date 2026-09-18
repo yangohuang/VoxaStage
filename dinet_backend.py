@@ -33,8 +33,9 @@ def encode_image(raw, width, height, output_size):
 
 
 class NativeConnection:
-    def __init__(self, ws, character):
+    def __init__(self, ws, character, *, observer=None):
         self.ws, self.character = ws, character
+        self.observer = observer
         self.transaction = 'pipecat-' + uuid.uuid4().hex
         self.control = dict(transaction_id=self.transaction, session_id=self.transaction + '-turn',
                             is_start=0, is_end=0, is_interrupt=0)
@@ -46,6 +47,10 @@ class NativeConnection:
         self.started = None
         self.resampler = soxr.ResampleStream(24000, 16000, 1, dtype='int16')
         self.input_buffer = bytearray()
+
+    def observe(self, kind, **data):
+        if self.observer is not None:
+            self.observer(dict(type=kind, **data))
 
     async def _send_resampled(self, converted, *, last=False):
         self.input_buffer.extend(converted.astype('<i2').tobytes())
@@ -60,6 +65,7 @@ class NativeConnection:
             block = bytes(self.input_buffer[:6400])
             del self.input_buffer[:6400]
             await self.ws.send(block)
+            self.observe('native_audio_sent', bytes=len(block))
 
     async def send(self, data):
         if isinstance(data, bytes):
@@ -69,6 +75,7 @@ class NativeConnection:
             # Never enqueue an entire fast-generated reply ahead of playback.
             delay = self.started + self.samples / 24000 - 1 - time.monotonic()
             if delay > 0:
+                self.observe('input_wait', delay_s=delay)
                 await asyncio.sleep(delay)
             self.samples += len(data) // 2
             converted = self.resampler.resample_chunk(np.frombuffer(data, '<i2'))
@@ -126,7 +133,11 @@ class NativeConnection:
                 if (type(size) is not int or size <= 0 or
                     (kind == 101 and size != expected) or (kind == 102 and (size > 48000 or size % 2))):
                     raise ValueError('Invalid DINet media size')
+                if kind == 101:
+                    self.observe('native_frame_header', frame=self.index)
                 body = await self._body(size)
+                if kind == 101:
+                    self.observe('native_frame_body', frame=self.index, bytes=len(body))
                 if kind == 102:
                     continue
                 number = event.get('frame_no')
@@ -140,7 +151,9 @@ class NativeConnection:
                     raise ValueError('DINet output exceeds clip limit')
                 if self.ended and self.index >= math.ceil(self.samples / 960):
                     continue  # Native engine pads the last 200ms block.
+                self.observe('encode_start', frame=self.index)
                 image = await asyncio.to_thread(encode_image, body, self.width, self.height, self.output_size)
+                self.observe('encode_end', frame=self.index)
                 result = dict(type='frame', index=self.index, pts_seconds=self.index / 25, image=image)
                 self.index += 1
                 return json.dumps(result)
@@ -167,11 +180,12 @@ class NativeConnection:
 
 
 class DINetBackend(VideoBackend):
-    def __init__(self, url, *, connect=websockets.connect):
+    def __init__(self, url, *, connect=websockets.connect, observer=None):
         self.native_connect = connect
+        self.observer = observer
         super().__init__(url, connect=self._connect)
 
     async def _connect(self, url, **kwargs):
         kwargs.update(max_size=8_000_000, max_queue=4)
         ws = await self.native_connect(url, **kwargs)
-        return NativeConnection(ws, unquote(urlsplit(url).path.rstrip('/').rsplit('/', 1)[-1]))
+        return NativeConnection(ws, unquote(urlsplit(url).path.rstrip('/').rsplit('/', 1)[-1]), observer=self.observer)

@@ -1,0 +1,7209 @@
+{
+  "status": "passed",
+  "created_at": "2026-09-18T17:36:23.302146+00:00",
+  "trials": [
+    {
+      "index": 0,
+      "phase": "warmup",
+      "status": "passed",
+      "events": [
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 6.720946170389652
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 6.836068816483021
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 6.9426968693733215
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 7.046977058053017
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 7.164044305682182
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 7.201328873634338
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.2493221228942275,
+          "at_ms": 7.2152214124798775
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 0,
+          "at_ms": 60.259439051151276
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 0,
+          "bytes": 1382400,
+          "at_ms": 65.98426215350628
+        },
+        {
+          "type": "encode_start",
+          "frame": 0,
+          "at_ms": 65.99078513681889
+        },
+        {
+          "type": "encode_end",
+          "frame": 0,
+          "at_ms": 87.6435674726963
+        },
+        {
+          "type": "paired_media",
+          "frame": 0,
+          "at_ms": 87.96441741287708
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 1,
+          "at_ms": 88.03945314139128
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 1,
+          "bytes": 1382400,
+          "at_ms": 88.6628134176135
+        },
+        {
+          "type": "encode_start",
+          "frame": 1,
+          "at_ms": 88.66528142243624
+        },
+        {
+          "type": "encode_end",
+          "frame": 1,
+          "at_ms": 104.1676951572299
+        },
+        {
+          "type": "paired_media",
+          "frame": 1,
+          "at_ms": 104.47690356522799
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 2,
+          "at_ms": 104.6711876988411
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 2,
+          "bytes": 1382400,
+          "at_ms": 105.35064432770014
+        },
+        {
+          "type": "encode_start",
+          "frame": 2,
+          "at_ms": 105.35345319658518
+        },
+        {
+          "type": "encode_end",
+          "frame": 2,
+          "at_ms": 117.28007718920708
+        },
+        {
+          "type": "paired_media",
+          "frame": 2,
+          "at_ms": 117.56666470319033
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 3,
+          "at_ms": 129.39569167792797
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 3,
+          "bytes": 1382400,
+          "at_ms": 131.3862046226859
+        },
+        {
+          "type": "encode_start",
+          "frame": 3,
+          "at_ms": 131.38960022479296
+        },
+        {
+          "type": "encode_end",
+          "frame": 3,
+          "at_ms": 143.0698549374938
+        },
+        {
+          "type": "paired_media",
+          "frame": 3,
+          "at_ms": 143.36119405925274
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 4,
+          "at_ms": 167.73582249879837
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 4,
+          "bytes": 1382400,
+          "at_ms": 169.45381090044975
+        },
+        {
+          "type": "encode_start",
+          "frame": 4,
+          "at_ms": 169.45722047239542
+        },
+        {
+          "type": "encode_end",
+          "frame": 4,
+          "at_ms": 181.34058825671673
+        },
+        {
+          "type": "paired_media",
+          "frame": 4,
+          "at_ms": 181.6548751667142
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 5,
+          "at_ms": 207.80187007039785
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 5,
+          "bytes": 1382400,
+          "at_ms": 210.1509664207697
+        },
+        {
+          "type": "encode_start",
+          "frame": 5,
+          "at_ms": 210.15471406280994
+        },
+        {
+          "type": "encode_end",
+          "frame": 5,
+          "at_ms": 221.98643255978823
+        },
+        {
+          "type": "paired_media",
+          "frame": 5,
+          "at_ms": 222.4359568208456
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 6,
+          "at_ms": 247.43952509015799
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 6,
+          "bytes": 1382400,
+          "at_ms": 249.9453378841281
+        },
+        {
+          "type": "encode_start",
+          "frame": 6,
+          "at_ms": 249.94861520826817
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 257.27307982742786
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.24923839699476957,
+          "at_ms": 257.2991792112589
+        },
+        {
+          "type": "encode_end",
+          "frame": 6,
+          "at_ms": 262.41052709519863
+        },
+        {
+          "type": "paired_media",
+          "frame": 6,
+          "at_ms": 262.8144873306155
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 7,
+          "at_ms": 288.0885861814022
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 7,
+          "bytes": 1382400,
+          "at_ms": 290.161550976336
+        },
+        {
+          "type": "encode_start",
+          "frame": 7,
+          "at_ms": 290.16561433672905
+        },
+        {
+          "type": "encode_end",
+          "frame": 7,
+          "at_ms": 302.6255900040269
+        },
+        {
+          "type": "paired_media",
+          "frame": 7,
+          "at_ms": 303.0258258804679
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 8,
+          "at_ms": 328.9036313071847
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 8,
+          "bytes": 1382400,
+          "at_ms": 330.46334609389305
+        },
+        {
+          "type": "encode_start",
+          "frame": 8,
+          "at_ms": 330.4717168211937
+        },
+        {
+          "type": "encode_end",
+          "frame": 8,
+          "at_ms": 342.8695108741522
+        },
+        {
+          "type": "paired_media",
+          "frame": 8,
+          "at_ms": 343.1605249643326
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 9,
+          "at_ms": 368.4931192547083
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 9,
+          "bytes": 1382400,
+          "at_ms": 370.42899057269096
+        },
+        {
+          "type": "encode_start",
+          "frame": 9,
+          "at_ms": 370.432835072279
+        },
+        {
+          "type": "encode_end",
+          "frame": 9,
+          "at_ms": 382.66520854085684
+        },
+        {
+          "type": "paired_media",
+          "frame": 9,
+          "at_ms": 382.9471403732896
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 10,
+          "at_ms": 408.26014149934053
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 10,
+          "bytes": 1382400,
+          "at_ms": 409.976227208972
+        },
+        {
+          "type": "encode_start",
+          "frame": 10,
+          "at_ms": 409.9793629720807
+        },
+        {
+          "type": "encode_end",
+          "frame": 10,
+          "at_ms": 422.540414147079
+        },
+        {
+          "type": "paired_media",
+          "frame": 10,
+          "at_ms": 422.8089628741145
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 11,
+          "at_ms": 447.7668050676584
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 11,
+          "bytes": 1382400,
+          "at_ms": 450.0307319685817
+        },
+        {
+          "type": "encode_start",
+          "frame": 11,
+          "at_ms": 450.03422908484936
+        },
+        {
+          "type": "encode_end",
+          "frame": 11,
+          "at_ms": 462.5063156709075
+        },
+        {
+          "type": "paired_media",
+          "frame": 11,
+          "at_ms": 462.78544794768095
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 12,
+          "at_ms": 488.4325945749879
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 12,
+          "bytes": 1382400,
+          "at_ms": 490.1959300041199
+        },
+        {
+          "type": "encode_start",
+          "frame": 12,
+          "at_ms": 490.1996720582247
+        },
+        {
+          "type": "encode_end",
+          "frame": 12,
+          "at_ms": 502.6261070743203
+        },
+        {
+          "type": "paired_media",
+          "frame": 12,
+          "at_ms": 502.8891460970044
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 507.2928611189127
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.24923222791403532,
+          "at_ms": 507.3048071935773
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 13,
+          "at_ms": 528.5231955349445
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 13,
+          "bytes": 1382400,
+          "at_ms": 530.9018231928349
+        },
+        {
+          "type": "encode_start",
+          "frame": 13,
+          "at_ms": 530.9048388153315
+        },
+        {
+          "type": "encode_end",
+          "frame": 13,
+          "at_ms": 543.7526935711503
+        },
+        {
+          "type": "paired_media",
+          "frame": 13,
+          "at_ms": 544.0128743648529
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 14,
+          "at_ms": 568.3628618717194
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 14,
+          "bytes": 1382400,
+          "at_ms": 569.745447486639
+        },
+        {
+          "type": "encode_start",
+          "frame": 14,
+          "at_ms": 569.7481725364923
+        },
+        {
+          "type": "encode_end",
+          "frame": 14,
+          "at_ms": 582.4016612023115
+        },
+        {
+          "type": "paired_media",
+          "frame": 14,
+          "at_ms": 582.6789671555161
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 15,
+          "at_ms": 607.7434048056602
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 15,
+          "bytes": 1382400,
+          "at_ms": 609.9988762289286
+        },
+        {
+          "type": "encode_start",
+          "frame": 15,
+          "at_ms": 610.00204551965
+        },
+        {
+          "type": "encode_end",
+          "frame": 15,
+          "at_ms": 623.3582701534033
+        },
+        {
+          "type": "paired_media",
+          "frame": 15,
+          "at_ms": 623.6243294551969
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 16,
+          "at_ms": 647.6938808336854
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 16,
+          "bytes": 1382400,
+          "at_ms": 649.3960758671165
+        },
+        {
+          "type": "encode_start",
+          "frame": 16,
+          "at_ms": 649.400195106864
+        },
+        {
+          "type": "encode_end",
+          "frame": 16,
+          "at_ms": 662.7809088677168
+        },
+        {
+          "type": "paired_media",
+          "frame": 16,
+          "at_ms": 663.0722749978304
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 17,
+          "at_ms": 688.502105884254
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 17,
+          "bytes": 1382400,
+          "at_ms": 689.988274127245
+        },
+        {
+          "type": "encode_start",
+          "frame": 17,
+          "at_ms": 689.9912310764194
+        },
+        {
+          "type": "encode_end",
+          "frame": 17,
+          "at_ms": 703.2281663268805
+        },
+        {
+          "type": "paired_media",
+          "frame": 17,
+          "at_ms": 703.510481864214
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 18,
+          "at_ms": 727.8150022029877
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 18,
+          "bytes": 1382400,
+          "at_ms": 729.3154168874025
+        },
+        {
+          "type": "encode_start",
+          "frame": 18,
+          "at_ms": 729.3184790760279
+        },
+        {
+          "type": "encode_end",
+          "frame": 18,
+          "at_ms": 741.5824141353369
+        },
+        {
+          "type": "paired_media",
+          "frame": 18,
+          "at_ms": 741.8518550693989
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 757.2660390287638
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.24925985746085644,
+          "at_ms": 757.2769308462739
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 19,
+          "at_ms": 769.2400403320789
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 19,
+          "bytes": 1382400,
+          "at_ms": 771.6746721416712
+        },
+        {
+          "type": "encode_start",
+          "frame": 19,
+          "at_ms": 771.6775964945555
+        },
+        {
+          "type": "encode_end",
+          "frame": 19,
+          "at_ms": 784.8619241267443
+        },
+        {
+          "type": "paired_media",
+          "frame": 19,
+          "at_ms": 785.1411793380976
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1007.6840538531542
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1007.7045634388924
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.2488215733319521,
+          "at_ms": 1007.7153630554676
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 20,
+          "at_ms": 1030.9266988188028
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 20,
+          "bytes": 1382400,
+          "at_ms": 1032.5423404574394
+        },
+        {
+          "type": "encode_start",
+          "frame": 20,
+          "at_ms": 1032.5451102107763
+        },
+        {
+          "type": "encode_end",
+          "frame": 20,
+          "at_ms": 1044.4366903975606
+        },
+        {
+          "type": "paired_media",
+          "frame": 20,
+          "at_ms": 1044.7281645610929
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 21,
+          "at_ms": 1044.7889734059572
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 21,
+          "bytes": 1382400,
+          "at_ms": 1045.0369343161583
+        },
+        {
+          "type": "encode_start",
+          "frame": 21,
+          "at_ms": 1045.0393091887236
+        },
+        {
+          "type": "encode_end",
+          "frame": 21,
+          "at_ms": 1056.144510395825
+        },
+        {
+          "type": "paired_media",
+          "frame": 21,
+          "at_ms": 1056.5386386588216
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 22,
+          "at_ms": 1056.6196348518133
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 22,
+          "bytes": 1382400,
+          "at_ms": 1056.9888092577457
+        },
+        {
+          "type": "encode_start",
+          "frame": 22,
+          "at_ms": 1056.9917391985655
+        },
+        {
+          "type": "encode_end",
+          "frame": 22,
+          "at_ms": 1067.8365835919976
+        },
+        {
+          "type": "paired_media",
+          "frame": 22,
+          "at_ms": 1068.0846823379397
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 23,
+          "at_ms": 1068.1630298495293
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 23,
+          "bytes": 1382400,
+          "at_ms": 1068.7550837174058
+        },
+        {
+          "type": "encode_start",
+          "frame": 23,
+          "at_ms": 1068.7576020136476
+        },
+        {
+          "type": "encode_end",
+          "frame": 23,
+          "at_ms": 1079.4067969545722
+        },
+        {
+          "type": "paired_media",
+          "frame": 23,
+          "at_ms": 1079.6610740944743
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 24,
+          "at_ms": 1231.3473988324404
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 24,
+          "bytes": 1382400,
+          "at_ms": 1233.0131232738495
+        },
+        {
+          "type": "encode_start",
+          "frame": 24,
+          "at_ms": 1233.0167731270194
+        },
+        {
+          "type": "encode_end",
+          "frame": 24,
+          "at_ms": 1244.8469875380397
+        },
+        {
+          "type": "paired_media",
+          "frame": 24,
+          "at_ms": 1245.1108591631055
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 25,
+          "at_ms": 1245.1771581545472
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 25,
+          "bytes": 1382400,
+          "at_ms": 1245.7378515973687
+        },
+        {
+          "type": "encode_start",
+          "frame": 25,
+          "at_ms": 1245.740557089448
+        },
+        {
+          "type": "encode_end",
+          "frame": 25,
+          "at_ms": 1257.3025925084949
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1257.5299302116036
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1257.614467293024
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1257.6364213600755
+        },
+        {
+          "type": "paired_media",
+          "frame": 25,
+          "at_ms": 1257.855474948883
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 26,
+          "at_ms": 1257.9175559803843
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 26,
+          "bytes": 1382400,
+          "at_ms": 1258.1278998404741
+        },
+        {
+          "type": "encode_start",
+          "frame": 26,
+          "at_ms": 1258.1320852041245
+        },
+        {
+          "type": "encode_end",
+          "frame": 26,
+          "at_ms": 1269.5566061884165
+        },
+        {
+          "type": "paired_media",
+          "frame": 26,
+          "at_ms": 1269.7857860475779
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 27,
+          "at_ms": 1269.8594201356173
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 27,
+          "bytes": 1382400,
+          "at_ms": 1270.439526066184
+        },
+        {
+          "type": "encode_start",
+          "frame": 27,
+          "at_ms": 1270.4424168914557
+        },
+        {
+          "type": "encode_end",
+          "frame": 27,
+          "at_ms": 1281.664090231061
+        },
+        {
+          "type": "paired_media",
+          "frame": 27,
+          "at_ms": 1281.884784810245
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 28,
+          "at_ms": 1430.8200795203447
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 28,
+          "bytes": 1382400,
+          "at_ms": 1433.72733425349
+        },
+        {
+          "type": "encode_start",
+          "frame": 28,
+          "at_ms": 1433.733455836773
+        },
+        {
+          "type": "encode_end",
+          "frame": 28,
+          "at_ms": 1446.162659674883
+        },
+        {
+          "type": "paired_media",
+          "frame": 28,
+          "at_ms": 1446.597982198
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 29,
+          "at_ms": 1446.6857546940446
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 29,
+          "bytes": 1382400,
+          "at_ms": 1447.014294564724
+        },
+        {
+          "type": "encode_start",
+          "frame": 29,
+          "at_ms": 1447.0178354531527
+        },
+        {
+          "type": "encode_end",
+          "frame": 29,
+          "at_ms": 1460.943995974958
+        },
+        {
+          "type": "paired_media",
+          "frame": 29,
+          "at_ms": 1461.2400839105248
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 30,
+          "at_ms": 1461.3137291744351
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 30,
+          "bytes": 1382400,
+          "at_ms": 1461.6219885647297
+        },
+        {
+          "type": "encode_start",
+          "frame": 30,
+          "at_ms": 1461.6257334128022
+        },
+        {
+          "type": "encode_end",
+          "frame": 30,
+          "at_ms": 1473.2654467225075
+        },
+        {
+          "type": "paired_media",
+          "frame": 30,
+          "at_ms": 1473.521544598043
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 31,
+          "at_ms": 1473.6072989180684
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 31,
+          "bytes": 1382400,
+          "at_ms": 1474.4270285591483
+        },
+        {
+          "type": "encode_start",
+          "frame": 31,
+          "at_ms": 1474.4306076318026
+        },
+        {
+          "type": "encode_end",
+          "frame": 31,
+          "at_ms": 1486.9307205080986
+        },
+        {
+          "type": "paired_media",
+          "frame": 31,
+          "at_ms": 1487.2965943068266
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 32,
+          "at_ms": 1487.382097169757
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 32,
+          "bytes": 1382400,
+          "at_ms": 1487.9056606441736
+        },
+        {
+          "type": "encode_start",
+          "frame": 32,
+          "at_ms": 1487.9104401916265
+        },
+        {
+          "type": "encode_end",
+          "frame": 32,
+          "at_ms": 1500.6195334717631
+        },
+        {
+          "type": "paired_media",
+          "frame": 32,
+          "at_ms": 1500.9462926536798
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 33,
+          "at_ms": 1501.0413695126772
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 33,
+          "bytes": 1382400,
+          "at_ms": 1501.9315304234624
+        },
+        {
+          "type": "encode_start",
+          "frame": 33,
+          "at_ms": 1501.9353525713086
+        },
+        {
+          "type": "encode_end",
+          "frame": 33,
+          "at_ms": 1513.4032359346747
+        },
+        {
+          "type": "paired_media",
+          "frame": 33,
+          "at_ms": 1513.6607997119427
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 34,
+          "at_ms": 1513.7195559218526
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 34,
+          "bytes": 1382400,
+          "at_ms": 1513.9311384409666
+        },
+        {
+          "type": "encode_start",
+          "frame": 34,
+          "at_ms": 1513.934040442109
+        },
+        {
+          "type": "encode_end",
+          "frame": 34,
+          "at_ms": 1525.1940581947565
+        },
+        {
+          "type": "paired_media",
+          "frame": 34,
+          "at_ms": 1525.4187248647213
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 35,
+          "at_ms": 1525.5095809698105
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 35,
+          "bytes": 1382400,
+          "at_ms": 1526.0958326980472
+        },
+        {
+          "type": "encode_start",
+          "frame": 35,
+          "at_ms": 1526.099151931703
+        },
+        {
+          "type": "encode_end",
+          "frame": 35,
+          "at_ms": 1537.7176282927394
+        },
+        {
+          "type": "paired_media",
+          "frame": 35,
+          "at_ms": 1537.9458656534553
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 36,
+          "at_ms": 1633.0631356686354
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 36,
+          "bytes": 1382400,
+          "at_ms": 1635.637299157679
+        },
+        {
+          "type": "encode_start",
+          "frame": 36,
+          "at_ms": 1635.6442971155047
+        },
+        {
+          "type": "encode_end",
+          "frame": 36,
+          "at_ms": 1647.7303579449654
+        },
+        {
+          "type": "paired_media",
+          "frame": 36,
+          "at_ms": 1648.0210153385997
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 37,
+          "at_ms": 1648.0946838855743
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 37,
+          "bytes": 1382400,
+          "at_ms": 1648.3861403539777
+        },
+        {
+          "type": "encode_start",
+          "frame": 37,
+          "at_ms": 1648.389675654471
+        },
+        {
+          "type": "encode_end",
+          "frame": 37,
+          "at_ms": 1660.415138117969
+        },
+        {
+          "type": "paired_media",
+          "frame": 37,
+          "at_ms": 1660.6818670406938
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 38,
+          "at_ms": 1660.7420798391104
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 38,
+          "bytes": 1382400,
+          "at_ms": 1660.976697690785
+        },
+        {
+          "type": "encode_start",
+          "frame": 38,
+          "at_ms": 1660.9793668612838
+        },
+        {
+          "type": "encode_end",
+          "frame": 38,
+          "at_ms": 1672.2397059202194
+        },
+        {
+          "type": "paired_media",
+          "frame": 38,
+          "at_ms": 1672.4842581897974
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 39,
+          "at_ms": 1672.558093443513
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 39,
+          "bytes": 1382400,
+          "at_ms": 1673.1347683817148
+        },
+        {
+          "type": "encode_start",
+          "frame": 39,
+          "at_ms": 1673.1378016993403
+        },
+        {
+          "type": "encode_end",
+          "frame": 39,
+          "at_ms": 1683.910925872624
+        },
+        {
+          "type": "paired_media",
+          "frame": 39,
+          "at_ms": 1684.140669181943
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 40,
+          "at_ms": 1831.2880173325539
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 40,
+          "bytes": 1382400,
+          "at_ms": 1833.6949683725834
+        },
+        {
+          "type": "encode_start",
+          "frame": 40,
+          "at_ms": 1833.7006838992238
+        },
+        {
+          "type": "encode_end",
+          "frame": 40,
+          "at_ms": 1845.7759879529476
+        },
+        {
+          "type": "paired_media",
+          "frame": 40,
+          "at_ms": 1846.041894517839
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 41,
+          "at_ms": 1846.1095346137881
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 41,
+          "bytes": 1382400,
+          "at_ms": 1846.506467089057
+        },
+        {
+          "type": "encode_start",
+          "frame": 41,
+          "at_ms": 1846.509449183941
+        },
+        {
+          "type": "encode_end",
+          "frame": 41,
+          "at_ms": 1860.4803150519729
+        },
+        {
+          "type": "paired_media",
+          "frame": 41,
+          "at_ms": 1860.7590580359101
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 42,
+          "at_ms": 1860.818381421268
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 42,
+          "bytes": 1382400,
+          "at_ms": 1861.0340310260653
+        },
+        {
+          "type": "encode_start",
+          "frame": 42,
+          "at_ms": 1861.036540940404
+        },
+        {
+          "type": "encode_end",
+          "frame": 42,
+          "at_ms": 1872.4794099107385
+        },
+        {
+          "type": "paired_media",
+          "frame": 42,
+          "at_ms": 1872.715680859983
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 43,
+          "at_ms": 1872.7828152477741
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 43,
+          "bytes": 1382400,
+          "at_ms": 1873.3557322993875
+        },
+        {
+          "type": "encode_start",
+          "frame": 43,
+          "at_ms": 1873.3586752787232
+        },
+        {
+          "type": "encode_end",
+          "frame": 43,
+          "at_ms": 1884.359311312437
+        },
+        {
+          "type": "paired_media",
+          "frame": 43,
+          "at_ms": 1884.6512781456113
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 44,
+          "at_ms": 2032.9368952661753
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 44,
+          "bytes": 1382400,
+          "at_ms": 2034.4306472688913
+        },
+        {
+          "type": "encode_start",
+          "frame": 44,
+          "at_ms": 2034.435587003827
+        },
+        {
+          "type": "encode_end",
+          "frame": 44,
+          "at_ms": 2046.282553113997
+        },
+        {
+          "type": "paired_media",
+          "frame": 44,
+          "at_ms": 2046.5760054066777
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 45,
+          "at_ms": 2046.6444585472345
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 45,
+          "bytes": 1382400,
+          "at_ms": 2046.8966905027628
+        },
+        {
+          "type": "encode_start",
+          "frame": 45,
+          "at_ms": 2046.8997545540333
+        },
+        {
+          "type": "encode_end",
+          "frame": 45,
+          "at_ms": 2058.221804909408
+        },
+        {
+          "type": "paired_media",
+          "frame": 45,
+          "at_ms": 2058.497258462012
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 46,
+          "at_ms": 2058.572320267558
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 46,
+          "bytes": 1382400,
+          "at_ms": 2058.803277090192
+        },
+        {
+          "type": "encode_start",
+          "frame": 46,
+          "at_ms": 2058.8061260059476
+        },
+        {
+          "type": "encode_end",
+          "frame": 46,
+          "at_ms": 2070.5090817064047
+        },
+        {
+          "type": "paired_media",
+          "frame": 46,
+          "at_ms": 2070.7603050395846
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 47,
+          "at_ms": 2070.84072381258
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 47,
+          "bytes": 1382400,
+          "at_ms": 2071.49875164032
+        },
+        {
+          "type": "encode_start",
+          "frame": 47,
+          "at_ms": 2071.501972153783
+        },
+        {
+          "type": "encode_end",
+          "frame": 47,
+          "at_ms": 2082.964804954827
+        },
+        {
+          "type": "paired_media",
+          "frame": 47,
+          "at_ms": 2083.22268165648
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 48,
+          "at_ms": 2234.9344100803137
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 48,
+          "bytes": 1382400,
+          "at_ms": 2237.812390550971
+        },
+        {
+          "type": "encode_start",
+          "frame": 48,
+          "at_ms": 2237.8192534670234
+        },
+        {
+          "type": "encode_end",
+          "frame": 48,
+          "at_ms": 2250.777049921453
+        },
+        {
+          "type": "paired_media",
+          "frame": 48,
+          "at_ms": 2251.087311655283
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 49,
+          "at_ms": 2251.1593708768487
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 49,
+          "bytes": 1382400,
+          "at_ms": 2251.5079509466887
+        },
+        {
+          "type": "encode_start",
+          "frame": 49,
+          "at_ms": 2251.5129959210753
+        },
+        {
+          "type": "encode_end",
+          "frame": 49,
+          "at_ms": 2263.874741271138
+        },
+        {
+          "type": "paired_media",
+          "frame": 49,
+          "at_ms": 2264.21011518687
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 50,
+          "at_ms": 2264.286975376308
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 50,
+          "bytes": 1382400,
+          "at_ms": 2264.605334959924
+        },
+        {
+          "type": "encode_start",
+          "frame": 50,
+          "at_ms": 2264.608923345804
+        },
+        {
+          "type": "encode_end",
+          "frame": 50,
+          "at_ms": 2276.231181807816
+        },
+        {
+          "type": "paired_media",
+          "frame": 50,
+          "at_ms": 2276.523963548243
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 51,
+          "at_ms": 2276.613420806825
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 51,
+          "bytes": 1382400,
+          "at_ms": 2277.5740502402186
+        },
+        {
+          "type": "encode_start",
+          "frame": 51,
+          "at_ms": 2277.577535249293
+        },
+        {
+          "type": "encode_end",
+          "frame": 51,
+          "at_ms": 2289.1363967210054
+        },
+        {
+          "type": "paired_media",
+          "frame": 51,
+          "at_ms": 2289.4285963848233
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 52,
+          "at_ms": 2289.502657018602
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 52,
+          "bytes": 1382400,
+          "at_ms": 2289.839101023972
+        },
+        {
+          "type": "encode_start",
+          "frame": 52,
+          "at_ms": 2289.8419303819537
+        },
+        {
+          "type": "encode_end",
+          "frame": 52,
+          "at_ms": 2301.103286445141
+        },
+        {
+          "type": "paired_media",
+          "frame": 52,
+          "at_ms": 2301.3898748904467
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 53,
+          "at_ms": 2301.4808371663094
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 53,
+          "bytes": 1382400,
+          "at_ms": 2302.240416407585
+        },
+        {
+          "type": "encode_start",
+          "frame": 53,
+          "at_ms": 2302.24384739995
+        },
+        {
+          "type": "encode_end",
+          "frame": 53,
+          "at_ms": 2313.373084180057
+        },
+        {
+          "type": "paired_media",
+          "frame": 53,
+          "at_ms": 2313.66222538054
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 54,
+          "at_ms": 2313.7236796319485
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 54,
+          "bytes": 1382400,
+          "at_ms": 2314.118872396648
+        },
+        {
+          "type": "encode_start",
+          "frame": 54,
+          "at_ms": 2314.1218228265643
+        },
+        {
+          "type": "encode_end",
+          "frame": 54,
+          "at_ms": 2325.1866716891527
+        },
+        {
+          "type": "paired_media",
+          "frame": 54,
+          "at_ms": 2325.43970271945
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 55,
+          "at_ms": 2325.5187291651964
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 55,
+          "bytes": 1382400,
+          "at_ms": 2326.1992344632745
+        },
+        {
+          "type": "encode_start",
+          "frame": 55,
+          "at_ms": 2326.202219352126
+        },
+        {
+          "type": "encode_end",
+          "frame": 55,
+          "at_ms": 2337.1964832767844
+        },
+        {
+          "type": "paired_media",
+          "frame": 55,
+          "at_ms": 2337.4467361718416
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 56,
+          "at_ms": 2435.8978662639856
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 56,
+          "bytes": 1382400,
+          "at_ms": 2438.023928552866
+        },
+        {
+          "type": "encode_start",
+          "frame": 56,
+          "at_ms": 2438.0277898162603
+        },
+        {
+          "type": "encode_end",
+          "frame": 56,
+          "at_ms": 2450.04905667156
+        },
+        {
+          "type": "paired_media",
+          "frame": 56,
+          "at_ms": 2450.3365848213434
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 57,
+          "at_ms": 2450.406678020954
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 57,
+          "bytes": 1382400,
+          "at_ms": 2450.6939752027392
+        },
+        {
+          "type": "encode_start",
+          "frame": 57,
+          "at_ms": 2450.697584077716
+        },
+        {
+          "type": "encode_end",
+          "frame": 57,
+          "at_ms": 2462.0313961058855
+        },
+        {
+          "type": "paired_media",
+          "frame": 57,
+          "at_ms": 2462.3221829533577
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 58,
+          "at_ms": 2462.3892344534397
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 58,
+          "bytes": 1382400,
+          "at_ms": 2462.652769871056
+        },
+        {
+          "type": "encode_start",
+          "frame": 58,
+          "at_ms": 2462.65590749681
+        },
+        {
+          "type": "encode_end",
+          "frame": 58,
+          "at_ms": 2473.675334826112
+        },
+        {
+          "type": "paired_media",
+          "frame": 58,
+          "at_ms": 2473.9492926746607
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 59,
+          "at_ms": 2474.034432321787
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 59,
+          "bytes": 1382400,
+          "at_ms": 2474.695167504251
+        },
+        {
+          "type": "encode_start",
+          "frame": 59,
+          "at_ms": 2474.6985184028745
+        },
+        {
+          "type": "encode_end",
+          "frame": 59,
+          "at_ms": 2485.584955662489
+        },
+        {
+          "type": "paired_media",
+          "frame": 59,
+          "at_ms": 2485.876244492829
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 60,
+          "at_ms": 2638.1168039515615
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 60,
+          "bytes": 1382400,
+          "at_ms": 2640.890053473413
+        },
+        {
+          "type": "encode_start",
+          "frame": 60,
+          "at_ms": 2640.8960353583097
+        },
+        {
+          "type": "encode_end",
+          "frame": 60,
+          "at_ms": 2653.5105630755424
+        },
+        {
+          "type": "paired_media",
+          "frame": 60,
+          "at_ms": 2653.797506354749
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2653.8684787228703
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2654.1682286188006
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2654.296805150807
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2654.970847070217
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2655.0007704645395
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2655.5454349145293
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2836.22654248029
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2837.8167329356074
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2837.8441650420427
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2839.4777877256274
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2839.8813465610147
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2840.606021694839
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2840.915806591511
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2841.5504712611437
+        }
+      ],
+      "metrics": {
+        "frames": 61,
+        "received_samples": 58368,
+        "input_samples": 58368,
+        "audio_duration_s": 2.432,
+        "first_media_s": 0.08794859051704407,
+        "wall_s": 2.842359500937164,
+        "wall_audio_ratio": 1.1687333474248207,
+        "max_receive_gap_s": 0.2595880925655365,
+        "max_pts_error_s": 0.0,
+        "pcm_exact": true,
+        "prefix_exact": true,
+        "completed": true,
+        "playback_measured": false,
+        "lip_sync_measured": false
+      }
+    },
+    {
+      "index": 1,
+      "phase": "measured",
+      "status": "passed",
+      "events": [
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 4.384664818644524
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 4.459483548998833
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 4.520498216152191
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 4.5776041224598885
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 4.63701318949461
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 4.649775102734566
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.24962518084794283,
+          "at_ms": 4.654756747186184
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 0,
+          "at_ms": 48.29565156251192
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 0,
+          "bytes": 1382400,
+          "at_ms": 51.343152299523354
+        },
+        {
+          "type": "encode_start",
+          "frame": 0,
+          "at_ms": 51.347438246011734
+        },
+        {
+          "type": "encode_end",
+          "frame": 0,
+          "at_ms": 66.91544037312269
+        },
+        {
+          "type": "paired_media",
+          "frame": 0,
+          "at_ms": 67.31029879301786
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 1,
+          "at_ms": 67.39501841366291
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 1,
+          "bytes": 1382400,
+          "at_ms": 67.9273996502161
+        },
+        {
+          "type": "encode_start",
+          "frame": 1,
+          "at_ms": 67.93097779154778
+        },
+        {
+          "type": "encode_end",
+          "frame": 1,
+          "at_ms": 80.96098061650991
+        },
+        {
+          "type": "paired_media",
+          "frame": 1,
+          "at_ms": 81.23334497213364
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 2,
+          "at_ms": 85.21569613367319
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 2,
+          "bytes": 1382400,
+          "at_ms": 87.10485696792603
+        },
+        {
+          "type": "encode_start",
+          "frame": 2,
+          "at_ms": 87.10825629532337
+        },
+        {
+          "type": "encode_end",
+          "frame": 2,
+          "at_ms": 99.26218818873167
+        },
+        {
+          "type": "paired_media",
+          "frame": 2,
+          "at_ms": 99.53129105269909
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 3,
+          "at_ms": 127.17520631849766
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 3,
+          "bytes": 1382400,
+          "at_ms": 128.7761153653264
+        },
+        {
+          "type": "encode_start",
+          "frame": 3,
+          "at_ms": 128.78014240413904
+        },
+        {
+          "type": "encode_end",
+          "frame": 3,
+          "at_ms": 141.10119827091694
+        },
+        {
+          "type": "paired_media",
+          "frame": 3,
+          "at_ms": 141.383346170187
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 4,
+          "at_ms": 166.13107174634933
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 4,
+          "bytes": 1382400,
+          "at_ms": 168.3481028303504
+        },
+        {
+          "type": "encode_start",
+          "frame": 4,
+          "at_ms": 168.3519147336483
+        },
+        {
+          "type": "encode_end",
+          "frame": 4,
+          "at_ms": 181.3181983307004
+        },
+        {
+          "type": "paired_media",
+          "frame": 4,
+          "at_ms": 181.60472344607115
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 5,
+          "at_ms": 207.16671645641327
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 5,
+          "bytes": 1382400,
+          "at_ms": 209.48459673672915
+        },
+        {
+          "type": "encode_start",
+          "frame": 5,
+          "at_ms": 209.4881096854806
+        },
+        {
+          "type": "encode_end",
+          "frame": 5,
+          "at_ms": 221.98384441435337
+        },
+        {
+          "type": "paired_media",
+          "frame": 5,
+          "at_ms": 222.2570674493909
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 6,
+          "at_ms": 245.49115262925625
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 6,
+          "bytes": 1382400,
+          "at_ms": 247.28686176240444
+        },
+        {
+          "type": "encode_start",
+          "frame": 6,
+          "at_ms": 247.29012977331877
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 254.68588899821043
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.24958206247538328,
+          "at_ms": 254.69835754483938
+        },
+        {
+          "type": "encode_end",
+          "frame": 6,
+          "at_ms": 261.74087449908257
+        },
+        {
+          "type": "paired_media",
+          "frame": 6,
+          "at_ms": 262.010850943625
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 7,
+          "at_ms": 286.5423830226064
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 7,
+          "bytes": 1382400,
+          "at_ms": 287.8046967089176
+        },
+        {
+          "type": "encode_start",
+          "frame": 7,
+          "at_ms": 287.8079563379288
+        },
+        {
+          "type": "encode_end",
+          "frame": 7,
+          "at_ms": 300.1672513782978
+        },
+        {
+          "type": "paired_media",
+          "frame": 7,
+          "at_ms": 300.46495515853167
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 8,
+          "at_ms": 325.5267022177577
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 8,
+          "bytes": 1382400,
+          "at_ms": 327.5638874620199
+        },
+        {
+          "type": "encode_start",
+          "frame": 8,
+          "at_ms": 327.5672532618046
+        },
+        {
+          "type": "encode_end",
+          "frame": 8,
+          "at_ms": 339.73920810967684
+        },
+        {
+          "type": "paired_media",
+          "frame": 8,
+          "at_ms": 340.02408012747765
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 9,
+          "at_ms": 366.26288667321205
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 9,
+          "bytes": 1382400,
+          "at_ms": 369.0616423264146
+        },
+        {
+          "type": "encode_start",
+          "frame": 9,
+          "at_ms": 369.06735226511955
+        },
+        {
+          "type": "encode_end",
+          "frame": 9,
+          "at_ms": 381.82520773261786
+        },
+        {
+          "type": "paired_media",
+          "frame": 9,
+          "at_ms": 382.148121483624
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 10,
+          "at_ms": 406.11477196216583
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 10,
+          "bytes": 1382400,
+          "at_ms": 408.53598341345787
+        },
+        {
+          "type": "encode_start",
+          "frame": 10,
+          "at_ms": 408.5393659770489
+        },
+        {
+          "type": "encode_end",
+          "frame": 10,
+          "at_ms": 421.39213159680367
+        },
+        {
+          "type": "paired_media",
+          "frame": 10,
+          "at_ms": 421.6827666386962
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 11,
+          "at_ms": 445.6359976902604
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 11,
+          "bytes": 1382400,
+          "at_ms": 447.94966746121645
+        },
+        {
+          "type": "encode_start",
+          "frame": 11,
+          "at_ms": 447.952882386744
+        },
+        {
+          "type": "encode_end",
+          "frame": 11,
+          "at_ms": 460.9709708020091
+        },
+        {
+          "type": "paired_media",
+          "frame": 11,
+          "at_ms": 461.38220466673374
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 12,
+          "at_ms": 486.4506805315614
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 12,
+          "bytes": 1382400,
+          "at_ms": 488.1591163575649
+        },
+        {
+          "type": "encode_start",
+          "frame": 12,
+          "at_ms": 488.16248774528503
+        },
+        {
+          "type": "encode_end",
+          "frame": 12,
+          "at_ms": 500.6627356633544
+        },
+        {
+          "type": "paired_media",
+          "frame": 12,
+          "at_ms": 501.0230988264084
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 505.4137213155627
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.2488523367792368,
+          "at_ms": 505.4283607751131
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 13,
+          "at_ms": 526.3840584084392
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 13,
+          "bytes": 1382400,
+          "at_ms": 528.7822112441063
+        },
+        {
+          "type": "encode_start",
+          "frame": 13,
+          "at_ms": 528.7864422425628
+        },
+        {
+          "type": "encode_end",
+          "frame": 13,
+          "at_ms": 541.2679277360439
+        },
+        {
+          "type": "paired_media",
+          "frame": 13,
+          "at_ms": 541.6604299098253
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 14,
+          "at_ms": 566.2265662103891
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 14,
+          "bytes": 1382400,
+          "at_ms": 568.0902469903231
+        },
+        {
+          "type": "encode_start",
+          "frame": 14,
+          "at_ms": 568.0938949808478
+        },
+        {
+          "type": "encode_end",
+          "frame": 14,
+          "at_ms": 580.5510776117444
+        },
+        {
+          "type": "paired_media",
+          "frame": 14,
+          "at_ms": 580.9284774586558
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 15,
+          "at_ms": 606.0616262257099
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 15,
+          "bytes": 1382400,
+          "at_ms": 608.5959589108825
+        },
+        {
+          "type": "encode_start",
+          "frame": 15,
+          "at_ms": 608.5993265733123
+        },
+        {
+          "type": "encode_end",
+          "frame": 15,
+          "at_ms": 621.9016406685114
+        },
+        {
+          "type": "paired_media",
+          "frame": 15,
+          "at_ms": 622.2826540470123
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 16,
+          "at_ms": 645.5783192068338
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 16,
+          "bytes": 1382400,
+          "at_ms": 647.6363288238645
+        },
+        {
+          "type": "encode_start",
+          "frame": 16,
+          "at_ms": 647.6406417787075
+        },
+        {
+          "type": "encode_end",
+          "frame": 16,
+          "at_ms": 660.0383529439569
+        },
+        {
+          "type": "paired_media",
+          "frame": 16,
+          "at_ms": 660.4013489559293
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 17,
+          "at_ms": 686.394945718348
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 17,
+          "bytes": 1382400,
+          "at_ms": 688.7565972283483
+        },
+        {
+          "type": "encode_start",
+          "frame": 17,
+          "at_ms": 688.7598671019077
+        },
+        {
+          "type": "encode_end",
+          "frame": 17,
+          "at_ms": 702.3562360554934
+        },
+        {
+          "type": "paired_media",
+          "frame": 17,
+          "at_ms": 702.7611155062914
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 18,
+          "at_ms": 727.5183070451021
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 18,
+          "bytes": 1382400,
+          "at_ms": 729.288931004703
+        },
+        {
+          "type": "encode_start",
+          "frame": 18,
+          "at_ms": 729.292931035161
+        },
+        {
+          "type": "encode_end",
+          "frame": 18,
+          "at_ms": 741.8466946110129
+        },
+        {
+          "type": "paired_media",
+          "frame": 18,
+          "at_ms": 742.2641515731812
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 754.7545917332172
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.24949514400213957,
+          "at_ms": 754.7856345772743
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 19,
+          "at_ms": 767.0553075149655
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 19,
+          "bytes": 1382400,
+          "at_ms": 769.6439232677221
+        },
+        {
+          "type": "encode_start",
+          "frame": 19,
+          "at_ms": 769.6474278345704
+        },
+        {
+          "type": "encode_end",
+          "frame": 19,
+          "at_ms": 782.7908489853144
+        },
+        {
+          "type": "paired_media",
+          "frame": 19,
+          "at_ms": 783.2305077463388
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1004.9647185951471
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1004.9956208094954
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.24927006103098392,
+          "at_ms": 1005.0107929855585
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 20,
+          "at_ms": 1031.583135947585
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 20,
+          "bytes": 1382400,
+          "at_ms": 1034.2379678040743
+        },
+        {
+          "type": "encode_start",
+          "frame": 20,
+          "at_ms": 1034.24200322479
+        },
+        {
+          "type": "encode_end",
+          "frame": 20,
+          "at_ms": 1046.5682819485664
+        },
+        {
+          "type": "paired_media",
+          "frame": 20,
+          "at_ms": 1046.9585731625557
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 21,
+          "at_ms": 1047.0450017601252
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 21,
+          "bytes": 1382400,
+          "at_ms": 1047.5861998274922
+        },
+        {
+          "type": "encode_start",
+          "frame": 21,
+          "at_ms": 1047.5893067196012
+        },
+        {
+          "type": "encode_end",
+          "frame": 21,
+          "at_ms": 1059.169971384108
+        },
+        {
+          "type": "paired_media",
+          "frame": 21,
+          "at_ms": 1059.5300691202283
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 22,
+          "at_ms": 1059.6008840948343
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 22,
+          "bytes": 1382400,
+          "at_ms": 1059.81133133173
+        },
+        {
+          "type": "encode_start",
+          "frame": 22,
+          "at_ms": 1059.813524596393
+        },
+        {
+          "type": "encode_end",
+          "frame": 22,
+          "at_ms": 1074.1985822096467
+        },
+        {
+          "type": "paired_media",
+          "frame": 22,
+          "at_ms": 1074.4765037670732
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 23,
+          "at_ms": 1074.5620504021645
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 23,
+          "bytes": 1382400,
+          "at_ms": 1075.1880425959826
+        },
+        {
+          "type": "encode_start",
+          "frame": 23,
+          "at_ms": 1075.1906586810946
+        },
+        {
+          "type": "encode_end",
+          "frame": 23,
+          "at_ms": 1087.4488754197955
+        },
+        {
+          "type": "paired_media",
+          "frame": 23,
+          "at_ms": 1087.8164591267705
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1255.7653840631247
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1256.0476316139102
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1256.1521641910076
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 24,
+          "at_ms": 1256.5166261047125
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 24,
+          "bytes": 1382400,
+          "at_ms": 1260.8591606840491
+        },
+        {
+          "type": "encode_start",
+          "frame": 24,
+          "at_ms": 1260.869674384594
+        },
+        {
+          "type": "encode_end",
+          "frame": 24,
+          "at_ms": 1282.0719378069043
+        },
+        {
+          "type": "paired_media",
+          "frame": 24,
+          "at_ms": 1282.3549453169107
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 25,
+          "at_ms": 1282.423204742372
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 25,
+          "bytes": 1382400,
+          "at_ms": 1282.718325033784
+        },
+        {
+          "type": "encode_start",
+          "frame": 25,
+          "at_ms": 1282.7217606827617
+        },
+        {
+          "type": "encode_end",
+          "frame": 25,
+          "at_ms": 1298.5670771449804
+        },
+        {
+          "type": "paired_media",
+          "frame": 25,
+          "at_ms": 1298.8292574882507
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 26,
+          "at_ms": 1298.8811805844307
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 26,
+          "bytes": 1382400,
+          "at_ms": 1299.0808645263314
+        },
+        {
+          "type": "encode_start",
+          "frame": 26,
+          "at_ms": 1299.0831760689616
+        },
+        {
+          "type": "encode_end",
+          "frame": 26,
+          "at_ms": 1310.447775758803
+        },
+        {
+          "type": "paired_media",
+          "frame": 26,
+          "at_ms": 1310.647183097899
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 27,
+          "at_ms": 1310.7042759656906
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 27,
+          "bytes": 1382400,
+          "at_ms": 1311.2220615148544
+        },
+        {
+          "type": "encode_start",
+          "frame": 27,
+          "at_ms": 1311.2249644473195
+        },
+        {
+          "type": "encode_end",
+          "frame": 27,
+          "at_ms": 1322.248663753271
+        },
+        {
+          "type": "paired_media",
+          "frame": 27,
+          "at_ms": 1322.4460007622838
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 28,
+          "at_ms": 1444.7030955925584
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 28,
+          "bytes": 1382400,
+          "at_ms": 1449.6780391782522
+        },
+        {
+          "type": "encode_start",
+          "frame": 28,
+          "at_ms": 1449.6860411018133
+        },
+        {
+          "type": "encode_end",
+          "frame": 28,
+          "at_ms": 1464.9592516943812
+        },
+        {
+          "type": "paired_media",
+          "frame": 28,
+          "at_ms": 1465.3365202248096
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 29,
+          "at_ms": 1465.409672819078
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 29,
+          "bytes": 1382400,
+          "at_ms": 1465.783971361816
+        },
+        {
+          "type": "encode_start",
+          "frame": 29,
+          "at_ms": 1465.7886419445276
+        },
+        {
+          "type": "encode_end",
+          "frame": 29,
+          "at_ms": 1478.3967789262533
+        },
+        {
+          "type": "paired_media",
+          "frame": 29,
+          "at_ms": 1478.6785067990422
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 30,
+          "at_ms": 1478.7489343434572
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 30,
+          "bytes": 1382400,
+          "at_ms": 1479.1982499882579
+        },
+        {
+          "type": "encode_start",
+          "frame": 30,
+          "at_ms": 1479.2016381397843
+        },
+        {
+          "type": "encode_end",
+          "frame": 30,
+          "at_ms": 1490.4918912798166
+        },
+        {
+          "type": "paired_media",
+          "frame": 30,
+          "at_ms": 1490.7244751229882
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 31,
+          "at_ms": 1490.798158571124
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 31,
+          "bytes": 1382400,
+          "at_ms": 1491.59746337682
+        },
+        {
+          "type": "encode_start",
+          "frame": 31,
+          "at_ms": 1491.6009902954102
+        },
+        {
+          "type": "encode_end",
+          "frame": 31,
+          "at_ms": 1502.5363247841597
+        },
+        {
+          "type": "paired_media",
+          "frame": 31,
+          "at_ms": 1502.8889793902636
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 32,
+          "at_ms": 1502.9615629464388
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 32,
+          "bytes": 1382400,
+          "at_ms": 1503.2366905361414
+        },
+        {
+          "type": "encode_start",
+          "frame": 32,
+          "at_ms": 1503.2402938231826
+        },
+        {
+          "type": "encode_end",
+          "frame": 32,
+          "at_ms": 1514.1887422651052
+        },
+        {
+          "type": "paired_media",
+          "frame": 32,
+          "at_ms": 1514.4303981214762
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 33,
+          "at_ms": 1514.4903305917978
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 33,
+          "bytes": 1382400,
+          "at_ms": 1515.123162418604
+        },
+        {
+          "type": "encode_start",
+          "frame": 33,
+          "at_ms": 1515.1260504499078
+        },
+        {
+          "type": "encode_end",
+          "frame": 33,
+          "at_ms": 1526.034370996058
+        },
+        {
+          "type": "paired_media",
+          "frame": 33,
+          "at_ms": 1526.2546399608254
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 34,
+          "at_ms": 1526.2978253886104
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 34,
+          "bytes": 1382400,
+          "at_ms": 1526.4653423801064
+        },
+        {
+          "type": "encode_start",
+          "frame": 34,
+          "at_ms": 1526.4675104990602
+        },
+        {
+          "type": "encode_end",
+          "frame": 34,
+          "at_ms": 1537.3997641727328
+        },
+        {
+          "type": "paired_media",
+          "frame": 34,
+          "at_ms": 1537.60776668787
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 35,
+          "at_ms": 1537.6675426959991
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 35,
+          "bytes": 1382400,
+          "at_ms": 1538.221100345254
+        },
+        {
+          "type": "encode_start",
+          "frame": 35,
+          "at_ms": 1538.223941810429
+        },
+        {
+          "type": "encode_end",
+          "frame": 35,
+          "at_ms": 1549.2048235610127
+        },
+        {
+          "type": "paired_media",
+          "frame": 35,
+          "at_ms": 1549.4139762595296
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 36,
+          "at_ms": 1642.510230652988
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 36,
+          "bytes": 1382400,
+          "at_ms": 1645.0938116759062
+        },
+        {
+          "type": "encode_start",
+          "frame": 36,
+          "at_ms": 1645.1005954295397
+        },
+        {
+          "type": "encode_end",
+          "frame": 36,
+          "at_ms": 1663.5613786056638
+        },
+        {
+          "type": "paired_media",
+          "frame": 36,
+          "at_ms": 1663.8979753479362
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 37,
+          "at_ms": 1663.9741491526365
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 37,
+          "bytes": 1382400,
+          "at_ms": 1664.2304984852672
+        },
+        {
+          "type": "encode_start",
+          "frame": 37,
+          "at_ms": 1664.2340756952763
+        },
+        {
+          "type": "encode_end",
+          "frame": 37,
+          "at_ms": 1676.253971643746
+        },
+        {
+          "type": "paired_media",
+          "frame": 37,
+          "at_ms": 1676.4899175614119
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 38,
+          "at_ms": 1676.5407212078571
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 38,
+          "bytes": 1382400,
+          "at_ms": 1676.7159383744001
+        },
+        {
+          "type": "encode_start",
+          "frame": 38,
+          "at_ms": 1676.7182918265462
+        },
+        {
+          "type": "encode_end",
+          "frame": 38,
+          "at_ms": 1687.7894839271903
+        },
+        {
+          "type": "paired_media",
+          "frame": 38,
+          "at_ms": 1687.9992811009288
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 39,
+          "at_ms": 1688.0576703697443
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 39,
+          "bytes": 1382400,
+          "at_ms": 1688.5714503005147
+        },
+        {
+          "type": "encode_start",
+          "frame": 39,
+          "at_ms": 1688.5743690654635
+        },
+        {
+          "type": "encode_end",
+          "frame": 39,
+          "at_ms": 1699.5081640779972
+        },
+        {
+          "type": "paired_media",
+          "frame": 39,
+          "at_ms": 1699.744681827724
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 40,
+          "at_ms": 1839.1240732744336
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 40,
+          "bytes": 1382400,
+          "at_ms": 1842.7501432597637
+        },
+        {
+          "type": "encode_start",
+          "frame": 40,
+          "at_ms": 1842.7642434835434
+        },
+        {
+          "type": "encode_end",
+          "frame": 40,
+          "at_ms": 1866.6677633300424
+        },
+        {
+          "type": "paired_media",
+          "frame": 40,
+          "at_ms": 1866.9352047145367
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 41,
+          "at_ms": 1866.9999623671174
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 41,
+          "bytes": 1382400,
+          "at_ms": 1867.2457933425903
+        },
+        {
+          "type": "encode_start",
+          "frame": 41,
+          "at_ms": 1867.2487046569586
+        },
+        {
+          "type": "encode_end",
+          "frame": 41,
+          "at_ms": 1879.0835440158844
+        },
+        {
+          "type": "paired_media",
+          "frame": 41,
+          "at_ms": 1879.3605454266071
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 42,
+          "at_ms": 1879.4314777478576
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 42,
+          "bytes": 1382400,
+          "at_ms": 1879.632856696844
+        },
+        {
+          "type": "encode_start",
+          "frame": 42,
+          "at_ms": 1879.6355007216334
+        },
+        {
+          "type": "encode_end",
+          "frame": 42,
+          "at_ms": 1891.8633004650474
+        },
+        {
+          "type": "paired_media",
+          "frame": 42,
+          "at_ms": 1892.114708200097
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 43,
+          "at_ms": 1892.1903669834137
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 43,
+          "bytes": 1382400,
+          "at_ms": 1892.776308581233
+        },
+        {
+          "type": "encode_start",
+          "frame": 43,
+          "at_ms": 1892.7793679758906
+        },
+        {
+          "type": "encode_end",
+          "frame": 43,
+          "at_ms": 1904.1907973587513
+        },
+        {
+          "type": "paired_media",
+          "frame": 43,
+          "at_ms": 1904.4183483347297
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 44,
+          "at_ms": 2047.3085856065154
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 44,
+          "bytes": 1382400,
+          "at_ms": 2050.1900585368276
+        },
+        {
+          "type": "encode_start",
+          "frame": 44,
+          "at_ms": 2050.1978220418096
+        },
+        {
+          "type": "encode_end",
+          "frame": 44,
+          "at_ms": 2074.449793435633
+        },
+        {
+          "type": "paired_media",
+          "frame": 44,
+          "at_ms": 2074.7646670788527
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 45,
+          "at_ms": 2074.8432483524084
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 45,
+          "bytes": 1382400,
+          "at_ms": 2075.092173181474
+        },
+        {
+          "type": "encode_start",
+          "frame": 45,
+          "at_ms": 2075.0960912555456
+        },
+        {
+          "type": "encode_end",
+          "frame": 45,
+          "at_ms": 2087.090636603534
+        },
+        {
+          "type": "paired_media",
+          "frame": 45,
+          "at_ms": 2087.3182751238346
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 46,
+          "at_ms": 2087.3701935634017
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 46,
+          "bytes": 1382400,
+          "at_ms": 2087.608704343438
+        },
+        {
+          "type": "encode_start",
+          "frame": 46,
+          "at_ms": 2087.611080147326
+        },
+        {
+          "type": "encode_end",
+          "frame": 46,
+          "at_ms": 2099.021344445646
+        },
+        {
+          "type": "paired_media",
+          "frame": 46,
+          "at_ms": 2099.2322582751513
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 47,
+          "at_ms": 2099.2917846888304
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 47,
+          "bytes": 1382400,
+          "at_ms": 2099.734364077449
+        },
+        {
+          "type": "encode_start",
+          "frame": 47,
+          "at_ms": 2099.7370649129152
+        },
+        {
+          "type": "encode_end",
+          "frame": 47,
+          "at_ms": 2110.5515165254474
+        },
+        {
+          "type": "paired_media",
+          "frame": 47,
+          "at_ms": 2110.750117339194
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 48,
+          "at_ms": 2248.87971393764
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 48,
+          "bytes": 1382400,
+          "at_ms": 2253.698877990246
+        },
+        {
+          "type": "encode_start",
+          "frame": 48,
+          "at_ms": 2253.7059104070067
+        },
+        {
+          "type": "encode_end",
+          "frame": 48,
+          "at_ms": 2267.0355746522546
+        },
+        {
+          "type": "paired_media",
+          "frame": 48,
+          "at_ms": 2267.306094057858
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 49,
+          "at_ms": 2267.3770589753985
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 49,
+          "bytes": 1382400,
+          "at_ms": 2267.7016062662005
+        },
+        {
+          "type": "encode_start",
+          "frame": 49,
+          "at_ms": 2267.705594189465
+        },
+        {
+          "type": "encode_end",
+          "frame": 49,
+          "at_ms": 2279.257444664836
+        },
+        {
+          "type": "paired_media",
+          "frame": 49,
+          "at_ms": 2279.531156644225
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 50,
+          "at_ms": 2279.5969042927027
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 50,
+          "bytes": 1382400,
+          "at_ms": 2279.7841243445873
+        },
+        {
+          "type": "encode_start",
+          "frame": 50,
+          "at_ms": 2279.7871995717287
+        },
+        {
+          "type": "encode_end",
+          "frame": 50,
+          "at_ms": 2290.8749924972653
+        },
+        {
+          "type": "paired_media",
+          "frame": 50,
+          "at_ms": 2291.123477742076
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 51,
+          "at_ms": 2291.1890847608447
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 51,
+          "bytes": 1382400,
+          "at_ms": 2291.7617447674274
+        },
+        {
+          "type": "encode_start",
+          "frame": 51,
+          "at_ms": 2291.7646942660213
+        },
+        {
+          "type": "encode_end",
+          "frame": 51,
+          "at_ms": 2302.6275588199496
+        },
+        {
+          "type": "paired_media",
+          "frame": 51,
+          "at_ms": 2302.8615433722734
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 52,
+          "at_ms": 2302.9061695560813
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 52,
+          "bytes": 1382400,
+          "at_ms": 2303.072049282491
+        },
+        {
+          "type": "encode_start",
+          "frame": 52,
+          "at_ms": 2303.07456292212
+        },
+        {
+          "type": "encode_end",
+          "frame": 52,
+          "at_ms": 2313.9754151925445
+        },
+        {
+          "type": "paired_media",
+          "frame": 52,
+          "at_ms": 2314.1735857352614
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 53,
+          "at_ms": 2314.2285346984863
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 53,
+          "bytes": 1382400,
+          "at_ms": 2314.7787963971496
+        },
+        {
+          "type": "encode_start",
+          "frame": 53,
+          "at_ms": 2314.781409688294
+        },
+        {
+          "type": "encode_end",
+          "frame": 53,
+          "at_ms": 2325.686958618462
+        },
+        {
+          "type": "paired_media",
+          "frame": 53,
+          "at_ms": 2325.9118497371674
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 54,
+          "at_ms": 2325.951381586492
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 54,
+          "bytes": 1382400,
+          "at_ms": 2326.150835491717
+        },
+        {
+          "type": "encode_start",
+          "frame": 54,
+          "at_ms": 2326.152960769832
+        },
+        {
+          "type": "encode_end",
+          "frame": 54,
+          "at_ms": 2337.0112059637904
+        },
+        {
+          "type": "paired_media",
+          "frame": 54,
+          "at_ms": 2337.2169313952327
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 55,
+          "at_ms": 2337.2749937698245
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 55,
+          "bytes": 1382400,
+          "at_ms": 2337.749511934817
+        },
+        {
+          "type": "encode_start",
+          "frame": 55,
+          "at_ms": 2337.7522276714444
+        },
+        {
+          "type": "encode_end",
+          "frame": 55,
+          "at_ms": 2348.5382944345474
+        },
+        {
+          "type": "paired_media",
+          "frame": 55,
+          "at_ms": 2348.770147189498
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 56,
+          "at_ms": 2442.099856212735
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 56,
+          "bytes": 1382400,
+          "at_ms": 2444.878795184195
+        },
+        {
+          "type": "encode_start",
+          "frame": 56,
+          "at_ms": 2444.8854764923453
+        },
+        {
+          "type": "encode_end",
+          "frame": 56,
+          "at_ms": 2459.819059818983
+        },
+        {
+          "type": "paired_media",
+          "frame": 56,
+          "at_ms": 2460.10772138834
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 57,
+          "at_ms": 2460.1719519123435
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 57,
+          "bytes": 1382400,
+          "at_ms": 2460.449654608965
+        },
+        {
+          "type": "encode_start",
+          "frame": 57,
+          "at_ms": 2460.4532262310386
+        },
+        {
+          "type": "encode_end",
+          "frame": 57,
+          "at_ms": 2471.6660426929593
+        },
+        {
+          "type": "paired_media",
+          "frame": 57,
+          "at_ms": 2471.886762417853
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 58,
+          "at_ms": 2471.938387490809
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 58,
+          "bytes": 1382400,
+          "at_ms": 2472.1518950536847
+        },
+        {
+          "type": "encode_start",
+          "frame": 58,
+          "at_ms": 2472.1541879698634
+        },
+        {
+          "type": "encode_end",
+          "frame": 58,
+          "at_ms": 2482.9962449148297
+        },
+        {
+          "type": "paired_media",
+          "frame": 58,
+          "at_ms": 2483.2270788028836
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 59,
+          "at_ms": 2483.285010792315
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 59,
+          "bytes": 1382400,
+          "at_ms": 2483.7510297074914
+        },
+        {
+          "type": "encode_start",
+          "frame": 59,
+          "at_ms": 2483.7537286803126
+        },
+        {
+          "type": "encode_end",
+          "frame": 59,
+          "at_ms": 2494.4118596613407
+        },
+        {
+          "type": "paired_media",
+          "frame": 59,
+          "at_ms": 2494.6052078157663
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 60,
+          "at_ms": 2648.3798632398248
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 60,
+          "bytes": 1382400,
+          "at_ms": 2652.6227137073874
+        },
+        {
+          "type": "encode_start",
+          "frame": 60,
+          "at_ms": 2652.6339249685407
+        },
+        {
+          "type": "encode_end",
+          "frame": 60,
+          "at_ms": 2675.8168786764145
+        },
+        {
+          "type": "paired_media",
+          "frame": 60,
+          "at_ms": 2676.084111444652
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2676.151767373085
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2676.368228159845
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2676.5162516385317
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2676.98725592345
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2677.0066814497113
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2677.4537106975913
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2854.338362812996
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2859.536722302437
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2859.867077320814
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2862.10292391479
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2862.7451779320836
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2863.909352570772
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2864.470941014588
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2865.202729590237
+        }
+      ],
+      "metrics": {
+        "frames": 61,
+        "received_samples": 58368,
+        "input_samples": 58368,
+        "audio_duration_s": 2.432,
+        "first_media_s": 0.06729504466056824,
+        "wall_s": 2.8671438982710242,
+        "wall_audio_ratio": 1.1789243002759147,
+        "max_receive_gap_s": 0.26373007241636515,
+        "max_pts_error_s": 0.0,
+        "pcm_exact": true,
+        "prefix_exact": true,
+        "completed": true,
+        "playback_measured": false,
+        "lip_sync_measured": false
+      }
+    },
+    {
+      "index": 2,
+      "phase": "measured",
+      "status": "passed",
+      "events": [
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 9.128822945058346
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 9.518708102405071
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 9.8939910531044
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 10.262366384267807
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 10.632692836225033
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 10.72037499397993
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.2479580081999302,
+          "at_ms": 10.748796164989471
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 0,
+          "at_ms": 74.9018331989646
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 0,
+          "bytes": 1382400,
+          "at_ms": 78.1259760260582
+        },
+        {
+          "type": "encode_start",
+          "frame": 0,
+          "at_ms": 78.13060935586691
+        },
+        {
+          "type": "encode_end",
+          "frame": 0,
+          "at_ms": 90.15528671443462
+        },
+        {
+          "type": "paired_media",
+          "frame": 0,
+          "at_ms": 90.54205566644669
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 1,
+          "at_ms": 90.62407817691565
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 1,
+          "bytes": 1382400,
+          "at_ms": 91.06571041047573
+        },
+        {
+          "type": "encode_start",
+          "frame": 1,
+          "at_ms": 91.0684522241354
+        },
+        {
+          "type": "encode_end",
+          "frame": 1,
+          "at_ms": 106.72644339501858
+        },
+        {
+          "type": "paired_media",
+          "frame": 1,
+          "at_ms": 107.13126417249441
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 2,
+          "at_ms": 107.57284890860319
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 2,
+          "bytes": 1382400,
+          "at_ms": 108.90840832144022
+        },
+        {
+          "type": "encode_start",
+          "frame": 2,
+          "at_ms": 108.91167260706425
+        },
+        {
+          "type": "encode_end",
+          "frame": 2,
+          "at_ms": 121.98555748909712
+        },
+        {
+          "type": "paired_media",
+          "frame": 2,
+          "at_ms": 122.36909009516239
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 3,
+          "at_ms": 130.26599865406752
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 3,
+          "bytes": 1382400,
+          "at_ms": 131.89334515482187
+        },
+        {
+          "type": "encode_start",
+          "frame": 3,
+          "at_ms": 131.89653679728508
+        },
+        {
+          "type": "encode_end",
+          "frame": 3,
+          "at_ms": 143.63203197717667
+        },
+        {
+          "type": "paired_media",
+          "frame": 3,
+          "at_ms": 143.85951962321997
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 4,
+          "at_ms": 172.6728966459632
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 4,
+          "bytes": 1382400,
+          "at_ms": 176.98093969374895
+        },
+        {
+          "type": "encode_start",
+          "frame": 4,
+          "at_ms": 177.00563836842775
+        },
+        {
+          "type": "encode_end",
+          "frame": 4,
+          "at_ms": 200.26353560388088
+        },
+        {
+          "type": "paired_media",
+          "frame": 4,
+          "at_ms": 200.52040088921785
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 5,
+          "at_ms": 213.02569285035133
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 5,
+          "bytes": 1382400,
+          "at_ms": 215.40091931819916
+        },
+        {
+          "type": "encode_start",
+          "frame": 5,
+          "at_ms": 215.40548652410507
+        },
+        {
+          "type": "encode_end",
+          "frame": 5,
+          "at_ms": 230.38189765065908
+        },
+        {
+          "type": "paired_media",
+          "frame": 5,
+          "at_ms": 230.6383103132248
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 6,
+          "at_ms": 250.1291548833251
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 6,
+          "bytes": 1382400,
+          "at_ms": 251.87601428478956
+        },
+        {
+          "type": "encode_start",
+          "frame": 6,
+          "at_ms": 251.87965855002403
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 259.1653186827898
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.2495267642661929,
+          "at_ms": 259.1761024668813
+        },
+        {
+          "type": "encode_end",
+          "frame": 6,
+          "at_ms": 263.5987624526024
+        },
+        {
+          "type": "paired_media",
+          "frame": 6,
+          "at_ms": 263.8548966497183
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 7,
+          "at_ms": 290.3152368962765
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 7,
+          "bytes": 1382400,
+          "at_ms": 291.53270740062
+        },
+        {
+          "type": "encode_start",
+          "frame": 7,
+          "at_ms": 291.53535701334476
+        },
+        {
+          "type": "encode_end",
+          "frame": 7,
+          "at_ms": 304.2337093502283
+        },
+        {
+          "type": "paired_media",
+          "frame": 7,
+          "at_ms": 304.5035442337394
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 8,
+          "at_ms": 330.50213661044836
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 8,
+          "bytes": 1382400,
+          "at_ms": 331.6288935020566
+        },
+        {
+          "type": "encode_start",
+          "frame": 8,
+          "at_ms": 331.6314872354269
+        },
+        {
+          "type": "encode_end",
+          "frame": 8,
+          "at_ms": 343.3646149933338
+        },
+        {
+          "type": "paired_media",
+          "frame": 8,
+          "at_ms": 343.63185707479715
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 9,
+          "at_ms": 372.24479857832193
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 9,
+          "bytes": 1382400,
+          "at_ms": 372.89934046566486
+        },
+        {
+          "type": "encode_start",
+          "frame": 9,
+          "at_ms": 372.9022042825818
+        },
+        {
+          "type": "encode_end",
+          "frame": 9,
+          "at_ms": 384.6640409901738
+        },
+        {
+          "type": "paired_media",
+          "frame": 9,
+          "at_ms": 384.936461225152
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 10,
+          "at_ms": 410.7633139938116
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 10,
+          "bytes": 1382400,
+          "at_ms": 412.5446593388915
+        },
+        {
+          "type": "encode_start",
+          "frame": 10,
+          "at_ms": 412.5485476106405
+        },
+        {
+          "type": "encode_end",
+          "frame": 10,
+          "at_ms": 424.53794553875923
+        },
+        {
+          "type": "paired_media",
+          "frame": 10,
+          "at_ms": 424.80409890413284
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 11,
+          "at_ms": 449.41835198551416
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 11,
+          "bytes": 1382400,
+          "at_ms": 451.041292399168
+        },
+        {
+          "type": "encode_start",
+          "frame": 11,
+          "at_ms": 451.04413758963346
+        },
+        {
+          "type": "encode_end",
+          "frame": 11,
+          "at_ms": 463.44290394335985
+        },
+        {
+          "type": "paired_media",
+          "frame": 11,
+          "at_ms": 463.745572604239
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 12,
+          "at_ms": 489.7506395354867
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 12,
+          "bytes": 1382400,
+          "at_ms": 491.1709353327751
+        },
+        {
+          "type": "encode_start",
+          "frame": 12,
+          "at_ms": 491.17351323366165
+        },
+        {
+          "type": "encode_end",
+          "frame": 12,
+          "at_ms": 503.6081215366721
+        },
+        {
+          "type": "paired_media",
+          "frame": 12,
+          "at_ms": 503.8830013945699
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 509.2032104730606
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.24948959238827229,
+          "at_ms": 509.2135136947036
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 13,
+          "at_ms": 529.545521363616
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 13,
+          "bytes": 1382400,
+          "at_ms": 531.3866892829537
+        },
+        {
+          "type": "encode_start",
+          "frame": 13,
+          "at_ms": 531.390474177897
+        },
+        {
+          "type": "encode_end",
+          "frame": 13,
+          "at_ms": 552.4171255528927
+        },
+        {
+          "type": "paired_media",
+          "frame": 13,
+          "at_ms": 552.7442051097751
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 14,
+          "at_ms": 569.8068514466286
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 14,
+          "bytes": 1382400,
+          "at_ms": 571.4615164324641
+        },
+        {
+          "type": "encode_start",
+          "frame": 14,
+          "at_ms": 571.4653059840202
+        },
+        {
+          "type": "encode_end",
+          "frame": 14,
+          "at_ms": 593.9246313646436
+        },
+        {
+          "type": "paired_media",
+          "frame": 14,
+          "at_ms": 594.3156918510795
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 15,
+          "at_ms": 610.1237116381526
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 15,
+          "bytes": 1382400,
+          "at_ms": 611.8757426738739
+        },
+        {
+          "type": "encode_start",
+          "frame": 15,
+          "at_ms": 611.8787340819836
+        },
+        {
+          "type": "encode_end",
+          "frame": 15,
+          "at_ms": 625.492443330586
+        },
+        {
+          "type": "paired_media",
+          "frame": 15,
+          "at_ms": 625.7523586973548
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 16,
+          "at_ms": 650.8519416674972
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 16,
+          "bytes": 1382400,
+          "at_ms": 652.543387375772
+        },
+        {
+          "type": "encode_start",
+          "frame": 16,
+          "at_ms": 652.547175064683
+        },
+        {
+          "type": "encode_end",
+          "frame": 16,
+          "at_ms": 665.5040420591831
+        },
+        {
+          "type": "paired_media",
+          "frame": 16,
+          "at_ms": 665.7839892432094
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 17,
+          "at_ms": 690.0798808783293
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 17,
+          "bytes": 1382400,
+          "at_ms": 691.6610635817051
+        },
+        {
+          "type": "encode_start",
+          "frame": 17,
+          "at_ms": 691.6637700051069
+        },
+        {
+          "type": "encode_end",
+          "frame": 17,
+          "at_ms": 704.6068664640188
+        },
+        {
+          "type": "paired_media",
+          "frame": 17,
+          "at_ms": 704.8680819571018
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 18,
+          "at_ms": 730.702861212194
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 18,
+          "bytes": 1382400,
+          "at_ms": 732.1111559867859
+        },
+        {
+          "type": "encode_start",
+          "frame": 18,
+          "at_ms": 732.1144388988614
+        },
+        {
+          "type": "encode_end",
+          "frame": 18,
+          "at_ms": 744.3540059030056
+        },
+        {
+          "type": "paired_media",
+          "frame": 18,
+          "at_ms": 744.6251139044762
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 759.9785048514605
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.248696431517601,
+          "at_ms": 760.006744414568
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 19,
+          "at_ms": 769.8027035221457
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 19,
+          "bytes": 1382400,
+          "at_ms": 771.3222512975335
+        },
+        {
+          "type": "encode_start",
+          "frame": 19,
+          "at_ms": 771.3249521329999
+        },
+        {
+          "type": "encode_end",
+          "frame": 19,
+          "at_ms": 783.736115321517
+        },
+        {
+          "type": "paired_media",
+          "frame": 19,
+          "at_ms": 783.9849265292287
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1009.3706315383315
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1009.3900738283992
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.24930208921432495,
+          "at_ms": 1009.4011882320046
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 20,
+          "at_ms": 1036.6326915100217
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 20,
+          "bytes": 1382400,
+          "at_ms": 1038.5077856481075
+        },
+        {
+          "type": "encode_start",
+          "frame": 20,
+          "at_ms": 1038.5111887007952
+        },
+        {
+          "type": "encode_end",
+          "frame": 20,
+          "at_ms": 1051.346288062632
+        },
+        {
+          "type": "paired_media",
+          "frame": 20,
+          "at_ms": 1051.6060311347246
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 21,
+          "at_ms": 1051.6703184694052
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 21,
+          "bytes": 1382400,
+          "at_ms": 1051.9331404939294
+        },
+        {
+          "type": "encode_start",
+          "frame": 21,
+          "at_ms": 1051.9350776448846
+        },
+        {
+          "type": "encode_end",
+          "frame": 21,
+          "at_ms": 1063.4542806074023
+        },
+        {
+          "type": "paired_media",
+          "frame": 21,
+          "at_ms": 1063.7286622077227
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 22,
+          "at_ms": 1063.790456391871
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 22,
+          "bytes": 1382400,
+          "at_ms": 1064.0506315976381
+        },
+        {
+          "type": "encode_start",
+          "frame": 22,
+          "at_ms": 1064.0526711940765
+        },
+        {
+          "type": "encode_end",
+          "frame": 22,
+          "at_ms": 1075.4424361512065
+        },
+        {
+          "type": "paired_media",
+          "frame": 22,
+          "at_ms": 1075.722685083747
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 23,
+          "at_ms": 1075.8020663633943
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 23,
+          "bytes": 1382400,
+          "at_ms": 1076.3446502387524
+        },
+        {
+          "type": "encode_start",
+          "frame": 23,
+          "at_ms": 1076.3472393155098
+        },
+        {
+          "type": "encode_end",
+          "frame": 23,
+          "at_ms": 1088.1421593949199
+        },
+        {
+          "type": "paired_media",
+          "frame": 23,
+          "at_ms": 1088.392922654748
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 24,
+          "at_ms": 1237.73527238518
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 24,
+          "bytes": 1382400,
+          "at_ms": 1239.5002879202366
+        },
+        {
+          "type": "encode_start",
+          "frame": 24,
+          "at_ms": 1239.5030576735735
+        },
+        {
+          "type": "encode_end",
+          "frame": 24,
+          "at_ms": 1251.7359936609864
+        },
+        {
+          "type": "paired_media",
+          "frame": 24,
+          "at_ms": 1252.0597632974386
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 25,
+          "at_ms": 1252.1304544061422
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 25,
+          "bytes": 1382400,
+          "at_ms": 1252.4646846577525
+        },
+        {
+          "type": "encode_start",
+          "frame": 25,
+          "at_ms": 1252.4671973660588
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1259.5273898914456
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1259.600575082004
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1259.6231764182448
+        },
+        {
+          "type": "encode_end",
+          "frame": 25,
+          "at_ms": 1264.1457999125123
+        },
+        {
+          "type": "paired_media",
+          "frame": 25,
+          "at_ms": 1264.402000233531
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 26,
+          "at_ms": 1264.468289911747
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 26,
+          "bytes": 1382400,
+          "at_ms": 1264.7189740091562
+        },
+        {
+          "type": "encode_start",
+          "frame": 26,
+          "at_ms": 1264.7217819467187
+        },
+        {
+          "type": "encode_end",
+          "frame": 26,
+          "at_ms": 1276.2045403942466
+        },
+        {
+          "type": "paired_media",
+          "frame": 26,
+          "at_ms": 1276.47658996284
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 27,
+          "at_ms": 1276.554406620562
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 27,
+          "bytes": 1382400,
+          "at_ms": 1277.13877055794
+        },
+        {
+          "type": "encode_start",
+          "frame": 27,
+          "at_ms": 1277.142089791596
+        },
+        {
+          "type": "encode_end",
+          "frame": 27,
+          "at_ms": 1288.2021255791187
+        },
+        {
+          "type": "paired_media",
+          "frame": 27,
+          "at_ms": 1288.4467002004385
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 28,
+          "at_ms": 1440.7884292304516
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 28,
+          "bytes": 1382400,
+          "at_ms": 1446.3267549872398
+        },
+        {
+          "type": "encode_start",
+          "frame": 28,
+          "at_ms": 1446.3311498984694
+        },
+        {
+          "type": "encode_end",
+          "frame": 28,
+          "at_ms": 1458.8397219777107
+        },
+        {
+          "type": "paired_media",
+          "frame": 28,
+          "at_ms": 1459.248410537839
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 29,
+          "at_ms": 1459.338533692062
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 29,
+          "bytes": 1382400,
+          "at_ms": 1459.9026339128613
+        },
+        {
+          "type": "encode_start",
+          "frame": 29,
+          "at_ms": 1459.9076211452484
+        },
+        {
+          "type": "encode_end",
+          "frame": 29,
+          "at_ms": 1471.5920388698578
+        },
+        {
+          "type": "paired_media",
+          "frame": 29,
+          "at_ms": 1471.8731185421348
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 30,
+          "at_ms": 1471.9358421862125
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 30,
+          "bytes": 1382400,
+          "at_ms": 1472.1830571070313
+        },
+        {
+          "type": "encode_start",
+          "frame": 30,
+          "at_ms": 1472.1860531717539
+        },
+        {
+          "type": "encode_end",
+          "frame": 30,
+          "at_ms": 1483.3592865616083
+        },
+        {
+          "type": "paired_media",
+          "frame": 30,
+          "at_ms": 1483.5997875779867
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 31,
+          "at_ms": 1483.669870533049
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 31,
+          "bytes": 1382400,
+          "at_ms": 1484.345176257193
+        },
+        {
+          "type": "encode_start",
+          "frame": 31,
+          "at_ms": 1484.3484070152044
+        },
+        {
+          "type": "encode_end",
+          "frame": 31,
+          "at_ms": 1495.2856190502644
+        },
+        {
+          "type": "paired_media",
+          "frame": 31,
+          "at_ms": 1495.5195300281048
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 32,
+          "at_ms": 1495.5702750012279
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 32,
+          "bytes": 1382400,
+          "at_ms": 1495.785548351705
+        },
+        {
+          "type": "encode_start",
+          "frame": 32,
+          "at_ms": 1495.7881439477205
+        },
+        {
+          "type": "encode_end",
+          "frame": 32,
+          "at_ms": 1506.7961476743221
+        },
+        {
+          "type": "paired_media",
+          "frame": 32,
+          "at_ms": 1507.0303175598383
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 33,
+          "at_ms": 1507.095955312252
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 33,
+          "bytes": 1382400,
+          "at_ms": 1507.7244136482477
+        },
+        {
+          "type": "encode_start",
+          "frame": 33,
+          "at_ms": 1507.7274404466152
+        },
+        {
+          "type": "encode_end",
+          "frame": 33,
+          "at_ms": 1518.9619334414601
+        },
+        {
+          "type": "paired_media",
+          "frame": 33,
+          "at_ms": 1519.266809336841
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 34,
+          "at_ms": 1519.3350901827216
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 34,
+          "bytes": 1382400,
+          "at_ms": 1519.6181423962116
+        },
+        {
+          "type": "encode_start",
+          "frame": 34,
+          "at_ms": 1519.6218434721231
+        },
+        {
+          "type": "encode_end",
+          "frame": 34,
+          "at_ms": 1531.0024116188288
+        },
+        {
+          "type": "paired_media",
+          "frame": 34,
+          "at_ms": 1531.3342418521643
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 35,
+          "at_ms": 1531.4339231699705
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 35,
+          "bytes": 1382400,
+          "at_ms": 1532.2642931714654
+        },
+        {
+          "type": "encode_start",
+          "frame": 35,
+          "at_ms": 1532.2682606056333
+        },
+        {
+          "type": "encode_end",
+          "frame": 35,
+          "at_ms": 1543.8584256917238
+        },
+        {
+          "type": "paired_media",
+          "frame": 35,
+          "at_ms": 1544.152625836432
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 36,
+          "at_ms": 1637.8394085913897
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 36,
+          "bytes": 1382400,
+          "at_ms": 1639.794603921473
+        },
+        {
+          "type": "encode_start",
+          "frame": 36,
+          "at_ms": 1639.7992633283138
+        },
+        {
+          "type": "encode_end",
+          "frame": 36,
+          "at_ms": 1659.2013044282794
+        },
+        {
+          "type": "paired_media",
+          "frame": 36,
+          "at_ms": 1659.5623036846519
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 37,
+          "at_ms": 1659.6444146707654
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 37,
+          "bytes": 1382400,
+          "at_ms": 1660.0583354011178
+        },
+        {
+          "type": "encode_start",
+          "frame": 37,
+          "at_ms": 1660.0624145939946
+        },
+        {
+          "type": "encode_end",
+          "frame": 37,
+          "at_ms": 1680.5934440344572
+        },
+        {
+          "type": "paired_media",
+          "frame": 37,
+          "at_ms": 1680.9084564447403
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 38,
+          "at_ms": 1680.9759642928839
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 38,
+          "bytes": 1382400,
+          "at_ms": 1681.2172681093216
+        },
+        {
+          "type": "encode_start",
+          "frame": 38,
+          "at_ms": 1681.221074424684
+        },
+        {
+          "type": "encode_end",
+          "frame": 38,
+          "at_ms": 1710.2789739146829
+        },
+        {
+          "type": "paired_media",
+          "frame": 38,
+          "at_ms": 1710.5984361842275
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 39,
+          "at_ms": 1710.6858901679516
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 39,
+          "bytes": 1382400,
+          "at_ms": 1711.5626716986299
+        },
+        {
+          "type": "encode_start",
+          "frame": 39,
+          "at_ms": 1711.5666130557656
+        },
+        {
+          "type": "encode_end",
+          "frame": 39,
+          "at_ms": 1734.4171749427915
+        },
+        {
+          "type": "paired_media",
+          "frame": 39,
+          "at_ms": 1734.6509955823421
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 40,
+          "at_ms": 1836.1972738057375
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 40,
+          "bytes": 1382400,
+          "at_ms": 1837.7571664750576
+        },
+        {
+          "type": "encode_start",
+          "frame": 40,
+          "at_ms": 1837.7615408971906
+        },
+        {
+          "type": "encode_end",
+          "frame": 40,
+          "at_ms": 1849.6062513440847
+        },
+        {
+          "type": "paired_media",
+          "frame": 40,
+          "at_ms": 1849.8659785836935
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 41,
+          "at_ms": 1849.9301923438907
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 41,
+          "bytes": 1382400,
+          "at_ms": 1850.2104710787535
+        },
+        {
+          "type": "encode_start",
+          "frame": 41,
+          "at_ms": 1850.2138368785381
+        },
+        {
+          "type": "encode_end",
+          "frame": 41,
+          "at_ms": 1861.5972874686122
+        },
+        {
+          "type": "paired_media",
+          "frame": 41,
+          "at_ms": 1861.8903839960694
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 42,
+          "at_ms": 1861.947713419795
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 42,
+          "bytes": 1382400,
+          "at_ms": 1862.166402861476
+        },
+        {
+          "type": "encode_start",
+          "frame": 42,
+          "at_ms": 1862.169399857521
+        },
+        {
+          "type": "encode_end",
+          "frame": 42,
+          "at_ms": 1873.2149442657828
+        },
+        {
+          "type": "paired_media",
+          "frame": 42,
+          "at_ms": 1873.4449474141002
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 43,
+          "at_ms": 1873.5112696886063
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 43,
+          "bytes": 1382400,
+          "at_ms": 1874.0452770143747
+        },
+        {
+          "type": "encode_start",
+          "frame": 43,
+          "at_ms": 1874.0483187139034
+        },
+        {
+          "type": "encode_end",
+          "frame": 43,
+          "at_ms": 1884.9787646904588
+        },
+        {
+          "type": "paired_media",
+          "frame": 43,
+          "at_ms": 1885.2117136120796
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 44,
+          "at_ms": 2038.430554792285
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 44,
+          "bytes": 1382400,
+          "at_ms": 2039.883085526526
+        },
+        {
+          "type": "encode_start",
+          "frame": 44,
+          "at_ms": 2039.887212216854
+        },
+        {
+          "type": "encode_end",
+          "frame": 44,
+          "at_ms": 2051.6372080892324
+        },
+        {
+          "type": "paired_media",
+          "frame": 44,
+          "at_ms": 2051.896252669394
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 45,
+          "at_ms": 2051.961158402264
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 45,
+          "bytes": 1382400,
+          "at_ms": 2052.2251380607486
+        },
+        {
+          "type": "encode_start",
+          "frame": 45,
+          "at_ms": 2052.228132262826
+        },
+        {
+          "type": "encode_end",
+          "frame": 45,
+          "at_ms": 2063.8591526076198
+        },
+        {
+          "type": "paired_media",
+          "frame": 45,
+          "at_ms": 2064.1295993700624
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 46,
+          "at_ms": 2064.1963547095656
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 46,
+          "bytes": 1382400,
+          "at_ms": 2064.413736574352
+        },
+        {
+          "type": "encode_start",
+          "frame": 46,
+          "at_ms": 2064.4162483513355
+        },
+        {
+          "type": "encode_end",
+          "frame": 46,
+          "at_ms": 2076.056431978941
+        },
+        {
+          "type": "paired_media",
+          "frame": 46,
+          "at_ms": 2076.356112025678
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 47,
+          "at_ms": 2076.444867067039
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 47,
+          "bytes": 1382400,
+          "at_ms": 2077.126558870077
+        },
+        {
+          "type": "encode_start",
+          "frame": 47,
+          "at_ms": 2077.1303018555045
+        },
+        {
+          "type": "encode_end",
+          "frame": 47,
+          "at_ms": 2088.768850080669
+        },
+        {
+          "type": "paired_media",
+          "frame": 47,
+          "at_ms": 2089.050082489848
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 48,
+          "at_ms": 2242.25811753422
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 48,
+          "bytes": 1382400,
+          "at_ms": 2244.0648609772325
+        },
+        {
+          "type": "encode_start",
+          "frame": 48,
+          "at_ms": 2244.0705252811313
+        },
+        {
+          "type": "encode_end",
+          "frame": 48,
+          "at_ms": 2257.18657579273
+        },
+        {
+          "type": "paired_media",
+          "frame": 48,
+          "at_ms": 2257.5812404975295
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 49,
+          "at_ms": 2257.676662877202
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 49,
+          "bytes": 1382400,
+          "at_ms": 2258.1902844831347
+        },
+        {
+          "type": "encode_start",
+          "frame": 49,
+          "at_ms": 2258.194682188332
+        },
+        {
+          "type": "encode_end",
+          "frame": 49,
+          "at_ms": 2270.058197900653
+        },
+        {
+          "type": "paired_media",
+          "frame": 49,
+          "at_ms": 2270.3931676223874
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 50,
+          "at_ms": 2270.884471014142
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 50,
+          "bytes": 1382400,
+          "at_ms": 2271.8381136655807
+        },
+        {
+          "type": "encode_start",
+          "frame": 50,
+          "at_ms": 2271.84203453362
+        },
+        {
+          "type": "encode_end",
+          "frame": 50,
+          "at_ms": 2283.239921554923
+        },
+        {
+          "type": "paired_media",
+          "frame": 50,
+          "at_ms": 2283.612915314734
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 51,
+          "at_ms": 2283.6854699999094
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 51,
+          "bytes": 1382400,
+          "at_ms": 2283.916329033673
+        },
+        {
+          "type": "encode_start",
+          "frame": 51,
+          "at_ms": 2283.920125104487
+        },
+        {
+          "type": "encode_end",
+          "frame": 51,
+          "at_ms": 2295.1012142002583
+        },
+        {
+          "type": "paired_media",
+          "frame": 51,
+          "at_ms": 2295.4394007101655
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 52,
+          "at_ms": 2295.527681708336
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 52,
+          "bytes": 1382400,
+          "at_ms": 2296.2936852127314
+        },
+        {
+          "type": "encode_start",
+          "frame": 52,
+          "at_ms": 2296.2978994473815
+        },
+        {
+          "type": "encode_end",
+          "frame": 52,
+          "at_ms": 2307.6622784137726
+        },
+        {
+          "type": "paired_media",
+          "frame": 52,
+          "at_ms": 2307.910945266485
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 53,
+          "at_ms": 2307.9694444313645
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 53,
+          "bytes": 1382400,
+          "at_ms": 2308.1884318962693
+        },
+        {
+          "type": "encode_start",
+          "frame": 53,
+          "at_ms": 2308.1913739442825
+        },
+        {
+          "type": "encode_end",
+          "frame": 53,
+          "at_ms": 2319.4183753803372
+        },
+        {
+          "type": "paired_media",
+          "frame": 53,
+          "at_ms": 2319.653612561524
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 54,
+          "at_ms": 2319.7223488241434
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 54,
+          "bytes": 1382400,
+          "at_ms": 2320.373283699155
+        },
+        {
+          "type": "encode_start",
+          "frame": 54,
+          "at_ms": 2320.376525633037
+        },
+        {
+          "type": "encode_end",
+          "frame": 54,
+          "at_ms": 2331.2665903940797
+        },
+        {
+          "type": "paired_media",
+          "frame": 54,
+          "at_ms": 2331.505849957466
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 55,
+          "at_ms": 2331.558918580413
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 55,
+          "bytes": 1382400,
+          "at_ms": 2331.7806096747518
+        },
+        {
+          "type": "encode_start",
+          "frame": 55,
+          "at_ms": 2331.7830888554454
+        },
+        {
+          "type": "encode_end",
+          "frame": 55,
+          "at_ms": 2342.8072528913617
+        },
+        {
+          "type": "paired_media",
+          "frame": 55,
+          "at_ms": 2343.052546493709
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 56,
+          "at_ms": 2437.35184520483
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 56,
+          "bytes": 1382400,
+          "at_ms": 2439.1464851796627
+        },
+        {
+          "type": "encode_start",
+          "frame": 56,
+          "at_ms": 2439.1503585502505
+        },
+        {
+          "type": "encode_end",
+          "frame": 56,
+          "at_ms": 2451.006577350199
+        },
+        {
+          "type": "paired_media",
+          "frame": 56,
+          "at_ms": 2451.2758553028107
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 57,
+          "at_ms": 2451.3428574427962
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 57,
+          "bytes": 1382400,
+          "at_ms": 2451.6172101721168
+        },
+        {
+          "type": "encode_start",
+          "frame": 57,
+          "at_ms": 2451.620390638709
+        },
+        {
+          "type": "encode_end",
+          "frame": 57,
+          "at_ms": 2462.9984255880117
+        },
+        {
+          "type": "paired_media",
+          "frame": 57,
+          "at_ms": 2463.297350332141
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 58,
+          "at_ms": 2463.357910513878
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 58,
+          "bytes": 1382400,
+          "at_ms": 2463.585781864822
+        },
+        {
+          "type": "encode_start",
+          "frame": 58,
+          "at_ms": 2463.5885413736105
+        },
+        {
+          "type": "encode_end",
+          "frame": 58,
+          "at_ms": 2474.7000569477677
+        },
+        {
+          "type": "paired_media",
+          "frame": 58,
+          "at_ms": 2474.9451614916325
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 59,
+          "at_ms": 2475.0195732340217
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 59,
+          "bytes": 1382400,
+          "at_ms": 2475.6236858665943
+        },
+        {
+          "type": "encode_start",
+          "frame": 59,
+          "at_ms": 2475.627139210701
+        },
+        {
+          "type": "encode_end",
+          "frame": 59,
+          "at_ms": 2486.724345944822
+        },
+        {
+          "type": "paired_media",
+          "frame": 59,
+          "at_ms": 2486.9658490642905
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 60,
+          "at_ms": 2637.5086149200797
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 60,
+          "bytes": 1382400,
+          "at_ms": 2638.9614334329963
+        },
+        {
+          "type": "encode_start",
+          "frame": 60,
+          "at_ms": 2638.966592028737
+        },
+        {
+          "type": "encode_end",
+          "frame": 60,
+          "at_ms": 2650.9294379502535
+        },
+        {
+          "type": "paired_media",
+          "frame": 60,
+          "at_ms": 2651.1968290433288
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2651.2599010020494
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2651.512880809605
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2651.6371155157685
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2652.121073566377
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2652.1409843117
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2652.628389187157
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2834.107421338558
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2836.267770268023
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2836.4766221493483
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2837.220367975533
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2837.280625477433
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2840.2459546923637
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2840.4827313497663
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2841.738480143249
+        }
+      ],
+      "metrics": {
+        "frames": 61,
+        "received_samples": 58368,
+        "input_samples": 58368,
+        "audio_duration_s": 2.432,
+        "first_media_s": 0.0905276546254754,
+        "wall_s": 2.8426915714517236,
+        "wall_audio_ratio": 1.168869889577189,
+        "max_receive_gap_s": 0.2676198482513428,
+        "max_pts_error_s": 0.0,
+        "pcm_exact": true,
+        "prefix_exact": true,
+        "completed": true,
+        "playback_measured": false,
+        "lip_sync_measured": false
+      }
+    },
+    {
+      "index": 3,
+      "phase": "measured",
+      "status": "passed",
+      "events": [
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 4.523554816842079
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 4.5920731499791145
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 4.652101546525955
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 4.707032814621925
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 4.763989709317684
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 4.775362089276314
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.24964383989572525,
+          "at_ms": 4.7797877341508865
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 0,
+          "at_ms": 51.391507498919964
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 0,
+          "bytes": 1382400,
+          "at_ms": 53.432149812579155
+        },
+        {
+          "type": "encode_start",
+          "frame": 0,
+          "at_ms": 53.47460322082043
+        },
+        {
+          "type": "encode_end",
+          "frame": 0,
+          "at_ms": 66.63382053375244
+        },
+        {
+          "type": "paired_media",
+          "frame": 0,
+          "at_ms": 66.90644286572933
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 1,
+          "at_ms": 66.976772621274
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 1,
+          "bytes": 1382400,
+          "at_ms": 67.26338434964418
+        },
+        {
+          "type": "encode_start",
+          "frame": 1,
+          "at_ms": 67.26564280688763
+        },
+        {
+          "type": "encode_end",
+          "frame": 1,
+          "at_ms": 79.37044743448496
+        },
+        {
+          "type": "paired_media",
+          "frame": 1,
+          "at_ms": 79.7741748392582
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 2,
+          "at_ms": 86.22868172824383
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 2,
+          "bytes": 1382400,
+          "at_ms": 88.30296620726585
+        },
+        {
+          "type": "encode_start",
+          "frame": 2,
+          "at_ms": 88.30663934350014
+        },
+        {
+          "type": "encode_end",
+          "frame": 2,
+          "at_ms": 101.08093172311783
+        },
+        {
+          "type": "paired_media",
+          "frame": 2,
+          "at_ms": 101.45868919789791
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 3,
+          "at_ms": 126.64032634347677
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 3,
+          "bytes": 1382400,
+          "at_ms": 128.41011583805084
+        },
+        {
+          "type": "encode_start",
+          "frame": 3,
+          "at_ms": 128.4152902662754
+        },
+        {
+          "type": "encode_end",
+          "frame": 3,
+          "at_ms": 141.158158890903
+        },
+        {
+          "type": "paired_media",
+          "frame": 3,
+          "at_ms": 141.49396121501923
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 4,
+          "at_ms": 166.25587083399296
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 4,
+          "bytes": 1382400,
+          "at_ms": 168.52466855198145
+        },
+        {
+          "type": "encode_start",
+          "frame": 4,
+          "at_ms": 168.528045527637
+        },
+        {
+          "type": "encode_end",
+          "frame": 4,
+          "at_ms": 180.3183639422059
+        },
+        {
+          "type": "paired_media",
+          "frame": 4,
+          "at_ms": 180.58600183576345
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 5,
+          "at_ms": 206.95568807423115
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 5,
+          "bytes": 1382400,
+          "at_ms": 209.3393001705408
+        },
+        {
+          "type": "encode_start",
+          "frame": 5,
+          "at_ms": 209.34345293790102
+        },
+        {
+          "type": "encode_end",
+          "frame": 5,
+          "at_ms": 220.89923918247223
+        },
+        {
+          "type": "paired_media",
+          "frame": 5,
+          "at_ms": 221.15230932831764
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 6,
+          "at_ms": 246.17114197462797
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 6,
+          "bytes": 1382400,
+          "at_ms": 247.7688565850258
+        },
+        {
+          "type": "encode_start",
+          "frame": 6,
+          "at_ms": 247.77623731642962
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 255.06516452878714
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.2493390366435051,
+          "at_ms": 255.08497934788465
+        },
+        {
+          "type": "encode_end",
+          "frame": 6,
+          "at_ms": 261.16281282156706
+        },
+        {
+          "type": "paired_media",
+          "frame": 6,
+          "at_ms": 261.44906785339117
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 7,
+          "at_ms": 285.85799876600504
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 7,
+          "bytes": 1382400,
+          "at_ms": 287.28784807026386
+        },
+        {
+          "type": "encode_start",
+          "frame": 7,
+          "at_ms": 287.29061130434275
+        },
+        {
+          "type": "encode_end",
+          "frame": 7,
+          "at_ms": 299.4323577731848
+        },
+        {
+          "type": "paired_media",
+          "frame": 7,
+          "at_ms": 299.7021246701479
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 8,
+          "at_ms": 326.22782327234745
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 8,
+          "bytes": 1382400,
+          "at_ms": 328.487710095942
+        },
+        {
+          "type": "encode_start",
+          "frame": 8,
+          "at_ms": 328.4912472590804
+        },
+        {
+          "type": "encode_end",
+          "frame": 8,
+          "at_ms": 340.9034116193652
+        },
+        {
+          "type": "paired_media",
+          "frame": 8,
+          "at_ms": 341.33108146488667
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 9,
+          "at_ms": 367.28780530393124
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 9,
+          "bytes": 1382400,
+          "at_ms": 368.7051823362708
+        },
+        {
+          "type": "encode_start",
+          "frame": 9,
+          "at_ms": 368.70933324098587
+        },
+        {
+          "type": "encode_end",
+          "frame": 9,
+          "at_ms": 380.85494190454483
+        },
+        {
+          "type": "paired_media",
+          "frame": 9,
+          "at_ms": 381.2278266996145
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 10,
+          "at_ms": 406.10690880566835
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 10,
+          "bytes": 1382400,
+          "at_ms": 408.0718429759145
+        },
+        {
+          "type": "encode_start",
+          "frame": 10,
+          "at_ms": 408.0748939886689
+        },
+        {
+          "type": "encode_end",
+          "frame": 10,
+          "at_ms": 420.9552248939872
+        },
+        {
+          "type": "paired_media",
+          "frame": 10,
+          "at_ms": 421.3390592485666
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 11,
+          "at_ms": 446.7256395146251
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 11,
+          "bytes": 1382400,
+          "at_ms": 448.769161477685
+        },
+        {
+          "type": "encode_start",
+          "frame": 11,
+          "at_ms": 448.77259247004986
+        },
+        {
+          "type": "encode_end",
+          "frame": 11,
+          "at_ms": 461.22250333428383
+        },
+        {
+          "type": "paired_media",
+          "frame": 11,
+          "at_ms": 461.60320192575455
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 12,
+          "at_ms": 486.6238161921501
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 12,
+          "bytes": 1382400,
+          "at_ms": 488.5858865454793
+        },
+        {
+          "type": "encode_start",
+          "frame": 12,
+          "at_ms": 488.58912847936153
+        },
+        {
+          "type": "encode_end",
+          "frame": 12,
+          "at_ms": 500.581506639719
+        },
+        {
+          "type": "paired_media",
+          "frame": 12,
+          "at_ms": 500.9171888232231
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 505.30216097831726
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.2491066474467516,
+          "at_ms": 505.3175548091531
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 13,
+          "at_ms": 525.959562510252
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 13,
+          "bytes": 1382400,
+          "at_ms": 527.7661830186844
+        },
+        {
+          "type": "encode_start",
+          "frame": 13,
+          "at_ms": 527.7694771066308
+        },
+        {
+          "type": "encode_end",
+          "frame": 13,
+          "at_ms": 540.2607172727585
+        },
+        {
+          "type": "paired_media",
+          "frame": 13,
+          "at_ms": 540.5292231589556
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 14,
+          "at_ms": 566.2831990048289
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 14,
+          "bytes": 1382400,
+          "at_ms": 567.7473172545433
+        },
+        {
+          "type": "encode_start",
+          "frame": 14,
+          "at_ms": 567.7506262436509
+        },
+        {
+          "type": "encode_end",
+          "frame": 14,
+          "at_ms": 579.8300607129931
+        },
+        {
+          "type": "paired_media",
+          "frame": 14,
+          "at_ms": 580.1198203116655
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 15,
+          "at_ms": 605.5953055620193
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 15,
+          "bytes": 1382400,
+          "at_ms": 607.1245223283768
+        },
+        {
+          "type": "encode_start",
+          "frame": 15,
+          "at_ms": 607.1283333003521
+        },
+        {
+          "type": "encode_end",
+          "frame": 15,
+          "at_ms": 619.4918639957905
+        },
+        {
+          "type": "paired_media",
+          "frame": 15,
+          "at_ms": 619.7544354945421
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 16,
+          "at_ms": 646.1654417216778
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 16,
+          "bytes": 1382400,
+          "at_ms": 648.0046799406409
+        },
+        {
+          "type": "encode_start",
+          "frame": 16,
+          "at_ms": 648.0093840509653
+        },
+        {
+          "type": "encode_end",
+          "frame": 16,
+          "at_ms": 660.7553577050567
+        },
+        {
+          "type": "paired_media",
+          "frame": 16,
+          "at_ms": 661.0218258574605
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 17,
+          "at_ms": 686.6768291220069
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 17,
+          "bytes": 1382400,
+          "at_ms": 688.5116649791598
+        },
+        {
+          "type": "encode_start",
+          "frame": 17,
+          "at_ms": 688.5167667642236
+        },
+        {
+          "type": "encode_end",
+          "frame": 17,
+          "at_ms": 701.9132627174258
+        },
+        {
+          "type": "paired_media",
+          "frame": 17,
+          "at_ms": 702.1997449919581
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 18,
+          "at_ms": 726.108537055552
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 18,
+          "bytes": 1382400,
+          "at_ms": 727.8341604396701
+        },
+        {
+          "type": "encode_start",
+          "frame": 18,
+          "at_ms": 727.8383849188685
+        },
+        {
+          "type": "encode_end",
+          "frame": 18,
+          "at_ms": 740.593527443707
+        },
+        {
+          "type": "paired_media",
+          "frame": 18,
+          "at_ms": 740.8876605331898
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 755.1924027502537
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.24922169838100672,
+          "at_ms": 755.2020195871592
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 19,
+          "at_ms": 766.8796544894576
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 19,
+          "bytes": 1382400,
+          "at_ms": 768.580935895443
+        },
+        {
+          "type": "encode_start",
+          "frame": 19,
+          "at_ms": 768.5842271894217
+        },
+        {
+          "type": "encode_end",
+          "frame": 19,
+          "at_ms": 780.749499797821
+        },
+        {
+          "type": "paired_media",
+          "frame": 19,
+          "at_ms": 781.0744568705559
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1005.6351805105805
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1005.6544123217463
+        },
+        {
+          "type": "input_wait",
+          "delay_s": 0.2487584175541997,
+          "at_ms": 1005.6656422093511
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 20,
+          "at_ms": 1031.8538891151547
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 20,
+          "bytes": 1382400,
+          "at_ms": 1035.2065479382873
+        },
+        {
+          "type": "encode_start",
+          "frame": 20,
+          "at_ms": 1035.2111514657736
+        },
+        {
+          "type": "encode_end",
+          "frame": 20,
+          "at_ms": 1047.7042868733406
+        },
+        {
+          "type": "paired_media",
+          "frame": 20,
+          "at_ms": 1048.0222227051854
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 21,
+          "at_ms": 1048.0951750651002
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 21,
+          "bytes": 1382400,
+          "at_ms": 1048.3914837241173
+        },
+        {
+          "type": "encode_start",
+          "frame": 21,
+          "at_ms": 1048.3939666301012
+        },
+        {
+          "type": "encode_end",
+          "frame": 21,
+          "at_ms": 1059.8855232819915
+        },
+        {
+          "type": "paired_media",
+          "frame": 21,
+          "at_ms": 1060.2046763524413
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 22,
+          "at_ms": 1060.2738531306386
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 22,
+          "bytes": 1382400,
+          "at_ms": 1060.5218596756458
+        },
+        {
+          "type": "encode_start",
+          "frame": 22,
+          "at_ms": 1060.5242494493723
+        },
+        {
+          "type": "encode_end",
+          "frame": 22,
+          "at_ms": 1071.6817686334252
+        },
+        {
+          "type": "paired_media",
+          "frame": 22,
+          "at_ms": 1071.9490488991141
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 23,
+          "at_ms": 1072.0309410244226
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 23,
+          "bytes": 1382400,
+          "at_ms": 1072.5930724292994
+        },
+        {
+          "type": "encode_start",
+          "frame": 23,
+          "at_ms": 1072.5956186652184
+        },
+        {
+          "type": "encode_end",
+          "frame": 23,
+          "at_ms": 1083.5622996091843
+        },
+        {
+          "type": "paired_media",
+          "frame": 23,
+          "at_ms": 1083.8067140430212
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 24,
+          "at_ms": 1233.811947517097
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 24,
+          "bytes": 1382400,
+          "at_ms": 1235.3176586329937
+        },
+        {
+          "type": "encode_start",
+          "frame": 24,
+          "at_ms": 1235.3212982416153
+        },
+        {
+          "type": "encode_end",
+          "frame": 24,
+          "at_ms": 1247.5256016477942
+        },
+        {
+          "type": "paired_media",
+          "frame": 24,
+          "at_ms": 1247.813967987895
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 25,
+          "at_ms": 1247.880526818335
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 25,
+          "bytes": 1382400,
+          "at_ms": 1248.1658291071653
+        },
+        {
+          "type": "encode_start",
+          "frame": 25,
+          "at_ms": 1248.168501071632
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1255.13263233006
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1255.2018389105797
+        },
+        {
+          "type": "native_audio_sent",
+          "bytes": 6400,
+          "at_ms": 1255.2179703488946
+        },
+        {
+          "type": "encode_end",
+          "frame": 25,
+          "at_ms": 1259.7262961789966
+        },
+        {
+          "type": "paired_media",
+          "frame": 25,
+          "at_ms": 1259.9833058193326
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 26,
+          "at_ms": 1260.0457286462188
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 26,
+          "bytes": 1382400,
+          "at_ms": 1260.2645941078663
+        },
+        {
+          "type": "encode_start",
+          "frame": 26,
+          "at_ms": 1260.2674523368478
+        },
+        {
+          "type": "encode_end",
+          "frame": 26,
+          "at_ms": 1271.5561967343092
+        },
+        {
+          "type": "paired_media",
+          "frame": 26,
+          "at_ms": 1271.791111677885
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 27,
+          "at_ms": 1271.8605175614357
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 27,
+          "bytes": 1382400,
+          "at_ms": 1272.384399548173
+        },
+        {
+          "type": "encode_start",
+          "frame": 27,
+          "at_ms": 1272.387146949768
+        },
+        {
+          "type": "encode_end",
+          "frame": 27,
+          "at_ms": 1283.4129305556417
+        },
+        {
+          "type": "paired_media",
+          "frame": 27,
+          "at_ms": 1283.6623108014464
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 28,
+          "at_ms": 1436.4241091534495
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 28,
+          "bytes": 1382400,
+          "at_ms": 1438.107238151133
+        },
+        {
+          "type": "encode_start",
+          "frame": 28,
+          "at_ms": 1438.1113229319453
+        },
+        {
+          "type": "encode_end",
+          "frame": 28,
+          "at_ms": 1451.1231752112508
+        },
+        {
+          "type": "paired_media",
+          "frame": 28,
+          "at_ms": 1451.3951446861029
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 29,
+          "at_ms": 1451.4658879488707
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 29,
+          "bytes": 1382400,
+          "at_ms": 1451.7784416675568
+        },
+        {
+          "type": "encode_start",
+          "frame": 29,
+          "at_ms": 1451.7818838357925
+        },
+        {
+          "type": "encode_end",
+          "frame": 29,
+          "at_ms": 1463.5895024985075
+        },
+        {
+          "type": "paired_media",
+          "frame": 29,
+          "at_ms": 1463.8599287718534
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 30,
+          "at_ms": 1463.9268554747105
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 30,
+          "bytes": 1382400,
+          "at_ms": 1464.152218773961
+        },
+        {
+          "type": "encode_start",
+          "frame": 30,
+          "at_ms": 1464.155312627554
+        },
+        {
+          "type": "encode_end",
+          "frame": 30,
+          "at_ms": 1475.45971814543
+        },
+        {
+          "type": "paired_media",
+          "frame": 30,
+          "at_ms": 1475.7192181423306
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 31,
+          "at_ms": 1475.7988527417183
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 31,
+          "bytes": 1382400,
+          "at_ms": 1476.4844374731183
+        },
+        {
+          "type": "encode_start",
+          "frame": 31,
+          "at_ms": 1476.4877706766129
+        },
+        {
+          "type": "encode_end",
+          "frame": 31,
+          "at_ms": 1487.5505696982145
+        },
+        {
+          "type": "paired_media",
+          "frame": 31,
+          "at_ms": 1487.8022838383913
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 32,
+          "at_ms": 1487.860002554953
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 32,
+          "bytes": 1382400,
+          "at_ms": 1488.0961133167148
+        },
+        {
+          "type": "encode_start",
+          "frame": 32,
+          "at_ms": 1488.0989184603095
+        },
+        {
+          "type": "encode_end",
+          "frame": 32,
+          "at_ms": 1499.0449687466025
+        },
+        {
+          "type": "paired_media",
+          "frame": 32,
+          "at_ms": 1499.2789970710874
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 33,
+          "at_ms": 1499.348346143961
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 33,
+          "bytes": 1382400,
+          "at_ms": 1499.964919872582
+        },
+        {
+          "type": "encode_start",
+          "frame": 33,
+          "at_ms": 1499.9680118635297
+        },
+        {
+          "type": "encode_end",
+          "frame": 33,
+          "at_ms": 1511.1580286175013
+        },
+        {
+          "type": "paired_media",
+          "frame": 33,
+          "at_ms": 1511.4090675488114
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 34,
+          "at_ms": 1511.4643042907119
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 34,
+          "bytes": 1382400,
+          "at_ms": 1511.6946315392852
+        },
+        {
+          "type": "encode_start",
+          "frame": 34,
+          "at_ms": 1511.6971312090755
+        },
+        {
+          "type": "encode_end",
+          "frame": 34,
+          "at_ms": 1522.7194363251328
+        },
+        {
+          "type": "paired_media",
+          "frame": 34,
+          "at_ms": 1522.9927897453308
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 35,
+          "at_ms": 1523.0744211003184
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 35,
+          "bytes": 1382400,
+          "at_ms": 1523.7101707607508
+        },
+        {
+          "type": "encode_start",
+          "frame": 35,
+          "at_ms": 1523.713237605989
+        },
+        {
+          "type": "encode_end",
+          "frame": 35,
+          "at_ms": 1534.8269157111645
+        },
+        {
+          "type": "paired_media",
+          "frame": 35,
+          "at_ms": 1535.0866820663214
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 36,
+          "at_ms": 1629.0424959734082
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 36,
+          "bytes": 1382400,
+          "at_ms": 1630.6034214794636
+        },
+        {
+          "type": "encode_start",
+          "frame": 36,
+          "at_ms": 1630.60821313411
+        },
+        {
+          "type": "encode_end",
+          "frame": 36,
+          "at_ms": 1642.768138088286
+        },
+        {
+          "type": "paired_media",
+          "frame": 36,
+          "at_ms": 1643.0688668042421
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 37,
+          "at_ms": 1643.1430913507938
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 37,
+          "bytes": 1382400,
+          "at_ms": 1643.467016518116
+        },
+        {
+          "type": "encode_start",
+          "frame": 37,
+          "at_ms": 1643.470311537385
+        },
+        {
+          "type": "encode_end",
+          "frame": 37,
+          "at_ms": 1654.7815036028624
+        },
+        {
+          "type": "paired_media",
+          "frame": 37,
+          "at_ms": 1655.0677428022027
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 38,
+          "at_ms": 1655.133948661387
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 38,
+          "bytes": 1382400,
+          "at_ms": 1655.3661357611418
+        },
+        {
+          "type": "encode_start",
+          "frame": 38,
+          "at_ms": 1655.3691681474447
+        },
+        {
+          "type": "encode_end",
+          "frame": 38,
+          "at_ms": 1666.4832029491663
+        },
+        {
+          "type": "paired_media",
+          "frame": 38,
+          "at_ms": 1666.753638535738
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 39,
+          "at_ms": 1666.8344661593437
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 39,
+          "bytes": 1382400,
+          "at_ms": 1667.4598306417465
+        },
+        {
+          "type": "encode_start",
+          "frame": 39,
+          "at_ms": 1667.46308747679
+        },
+        {
+          "type": "encode_end",
+          "frame": 39,
+          "at_ms": 1678.4127010032535
+        },
+        {
+          "type": "paired_media",
+          "frame": 39,
+          "at_ms": 1678.6844320595264
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 40,
+          "at_ms": 1828.5240195691586
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 40,
+          "bytes": 1382400,
+          "at_ms": 1830.623958259821
+        },
+        {
+          "type": "encode_start",
+          "frame": 40,
+          "at_ms": 1830.6284444406629
+        },
+        {
+          "type": "encode_end",
+          "frame": 40,
+          "at_ms": 1842.512191273272
+        },
+        {
+          "type": "paired_media",
+          "frame": 40,
+          "at_ms": 1842.7821202203631
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 41,
+          "at_ms": 1842.8484750911593
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 41,
+          "bytes": 1382400,
+          "at_ms": 1843.1271873414516
+        },
+        {
+          "type": "encode_start",
+          "frame": 41,
+          "at_ms": 1843.130567111075
+        },
+        {
+          "type": "encode_end",
+          "frame": 41,
+          "at_ms": 1854.5536370947957
+        },
+        {
+          "type": "paired_media",
+          "frame": 41,
+          "at_ms": 1854.819593951106
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 42,
+          "at_ms": 1854.879534803331
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 42,
+          "bytes": 1382400,
+          "at_ms": 1855.1130015403032
+        },
+        {
+          "type": "encode_start",
+          "frame": 42,
+          "at_ms": 1855.1159333437681
+        },
+        {
+          "type": "encode_end",
+          "frame": 42,
+          "at_ms": 1866.3202496245503
+        },
+        {
+          "type": "paired_media",
+          "frame": 42,
+          "at_ms": 1866.566519252956
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 43,
+          "at_ms": 1866.63752887398
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 43,
+          "bytes": 1382400,
+          "at_ms": 1867.2040775418282
+        },
+        {
+          "type": "encode_start",
+          "frame": 43,
+          "at_ms": 1867.2073166817427
+        },
+        {
+          "type": "encode_end",
+          "frame": 43,
+          "at_ms": 1878.298387862742
+        },
+        {
+          "type": "paired_media",
+          "frame": 43,
+          "at_ms": 1878.5192258656025
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 44,
+          "at_ms": 2027.8875576332211
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 44,
+          "bytes": 1382400,
+          "at_ms": 2029.6425949782133
+        },
+        {
+          "type": "encode_start",
+          "frame": 44,
+          "at_ms": 2029.6469908207655
+        },
+        {
+          "type": "encode_end",
+          "frame": 44,
+          "at_ms": 2041.6838759556413
+        },
+        {
+          "type": "paired_media",
+          "frame": 44,
+          "at_ms": 2041.937243193388
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 45,
+          "at_ms": 2042.0062961056828
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 45,
+          "bytes": 1382400,
+          "at_ms": 2042.2716988250613
+        },
+        {
+          "type": "encode_start",
+          "frame": 45,
+          "at_ms": 2042.275088839233
+        },
+        {
+          "type": "encode_end",
+          "frame": 45,
+          "at_ms": 2054.004614241421
+        },
+        {
+          "type": "paired_media",
+          "frame": 45,
+          "at_ms": 2054.252256639302
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 46,
+          "at_ms": 2054.3127674609423
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 46,
+          "bytes": 1382400,
+          "at_ms": 2054.528777487576
+        },
+        {
+          "type": "encode_start",
+          "frame": 46,
+          "at_ms": 2054.5316310599446
+        },
+        {
+          "type": "encode_end",
+          "frame": 46,
+          "at_ms": 2065.9506488591433
+        },
+        {
+          "type": "paired_media",
+          "frame": 46,
+          "at_ms": 2066.2005823105574
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 47,
+          "at_ms": 2066.2815291434526
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 47,
+          "bytes": 1382400,
+          "at_ms": 2066.8372325599194
+        },
+        {
+          "type": "encode_start",
+          "frame": 47,
+          "at_ms": 2066.840497776866
+        },
+        {
+          "type": "encode_end",
+          "frame": 47,
+          "at_ms": 2078.232631087303
+        },
+        {
+          "type": "paired_media",
+          "frame": 47,
+          "at_ms": 2078.490484505892
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 48,
+          "at_ms": 2230.4228842258453
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 48,
+          "bytes": 1382400,
+          "at_ms": 2235.155909322202
+        },
+        {
+          "type": "encode_start",
+          "frame": 48,
+          "at_ms": 2235.160544514656
+        },
+        {
+          "type": "encode_end",
+          "frame": 48,
+          "at_ms": 2248.133271932602
+        },
+        {
+          "type": "paired_media",
+          "frame": 48,
+          "at_ms": 2248.406782746315
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 49,
+          "at_ms": 2248.477915301919
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 49,
+          "bytes": 1382400,
+          "at_ms": 2248.8092705607414
+        },
+        {
+          "type": "encode_start",
+          "frame": 49,
+          "at_ms": 2248.812980018556
+        },
+        {
+          "type": "encode_end",
+          "frame": 49,
+          "at_ms": 2260.49792021513
+        },
+        {
+          "type": "paired_media",
+          "frame": 49,
+          "at_ms": 2260.7754040509462
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 50,
+          "at_ms": 2260.843832977116
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 50,
+          "bytes": 1382400,
+          "at_ms": 2261.093436740339
+        },
+        {
+          "type": "encode_start",
+          "frame": 50,
+          "at_ms": 2261.0963052138686
+        },
+        {
+          "type": "encode_end",
+          "frame": 50,
+          "at_ms": 2272.5463015958667
+        },
+        {
+          "type": "paired_media",
+          "frame": 50,
+          "at_ms": 2272.784420289099
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 51,
+          "at_ms": 2272.855632007122
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 51,
+          "bytes": 1382400,
+          "at_ms": 2273.567918688059
+        },
+        {
+          "type": "encode_start",
+          "frame": 51,
+          "at_ms": 2273.5711447894573
+        },
+        {
+          "type": "encode_end",
+          "frame": 51,
+          "at_ms": 2284.7975324839354
+        },
+        {
+          "type": "paired_media",
+          "frame": 51,
+          "at_ms": 2285.1089257746935
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 52,
+          "at_ms": 2285.1719725877047
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 52,
+          "bytes": 1382400,
+          "at_ms": 2285.4342488572
+        },
+        {
+          "type": "encode_start",
+          "frame": 52,
+          "at_ms": 2285.437590442598
+        },
+        {
+          "type": "encode_end",
+          "frame": 52,
+          "at_ms": 2296.492723748088
+        },
+        {
+          "type": "paired_media",
+          "frame": 52,
+          "at_ms": 2296.745809726417
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 53,
+          "at_ms": 2296.8182992190123
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 53,
+          "bytes": 1382400,
+          "at_ms": 2297.479580156505
+        },
+        {
+          "type": "encode_start",
+          "frame": 53,
+          "at_ms": 2297.483077272773
+        },
+        {
+          "type": "encode_end",
+          "frame": 53,
+          "at_ms": 2308.5205322131515
+        },
+        {
+          "type": "paired_media",
+          "frame": 53,
+          "at_ms": 2308.8175039738417
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 54,
+          "at_ms": 2308.87986253947
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 54,
+          "bytes": 1382400,
+          "at_ms": 2309.1602586209774
+        },
+        {
+          "type": "encode_start",
+          "frame": 54,
+          "at_ms": 2309.163206256926
+        },
+        {
+          "type": "encode_end",
+          "frame": 54,
+          "at_ms": 2320.4424111172557
+        },
+        {
+          "type": "paired_media",
+          "frame": 54,
+          "at_ms": 2320.725337602198
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 55,
+          "at_ms": 2320.8061177283525
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 55,
+          "bytes": 1382400,
+          "at_ms": 2321.535050868988
+        },
+        {
+          "type": "encode_start",
+          "frame": 55,
+          "at_ms": 2321.538587100804
+        },
+        {
+          "type": "encode_end",
+          "frame": 55,
+          "at_ms": 2332.8994484618306
+        },
+        {
+          "type": "paired_media",
+          "frame": 55,
+          "at_ms": 2333.1669569015503
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 56,
+          "at_ms": 2428.462153300643
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 56,
+          "bytes": 1382400,
+          "at_ms": 2429.908619262278
+        },
+        {
+          "type": "encode_start",
+          "frame": 56,
+          "at_ms": 2429.9127003178
+        },
+        {
+          "type": "encode_end",
+          "frame": 56,
+          "at_ms": 2442.2261025756598
+        },
+        {
+          "type": "paired_media",
+          "frame": 56,
+          "at_ms": 2442.5051556900144
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 57,
+          "at_ms": 2442.5749192014337
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 57,
+          "bytes": 1382400,
+          "at_ms": 2442.8782127797604
+        },
+        {
+          "type": "encode_start",
+          "frame": 57,
+          "at_ms": 2442.881828173995
+        },
+        {
+          "type": "encode_end",
+          "frame": 57,
+          "at_ms": 2454.379585571587
+        },
+        {
+          "type": "paired_media",
+          "frame": 57,
+          "at_ms": 2454.7103475779295
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 58,
+          "at_ms": 2454.7822307795286
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 58,
+          "bytes": 1382400,
+          "at_ms": 2455.0588373094797
+        },
+        {
+          "type": "encode_start",
+          "frame": 58,
+          "at_ms": 2455.062013119459
+        },
+        {
+          "type": "encode_end",
+          "frame": 58,
+          "at_ms": 2466.3781505078077
+        },
+        {
+          "type": "paired_media",
+          "frame": 58,
+          "at_ms": 2466.655610129237
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 59,
+          "at_ms": 2466.7399916797876
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 59,
+          "bytes": 1382400,
+          "at_ms": 2467.422289773822
+        },
+        {
+          "type": "encode_start",
+          "frame": 59,
+          "at_ms": 2467.4258809536695
+        },
+        {
+          "type": "encode_end",
+          "frame": 59,
+          "at_ms": 2478.782364167273
+        },
+        {
+          "type": "paired_media",
+          "frame": 59,
+          "at_ms": 2479.056957177818
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 60,
+          "at_ms": 2626.701779663563
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 60,
+          "bytes": 1382400,
+          "at_ms": 2628.4215543419123
+        },
+        {
+          "type": "encode_start",
+          "frame": 60,
+          "at_ms": 2628.4256540238857
+        },
+        {
+          "type": "encode_end",
+          "frame": 60,
+          "at_ms": 2640.5472038313746
+        },
+        {
+          "type": "paired_media",
+          "frame": 60,
+          "at_ms": 2640.8231500536203
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2640.8923380076885
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2641.2212094292045
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2641.405886039138
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2641.976743005216
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2641.997708939016
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2642.5301134586334
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2824.7519126161933
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2826.893663033843
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2827.312200330198
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2828.3994840458035
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2828.6716109141707
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2829.244808293879
+        },
+        {
+          "type": "native_frame_header",
+          "frame": 61,
+          "at_ms": 2833.3709947764874
+        },
+        {
+          "type": "native_frame_body",
+          "frame": 61,
+          "bytes": 1382400,
+          "at_ms": 2835.3388542309403
+        }
+      ],
+      "metrics": {
+        "frames": 61,
+        "received_samples": 58368,
+        "input_samples": 58368,
+        "audio_duration_s": 2.432,
+        "first_media_s": 0.06689494661986828,
+        "wall_s": 2.8377009900286794,
+        "wall_audio_ratio": 1.1668178412946872,
+        "max_receive_gap_s": 0.2669488601386547,
+        "max_pts_error_s": 0.0,
+        "pcm_exact": true,
+        "prefix_exact": true,
+        "completed": true,
+        "playback_measured": false,
+        "lip_sync_measured": false
+      }
+    }
+  ],
+  "scope": "single monotonic clock: adapter input/native receive/encode/paired media; not browser or perceptual quality",
+  "case": {
+    "id": "zh-00",
+    "category": "zh",
+    "source": "synthetic",
+    "transcript": "你好，欢迎来到语音实验室。",
+    "transcript_reviewed": false,
+    "input_sha256": "d5821bf7562c373bd3d4bdb21a9c0d4dec4c74f980c0332faf463d23b316f04b",
+    "pcm_sha256": "5f351a4ea6e1bd2a93b5cd7771f4518c6ab8f583a8d1d4101fbdb70a8b02898e",
+    "audio_duration_s": 2.432
+  },
+  "manifest_sha256": "8ccb678a927532afd9c85e6cced5a57979a07604602d673cfe29129d2aa9dc06",
+  "deployment_label": "Existing DINet worker; fixed male character B; RTX4090 shared resident models; preloaded; deployed model revision and weights digest unverified",
+  "provenance": {
+    "python": "3.11.15",
+    "platform": "Linux",
+    "git_commit": "db8f30c1e01289d8871c4c707acd7bd4c6cf05fc",
+    "packages": {
+      "numpy": "2.4.6",
+      "soxr": "1.0.0",
+      "websockets": "17.1",
+      "pillow": "12.3.0",
+      "av": "17.1.0"
+    },
+    "source_sha256": {
+      "benchmark_avatar.py": "9b2d15bc0be52afec35b7ee7416f589bc711904e7cdfb8853ec81b656fb65785",
+      "avatar_eval_metrics.py": "4a4f36751847d40d16ef3620797536553815a5d7a30d0818f909a30f1fcf90b8",
+      "avatar_backend.py": "d206f9692641bbc766566e42096b542b9459562938b6f94d31c5d82a5c92a9f8",
+      "avatar_video_backend.py": "4b262eec927f4bc9cf074c9562da2cc607dab811f3b305ee1dfba7ea469b8217",
+      "dinet_backend.py": "77e6192dc04992ba5b5520463dada336d317e0c6e3aef40b1a49c63b53f742f1",
+      "avatar_providers.py": "2e2ba9e9048b588497f32f0296374369162bd82b51ea2fc5b095e1bec7756ca5",
+      "trace_dinet.py": "9343d019c1cc6043cae62a993f21efc598bf8cb2cc7c9e8fcf842a1aeb807a71"
+    }
+  },
+  "native_source_review": {
+    "worker_sha256": "95dbdd85b278176b4ad6d18aac629314c03b4f085bccbe15bbce0d1038dae504",
+    "ws_service_sha256": "2f134a3b3b0d8026bfd8d355077fca793df68b0c60c823a8c7587c5118f48c88",
+    "worker_lines": [
+      568,
+      578
+    ],
+    "route_lines": [
+      266,
+      267,
+      288,
+      289
+    ],
+    "observation": "Active native consumer processes initial five200ms blocks without pacing, then sleeps until elapsed time equals block_count*0.2; later blocks are consumed at that schedule. Read-only inspection; no native code edited.",
+    "causal_status": "trace and source alignment; controlled intervention not yet run"
+  },
+  "frame19_20_summary": [
+    {
+      "trial": 1,
+      "header_interval_ms": 264.5278284326196,
+      "wait_after_previous_media_ms": 248.35262820124626,
+      "frame20_body_ms": 2.6548318564891815,
+      "frame20_encode_ms": 12.32627872377634,
+      "paired_interval_ms": 263.72806541621685,
+      "sixth_audio_block_sent_ms": 4.649775102734566
+    },
+    {
+      "trial": 2,
+      "header_interval_ms": 266.82998798787594,
+      "wait_after_previous_media_ms": 252.647764980793,
+      "frame20_body_ms": 1.8750941380858421,
+      "frame20_encode_ms": 12.83509936183691,
+      "paired_interval_ms": 267.62110460549593,
+      "sixth_audio_block_sent_ms": 10.72037499397993
+    },
+    {
+      "trial": 3,
+      "header_interval_ms": 264.97423462569714,
+      "wait_after_previous_media_ms": 250.77943224459887,
+      "frame20_body_ms": 3.352658823132515,
+      "frame20_encode_ms": 12.493135407567024,
+      "paired_interval_ms": 266.94776583462954,
+      "sixth_audio_block_sent_ms": 4.775362089276314
+    }
+  ]
+}
