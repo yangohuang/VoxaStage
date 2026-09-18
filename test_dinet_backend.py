@@ -51,6 +51,25 @@ class NativeSocket:
 
 
 class DINetTests(unittest.IsolatedAsyncioTestCase):
+    async def test_optional_observer_separates_native_receive_and_encode_without_payloads(self):
+        socket = NativeSocket(frames=1)
+        observations = []
+        async def connect(*args, **kwargs):
+            return socket
+        backend = DINetBackend('ws://localhost/api/ws/live_video/test', connect=connect,
+                               observer=observations.append)
+        async def source():
+            yield bytes(1920)
+        events = [event async for event in backend.stream(source())]
+        kinds = [event['type'] for event in observations]
+        self.assertEqual(events[-1]['type'], 'clip_end')
+        self.assertIn('native_audio_sent', kinds)
+        self.assertLess(kinds.index('native_frame_header'), kinds.index('native_frame_body'))
+        self.assertLess(kinds.index('native_frame_body'), kinds.index('encode_start'))
+        self.assertLess(kinds.index('encode_start'), kinds.index('encode_end'))
+        self.assertTrue(all(set(event) <= {'type', 'frame', 'bytes', 'delay_s'} for event in observations))
+        self.assertNotIn('localhost', json.dumps(observations))
+
     async def test_final_input_marked_before_padding_can_produce_frames(self):
         socket = NativeSocket()
         bridge = NativeConnection(socket, 'test')
