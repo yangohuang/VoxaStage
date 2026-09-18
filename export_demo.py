@@ -1,4 +1,4 @@
-"""Build a source-only reviewable release; allowlist excludes local assets."""
+"""Build a reviewable source release with explicitly listed documentation images."""
 import argparse
 import hashlib
 import json
@@ -16,8 +16,10 @@ api_backends.py test_api_backends.py test_voice_matching.py
 llm_server.py ctl.py asr_ctl.py test_ctl_config.py test_tts_resources.py
 test_dialogue_backends.py test_omni_backend.py test_omni_processor.py test_omni_route.py
 requirements.in requirements.lock install_demo.sh export_demo.py
-.env.example .gitignore LICENSE AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
-AVATAR-PROTOCOL.md AVATAR-MULTIDRIVER-RESULTS.md'''.split()
+.env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
+AVATAR-PROTOCOL.md AVATAR-MULTIDRIVER-RESULTS.md
+docs/assets/dinet-idle.png docs/assets/flashhead-idle.png
+docs/assets/streamingtalker-idle.png docs/assets/conversation-preview.png'''.split()
 
 
 def export(output):
