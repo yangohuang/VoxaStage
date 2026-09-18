@@ -1,0 +1,30 @@
+--- a/flash_head/src/modules/flash_head_model.py
++++ b/flash_head/src/modules/flash_head_model.py
+@@ -8,12 +8,21 @@
+ from diffusers.configuration_utils import ConfigMixin, register_to_config
+ import torch.cuda.amp as amp
+ import torch.distributed as dist
+-from xfuser.core.distributed import (
+-    get_sequence_parallel_rank,
+-    get_sequence_parallel_world_size,
+-    get_sp_group,
+-)
+-from xfuser.core.long_ctx_attention import xFuserLongContextAttention
++# Optional for single GPU; distributed use still requires the real package.
++try:
++    from xfuser.core.distributed import (
++        get_sequence_parallel_rank,
++        get_sequence_parallel_world_size,
++        get_sp_group,
++    )
++    from xfuser.core.long_ctx_attention import xFuserLongContextAttention
++except ModuleNotFoundError as exc:
++    if exc.name != "xfuser":
++        raise
++    def _requires_xfuser(*args, **kwargs):
++        raise RuntimeError("Distributed FlashHead requires xfuser")
++    get_sequence_parallel_rank = get_sequence_parallel_world_size = _requires_xfuser
++    get_sp_group = xFuserLongContextAttention = _requires_xfuser
+ try:
+     import flash_attn_interface
+     FLASH_ATTN_3_AVAILABLE = True
