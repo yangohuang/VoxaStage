@@ -24407,5 +24407,6 @@
     "core_ast_matches_executed_entry": true,
     "actual_native_startup_verified": true,
     "inference_measured_with_portable_entry": false
-  }
+  },
+  "restoration_scope": "Controller finally restoration verified. Original isolated-run watchdog readiness was not verified; later inspection found its lease empty due to missing docker exec -i. Do not claim independent watchdog protection for these runs."
 }

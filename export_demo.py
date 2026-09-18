@@ -29,7 +29,7 @@ docs/assets/streamingtalker-idle.png docs/assets/conversation-preview.png'''.spl
 
 def export(output):
     files = [ROOT / name for name in FILES]
-    for directory in ('avatar-web', 'avatar-server', 'video-server', 'omni-server', 'tts-compat', 'docs', 'evaluation'):
+    for directory in ('avatar-web', 'avatar-server', 'video-server', 'dinet-server', 'omni-server', 'tts-compat', 'docs', 'evaluation'):
         for path in (ROOT / directory).rglob('*'):
             if (path.is_file() and not path.is_symlink() and '__pycache__' not in path.parts
                     and path.name != 'requirements.local.lock'

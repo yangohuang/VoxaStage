@@ -149,4 +149,4 @@ python3 export_demo.py
 
 [3D结构与运动基线](docs/AVATAR-GEOMETRY-BASELINE.md)覆盖15段1366帧，记录逐帧面积与运动峰值；数值完整性与感知质量分别报告。
 
-[DINet消费提前量实验](docs/DINET-PACING-EXPERIMENT.md)在隔离进程中消除已复现的供帧停顿，包含浏览器、取消恢复及固定输入内容一致性对照；默认服务尚未应用该策略。
+[DINet消费提前量实验](docs/DINET-PACING-EXPERIMENT.md)已进一步完成[原代理集成与对照](docs/DINET-PACING-INTEGRATION.md)：17次API检查及10次正式浏览器对照通过，当前本地部署保留0.4秒提前量，并验证配置故障、取消恢复与回滚。该收益限于媒体等待与音频调度，不代表模型算力提升或视觉零跳帧。
