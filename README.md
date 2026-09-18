@@ -148,3 +148,5 @@ python3 export_demo.py
 已有捕获可用[本地质量复核页](docs/AVATAR-QUALITY-REVIEW.md)连续播放、逐帧回看和按时间段标注；人工判断与自动检查分开保存，未评估项不会自动计为通过。
 
 [3D结构与运动基线](docs/AVATAR-GEOMETRY-BASELINE.md)覆盖15段1366帧，记录逐帧面积与运动峰值；数值完整性与感知质量分别报告。
+
+[DINet消费提前量实验](docs/DINET-PACING-EXPERIMENT.md)在隔离进程中消除已复现的供帧停顿，包含浏览器、取消恢复及固定输入内容一致性对照；默认服务尚未应用该策略。
