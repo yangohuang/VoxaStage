@@ -1,0 +1,119 @@
+{
+  "status": "passed",
+  "source": {
+    "commit": "a11efa29ee8b4915e31b46cc2079c5d97578d176",
+    "archive_sha256": "1d1c240515e39df00632351a0d730184ba1bcd00fe2c9521eb4d8c358ffac51e",
+    "scope": "fresh application environment on existing Linux host; model services excluded"
+  },
+  "platform": "Linux x86_64",
+  "checks": [
+    {
+      "name": "environment",
+      "returncode": 0,
+      "wall_s": 0.6152477618306875,
+      "log_sha256": "6165ef00babddbb52c7fda9c96230531fad6c2a4f41a910a43af0414f15573e2"
+    },
+    {
+      "name": "application-tests",
+      "returncode": 0,
+      "wall_s": 6.529423411004245,
+      "log_sha256": "301462fc85d9c25981c919a190be3df97b71c661c5e0d8f568c2b368c95d86a6"
+    },
+    {
+      "name": "worker-tests",
+      "returncode": 0,
+      "wall_s": 0.41469839215278625,
+      "log_sha256": "03c791aa841831fbca63f8d49f6ec557cc8e2d93fa37e7f2733b4b3f6fda594a"
+    },
+    {
+      "name": "evaluation-tests",
+      "returncode": 0,
+      "wall_s": 0.3650554111227393,
+      "log_sha256": "197c7f1dec951c723234ea035dbe54572b1332866f42e4e6a9a385fd8119173a"
+    },
+    {
+      "name": "frontend-tests",
+      "returncode": 0,
+      "wall_s": 0.11425588093698025,
+      "log_sha256": "211434dde822d67f5f3a79d586bdd264d0ad316f8d9ea9ad6b3b1b5ae5ab845e"
+    }
+  ],
+  "server_exit_code": -15,
+  "prior_attempt": "attempt-02",
+  "startup": {
+    "passed": true,
+    "routes": [
+      {
+        "route": "/avatar/static/app.mjs",
+        "status": 200,
+        "bytes": 13065
+      },
+      {
+        "route": "/avatar/static/style.css",
+        "status": 200,
+        "bytes": 8150
+      },
+      {
+        "route": "/avatar/static/visual.mjs",
+        "status": 200,
+        "bytes": 6815
+      },
+      {
+        "route": "/avatar/providers",
+        "status": 200,
+        "bytes": 842
+      },
+      {
+        "route": "/health",
+        "status": 200,
+        "bytes": 589
+      }
+    ],
+    "models_configured": false,
+    "model_inference_tested": false
+  },
+  "version": 1,
+  "date": "2026-09-19",
+  "python": "3.11.15",
+  "uv": "0.11.31",
+  "installed_packages": 100,
+  "installed_versions_match_lock": true,
+  "extracted_source_files_unchanged": 197,
+  "test_counts": {
+    "application": 147,
+    "worker_contract": 11,
+    "evaluation": 12,
+    "frontend": 33
+  },
+  "gpu_model_installation_tested": false,
+  "browser_rendering_tested": false,
+  "failed_attempts": [
+    {
+      "attempt": 1,
+      "cause": "Verification harness used a Python 3.11-incompatible f-string; installation was already successful.",
+      "report_sha256": "05aff0a5a672021e874a39a47fa9ccec57326c0ac0676f0e336c5045c574e66a"
+    },
+    {
+      "attempt": 2,
+      "cause": "Verification harness requested app.js instead of the actual app.mjs. All test suites passed; only startup checks were rerun.",
+      "report_sha256": "b556901a274c11e40d8e56b93ebfbd01a2cdd3342c2dcc2af13c96aea6bd372e"
+    }
+  ],
+  "artifact_sha256": {
+    "install.log": "037636774289ce85717f1c38f152293b4d1121431182f1dd68283bcfbb1953e4",
+    "verify.py": "b96d049636159a5be5901ed4ff084c7fc8358c83f7e65b6ca8cc0d22992928d2",
+    "verification.json": "524baededfbe3bdd51123ed21c4b520da0fb3ce356271d1c463dbf5935c562ff",
+    "environment.log": "6165ef00babddbb52c7fda9c96230531fad6c2a4f41a910a43af0414f15573e2",
+    "application-tests.log": "301462fc85d9c25981c919a190be3df97b71c661c5e0d8f568c2b368c95d86a6",
+    "worker-tests.log": "03c791aa841831fbca63f8d49f6ec557cc8e2d93fa37e7f2733b4b3f6fda594a",
+    "evaluation-tests.log": "197c7f1dec951c723234ea035dbe54572b1332866f42e4e6a9a385fd8119173a",
+    "frontend-tests.log": "211434dde822d67f5f3a79d586bdd264d0ad316f8d9ea9ad6b3b1b5ae5ab845e",
+    "server.log": "d2b34dc34dddc093be3ff60e6a3fab4f8a0e964bc064437c2c06a12ee8bf1426"
+  },
+  "limitations": [
+    "Fresh virtual environment on an existing Linux host, not a clean OS/container.",
+    "Existing system libraries, Python and Node were reused.",
+    "No GPU model service, weights, avatar assets, browser rendering or real inference verified.",
+    "Tests use substitutes at model boundaries; worker tests do not load a real model."
+  ]
+}
