@@ -107,11 +107,12 @@ mkdir -p runtime/numba-cache
 
 新增[数字人适配层基线工具](docs/AVATAR-EVALUATION.md)：统一输入哈希、重复运行、失败计数、PCM与时间戳检查。完整质量与端到端评测按[阶段路线](docs/plans/2026-09-19-roadmap.md)逐步补齐。
 
-已有验收包括真实模型回复、三种驱动的打断恢复、男女声路由和 idle 切换；自动化回归覆盖 **65 项应用 Python 测试、6 项 MiniCPM worker 测试、16 项前端测试**。测试命令：
+已有验收包括真实模型回复、三种驱动的打断恢复、男女声路由和 idle 切换；最近验证包括独立安装检查点的 **147 项应用、12 项评测、33 项前端测试**，以及后续提示策略提交的 **18 项 MiniCPM worker 测试**。测试命令：
 
 ```bash
 .venv/bin/python -m unittest discover -s . -p 'test_*.py'
 .venv/bin/python -m unittest discover -s omni-server -p 'test_*.py'
+.venv/bin/python -m unittest discover -s evaluation -p 'test_*.py'
 node --test avatar-web/tests/*.test.mjs
 # 已部署真实模型后：
 .venv/bin/python smoke_avatar.py --interrupt
@@ -152,3 +153,5 @@ python3 export_demo.py
 [DINet消费提前量实验](docs/DINET-PACING-EXPERIMENT.md)已进一步完成[原代理集成与对照](docs/DINET-PACING-INTEGRATION.md)：17次API检查及10次正式浏览器对照通过，当前本地部署保留0.4秒提前量，并验证配置故障、取消恢复与回滚。该收益限于媒体等待与音频调度，不代表模型算力提升或视觉零跳帧。
 
 [按需视觉交互](docs/VISUAL-INTERACTION.md)已加入能力开关、上传/摄像头快照、会话时间与轮次绑定、最近两图历史。已完成[真实视觉与语音实测](docs/REAL-MULTIMODAL-BASELINE.md)：32次正式输入对照及三驱动9轮浏览器交互；无图时猜测视觉属性的失败另行记录，默认部署未开启。
+
+[视觉证据提示消融](docs/VISUAL-GROUNDING-ABLATION.md)完成111次真实生成：固定探针无图断言从baseline的8/8变为general/evidence各0/8，有图问答与普通问题控制保持正常；显式图片数量未显示额外收益，不外推通用幻觉解决。可按[演示路线](docs/DEMO-WALKTHROUGH.md)展示，策略默认未切换。
