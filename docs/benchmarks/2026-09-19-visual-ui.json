@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "scope": "real browser and app route, mock inference and synthetic camera; not model quality",
+  "upload_text": true,
+  "camera_probe": {
+    "button": "关闭摄像头",
+    "connected": true,
+    "disabled": false,
+    "notice": "",
+    "readyState": 4,
+    "tracks": [
+      {
+        "muted": false,
+        "state": "live"
+      }
+    ],
+    "videoWidth": 640
+  },
+  "camera_and_two_image_context": true,
+  "third_image_trims_oldest": true,
+  "pending_clear": true,
+  "metrics": {
+    "audioTime": 8.533333333333333,
+    "connected": true,
+    "droppedStale": 0,
+    "generation": 3,
+    "idle": false,
+    "microphone": false,
+    "pendingFrames": 0,
+    "playing": false,
+    "queuedSeconds": 0,
+    "renderedFrames": 39,
+    "scheduledSamples": 36000,
+    "scheduledSources": 0
+  },
+  "camera_tracks_stopped": true,
+  "server_session_released": true,
+  "date": "2026-09-19",
+  "source_sha256": {
+    "visual_context.py": "fc60b590139f9753f870b7b6ef37320682baec141cb52492c310516a18ca7136",
+    "omni_backend.py": "5a538951f0c5134e0d087221b6cefb1654e211c008af462c587b071d646df846",
+    "omni_processor.py": "07c352da1fc424bd655a1e95aefabfc6caa192fde18b7d05c796a861a5261766",
+    "avatar_demo.py": "ed18ecddcad3d284d67fcf5c63598c5436e338f9eba2b5399ba301801c1b2af4",
+    "avatar_session.py": "57c311cd3e733d5230bda383e50cafd6a42882a5bc47935390c076c73b2a4c56",
+    "omni-server/worker.py": "77dc935209d0ab9aeabca9f9ea54f9ff82f792c8cd68166d3b9c876a698679bd",
+    "omni-server/visual_input.py": "c0524498c69668ac92553291c899393b3c82252eb720146b22daacd4656c0240",
+    "avatar-web/app.mjs": "da9708836ee027681af6a6a6f5124d5190c89061025b0b092e63cdc481c62088",
+    "avatar-web/visual.mjs": "93e816c163df0591961f595645e93c384aec371c2a27f11353bedcc9348bead7",
+    "avatar-web/index.html": "40be5cb7c76f07f99ebaa4e5a1c9a6b098f7dc624ef2ee9005b1367ce0dd4f97",
+    "avatar-web/style.css": "ed53dc5f655ffede5a22cbc1858aa649a185f058b9aa6ca85923d192b4d90efb"
+  },
+  "checks": {
+    "application_related": 27,
+    "worker": 11,
+    "frontend": 33
+  },
+  "real_model_validated": false,
+  "real_camera_validated": false,
+  "raw_results_sha256": "3be4e6f05ec5078125b3077e91d62fbbbc26e46ed9f2697a1e7000b997cd9b2f",
+  "failed_attempts": [
+    {
+      "attempt": "browser",
+      "status": "failed",
+      "reason": "second message was not submitted after camera panel expanded; browser wait expired; viewport layout evidence preserved",
+      "report_sha256": "1cef68c07a948f3ff57fd39ba92d6d927cc28869e76f3577ffd4303ecb15e2ce"
+    },
+    {
+      "attempt": "browser-v2",
+      "status": "failed",
+      "reason": "second message was not submitted after camera panel expanded; browser wait expired; viewport layout evidence preserved",
+      "report_sha256": "f3405080e7c39466652e4638e7658c24ccf1d3463b26a29b24dbeef809775e95"
+    }
+  ],
+  "formal_request_summaries": [
+    [
+      {
+        "role": "user",
+        "text": "左边是什么颜色？",
+        "images": [
+          {
+            "source": "upload",
+            "captured_at_ms": 578,
+            "id": "image-1",
+            "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "role": "user",
+        "text": "左边是什么颜色？",
+        "images": [
+          {
+            "source": "upload",
+            "captured_at_ms": 578,
+            "id": "image-1",
+            "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "text": "这是用于验证界面流程的模拟回复。"
+      },
+      {
+        "role": "user",
+        "text": "这张画面与上一张有何区别？",
+        "images": [
+          {
+            "source": "camera",
+            "captured_at_ms": 4789,
+            "id": "image-2",
+            "sha256": "43cdbc19fafe6ed165184346a0764ce063af766e8cc40f1013ee86231c44f8d9"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "role": "user",
+        "text": "左边是什么颜色？",
+        "images_omitted": true
+      },
+      {
+        "role": "assistant",
+        "text": "这是用于验证界面流程的模拟回复。"
+      },
+      {
+        "role": "user",
+        "text": "这张画面与上一张有何区别？",
+        "images": [
+          {
+            "source": "camera",
+            "captured_at_ms": 4789,
+            "id": "image-2",
+            "sha256": "43cdbc19fafe6ed165184346a0764ce063af766e8cc40f1013ee86231c44f8d9"
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "text": "这是用于验证界面流程的模拟回复。"
+      },
+      {
+        "role": "user",
+        "text": "现在变化了什么？",
+        "images": [
+          {
+            "source": "upload",
+            "captured_at_ms": 6247,
+            "id": "image-3",
+            "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb"
+          }
+        ]
+      }
+    ]
+  ]
+}

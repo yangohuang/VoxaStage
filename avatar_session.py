@@ -23,7 +23,7 @@ class AvatarSerializer(FrameSerializer):
             if 0 < len(data) <= 32000 and len(data) % 2 == 0:
                 return InputAudioRawFrame(audio=data, sample_rate=16000, num_channels=1)
             return None
-        if len(data) > 4096:
+        if len(data) > 360000:
             return None
         try:
             message = json.loads(data)
@@ -32,6 +32,10 @@ class AvatarSerializer(FrameSerializer):
         if not isinstance(message, dict):
             return None
         kind = message.get('type')
+        if kind == 'visual':
+            return InputTransportMessageFrame(message=message)
+        if len(data) > 4096:
+            return None
         if kind == 'text':
             value = message.get('text')
             if not isinstance(value, str) or not 1 <= len(value.strip()) <= 500:
@@ -189,7 +193,10 @@ class AvatarInput(FrameProcessor):
             if isinstance(frame, InputTransportMessageFrame):
                 message = frame.message
                 kind = message['type']
-                if kind in ('text', 'interrupt'):
+                if kind == 'visual':
+                    await self.session.send({'type':'visual_error','sequence':message.get('sequence'),
+                                             'message':'当前对话后端不支持画面输入。'})
+                elif kind in ('text', 'interrupt'):
                     await self.broadcast_interruption()
                     await self.broadcast_frame(BotStoppedSpeakingFrame)
                     if kind == 'text':

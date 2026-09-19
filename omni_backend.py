@@ -2,6 +2,7 @@
 import asyncio
 import base64
 import json
+from copy import deepcopy
 
 
 class ConversationHistory:
@@ -17,6 +18,7 @@ class ConversationHistory:
 
     def begin(self, user):
         self.interrupt()
+        user = deepcopy(user)
         self.pending = {'user':user, 'text':None}
         def audio_size(message):
             return len(message.get('audio','')) * 3 // 4
@@ -25,7 +27,21 @@ class ConversationHistory:
                 sum(len(m.get('text','')) for turn in self.turns for m in turn) + len(user.get('text','')) > 12000):
             self.turns.pop(0)
             self.trimmed = True
-        return [dict(m) for turn in self.turns for m in turn] + [dict(user)]
+        messages = [m for turn in self.turns for m in turn] + [user]
+        image_count = sum(len(m.get('images', [])) for m in messages)
+        for message in messages:
+            if image_count <= 2:
+                break
+            images = message.get('images', [])
+            remove = min(len(images), image_count - 2)
+            if remove:
+                message['images'] = images[remove:]
+                if not message['images']:
+                    del message['images']
+                message['images_omitted'] = True
+                image_count -= remove
+                self.trimmed = True
+        return deepcopy(messages)
 
     def generated(self, text):
         if self.pending is not None:

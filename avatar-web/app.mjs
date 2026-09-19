@@ -2,10 +2,12 @@ import { AvatarPlayer } from './audio.mjs';
 import { HeadRenderer, PortraitRenderer } from './renderer.mjs';
 import { Microphone } from './microphone.mjs';
 import { IdlePlayer } from './idle.mjs';
+import { VisualInput } from './visual.mjs';
 
 const $ = id => document.getElementById(id);
 let socket = null, ready = false, connecting = false, assistantBubble = null, sessionId = null, micPending = false;
 let renderer, portraitRenderer, providerKind = '3d';
+let visual = null;
 const providerOptions=new Map();
 const idle=new IdlePlayer($('idle-video'),visible=>{
   if(visible)$('placeholder').hidden=true;
@@ -19,10 +21,10 @@ function refresh() {
   $('connect').disabled = connecting || !!socket;
   $('disconnect').disabled = !socket;
   $('interrupt').disabled = !ready;
-  $('microphone').disabled = !ready || micPending;
+  $('microphone').disabled = !ready || micPending || (!!visual?.busy && !mic.active);
   $('microphone').textContent = mic.active ? '关闭麦克风' : micPending ? '开启中…' : '开启麦克风';
   $('microphone').setAttribute('aria-pressed', String(mic.active));
-  $('text-input').disabled = !ready; $('send').disabled = !ready;
+  $('text-input').disabled = !ready; $('send').disabled = !ready || !!visual?.busy;
   $('provider').disabled = connecting || !!socket;
   $('dialogue-backend').disabled = connecting || !!socket;
   $('connection-label').textContent = ready ? '已连接' : connected || connecting ? '连接中…' : '未连接';
@@ -68,10 +70,12 @@ try { renderer = new HeadRenderer($('head')); }
 catch (error) { notice(error.message); }
 try { portraitRenderer = new PortraitRenderer($('portrait')); }
 catch (error) { notice(error.message); }
+visual = new VisualInput({get:$,send,notice,changed:refresh,fatal:fail});
 
 function fail(message) {
   player.stop(); clearStage('会话暂停，请重新连接');
   void mic.stop(); micPending = false; ready = false; connecting = false;
+  visual.reset(); sessionId = null;
   socket?.close(); socket = null; refresh();
   activity('会话已停止', '重新连接后可以继续。'); notice(message);
 }
@@ -96,6 +100,7 @@ async function connect() {
           case 'ready':
             if (ready || message.input_sample_rate !== 16000 || !Number.isSafeInteger(message.generation) || !['2d', '3d'].includes(message.kind) || typeof message.provider !== 'string') throw new Error('服务握手格式不正确');
             player.reset(message.generation); sessionId = message.session_id; ready = true; connecting = false;
+            visual.reset(sessionId,message.image_input === true);
             providerKind = message.kind; setStageKind(providerKind);
             clearStage(); refresh(); activity('已连接，开始对话吧', '输入文字，或点击开启麦克风。'); break;
           case 'reset':
@@ -113,6 +118,10 @@ async function connect() {
             }
             break;
           case 'error': fail(message.message || '服务出现错误'); break;
+          case 'visual_ack': case 'visual_error': case 'visual_bound':
+            visual.handle(message);
+            if(message.type === 'visual_bound' && message.images?.length) append('user',`[第 ${message.turn_id} 轮已附画面]`);
+            break;
           case 'context_trimmed': notice(message.message); break;
           case 'status':
             if (message.state === 'thinking') activity('正在思考', '正在组织回复…');
@@ -124,6 +133,7 @@ async function connect() {
     ws.onclose = () => {
       if (socket !== ws) return;
       socket = null; ready = false; connecting = false; player.stop(); void mic.stop(); micPending = false;
+      visual.reset(); sessionId = null;
       clearStage('连接已断开'); refresh(); activity('已断开', '声音和麦克风均已停止。');
     };
     ws.onerror = () => { if (socket === ws) fail('无法连接本地数字人服务，请确认服务已启动。'); };
@@ -133,6 +143,7 @@ async function connect() {
 function disconnect() {
   connecting = false; ready = false; socket?.close(); socket = null;
   player.stop(); void mic.stop(); micPending = false; sessionId = null;
+  visual.reset();
   clearStage('连接后，第一句话会点亮这里'); refresh(); activity('已断开', '声音和麦克风均已停止。');
 }
 function interrupt() {
@@ -144,9 +155,12 @@ function interrupt() {
 async function sendText(text) {
   text = String(text).trim();
   if (!text || !ready) return false;
+  if (visual.busy) { notice('请等待画面确认后再发送问题。'); return false; }
   if (text.length > 500) { notice('每条消息最多 500 字。'); return false; }
+  const activeSocket = socket;
   try { await player.unlock(); } catch (error) { fail(error.message); return false; }
-  if (!ready) return false;
+  if (!ready || socket !== activeSocket) return false;
+  if (visual.busy) { notice('请等待画面确认后再发送问题。'); return false; }
   player.stop(); clearStage(); assistantBubble = null; notice();
   send({ type: 'text', text });
   // Server transcript is authoritative for both typed and spoken messages.

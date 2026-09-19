@@ -62,3 +62,53 @@ class OmniConversationTests(unittest.IsolatedAsyncioTestCase):
         self.assertFalse(any(e.get('text')=='stale' for e in s.events))
         self.assertIn('打断',c.history.turns[-1][-1]['text'])
         await c.close()
+
+class VisualConversationTests(unittest.IsolatedAsyncioTestCase):
+    async def test_attachment_ack_bind_once_and_reject_stale_session(self):
+        from test_visual_context import frame
+        calls=[]
+        class Backend:
+            async def generate(self,messages):
+                calls.append(messages);yield 'text','ok';yield 'audio',bytes(960)
+        s=Session();c=OmniConversation(s,Backend(),vad=object(),visual_enabled=True,session_id='session-a')
+        await c.control(frame())
+        self.assertEqual(s.events[-1]['type'],'visual_ack')
+        await c.control({'type':'text','text':'看图'});await c.task
+        self.assertEqual(calls[-1][-1]['images'][0]['id'],'image-1')
+        await c.control(dict(frame(2),session_id='old'))
+        self.assertEqual(s.events[-1]['type'],'visual_error')
+        await c.control({'type':'text','text':'然后呢'});await c.task
+        self.assertNotIn('images',calls[-1][-1])
+        bound=[e for e in s.events if e['type']=='visual_bound']
+        self.assertEqual([e['turn_id'] for e in bound],[1,2])
+        await c.close();self.assertIsNone(c.visual.pending)
+
+    async def test_raw_voice_turn_binds_picture_and_close_releases_history(self):
+        from test_visual_context import frame
+        import base64
+        captured=[]
+        class VAD:
+            def __init__(self):self.states=iter([VADState.SPEAKING,VADState.QUIET])
+            async def analyze_audio(self,pcm):return next(self.states)
+        class Backend:
+            async def generate(self,messages):captured.extend(messages);yield 'text','ok';yield 'audio',bytes(960)
+        c=OmniConversation(Session(),Backend(),vad=VAD(),visual_enabled=True,session_id='session-a')
+        await c.control(frame());pcm=bytes(range(256))*5;await c.audio(pcm);await c.task
+        self.assertEqual(base64.b64decode(captured[-1]['audio']),pcm)
+        self.assertEqual(captured[-1]['images'][0]['id'],'image-1')
+        self.assertTrue(c.history.pending)
+        await c.close();self.assertFalse(c.history.turns);self.assertIsNone(c.history.pending)
+
+    async def test_disconnect_during_visual_binding_cannot_restart_inference(self):
+        entered,release=asyncio.Event(),asyncio.Event();calls=[]
+        class BlockingSession(Session):
+            async def send(self,event,**kwargs):
+                if event['type']=='visual_bound':entered.set();await release.wait()
+                await super().send(event,**kwargs)
+        class Backend:
+            async def generate(self,messages):calls.append(messages);yield 'text','late'
+        c=OmniConversation(BlockingSession(),Backend(),vad=object(),visual_enabled=True,session_id='session-a')
+        begin=asyncio.create_task(c.begin({'role':'user','text':'hi'}));await entered.wait()
+        await c.close();release.set();await begin
+        if c.task:await c.task
+        self.assertFalse(calls);self.assertIsNone(c.history.pending)

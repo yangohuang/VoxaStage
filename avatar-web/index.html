@@ -34,8 +34,14 @@
           <div id="welcome" class="welcome"><span class="welcome-icon" aria-hidden="true">✳</span><h3>从一句问候开始</h3><p>可以直接说话，也可以输入文字。<br>回复的声音与嘴型会同步呈现。</p><div class="suggestion">试试：你好，介绍一下你自己。</div></div>
         </div>
         <div id="notice" class="notice" role="status" hidden></div>
+        <section id="visual-panel" class="visual-panel" aria-label="画面输入" hidden>
+          <div class="visual-actions"><label>选择图片 <input id="visual-file" type="file" accept="image/png,image/jpeg"></label><button id="visual-camera" type="button">打开摄像头</button><button id="visual-snapshot" type="button" hidden>拍照</button><button id="visual-remove" type="button" disabled>移除待发画面</button></div>
+          <video id="visual-video" muted playsinline aria-label="摄像头预览" hidden></video>
+          <img id="visual-preview" alt="待提交的问题画面" hidden>
+          <p id="visual-status" role="status"></p>
+        </section>
         <form id="text-form"><label class="sr-only" for="text-input">输入消息</label><textarea id="text-input" rows="2" maxlength="500" placeholder="输入一句话…" disabled></textarea><div class="composer-footer"><span>Enter 发送 · Shift + Enter 换行</span><button id="send" class="send" type="submit" disabled aria-label="发送消息">↑</button></div></form>
-        <p class="privacy-note">麦克风由你开启；断开会话后停止采集。</p>
+        <p class="privacy-note">麦克风和摄像头由你开启；摄像头仅在拍照时发送画面，断开后停止采集。</p>
       </aside>
     </main>
     <footer class="page-footer"><span>LOCAL VOICE EXPERIENCE</span><span>实时语音 · 音画同步 · 可随时打断</span></footer>
