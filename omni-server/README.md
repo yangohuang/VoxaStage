@@ -90,4 +90,4 @@ audio 为 24k PCM16 小端 base64，客户端校验总采样数、事件大小�
 
 `--visual-grounding baseline|general|evidence`由部署者选择，默认`baseline`逐字保持原系统提示。`general`增加缺图时不猜测的通用规则；`evidence`再加入服务端统计的本轮、历史及合计可见图片数，文字中的图片声明不增加计数。该策略也适用于纯文字/语音请求；普通问题仍要求正常回答。HTTP客户端不能覆盖策略，健康接口在`capabilities.visual_grounding_policy`返回实际选择。
 
-策略构造与worker接入已通过18项契约测试，真实效果对照仍在进行；不会因提示存在就认定幻觉已解决。设计与验收见[消融计划](../docs/plans/2026-09-19-visual-grounding.md)。
+策略构造与worker接入已通过18项契约测试，并完成[111次真实生成的受控消融](../docs/VISUAL-GROUNDING-ABLATION.md)。在一条重复的无图语音问题上，原提示8/8断言视觉属性，general和evidence均为0/8；有图及普通问题控制保持正常。当前没有证据支持evidence比general更好，不外推通用幻觉解决。默认仍为baseline，部署者可显式选择general。
