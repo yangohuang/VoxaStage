@@ -13,6 +13,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import StreamingResponse
 import numpy as np
 from visual_input import decode_images, prefill_chunks
+from visual_grounding import POLICIES, build_system_prompt
 
 SYSTEM = '你是中文语音助手。认真理解用户的中文和英文术语，依据上下文直接回答。简单问题简短回答，解释性问题给出关键原因和具体例子，通常不超过180字。用自然口语，不用Markdown。不确定时明确说明，听不清时请用户澄清，不编造事实。'
 
@@ -67,6 +68,7 @@ def create_app(engine):
                     input_sample_rate=16000, output_sample_rate=24000,
                     mode='vad_segmented_end_to_end',
                     capabilities=dict(image_input=bool(getattr(engine, 'vision_enabled', False)),
+                                      visual_grounding_policy=getattr(engine, 'visual_grounding_policy', 'baseline'),
                                       max_images=2, max_image_bytes=262144,
                                       max_image_dimension=1024, capture_clock='client_session_ms'), **stats)
 
@@ -174,7 +176,11 @@ def create_app(engine):
 
 
 class MiniCPMEngine:
-    def __init__(self, model_path, *, male_reference=None, female_reference=None, vision_enabled=False):
+    def __init__(self, model_path, *, male_reference=None, female_reference=None, vision_enabled=False,
+                 visual_grounding_policy='baseline'):
+        if visual_grounding_policy not in POLICIES:
+            raise ValueError('Unknown visual grounding policy')
+        self.visual_grounding_policy = visual_grounding_policy
         import torch
         from transformers import AutoModel
         torch.set_num_threads(4)
@@ -206,9 +212,11 @@ class MiniCPMEngine:
         with self.torch.inference_mode():
             self.model.reset_session(reset_token2wav_cache=False)
             sid = 'pipecat-' + str(time.monotonic_ns())
-            system_content=[SYSTEM]
+            system_prompt = build_system_prompt(SYSTEM, messages,
+                                                getattr(self, 'visual_grounding_policy', 'baseline'))
+            system_content=[system_prompt]
             if getattr(self,'references',None):
-                system_content=['模仿音频样本的音色并生成新的内容。',self.references[self.voice],SYSTEM]
+                system_content=['模仿音频样本的音色并生成新的内容。',self.references[self.voice],system_prompt]
             self.model.streaming_prefill(session_id=sid,msgs=[{'role':'system','content':system_content}],omni_mode=False)
             for message in messages:
                 content = message['content']
@@ -246,7 +254,9 @@ if __name__ == '__main__':
     parser.add_argument('--male-reference',type=Path)
     parser.add_argument('--female-reference',type=Path)
     parser.add_argument('--vision',action='store_true',help='Load the vision encoder and enable bounded still-image input')
+    parser.add_argument('--visual-grounding', choices=POLICIES, default='baseline',
+                        help='Server-selected visual evidence prompt; baseline preserves the original prompt')
     args=parser.parse_args()
     engine=MiniCPMEngine(args.model,male_reference=args.male_reference,female_reference=args.female_reference,
-                         vision_enabled=args.vision)
+                         vision_enabled=args.vision, visual_grounding_policy=args.visual_grounding)
     uvicorn.run(create_app(engine), host='127.0.0.1', port=args.port, limit_concurrency=16)
