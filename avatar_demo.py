@@ -34,11 +34,13 @@ def register_avatar_routes(app, make_components, active_sessions, active_workers
         public=dialogue.public()
         for backend in public['dialogue_backends']:
             backend['available']=backend['configured']
+            backend['image_input']=False
             if backend['id']=='minicpm' and backend['configured']:
                 try:
                     async with httpx.AsyncClient(trust_env=False,timeout=2) as client:
                         response=await client.get(dialogue.url.rstrip('/')+'/health')
                         backend['available']=response.status_code==200 and response.json().get('ready') is True
+                        backend['image_input']=backend['available'] and response.json().get('capabilities',{}).get('image_input') is True
                 except (httpx.HTTPError,ValueError):
                     backend['available']=False
         return {**registry.public(), **public}
@@ -82,6 +84,7 @@ def register_avatar_routes(app, make_components, active_sessions, active_workers
         active_sessions.add(key)
         session = None
         omni = None
+        visual_enabled = False
         try:
             await websocket.accept()
             session = AvatarSession(websocket, provider.make_backend())
@@ -95,7 +98,9 @@ def register_avatar_routes(app, make_components, active_sessions, active_workers
                     health.raise_for_status()
                     if health.json().get('ready') is not True:
                         raise RuntimeError('MiniCPM is not ready')
-                    omni = OmniProcessor(session, OmniBackend(client, dialogue.url, voice=provider.voice))
+                    visual_enabled = health.json().get('capabilities',{}).get('image_input') is True
+                    omni = OmniProcessor(session, OmniBackend(client, dialogue.url, voice=provider.voice),
+                                         visual_enabled=visual_enabled, session_id=key)
                     processors = [transport.input(), omni, transport.output()]
                     observers = []
                 else:
@@ -113,6 +118,7 @@ def register_avatar_routes(app, make_components, active_sessions, active_workers
                     await session.send({'type': 'ready', 'session_id': key,
                                         'provider': provider.id, 'kind': provider.kind,
                                         'dialogue_backend': dialogue_id,
+                                        'image_input': visual_enabled,
                                         'input_sample_rate': 16000, 'generation': session.generation})
 
                 @transport.event_handler('on_client_disconnected')

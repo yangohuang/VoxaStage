@@ -12,6 +12,7 @@ asr_server.py test_backend.py test_services.py test_turns.py test_asr_server.py
 test_avatar_backend.py test_avatar_session.py test_tts_lifecycle.py
 test_avatar_providers.py test_avatar_video_backend.py test_dinet_backend.py
 dialogue_backends.py omni_backend.py omni_processor.py
+visual_context.py test_visual_context.py test_visual_route.py
 api_backends.py test_api_backends.py test_voice_matching.py
 llm_server.py ctl.py asr_ctl.py test_ctl_config.py test_tts_resources.py
 test_dialogue_backends.py test_omni_backend.py test_omni_processor.py test_omni_route.py
