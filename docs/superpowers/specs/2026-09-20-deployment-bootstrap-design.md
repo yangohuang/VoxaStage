@@ -1,0 +1,13 @@
+# Portable deployment bootstrap design
+
+The owner approved finishing documentation/PR first and then continuing complete deployment reproducibility, ahead of input streaming work. PR #2 is merged. This slice makes the application launch reproducible against independently prepared model workers; it does not claim a fresh GPU host has been provisioned.
+
+Use a small standard-library CLI rather than a new container stack: the existing renderer/model workers require different Python/CUDA environments, and DINet/IndexTTS rely on deployment-provided inference implementations. Preserve those explicit contracts and reference their installation instructions. One monolithic image would obscure the missing resources; shell-only instructions cannot explain which selected dependency failed.
+
+`demo.py check` loads deployment configuration, checks the chosen application interpreter/resources and only the selected dialogue/character dependency chain. `demo.py run` performs the same checks and starts the existing application in the foreground only when required checks pass. No model downloads, worker termination, GPU inference, public binding, credentials in reports or silent API fallback. Localhost remains the only CLI host.
+
+Configuration precedence is runtime/backend-env.json, then a literal .env file, then process environment, with explicit backend/profile CLI options last. Dotenv parsing never executes shell code or expands variables. The selected profile becomes the application's configured default for this run without rewriting the user's files; selected dialogue default is supplied by environment. Model URLs are deployment-owned and omitted from public reports.
+
+Cascade requires ready ASR/LLM and a matching TTS speaker. API mode validates configuration only and explicitly reports unverified availability without making billable requests. MiniCPM requires its own worker only, with optional required visual capability. FlashHead and StreamingTalker expose HTTP health; DINet has no shared health contract, so TCP reachability is a limited check and a model-validation warning remains. Missing idle is a warning because the existing page supports a placeholder. Required failures prevent launch and return nonzero status.
+
+Verification covers config precedence, literal parsing, malformed/oversized responses, redirects, secret redaction, selected-chain checks, no import of GPU inference dependencies, refusing failed checks/occupied ports, and CLI launch parity. Validate a clean exported application directory using the existing independently installed interpreter and actual prepared workers, without copying production runtime or changing model processes. Blank-host model installation remains a separate acceptance boundary.
