@@ -1,0 +1,142 @@
+{
+  "scope": "Existing local image/container recreation, not independent GPU host installation",
+  "container_id_changed": true,
+  "image_unchanged": true,
+  "image_sha256": "sha256:ee9f37c6c67841e64cdd15b37cb0bffb445d76adae0f758e4734f00d4fba6e29",
+  "entrypoint": [
+    "/usr/local/bin/supervisord",
+    "-c",
+    "/run/voxastage/supervisord.conf",
+    "-n"
+  ],
+  "speech": {
+    "passed": true,
+    "status": "passed",
+    "input_samples": 58368,
+    "rounds": [
+      {
+        "label": "round-1",
+        "interrupted": false,
+        "metadata": {
+          "type": "avatar_meta",
+          "kind": "2d",
+          "codec": "jpeg",
+          "sample_rate": 24000,
+          "fps": 25,
+          "width": 360,
+          "height": 640
+        },
+        "metadata_s": 1.821,
+        "first_media_s": 2.184,
+        "frames": 61,
+        "total_samples": 58368,
+        "wall_s": 4.546,
+        "first_image_sha256": "c040adbaa3dec5a90af9c2d4da7496cb6c0575f135d0c0406725f90892931517",
+        "last_image_sha256": "081ffe635826fe61f1f74fb08e55d6d6484e8a9a9c30c704fe934f18835c993d"
+      },
+      {
+        "label": "round-2",
+        "interrupted": false,
+        "metadata": {
+          "type": "avatar_meta",
+          "kind": "2d",
+          "codec": "jpeg",
+          "sample_rate": 24000,
+          "fps": 25,
+          "width": 360,
+          "height": 640
+        },
+        "metadata_s": 0.11,
+        "first_media_s": 0.222,
+        "frames": 61,
+        "total_samples": 58368,
+        "wall_s": 2.834,
+        "first_image_sha256": "c84dbffc6602a269f72cd26ff301bdde2514ff4d62fdf6833f58a39092f9c688",
+        "last_image_sha256": "1af0a306cf9160966cb92f1d6b97679f4cdd47c2ea999c670bd89bedb65f7955"
+      },
+      {
+        "label": "round-3",
+        "interrupted": false,
+        "metadata": {
+          "type": "avatar_meta",
+          "kind": "2d",
+          "codec": "jpeg",
+          "sample_rate": 24000,
+          "fps": 25,
+          "width": 360,
+          "height": 640
+        },
+        "metadata_s": 0.108,
+        "first_media_s": 0.244,
+        "frames": 61,
+        "total_samples": 58368,
+        "wall_s": 2.831,
+        "first_image_sha256": "03d2d8a834ed2d93498c1f83287604d7bc05caf15e710ebfb4ba505601505bbc",
+        "last_image_sha256": "fec27a432091548f280c3433239d3566a90e0677535d00cb23fe7c08b0227d0d"
+      },
+      {
+        "label": "interrupted",
+        "interrupted": true,
+        "metadata": {
+          "type": "avatar_meta",
+          "kind": "2d",
+          "codec": "jpeg",
+          "sample_rate": 24000,
+          "fps": 25,
+          "width": 360,
+          "height": 640
+        },
+        "metadata_s": 0.107,
+        "first_media_s": 0.205,
+        "frames": 1,
+        "total_samples": 960,
+        "wall_s": 0.706,
+        "first_image_sha256": "97b737a91418417a8426e823b000ce1f61fd46597b2bb028bd4f6be36628e692",
+        "last_image_sha256": "97b737a91418417a8426e823b000ce1f61fd46597b2bb028bd4f6be36628e692"
+      },
+      {
+        "label": "recovered",
+        "interrupted": false,
+        "metadata": {
+          "type": "avatar_meta",
+          "kind": "2d",
+          "codec": "jpeg",
+          "sample_rate": 24000,
+          "fps": 25,
+          "width": 360,
+          "height": 640
+        },
+        "metadata_s": 1.531,
+        "first_media_s": 1.628,
+        "frames": 61,
+        "total_samples": 58368,
+        "wall_s": 4.253,
+        "first_image_sha256": "684a61fff800c3dc41351013db408ec303c727046e80bcdaf1ff89956ecb33b2",
+        "last_image_sha256": "4043bd86397dfa09b831d036757a55b40cf6da5c72a733aaf98cda76159aa6f8"
+      }
+    ],
+    "scope": "Actual model bridge PCM/JPEG; not physical microphone, playback, or visual quality validation"
+  },
+  "browser": {
+    "status": "passed",
+    "frames": 319,
+    "idle_after_reply": true,
+    "idle_after_disconnect": true
+  },
+  "worker_state": {
+    "available_workers": 1,
+    "proxy_connections": 0
+  },
+  "rollback_fault_checks": {
+    "transient_failure_retries": true,
+    "original_deadline_preserved": true,
+    "partial_restore_cannot_be_kept": true,
+    "kept_deployment_not_restored": true,
+    "wrong_configuration_hash_rejects_success": true,
+    "only_owned_stopped_processes_started": true,
+    "real_docker_actions": false
+  },
+  "real_container_rollback_drill": false,
+  "human_quality_review": false,
+  "physical_acoustic_calibration": false
+}

@@ -1,0 +1,12 @@
+{
+  "services": {
+    "video": {
+      "entrypoint": ["/usr/local/bin/supervisord", "-c", "/run/voxastage/supervisord.conf", "-n"],
+      "environment": {"N_PROC_PER_GPU": "1"},
+      "volumes": [
+        {"type": "bind", "source": "${VOXASTAGE_DINET_DEPLOY_DIR:?Set the absolute deployment snapshot directory}/supervisord.conf", "target": "/run/voxastage/supervisord.conf", "read_only": true, "bind": {"create_host_path": false}},
+        {"type": "bind", "source": "${VOXASTAGE_DINET_DEPLOY_DIR:?Set the absolute deployment snapshot directory}/native-config.yaml", "target": "/app/kyc-video/etc/config.yaml", "read_only": true, "bind": {"create_host_path": false}}
+      ]
+    }
+  }
+}
