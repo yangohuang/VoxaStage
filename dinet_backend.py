@@ -185,6 +185,22 @@ class DINetBackend(VideoBackend):
         self.observer = observer
         super().__init__(url, connect=self._connect)
 
+    async def _open(self):
+        # A just-cancelled single worker may still be releasing its runtime.
+        # Retry only this explicit pre-stream capacity error, never model errors.
+        loop = asyncio.get_running_loop()
+        deadline = loop.time() + 5
+        while True:
+            try:
+                return await super()._open()
+            except websockets.exceptions.ConnectionClosed as exc:
+                received = exc.rcvd
+                if (received is None or received.code != 1011
+                        or received.reason != 'Server error: No available workers'
+                        or loop.time() >= deadline):
+                    raise
+                await asyncio.sleep(.1)
+
     async def _connect(self, url, **kwargs):
         kwargs.update(max_size=8_000_000, max_queue=4)
         ws = await self.native_connect(url, **kwargs)
