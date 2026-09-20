@@ -7,12 +7,20 @@ from pipecat.audio.vad.vad_analyzer import VADState
 class Session:
     def __init__(self):
         self.generation=0;self.events=[];self.audio_packets=[];self.playing=False
+        from playback_history import PlaybackHistory
+        self.history=PlaybackHistory('minicpm');self.sequence=0;self.samples=0
     async def send(self,event,*,generation=None):
         if generation is None or generation==self.generation:self.events.append(event)
     async def reset(self,reason):self.generation+=1;self.playing=False
-    def start_clip(self):pass
-    def audio(self,pcm):self.audio_packets.append((self.generation,pcm))
+    def start_clip(self):self.sequence+=1;self.samples=0
+    def audio(self,pcm):
+        self.audio_packets.append((self.generation,pcm));self.samples+=len(pcm)//2
+        self.history.delivered(str(self.sequence),self.samples,self.generation)
     def end_clip(self):pass
+    def mark_text(self,text):self.history.mark(str(self.sequence),self.samples,text,self.generation)
+    async def persist_history(self):pass
+    async def finish_production(self):self.history.finish(self.generation)
+    async def playback_progress(self,m):self.history.acknowledge(m["clip_id"],m["played_samples"],m["generation"])
 
 
 class OmniConversationTests(unittest.IsolatedAsyncioTestCase):
@@ -42,9 +50,11 @@ class OmniConversationTests(unittest.IsolatedAsyncioTestCase):
         s=Session();c=OmniConversation(s,Backend(),vad=object())
         await c.control({'type':'text','text':'暗号是蓝鲸'})
         await c.task
-        self.assertFalse(c.history.turns)
+        self.assertEqual(len(c.history.context()),1)
         await c.control({'type':'playback','generation':s.generation,'state':'ended'})
-        self.assertEqual(c.history.turns[-1][-1]['text'],'蓝鲸')
+        self.assertEqual(len(c.history.context()),1)
+        await c.control({'type':'playback','generation':s.generation,'state':'progress','clip_id':'1','played_samples':480})
+        self.assertEqual(c.history.context()[-1]['text'],'蓝鲸')
         await c.close()
 
     async def test_late_result_after_cancel_is_discarded(self):
@@ -60,7 +70,7 @@ class OmniConversationTests(unittest.IsolatedAsyncioTestCase):
         await entered.wait();await c.control({'type':'interrupt'})
         self.assertFalse(s.audio_packets)
         self.assertFalse(any(e.get('text')=='stale' for e in s.events))
-        self.assertIn('打断',c.history.turns[-1][-1]['text'])
+        self.assertIn('中断',c.history.context()[-1]['text'])
         await c.close()
 
 class VisualConversationTests(unittest.IsolatedAsyncioTestCase):
@@ -96,8 +106,8 @@ class VisualConversationTests(unittest.IsolatedAsyncioTestCase):
         await c.control(frame());pcm=bytes(range(256))*5;await c.audio(pcm);await c.task
         self.assertEqual(base64.b64decode(captured[-1]['audio']),pcm)
         self.assertEqual(captured[-1]['images'][0]['id'],'image-1')
-        self.assertTrue(c.history.pending)
-        await c.close();self.assertFalse(c.history.turns);self.assertIsNone(c.history.pending)
+        self.assertEqual(len(c.history.context()),1)
+        await c.close();self.assertEqual(len(c.history.context()),2)
 
     async def test_disconnect_during_visual_binding_cannot_restart_inference(self):
         entered,release=asyncio.Event(),asyncio.Event();calls=[]
@@ -111,4 +121,4 @@ class VisualConversationTests(unittest.IsolatedAsyncioTestCase):
         begin=asyncio.create_task(c.begin({'role':'user','text':'hi'}));await entered.wait()
         await c.close();release.set();await begin
         if c.task:await c.task
-        self.assertFalse(calls);self.assertIsNone(c.history.pending)
+        self.assertFalse(calls);self.assertFalse(c.history.context())
