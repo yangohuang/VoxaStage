@@ -20,12 +20,12 @@ VoxaStage 是基于 **Pipecat** 的本地优先语音数字人集成项目：把
 
 ## 效果预览
 
-| DINet · 2D 男生 | FlashHead Lite · 2D 女生 | StreamingTalker · 3D 头部 |
+| DINet · 康辉角色素材 | FlashHead Lite · 2D 女生 | StreamingTalker · 3D 头部 |
 | :---: | :---: | :---: |
-| <img src="docs/assets/dinet-idle.png" alt="DINet 男生角色待机画面" height="240"> | <img src="docs/assets/flashhead-idle.png" alt="FlashHead 女生角色待机画面" height="240"> | <img src="docs/assets/streamingtalker-idle.png" alt="StreamingTalker 无纹理三维头部待机画面" height="240"> |
+| <img src="docs/assets/dinet-kanghui.jpg" alt="DINet 康辉角色素材图" height="240"> | <img src="docs/assets/flashhead-idle.png" alt="FlashHead 女生角色待机画面" height="240"> | <img src="docs/assets/streamingtalker-idle.png" alt="StreamingTalker 无纹理三维头部待机画面" height="240"> |
 | 男声 · 肖像帧 | 女声 · 肖像帧 | 男声 · 动态网格 |
 
-以上为当前部署中三个角色的**真实待机输出截帧**。对话时由对应模型生成嘴型与表情；等待、打断和通话结束后播放预先生成的无声 idle 循环。截图用于展示集成效果，不代表本项目训练了这些模型，也不包含人物素材的再使用授权。
+DINet 栏使用已有康辉角色素材图（原文件 `kanghui.jpg`）；FlashHead 与 StreamingTalker 栏为当前部署的**真实待机输出截帧**。对话时由对应模型生成嘴型与表情；等待、打断和通话结束后播放预先生成的无声 idle 循环。截图用于展示集成效果，不代表本项目训练了这些模型，也不包含人物素材的再使用授权。
 
 ![浏览器中通过文字输入发起对话，StreamingTalker 输出三维头部并显示回复](docs/assets/conversation-preview.png)
 
