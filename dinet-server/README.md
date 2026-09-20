@@ -97,4 +97,32 @@ python dinet-server/check_proxy.py \
 
 升级应在无活跃会话时进行，使用固定启动文件快照，保存原代理与worker命令。共享显卡需要按实测显存设置worker数量；本机256验证使用单worker，不能直接推断多worker容量。回退时恢复两项原命令并重启相应进程。原生文件、模型和素材不被改写。
 
-这两项命令还应写入部署者自己的容器/进程配置来源，挂载启动文件与人物JSON；仅修改运行容器里的Supervisor文件不能保证容器重新创建后保留。仓库不管理或复制外部服务的镜像、入口脚本和人物资源。本次验证覆盖现有安装上的进程重启，不代表空白GPU环境或容器重建已通过。
+这两项命令还应写入部署者自己的容器/进程配置来源，挂载启动文件与人物JSON；仅修改运行容器里的Supervisor文件不能保证容器重新创建后保留。仓库不管理或复制外部服务的镜像、入口脚本和人物资源。入口整理阶段验证了现有安装上的进程重启；后续[容器重建复验](../docs/DINET-256-VALIDATION.md#现有镜像的容器重建复验)已通过，空白GPU环境仍未验证。
+
+## 防止容器启动覆盖配置
+
+已审计镜像的默认入口会执行`generate_supervisord.py`。因此仅在运行容器内改Supervisor文件，即使只重启容器也可能被覆盖。`compose.override.example.json`是针对该已有Compose项目中`video`服务的可选覆盖文件，不是独立模型镜像或通用安装脚本。
+
+在本机部署目录保存以下两份现有配置：
+
+- `supervisord.conf`：已验证的代理/worker命令、单worker数量、原工作目录与环境。命令引用的冻结启动源码、人物JSON和pacing JSON必须在容器内同一路径可读。
+- `native-config.yaml`：当前服务实际使用的原生配置。保存在本机，不提交仓库；本模板不生成或分发它。
+
+模板将两者只读挂载，直接启动Supervisor，绕过每次启动时的配置生成。原base文件继续提供模型挂载、GPU、镜像、网络、仅本机端口映射与健康检查。必须以实际审核过的base文件合并，先检查解析结果：
+
+```bash
+export VOXASTAGE_DINET_DEPLOY_DIR=/absolute/path/to/frozen-deployment
+# 原有base文件和本覆盖文件都需使用，不能只运行覆盖文件。
+docker compose -f /path/to/original-compose.yml \
+  -f dinet-server/compose.override.example.json config
+```
+
+在保存原命令、确认无活跃会话且已具备回退步骤后，仅更新video：
+
+```bash
+docker compose -f /path/to/original-compose.yml \
+  -f dinet-server/compose.override.example.json \
+  up -d --no-deps --no-build --pull never video
+```
+
+固定配置应在更新前做好资源、指纹和真实生成校验；模板不会自动调节GPU容量。部署目录中任一配置缺失会拒绝挂载，不会创建空目录冒充文件。若回退到原镜像入口，仍需恢复之前保存的原生配置和Supervisor命令，不能认为去掉覆盖文件就会保留本次人物选择。不要将本机原生配置、模型、人物素材或临时回退脚本一起发布。

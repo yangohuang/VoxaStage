@@ -10,7 +10,7 @@
 | 实测瓶颈与一项优化 | [消费提前量实验](DINET-PACING-EXPERIMENT.md)及[原代理集成](DINET-PACING-INTEGRATION.md)：17次API、10次正式浏览器对照、故障恢复与回滚 | 单机单角色、小样本；没有证明算力加速、视觉零跳帧、长会话与四worker并发收益 |
 | 有时间与上下文的视觉语音 | [视觉会话契约](VISUAL-INTERACTION.md)与[真实模型实测](REAL-MULTIMODAL-BASELINE.md)：6次能力探针、32次正式四条件对照、三驱动9轮浏览器交互、3组播放打断恢复 | 合成静态图和语音；没有验证真实摄像头、物理麦克风或连续视频理解 |
 | 真实失败与方法消融 | [缺图提示实验](VISUAL-GROUNDING-ABLATION.md)：同代码三策略111次生成，缺图视觉断言8/8→0/8；数量提示没有显示额外收益 | 一句重复语音和两张简单图；没有证明跨场景、跨模型泛化，不是模型训练 |
-| 部署与演示材料 | [部署](DEPLOYMENT.md)、[新应用环境安装](SOURCE-INSTALL-VALIDATION.md)、[演示路线](DEMO-WALKTHROUGH.md)、各实验原始摘要与机器报告 | 安装检查复用现有Linux系统库；不是空白GPU主机全量模型部署 |
+| 部署与演示材料 | [部署](DEPLOYMENT.md)、[新应用环境安装](SOURCE-INSTALL-VALIDATION.md)、[演示路线](DEMO-WALKTHROUGH.md)、[现有DINet容器重建](DINET-256-VALIDATION.md#现有镜像的容器重建复验)、各实验原始摘要与机器报告 | 安装检查复用现有Linux系统库；不是空白GPU主机全量模型部署 |
 | 上游与本项目归属 | [第三方来源](../THIRD_PARTY.md)及[首页贡献说明](../README.md#来源与贡献) | 不把上游模型能力、未经验证的改进或自动标注当原创成果 |
 
 ## 剩余验收顺序
