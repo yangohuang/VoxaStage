@@ -32,7 +32,7 @@
 
 ## 5. Integration and delivery
 - [x] Run focused module tests, cross-feature regression, real models and browser checks; preserve failures and scope limits. Independent requirements/code review before publication.
-- [x] Update README/attribution/deployment/demo instructions and source export. Commit/push to the existing private PR without assistant branding.
+- [x] Update README/attribution/deployment/demo instructions and source export. Commit/push to the existing PR with project-only commit metadata.
 - [x] Report implemented/verified functions separately from deferred listening quality, physical acoustics, multi-user and public operation. Do not mark the older full-quality goal achieved.
 
 ## Verification record
@@ -43,3 +43,5 @@
 - Visual worker image+text/image+audio emitted first audio before completion; cancellation followed by another successful response passed.
 - Independent review caught and verified fixes for MiniCPM context/message bounds, restored image IDs, save cancellation revisions and generation-scoped TTS queues.
 - Human quality assessment, physical microphone/acoustics and multi-user operation remain deferred; this record does not close the older quality goal.
+
+Repository visibility was subsequently set to public at the owner’s explicit request. See ../../STATUS.md for current delivery boundaries.
