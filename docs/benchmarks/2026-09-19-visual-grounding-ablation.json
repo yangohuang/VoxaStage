@@ -1,0 +1,2587 @@
+{
+  "version": 1,
+  "date": "2026-09-19",
+  "code_commit": "55268f943bd7b821c1667421220c665d0c699108",
+  "model_snapshot": "a3073852f52e4beec3f278d1f6616d40c26fe343",
+  "method": "Inference-time system prompt ablation; no training or weight change",
+  "execution": "Serial baseline, general, evidence; each fresh visual worker,4 deterministic condition-rotation rounds,unseeded sampling",
+  "total_requests": 111,
+  "main_measured_requests": 96,
+  "warmups": 3,
+  "auxiliary_requests": 12,
+  "policies": [
+    {
+      "policy": "baseline",
+      "prompt_characters_for_no_image": 112,
+      "summary": {
+        "audio_only": {
+          "attempted": 8,
+          "protocol_passed": 8,
+          "client_first_audio_s_median": 0.9555670223198831,
+          "wall_s_median": 1.518601179588586,
+          "output_audio_s_median": 4.48
+        },
+        "image_only": {
+          "attempted": 8,
+          "protocol_passed": 8,
+          "client_first_audio_s_median": 0.8625888586975634,
+          "wall_s_median": 1.8284797496162355,
+          "output_audio_s_median": 5.84
+        },
+        "image_text": {
+          "attempted": 8,
+          "protocol_passed": 8,
+          "client_first_audio_s_median": 0.8432615743950009,
+          "wall_s_median": 1.036590710747987,
+          "output_audio_s_median": 3.08
+        },
+        "image_audio": {
+          "attempted": 8,
+          "protocol_passed": 8,
+          "client_first_audio_s_median": 0.9177485201507807,
+          "wall_s_median": 1.1714787734672427,
+          "output_audio_s_median": 3.08
+        }
+      },
+      "protocol_requests": 37,
+      "semantic_counts": {
+        "no_image_unsupported": 8,
+        "no_image_total": 8,
+        "image_text_supported": 8,
+        "image_audio_supported": 8,
+        "generic_coarse_description_supported": 8,
+        "ordinary_questions_answered": 2,
+        "history_only_image_supported": 1
+      },
+      "annotations": [
+        {
+          "trial_index": 1,
+          "text_sha256": "af4429a7d333322dd438f927d49312785f2eb7700d9e113d66080c2990fe6a2a",
+          "label": "unsupported_visual_assertion"
+        },
+        {
+          "trial_index": 2,
+          "text_sha256": "98127ab0f6e900b74ed427f37e847c5530b6f3c1f7aeb5f5ea2dd57e9ba1b066",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 3,
+          "text_sha256": "afb8c1a2432851ecfd083f8b0408a529b02ea9535ff71f9bbdacaf23cd38c302",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 4,
+          "text_sha256": "5c7e0fe7da4e822b67de4657f2819e6d518df857aa123d46faff1ebc3b321fd5",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 5,
+          "text_sha256": "6f7c1bc19dc414f4b821647f0674d8425d5cc0bcb96ab01b694fd4e11f909160",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 6,
+          "text_sha256": "7b44c581686ca9b35b8b846468960bf5e03a5133f799b73df4a65a2103fa5ff6",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 7,
+          "text_sha256": "48fb129988fd1fe3ab9284d1d192b7f365efdcd206ab1d103d0f379946e44bc5",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 8,
+          "text_sha256": "228d7d7ccd6acdde7fe8943d104802ab05f22ab81da2a346c4dd5d039fa05563",
+          "label": "unsupported_visual_assertion"
+        },
+        {
+          "trial_index": 9,
+          "text_sha256": "534485092d9b6a532e13848a94b1dd1dc8ecb2b7e46fc5591aa06e3414da403f",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 10,
+          "text_sha256": "afb8c1a2432851ecfd083f8b0408a529b02ea9535ff71f9bbdacaf23cd38c302",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 11,
+          "text_sha256": "afb8c1a2432851ecfd083f8b0408a529b02ea9535ff71f9bbdacaf23cd38c302",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 12,
+          "text_sha256": "41bdb2312111f22a391e130959a6597ce34fcb42756da58e36fe21c7297af38d",
+          "label": "unsupported_visual_assertion"
+        },
+        {
+          "trial_index": 13,
+          "text_sha256": "86a8979762735344cb6eb7764e2e73b2051c652a02b17e121262372c845471db",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 14,
+          "text_sha256": "7fe955f524d7927ae36368cc9b16cb5c055a5332741b1ce53548da67cd444670",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 15,
+          "text_sha256": "f80986ab6f09d624c1774575e66dff06b549634444d97a8cc20a7ef0e5bad632",
+          "label": "unsupported_visual_assertion"
+        },
+        {
+          "trial_index": 16,
+          "text_sha256": "7e500f1cb6544acc74be7572ff1581d35d55f5ff39ec4899b960df7e70118aeb",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 17,
+          "text_sha256": "e780d917f5ad4e695847779d23e54a61c3ba70fdd1a3d49e9916943833454586",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 18,
+          "text_sha256": "afb8c1a2432851ecfd083f8b0408a529b02ea9535ff71f9bbdacaf23cd38c302",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 19,
+          "text_sha256": "95632104ba34da30179eca96416afd41f11832d0cdc50480e0c4a15c23a763f4",
+          "label": "unsupported_visual_assertion"
+        },
+        {
+          "trial_index": 20,
+          "text_sha256": "eadb54a92a692fbb54b7209cc53f8b6c4ed3e1d9772ed77b956ff6a17c5f523b",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 21,
+          "text_sha256": "dd43408bfa8303e0af083484159cc6ad628038f567aa4f8efa62e7155947d570",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 22,
+          "text_sha256": "43f685a5bb53f61fadce56549d8dca0138173a71a04a75fda99c2d30bddf5679",
+          "label": "unsupported_visual_assertion"
+        },
+        {
+          "trial_index": 23,
+          "text_sha256": "13e46b44b03bc139e02b93902e240171fd36c243575e66705627a60031ec1bf2",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 24,
+          "text_sha256": "86a8979762735344cb6eb7764e2e73b2051c652a02b17e121262372c845471db",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 25,
+          "text_sha256": "98c0a1ec8fc0d5e36a481515e166b5e246a9885f6838b515bbd15dda3b0b26c9",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 26,
+          "text_sha256": "15b70be106686a8c389769e2bf9ca65cdf72a13faa13b140435fbc21ce73dc08",
+          "label": "unsupported_visual_assertion"
+        },
+        {
+          "trial_index": 27,
+          "text_sha256": "f1a9e6fab31d86f2d54689a40c6b139c00a9621a9f37e9a464078211c1bc6400",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 28,
+          "text_sha256": "6a90599d16eee97f81ab2a63fe05d5ee05bcacf83f914b1f65415cc40e12befc",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 29,
+          "text_sha256": "7a88e89ea7829cd78a138350f08b59ed007374534e582c006d65d97abee983d9",
+          "label": "unsupported_visual_assertion"
+        },
+        {
+          "trial_index": 30,
+          "text_sha256": "7cdb677e95ed4822f3aa0635646490621bd160a4324426dfbc723d0a6a5a8b4a",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 31,
+          "text_sha256": "7b44c581686ca9b35b8b846468960bf5e03a5133f799b73df4a65a2103fa5ff6",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 32,
+          "text_sha256": "7fe955f524d7927ae36368cc9b16cb5c055a5332741b1ce53548da67cd444670",
+          "label": "left_color_shape_supported"
+        }
+      ],
+      "trials": [
+        {
+          "index": 0,
+          "phase": "warmup",
+          "round": -1,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是红色的圆形。",
+          "output_samples": 75840,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 1.5171783110126853,
+          "first_audio_s": 1.748942183330655,
+          "pcm_sha256": "f9060987833112d1e5478e5ac88fb84a43b7f005f1860c1bd18d94d6dbdb20c8",
+          "wall_s": 1.993057225830853
+        },
+        {
+          "index": 1,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-01",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是黄色的，形状像一个圆柱体。",
+          "output_samples": 114240,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6755286334082484,
+          "first_audio_s": 1.086226049810648,
+          "pcm_sha256": "baf6e46f202cf4b29ea09736e5b005490a661053f9e9f82658ffa95a24106a1e",
+          "wall_s": 1.658302946947515
+        },
+        {
+          "index": 2,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-01",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个图形，左边是一个红色的圆形，右边是一个蓝色的方形。",
+          "output_samples": 166080,
+          "request_content_sha256": "04065eb71b4cf29ec2e58e6cef19b694408f4ab578bb67870cb9d43a6769b7f5",
+          "first_text_s": 0.6162952519953251,
+          "first_audio_s": 0.8499666592106223,
+          "pcm_sha256": "ab03c98214ace5a74f75350fc908f4c77245c5c49c5ddd8b7eb7c8c485da2503",
+          "wall_s": 2.052057077176869
+        },
+        {
+          "index": 3,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是红色的圆形。",
+          "output_samples": 55680,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 0.8605692572891712,
+          "first_audio_s": 0.8646295676007867,
+          "pcm_sha256": "dd1a0a9717aa46dc8d1975fc8212e5f51802cb32a91b389cad636e79dfe19538",
+          "wall_s": 0.9357854472473264
+        },
+        {
+          "index": 4,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-01",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边是一个红色的圆形。",
+          "output_samples": 61440,
+          "request_content_sha256": "777164cbc0f616944040e386c19ce4f8b04c29edf404b38c27ecbb86b782bd3d",
+          "first_text_s": 0.6342342477291822,
+          "first_audio_s": 0.8765387907624245,
+          "pcm_sha256": "724112e9c8c12e2eaf477c8bc6f694c17aae4e025eb9ab010956c2eb3d9a16d7",
+          "wall_s": 1.0243765208870173
+        },
+        {
+          "index": 5,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-02",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有一个绿色的圆和一个蓝色的方块。",
+          "output_samples": 101760,
+          "request_content_sha256": "4c2173959f61d6accf6f9c0d2d55f675615c2ec6fe04b4de6d93d256646851ee",
+          "first_text_s": 0.6644560480490327,
+          "first_audio_s": 0.8682138035073876,
+          "pcm_sha256": "97a87412ee968eadfb708313d9da5c0516c7f30b7b845c71d9bb6729c7b1f53c",
+          "wall_s": 1.4374533519148827
+        },
+        {
+          "index": 6,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-02",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体是绿色的圆形。",
+          "output_samples": 77760,
+          "request_content_sha256": "e5dc28b261b2c56e005346a11cd87f62546d51ae9d7aad125c002de52af89e2a",
+          "first_text_s": 0.6306931227445602,
+          "first_audio_s": 0.827928813174367,
+          "pcm_sha256": "238b54311d59e73a9e6c630ae0fc809f601a377f186e4644ffa03a7ca812e602",
+          "wall_s": 1.0658664898946881
+        },
+        {
+          "index": 7,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-02",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边是一个绿色的圆形。",
+          "output_samples": 56640,
+          "request_content_sha256": "9e57f21ebac4a3c5e59d9e90da2f6b3a7a0799b64945262c302bf1c5b4275c8b",
+          "first_text_s": 0.6156148426234722,
+          "first_audio_s": 0.8432173542678356,
+          "pcm_sha256": "79baea0bd8aa001a39ad79658d39d98fdd053367f946f9fd0ec72c4c99f2ebc4",
+          "wall_s": 0.9676070744171739
+        },
+        {
+          "index": 8,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-02",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是蓝色的，形状像一个长方形。",
+          "output_samples": 108480,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6781719727441669,
+          "first_audio_s": 1.0418281015008688,
+          "pcm_sha256": "0836782c6a8400c2dbcf19944505e05b1d94ffee96d1cf87aefa73837c41e9b0",
+          "wall_s": 1.6007898868992925
+        },
+        {
+          "index": 9,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-01",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有一个红色的圆形，和一个蓝色的方形。",
+          "output_samples": 106560,
+          "request_content_sha256": "04065eb71b4cf29ec2e58e6cef19b694408f4ab578bb67870cb9d43a6769b7f5",
+          "first_text_s": 0.6195472022518516,
+          "first_audio_s": 0.8532500900328159,
+          "pcm_sha256": "1dca7ea32676a8824d92105e194108e9975eeb33b26e3871f8a2f9a0825ab08a",
+          "wall_s": 1.488153027370572
+        },
+        {
+          "index": 10,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是红色的圆形。",
+          "output_samples": 68160,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 0.5878270203247666,
+          "first_audio_s": 0.8219479145482183,
+          "pcm_sha256": "692d896ba54aaed0ec80a821879410331cd2fd070f53ac96e5ef5f1318eb8214",
+          "wall_s": 1.0073249321430922
+        },
+        {
+          "index": 11,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-01",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是红色的圆形。",
+          "output_samples": 81600,
+          "request_content_sha256": "777164cbc0f616944040e386c19ce4f8b04c29edf404b38c27ecbb86b782bd3d",
+          "first_text_s": 0.6863256338983774,
+          "first_audio_s": 0.9155472759157419,
+          "pcm_sha256": "697fbb0aed1016807d99868e2842e9dea33522ceeaa024796e9d6beebae1e7c2",
+          "wall_s": 1.3404217278584838
+        },
+        {
+          "index": 12,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-01",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边那个物体是圆形的，颜色是红色。",
+          "output_samples": 108480,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.7163565149530768,
+          "first_audio_s": 0.9210751187056303,
+          "pcm_sha256": "678acf9527f9acf847a1f71fac7fe84ee350c6a936d5b706dae7f1faab22e3a5",
+          "wall_s": 1.5008464576676488
+        },
+        {
+          "index": 13,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-02",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边物体是绿色的圆形。",
+          "output_samples": 61440,
+          "request_content_sha256": "e5dc28b261b2c56e005346a11cd87f62546d51ae9d7aad125c002de52af89e2a",
+          "first_text_s": 0.5614042459055781,
+          "first_audio_s": 0.9562465054914355,
+          "pcm_sha256": "7d7e742e8a69ceff310dcc729132d4c8a76e1a3d036cbe38ffdd1b22595b487f",
+          "wall_s": 0.9703893484547734
+        },
+        {
+          "index": 14,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-02",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是绿色的圆形。",
+          "output_samples": 74880,
+          "request_content_sha256": "9e57f21ebac4a3c5e59d9e90da2f6b3a7a0799b64945262c302bf1c5b4275c8b",
+          "first_text_s": 0.6889289673417807,
+          "first_audio_s": 0.921595761552453,
+          "pcm_sha256": "0c5a15ea46ce2e70927c2e86fbaaed5b59e48811443ffa0d2217365c9dddc052",
+          "wall_s": 1.1506646797060966
+        },
+        {
+          "index": 15,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-02",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边物体是黄色的，呈长方体形状。",
+          "output_samples": 85440,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.7759583098813891,
+          "first_audio_s": 0.9695764677599072,
+          "pcm_sha256": "be5d3029320d83dfa74bb9f53c5d68f49b3483ed39a8560d1132d8af6b2a8de3",
+          "wall_s": 1.32744858879596
+        },
+        {
+          "index": 16,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-02",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面左侧有一个绿色的圆形，右侧有一个蓝色的正方形。",
+          "output_samples": 142080,
+          "request_content_sha256": "4c2173959f61d6accf6f9c0d2d55f675615c2ec6fe04b4de6d93d256646851ee",
+          "first_text_s": 0.632696783170104,
+          "first_audio_s": 0.8677747212350368,
+          "pcm_sha256": "6f3f64a98ace0f78050d59af6edd13d4c662f8a8ab2954c7bcf3030e40beb94e",
+          "wall_s": 1.798054601997137
+        },
+        {
+          "index": 17,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体是红色的圆形。",
+          "output_samples": 79680,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 0.7210916308686137,
+          "first_audio_s": 0.8475786000490189,
+          "pcm_sha256": "82f0f28c21535fd3ceaec0490ba7ba0c8eae39f957ce214595ffb83704b10246",
+          "wall_s": 1.1749829109758139
+        },
+        {
+          "index": 18,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-01",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是红色的圆形。",
+          "output_samples": 69120,
+          "request_content_sha256": "777164cbc0f616944040e386c19ce4f8b04c29edf404b38c27ecbb86b782bd3d",
+          "first_text_s": 0.6827389216050506,
+          "first_audio_s": 1.0810140632092953,
+          "pcm_sha256": "f061f33f4748de6bbb1b315379acacbe56674790dae2bbc7985354f90e4f2bda",
+          "wall_s": 1.1244160141795874
+        },
+        {
+          "index": 19,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-01",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边那个是黄色的，形状像一个长方体。",
+          "output_samples": 112320,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6730371555313468,
+          "first_audio_s": 0.941557576879859,
+          "pcm_sha256": "55602168d8be8995b9b10941fe51dba82c999f2a83e480dee9afce7dc09f1c8f",
+          "wall_s": 1.5363559015095234
+        },
+        {
+          "index": 20,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-01",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面左侧是一个红色圆形，右侧是一个蓝色方形。",
+          "output_samples": 110400,
+          "request_content_sha256": "04065eb71b4cf29ec2e58e6cef19b694408f4ab578bb67870cb9d43a6769b7f5",
+          "first_text_s": 0.6359528200700879,
+          "first_audio_s": 0.9203194249421358,
+          "pcm_sha256": "1e7d694f221fef324d2804296764131406ec6ddbfecf15d6da7d94352e1e73f9",
+          "wall_s": 1.481410269625485
+        },
+        {
+          "index": 21,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-02",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是一个绿色的圆形。",
+          "output_samples": 79680,
+          "request_content_sha256": "9e57f21ebac4a3c5e59d9e90da2f6b3a7a0799b64945262c302bf1c5b4275c8b",
+          "first_text_s": 0.6540133208036423,
+          "first_audio_s": 0.9199497643858194,
+          "pcm_sha256": "4d9d9c1152b4e27559205f09b6ae049dfd61dc9d63a577264cef9f7a7c600230",
+          "wall_s": 1.2241642884910107
+        },
+        {
+          "index": 22,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-02",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边物体是蓝色的，形状像一个长方体。",
+          "output_samples": 106560,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6807860750705004,
+          "first_audio_s": 0.9102208008989692,
+          "pcm_sha256": "c9eec2a41a76c9c5389313189004ea9c6f10acc2747e855cb9e993334d30f710",
+          "wall_s": 1.5379376076161861
+        },
+        {
+          "index": 23,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-02",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个几何图形，左边是一个绿色的圆形，右边是一个蓝色的正方形。",
+          "output_samples": 179520,
+          "request_content_sha256": "4c2173959f61d6accf6f9c0d2d55f675615c2ec6fe04b4de6d93d256646851ee",
+          "first_text_s": 0.6262260675430298,
+          "first_audio_s": 0.85740299616009,
+          "pcm_sha256": "0aa89bef829a0820a2b90caa3381187882b95646f4ddbffb20c9934ee2cbfdb5",
+          "wall_s": 2.252805915661156
+        },
+        {
+          "index": 24,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-02",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边物体是绿色的圆形。",
+          "output_samples": 73920,
+          "request_content_sha256": "e5dc28b261b2c56e005346a11cd87f62546d51ae9d7aad125c002de52af89e2a",
+          "first_text_s": 0.5597695661708713,
+          "first_audio_s": 0.7890613796189427,
+          "pcm_sha256": "591e1ac994c33340fb2d6a7c8579164d785afcaa6fd448376deda9c94974d802",
+          "wall_s": 1.0143276480957866
+        },
+        {
+          "index": 25,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-01",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是一个红色的圆形。",
+          "output_samples": 84480,
+          "request_content_sha256": "777164cbc0f616944040e386c19ce4f8b04c29edf404b38c27ecbb86b782bd3d",
+          "first_text_s": 0.725529870018363,
+          "first_audio_s": 0.9236746355891228,
+          "pcm_sha256": "11f64026fb0afe32819363d04f855d2eb91b9f3aa3a0fb2edf3a3713fbd88fa5",
+          "wall_s": 1.2461713189259171
+        },
+        {
+          "index": 26,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-01",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边那个物体是蓝色的，形状像个圆柱体。",
+          "output_samples": 80640,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.7121003000065684,
+          "first_audio_s": 1.0074421539902687,
+          "pcm_sha256": "a78d67846d8ba5db934237b9bdf14d5807f92eaf0fb74351f2dfc396585a57f5",
+          "wall_s": 1.2995687341317534
+        },
+        {
+          "index": 27,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-01",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面左侧是一个红色的圆形，右侧是一个蓝色的正方形。",
+          "output_samples": 138240,
+          "request_content_sha256": "04065eb71b4cf29ec2e58e6cef19b694408f4ab578bb67870cb9d43a6769b7f5",
+          "first_text_s": 0.6329538496211171,
+          "first_audio_s": 0.8744210889562964,
+          "pcm_sha256": "597e14d81e4be2b758180b4a155f6315446baec3041021adfbb512da4ff72e1a",
+          "wall_s": 1.858904897235334
+        },
+        {
+          "index": 28,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是红色的圆形。",
+          "output_samples": 76800,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 0.6965252449735999,
+          "first_audio_s": 0.871552187949419,
+          "pcm_sha256": "8c0982c10069bd66adb287af41491611dfa2fbb6a28e3dc04af816d850b18a06",
+          "wall_s": 1.1209749430418015
+        },
+        {
+          "index": 29,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-02",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体是红色的，呈圆形。",
+          "output_samples": 90240,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6742471158504486,
+          "first_audio_s": 0.9069092692807317,
+          "pcm_sha256": "1b88005b8efd74bd5957ad2b25f681367c412bebc3c1bbe5cd6117c9ebef3d56",
+          "wall_s": 1.3207368683069944
+        },
+        {
+          "index": 30,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-02",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个几何图形，左侧是绿色的圆形，右侧是蓝色的正方形。",
+          "output_samples": 164160,
+          "request_content_sha256": "4c2173959f61d6accf6f9c0d2d55f675615c2ec6fe04b4de6d93d256646851ee",
+          "first_text_s": 0.6323775239288807,
+          "first_audio_s": 0.8529346697032452,
+          "pcm_sha256": "73340cec5b8e617103b33b4f07369922eb204f90b5591d00f2b24a7ee73c206f",
+          "wall_s": 2.1603774754330516
+        },
+        {
+          "index": 31,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-02",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体是绿色的圆形。",
+          "output_samples": 73920,
+          "request_content_sha256": "e5dc28b261b2c56e005346a11cd87f62546d51ae9d7aad125c002de52af89e2a",
+          "first_text_s": 0.7235933169722557,
+          "first_audio_s": 0.838944548740983,
+          "pcm_sha256": "f82d7f69f6d8e6d0e756978b7908314048e0ffb1e83235013393288c65b1082d",
+          "wall_s": 1.0588537734001875
+        },
+        {
+          "index": 32,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-02",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是绿色的圆形。",
+          "output_samples": 72960,
+          "request_content_sha256": "9e57f21ebac4a3c5e59d9e90da2f6b3a7a0799b64945262c302bf1c5b4275c8b",
+          "first_text_s": 0.6665846426039934,
+          "first_audio_s": 0.888450225815177,
+          "pcm_sha256": "37c097743ac01b4960cd636d1a14be29c7db02db3e2474e79f162880b307dc2d",
+          "wall_s": 1.1922928672283888
+        }
+      ],
+      "controls": {
+        "status": "passed",
+        "policy": "baseline",
+        "trials": [
+          {
+            "name": "ordinary-math",
+            "status": "passed",
+            "messages_metadata": [
+              {
+                "role": "user",
+                "text": "只说一加一的结果。"
+              }
+            ],
+            "request_sha256": "0e711424963cf78147485a84dae72d1624342eba777016fd75f62d548900e257",
+            "text": "二。",
+            "first_audio_s": 0.4002973735332489,
+            "wall_s": 0.4003213830292225,
+            "audio_samples": 23040,
+            "pcm_sha256": "9178ab48a099fd8362a98b003da516f6a76064f22ded60da61652c5fa4cd2e52"
+          },
+          {
+            "name": "ordinary-definition",
+            "status": "passed",
+            "messages_metadata": [
+              {
+                "role": "user",
+                "text": "用一句话解释什么是语音识别。"
+              }
+            ],
+            "request_sha256": "2d7c7a14cceaf5de97d3b95d914321697c01491c88048813c04d1c929d374eb8",
+            "text": "语音识别就是把人说的话转换成文字或者电脑能理解的指令。",
+            "first_audio_s": 0.8628024943172932,
+            "wall_s": 1.808442160487175,
+            "audio_samples": 146880,
+            "pcm_sha256": "1aa91c4c15708ebcb52ad471ec9c10c6aa5cc6bd42fa4554753b38a84d2a60e4"
+          },
+          {
+            "name": "history-ack",
+            "status": "passed",
+            "messages_metadata": [
+              {
+                "role": "user",
+                "text": "只说收到，不要描述图片。"
+              }
+            ],
+            "request_sha256": "733f0bb75e14eff3d2e7bb6f0eabd5d850004ce5daffea886cbb842422bbf5d0",
+            "text": "收到。",
+            "first_audio_s": 0.45640501845628023,
+            "wall_s": 0.46145457588136196,
+            "audio_samples": 25920,
+            "pcm_sha256": "e9ebc82239ff392a57dd97c708c019758e33261b6a923083771bddf3c9d6fefd"
+          },
+          {
+            "name": "history-only-image",
+            "status": "passed",
+            "messages_metadata": [
+              {
+                "role": "user",
+                "text": "只说收到，不要描述图片。"
+              },
+              {
+                "role": "assistant",
+                "text": "收到。"
+              },
+              {
+                "role": "user",
+                "text": "请说出前一张图左边物体的颜色和形状。"
+              }
+            ],
+            "request_sha256": "791271630e71b5f5430ddf85b8a84d463b845f6476a2f2330dcd86b0c874f114",
+            "text": "前一张图左边物体的颜色是红色，形状是圆形。",
+            "first_audio_s": 0.898185902275145,
+            "wall_s": 1.6352203721180558,
+            "audio_samples": 125760,
+            "pcm_sha256": "8b88a62487561a0ca9068d7a66080397fb50411d38b084c7f22afb36c658b29a"
+          }
+        ],
+        "history_ack_exact": true
+      },
+      "restoration_audit": {
+        "restored": true,
+        "ready": true,
+        "busy": false,
+        "candidate_alive": false,
+        "watchdog_alive": false,
+        "original_identity_matches": true
+      },
+      "remote_source_sha256": {
+        "visual_input.py": "c0524498c69668ac92553291c899393b3c82252eb720146b22daacd4656c0240",
+        "controller.py": "32839cff6728bd720cbe35ef0cb33a7b2d6453258c27ad14e1d9f9924653d4cf",
+        "worker.py": "4e529dd49223e3c174fed2b98d73ea89df9fba1296280009718776101f476608",
+        "visual_grounding.py": "ae9b11b055d36137f2ff26b0269f49333b699d96aa1577025bd9739d8c8a53a0"
+      },
+      "artifacts_sha256": {
+        "evaluation/results.json": "c23fe8aa55afe0a149a6c65eef6ceeb8b74cfed1450c83743f295d76c562433b",
+        "controls/results.json": "bfb72ef58910f429fe13730ecc3150c63b160d4090e0daf48876735521208c25",
+        "results.json": "8d1a8a3b7605937900fb90cc415a62d29ff8db6ad602ec7425d51b33accf6799",
+        "remote/results.json": "aabe11f5e8a1c64ef0143a4fb961dd0fa721857d4d6f0c642b3d2f9a4f498d17",
+        "remote/candidate.log": "3d59ce72673a853f9e029132417ccdf2f77148fe823abab33e109906abcbff32"
+      },
+      "manifest_sha256": "04108e93564c10802b7d9db3d17ef0f19dd08b7f58aa152332932b4b7b28d6e9",
+      "voice": "female",
+      "health_declared_policy": "baseline"
+    },
+    {
+      "policy": "general",
+      "prompt_characters_for_no_image": 197,
+      "summary": {
+        "audio_only": {
+          "attempted": 8,
+          "protocol_passed": 8,
+          "client_first_audio_s_median": 0.9182367543689907,
+          "wall_s_median": 2.014850177336484,
+          "output_audio_s_median": 6.46
+        },
+        "image_only": {
+          "attempted": 8,
+          "protocol_passed": 8,
+          "client_first_audio_s_median": 0.9158649016171694,
+          "wall_s_median": 1.8338203965686262,
+          "output_audio_s_median": 5.8
+        },
+        "image_text": {
+          "attempted": 8,
+          "protocol_passed": 8,
+          "client_first_audio_s_median": 0.852170237340033,
+          "wall_s_median": 1.1883043870329857,
+          "output_audio_s_median": 3.16
+        },
+        "image_audio": {
+          "attempted": 8,
+          "protocol_passed": 8,
+          "client_first_audio_s_median": 0.9338017515838146,
+          "wall_s_median": 1.1902419589459896,
+          "output_audio_s_median": 3.1
+        }
+      },
+      "protocol_requests": 37,
+      "semantic_counts": {
+        "no_image_unsupported": 0,
+        "no_image_total": 8,
+        "image_text_supported": 8,
+        "image_audio_supported": 8,
+        "generic_coarse_description_supported": 8,
+        "ordinary_questions_answered": 2,
+        "history_only_image_supported": 1
+      },
+      "annotations": [
+        {
+          "trial_index": 1,
+          "text_sha256": "78f6f65c3250ca50fe7cd40c7f35427a11f4b12d5015eee9c43a1f069ba40852",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 2,
+          "text_sha256": "f1a9e6fab31d86f2d54689a40c6b139c00a9621a9f37e9a464078211c1bc6400",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 3,
+          "text_sha256": "073a8a6913f5ff840b260e6c959d55dee7cb8563dd615fed4d8f562fea9e5638",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 4,
+          "text_sha256": "a5774c209981311658947b13b71f27faab49a540800b96c8e53c15d3a17b3e32",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 5,
+          "text_sha256": "976e234b7abb80bd8b05dfa00e42f628dbbb0d599e231652cd8b9a42ebfac185",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 6,
+          "text_sha256": "fcd1e535126de82dcaf60327996ead8c143d5156ff024ae62a611be47d054b54",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 7,
+          "text_sha256": "7fe955f524d7927ae36368cc9b16cb5c055a5332741b1ce53548da67cd444670",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 8,
+          "text_sha256": "8e4ba384007e1bc3276d1500f62f293b243c21c91a52f980fb04c8bda5b8e5d6",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 9,
+          "text_sha256": "0654010ac1c35c5920caaabc859af7dee8f655156596b91cf23553fde638b237",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 10,
+          "text_sha256": "a5774c209981311658947b13b71f27faab49a540800b96c8e53c15d3a17b3e32",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 11,
+          "text_sha256": "6a90599d16eee97f81ab2a63fe05d5ee05bcacf83f914b1f65415cc40e12befc",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 12,
+          "text_sha256": "f95c231aa21dc57752fe9e0d50ee039f2590a76a51978bcc2ad85c02a8c25f05",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 13,
+          "text_sha256": "56931b1d2e4433ed3cd2f67223d167562df2223fd2f74989e86fe3daaaa06210",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 14,
+          "text_sha256": "7fe955f524d7927ae36368cc9b16cb5c055a5332741b1ce53548da67cd444670",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 15,
+          "text_sha256": "b389467174471510b85c4685b03134dc4c573a972049e80c2460523c04e95ebc",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 16,
+          "text_sha256": "6a8e46395fc5d8bcc19de140b0f73011373eb47d65d67e385ab86af6aedfd16f",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 17,
+          "text_sha256": "afb8c1a2432851ecfd083f8b0408a529b02ea9535ff71f9bbdacaf23cd38c302",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 18,
+          "text_sha256": "94c534a8ba6539d038b48fabfe5ae7848174c094d5b536f629a6e0038a0d9e26",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 19,
+          "text_sha256": "f1919964fadb22bb23adeeadc5087aa8baf37326a67b7d18d0722651b46c5383",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 20,
+          "text_sha256": "787e999fce5bd688b1519b67adc6293179c10f8cef73051c050184f81df2374a",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 21,
+          "text_sha256": "7fe955f524d7927ae36368cc9b16cb5c055a5332741b1ce53548da67cd444670",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 22,
+          "text_sha256": "5aac4197b429970235a853d5e82fec4529277539b15807d3f1000e5d5d7537a9",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 23,
+          "text_sha256": "df198716f553c2348abc508ac602bc6fb7e3afbcd0c8917c585bdcdc1f4802f0",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 24,
+          "text_sha256": "7fe955f524d7927ae36368cc9b16cb5c055a5332741b1ce53548da67cd444670",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 25,
+          "text_sha256": "6a90599d16eee97f81ab2a63fe05d5ee05bcacf83f914b1f65415cc40e12befc",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 26,
+          "text_sha256": "fdd9719a1955c40b459e44b9e652c252d13147630e49a6a4932d047f503d424a",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 27,
+          "text_sha256": "978e322fcaf1c4b0dbde94fa8a01f3e8d2dcf41264ceb614ce6dcd17c14746ac",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 28,
+          "text_sha256": "afb8c1a2432851ecfd083f8b0408a529b02ea9535ff71f9bbdacaf23cd38c302",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 29,
+          "text_sha256": "9e9d989599a3603735763e1e97f625a984f8513a603938e876397ac63f828bc6",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 30,
+          "text_sha256": "739868b5f2de11b8b271708f64a92d84987a1ce7f8ea810bffede0cc0acdae7b",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 31,
+          "text_sha256": "198d45ef285d7a740bd742cf6ff5e80e072850f948298bcac209bd60ea7cf79d",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 32,
+          "text_sha256": "7fe955f524d7927ae36368cc9b16cb5c055a5332741b1ce53548da67cd444670",
+          "label": "left_color_shape_supported"
+        }
+      ],
+      "trials": [
+        {
+          "index": 0,
+          "phase": "warmup",
+          "round": -1,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体的颜色是红色，形状是圆形。",
+          "output_samples": 112320,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 1.5708606820553541,
+          "first_audio_s": 1.8563105780631304,
+          "pcm_sha256": "91b29d84bf9781db3ad1427019e6aa6c6731e594f5e826aed7dddb5944341a8a",
+          "wall_s": 2.443523459136486
+        },
+        {
+          "index": 1,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-01",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "目前没有收到画面，所以无法判断左边物体的颜色和形状。请您先提供图片或视频。",
+          "output_samples": 187200,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6886371485888958,
+          "first_audio_s": 0.9184738742187619,
+          "pcm_sha256": "29d67731891a349f34ae858e3828fc9b1a772f323db911d461f270f0e5eb2e16",
+          "wall_s": 2.390172657556832
+        },
+        {
+          "index": 2,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-01",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面左侧是一个红色的圆形，右侧是一个蓝色的正方形。",
+          "output_samples": 110400,
+          "request_content_sha256": "04065eb71b4cf29ec2e58e6cef19b694408f4ab578bb67870cb9d43a6769b7f5",
+          "first_text_s": 0.6327728154137731,
+          "first_audio_s": 0.9602822931483388,
+          "pcm_sha256": "ecdeb2cbf6f4ea9a85cc0ec2221956cd4b61d356337e3be8e8c44479997f415f",
+          "wall_s": 1.5326103065162897
+        },
+        {
+          "index": 3,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体的颜色是红色，形状是圆形。",
+          "output_samples": 106560,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 0.6338022630661726,
+          "first_audio_s": 0.8664798708632588,
+          "pcm_sha256": "20d6d0c0111edaa2bc3eb4bb3c18d5a27060b11f308a7acc52cd3eb5db770e8d",
+          "wall_s": 1.545159480534494
+        },
+        {
+          "index": 4,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-01",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是一个红色的圆形。",
+          "output_samples": 87360,
+          "request_content_sha256": "777164cbc0f616944040e386c19ce4f8b04c29edf404b38c27ecbb86b782bd3d",
+          "first_text_s": 0.7646636674180627,
+          "first_audio_s": 1.0554303349927068,
+          "pcm_sha256": "3e5870793728cab8a2e5ea7cf750dfcc1fb503da06ae6361960d1d4072961e13",
+          "wall_s": 1.4511947548016906
+        },
+        {
+          "index": 5,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-02",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个几何图形，左侧是一个绿色的圆形，右侧是一个蓝色的正方形。",
+          "output_samples": 182400,
+          "request_content_sha256": "4c2173959f61d6accf6f9c0d2d55f675615c2ec6fe04b4de6d93d256646851ee",
+          "first_text_s": 0.6324804164469242,
+          "first_audio_s": 0.8606344666332006,
+          "pcm_sha256": "578f495839e16b6972ec2658fd7fc848d7ad688ceeeff57cf767cbc608fd4e15",
+          "wall_s": 2.2682446781545877
+        },
+        {
+          "index": 6,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-02",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边物体是绿色的，形状是圆形。",
+          "output_samples": 80640,
+          "request_content_sha256": "e5dc28b261b2c56e005346a11cd87f62546d51ae9d7aad125c002de52af89e2a",
+          "first_text_s": 0.717139795422554,
+          "first_audio_s": 0.844855610281229,
+          "pcm_sha256": "c494c494a5e94a591d355945d87a1c488ecc4275d4376bf3e7f13d8ccbb24612",
+          "wall_s": 1.1824508113786578
+        },
+        {
+          "index": 7,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-02",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是绿色的圆形。",
+          "output_samples": 72960,
+          "request_content_sha256": "9e57f21ebac4a3c5e59d9e90da2f6b3a7a0799b64945262c302bf1c5b4275c8b",
+          "first_text_s": 0.6803745180368423,
+          "first_audio_s": 0.9053356638178229,
+          "pcm_sha256": "421dc7dfd40aab2ed43639a0757c3108ab066d2c4ee218369150ce1bc34e3b2b",
+          "wall_s": 1.374542617239058
+        },
+        {
+          "index": 8,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-02",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "抱歉，我目前没有看到任何画面，所以无法判断图中左边物体的颜色和形状。请您先提供图片或描述一下画面内容，我才能继续回答您的问题。",
+          "output_samples": 301440,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6952223815023899,
+          "first_audio_s": 0.9200824126601219,
+          "pcm_sha256": "88d2e1fd9f38ba6e3cee3ba5a5eceed904c0cde47e18be1ed6a2f45c63e9f420",
+          "wall_s": 3.7666052570566535
+        },
+        {
+          "index": 9,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-01",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个形状，左边是一个红色的圆形，右边是一个蓝色的正方形。",
+          "output_samples": 184320,
+          "request_content_sha256": "04065eb71b4cf29ec2e58e6cef19b694408f4ab578bb67870cb9d43a6769b7f5",
+          "first_text_s": 0.6329231048002839,
+          "first_audio_s": 0.8625795310363173,
+          "pcm_sha256": "9d6de73fe7742dc06493c2cc3b5991e5f19c591b15ef8709f364c820db4485df",
+          "wall_s": 2.276170752942562
+        },
+        {
+          "index": 10,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是一个红色的圆形。",
+          "output_samples": 72960,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 0.6351772118359804,
+          "first_audio_s": 0.8594848643988371,
+          "pcm_sha256": "247027447bdf0ae3a45e4a44dfdc1fe0206ead9c900b1717493074663830fe46",
+          "wall_s": 1.2380561782047153
+        },
+        {
+          "index": 11,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-01",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是红色的圆形。",
+          "output_samples": 79680,
+          "request_content_sha256": "777164cbc0f616944040e386c19ce4f8b04c29edf404b38c27ecbb86b782bd3d",
+          "first_text_s": 0.809523418545723,
+          "first_audio_s": 0.9586172364652157,
+          "pcm_sha256": "b188bdd1089d59c1caced4b3425394c8e935538d0601d6a729532d04eed39a4d",
+          "wall_s": 1.2743394738063216
+        },
+        {
+          "index": 12,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-01",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "我看不到图，所以没法告诉你左边物体的颜色和形状。",
+          "output_samples": 118080,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6812568567693233,
+          "first_audio_s": 0.9117022287100554,
+          "pcm_sha256": "d70ffe933fb677a29e50234e852e04be4a19f61df980cd47b462360f38c132df",
+          "wall_s": 1.5839722836390138
+        },
+        {
+          "index": 13,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-02",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是一个绿色的圆形。",
+          "output_samples": 78720,
+          "request_content_sha256": "e5dc28b261b2c56e005346a11cd87f62546d51ae9d7aad125c002de52af89e2a",
+          "first_text_s": 0.6402085795998573,
+          "first_audio_s": 0.9134869817644358,
+          "pcm_sha256": "a3dcb38e3788cc2dfa957c31ac467aed6d2b4e4f01349549b7b44596547af474",
+          "wall_s": 1.1941579626873136
+        },
+        {
+          "index": 14,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-02",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是绿色的圆形。",
+          "output_samples": 72000,
+          "request_content_sha256": "9e57f21ebac4a3c5e59d9e90da2f6b3a7a0799b64945262c302bf1c5b4275c8b",
+          "first_text_s": 0.7413355614989996,
+          "first_audio_s": 0.9044407019391656,
+          "pcm_sha256": "4d60eaf707f0ace95ed952534e99eeac8f53472e183dbf6f46ec4de16ea037ad",
+          "wall_s": 1.0893926275894046
+        },
+        {
+          "index": 15,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-02",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "目前还没有收到画面。请您提供图片或视频，我会根据实际内容为您描述左边物体的颜色和形状。",
+          "output_samples": 211200,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.688833475112915,
+          "first_audio_s": 0.9154228866100311,
+          "pcm_sha256": "17fb33735ecc813f32c22a8dda910085ff2d3bd13866b19f8926615d83f7f856",
+          "wall_s": 2.6396851958706975
+        },
+        {
+          "index": 16,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-02",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个图形，左边是一个绿色的圆形，右边是一个蓝色的正方形。",
+          "output_samples": 181440,
+          "request_content_sha256": "4c2173959f61d6accf6f9c0d2d55f675615c2ec6fe04b4de6d93d256646851ee",
+          "first_text_s": 0.6507890271022916,
+          "first_audio_s": 0.8887909520417452,
+          "pcm_sha256": "e5bbce79f61d9904c87eef0af6edb39cf43f8d9837e30cc0618180e6f8d353aa",
+          "wall_s": 2.241043046116829
+        },
+        {
+          "index": 17,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是红色的圆形。",
+          "output_samples": 72000,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 0.5937671242281795,
+          "first_audio_s": 0.827756148763001,
+          "pcm_sha256": "e22ae4d629f8c2aa283667240233f629b3ad174474659d0cb66203a29b2fd7ee",
+          "wall_s": 1.0196355730295181
+        },
+        {
+          "index": 18,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-01",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边物体是红色的圆形。",
+          "output_samples": 65280,
+          "request_content_sha256": "777164cbc0f616944040e386c19ce4f8b04c29edf404b38c27ecbb86b782bd3d",
+          "first_text_s": 0.6660767681896687,
+          "first_audio_s": 0.89364527259022,
+          "pcm_sha256": "f1deb2e4a2642c8a90872d42d75d9e816ca0efc1f3a298f30717364c317803fb",
+          "wall_s": 1.0482514724135399
+        },
+        {
+          "index": 19,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-01",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "还没收到图片呢，您得先发给我呀。",
+          "output_samples": 75840,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6747150272130966,
+          "first_audio_s": 0.958995777182281,
+          "pcm_sha256": "441bbb1174768323980268466b2edf1dd07f86a0ee64fe66a488bece2b376c79",
+          "wall_s": 1.1840339666232467
+        },
+        {
+          "index": 20,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-01",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左侧是一个红色的圆形，右侧是一个蓝色的方形。",
+          "output_samples": 112320,
+          "request_content_sha256": "04065eb71b4cf29ec2e58e6cef19b694408f4ab578bb67870cb9d43a6769b7f5",
+          "first_text_s": 0.6327551584690809,
+          "first_audio_s": 1.0946109257638454,
+          "pcm_sha256": "f3dcf765326fd7114a16d2288346a017e2271ba98c70e40572e17c11d2b21aa8",
+          "wall_s": 1.4801922542974353
+        },
+        {
+          "index": 21,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-02",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是绿色的圆形。",
+          "output_samples": 74880,
+          "request_content_sha256": "9e57f21ebac4a3c5e59d9e90da2f6b3a7a0799b64945262c302bf1c5b4275c8b",
+          "first_text_s": 0.762480953708291,
+          "first_audio_s": 0.9089862667024136,
+          "pcm_sha256": "55db6e7ec80d4f5166060270dca7b3475406ebd555c9f36c4af3b6afa6b64bcf",
+          "wall_s": 1.1767854187637568
+        },
+        {
+          "index": 22,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-02",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "我看不到图，所以无法描述其中左边物体的颜色和形状。",
+          "output_samples": 122880,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6830520331859589,
+          "first_audio_s": 0.9179996345192194,
+          "pcm_sha256": "4201de41cb77908acf93fa27ae4b16f0f1e93bccba177188b393fac84ba60bfb",
+          "wall_s": 1.6395276971161366
+        },
+        {
+          "index": 23,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-02",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个形状，左边是一个绿色的圆形，右边是一个蓝色的正方形。",
+          "output_samples": 163200,
+          "request_content_sha256": "4c2173959f61d6accf6f9c0d2d55f675615c2ec6fe04b4de6d93d256646851ee",
+          "first_text_s": 0.7088882923126221,
+          "first_audio_s": 0.908497478812933,
+          "pcm_sha256": "f112a34b83caa2e0908a9f8bf437b18a6d525a49f60d1b9e3b99997b298239fe",
+          "wall_s": 2.027877268381417
+        },
+        {
+          "index": 24,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-02",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是绿色的圆形。",
+          "output_samples": 62400,
+          "request_content_sha256": "e5dc28b261b2c56e005346a11cd87f62546d51ae9d7aad125c002de52af89e2a",
+          "first_text_s": 0.6295782206580043,
+          "first_audio_s": 0.8242227463051677,
+          "pcm_sha256": "29950aa414a93f7322584f05aacc717223c659a9b73d103d7b76980280d624d9",
+          "wall_s": 0.9703758750110865
+        },
+        {
+          "index": 25,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-01",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是红色的圆形。",
+          "output_samples": 74880,
+          "request_content_sha256": "777164cbc0f616944040e386c19ce4f8b04c29edf404b38c27ecbb86b782bd3d",
+          "first_text_s": 0.7482403051108122,
+          "first_audio_s": 0.9801586084067822,
+          "pcm_sha256": "7fea60d32ddbb4cfe52d41d28300d6f4cd82d58c438ff9795b693ff8f0a6124c",
+          "wall_s": 1.2036984991282225
+        },
+        {
+          "index": 26,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-01",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "目前还没收到图片，不知道具体是什么。请您先上传图片，我才能回答您关于颜色和形状的问题。",
+          "output_samples": 204480,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.7398428739979863,
+          "first_audio_s": 1.0037731099873781,
+          "pcm_sha256": "b135d6a33a67483528b2de36a125dae6d7014612f465ed647c3457092e39a15f",
+          "wall_s": 2.6433202335610986
+        },
+        {
+          "index": 27,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-01",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面里有一个红色的圆形和一个蓝色的正方形。",
+          "output_samples": 101760,
+          "request_content_sha256": "04065eb71b4cf29ec2e58e6cef19b694408f4ab578bb67870cb9d43a6769b7f5",
+          "first_text_s": 0.6196168875321746,
+          "first_audio_s": 1.0970362992957234,
+          "pcm_sha256": "6b48b48a3f42942d7f372c6bf70ca36cd02d03e736063e71c28a4d1d0e7c37fb",
+          "wall_s": 1.3553524920716882
+        },
+        {
+          "index": 28,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是红色的圆形。",
+          "output_samples": 62400,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 0.7435004273429513,
+          "first_audio_s": 0.811226068995893,
+          "pcm_sha256": "f49842a4dea5c95d09c0173153ddcd64869ddff84d50718bbedf48e842914602",
+          "wall_s": 0.9601724212989211
+        },
+        {
+          "index": 29,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-02",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "我目前看不到图，不知道左边物体的颜色和形状。",
+          "output_samples": 116160,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6785276886075735,
+          "first_audio_s": 0.8954428629949689,
+          "pcm_sha256": "5a887462bd2a2e17723eb925ed43eb84cc080a0df847e399f2f1c72e80be958d",
+          "wall_s": 1.562876489944756
+        },
+        {
+          "index": 30,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-02",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有一个绿色的圆形和一个蓝色的正方形。",
+          "output_samples": 115200,
+          "request_content_sha256": "4c2173959f61d6accf6f9c0d2d55f675615c2ec6fe04b4de6d93d256646851ee",
+          "first_text_s": 0.6349358214065433,
+          "first_audio_s": 0.9232323244214058,
+          "pcm_sha256": "120d13ea2a3854ed31e92a200bb6bb165ce6e99360dbc5d37cf72ebaade1144f",
+          "wall_s": 1.6397635247558355
+        },
+        {
+          "index": 31,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-02",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体的颜色是绿色，形状是圆形。",
+          "output_samples": 106560,
+          "request_content_sha256": "e5dc28b261b2c56e005346a11cd87f62546d51ae9d7aad125c002de52af89e2a",
+          "first_text_s": 0.6205741362646222,
+          "first_audio_s": 0.9276357209309936,
+          "pcm_sha256": "b193e7e8953dd045bdd8feddbcc22dce11db244829b569e4c96feaf98c81fd31",
+          "wall_s": 1.4486981332302094
+        },
+        {
+          "index": 32,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-02",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是绿色的圆形。",
+          "output_samples": 73920,
+          "request_content_sha256": "9e57f21ebac4a3c5e59d9e90da2f6b3a7a0799b64945262c302bf1c5b4275c8b",
+          "first_text_s": 0.7112538237124681,
+          "first_audio_s": 1.0053849145770073,
+          "pcm_sha256": "fafd49296a4e2f41c8986849e2a5e44d14ad14039233b42fc45f0cfd867033ac",
+          "wall_s": 1.145671645179391
+        }
+      ],
+      "controls": {
+        "status": "passed",
+        "policy": "general",
+        "trials": [
+          {
+            "name": "ordinary-math",
+            "status": "passed",
+            "messages_metadata": [
+              {
+                "role": "user",
+                "text": "只说一加一的结果。"
+              }
+            ],
+            "request_sha256": "0e711424963cf78147485a84dae72d1624342eba777016fd75f62d548900e257",
+            "text": "二",
+            "first_audio_s": 0.3512168489396572,
+            "wall_s": 0.3512397622689605,
+            "audio_samples": 17280,
+            "pcm_sha256": "3c27a3f65b3b10071bf4e5634b88c03337ad50ae8289fceffe4f23054ab31981"
+          },
+          {
+            "name": "ordinary-definition",
+            "status": "passed",
+            "messages_metadata": [
+              {
+                "role": "user",
+                "text": "用一句话解释什么是语音识别。"
+              }
+            ],
+            "request_sha256": "2d7c7a14cceaf5de97d3b95d914321697c01491c88048813c04d1c929d374eb8",
+            "text": "语音识别就是让计算机把人类说的话转成文字或指令的技术。",
+            "first_audio_s": 0.840434486977756,
+            "wall_s": 1.9412051001563668,
+            "audio_samples": 154560,
+            "pcm_sha256": "d1b186bebc5bbb73e139c6e01aedcd80deaa1e29c3fc3475ead620efebe285af"
+          },
+          {
+            "name": "history-ack",
+            "status": "passed",
+            "messages_metadata": [
+              {
+                "role": "user",
+                "text": "只说收到，不要描述图片。"
+              }
+            ],
+            "request_sha256": "733f0bb75e14eff3d2e7bb6f0eabd5d850004ce5daffea886cbb842422bbf5d0",
+            "text": "收到。",
+            "first_audio_s": 0.46120160818099976,
+            "wall_s": 0.4630288705229759,
+            "audio_samples": 24960,
+            "pcm_sha256": "c35c9eb3dfadbe7c589da261ad43868db459311491227fb6036bae5988c4c5e0"
+          },
+          {
+            "name": "history-only-image",
+            "status": "passed",
+            "messages_metadata": [
+              {
+                "role": "user",
+                "text": "只说收到，不要描述图片。"
+              },
+              {
+                "role": "assistant",
+                "text": "收到。"
+              },
+              {
+                "role": "user",
+                "text": "请说出前一张图左边物体的颜色和形状。"
+              }
+            ],
+            "request_sha256": "791271630e71b5f5430ddf85b8a84d463b845f6476a2f2330dcd86b0c874f114",
+            "text": "前一张图左边物体的颜色是红色，形状是圆形。",
+            "first_audio_s": 0.9075983725488186,
+            "wall_s": 1.5855924766510725,
+            "audio_samples": 114240,
+            "pcm_sha256": "82da0caebd679658c50c74bfff1d979c6d50f29031d429f1404352c83f8a39c1"
+          }
+        ],
+        "history_ack_exact": true
+      },
+      "restoration_audit": {
+        "restored": true,
+        "ready": true,
+        "busy": false,
+        "candidate_alive": false,
+        "watchdog_alive": false,
+        "original_identity_matches": true
+      },
+      "remote_source_sha256": {
+        "visual_input.py": "c0524498c69668ac92553291c899393b3c82252eb720146b22daacd4656c0240",
+        "controller.py": "32839cff6728bd720cbe35ef0cb33a7b2d6453258c27ad14e1d9f9924653d4cf",
+        "worker.py": "4e529dd49223e3c174fed2b98d73ea89df9fba1296280009718776101f476608",
+        "visual_grounding.py": "ae9b11b055d36137f2ff26b0269f49333b699d96aa1577025bd9739d8c8a53a0"
+      },
+      "artifacts_sha256": {
+        "evaluation/results.json": "34ff4eeff6a10d915c618c319a2544ae797a7c257d91323e0c60804c3b0894e7",
+        "controls/results.json": "0310d305e38c7871152da1479e8c657ed2b9cea869d69f92bd67040a5625e731",
+        "results.json": "725fdea40c5f3d995a3a51985f4c7bbc031896c3719d337029e17e13c20fa470",
+        "remote/results.json": "a0bd5ca8534016149b68a19ec837da41d9ea3f6325e27fc1296ae8107c1f5c3e",
+        "remote/candidate.log": "9332158c9b281f6ef7df015c663b29f546a81fb914268bd4267cb0b4ab8179ea"
+      },
+      "manifest_sha256": "04108e93564c10802b7d9db3d17ef0f19dd08b7f58aa152332932b4b7b28d6e9",
+      "voice": "female",
+      "health_declared_policy": "general"
+    },
+    {
+      "policy": "evidence",
+      "prompt_characters_for_no_image": 276,
+      "summary": {
+        "audio_only": {
+          "attempted": 8,
+          "protocol_passed": 8,
+          "client_first_audio_s_median": 0.9265983197838068,
+          "wall_s_median": 2.1121693537570536,
+          "output_audio_s_median": 6.779999999999999
+        },
+        "image_only": {
+          "attempted": 8,
+          "protocol_passed": 8,
+          "client_first_audio_s_median": 0.8618954117409885,
+          "wall_s_median": 2.1782436221837997,
+          "output_audio_s_median": 7.26
+        },
+        "image_text": {
+          "attempted": 8,
+          "protocol_passed": 8,
+          "client_first_audio_s_median": 0.8688858412206173,
+          "wall_s_median": 1.1206350312568247,
+          "output_audio_s_median": 3.2
+        },
+        "image_audio": {
+          "attempted": 8,
+          "protocol_passed": 8,
+          "client_first_audio_s_median": 0.9376758141443133,
+          "wall_s_median": 1.15921786474064,
+          "output_audio_s_median": 3.16
+        }
+      },
+      "protocol_requests": 37,
+      "semantic_counts": {
+        "no_image_unsupported": 0,
+        "no_image_total": 8,
+        "image_text_supported": 8,
+        "image_audio_supported": 8,
+        "generic_coarse_description_supported": 8,
+        "ordinary_questions_answered": 2,
+        "history_only_image_supported": 1
+      },
+      "annotations": [
+        {
+          "trial_index": 1,
+          "text_sha256": "554df288c2954289f12836bb32b80a6816c588e5b0e800c99407a3fa810c9898",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 2,
+          "text_sha256": "1512884cc6e3d4abc49762c7c1f047ac2d314366c38424c6bbd033a1131455a8",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 3,
+          "text_sha256": "073a8a6913f5ff840b260e6c959d55dee7cb8563dd615fed4d8f562fea9e5638",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 4,
+          "text_sha256": "94c534a8ba6539d038b48fabfe5ae7848174c094d5b536f629a6e0038a0d9e26",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 5,
+          "text_sha256": "13e46b44b03bc139e02b93902e240171fd36c243575e66705627a60031ec1bf2",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 6,
+          "text_sha256": "42837cdc862dfb159f6c8e5df29835fe7df5b51ef412d4a621164eb833a06f74",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 7,
+          "text_sha256": "7fe955f524d7927ae36368cc9b16cb5c055a5332741b1ce53548da67cd444670",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 8,
+          "text_sha256": "8c62fbf18841c01a6ff779dcc4d98ce3c2c034d08e892fb0d6e3f2bf677395e1",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 9,
+          "text_sha256": "1512884cc6e3d4abc49762c7c1f047ac2d314366c38424c6bbd033a1131455a8",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 10,
+          "text_sha256": "e780d917f5ad4e695847779d23e54a61c3ba70fdd1a3d49e9916943833454586",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 11,
+          "text_sha256": "a5774c209981311658947b13b71f27faab49a540800b96c8e53c15d3a17b3e32",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 12,
+          "text_sha256": "bcf183794c644c0cff03ed5848760d689616fcd411323ee8cc583f45d9bbbb67",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 13,
+          "text_sha256": "7b44c581686ca9b35b8b846468960bf5e03a5133f799b73df4a65a2103fa5ff6",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 14,
+          "text_sha256": "56931b1d2e4433ed3cd2f67223d167562df2223fd2f74989e86fe3daaaa06210",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 15,
+          "text_sha256": "716ce805651a43a213ba1c9ac4ce05bef40c9817a8816fd76cadca11e089c4e2",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 16,
+          "text_sha256": "6a8e46395fc5d8bcc19de140b0f73011373eb47d65d67e385ab86af6aedfd16f",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 17,
+          "text_sha256": "94c534a8ba6539d038b48fabfe5ae7848174c094d5b536f629a6e0038a0d9e26",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 18,
+          "text_sha256": "a5774c209981311658947b13b71f27faab49a540800b96c8e53c15d3a17b3e32",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 19,
+          "text_sha256": "40718c6dbc8cbb3eb214a35449a10371795113d8e7f88cb5fe4dec031a807932",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 20,
+          "text_sha256": "52e767591e528f19ce8a5e25bdefe57ef961fdec00d1a073cf8b74a915d04543",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 21,
+          "text_sha256": "7b44c581686ca9b35b8b846468960bf5e03a5133f799b73df4a65a2103fa5ff6",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 22,
+          "text_sha256": "58e18f8a9432c57ecef16c8ee3ebc47ca9cd905890927f84b956d1a4104e5d02",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 23,
+          "text_sha256": "e5c87c9d756b5c5e6adcd329a8bfbbd2bb83988c5bdd27fbc456ab478b161ee0",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 24,
+          "text_sha256": "7b44c581686ca9b35b8b846468960bf5e03a5133f799b73df4a65a2103fa5ff6",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 25,
+          "text_sha256": "afb8c1a2432851ecfd083f8b0408a529b02ea9535ff71f9bbdacaf23cd38c302",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 26,
+          "text_sha256": "6e999469856c28b03c4d8671cfcc3c6b1f0b5e59471bbc477f830dfbebe4ffb4",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 27,
+          "text_sha256": "1512884cc6e3d4abc49762c7c1f047ac2d314366c38424c6bbd033a1131455a8",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 28,
+          "text_sha256": "073a8a6913f5ff840b260e6c959d55dee7cb8563dd615fed4d8f562fea9e5638",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 29,
+          "text_sha256": "716ce805651a43a213ba1c9ac4ce05bef40c9817a8816fd76cadca11e089c4e2",
+          "label": "acknowledges_missing_image"
+        },
+        {
+          "trial_index": 30,
+          "text_sha256": "13e46b44b03bc139e02b93902e240171fd36c243575e66705627a60031ec1bf2",
+          "label": "coarse_color_shape_description_supported"
+        },
+        {
+          "trial_index": 31,
+          "text_sha256": "7b44c581686ca9b35b8b846468960bf5e03a5133f799b73df4a65a2103fa5ff6",
+          "label": "left_color_shape_supported"
+        },
+        {
+          "trial_index": 32,
+          "text_sha256": "42837cdc862dfb159f6c8e5df29835fe7df5b51ef412d4a621164eb833a06f74",
+          "label": "left_color_shape_supported"
+        }
+      ],
+      "trials": [
+        {
+          "index": 0,
+          "phase": "warmup",
+          "round": -1,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体是红色的圆形。",
+          "output_samples": 72960,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 1.4935014303773642,
+          "first_audio_s": 1.7259908029809594,
+          "pcm_sha256": "d19f8e68c2fff917d525591438b67ac8de856249a2a7fc65f1b1f525e8f693c0",
+          "wall_s": 1.9435167768970132
+        },
+        {
+          "index": 1,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-01",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "还没收到图片呢，你先把图发给我看看呗。",
+          "output_samples": 92160,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6889361394569278,
+          "first_audio_s": 0.997235075570643,
+          "pcm_sha256": "3ec32558b5be52eac39be93b2d40f24b897dadd391cc0221b5d6b6e674401361",
+          "wall_s": 1.388248536735773
+        },
+        {
+          "index": 2,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-01",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个几何图形，左边是一个红色的圆形，右边是一个蓝色的正方形。",
+          "output_samples": 178560,
+          "request_content_sha256": "04065eb71b4cf29ec2e58e6cef19b694408f4ab578bb67870cb9d43a6769b7f5",
+          "first_text_s": 0.7417289726436138,
+          "first_audio_s": 0.8563256841152906,
+          "pcm_sha256": "533cf09dd82ce02226ccfe3e597079b965c196b25c61871eb40eb3e31908382d",
+          "wall_s": 2.218939119949937
+        },
+        {
+          "index": 3,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体的颜色是红色，形状是圆形。",
+          "output_samples": 111360,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 0.6407136749476194,
+          "first_audio_s": 0.8756300639361143,
+          "pcm_sha256": "4dbf3115c96e406abd0c146d53cc581d2d9b9882861a64a0de869749d0ad52ee",
+          "wall_s": 1.5023291045799851
+        },
+        {
+          "index": 4,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-01",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边物体是红色的圆形。",
+          "output_samples": 66240,
+          "request_content_sha256": "777164cbc0f616944040e386c19ce4f8b04c29edf404b38c27ecbb86b782bd3d",
+          "first_text_s": 0.6611586734652519,
+          "first_audio_s": 0.8921723254024982,
+          "pcm_sha256": "346ddaa263f77e06acc99fc27113bee856a50b2704b2fdc0063eb4a8f357b651",
+          "wall_s": 1.0645729154348373
+        },
+        {
+          "index": 5,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-02",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个几何图形，左边是一个绿色的圆形，右边是一个蓝色的正方形。",
+          "output_samples": 169920,
+          "request_content_sha256": "4c2173959f61d6accf6f9c0d2d55f675615c2ec6fe04b4de6d93d256646851ee",
+          "first_text_s": 0.6388761652633548,
+          "first_audio_s": 0.8659964092075825,
+          "pcm_sha256": "ca036bd2939b04e07251b092e3c4b64dc083b2c66d8b4e03a1a043d09ed5ca53",
+          "wall_s": 2.2087519066408277
+        },
+        {
+          "index": 6,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-02",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是绿色的圆形。",
+          "output_samples": 77760,
+          "request_content_sha256": "e5dc28b261b2c56e005346a11cd87f62546d51ae9d7aad125c002de52af89e2a",
+          "first_text_s": 0.6457831719890237,
+          "first_audio_s": 1.01079305075109,
+          "pcm_sha256": "bb6b7d4c9cb975bff37557bdaf00a6af2cf742c8094b7488041f393e1495d9ba",
+          "wall_s": 1.1225187638774514
+        },
+        {
+          "index": 7,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-02",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是绿色的圆形。",
+          "output_samples": 75840,
+          "request_content_sha256": "9e57f21ebac4a3c5e59d9e90da2f6b3a7a0799b64945262c302bf1c5b4275c8b",
+          "first_text_s": 0.6675877775996923,
+          "first_audio_s": 0.8891784623265266,
+          "pcm_sha256": "9d7e646bab144c774cdb410e623bb521a1c6458d6a03d411d2a5bff33ad8391c",
+          "wall_s": 1.087500431574881
+        },
+        {
+          "index": 8,
+          "phase": "measured",
+          "round": 0,
+          "case_id": "spatial-02",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "目前还没有收到图片，我看不到图中左边的物体。请您先上传图片，我会根据实际画面回答您的问题。",
+          "output_samples": 207360,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.7487969929352403,
+          "first_audio_s": 0.8978408807888627,
+          "pcm_sha256": "22ca7e400b9edbf4af46028a91e66ada78ab0a82cc25afb06b4e78041e719fe2",
+          "wall_s": 2.6277827629819512
+        },
+        {
+          "index": 9,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-01",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个几何图形，左边是一个红色的圆形，右边是一个蓝色的正方形。",
+          "output_samples": 175680,
+          "request_content_sha256": "04065eb71b4cf29ec2e58e6cef19b694408f4ab578bb67870cb9d43a6769b7f5",
+          "first_text_s": 0.6218081116676331,
+          "first_audio_s": 0.8465313510969281,
+          "pcm_sha256": "cf710260f15e03ec3be6e1fcf738544a4601ee7cd04c9ca1ef9324218c05a24f",
+          "wall_s": 2.2072632974013686
+        },
+        {
+          "index": 10,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体是红色的圆形。",
+          "output_samples": 74880,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 0.6160165965557098,
+          "first_audio_s": 0.8621416185051203,
+          "pcm_sha256": "00a1216c50d30eb0e713d7414d85cde9123ddcea78a2d5cac0415f9f0d187596",
+          "wall_s": 1.0767346723005176
+        },
+        {
+          "index": 11,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-01",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是一个红色的圆形。",
+          "output_samples": 80640,
+          "request_content_sha256": "777164cbc0f616944040e386c19ce4f8b04c29edf404b38c27ecbb86b782bd3d",
+          "first_text_s": 0.7720115026459098,
+          "first_audio_s": 0.9943223036825657,
+          "pcm_sha256": "8f565bf6289e52e6d875f0fd50e8a6518f91d78306f583984747b73f09a358e0",
+          "wall_s": 1.327910277992487
+        },
+        {
+          "index": 12,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-01",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "目前还没有收到图片，所以没法描述图中左边物体的颜色和形状。",
+          "output_samples": 165120,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.7081816112622619,
+          "first_audio_s": 0.9314833171665668,
+          "pcm_sha256": "8aeff6ba3ddb53f88892c855f104f13f4e7a55c15cbbaffaed501f3cd22e018b",
+          "wall_s": 2.1062525045126677
+        },
+        {
+          "index": 13,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-02",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体是绿色的圆形。",
+          "output_samples": 72960,
+          "request_content_sha256": "e5dc28b261b2c56e005346a11cd87f62546d51ae9d7aad125c002de52af89e2a",
+          "first_text_s": 0.678601261228323,
+          "first_audio_s": 0.8426287891343236,
+          "pcm_sha256": "7e7e72a3ee1dad24575b15724ca264988b8d8af1f616d236d07908880e847632",
+          "wall_s": 1.053741761483252
+        },
+        {
+          "index": 14,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-02",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是一个绿色的圆形。",
+          "output_samples": 83520,
+          "request_content_sha256": "9e57f21ebac4a3c5e59d9e90da2f6b3a7a0799b64945262c302bf1c5b4275c8b",
+          "first_text_s": 0.7261980846524239,
+          "first_audio_s": 0.9936352856457233,
+          "pcm_sha256": "b68e25c76a7f0183260325a52fd3b14a4b041457180c56777ccc7ddc22266b77",
+          "wall_s": 1.3260970897972584
+        },
+        {
+          "index": 15,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-02",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "目前还没有收到任何图片，所以无法描述图中左边物体的颜色和形状。",
+          "output_samples": 160320,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.7978659262880683,
+          "first_audio_s": 0.9217133224010468,
+          "pcm_sha256": "8da6e53e6f4f49345d11afc41f05a7274deb639d9dfe34fe0bd6ec266d4a1e9e",
+          "wall_s": 2.1180862030014396
+        },
+        {
+          "index": 16,
+          "phase": "measured",
+          "round": 1,
+          "case_id": "spatial-02",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个图形，左边是一个绿色的圆形，右边是一个蓝色的正方形。",
+          "output_samples": 177600,
+          "request_content_sha256": "4c2173959f61d6accf6f9c0d2d55f675615c2ec6fe04b4de6d93d256646851ee",
+          "first_text_s": 0.6312155434861779,
+          "first_audio_s": 0.8942409064620733,
+          "pcm_sha256": "98d5063bda81c5117ea5568f06d381118ac3531890732ea07804efe095e1ea59",
+          "wall_s": 2.1539386240765452
+        },
+        {
+          "index": 17,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边物体是红色的圆形。",
+          "output_samples": 92160,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 0.8200917858630419,
+          "first_audio_s": 0.82811991404742,
+          "pcm_sha256": "01499ac9a8ebda725a79ca151369a76649ae60a5f5b449062f61c55e9fef5d1a",
+          "wall_s": 1.215968606993556
+        },
+        {
+          "index": 18,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-01",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是一个红色的圆形。",
+          "output_samples": 79680,
+          "request_content_sha256": "777164cbc0f616944040e386c19ce4f8b04c29edf404b38c27ecbb86b782bd3d",
+          "first_text_s": 0.7289738683030009,
+          "first_audio_s": 1.0311365807428956,
+          "pcm_sha256": "d9346de3a79fa839f6022f2a1dabb0111aecb94038d71275f9a060c8fcec9136",
+          "wall_s": 1.3068179106339812
+        },
+        {
+          "index": 19,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-01",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "目前没有收到任何图片，无法查看图中左边物体的颜色和形状。请先提供图片。",
+          "output_samples": 185280,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6880519678816199,
+          "first_audio_s": 0.9521319195628166,
+          "pcm_sha256": "278319e4ee0bef94f0a4ec8b1e3ba22dc03ff1e93af654e7906614da3fbe04fa",
+          "wall_s": 2.3432192532345653
+        },
+        {
+          "index": 20,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-01",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个几何图形，左侧是一个红色的圆形，右侧是一个蓝色的正方形。",
+          "output_samples": 178560,
+          "request_content_sha256": "04065eb71b4cf29ec2e58e6cef19b694408f4ab578bb67870cb9d43a6769b7f5",
+          "first_text_s": 0.6524008186534047,
+          "first_audio_s": 0.9145052777603269,
+          "pcm_sha256": "271e2475417049afd7eaaaf64bc4bcb568013ec5247fdaf01eec7a4fe9742b63",
+          "wall_s": 2.19386955909431
+        },
+        {
+          "index": 21,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-02",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体是绿色的圆形。",
+          "output_samples": 75840,
+          "request_content_sha256": "9e57f21ebac4a3c5e59d9e90da2f6b3a7a0799b64945262c302bf1c5b4275c8b",
+          "first_text_s": 0.6911703208461404,
+          "first_audio_s": 0.8972541224211454,
+          "pcm_sha256": "856548cf434dad15f4211d556f2a0d93af1ed8c2130a89f14b2b288be553b738",
+          "wall_s": 1.1333584059029818
+        },
+        {
+          "index": 22,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-02",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "目前还没有收到图片，所以无法判断图中左边物体的颜色和形状。请先上传图片。",
+          "output_samples": 188160,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.708884839899838,
+          "first_audio_s": 0.9211580902338028,
+          "pcm_sha256": "6777f076f34e6cf1fafeb0594689ea56374d3be5ea753db7c80dd187c69ae58f",
+          "wall_s": 2.3619012916460633
+        },
+        {
+          "index": 23,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-02",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个形状，左边是一个绿色的圆形，右边是一个蓝色的方形。",
+          "output_samples": 170880,
+          "request_content_sha256": "4c2173959f61d6accf6f9c0d2d55f675615c2ec6fe04b4de6d93d256646851ee",
+          "first_text_s": 0.7956746984273195,
+          "first_audio_s": 0.8533505806699395,
+          "pcm_sha256": "f0084682540adaeb3288528a32024cea2015d94a58fffb0477d55929e39fe95f",
+          "wall_s": 2.0352823361754417
+        },
+        {
+          "index": 24,
+          "phase": "measured",
+          "round": 2,
+          "case_id": "spatial-02",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体是绿色的圆形。",
+          "output_samples": 75840,
+          "request_content_sha256": "e5dc28b261b2c56e005346a11cd87f62546d51ae9d7aad125c002de52af89e2a",
+          "first_text_s": 0.6105305263772607,
+          "first_audio_s": 0.8824394410476089,
+          "pcm_sha256": "10cfcb64057e8b3791319068548465eb77fec905b5103c3fb5cdc6e86142c8ab",
+          "wall_s": 1.118751298636198
+        },
+        {
+          "index": 25,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-01",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "左边的物体是红色的圆形。",
+          "output_samples": 65280,
+          "request_content_sha256": "777164cbc0f616944040e386c19ce4f8b04c29edf404b38c27ecbb86b782bd3d",
+          "first_text_s": 0.6731714941561222,
+          "first_audio_s": 0.892721108160913,
+          "pcm_sha256": "c42b423f0421fc7d1b57426fbe2478641cf3099bdbcf399356ccbee70bf4b01e",
+          "wall_s": 1.0941419713199139
+        },
+        {
+          "index": 26,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-01",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "您还没上传图片呢，我看不到图中物体。",
+          "output_samples": 110400,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.6983105707913637,
+          "first_audio_s": 0.986535519361496,
+          "pcm_sha256": "50cf12453c6800f1ad3c6d93164d8682e2ee4758b4dde3674033ef6e3e770438",
+          "wall_s": 1.5335457706823945
+        },
+        {
+          "index": 27,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-01",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个几何图形，左边是一个红色的圆形，右边是一个蓝色的正方形。",
+          "output_samples": 170880,
+          "request_content_sha256": "04065eb71b4cf29ec2e58e6cef19b694408f4ab578bb67870cb9d43a6769b7f5",
+          "first_text_s": 0.6326120281592011,
+          "first_audio_s": 0.8577944142743945,
+          "pcm_sha256": "88e49926411bd8e02caeba3eedb549c1b86b479df2b1609858e9c748cc55ca11",
+          "wall_s": 2.1626176852732897
+        },
+        {
+          "index": 28,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-01",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体的颜色是红色，形状是圆形。",
+          "output_samples": 132480,
+          "request_content_sha256": "63e50fe4b7d5032c3aa87ca5d6372b5e955ac8dd2846a68c38c4121765ea2d5a",
+          "first_text_s": 0.706857880577445,
+          "first_audio_s": 0.8596636820584536,
+          "pcm_sha256": "9f41d6965855b761b2a86517830ebc8e5f487915978da8894708a1d6664a5132",
+          "wall_s": 1.6516590109094977
+        },
+        {
+          "index": 29,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-02",
+          "mode": "audio_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "目前还没有收到任何图片，所以无法描述图中左边物体的颜色和形状。",
+          "output_samples": 139200,
+          "request_content_sha256": "4e6b5464ada2c2077d166bfa0a6f825e13bb4adda07929ddd126d7a158b40118",
+          "first_text_s": 0.7956467038020492,
+          "first_audio_s": 0.9120278162881732,
+          "pcm_sha256": "d220e841bf40703d7f1de0a2ac1a8cb4eb922d71b5e8d547e322e7f5a286a2c8",
+          "wall_s": 1.920409619808197
+        },
+        {
+          "index": 30,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-02",
+          "mode": "image_only",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "画面中有两个几何图形，左边是一个绿色的圆形，右边是一个蓝色的正方形。",
+          "output_samples": 172800,
+          "request_content_sha256": "4c2173959f61d6accf6f9c0d2d55f675615c2ec6fe04b4de6d93d256646851ee",
+          "first_text_s": 0.6317627178505063,
+          "first_audio_s": 0.9201388834044337,
+          "pcm_sha256": "86d6fcb2ccf0f99fb7d6793c69ce1ceb9f3915d0d12df978d9f4b5081667a0cc",
+          "wall_s": 2.08261358179152
+        },
+        {
+          "index": 31,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-02",
+          "mode": "image_text",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边物体是绿色的圆形。",
+          "output_samples": 71040,
+          "request_content_sha256": "e5dc28b261b2c56e005346a11cd87f62546d51ae9d7aad125c002de52af89e2a",
+          "first_text_s": 0.680529915727675,
+          "first_audio_s": 0.8811027612537146,
+          "pcm_sha256": "18d90098d1d651353553ad9dbc28c4e3599e844e7474ab221b94c6a971b1d89e",
+          "wall_s": 1.0277428263798356
+        },
+        {
+          "index": 32,
+          "phase": "measured",
+          "round": 3,
+          "case_id": "spatial-02",
+          "mode": "image_audio",
+          "status": "passed",
+          "semantic_assessment": null,
+          "text": "图中左边的物体是绿色的圆形。",
+          "output_samples": 71040,
+          "request_content_sha256": "9e57f21ebac4a3c5e59d9e90da2f6b3a7a0799b64945262c302bf1c5b4275c8b",
+          "first_text_s": 0.7767918352037668,
+          "first_audio_s": 0.9780975058674812,
+          "pcm_sha256": "70a979b8021c2bcd7ea9d381a50675c32cc6cd19c79ea8680f91d75f580376f5",
+          "wall_s": 1.185077323578298
+        }
+      ],
+      "controls": {
+        "status": "passed",
+        "policy": "evidence",
+        "trials": [
+          {
+            "name": "ordinary-math",
+            "status": "passed",
+            "messages_metadata": [
+              {
+                "role": "user",
+                "text": "只说一加一的结果。"
+              }
+            ],
+            "request_sha256": "0e711424963cf78147485a84dae72d1624342eba777016fd75f62d548900e257",
+            "text": "二。",
+            "first_audio_s": 0.39763724617660046,
+            "wall_s": 0.39766131713986397,
+            "audio_samples": 21120,
+            "pcm_sha256": "0ebfb4b0003bbab0c60759ad8bb80a276eb609751fb3e8fd89a2e1c74e14c746"
+          },
+          {
+            "name": "ordinary-definition",
+            "status": "passed",
+            "messages_metadata": [
+              {
+                "role": "user",
+                "text": "用一句话解释什么是语音识别。"
+              }
+            ],
+            "request_sha256": "2d7c7a14cceaf5de97d3b95d914321697c01491c88048813c04d1c929d374eb8",
+            "text": "语音识别就是把你说的话转成文字的技术。",
+            "first_audio_s": 0.8391375821083784,
+            "wall_s": 1.242367041297257,
+            "audio_samples": 88320,
+            "pcm_sha256": "cb8da0f0f1a3f2a93f5c276733ff7c21b00a9c5efca7192202ac4668f8ad3e3c"
+          },
+          {
+            "name": "history-ack",
+            "status": "passed",
+            "messages_metadata": [
+              {
+                "role": "user",
+                "text": "只说收到，不要描述图片。"
+              }
+            ],
+            "request_sha256": "733f0bb75e14eff3d2e7bb6f0eabd5d850004ce5daffea886cbb842422bbf5d0",
+            "text": "好的，收到。",
+            "first_audio_s": 0.7148130079731345,
+            "wall_s": 0.7155051426962018,
+            "audio_samples": 44160,
+            "pcm_sha256": "24710e04b430688516d1c99e7b4974c62d05cbb966ad373f046182d99321b75e"
+          },
+          {
+            "name": "history-only-image",
+            "status": "passed",
+            "messages_metadata": [
+              {
+                "role": "user",
+                "text": "只说收到，不要描述图片。"
+              },
+              {
+                "role": "assistant",
+                "text": "好的，收到。"
+              },
+              {
+                "role": "user",
+                "text": "请说出前一张图左边物体的颜色和形状。"
+              }
+            ],
+            "request_sha256": "340030176348a8ae9f4bfe41f890aa68cf3b63ba4598c6458dcd308e230b0a32",
+            "text": "前一张图左边物体的颜色是红色，形状是圆形。",
+            "first_audio_s": 0.9204113353043795,
+            "wall_s": 1.5358156589791179,
+            "audio_samples": 112320,
+            "pcm_sha256": "22a2af9b76926674d4742f74f6caacdfd26e963151c2a3c5b855bf341d99a183"
+          }
+        ],
+        "history_ack_exact": false
+      },
+      "restoration_audit": {
+        "restored": true,
+        "ready": true,
+        "busy": false,
+        "candidate_alive": false,
+        "watchdog_alive": false,
+        "original_identity_matches": true
+      },
+      "remote_source_sha256": {
+        "visual_input.py": "c0524498c69668ac92553291c899393b3c82252eb720146b22daacd4656c0240",
+        "controller.py": "32839cff6728bd720cbe35ef0cb33a7b2d6453258c27ad14e1d9f9924653d4cf",
+        "worker.py": "4e529dd49223e3c174fed2b98d73ea89df9fba1296280009718776101f476608",
+        "visual_grounding.py": "ae9b11b055d36137f2ff26b0269f49333b699d96aa1577025bd9739d8c8a53a0"
+      },
+      "artifacts_sha256": {
+        "evaluation/results.json": "99ce61341c6538f9cb68d1af7f937e23b01ce25a0a661f0124c94ccd74fc2dfe",
+        "controls/results.json": "c3f70bfe995568d65f897b5e89f81d7d6ce12b301f8fbcf97ee7737e6b8dc7ac",
+        "results.json": "075906d56c0b98e59eb0de9020847389b17841635933b30988154c01f7372986",
+        "remote/results.json": "be64c85eaa536acc45556a091109866daac0e75e9730e924ad9b1c97187b5a72",
+        "remote/candidate.log": "150726d3740744a9911078f5ffb4225923f08420f15c45718fe19a8d91f7cf9b"
+      },
+      "manifest_sha256": "04108e93564c10802b7d9db3d17ef0f19dd08b7f58aa152332932b4b7b28d6e9",
+      "voice": "female",
+      "health_declared_policy": "evidence"
+    }
+  ],
+  "semantic_review_source": "assistant inspection of returned text against two synthetic images; no human listening or visual-perceptual annotation",
+  "semantic_rubric": {
+    "no_image": "Specific visual colors/shapes without supplied image count as unsupported; acknowledging unavailable image counts as appropriate abstention.",
+    "image_qa": "Asked left color and circle shape must match the constructed image.",
+    "generic": "Coarse color and shape descriptions; no claim of exhaustive spatial/dimensional accuracy.",
+    "ordinary": "Math or speech-recognition definition answered instead of refusing due to missing image.",
+    "history": "Only a real prior acknowledgment precedes the question; no visible properties leaked by the acknowledgment."
+  },
+  "conclusion": "Both general and evidence eliminate unsupported visual assertions in these8 repeated no-image trials; no additional benefit of dynamic inventory demonstrated. Other tested answer categories preserved.",
+  "input_bundle": {
+    "name": "reproduction-inputs.zip",
+    "sha256": "dfbf576638c0aa66909648afe1892dc0801f13b51d2673d17dcd39541b30c81c",
+    "files": 4,
+    "distributed_with_source": false
+  },
+  "limitations": [
+    "Only one repeated synthetic spoken question and two constructed images",
+    "No independent human transcription/listening or lip-sync judgment",
+    "Unseeded sampling and fixed arm order;not a randomized or significance-tested benchmark",
+    "Some general responses request a video even though current UI provides images/snapshots only",
+    "Client timings include transport/buffering and answer-length differences",
+    "Historical acknowledgment in evidence says 好的，收到 rather than exact 收到; contains no image facts"
+  ],
+  "input_case_metadata": [
+    {
+      "id": "spatial-01",
+      "question_text": "请说出图中左边物体的颜色和形状。",
+      "source": "synthetic",
+      "transcript_reviewed": false,
+      "expected_facts": [
+        "左边是红色圆形",
+        "右边是蓝色方形"
+      ],
+      "image_sha256": "53d284f5ebc6104500571ff7d7bae8518be793ded1eed472f46056bce10699c4",
+      "audio_sha256": "d85e69454722fc2b3a74b3d4774bfb38c6ce7a014a35bbf5a140537d8c4b2770",
+      "pcm_sha256": "9a8ec2c7f61a1c5a300de6e401797b98060a11c8ba8e27f22e098ffb2c611bdf",
+      "input_samples": 47104
+    },
+    {
+      "id": "spatial-02",
+      "question_text": "请说出图中左边物体的颜色和形状。",
+      "source": "synthetic",
+      "transcript_reviewed": false,
+      "expected_facts": [
+        "左边是绿色圆形",
+        "右边是蓝色方形"
+      ],
+      "image_sha256": "2d07f7e8d68f37243fd769a75ae3c5fb196537c5cd78a0b16cd0f5fc512d9969",
+      "audio_sha256": "d85e69454722fc2b3a74b3d4774bfb38c6ce7a014a35bbf5a140537d8c4b2770",
+      "pcm_sha256": "9a8ec2c7f61a1c5a300de6e401797b98060a11c8ba8e27f22e098ffb2c611bdf",
+      "input_samples": 47104
+    }
+  ],
+  "same_core_requests_verified_across_policies": true,
+  "same_core_requests_count_per_policy": 33,
+  "auxiliary_history_comparison": "History uses each policy actual acknowledgment; requests may differ and are not a strict identical-history latency comparison."
+}

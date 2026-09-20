@@ -7,16 +7,18 @@ from pipecat.audio.vad.silero import SileroVADAnalyzer
 from pipecat.audio.vad.vad_analyzer import VADParams, VADState
 from pipecat.frames.frames import CancelFrame, EndFrame, InputAudioRawFrame, InputTransportMessageFrame
 from pipecat.processors.frame_processor import FrameDirection, FrameProcessor
-from omni_backend import ConversationHistory
+from playback_history import PlaybackHistory
+from visual_context import VisualContext
 
 
 class OmniConversation:
-    def __init__(self, session, backend, *, vad=None):
+    def __init__(self, session, backend, *, vad=None, visual_enabled=False, session_id=None):
         self.session, self.backend = session, backend
         self.vad = vad or SileroVADAnalyzer(sample_rate=16000, params=VADParams(stop_secs=.7))
         if vad is None:
             self.vad.set_sample_rate(16000)
-        self.history = ConversationHistory()
+        self.history = getattr(session, 'history', None) or PlaybackHistory('minicpm')
+        self.visual = VisualContext(session_id, enabled=visual_enabled)
         self.task = None
         self.epoch = 0
         self.speaking = False
@@ -36,24 +38,41 @@ class OmniConversation:
             await asyncio.gather(old, return_exceptions=True)
 
     async def begin(self, user):
+        if self.closed:
+            return
+        epoch, generation = self.epoch, self.session.generation
         logger.info('OMNI_TURN input generation={} kind={} audio_bytes={}',self.session.generation,
                     'audio' if 'audio' in user else 'text',len(user.get('audio',''))*3//4)
-        messages = self.history.begin(user)
-        if self.history.trimmed:
-            await self.session.send({'type':'context_trimmed','message':'较早的对话已移出模型上下文。'})
-            self.history.trimmed = False
-        epoch, generation = self.epoch, self.session.generation
+        user, binding = self.visual.bind(user)
+        if self.visual.enabled:
+            await self.session.send(binding)
+        if self.closed or epoch != self.epoch:
+            return
+        messages = self.history.begin(user, generation)
+        await self.session.persist_history()
+        if self.closed or epoch != self.epoch:
+            return
         self.task = asyncio.create_task(self.respond(messages, epoch, generation))
 
     async def respond(self, messages, epoch, generation):
         text, started = [], False
+        block_text, block_audio = '', False
         began=time.monotonic();samples=0
         try:
+            if self.closed or epoch != self.epoch:
+                return
             await self.session.send({'type':'status','state':'thinking'},generation=generation)
+            if self.closed or epoch != self.epoch:
+                return
             async for kind, value in self.backend.generate(messages):
                 if self.closed or epoch != self.epoch:
                     return
                 if kind == 'text':
+                    if block_audio and block_text:
+                        self.session.mark_text(block_text)
+                        block_text, block_audio = '', False
+                    block_text += value
+                    self.history.text(value, generation)
                     text.append(value)
                     await self.session.send({'type':'assistant_text','text':value},generation=generation)
                 else:
@@ -63,10 +82,13 @@ class OmniConversation:
                         started = True
                     self.session.audio(value)
                     samples+=len(value)//2
+                    block_audio = True
             if epoch == self.epoch and not self.closed:
-                self.history.generated(''.join(text))
+                if block_text and block_audio:
+                    self.session.mark_text(block_text)
                 if started:
                     self.session.end_clip()
+                await self.session.finish_production()
                 logger.info('OMNI_TURN generated generation={} samples={} seconds={:.3f}',generation,samples,time.monotonic()-began)
         except asyncio.CancelledError:
             raise
@@ -78,24 +100,37 @@ class OmniConversation:
                 await self.session.send({'type':'error','message':'MiniCPM-o 生成失败，请检查模型服务后重新连接。'})
 
     async def control(self, message):
+        if self.closed:
+            return
         kind = message['type']
-        if kind in ('text','interrupt'):
+        if kind == 'visual':
+            try:
+                await self.session.send(self.visual.control(message))
+            except ValueError as exc:
+                await self.session.send({'type':'visual_error','sequence':message.get('sequence'),
+                                         'message':str(exc)})
+        elif kind in ('text','interrupt'):
             await self.interrupt(kind)
             self.audio_buffer.clear();self.preroll.clear();self.speaking=False
             if kind == 'text':
                 await self.session.send({'type':'transcript','text':message['text']})
                 await self.begin({'role':'user','text':message['text']})
         elif kind == 'playback' and message['generation'] == self.session.generation:
-            self.session.playing = message['state'] == 'started'
-            if message['state'] == 'ended':
-                self.history.heard()
+            if message['state'] == 'progress':
+                await self.session.playback_progress(message)
+            else:
+                self.session.playing = message['state'] == 'started'
 
     async def audio(self, pcm):
+        if self.closed:
+            return
         for offset in range(0,len(pcm),640):
             packet=pcm[offset:offset+640]
             self.preroll.extend(packet)
             del self.preroll[:-9600]
             state=await self.vad.analyze_audio(packet)
+            if self.closed:
+                return
             if state == VADState.SPEAKING and not self.speaking:
                 await self.interrupt('speech_started')
                 self.speaking=True
@@ -114,19 +149,22 @@ class OmniConversation:
         if self.closed:
             return
         self.closed=True
+        self.visual.clear()
         self.epoch+=1
         if self.task:
             self.task.cancel()
             await asyncio.gather(self.task,return_exceptions=True)
         self.audio_buffer.clear();self.preroll.clear()
+        self.history.interrupt()
+        await self.session.persist_history()
         if hasattr(self.vad,'cleanup'):
             await self.vad.cleanup()
 
 
 class OmniProcessor(FrameProcessor):
-    def __init__(self, session, backend):
+    def __init__(self, session, backend, *, visual_enabled=False, session_id=None):
         super().__init__()
-        self.conversation=OmniConversation(session,backend)
+        self.conversation=OmniConversation(session,backend,visual_enabled=visual_enabled,session_id=session_id)
 
     async def process_frame(self, frame, direction):
         await super().process_frame(frame,direction)

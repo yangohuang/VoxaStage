@@ -1,5 +1,8 @@
 export class Microphone {
-  constructor(onPacket) { this.onPacket = onPacket; this.ticket = 0; this.active = false; }
+  constructor(onPacket, {captureTiming = false} = {}) {
+    this.onPacket = onPacket; this.ticket = 0; this.active = false;
+    this.captureTiming = captureTiming === true;
+  }
   async start() {
     const ticket = ++this.ticket;
     if (!navigator.mediaDevices?.getUserMedia || !window.isSecureContext) throw new Error('麦克风需要 localhost 或 HTTPS；仍可用文字对话');
@@ -12,9 +15,17 @@ export class Microphone {
       const context = this.context;
       await context.audioWorklet.addModule('/avatar/static/mic-worklet.mjs');
       if (ticket !== this.ticket) return;
-      const node = new AudioWorkletNode(context, 'avatar-microphone');
+      const node = new AudioWorkletNode(context, 'avatar-microphone', {
+        processorOptions: {captureTiming: this.captureTiming},
+      });
       this.source = context.createMediaStreamSource(stream); this.node = node;
-      node.port.onmessage = ({ data }) => { if (this.active && ticket === this.ticket) this.onPacket(data); };
+      node.port.onmessage = ({ data }) => {
+        if (!this.active || ticket !== this.ticket) return;
+        if (!this.captureTiming || data instanceof ArrayBuffer) { this.onPacket(data); return; }
+        const before = performance.now(), contextTime = context.currentTime, after = performance.now();
+        this.onPacket(data.pcm, {...data.timing, contextTimeAtReceive: contextTime,
+          anchorPerformanceBeforeMs: before, anchorPerformanceAfterMs: after});
+      };
       // A muted output keeps the worklet live without microphone feedback.
       this.gain = context.createGain(); this.gain.gain.value = 0;
       this.source.connect(node); node.connect(this.gain); this.gain.connect(context.destination);

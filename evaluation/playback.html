@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>VoxaStage 固定音频评测</title>
+<style>body{font:16px system-ui;background:#101820;color:#edf5fa;margin:24px}canvas{width:480px;height:480px;background:#18232b}button,select{padding:10px;margin:6px}pre{white-space:pre-wrap} .stage{display:flex;gap:12px}</style>
+<h1>固定音频播放检查</h1><p>选择同一段音频重复检查生成画面。结果记录播放调度，不代表扬声器物理测量。</p>
+<label>驱动<select id="provider"></select></label><label>样本<select id="sample"></select></label>
+<button id="run" disabled>播放并记录</button><button id="stop">停止</button>
+<p id="status">加载中</p><div class="stage"><canvas id="head"></canvas><canvas id="portrait" hidden></canvas></div>
+<pre id="result"></pre><script type="module" src="/playback.mjs"></script></html>

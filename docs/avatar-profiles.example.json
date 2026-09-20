@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "default_profile": "dinet",
+  "profiles": [
+    {"id": "dinet", "label": "DINet · 男生", "provider": "dinet", "voice": "male", "idle_url": "/avatar/idle/dinet.mp4"},
+    {"id": "flashhead", "label": "FlashHead · 女生", "provider": "flashhead", "voice": "female", "idle_url": "/avatar/idle/flashhead.mp4"},
+    {"id": "streamingtalker", "label": "StreamingTalker · 男生", "provider": "streamingtalker", "voice": "male", "idle_url": "/avatar/idle/streamingtalker.mp4"}
+  ]
+}

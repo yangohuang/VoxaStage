@@ -1,0 +1,260 @@
+{
+  "version": 1,
+  "date": "2026-09-19",
+  "status": "passed",
+  "scope": "Three real-driver visual playback interruptions and image-change recovery. This is explicit button interruption, not a physical microphone barge-in test.",
+  "providers": [
+    {
+      "provider": "dinet",
+      "status": "passed",
+      "before_interrupt": {
+        "audioTime": 4.688,
+        "connected": true,
+        "droppedStale": 0,
+        "generation": 1,
+        "idle": false,
+        "microphone": false,
+        "pendingFrames": 5,
+        "playing": true,
+        "queuedSeconds": 0,
+        "renderedFrames": 13,
+        "scheduledSamples": 17280,
+        "scheduledSources": 5
+      },
+      "after_interrupt": {
+        "audioTime": 6.010666666666666,
+        "connected": true,
+        "droppedStale": 0,
+        "generation": 2,
+        "idle": true,
+        "microphone": false,
+        "pendingFrames": 0,
+        "playing": false,
+        "queuedSeconds": 0,
+        "renderedFrames": 17,
+        "scheduledSamples": 21120,
+        "scheduledSources": 0
+      },
+      "turns": [
+        {
+          "role": "interrupted",
+          "request_index": 0,
+          "response_text": "这幅图有两个简单的几何图形，背景是纯白色的。左边是一个红色的圆形，右边"
+        },
+        {
+          "role": "recovery",
+          "request_index": 1,
+          "response_text": "左侧物体是绿色的圆形。",
+          "rendered_frames": 74
+        }
+      ],
+      "recovery_messages": [
+        {
+          "role": "user",
+          "text": "请详细描述这幅图片，并解释左右两个物体在颜色、形状和位置上的区别。",
+          "images": [
+            {
+              "source": "upload",
+              "captured_at_ms": 610,
+              "id": "image-1",
+              "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "text": "[上轮回复被用户打断，未确认完整播放。]"
+        },
+        {
+          "role": "user",
+          "text": "只说当前这张图左边物体的颜色和形状。",
+          "images": [
+            {
+              "source": "upload",
+              "captured_at_ms": 5635,
+              "id": "image-2",
+              "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb"
+            }
+          ]
+        }
+      ],
+      "recovery_request_sha256": "17998b98b3cceee65980fcc2ec1eb639fc807cf93106c3778b24096597901adf",
+      "voice": "male",
+      "session_released": true
+    },
+    {
+      "provider": "flashhead",
+      "status": "passed",
+      "before_interrupt": {
+        "audioTime": 15.765333333333333,
+        "connected": true,
+        "droppedStale": 0,
+        "generation": 1,
+        "idle": false,
+        "microphone": false,
+        "pendingFrames": 19,
+        "playing": true,
+        "queuedSeconds": 0.4,
+        "renderedFrames": 96,
+        "scheduledSamples": 105600,
+        "scheduledSources": 10
+      },
+      "after_interrupt": {
+        "audioTime": 17.077333333333332,
+        "connected": true,
+        "droppedStale": 0,
+        "generation": 2,
+        "idle": true,
+        "microphone": false,
+        "pendingFrames": 0,
+        "playing": false,
+        "queuedSeconds": 0,
+        "renderedFrames": 100,
+        "scheduledSamples": 109440,
+        "scheduledSources": 0
+      },
+      "turns": [
+        {
+          "role": "interrupted",
+          "request_index": 2,
+          "response_text": "这幅图有两个形状，左边是一个红色的圆，右边是一个蓝色的正方形。它们"
+        },
+        {
+          "role": "recovery",
+          "request_index": 3,
+          "response_text": "当前画面左边是一个绿色的圆形。",
+          "rendered_frames": 95
+        }
+      ],
+      "recovery_messages": [
+        {
+          "role": "user",
+          "text": "请详细描述这幅图片，并解释左右两个物体在颜色、形状和位置上的区别。",
+          "images": [
+            {
+              "source": "upload",
+              "captured_at_ms": 356,
+              "id": "image-1",
+              "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "text": "[上轮回复被用户打断，未确认完整播放。]"
+        },
+        {
+          "role": "user",
+          "text": "只说当前这张图左边物体的颜色和形状。",
+          "images": [
+            {
+              "source": "upload",
+              "captured_at_ms": 4051,
+              "id": "image-2",
+              "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb"
+            }
+          ]
+        }
+      ],
+      "recovery_request_sha256": "13922cab2f15f9eb8174656a4a04461ef334869a19cb563abb020f01de6d97a9",
+      "voice": "female",
+      "session_released": true
+    },
+    {
+      "provider": "streamingtalker",
+      "status": "passed",
+      "before_interrupt": {
+        "audioTime": 27.493333333333332,
+        "connected": true,
+        "droppedStale": 0,
+        "generation": 1,
+        "idle": false,
+        "microphone": false,
+        "pendingFrames": 31,
+        "playing": true,
+        "queuedSeconds": 0.6666666666666666,
+        "renderedFrames": 206,
+        "scheduledSamples": 218240,
+        "scheduledSources": 11
+      },
+      "after_interrupt": {
+        "audioTime": 28.8,
+        "connected": true,
+        "droppedStale": 1,
+        "generation": 2,
+        "idle": true,
+        "microphone": false,
+        "pendingFrames": 0,
+        "playing": false,
+        "queuedSeconds": 0,
+        "renderedFrames": 211,
+        "scheduledSamples": 221440,
+        "scheduledSources": 0
+      },
+      "turns": [
+        {
+          "role": "interrupted",
+          "request_index": 4,
+          "response_text": "画面中有两个形状，左边是一个红色的圆形，右边是一个蓝色的正方形。颜色上"
+        },
+        {
+          "role": "recovery",
+          "request_index": 5,
+          "response_text": "左边的物体是绿色的圆形。",
+          "rendered_frames": 92
+        }
+      ],
+      "recovery_messages": [
+        {
+          "role": "user",
+          "text": "请详细描述这幅图片，并解释左右两个物体在颜色、形状和位置上的区别。",
+          "images": [
+            {
+              "source": "upload",
+              "captured_at_ms": 395,
+              "id": "image-1",
+              "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "text": "[上轮回复被用户打断，未确认完整播放。]"
+        },
+        {
+          "role": "user",
+          "text": "只说当前这张图左边物体的颜色和形状。",
+          "images": [
+            {
+              "source": "upload",
+              "captured_at_ms": 4112,
+              "id": "image-2",
+              "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb"
+            }
+          ]
+        }
+      ],
+      "recovery_request_sha256": "cdeae3c7196ce8d51f383270bd480599967d66b05fade57471433a3a8cc94fe1",
+      "voice": "male",
+      "session_released": true
+    }
+  ],
+  "restoration_audit": {
+    "restored": true,
+    "ready": true,
+    "busy": false,
+    "candidate_alive": false,
+    "watchdog_alive": false,
+    "original_identity_matches": true
+  },
+  "artifact_sha256": {
+    "browser/results.json": "a4a47ef9049b2b852b5d20bc46be8cbc4e71706949eea546bd27a07b08297697",
+    "control/results.json": "93bf3583ef4f1252faa7448bb125f2188448178ed94fe39b177736c4cf8f550d",
+    "requests.json": "879c27064c69b7c367b37140bb9f7ed2d00fadc2e5661c873d96f9ca341cb007",
+    "remote/results.json": "ecca0218d9a538355de23fc725c23460db7d782a4090edb366aff2acc6c40d30"
+  },
+  "limitations": [
+    "Old generated text may have completed before playback interruption; this does not prove every request cancelled active GPU compute.",
+    "No perceptual or physical acoustic latency measurement."
+  ]
+}
