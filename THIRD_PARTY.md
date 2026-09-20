@@ -39,7 +39,7 @@ MindTalker 是作者此前基于 MiniCPM-o 的项目。本次端到端接入参�
 | 浏览器交互、同一时钟播放音画、角色切换与 idle | `avatar-web/` |
 | FlashHead 桥接、MiniCPM worker、StreamingTalker 增量服务扩展 | `video-server/`、`omni-server/`、`avatar-server/serving/` |
 | 角色音色兼容、验证脚本与回归测试 | `tts-compat/`、`smoke_avatar.py`、`smoke_video.py`、各 `test_*` 文件 |
-| 固定版本DINet部署的消费提前量策略与启动器；原生服务仍由部署者提供 | `dinet-server/` |
+| 固定版本DINet部署的消费提前量、256人物配置与有界代理清理启动器；原生服务和模型仍由部署者提供 | `dinet-server/` |
 
 这些工作不包含上述基础模型的预训练、原创网络设计或数据集构建。真实工具调用与慢任务编排尚未实现，不应作为现有能力宣传。
 
