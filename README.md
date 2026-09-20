@@ -4,7 +4,7 @@
 
 VoxaStage 是基于 **Pipecat** 的本地优先语音数字人集成项目：把语音模型、数字人模型和浏览器交互连接起来，支持 **级联语音 / MiniCPM-o 端到端语音**两条对话链路，以及 **DINet / FlashHead / StreamingTalker** 三种形象驱动。对话后端与形象可以独立选择。
 
-[效果预览](#效果预览) · [系统架构](#系统架构) · [来源与贡献](#来源与贡献) · [启动体验](#启动体验) · [验证与边界](#验证与边界)
+[当前状态](docs/STATUS.md) · [效果预览](#效果预览) · [系统架构](#系统架构) · [来源与贡献](#来源与贡献) · [启动体验](#启动体验) · [验证与边界](#验证与边界)
 
 ## 流式 Agent 与本地会话
 
@@ -164,6 +164,6 @@ python3 export_demo.py
 
 [DINet消费提前量实验](docs/DINET-PACING-EXPERIMENT.md)已进一步完成[原代理集成与对照](docs/DINET-PACING-INTEGRATION.md)：17次API检查及10次正式浏览器对照通过，当前本地部署保留0.4秒提前量，并验证配置故障、取消恢复与回滚。该收益限于媒体等待与音频调度，不代表模型算力提升或视觉零跳帧。
 
-[按需视觉交互](docs/VISUAL-INTERACTION.md)已加入能力开关、上传/摄像头快照、会话时间与轮次绑定、最近两图历史。已完成[真实视觉与语音实测](docs/REAL-MULTIMODAL-BASELINE.md)：32次正式输入对照及三驱动9轮浏览器交互；无图时猜测视觉属性的失败另行记录，默认部署未开启。
+[按需视觉交互](docs/VISUAL-INTERACTION.md)已加入能力开关、上传/摄像头快照、会话时间与轮次绑定、最近两图历史。已完成[真实视觉与语音实测](docs/REAL-MULTIMODAL-BASELINE.md)：32次正式输入对照及三驱动9轮浏览器交互；无图时猜测视觉属性的失败另行记录。2026-09-20 的现有演示已启用视觉并采用 general 约束；新部署仍需显式开启 worker 的视觉能力。当前范围见[交付状态](docs/STATUS.md)。
 
-[视觉证据提示消融](docs/VISUAL-GROUNDING-ABLATION.md)完成111次真实生成：固定探针无图断言从baseline的8/8变为general/evidence各0/8，有图问答与普通问题控制保持正常；显式图片数量未显示额外收益，不外推通用幻觉解决。可按[演示路线](docs/DEMO-WALKTHROUGH.md)展示，策略默认未切换。
+[视觉证据提示消融](docs/VISUAL-GROUNDING-ABLATION.md)完成111次真实生成：固定探针无图断言从baseline的8/8变为general/evidence各0/8，有图问答与普通问题控制保持正常；显式图片数量未显示额外收益，不外推通用幻觉解决。可按[演示路线](docs/DEMO-WALKTHROUGH.md)展示，worker 源码的默认策略仍为 baseline，日常演示已显式选择 general。
