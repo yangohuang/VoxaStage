@@ -7,7 +7,7 @@ from pipecat.audio.vad.silero import SileroVADAnalyzer
 from pipecat.audio.vad.vad_analyzer import VADParams, VADState
 from pipecat.frames.frames import CancelFrame, EndFrame, InputAudioRawFrame, InputTransportMessageFrame
 from pipecat.processors.frame_processor import FrameDirection, FrameProcessor
-from omni_backend import ConversationHistory
+from playback_history import PlaybackHistory
 from visual_context import VisualContext
 
 
@@ -17,7 +17,7 @@ class OmniConversation:
         self.vad = vad or SileroVADAnalyzer(sample_rate=16000, params=VADParams(stop_secs=.7))
         if vad is None:
             self.vad.set_sample_rate(16000)
-        self.history = ConversationHistory()
+        self.history = getattr(session, 'history', None) or PlaybackHistory('minicpm')
         self.visual = VisualContext(session_id, enabled=visual_enabled)
         self.task = None
         self.epoch = 0
@@ -48,16 +48,15 @@ class OmniConversation:
             await self.session.send(binding)
         if self.closed or epoch != self.epoch:
             return
-        messages = self.history.begin(user)
-        if self.history.trimmed:
-            await self.session.send({'type':'context_trimmed','message':'较早的对话或画面已移出模型上下文，最多保留最近两张画面。'})
-            self.history.trimmed = False
+        messages = self.history.begin(user, generation)
+        await self.session.persist_history()
         if self.closed or epoch != self.epoch:
             return
         self.task = asyncio.create_task(self.respond(messages, epoch, generation))
 
     async def respond(self, messages, epoch, generation):
         text, started = [], False
+        block_text, block_audio = '', False
         began=time.monotonic();samples=0
         try:
             if self.closed or epoch != self.epoch:
@@ -69,6 +68,11 @@ class OmniConversation:
                 if self.closed or epoch != self.epoch:
                     return
                 if kind == 'text':
+                    if block_audio and block_text:
+                        self.session.mark_text(block_text)
+                        block_text, block_audio = '', False
+                    block_text += value
+                    self.history.text(value, generation)
                     text.append(value)
                     await self.session.send({'type':'assistant_text','text':value},generation=generation)
                 else:
@@ -78,10 +82,13 @@ class OmniConversation:
                         started = True
                     self.session.audio(value)
                     samples+=len(value)//2
+                    block_audio = True
             if epoch == self.epoch and not self.closed:
-                self.history.generated(''.join(text))
+                if block_text and block_audio:
+                    self.session.mark_text(block_text)
                 if started:
                     self.session.end_clip()
+                await self.session.finish_production()
                 logger.info('OMNI_TURN generated generation={} samples={} seconds={:.3f}',generation,samples,time.monotonic()-began)
         except asyncio.CancelledError:
             raise
@@ -109,9 +116,10 @@ class OmniConversation:
                 await self.session.send({'type':'transcript','text':message['text']})
                 await self.begin({'role':'user','text':message['text']})
         elif kind == 'playback' and message['generation'] == self.session.generation:
-            self.session.playing = message['state'] == 'started'
-            if message['state'] == 'ended':
-                self.history.heard()
+            if message['state'] == 'progress':
+                await self.session.playback_progress(message)
+            else:
+                self.session.playing = message['state'] == 'started'
 
     async def audio(self, pcm):
         if self.closed:
@@ -147,7 +155,8 @@ class OmniConversation:
             self.task.cancel()
             await asyncio.gather(self.task,return_exceptions=True)
         self.audio_buffer.clear();self.preroll.clear()
-        self.history.turns.clear();self.history.pending=None
+        self.history.interrupt()
+        await self.session.persist_history()
         if hasattr(self.vad,'cleanup'):
             await self.vad.cleanup()
 

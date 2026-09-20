@@ -6,7 +6,10 @@ from pathlib import Path
 import tarfile
 
 ROOT = Path(__file__).resolve().parent
-FILES = '''bot.py backend.py services.py turn_observer.py turn_settings.py turn_strategy.py
+FILES = '''agent_tools.py agent_runtime.py avatar_profiles.py conversation_store.py playback_history.py
+test_agent_tools.py test_agent_runtime.py test_avatar_profiles.py test_conversation_store.py test_playback_history.py
+test_streaming_services.py test_avatar_playback.py test_avatar_conversations.py
+bot.py backend.py services.py turn_observer.py turn_settings.py turn_strategy.py
 avatar_backend.py avatar_session.py avatar_demo.py avatar_providers.py avatar_video_backend.py dinet_backend.py smoke_avatar.py smoke_video.py
 asr_server.py test_backend.py test_services.py test_turns.py test_asr_server.py
 test_avatar_backend.py test_avatar_session.py test_tts_lifecycle.py
@@ -24,7 +27,7 @@ avatar_review.py test_avatar_review.py
 requirements.in requirements.lock install_demo.sh export_demo.py
 .env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
 AVATAR-PROTOCOL.md AVATAR-MULTIDRIVER-RESULTS.md
-docs/assets/dinet-idle.png docs/assets/flashhead-idle.png
+docs/assets/streaming-agent-preview.png docs/assets/dinet-idle.png docs/assets/flashhead-idle.png
 docs/assets/streamingtalker-idle.png docs/assets/conversation-preview.png docs/assets/visual-interaction-preview.png'''.split()
 
 

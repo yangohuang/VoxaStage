@@ -42,10 +42,10 @@ async function defaultDecodeImage(imageBytes) {
 }
 
 export class AvatarPlayer {
-  constructor({ onFrame, onState, onError, decodeImage = defaultDecodeImage }) {
+  constructor({ onFrame, onState, onError, onProgress = () => {}, decodeImage = defaultDecodeImage }) {
     this.timeline = new Timeline();
     this.sources = new Set(); this.metadata = new Map();
-    this.onFrame = onFrame; this.onState = onState; this.onError = onError;
+    this.onFrame = onFrame; this.onState = onState; this.onError = onError; this.onProgress = onProgress;
     this.renderedFrames = 0; this.scheduledSamples = 0; this.startedReported = false;
     this.decodeImage = decodeImage; this.decodeQueue = []; this.decodeBytes = 0; this.decodePixels = 0; this.epoch = 0;
     this.timer = setInterval(() => this.tick(), 15);
@@ -58,8 +58,10 @@ export class AvatarPlayer {
   }
 
   stop() {
+    // Invalidate before stop(): a source may fire its ended callback immediately.
+    this.epoch++;
     for (const source of this.sources) { try { source.stop(); } catch {} source.disconnect(); }
-    this.sources.clear(); this.metadata.clear(); this.epoch++; this.discardDecodes(); this.timeline.suspend();
+    this.sources.clear(); this.metadata.clear(); this.discardDecodes(); this.timeline.suspend();
     this.startedReported = false;
   }
 
@@ -129,7 +131,14 @@ export class AvatarPlayer {
         buffer.copyToChannel(packet.pcm, 0);
         const source = this.context.createBufferSource(); source.buffer = buffer;
         source.connect(this.context.destination); this.sources.add(source);
-        source.onended = () => { this.sources.delete(source); source.disconnect(); };
+        const epoch = this.epoch;
+        source.onended = () => {
+          const pending = this.sources.delete(source); source.disconnect();
+          if (pending && epoch === this.epoch && !this.timeline.suspended
+              && packet.generation === this.timeline.generation) {
+            this.onProgress({ clip_id: packet.clip_id, played_samples: packet.start_sample + packet.pcm.length });
+          }
+        };
         source.start(when); this.scheduledSamples += packet.pcm.length;
       }
       if (frame) {

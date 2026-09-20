@@ -1,3 +1,5 @@
+import tempfile
+from avatar_providers import ProviderRegistry
 import base64
 import json
 import time
@@ -26,13 +28,13 @@ class OmniRouteTests(unittest.TestCase):
                 yield {'type':'avatar_meta','kind':'2d','sample_rate':24000,'fps':25,'width':16,'height':16,'codec':'jpeg'}
                 yield {'type':'media','frame_index':0,'start_sample':0,'pts':0,'image':'test-only','audio':base64.b64encode(audio).decode()}
                 yield {'type':'clip_end','total_samples':len(audio)//2}
-        provider=SimpleNamespace(id='dinet',kind='2d',voice='male',make_backend=Renderer)
-        registry=SimpleNamespace(resolve=lambda name:provider,public=lambda:{})
+        registry=ProviderRegistry(config_path='/nonexistent/config',env={'PIPECAT_AVATAR_PROVIDER':'dinet','PIPECAT_DINET_URL':'ws://renderer'})
+        temporary=tempfile.TemporaryDirectory();self.addCleanup(temporary.cleanup)
         real_client=httpx.AsyncClient
         def client(**kwargs):return real_client(transport=httpx.MockTransport(respond),**kwargs)
         def forbidden(backend):raise AssertionError('Cascade must not run for end-to-end model')
         app=FastAPI();sessions=set();workers={}
-        with patch.dict('os.environ',{'PIPECAT_MINICPM_URL':'http://worker'}), patch('avatar_demo.ProviderRegistry',return_value=registry), patch('avatar_demo.httpx.AsyncClient',side_effect=client):
+        with patch.dict('os.environ',{'PIPECAT_MINICPM_URL':'http://worker','PIPECAT_CONVERSATION_DIR':temporary.name}), patch('avatar_demo.ProviderRegistry',return_value=registry),patch('avatar_providers.Provider.make_backend',return_value=Renderer()), patch('avatar_demo.httpx.AsyncClient',side_effect=client):
             register_avatar_routes(app,forbidden,sessions,workers)
             with TestClient(app) as client:
                 with client.websocket_connect('/avatar/ws?provider=dinet&backend=minicpm') as ws:

@@ -8,7 +8,7 @@ export class IdlePlayer {
   select(url) {
     if(url===this.url)return;
     this.epoch++;this.video.pause();this.video.hidden=true;this.onVisibility(false);
-    this.url=/^\/avatar\/idle\/(dinet|flashhead|streamingtalker)\.mp4$/.test(url)?url:'';
+    this.url=/^\/avatar\/idle\/[a-z0-9][a-z0-9_-]{0,63}\.mp4$/.test(url)?url:'';
     if(this.url)this.video.src=this.url;else this.video.removeAttribute('src');
     this.video.load();
     if(this.wanted)void this.show();

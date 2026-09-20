@@ -6,6 +6,19 @@
   <meta name="color-scheme" content="light">
   <title>VoxaStage · 实时语音数字人</title>
   <link rel="stylesheet" href="/avatar/static/style.css">
+  <style>
+    .provider-control{display:flex;flex-direction:column;gap:5px;font-size:11px;min-width:0}
+    select{font:inherit;color:inherit;background:#fff;border:1px solid #d7ded5;border-radius:8px;padding:8px;max-width:100%}
+    select:focus-visible{outline:3px solid #a7c98b;outline-offset:3px}
+    .session-controls{display:flex;flex-wrap:wrap;gap:7px;padding:12px 0;flex-shrink:0}
+    .session-controls label{width:100%}.session-controls select{width:100%}
+    .session-controls button{font-size:11px;padding:7px 10px}
+    .task-panel{font-size:11px;color:#63765d;border-top:1px solid #e1e5dc;padding:9px 0;flex-shrink:0}
+    .task-panel p{margin:5px 0;line-height:1.5}.task-list{max-height:100px;overflow:auto}
+    .task-card{border-left:3px solid #a7c98b;padding:6px 8px;background:#f3f5ed;overflow-wrap:anywhere}
+    .task-card[data-state="failed"]{border-color:#bc8069}.task-card[data-state="cancelled"]{color:#8c9388}
+    .conversation .messages{min-height:120px}
+  </style>
   <script type="module" src="/avatar/static/app.mjs"></script>
 </head>
 <body>
@@ -26,13 +39,18 @@
           <div class="viewport-caption"><span class="tiny-dot"></span><span id="stage-label">3D 头部示例 · 非真人形象</span></div>
         </div>
         <div class="stage-footer"><div><span class="status-title" id="activity">准备就绪</span><p id="activity-detail">连接服务后，可开启麦克风或发送文字。</p></div><div class="audio-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
-        <div class="controls"><label class="provider-control" for="dialogue-backend"><span>对话模型</span><select id="dialogue-backend"><option value="cascade">Qwen · 级联语音</option></select></label><label class="provider-control" for="provider"><span>数字人驱动</span><select id="provider" aria-describedby="provider-description"><option value="streamingtalker">StreamingTalker · 3D</option></select></label><span id="provider-description" class="sr-only">连接前选择数字人驱动，连接后将锁定。</span><button id="connect" class="primary">连接会话 <span>↗</span></button><button id="microphone" disabled aria-pressed="false">开启麦克风</button><button id="interrupt" disabled>打断</button><button id="disconnect" class="quiet" disabled>断开</button></div>
+        <div class="controls"><label class="provider-control" for="dialogue-backend"><span>对话模型</span><select id="dialogue-backend"><option value="cascade">Qwen · 级联语音</option></select></label><label class="provider-control" for="profile"><span>数字人角色</span><select id="profile" aria-describedby="provider-description"><option value="streamingtalker">StreamingTalker</option></select></label><label class="provider-control" for="provider"><span>数字人驱动</span><select id="provider" aria-describedby="provider-description"><option value="streamingtalker">StreamingTalker · 3D</option></select></label><span id="provider-description" class="sr-only">连接前选择角色、配套声音和数字人驱动，连接后将锁定。</span><button id="connect" class="primary">连接会话 <span>↗</span></button><button id="microphone" disabled aria-pressed="false">开启麦克风</button><button id="interrupt" disabled>打断</button><button id="disconnect" class="quiet" disabled>断开</button></div>
       </section>
       <aside class="conversation" aria-label="对话面板">
         <div class="panel-heading"><div><p class="eyebrow">CONVERSATION</p><h2>这一次对话</h2></div><span class="local-label">本地运行</span></div>
+        <div class="session-controls" aria-label="本地保存的对话">
+          <label class="provider-control" for="conversation-select"><span>已保存的对话</span><select id="conversation-select"><option value="">选择已保存的对话</option></select></label>
+          <button id="conversation-new" type="button">新建</button><button id="conversation-resume" type="button" disabled>载入继续</button><button id="conversation-delete" type="button" disabled>删除</button>
+        </div>
         <div id="messages" class="messages" role="log" aria-live="polite" aria-relevant="additions text">
           <div id="welcome" class="welcome"><span class="welcome-icon" aria-hidden="true">✳</span><h3>从一句问候开始</h3><p>可以直接说话，也可以输入文字。<br>回复的声音与嘴型会同步呈现。</p><div class="suggestion">试试：你好，介绍一下你自己。</div></div>
         </div>
+        <section class="task-panel" aria-label="工具任务"><p id="task-capability">连接后显示当前模型的任务能力</p><div id="task-list" class="task-list" role="log" aria-live="polite"></div></section>
         <div id="notice" class="notice" role="status" hidden></div>
         <section id="visual-panel" class="visual-panel" aria-label="画面输入" hidden>
           <div class="visual-actions"><label>选择图片 <input id="visual-file" type="file" accept="image/png,image/jpeg"></label><button id="visual-camera" type="button">打开摄像头</button><button id="visual-snapshot" type="button" hidden>拍照</button><button id="visual-remove" type="button" disabled>移除待发画面</button></div>
@@ -41,7 +59,7 @@
           <p id="visual-status" role="status"></p>
         </section>
         <form id="text-form"><label class="sr-only" for="text-input">输入消息</label><textarea id="text-input" rows="2" maxlength="500" placeholder="输入一句话…" disabled></textarea><div class="composer-footer"><span>Enter 发送 · Shift + Enter 换行</span><button id="send" class="send" type="submit" disabled aria-label="发送消息">↑</button></div></form>
-        <p class="privacy-note">麦克风和摄像头由你开启；摄像头仅在拍照时发送画面，断开后停止采集。</p>
+        <p class="privacy-note">对话保存在这台服务设备，可在上方载入或删除。文字、播放确认和必要的模型上下文会用于继续对话；包含画面或语音的上下文有容量限制。麦克风和摄像头由你开启，断开后停止采集。</p>
       </aside>
     </main>
     <footer class="page-footer"><span>LOCAL VOICE EXPERIENCE</span><span>实时语音 · 音画同步 · 可随时打断</span></footer>
