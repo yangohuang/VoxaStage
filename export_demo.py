@@ -28,7 +28,7 @@ demo.py deployment_check.py test_demo.py test_deployment_check.py
 requirements.in requirements.lock install_demo.sh export_demo.py
 .env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
 AVATAR-PROTOCOL.md AVATAR-MULTIDRIVER-RESULTS.md
-docs/assets/streaming-agent-preview.png docs/assets/dinet-idle.png docs/assets/flashhead-idle.png
+docs/assets/streaming-agent-preview.png docs/assets/dinet-kanghui.jpg docs/assets/flashhead-idle.png
 docs/assets/streamingtalker-idle.png docs/assets/conversation-preview.png docs/assets/visual-interaction-preview.png'''.split()
 
 
