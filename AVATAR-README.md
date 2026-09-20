@@ -93,11 +93,8 @@ flowchart TB
 bash install_demo.sh
 cp .env.example .env
 # 编辑 .env：填写后端地址、已注册音色，以及需要启用的数字人 / MiniCPM 服务。
-set -a
-source .env
-set +a
-mkdir -p runtime/numba-cache
-.venv/bin/python bot.py --host 127.0.0.1 --port 18314 -t webrtc
+.venv/bin/python demo.py check
+.venv/bin/python demo.py run
 ```
 
 打开 **<http://127.0.0.1:18314/avatar>**，选择对话后端和形象，点击「连接会话」，再输入文字或开启麦克风。可用“介绍一下语音 agent 技术”体验中英混合输入；回答期间再次开口或点击「打断」，断开后查看 idle 循环。

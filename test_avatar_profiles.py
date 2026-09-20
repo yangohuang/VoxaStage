@@ -29,6 +29,23 @@ class ProfileTests(unittest.TestCase):
             self.path.write_text(json.dumps(config))
         return avatar_profiles.ProfileRegistry(providers or self.providers, self.path)
 
+    def test_empty_environment_override_preserves_configured_default(self):
+        from avatar_profiles import ProfileRegistry
+        self.path.write_text(json.dumps(self.config()))
+        registry = ProfileRegistry(self.providers, self.path,
+                                   env={'PIPECAT_AVATAR_PROFILE': ''})
+        self.assertEqual(registry.default, 'kanghui256')
+
+    def test_environment_overrides_default_but_explicit_selection_wins(self):
+        from avatar_profiles import ProfileRegistry
+        registry = ProfileRegistry(self.providers, self.path,
+                                   env={'PIPECAT_AVATAR_PROFILE': 'dinet'})
+        self.assertEqual(registry.resolve().id, 'dinet')
+        self.assertEqual(registry.resolve('flashhead').id, 'flashhead')
+        with self.assertRaises(ValueError):
+            ProfileRegistry(self.providers, self.path,
+                            env={'PIPECAT_AVATAR_PROFILE': 'unknown'})
+
     def test_missing_config_preserves_legacy_default_choices_and_voices(self):
         registry = self.registry()
         self.assertEqual(registry.default, self.providers.default)

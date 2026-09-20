@@ -5,9 +5,6 @@ import os
 from pathlib import Path
 from urllib.parse import urlsplit
 
-from avatar_backend import AvatarBackend
-from avatar_video_backend import VideoBackend
-from dinet_backend import DINetBackend
 
 
 @dataclass(frozen=True)
@@ -24,8 +21,13 @@ class Provider:
 
     def make_backend(self):
         if self.id == 'dinet':
+            from dinet_backend import DINetBackend
             return DINetBackend(self.url)
-        return (AvatarBackend if self.kind == '3d' else VideoBackend)(self.url)
+        if self.kind == '3d':
+            from avatar_backend import AvatarBackend
+            return AvatarBackend(self.url)
+        from avatar_video_backend import VideoBackend
+        return VideoBackend(self.url)
 
     def public(self):
         return dict(id=self.id, label=self.label, kind=self.kind, configured=bool(self.url),

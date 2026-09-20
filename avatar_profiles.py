@@ -5,6 +5,7 @@ are profile IDs; public metadata contains only a same-origin idle asset route.
 """
 from dataclasses import dataclass, field, replace
 import json
+import os
 from pathlib import Path
 import re
 from types import MappingProxyType
@@ -65,7 +66,8 @@ class Profile:
 
 
 class ProfileRegistry:
-    def __init__(self, provider_registry, config_path=None):
+    def __init__(self, provider_registry, config_path=None, *, env=None):
+        env = os.environ if env is None else env
         self.provider_registry = provider_registry
         path = (Path(config_path) if config_path is not None
                 else Path(__file__).parent / 'runtime/avatar-profiles.json')
@@ -105,6 +107,7 @@ class ProfileRegistry:
                 resources.setdefault(profile.provider, []).append((endpoint, profile.idle_url))
                 profiles[profile.id] = profile
             self.default = config['default_profile']
+        self.default = env.get('PIPECAT_AVATAR_PROFILE') or self.default
         if not isinstance(self.default, str) or self.default not in profiles:
             raise ValueError('Unknown default avatar profile')
         self.profiles = MappingProxyType(profiles)

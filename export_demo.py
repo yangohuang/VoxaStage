@@ -24,6 +24,7 @@ prepare_avatar_cases.py avatar_eval_capture.py capture_avatar.py
 test_prepare_avatar_cases.py test_avatar_eval_capture.py test_capture_avatar.py
 avatar_playback_lab.py test_avatar_playback_lab.py trace_dinet.py test_trace_dinet.py
 avatar_review.py test_avatar_review.py
+demo.py deployment_check.py test_demo.py test_deployment_check.py
 requirements.in requirements.lock install_demo.sh export_demo.py
 .env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
 AVATAR-PROTOCOL.md AVATAR-MULTIDRIVER-RESULTS.md
