@@ -12,8 +12,8 @@ VoxaStage 是基于公开模型与既有模型服务构建的集成项目。本�
 | [Qwen3-ASR](https://github.com/QwenLM/Qwen3-ASR) · Qwen 团队 | 本地语音识别模型；仓库提供 HTTP 服务与客户端适配，不含权重。 | 已部署验证 1.7B；模型 revision `7278e1e70fe206f11671096ffdd38061171dd6e5`。示例环境仍从 0.6B 起步。 |
 | [Qwen3](https://github.com/QwenLM/Qwen3) · Qwen 团队 | 级联链路中的文本大模型；仓库提供流式服务和提示配置，不含权重。 | 当前本地默认 Qwen3-4B NF4；候选比较见[体验记录](docs/EXPERIENCE-UPGRADE.md)。 |
 | [IndexTTS](https://github.com/index-tts/index-tts) · IndexTTS 团队 | 级联语音合成引擎。连接部署者已有的 WebSocket 服务；仓库包含客户端及固定音色兼容扩展，不包含完整推理服务。 | [TTS 兼容层](tts-compat/README.md)；不能把本项目协议当作上游原生 API。 |
-| [MiniCPM-o](https://github.com/OpenBMB/MiniCPM-o) · OpenBMB | 端到端语音模型；仓库提供 worker、历史与取消管理，不含模型代码快照或权重。 | [`openbmb/MiniCPM-o-4_5-awq`](https://huggingface.co/openbmb/MiniCPM-o-4_5-awq)，revision `a3073852f52e4beec3f278d1f6616d40c26fe343`；[部署说明](omni-server/README.md)。 |
-| [DINet](https://github.com/MRzzm/DINet) · 论文作者 | 音频驱动的人脸视频生成。这里只分发连接既有部署服务的客户端，不分发 DINet 训练代码、推理服务或角色资源。 | [部署协议](docs/DINET-DEPLOYMENT.md)。既有服务的完整实现与版本未在本仓库审计，不宣称与官方仓库原样等同。 |
+| [MiniCPM-o](https://github.com/OpenBMB/MiniCPM-o) · OpenBMB | 端到端语音模型及可选视觉编码器；仓库提供 worker、历史与取消管理、按需画面输入契约，不含模型代码快照或权重。真实图文/图音推理已完成[受控验证](docs/REAL-MULTIMODAL-BASELINE.md)，广泛识图质量仍待验收。 | [`openbmb/MiniCPM-o-4_5-awq`](https://huggingface.co/openbmb/MiniCPM-o-4_5-awq)，revision `a3073852f52e4beec3f278d1f6616d40c26fe343`；[部署说明](omni-server/README.md)。 |
+| [DINet](https://github.com/MRzzm/DINet) · 论文作者 | 音频驱动的人脸视频生成。这里只分发客户端及特定既有部署的节奏启动器，不分发 DINet 训练代码、原生推理实现或角色资源。 | [部署协议](docs/DINET-DEPLOYMENT.md)。既有服务的完整实现与版本未在本仓库审计，不宣称与官方仓库原样等同。 |
 | [SoulX-FlashHead](https://github.com/Soul-AILab/SoulX-FlashHead) · Soul AI Lab | 使用 Lite 管线生成 2D 肖像帧；分发桥接 worker 和单 GPU 兼容补丁，不分发上游 checkout 或权重。 | 源码固定 `9bc03de06bb0de82cd6bc477804512ae06144bf2`；[worker 与补丁说明](video-server/README.md)。 |
 | [StreamingTalker](https://github.com/zju3dv/StreamingTalker) · ZJU3DV | 使用音频驱动的 3D 人脸模型；随包的是既有本地增量服务扩展、测试、补丁和审计清单。 | 内容比对基线 `25b613ac273624947e5fa51c4c41c4933d8147be`；[NOTICE](avatar-server/NOTICE.md)、[逐文件比对](avatar-server/upstream-comparison.json)。 |
 
@@ -38,13 +38,16 @@ MindTalker 是作者此前基于 MiniCPM-o 的项目。本次端到端接入参�
 | 打断隔离、会话准入、取消清理、长回复分段与背压 | `avatar_session.py`、`avatar_demo.py` |
 | 浏览器交互、同一时钟播放音画、角色切换与 idle | `avatar-web/` |
 | FlashHead 桥接、MiniCPM worker、StreamingTalker 增量服务扩展 | `video-server/`、`omni-server/`、`avatar-server/serving/` |
+| 受限工具调度、任务状态与取消 | `agent_runtime.py`、`agent_tools.py` |
+| 按播放确认的上下文、本地会话及角色配置 | `playback_history.py`、`conversation_store.py`、`avatar_profiles.py` |
 | 角色音色兼容、验证脚本与回归测试 | `tts-compat/`、`smoke_avatar.py`、`smoke_video.py`、各 `test_*` 文件 |
+| 固定版本DINet部署的消费提前量、256人物配置与有界代理清理启动器；原生服务和模型仍由部署者提供 | `dinet-server/` |
 
-这些工作不包含上述基础模型的预训练、原创网络设计或数据集构建。真实工具调用与慢任务编排尚未实现，不应作为现有能力宣传。
+这些工作不包含上述基础模型的预训练、原创网络设计或数据集构建。级联链路现已加入受限工具调用、任务状态、取消及迟到结果过滤；MiniCPM-o 链路尚未接入该工具调度。
 
 ## 许可说明
 
 - VoxaStage 的集成层与前端使用根目录 [MIT License](LICENSE)。第三方代码、补丁对应的上游文件、权重和素材不因该许可而改变自身条款。
 - `avatar-server/LICENSE` 保留所用历史 StreamingTalker 基线的 Apache-2.0 原文。上游后续提交 `1f6452752dbd6c11f4bb1e94982e000e68d8f76d` 已修改许可；本项目不把当前上游 `main`、模型权重或数据集统称为 Apache-2.0。完整说明见 [NOTICE](avatar-server/NOTICE.md)。
 - 其他依赖以实际安装版本、权重发布页及素材提供方条款为准。源码许可与模型、人物、声音、数据的使用许可分别处理；本页不是所有素材已获重新分发授权的声明。
-- 若后续公开仓库，需先补齐演示肖像来源和展示授权记录，或替换为来源清楚的演示素材。当前私有联调截图不应被当作可自由复用的公共素材。
+- 仓库已公开，但这不改变演示截图中人物形象、音色和上游模型素材的权利归属。现有截图用于说明集成效果，不能视为可自由复用的素材授权；完整肖像来源与再分发授权记录尚未补齐。部署者应提供自己有权使用的形象与声音，源码包不提供人物驱动资源或音色参考。

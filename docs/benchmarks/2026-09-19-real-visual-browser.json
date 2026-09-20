@@ -1,0 +1,630 @@
+{
+  "version": 1,
+  "date": "2026-09-19",
+  "status": "passed",
+  "scope": "real model, real avatar drivers and browser; uploaded synthetic images and injected PCM, not physical microphone",
+  "source_commit": "016adebd01d83f05b99b3f8d1a468c1883bf4389",
+  "providers": [
+    {
+      "provider": "dinet",
+      "status": "passed",
+      "idle_after_reply": true,
+      "idle_after_disconnect": true,
+      "session_released": true,
+      "turns": [
+        {
+          "input": "image_text",
+          "request_index": 0,
+          "response_text": "图中左边物体的颜色是红色，形状是圆形。",
+          "rendered_frames": 117,
+          "received_media": 117,
+          "voice": "male",
+          "request_sha256": "741c06e375d6c21fe9daf3218bcc5c546387ff86f0e53fc49c5c7f6cbd2513a7",
+          "messages": [
+            {
+              "role": "user",
+              "text": "请说出图中左边物体的颜色和形状。",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 487,
+                  "id": "image-1",
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+                }
+              ]
+            }
+          ],
+          "audio_samples": 112320,
+          "bindings": [
+            {
+              "images": [
+                {
+                  "captured_at_ms": 487,
+                  "id": "image-1",
+                  "received_at_ms": 596.172709017992,
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1",
+                  "source": "upload"
+                }
+              ],
+              "sequence": 1,
+              "turn_id": 1,
+              "type": "visual_bound"
+            }
+          ],
+          "clip_ends": [
+            {
+              "clip_id": "1",
+              "generation": 1,
+              "total_samples": 112320,
+              "type": "clip_end"
+            }
+          ],
+          "context_trimmed": false
+        },
+        {
+          "input": "image_audio",
+          "request_index": 1,
+          "response_text": "图中左边物体的颜色是绿色，形状是圆形。",
+          "rendered_frames": 132,
+          "received_media": 132,
+          "voice": "male",
+          "request_sha256": "5993819e55f3c3dbba4357e09e461ecb739f917f8f2b1e99b3ef65c547bd3802",
+          "messages": [
+            {
+              "role": "user",
+              "text": "请说出图中左边物体的颜色和形状。",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 487,
+                  "id": "image-1",
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+                }
+              ]
+            },
+            {
+              "role": "assistant",
+              "text": "图中左边物体的颜色是红色，形状是圆形。"
+            },
+            {
+              "role": "user",
+              "audio_samples": 47680,
+              "audio_sha256": "9e2427cdaad366f97b27ef69daed5ad6e536202df2285ba5df4ad9b0676ae32b",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 9524,
+                  "id": "image-2",
+                  "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb"
+                }
+              ]
+            }
+          ],
+          "audio_samples": 126720,
+          "bindings": [
+            {
+              "images": [
+                {
+                  "captured_at_ms": 9524,
+                  "id": "image-2",
+                  "received_at_ms": 9607.714515179396,
+                  "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb",
+                  "source": "upload"
+                }
+              ],
+              "sequence": 2,
+              "turn_id": 2,
+              "type": "visual_bound"
+            }
+          ],
+          "clip_ends": [
+            {
+              "clip_id": "2",
+              "generation": 2,
+              "total_samples": 126720,
+              "type": "clip_end"
+            }
+          ],
+          "context_trimmed": false
+        },
+        {
+          "input": "image_text",
+          "request_index": 2,
+          "response_text": "左边物体由绿色变成了红色。",
+          "rendered_frames": 92,
+          "received_media": 92,
+          "voice": "male",
+          "request_sha256": "5401650817e93ac90e5019fd9412c700c7f23d168b1b018d18184fce7fa3efc7",
+          "messages": [
+            {
+              "role": "user",
+              "text": "请说出图中左边物体的颜色和形状。",
+              "images_omitted": true
+            },
+            {
+              "role": "assistant",
+              "text": "图中左边物体的颜色是红色，形状是圆形。"
+            },
+            {
+              "role": "user",
+              "audio_samples": 47680,
+              "audio_sha256": "9e2427cdaad366f97b27ef69daed5ad6e536202df2285ba5df4ad9b0676ae32b",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 9524,
+                  "id": "image-2",
+                  "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb"
+                }
+              ]
+            },
+            {
+              "role": "assistant",
+              "text": "图中左边物体的颜色是绿色，形状是圆形。"
+            },
+            {
+              "role": "user",
+              "text": "与上一张相比，左边物体的颜色发生了什么变化？",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 22245,
+                  "id": "image-3",
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+                }
+              ]
+            }
+          ],
+          "audio_samples": 88320,
+          "bindings": [
+            {
+              "images": [
+                {
+                  "captured_at_ms": 22245,
+                  "id": "image-3",
+                  "received_at_ms": 22325.23044757545,
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1",
+                  "source": "upload"
+                }
+              ],
+              "sequence": 3,
+              "turn_id": 3,
+              "type": "visual_bound"
+            }
+          ],
+          "clip_ends": [
+            {
+              "clip_id": "3",
+              "generation": 3,
+              "total_samples": 88320,
+              "type": "clip_end"
+            }
+          ],
+          "context_trimmed": true
+        }
+      ]
+    },
+    {
+      "provider": "flashhead",
+      "status": "passed",
+      "idle_after_reply": true,
+      "idle_after_disconnect": true,
+      "session_released": true,
+      "turns": [
+        {
+          "input": "image_text",
+          "request_index": 3,
+          "response_text": "图中左边的物体是红色的圆形。",
+          "rendered_frames": 79,
+          "received_media": 79,
+          "voice": "female",
+          "request_sha256": "4040c9ad5afd46abff949a713c432bf58c97e321342489c92be4bd12b98aa4e0",
+          "messages": [
+            {
+              "role": "user",
+              "text": "请说出图中左边物体的颜色和形状。",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 527,
+                  "id": "image-1",
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+                }
+              ]
+            }
+          ],
+          "audio_samples": 75840,
+          "bindings": [
+            {
+              "images": [
+                {
+                  "captured_at_ms": 527,
+                  "id": "image-1",
+                  "received_at_ms": 537.8850614652038,
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1",
+                  "source": "upload"
+                }
+              ],
+              "sequence": 1,
+              "turn_id": 1,
+              "type": "visual_bound"
+            }
+          ],
+          "clip_ends": [
+            {
+              "clip_id": "1",
+              "generation": 1,
+              "total_samples": 75840,
+              "type": "clip_end"
+            }
+          ],
+          "context_trimmed": false
+        },
+        {
+          "input": "image_audio",
+          "request_index": 4,
+          "response_text": "图中左边的物体是绿色的圆形。",
+          "rendered_frames": 87,
+          "received_media": 87,
+          "voice": "female",
+          "request_sha256": "b68def1755fd2cc617c65357b0aa80acc9ed4b8d399cbbf443efd4938541275f",
+          "messages": [
+            {
+              "role": "user",
+              "text": "请说出图中左边物体的颜色和形状。",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 527,
+                  "id": "image-1",
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+                }
+              ]
+            },
+            {
+              "role": "assistant",
+              "text": "图中左边的物体是红色的圆形。"
+            },
+            {
+              "role": "user",
+              "audio_samples": 47680,
+              "audio_sha256": "9e2427cdaad366f97b27ef69daed5ad6e536202df2285ba5df4ad9b0676ae32b",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 6971,
+                  "id": "image-2",
+                  "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb"
+                }
+              ]
+            }
+          ],
+          "audio_samples": 83520,
+          "bindings": [
+            {
+              "images": [
+                {
+                  "captured_at_ms": 6971,
+                  "id": "image-2",
+                  "received_at_ms": 6984.390100464225,
+                  "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb",
+                  "source": "upload"
+                }
+              ],
+              "sequence": 2,
+              "turn_id": 2,
+              "type": "visual_bound"
+            }
+          ],
+          "clip_ends": [
+            {
+              "clip_id": "2",
+              "generation": 2,
+              "total_samples": 83520,
+              "type": "clip_end"
+            }
+          ],
+          "context_trimmed": false
+        },
+        {
+          "input": "image_text",
+          "request_index": 5,
+          "response_text": "左边物体从绿色变成了红色。",
+          "rendered_frames": 73,
+          "received_media": 73,
+          "voice": "female",
+          "request_sha256": "4dca8a5dfd83a8fc65c272307a9e8ca57bb4f7c88055772554722b1a78000bbc",
+          "messages": [
+            {
+              "role": "user",
+              "text": "请说出图中左边物体的颜色和形状。",
+              "images_omitted": true
+            },
+            {
+              "role": "assistant",
+              "text": "图中左边的物体是红色的圆形。"
+            },
+            {
+              "role": "user",
+              "audio_samples": 47680,
+              "audio_sha256": "9e2427cdaad366f97b27ef69daed5ad6e536202df2285ba5df4ad9b0676ae32b",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 6971,
+                  "id": "image-2",
+                  "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb"
+                }
+              ]
+            },
+            {
+              "role": "assistant",
+              "text": "图中左边的物体是绿色的圆形。"
+            },
+            {
+              "role": "user",
+              "text": "与上一张相比，左边物体的颜色发生了什么变化？",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 17751,
+                  "id": "image-3",
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+                }
+              ]
+            }
+          ],
+          "audio_samples": 70080,
+          "bindings": [
+            {
+              "images": [
+                {
+                  "captured_at_ms": 17751,
+                  "id": "image-3",
+                  "received_at_ms": 17770.611694082618,
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1",
+                  "source": "upload"
+                }
+              ],
+              "sequence": 3,
+              "turn_id": 3,
+              "type": "visual_bound"
+            }
+          ],
+          "clip_ends": [
+            {
+              "clip_id": "3",
+              "generation": 3,
+              "total_samples": 70080,
+              "type": "clip_end"
+            }
+          ],
+          "context_trimmed": true
+        }
+      ]
+    },
+    {
+      "provider": "streamingtalker",
+      "status": "passed",
+      "idle_after_reply": true,
+      "idle_after_disconnect": true,
+      "session_released": true,
+      "turns": [
+        {
+          "input": "image_text",
+          "request_index": 6,
+          "response_text": "图中左边物体的颜色是红色，形状是圆形。",
+          "rendered_frames": 138,
+          "received_media": 138,
+          "voice": "male",
+          "request_sha256": "7ab8a951f0e550c83284c5544fbd4dc80935e40260d30450604e90a30cf7bf63",
+          "messages": [
+            {
+              "role": "user",
+              "text": "请说出图中左边物体的颜色和形状。",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 508,
+                  "id": "image-1",
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+                }
+              ]
+            }
+          ],
+          "audio_samples": 110400,
+          "bindings": [
+            {
+              "images": [
+                {
+                  "captured_at_ms": 508,
+                  "id": "image-1",
+                  "received_at_ms": 530.7479565963149,
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1",
+                  "source": "upload"
+                }
+              ],
+              "sequence": 1,
+              "turn_id": 1,
+              "type": "visual_bound"
+            }
+          ],
+          "clip_ends": [
+            {
+              "clip_id": "1",
+              "generation": 1,
+              "total_samples": 110400,
+              "type": "clip_end"
+            }
+          ],
+          "context_trimmed": false
+        },
+        {
+          "input": "image_audio",
+          "request_index": 7,
+          "response_text": "图中左边物体的颜色是绿色，形状是圆形。",
+          "rendered_frames": 134,
+          "received_media": 134,
+          "voice": "male",
+          "request_sha256": "6bcb53b31878b1fcbebb38f64a6e6301518de3410259d299f1f9c47d99601e27",
+          "messages": [
+            {
+              "role": "user",
+              "text": "请说出图中左边物体的颜色和形状。",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 508,
+                  "id": "image-1",
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+                }
+              ]
+            },
+            {
+              "role": "assistant",
+              "text": "图中左边物体的颜色是红色，形状是圆形。"
+            },
+            {
+              "role": "user",
+              "audio_samples": 47680,
+              "audio_sha256": "9e2427cdaad366f97b27ef69daed5ad6e536202df2285ba5df4ad9b0676ae32b",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 8388,
+                  "id": "image-2",
+                  "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb"
+                }
+              ]
+            }
+          ],
+          "audio_samples": 106560,
+          "bindings": [
+            {
+              "images": [
+                {
+                  "captured_at_ms": 8388,
+                  "id": "image-2",
+                  "received_at_ms": 8418.915640562773,
+                  "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb",
+                  "source": "upload"
+                }
+              ],
+              "sequence": 2,
+              "turn_id": 2,
+              "type": "visual_bound"
+            }
+          ],
+          "clip_ends": [
+            {
+              "clip_id": "2",
+              "generation": 2,
+              "total_samples": 106560,
+              "type": "clip_end"
+            }
+          ],
+          "context_trimmed": false
+        },
+        {
+          "input": "image_text",
+          "request_index": 8,
+          "response_text": "左边物体的颜色由绿色变成了红色。",
+          "rendered_frames": 156,
+          "received_media": 156,
+          "voice": "male",
+          "request_sha256": "09350dc9a19f52debaf0bc2921d8ed526be7c38077acae577fc9ffd24348aff6",
+          "messages": [
+            {
+              "role": "user",
+              "text": "请说出图中左边物体的颜色和形状。",
+              "images_omitted": true
+            },
+            {
+              "role": "assistant",
+              "text": "图中左边物体的颜色是红色，形状是圆形。"
+            },
+            {
+              "role": "user",
+              "audio_samples": 47680,
+              "audio_sha256": "9e2427cdaad366f97b27ef69daed5ad6e536202df2285ba5df4ad9b0676ae32b",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 8388,
+                  "id": "image-2",
+                  "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb"
+                }
+              ]
+            },
+            {
+              "role": "assistant",
+              "text": "图中左边物体的颜色是绿色，形状是圆形。"
+            },
+            {
+              "role": "user",
+              "text": "与上一张相比，左边物体的颜色发生了什么变化？",
+              "images": [
+                {
+                  "source": "upload",
+                  "captured_at_ms": 19894,
+                  "id": "image-3",
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+                }
+              ]
+            }
+          ],
+          "audio_samples": 124800,
+          "bindings": [
+            {
+              "images": [
+                {
+                  "captured_at_ms": 19894,
+                  "id": "image-3",
+                  "received_at_ms": 19917.024927213788,
+                  "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1",
+                  "source": "upload"
+                }
+              ],
+              "sequence": 3,
+              "turn_id": 3,
+              "type": "visual_bound"
+            }
+          ],
+          "clip_ends": [
+            {
+              "clip_id": "3",
+              "generation": 3,
+              "total_samples": 124800,
+              "type": "clip_end"
+            }
+          ],
+          "context_trimmed": true
+        }
+      ]
+    }
+  ],
+  "restoration_audit": {
+    "restored": true,
+    "ready": true,
+    "busy": false,
+    "candidate_alive": false,
+    "watchdog_alive": false,
+    "original_identity_matches": true
+  },
+  "input_provenance": "Two constructed PNGs uploaded and browser-resized to JPEG; synthetic PCM sent via browser WebSocket at20ms cadence through real server VAD. No physical microphone.",
+  "observer": "Model client wrapper records metadata/hashes and delegates unchanged requests to original generator; idle files served from existing local asset directory. No inference or avatar response substitute.",
+  "artifact_sha256": {
+    "browser/results.json": "a8c6b2a06dee4bf5536fc72b7259ad097ce8e6c3e79348ae12d13c14036ec047",
+    "control/results.json": "59b73f9f5a426ed5dfe1ef52756ee722c0a02eb6f88d23df459f36f679f7bd31",
+    "requests.json": "192647fe0f67c67abc9c5f485c1f1bf3aab3eedbcae13a54e4046962324f6d2b",
+    "remote/results.json": "175870c4d0766bfcff35fc144f7384f09cfb237542c47e474e421cdf2c6d2099",
+    "browser/dinet.png": "66f8da8d6c014d509ffd4555d0d259985f2fd9758488f8d132bdc7c671d40cb1",
+    "browser/flashhead.png": "ecc9c4a1d06a4672cac5025c43e6dfc1367c21526f318c523f2f00e28f38801b",
+    "browser/streamingtalker.png": "ef4cb79290c6ea55ad1bbee4d07ad9717606957efd905f4989e6d883960d2276"
+  },
+  "limitations": [
+    "No human listening or dynamic lip-sync quality annotation",
+    "Screenshots taken after reply while idle; not motion quality evidence",
+    "Headless browser uses software WebGL; not a user-device GPU benchmark"
+  ]
+}

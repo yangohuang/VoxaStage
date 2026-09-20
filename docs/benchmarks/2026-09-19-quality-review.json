@@ -1,0 +1,4537 @@
+{
+  "version": 1,
+  "date": "2026-09-19",
+  "scope": "Offline review of saved captures, headless Chromium with SwiftShader; replay functionality and annotation persistence only, no human perceptual quality claim",
+  "captures": {
+    "total": 45,
+    "two_d": 30,
+    "three_d": 15,
+    "per_category": 9
+  },
+  "final_browser": {
+    "runs": [
+      {
+        "completedPlaybackCount": 1,
+        "displayedFrames": 61,
+        "duration": 2.432,
+        "events": [
+          {
+            "atMs": 724.5999994277954,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "preview"
+          },
+          {
+            "atMs": 1033.6999998092651,
+            "audioTime": 0.04,
+            "index": 1,
+            "reason": "seek"
+          },
+          {
+            "atMs": 1033.8999996185305,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 1042.5,
+            "audioTime": 2.4,
+            "index": 60,
+            "reason": "seek"
+          },
+          {
+            "atMs": 1049.8999996185305,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 1508.0999994277954,
+            "audioTime": 0.049985,
+            "index": 1,
+            "reason": "playback"
+          },
+          {
+            "atMs": 1541.3000001907349,
+            "audioTime": 0.081288,
+            "index": 2,
+            "reason": "playback"
+          },
+          {
+            "atMs": 1591.3000001907349,
+            "audioTime": 0.127514,
+            "index": 3,
+            "reason": "playback"
+          },
+          {
+            "atMs": 1641.3000001907349,
+            "audioTime": 0.193198,
+            "index": 4,
+            "reason": "playback"
+          },
+          {
+            "atMs": 1658.3999996185305,
+            "audioTime": 0.210386,
+            "index": 5,
+            "reason": "playback"
+          },
+          {
+            "atMs": 1708,
+            "audioTime": 0.25615,
+            "index": 6,
+            "reason": "playback"
+          },
+          {
+            "atMs": 1741.3999996185305,
+            "audioTime": 0.28569,
+            "index": 7,
+            "reason": "playback"
+          },
+          {
+            "atMs": 1791.3000001907349,
+            "audioTime": 0.331869,
+            "index": 8,
+            "reason": "playback"
+          },
+          {
+            "atMs": 1824.5999994277952,
+            "audioTime": 0.361447,
+            "index": 9,
+            "reason": "playback"
+          },
+          {
+            "atMs": 1874.6999998092651,
+            "audioTime": 0.407671,
+            "index": 10,
+            "reason": "playback"
+          },
+          {
+            "atMs": 1908,
+            "audioTime": 0.460502,
+            "index": 11,
+            "reason": "playback"
+          },
+          {
+            "atMs": 1941.1999998092651,
+            "audioTime": 0.489945,
+            "index": 12,
+            "reason": "playback"
+          },
+          {
+            "atMs": 1974.5999994277952,
+            "audioTime": 0.521392,
+            "index": 13,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2024.5,
+            "audioTime": 0.567621,
+            "index": 14,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2074.5,
+            "audioTime": 0.613937,
+            "index": 15,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2107.8999996185303,
+            "audioTime": 0.643463,
+            "index": 16,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2157.8999996185303,
+            "audioTime": 0.689803,
+            "index": 17,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2174.699999809265,
+            "audioTime": 0.725919,
+            "index": 18,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2224.699999809265,
+            "audioTime": 0.772118,
+            "index": 19,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2258,
+            "audioTime": 0.803552,
+            "index": 20,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2307.8999996185303,
+            "audioTime": 0.849846,
+            "index": 21,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2357.8999996185303,
+            "audioTime": 0.896021,
+            "index": 22,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2391.199999809265,
+            "audioTime": 0.925587,
+            "index": 23,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2441.0999994277954,
+            "audioTime": 0.993052,
+            "index": 24,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2458.3999996185303,
+            "audioTime": 1.008462,
+            "index": 25,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2507.8999996185303,
+            "audioTime": 1.054146,
+            "index": 26,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2541.300000190735,
+            "audioTime": 1.085633,
+            "index": 27,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2591.300000190735,
+            "audioTime": 1.13191,
+            "index": 28,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2624.5,
+            "audioTime": 1.161392,
+            "index": 29,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2674.3999996185303,
+            "audioTime": 1.207563,
+            "index": 30,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2691.3999996185303,
+            "audioTime": 1.243829,
+            "index": 31,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2741.5,
+            "audioTime": 1.290096,
+            "index": 32,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2791.300000190735,
+            "audioTime": 1.33632,
+            "index": 33,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2824.699999809265,
+            "audioTime": 1.365918,
+            "index": 34,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2874.5999994277954,
+            "audioTime": 1.412062,
+            "index": 35,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2908,
+            "audioTime": 1.443529,
+            "index": 36,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2957.8999996185303,
+            "audioTime": 1.489725,
+            "index": 37,
+            "reason": "playback"
+          },
+          {
+            "atMs": 2975.0999994277954,
+            "audioTime": 1.526387,
+            "index": 38,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3024.5999994277954,
+            "audioTime": 1.57201,
+            "index": 39,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3058.0999994277954,
+            "audioTime": 1.601734,
+            "index": 40,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3107.8999996185303,
+            "audioTime": 1.647773,
+            "index": 41,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3157.800000190735,
+            "audioTime": 1.693954,
+            "index": 42,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3191.300000190735,
+            "audioTime": 1.725438,
+            "index": 43,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3224.699999809265,
+            "audioTime": 1.77629,
+            "index": 44,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3258,
+            "audioTime": 1.807843,
+            "index": 45,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3308,
+            "audioTime": 1.852333,
+            "index": 46,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3341.3999996185303,
+            "audioTime": 1.883782,
+            "index": 47,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3391.300000190735,
+            "audioTime": 1.93004,
+            "index": 48,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3424.5999994277954,
+            "audioTime": 1.961448,
+            "index": 49,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3474.5999994277954,
+            "audioTime": 2.027095,
+            "index": 50,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3491.5999994277954,
+            "audioTime": 2.043983,
+            "index": 51,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3541.699999809265,
+            "audioTime": 2.090341,
+            "index": 52,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3591.5,
+            "audioTime": 2.136346,
+            "index": 53,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3624.800000190735,
+            "audioTime": 2.165984,
+            "index": 54,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3674.800000190735,
+            "audioTime": 2.212256,
+            "index": 55,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3708,
+            "audioTime": 2.24165,
+            "index": 56,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3758.300000190735,
+            "audioTime": 2.309517,
+            "index": 57,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3775.5,
+            "audioTime": 2.326803,
+            "index": 58,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3824.8999996185303,
+            "audioTime": 2.370447,
+            "index": 59,
+            "reason": "playback"
+          },
+          {
+            "atMs": 3858.300000190735,
+            "audioTime": 2.401997,
+            "index": 60,
+            "reason": "playback"
+          }
+        ],
+        "fingerprint": "71550260e879e1c279d2762488515cfb791a5284bc609b9b981c25b7cd97fd4b",
+        "frame": 60,
+        "frameCount": 61,
+        "id": "clip-035",
+        "kind": "2d",
+        "playedFrames": 60,
+        "provider": "flashhead",
+        "case": "zh-00",
+        "status": "passed",
+        "seek_frame_sha256": [
+          "e777fcdef8d41d1d0aa6df6cf827c74aa3eaa78f506e6050bbb7d4b1d1632167",
+          "6ddd86fca5c3594dcda63da4376abc75aeff22b8b241c92c0588ba4f1a22a5ee",
+          "e777fcdef8d41d1d0aa6df6cf827c74aa3eaa78f506e6050bbb7d4b1d1632167"
+        ]
+      },
+      {
+        "completedPlaybackCount": 1,
+        "displayedFrames": 25,
+        "duration": 1,
+        "events": [
+          {
+            "atMs": 4268.199999809265,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "preview"
+          },
+          {
+            "atMs": 4576.800000190735,
+            "audioTime": 0.04,
+            "index": 1,
+            "reason": "seek"
+          },
+          {
+            "atMs": 4577.300000190735,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 4600.39999961853,
+            "audioTime": 0.96,
+            "index": 24,
+            "reason": "seek"
+          },
+          {
+            "atMs": 4611,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 5074.39999961853,
+            "audioTime": 0.049087,
+            "index": 1,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5107.699999809265,
+            "audioTime": 0.080623,
+            "index": 2,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5157.800000190735,
+            "audioTime": 0.125097,
+            "index": 3,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5207.89999961853,
+            "audioTime": 0.192683,
+            "index": 4,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5224.699999809265,
+            "audioTime": 0.209557,
+            "index": 5,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5274.39999961853,
+            "audioTime": 0.255452,
+            "index": 6,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5307.599999427795,
+            "audioTime": 0.284929,
+            "index": 7,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5357.599999427795,
+            "audioTime": 0.331153,
+            "index": 8,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5391.300000190735,
+            "audioTime": 0.362845,
+            "index": 9,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5441.199999809265,
+            "audioTime": 0.408917,
+            "index": 10,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5457.800000190735,
+            "audioTime": 0.4432,
+            "index": 11,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5507.800000190735,
+            "audioTime": 0.489412,
+            "index": 12,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5540.89999961853,
+            "audioTime": 0.520676,
+            "index": 13,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5591.099999427795,
+            "audioTime": 0.56703,
+            "index": 14,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5641.099999427795,
+            "audioTime": 0.613203,
+            "index": 15,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5674.300000190735,
+            "audioTime": 0.64266,
+            "index": 16,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5724.599999427795,
+            "audioTime": 0.689087,
+            "index": 17,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5757.89999961853,
+            "audioTime": 0.741713,
+            "index": 18,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5791.099999427795,
+            "audioTime": 0.773305,
+            "index": 19,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5824.39999961853,
+            "audioTime": 0.802788,
+            "index": 20,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5874.39999961853,
+            "audioTime": 0.849042,
+            "index": 21,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5924.5,
+            "audioTime": 0.895374,
+            "index": 22,
+            "reason": "playback"
+          },
+          {
+            "atMs": 5957.89999961853,
+            "audioTime": 0.925016,
+            "index": 23,
+            "reason": "playback"
+          },
+          {
+            "atMs": 6007.800000190735,
+            "audioTime": 0.992477,
+            "index": 24,
+            "reason": "playback"
+          }
+        ],
+        "fingerprint": "2270b5999589348af073bfbfc8592478c33c223d3b85630c9cf4d70ba1114825",
+        "frame": 24,
+        "frameCount": 25,
+        "id": "clip-024",
+        "kind": "2d",
+        "playedFrames": 24,
+        "provider": "flashhead",
+        "case": "silence-00",
+        "status": "passed",
+        "seek_frame_sha256": [
+          "1dc1f6dbfff83c0932fb5ff208866928628fed58dfd905177dadd2e42c4e4bd8",
+          "4a3e515a4dfee2fa97e11a07d430e63e48bcaffc0ff1186388a237d691fd28ed",
+          "1dc1f6dbfff83c0932fb5ff208866928628fed58dfd905177dadd2e42c4e4bd8"
+        ]
+      },
+      {
+        "completedPlaybackCount": 1,
+        "displayedFrames": 126,
+        "duration": 5.008,
+        "events": [
+          {
+            "atMs": 6676,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "preview"
+          },
+          {
+            "atMs": 6986.5,
+            "audioTime": 0.04,
+            "index": 1,
+            "reason": "seek"
+          },
+          {
+            "atMs": 6986.89999961853,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 6995.199999809265,
+            "audioTime": 5,
+            "index": 125,
+            "reason": "seek"
+          },
+          {
+            "atMs": 7002,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 7457.699999809265,
+            "audioTime": 0.045905,
+            "index": 1,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7507.800000190735,
+            "audioTime": 0.092324,
+            "index": 2,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7541,
+            "audioTime": 0.121807,
+            "index": 3,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7591,
+            "audioTime": 0.189387,
+            "index": 4,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7608,
+            "audioTime": 0.206325,
+            "index": 5,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7657.699999809265,
+            "audioTime": 0.252148,
+            "index": 6,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7691.199999809265,
+            "audioTime": 0.281866,
+            "index": 7,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7741.099999427795,
+            "audioTime": 0.328035,
+            "index": 8,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7791,
+            "audioTime": 0.374178,
+            "index": 9,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7824.39999961853,
+            "audioTime": 0.405713,
+            "index": 10,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7857.800000190735,
+            "audioTime": 0.45654,
+            "index": 11,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7891,
+            "audioTime": 0.486158,
+            "index": 12,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7941.199999809265,
+            "audioTime": 0.532464,
+            "index": 13,
+            "reason": "playback"
+          },
+          {
+            "atMs": 7974.5,
+            "audioTime": 0.563868,
+            "index": 14,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8024.300000190735,
+            "audioTime": 0.610007,
+            "index": 15,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8074.300000190735,
+            "audioTime": 0.656311,
+            "index": 16,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8107.800000190735,
+            "audioTime": 0.685983,
+            "index": 17,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8141.39999961853,
+            "audioTime": 0.738794,
+            "index": 18,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8174.39999961853,
+            "audioTime": 0.770142,
+            "index": 19,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8224.39999961853,
+            "audioTime": 0.814541,
+            "index": 20,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8257.699999809265,
+            "audioTime": 0.845862,
+            "index": 21,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8307.699999809265,
+            "audioTime": 0.892095,
+            "index": 22,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8341.199999809265,
+            "audioTime": 0.921846,
+            "index": 23,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8391.199999809265,
+            "audioTime": 0.989369,
+            "index": 24,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8408.099999427795,
+            "audioTime": 1.004433,
+            "index": 25,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8457.699999809265,
+            "audioTime": 1.050175,
+            "index": 26,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8491,
+            "audioTime": 1.081735,
+            "index": 27,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8541.099999427795,
+            "audioTime": 1.126222,
+            "index": 28,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8591.099999427795,
+            "audioTime": 1.172373,
+            "index": 29,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8624.300000190735,
+            "audioTime": 1.203695,
+            "index": 30,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8657.699999809265,
+            "audioTime": 1.256422,
+            "index": 31,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8691.099999427795,
+            "audioTime": 1.286146,
+            "index": 32,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8741.199999809265,
+            "audioTime": 1.332531,
+            "index": 33,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8774.39999961853,
+            "audioTime": 1.363759,
+            "index": 34,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8824.300000190735,
+            "audioTime": 1.40992,
+            "index": 35,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8874.599999427795,
+            "audioTime": 1.456339,
+            "index": 36,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8907.800000190735,
+            "audioTime": 1.485825,
+            "index": 37,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8924.39999961853,
+            "audioTime": 1.522002,
+            "index": 38,
+            "reason": "playback"
+          },
+          {
+            "atMs": 8974.39999961853,
+            "audioTime": 1.568133,
+            "index": 39,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9024.199999809263,
+            "audioTime": 1.614228,
+            "index": 40,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9057.599999427795,
+            "audioTime": 1.643718,
+            "index": 41,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9107.599999427795,
+            "audioTime": 1.690096,
+            "index": 42,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9141,
+            "audioTime": 1.721556,
+            "index": 43,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9191,
+            "audioTime": 1.789178,
+            "index": 44,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9208.199999809263,
+            "audioTime": 1.804424,
+            "index": 45,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9257.599999427795,
+            "audioTime": 1.85013,
+            "index": 46,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9307.699999809263,
+            "audioTime": 1.896476,
+            "index": 47,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9341,
+            "audioTime": 1.9261,
+            "index": 48,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9391.099999427795,
+            "audioTime": 1.972523,
+            "index": 49,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9424.39999961853,
+            "audioTime": 2.023304,
+            "index": 50,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9441.199999809263,
+            "audioTime": 2.040075,
+            "index": 51,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9491.099999427795,
+            "audioTime": 2.086255,
+            "index": 52,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9541,
+            "audioTime": 2.132325,
+            "index": 53,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9574.300000190737,
+            "audioTime": 2.161866,
+            "index": 54,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9624.300000190737,
+            "audioTime": 2.208147,
+            "index": 55,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9674.599999427795,
+            "audioTime": 2.254555,
+            "index": 56,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9707.800000190737,
+            "audioTime": 2.285921,
+            "index": 57,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9724.5,
+            "audioTime": 2.320235,
+            "index": 58,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9774.39999961853,
+            "audioTime": 2.366227,
+            "index": 59,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9824.5,
+            "audioTime": 2.412654,
+            "index": 60,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9857.800000190737,
+            "audioTime": 2.444011,
+            "index": 61,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9907.89999961853,
+            "audioTime": 2.490455,
+            "index": 62,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9957.699999809263,
+            "audioTime": 2.536456,
+            "index": 63,
+            "reason": "playback"
+          },
+          {
+            "atMs": 9974.39999961853,
+            "audioTime": 2.572626,
+            "index": 64,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10007.699999809263,
+            "audioTime": 2.604058,
+            "index": 65,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10057.800000190737,
+            "audioTime": 2.648512,
+            "index": 66,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10107.699999809263,
+            "audioTime": 2.69467,
+            "index": 67,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10141.199999809263,
+            "audioTime": 2.726204,
+            "index": 68,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10191.199999809263,
+            "audioTime": 2.772502,
+            "index": 69,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10224.199999809263,
+            "audioTime": 2.823024,
+            "index": 70,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10258.099999427795,
+            "audioTime": 2.854735,
+            "index": 71,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10291.300000190737,
+            "audioTime": 2.884476,
+            "index": 72,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10341.199999809263,
+            "audioTime": 2.930538,
+            "index": 73,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10374.5,
+            "audioTime": 2.962018,
+            "index": 74,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10424.39999961853,
+            "audioTime": 3.006331,
+            "index": 75,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10474.300000190737,
+            "audioTime": 3.073796,
+            "index": 76,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10491.099999427795,
+            "audioTime": 3.090561,
+            "index": 77,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10541,
+            "audioTime": 3.136695,
+            "index": 78,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10574.099999427795,
+            "audioTime": 3.166116,
+            "index": 79,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10624.099999427795,
+            "audioTime": 3.212324,
+            "index": 80,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10657.800000190737,
+            "audioTime": 3.243908,
+            "index": 81,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10707.699999809263,
+            "audioTime": 3.290149,
+            "index": 82,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10741.39999961853,
+            "audioTime": 3.320017,
+            "index": 83,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10774.599999427795,
+            "audioTime": 3.370868,
+            "index": 84,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10807.89999961853,
+            "audioTime": 3.402377,
+            "index": 85,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10857.89999961853,
+            "audioTime": 3.448588,
+            "index": 86,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10891.5,
+            "audioTime": 3.480146,
+            "index": 87,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10941.199999809263,
+            "audioTime": 3.524325,
+            "index": 88,
+            "reason": "playback"
+          },
+          {
+            "atMs": 10991.099999427795,
+            "audioTime": 3.570333,
+            "index": 89,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11024.39999961853,
+            "audioTime": 3.623076,
+            "index": 90,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11058.099999427795,
+            "audioTime": 3.654584,
+            "index": 91,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11091.199999809263,
+            "audioTime": 3.684367,
+            "index": 92,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11141.300000190737,
+            "audioTime": 3.730637,
+            "index": 93,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11190.800000190737,
+            "audioTime": 3.776468,
+            "index": 94,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11224.300000190737,
+            "audioTime": 3.806135,
+            "index": 95,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11257.699999809263,
+            "audioTime": 3.857087,
+            "index": 96,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11291.199999809263,
+            "audioTime": 3.88874,
+            "index": 97,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11341.39999961853,
+            "audioTime": 3.935148,
+            "index": 98,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11374.599999427795,
+            "audioTime": 3.966364,
+            "index": 99,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11424.599999427795,
+            "audioTime": 4.01083,
+            "index": 100,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11457.89999961853,
+            "audioTime": 4.042388,
+            "index": 101,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11507.89999961853,
+            "audioTime": 4.08849,
+            "index": 102,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11557.699999809263,
+            "audioTime": 4.155819,
+            "index": 103,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11574.39999961853,
+            "audioTime": 4.170763,
+            "index": 104,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11607.89999961853,
+            "audioTime": 4.200498,
+            "index": 105,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11657.699999809263,
+            "audioTime": 4.246563,
+            "index": 106,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11707.89999961853,
+            "audioTime": 4.292994,
+            "index": 107,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11741.39999961853,
+            "audioTime": 4.32457,
+            "index": 108,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11791.199999809263,
+            "audioTime": 4.370596,
+            "index": 109,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11807.800000190737,
+            "audioTime": 4.406677,
+            "index": 110,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11858.300000190737,
+            "audioTime": 4.452931,
+            "index": 111,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11891.199999809263,
+            "audioTime": 4.48429,
+            "index": 112,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11941.099999427795,
+            "audioTime": 4.528735,
+            "index": 113,
+            "reason": "playback"
+          },
+          {
+            "atMs": 11974.5,
+            "audioTime": 4.560224,
+            "index": 114,
+            "reason": "playback"
+          },
+          {
+            "atMs": 12024.39999961853,
+            "audioTime": 4.606347,
+            "index": 115,
+            "reason": "playback"
+          },
+          {
+            "atMs": 12057.800000190737,
+            "audioTime": 4.657192,
+            "index": 116,
+            "reason": "playback"
+          },
+          {
+            "atMs": 12091.199999809263,
+            "audioTime": 4.688743,
+            "index": 117,
+            "reason": "playback"
+          },
+          {
+            "atMs": 12141.39999961853,
+            "audioTime": 4.735185,
+            "index": 118,
+            "reason": "playback"
+          },
+          {
+            "atMs": 12174.300000190737,
+            "audioTime": 4.764371,
+            "index": 119,
+            "reason": "playback"
+          },
+          {
+            "atMs": 12224.199999809263,
+            "audioTime": 4.810601,
+            "index": 120,
+            "reason": "playback"
+          },
+          {
+            "atMs": 12257.5,
+            "audioTime": 4.840115,
+            "index": 121,
+            "reason": "playback"
+          },
+          {
+            "atMs": 12307.599999427795,
+            "audioTime": 4.886491,
+            "index": 122,
+            "reason": "playback"
+          },
+          {
+            "atMs": 12341.199999809263,
+            "audioTime": 4.939337,
+            "index": 123,
+            "reason": "playback"
+          },
+          {
+            "atMs": 12374.5,
+            "audioTime": 4.970784,
+            "index": 124,
+            "reason": "playback"
+          },
+          {
+            "atMs": 12407.800000190737,
+            "audioTime": 5.000354,
+            "index": 125,
+            "reason": "playback"
+          }
+        ],
+        "fingerprint": "9bcebf8b77668b34856175ecaa2c8ceaa8cc56b2604a92b77e84d1b7a14b378e",
+        "frame": 125,
+        "frameCount": 126,
+        "id": "clip-041",
+        "kind": "2d",
+        "playedFrames": 125,
+        "provider": "flashhead",
+        "case": "pause-00",
+        "status": "passed",
+        "seek_frame_sha256": [
+          "e6ca8b7b588d0312f776d3ee0b3b6ad8bdaec34047583f42cc346a3418dc9697",
+          "e0e30d273ccbe716884fec5ea0392331ff72db64d6a4663decbca20f5a6f6984",
+          "e6ca8b7b588d0312f776d3ee0b3b6ad8bdaec34047583f42cc346a3418dc9697"
+        ]
+      },
+      {
+        "completedPlaybackCount": 1,
+        "displayedFrames": 61,
+        "duration": 2.432,
+        "events": [
+          {
+            "atMs": 12894,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "preview"
+          },
+          {
+            "atMs": 13202.800000190737,
+            "audioTime": 0.04,
+            "index": 1,
+            "reason": "seek"
+          },
+          {
+            "atMs": 13203.099999427795,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 13211.800000190737,
+            "audioTime": 2.4,
+            "index": 60,
+            "reason": "seek"
+          },
+          {
+            "atMs": 13218.599999427795,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 13674.300000190737,
+            "audioTime": 0.04707,
+            "index": 1,
+            "reason": "playback"
+          },
+          {
+            "atMs": 13724.39999961853,
+            "audioTime": 0.0933,
+            "index": 2,
+            "reason": "playback"
+          },
+          {
+            "atMs": 13757.599999427795,
+            "audioTime": 0.124745,
+            "index": 3,
+            "reason": "playback"
+          },
+          {
+            "atMs": 13807.599999427795,
+            "audioTime": 0.169103,
+            "index": 4,
+            "reason": "playback"
+          },
+          {
+            "atMs": 13824.599999427795,
+            "audioTime": 0.207383,
+            "index": 5,
+            "reason": "playback"
+          },
+          {
+            "atMs": 13874.099999427795,
+            "audioTime": 0.253244,
+            "index": 6,
+            "reason": "playback"
+          },
+          {
+            "atMs": 13907.599999427795,
+            "audioTime": 0.282929,
+            "index": 7,
+            "reason": "playback"
+          },
+          {
+            "atMs": 13957.800000190737,
+            "audioTime": 0.329229,
+            "index": 8,
+            "reason": "playback"
+          },
+          {
+            "atMs": 13991,
+            "audioTime": 0.360613,
+            "index": 9,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14041,
+            "audioTime": 0.406879,
+            "index": 10,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14074.099999427795,
+            "audioTime": 0.457523,
+            "index": 11,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14107.39999961853,
+            "audioTime": 0.487102,
+            "index": 12,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14157.5,
+            "audioTime": 0.533371,
+            "index": 13,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14191,
+            "audioTime": 0.564984,
+            "index": 14,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14241,
+            "audioTime": 0.611239,
+            "index": 15,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14274.300000190737,
+            "audioTime": 0.640749,
+            "index": 16,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14324.199999809263,
+            "audioTime": 0.686933,
+            "index": 17,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14357.699999809263,
+            "audioTime": 0.739564,
+            "index": 18,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14391,
+            "audioTime": 0.771353,
+            "index": 19,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14424,
+            "audioTime": 0.800516,
+            "index": 20,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14474,
+            "audioTime": 0.846798,
+            "index": 21,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14524.099999427795,
+            "audioTime": 0.893047,
+            "index": 22,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14557.5,
+            "audioTime": 0.922718,
+            "index": 23,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14607.5,
+            "audioTime": 0.990235,
+            "index": 24,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14624.5,
+            "audioTime": 1.005472,
+            "index": 25,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14673.89999961853,
+            "audioTime": 1.051125,
+            "index": 26,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14707.39999961853,
+            "audioTime": 1.082694,
+            "index": 27,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14757.300000190737,
+            "audioTime": 1.126939,
+            "index": 28,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14807.39999961853,
+            "audioTime": 1.173193,
+            "index": 29,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14840.699999809263,
+            "audioTime": 1.204632,
+            "index": 30,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14857.5,
+            "audioTime": 1.240798,
+            "index": 31,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14907.39999961853,
+            "audioTime": 1.2871,
+            "index": 32,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14957.300000190737,
+            "audioTime": 1.333278,
+            "index": 33,
+            "reason": "playback"
+          },
+          {
+            "atMs": 14990.699999809263,
+            "audioTime": 1.364739,
+            "index": 34,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15040.699999809263,
+            "audioTime": 1.410877,
+            "index": 35,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15074,
+            "audioTime": 1.440469,
+            "index": 36,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15124,
+            "audioTime": 1.486828,
+            "index": 37,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15140.800000190737,
+            "audioTime": 1.523007,
+            "index": 38,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15190.800000190737,
+            "audioTime": 1.569164,
+            "index": 39,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15224.099999427795,
+            "audioTime": 1.600606,
+            "index": 40,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15274,
+            "audioTime": 1.644883,
+            "index": 41,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15324.099999427795,
+            "audioTime": 1.691128,
+            "index": 42,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15357.39999961853,
+            "audioTime": 1.722535,
+            "index": 43,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15407.39999961853,
+            "audioTime": 1.790172,
+            "index": 44,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15424.39999961853,
+            "audioTime": 1.805384,
+            "index": 45,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15474,
+            "audioTime": 1.851089,
+            "index": 46,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15507.39999961853,
+            "audioTime": 1.88074,
+            "index": 47,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15557.5,
+            "audioTime": 1.927069,
+            "index": 48,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15607.5,
+            "audioTime": 1.973363,
+            "index": 49,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15640.800000190737,
+            "audioTime": 2.024193,
+            "index": 50,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15657.39999961853,
+            "audioTime": 2.040815,
+            "index": 51,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15707.699999809263,
+            "audioTime": 2.087214,
+            "index": 52,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15757.39999961853,
+            "audioTime": 2.131226,
+            "index": 53,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15790.89999961853,
+            "audioTime": 2.162981,
+            "index": 54,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15840.800000190737,
+            "audioTime": 2.209238,
+            "index": 55,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15874,
+            "audioTime": 2.240492,
+            "index": 56,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15924.099999427795,
+            "audioTime": 2.306291,
+            "index": 57,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15940.89999961853,
+            "audioTime": 2.321037,
+            "index": 58,
+            "reason": "playback"
+          },
+          {
+            "atMs": 15990.800000190737,
+            "audioTime": 2.367281,
+            "index": 59,
+            "reason": "playback"
+          },
+          {
+            "atMs": 16040.800000190737,
+            "audioTime": 2.413484,
+            "index": 60,
+            "reason": "playback"
+          }
+        ],
+        "fingerprint": "06cc28d23ecaa1e2fabc66d9537a1e980642e9cb3501ceef3e5056a2fdc567e9",
+        "frame": 60,
+        "frameCount": 61,
+        "id": "clip-028",
+        "kind": "2d",
+        "playedFrames": 60,
+        "provider": "dinet",
+        "case": "zh-00",
+        "status": "passed",
+        "seek_frame_sha256": [
+          "d56a0600a5f3547aa9508956e509078d423381ef5db3d51b3d48f7c4ea035b65",
+          "661d7a3d70b5c62abf87d70666a9c2d4268188061d89da13673e6db3c0af9baf",
+          "d56a0600a5f3547aa9508956e509078d423381ef5db3d51b3d48f7c4ea035b65"
+        ]
+      },
+      {
+        "completedPlaybackCount": 1,
+        "displayedFrames": 25,
+        "duration": 1,
+        "events": [
+          {
+            "atMs": 16508.199999809265,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "preview"
+          },
+          {
+            "atMs": 16816.800000190735,
+            "audioTime": 0.04,
+            "index": 1,
+            "reason": "seek"
+          },
+          {
+            "atMs": 16817.199999809265,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 16825.199999809265,
+            "audioTime": 0.96,
+            "index": 24,
+            "reason": "seek"
+          },
+          {
+            "atMs": 16831,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 17257.199999809265,
+            "audioTime": 0.041003,
+            "index": 1,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17307.39999961853,
+            "audioTime": 0.087212,
+            "index": 2,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17357.300000190735,
+            "audioTime": 0.133413,
+            "index": 3,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17390.699999809265,
+            "audioTime": 0.165004,
+            "index": 4,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17407.300000190735,
+            "audioTime": 0.201205,
+            "index": 5,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17457.199999809265,
+            "audioTime": 0.24725,
+            "index": 6,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17507.300000190735,
+            "audioTime": 0.293406,
+            "index": 7,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17540.599999427795,
+            "audioTime": 0.323088,
+            "index": 8,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17590.5,
+            "audioTime": 0.369244,
+            "index": 9,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17624.099999427795,
+            "audioTime": 0.400977,
+            "index": 10,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17657.199999809265,
+            "audioTime": 0.451639,
+            "index": 11,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17690.800000190735,
+            "audioTime": 0.483119,
+            "index": 12,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17740.599999427795,
+            "audioTime": 0.529317,
+            "index": 13,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17790.599999427795,
+            "audioTime": 0.575534,
+            "index": 14,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17823.89999961853,
+            "audioTime": 0.605169,
+            "index": 15,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17874,
+            "audioTime": 0.651533,
+            "index": 16,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17907.39999961853,
+            "audioTime": 0.681081,
+            "index": 17,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17940.699999809265,
+            "audioTime": 0.733845,
+            "index": 18,
+            "reason": "playback"
+          },
+          {
+            "atMs": 17974.099999427795,
+            "audioTime": 0.765445,
+            "index": 19,
+            "reason": "playback"
+          },
+          {
+            "atMs": 18024.099999427795,
+            "audioTime": 0.811702,
+            "index": 20,
+            "reason": "playback"
+          },
+          {
+            "atMs": 18057.5,
+            "audioTime": 0.841329,
+            "index": 21,
+            "reason": "playback"
+          },
+          {
+            "atMs": 18107.39999961853,
+            "audioTime": 0.887416,
+            "index": 22,
+            "reason": "playback"
+          },
+          {
+            "atMs": 18157.39999961853,
+            "audioTime": 0.933645,
+            "index": 23,
+            "reason": "playback"
+          },
+          {
+            "atMs": 18190.800000190735,
+            "audioTime": 0.965144,
+            "index": 24,
+            "reason": "playback"
+          }
+        ],
+        "fingerprint": "b293537d94878141258bbf7795d69f24bec566f3b4ce6bba1e9e34fe53da9607",
+        "frame": 24,
+        "frameCount": 25,
+        "id": "clip-009",
+        "kind": "2d",
+        "playedFrames": 24,
+        "provider": "dinet",
+        "case": "silence-00",
+        "status": "passed",
+        "seek_frame_sha256": [
+          "40c97df58132fa46a7febc5c176b2eb66538945ab333c776ef81c60bc315c6b2",
+          "d9af13103fa5a5cc0ec68de73df401c721eb6ab9a4c9a1daf3b201b30e903dcb",
+          "40c97df58132fa46a7febc5c176b2eb66538945ab333c776ef81c60bc315c6b2"
+        ]
+      },
+      {
+        "completedPlaybackCount": 1,
+        "displayedFrames": 126,
+        "duration": 5.008,
+        "events": [
+          {
+            "atMs": 18835.89999961853,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "preview"
+          },
+          {
+            "atMs": 19150.5,
+            "audioTime": 0.04,
+            "index": 1,
+            "reason": "seek"
+          },
+          {
+            "atMs": 19151.099999427795,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 19168.300000190735,
+            "audioTime": 5,
+            "index": 125,
+            "reason": "seek"
+          },
+          {
+            "atMs": 19177.300000190735,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 19657.599999427795,
+            "audioTime": 0.042028,
+            "index": 1,
+            "reason": "playback"
+          },
+          {
+            "atMs": 19707.5,
+            "audioTime": 0.086296,
+            "index": 2,
+            "reason": "playback"
+          },
+          {
+            "atMs": 19757.5,
+            "audioTime": 0.132609,
+            "index": 3,
+            "reason": "playback"
+          },
+          {
+            "atMs": 19790.800000190735,
+            "audioTime": 0.163962,
+            "index": 4,
+            "reason": "playback"
+          },
+          {
+            "atMs": 19808.599999427795,
+            "audioTime": 0.201148,
+            "index": 5,
+            "reason": "playback"
+          },
+          {
+            "atMs": 19857.599999427795,
+            "audioTime": 0.246315,
+            "index": 6,
+            "reason": "playback"
+          },
+          {
+            "atMs": 19907.699999809265,
+            "audioTime": 0.292619,
+            "index": 7,
+            "reason": "playback"
+          },
+          {
+            "atMs": 19941,
+            "audioTime": 0.322225,
+            "index": 8,
+            "reason": "playback"
+          },
+          {
+            "atMs": 19991,
+            "audioTime": 0.368497,
+            "index": 9,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20041.099999427795,
+            "audioTime": 0.414832,
+            "index": 10,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20057.800000190735,
+            "audioTime": 0.450858,
+            "index": 11,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20091.099999427795,
+            "audioTime": 0.482404,
+            "index": 12,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20140.89999961853,
+            "audioTime": 0.528398,
+            "index": 13,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20190.89999961853,
+            "audioTime": 0.572871,
+            "index": 14,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20224.099999427795,
+            "audioTime": 0.604219,
+            "index": 15,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20274.099999427795,
+            "audioTime": 0.650442,
+            "index": 16,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20307.199999809265,
+            "audioTime": 0.681727,
+            "index": 17,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20340.599999427795,
+            "audioTime": 0.732511,
+            "index": 18,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20373.89999961853,
+            "audioTime": 0.76418,
+            "index": 19,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20423.89999961853,
+            "audioTime": 0.810381,
+            "index": 20,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20473.800000190735,
+            "audioTime": 0.856442,
+            "index": 21,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20507.099999427795,
+            "audioTime": 0.886102,
+            "index": 22,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20557.300000190735,
+            "audioTime": 0.932441,
+            "index": 23,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20590.5,
+            "audioTime": 0.983185,
+            "index": 24,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20607.5,
+            "audioTime": 1.000261,
+            "index": 25,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20657,
+            "audioTime": 1.046013,
+            "index": 26,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20707.39999961853,
+            "audioTime": 1.090682,
+            "index": 27,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20740.5,
+            "audioTime": 1.121843,
+            "index": 28,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20790.5,
+            "audioTime": 1.16823,
+            "index": 29,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20840.5,
+            "audioTime": 1.214424,
+            "index": 30,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20857.300000190735,
+            "audioTime": 1.250737,
+            "index": 31,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20890.599999427795,
+            "audioTime": 1.280311,
+            "index": 32,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20940.599999427795,
+            "audioTime": 1.326447,
+            "index": 33,
+            "reason": "playback"
+          },
+          {
+            "atMs": 20990.5,
+            "audioTime": 1.372529,
+            "index": 34,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21023.89999961853,
+            "audioTime": 1.404082,
+            "index": 35,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21073.699999809265,
+            "audioTime": 1.448346,
+            "index": 36,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21123.800000190735,
+            "audioTime": 1.515906,
+            "index": 37,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21140.800000190735,
+            "audioTime": 1.532923,
+            "index": 38,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21173.89999961853,
+            "audioTime": 1.562336,
+            "index": 39,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21223.89999961853,
+            "audioTime": 1.60851,
+            "index": 40,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21273.89999961853,
+            "audioTime": 1.654725,
+            "index": 41,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21307.199999809265,
+            "audioTime": 1.686205,
+            "index": 42,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21357.099999427795,
+            "audioTime": 1.732281,
+            "index": 43,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21373.89999961853,
+            "audioTime": 1.766626,
+            "index": 44,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21423.89999961853,
+            "audioTime": 1.81293,
+            "index": 45,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21457.300000190735,
+            "audioTime": 1.844409,
+            "index": 46,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21507,
+            "audioTime": 1.890448,
+            "index": 47,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21540.39999961853,
+            "audioTime": 1.920095,
+            "index": 48,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21590.5,
+            "audioTime": 1.966361,
+            "index": 49,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21640.39999961853,
+            "audioTime": 2.033804,
+            "index": 50,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21657.199999809265,
+            "audioTime": 2.050665,
+            "index": 51,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21690.5,
+            "audioTime": 2.080242,
+            "index": 52,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21742.89999961853,
+            "audioTime": 2.128789,
+            "index": 53,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21790.300000190735,
+            "audioTime": 2.172475,
+            "index": 54,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21823.89999961853,
+            "audioTime": 2.20223,
+            "index": 55,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21873.800000190735,
+            "audioTime": 2.248458,
+            "index": 56,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21907.300000190735,
+            "audioTime": 2.280002,
+            "index": 57,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21940.800000190735,
+            "audioTime": 2.330726,
+            "index": 58,
+            "reason": "playback"
+          },
+          {
+            "atMs": 21973.89999961853,
+            "audioTime": 2.362307,
+            "index": 59,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22023.800000190735,
+            "audioTime": 2.408386,
+            "index": 60,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22073.800000190735,
+            "audioTime": 2.452783,
+            "index": 61,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22107.099999427795,
+            "audioTime": 2.484202,
+            "index": 62,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22157.199999809265,
+            "audioTime": 2.530597,
+            "index": 63,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22174,
+            "audioTime": 2.566829,
+            "index": 64,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22223.800000190735,
+            "audioTime": 2.612849,
+            "index": 65,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22257.099999427795,
+            "audioTime": 2.642351,
+            "index": 66,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22307,
+            "audioTime": 2.688621,
+            "index": 67,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22340.39999961853,
+            "audioTime": 2.720079,
+            "index": 68,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22390.300000190735,
+            "audioTime": 2.766295,
+            "index": 69,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22423.699999809265,
+            "audioTime": 2.817161,
+            "index": 70,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22457.099999427795,
+            "audioTime": 2.848613,
+            "index": 71,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22490.599999427795,
+            "audioTime": 2.88028,
+            "index": 72,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22540.5,
+            "audioTime": 2.926287,
+            "index": 73,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22590.599999427795,
+            "audioTime": 2.970885,
+            "index": 74,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22623.89999961853,
+            "audioTime": 3.002288,
+            "index": 75,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22673.800000190735,
+            "audioTime": 3.048406,
+            "index": 76,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22690.5,
+            "audioTime": 3.08459,
+            "index": 77,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22740.599999427795,
+            "audioTime": 3.130671,
+            "index": 78,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22773.800000190735,
+            "audioTime": 3.160362,
+            "index": 79,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22823.699999809265,
+            "audioTime": 3.206508,
+            "index": 80,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22873.89999961853,
+            "audioTime": 3.252845,
+            "index": 81,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22907.099999427795,
+            "audioTime": 3.282367,
+            "index": 82,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22957.099999427795,
+            "audioTime": 3.349907,
+            "index": 83,
+            "reason": "playback"
+          },
+          {
+            "atMs": 22973.800000190735,
+            "audioTime": 3.366698,
+            "index": 84,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23023.699999809265,
+            "audioTime": 3.412786,
+            "index": 85,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23057.099999427795,
+            "audioTime": 3.442385,
+            "index": 86,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23107.099999427795,
+            "audioTime": 3.488568,
+            "index": 87,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23140.39999961853,
+            "audioTime": 3.520058,
+            "index": 88,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23190.599999427795,
+            "audioTime": 3.566405,
+            "index": 89,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23223.699999809265,
+            "audioTime": 3.617162,
+            "index": 90,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23257.39999961853,
+            "audioTime": 3.646885,
+            "index": 91,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23307.199999809265,
+            "audioTime": 3.693056,
+            "index": 92,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23340.599999427795,
+            "audioTime": 3.724554,
+            "index": 93,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23390.300000190735,
+            "audioTime": 3.77055,
+            "index": 94,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23423.699999809265,
+            "audioTime": 3.800186,
+            "index": 95,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23473.89999961853,
+            "audioTime": 3.867946,
+            "index": 96,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23490.699999809265,
+            "audioTime": 3.884803,
+            "index": 97,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23540.699999809265,
+            "audioTime": 3.931002,
+            "index": 98,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23573.89999961853,
+            "audioTime": 3.960297,
+            "index": 99,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23623.599999427795,
+            "audioTime": 4.006334,
+            "index": 100,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23673.800000190735,
+            "audioTime": 4.05279,
+            "index": 101,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23707.099999427795,
+            "audioTime": 4.082347,
+            "index": 102,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23757,
+            "audioTime": 4.149809,
+            "index": 103,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23773.699999809265,
+            "audioTime": 4.164625,
+            "index": 104,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23823.800000190735,
+            "audioTime": 4.211001,
+            "index": 105,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23857.199999809265,
+            "audioTime": 4.242469,
+            "index": 106,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23907.199999809265,
+            "audioTime": 4.286855,
+            "index": 107,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23957,
+            "audioTime": 4.332933,
+            "index": 108,
+            "reason": "playback"
+          },
+          {
+            "atMs": 23990.39999961853,
+            "audioTime": 4.36445,
+            "index": 109,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24007.300000190735,
+            "audioTime": 4.400709,
+            "index": 110,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24057.199999809265,
+            "audioTime": 4.446744,
+            "index": 111,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24107.199999809265,
+            "audioTime": 4.493128,
+            "index": 112,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24140.5,
+            "audioTime": 4.522602,
+            "index": 113,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24190.39999961853,
+            "audioTime": 4.568856,
+            "index": 114,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24223.89999961853,
+            "audioTime": 4.600338,
+            "index": 115,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24257.099999427795,
+            "audioTime": 4.65119,
+            "index": 116,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24290.39999961853,
+            "audioTime": 4.682615,
+            "index": 117,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24340.5,
+            "audioTime": 4.728771,
+            "index": 118,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24373.800000190735,
+            "audioTime": 4.760253,
+            "index": 119,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24423.599999427795,
+            "audioTime": 4.80445,
+            "index": 120,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24473.599999427795,
+            "audioTime": 4.850665,
+            "index": 121,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24507,
+            "audioTime": 4.882141,
+            "index": 122,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24540.5,
+            "audioTime": 4.933189,
+            "index": 123,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24574,
+            "audioTime": 4.96477,
+            "index": 124,
+            "reason": "playback"
+          },
+          {
+            "atMs": 24623.89999961853,
+            "audioTime": 5.008,
+            "index": 125,
+            "reason": "playback"
+          }
+        ],
+        "fingerprint": "311ccafa467611d00a289cc959977a52ca81052d2b0834b6a00143de320d6769",
+        "frame": 125,
+        "frameCount": 126,
+        "id": "clip-044",
+        "kind": "2d",
+        "playedFrames": 125,
+        "provider": "dinet",
+        "case": "pause-00",
+        "status": "passed",
+        "seek_frame_sha256": [
+          "319bc005871ea11a2076e04090fefeed97d6e6422dcec6212d55db1fde3a408f",
+          "e259de2ce1dfcb041826b5fde7fc660b2b8fc3403d439f64608124595d355f69",
+          "319bc005871ea11a2076e04090fefeed97d6e6422dcec6212d55db1fde3a408f"
+        ]
+      },
+      {
+        "completedPlaybackCount": 1,
+        "displayedFrames": 70,
+        "duration": 2.432,
+        "events": [
+          {
+            "atMs": 25087.099999427795,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "preview"
+          },
+          {
+            "atMs": 25091.300000190735,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "resize"
+          },
+          {
+            "atMs": 25400,
+            "audioTime": 0.033333,
+            "index": 1,
+            "reason": "seek"
+          },
+          {
+            "atMs": 25400.599999427795,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 25411.699999809265,
+            "audioTime": 2.4,
+            "index": 72,
+            "reason": "seek"
+          },
+          {
+            "atMs": 25418.699999809265,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 25841.39999961853,
+            "audioTime": 0.042946,
+            "index": 1,
+            "reason": "playback"
+          },
+          {
+            "atMs": 25874.099999427795,
+            "audioTime": 0.07255,
+            "index": 2,
+            "reason": "playback"
+          },
+          {
+            "atMs": 25907.199999809265,
+            "audioTime": 0.103846,
+            "index": 3,
+            "reason": "playback"
+          },
+          {
+            "atMs": 25941,
+            "audioTime": 0.133492,
+            "index": 4,
+            "reason": "playback"
+          },
+          {
+            "atMs": 25991.39999961853,
+            "audioTime": 0.201099,
+            "index": 6,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26041.39999961853,
+            "audioTime": 0.247191,
+            "index": 7,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26074.800000190735,
+            "audioTime": 0.278955,
+            "index": 8,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26107.89999961853,
+            "audioTime": 0.308416,
+            "index": 9,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26141.599999427795,
+            "audioTime": 0.33808,
+            "index": 10,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26174.89999961853,
+            "audioTime": 0.369626,
+            "index": 11,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26208.199999809265,
+            "audioTime": 0.401013,
+            "index": 12,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26241.199999809265,
+            "audioTime": 0.45181,
+            "index": 13,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26258,
+            "audioTime": 0.468641,
+            "index": 14,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26308,
+            "audioTime": 0.512825,
+            "index": 15,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26341.300000190735,
+            "audioTime": 0.544292,
+            "index": 16,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26375.199999809265,
+            "audioTime": 0.576043,
+            "index": 17,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26408.099999427795,
+            "audioTime": 0.605512,
+            "index": 18,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26441.199999809265,
+            "audioTime": 0.634899,
+            "index": 19,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26491.099999427795,
+            "audioTime": 0.681004,
+            "index": 20,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26524.5,
+            "audioTime": 0.733825,
+            "index": 22,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26574.5,
+            "audioTime": 0.779956,
+            "index": 23,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26607.89999961853,
+            "audioTime": 0.809825,
+            "index": 24,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26641.5,
+            "audioTime": 0.841191,
+            "index": 25,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26676.39999961853,
+            "audioTime": 0.87283,
+            "index": 26,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26709.5,
+            "audioTime": 0.902265,
+            "index": 27,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26742.599999427795,
+            "audioTime": 0.933536,
+            "index": 28,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26792.300000190735,
+            "audioTime": 0.999351,
+            "index": 29,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26809.099999427795,
+            "audioTime": 1.017132,
+            "index": 30,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26841.199999809265,
+            "audioTime": 1.045768,
+            "index": 31,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26874.5,
+            "audioTime": 1.076901,
+            "index": 32,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26907.599999427795,
+            "audioTime": 1.108367,
+            "index": 33,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26941.300000190735,
+            "audioTime": 1.137995,
+            "index": 34,
+            "reason": "playback"
+          },
+          {
+            "atMs": 26974.5,
+            "audioTime": 1.169451,
+            "index": 35,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27024.39999961853,
+            "audioTime": 1.215438,
+            "index": 36,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27041.199999809265,
+            "audioTime": 1.251882,
+            "index": 37,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27058.199999809265,
+            "audioTime": 1.266765,
+            "index": 38,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27108,
+            "audioTime": 1.312862,
+            "index": 39,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27141.300000190735,
+            "audioTime": 1.342492,
+            "index": 40,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27174.599999427795,
+            "audioTime": 1.374002,
+            "index": 41,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27207.89999961853,
+            "audioTime": 1.405448,
+            "index": 42,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27241.099999427795,
+            "audioTime": 1.434787,
+            "index": 43,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27291,
+            "audioTime": 1.481242,
+            "index": 44,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27308.099999427795,
+            "audioTime": 1.51734,
+            "index": 45,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27324.89999961853,
+            "audioTime": 1.53404,
+            "index": 46,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27374.39999961853,
+            "audioTime": 1.580066,
+            "index": 47,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27407.699999809265,
+            "audioTime": 1.609679,
+            "index": 48,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27441.300000190735,
+            "audioTime": 1.641353,
+            "index": 49,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27474.699999809265,
+            "audioTime": 1.670789,
+            "index": 50,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27507.300000190735,
+            "audioTime": 1.702174,
+            "index": 51,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27557.89999961853,
+            "audioTime": 1.748602,
+            "index": 52,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27574.599999427795,
+            "audioTime": 1.784731,
+            "index": 53,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27608.300000190735,
+            "audioTime": 1.816014,
+            "index": 54,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27641.099999427795,
+            "audioTime": 1.845558,
+            "index": 55,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27674.5,
+            "audioTime": 1.875221,
+            "index": 56,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27708,
+            "audioTime": 1.906705,
+            "index": 57,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27741.099999427795,
+            "audioTime": 1.938085,
+            "index": 58,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27774.800000190735,
+            "audioTime": 1.967901,
+            "index": 59,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27824.599999427795,
+            "audioTime": 2.035219,
+            "index": 61,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27874,
+            "audioTime": 2.081189,
+            "index": 62,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27907,
+            "audioTime": 2.112648,
+            "index": 63,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27940.300000190735,
+            "audioTime": 2.142168,
+            "index": 64,
+            "reason": "playback"
+          },
+          {
+            "atMs": 27973.800000190735,
+            "audioTime": 2.171984,
+            "index": 65,
+            "reason": "playback"
+          },
+          {
+            "atMs": 28007.099999427795,
+            "audioTime": 2.203448,
+            "index": 66,
+            "reason": "playback"
+          },
+          {
+            "atMs": 28040.300000190735,
+            "audioTime": 2.234688,
+            "index": 67,
+            "reason": "playback"
+          },
+          {
+            "atMs": 28090.300000190735,
+            "audioTime": 2.281054,
+            "index": 68,
+            "reason": "playback"
+          },
+          {
+            "atMs": 28107.099999427795,
+            "audioTime": 2.317234,
+            "index": 69,
+            "reason": "playback"
+          },
+          {
+            "atMs": 28141.099999427795,
+            "audioTime": 2.346893,
+            "index": 70,
+            "reason": "playback"
+          },
+          {
+            "atMs": 28173.699999809265,
+            "audioTime": 2.378077,
+            "index": 71,
+            "reason": "playback"
+          },
+          {
+            "atMs": 28207,
+            "audioTime": 2.409514,
+            "index": 72,
+            "reason": "playback"
+          }
+        ],
+        "fingerprint": "c194f9b6017bd2b9e2d8ec9fb6ba0077f318d3242e42ab5bc3ffc2e986fe8e20",
+        "frame": 72,
+        "frameCount": 73,
+        "id": "clip-002",
+        "kind": "3d",
+        "playedFrames": 69,
+        "provider": "streamingtalker",
+        "case": "zh-00",
+        "status": "passed",
+        "seek_frame_sha256": [
+          "cefd82a1b00e6e48d3504a32a598d47305d1505b3306e01a8b9acd6b555164ae",
+          "a83d768527e751937572a90eebbc76196797cdcf0953e19f2451b8597108638c",
+          "cefd82a1b00e6e48d3504a32a598d47305d1505b3306e01a8b9acd6b555164ae"
+        ]
+      },
+      {
+        "completedPlaybackCount": 1,
+        "displayedFrames": 30,
+        "duration": 1,
+        "events": [
+          {
+            "atMs": 28595.39999961853,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "preview"
+          },
+          {
+            "atMs": 28904.39999961853,
+            "audioTime": 0.033333,
+            "index": 1,
+            "reason": "seek"
+          },
+          {
+            "atMs": 28904.89999961853,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 28915.89999961853,
+            "audioTime": 0.966666,
+            "index": 29,
+            "reason": "seek"
+          },
+          {
+            "atMs": 28922.300000190735,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 29374.300000190735,
+            "audioTime": 0.046417,
+            "index": 1,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29407.89999961853,
+            "audioTime": 0.077879,
+            "index": 2,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29440.39999961853,
+            "audioTime": 0.109331,
+            "index": 3,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29473.89999961853,
+            "audioTime": 0.138831,
+            "index": 4,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29507.199999809265,
+            "audioTime": 0.189833,
+            "index": 5,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29524.300000190735,
+            "audioTime": 0.206832,
+            "index": 6,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29557,
+            "audioTime": 0.235884,
+            "index": 7,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29590.300000190735,
+            "audioTime": 0.267282,
+            "index": 8,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29640.300000190735,
+            "audioTime": 0.313575,
+            "index": 9,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29673.599999427795,
+            "audioTime": 0.343211,
+            "index": 10,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29707.099999427795,
+            "audioTime": 0.374758,
+            "index": 11,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29740.39999961853,
+            "audioTime": 0.406203,
+            "index": 12,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29773.599999427795,
+            "audioTime": 0.457022,
+            "index": 13,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29790.89999961853,
+            "audioTime": 0.474227,
+            "index": 14,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29823.699999809265,
+            "audioTime": 0.503292,
+            "index": 15,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29873.800000190735,
+            "audioTime": 0.54961,
+            "index": 16,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29907.199999809265,
+            "audioTime": 0.579289,
+            "index": 17,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29940.39999961853,
+            "audioTime": 0.610603,
+            "index": 18,
+            "reason": "playback"
+          },
+          {
+            "atMs": 29973.599999427795,
+            "audioTime": 0.640056,
+            "index": 19,
+            "reason": "playback"
+          },
+          {
+            "atMs": 30007.199999809265,
+            "audioTime": 0.671674,
+            "index": 20,
+            "reason": "playback"
+          },
+          {
+            "atMs": 30040.39999961853,
+            "audioTime": 0.703007,
+            "index": 21,
+            "reason": "playback"
+          },
+          {
+            "atMs": 30057.5,
+            "audioTime": 0.739571,
+            "index": 22,
+            "reason": "playback"
+          },
+          {
+            "atMs": 30090.300000190735,
+            "audioTime": 0.770483,
+            "index": 23,
+            "reason": "playback"
+          },
+          {
+            "atMs": 30123.599999427795,
+            "audioTime": 0.800092,
+            "index": 24,
+            "reason": "playback"
+          },
+          {
+            "atMs": 30173.599999427795,
+            "audioTime": 0.84632,
+            "index": 25,
+            "reason": "playback"
+          },
+          {
+            "atMs": 30207,
+            "audioTime": 0.875935,
+            "index": 26,
+            "reason": "playback"
+          },
+          {
+            "atMs": 30240.300000190735,
+            "audioTime": 0.907371,
+            "index": 27,
+            "reason": "playback"
+          },
+          {
+            "atMs": 30273.89999961853,
+            "audioTime": 0.939042,
+            "index": 28,
+            "reason": "playback"
+          },
+          {
+            "atMs": 30307.199999809265,
+            "audioTime": 0.989933,
+            "index": 29,
+            "reason": "playback"
+          }
+        ],
+        "fingerprint": "bf3847ebd2bca4147f4cb46f42ed2090bf67ebe7bafd0387a8eb4ad32a32df61",
+        "frame": 29,
+        "frameCount": 30,
+        "id": "clip-013",
+        "kind": "3d",
+        "playedFrames": 29,
+        "provider": "streamingtalker",
+        "case": "silence-00",
+        "status": "passed",
+        "seek_frame_sha256": [
+          "e2bc40b586b22dae7adf73fc2eb42636539fd8b305dec7be23caa796b0159c8b",
+          "70deef3efa4bd342bb682c2870df27812708cfcea0c0a8b2568fc9186de87071",
+          "e2bc40b586b22dae7adf73fc2eb42636539fd8b305dec7be23caa796b0159c8b"
+        ]
+      },
+      {
+        "completedPlaybackCount": 1,
+        "displayedFrames": 146,
+        "duration": 5.008,
+        "events": [
+          {
+            "atMs": 30837,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "preview"
+          },
+          {
+            "atMs": 31146.89999961853,
+            "audioTime": 0.033333,
+            "index": 1,
+            "reason": "seek"
+          },
+          {
+            "atMs": 31147.39999961853,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 31157.39999961853,
+            "audioTime": 5,
+            "index": 150,
+            "reason": "seek"
+          },
+          {
+            "atMs": 31164.599999427795,
+            "audioTime": 0,
+            "index": 0,
+            "reason": "seek"
+          },
+          {
+            "atMs": 31590.199999809265,
+            "audioTime": 0.042313,
+            "index": 1,
+            "reason": "playback"
+          },
+          {
+            "atMs": 31623.800000190735,
+            "audioTime": 0.07394,
+            "index": 2,
+            "reason": "playback"
+          },
+          {
+            "atMs": 31657.099999427795,
+            "audioTime": 0.105439,
+            "index": 3,
+            "reason": "playback"
+          },
+          {
+            "atMs": 31690.699999809265,
+            "audioTime": 0.135101,
+            "index": 4,
+            "reason": "playback"
+          },
+          {
+            "atMs": 31740.5,
+            "audioTime": 0.202504,
+            "index": 6,
+            "reason": "playback"
+          },
+          {
+            "atMs": 31773.800000190735,
+            "audioTime": 0.23402,
+            "index": 7,
+            "reason": "playback"
+          },
+          {
+            "atMs": 31823.599999427795,
+            "audioTime": 0.280072,
+            "index": 8,
+            "reason": "playback"
+          },
+          {
+            "atMs": 31857,
+            "audioTime": 0.309752,
+            "index": 9,
+            "reason": "playback"
+          },
+          {
+            "atMs": 31890.39999961853,
+            "audioTime": 0.339315,
+            "index": 10,
+            "reason": "playback"
+          },
+          {
+            "atMs": 31923.699999809265,
+            "audioTime": 0.370832,
+            "index": 11,
+            "reason": "playback"
+          },
+          {
+            "atMs": 31957,
+            "audioTime": 0.40227,
+            "index": 12,
+            "reason": "playback"
+          },
+          {
+            "atMs": 31990.300000190735,
+            "audioTime": 0.453011,
+            "index": 13,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32007,
+            "audioTime": 0.469765,
+            "index": 14,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32057,
+            "audioTime": 0.514175,
+            "index": 15,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32090.300000190735,
+            "audioTime": 0.545507,
+            "index": 16,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32123.699999809265,
+            "audioTime": 0.577074,
+            "index": 17,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32157.199999809265,
+            "audioTime": 0.606721,
+            "index": 18,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32190.300000190735,
+            "audioTime": 0.636073,
+            "index": 19,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32223.5,
+            "audioTime": 0.667487,
+            "index": 20,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32273.5,
+            "audioTime": 0.734969,
+            "index": 22,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32323.599999427795,
+            "audioTime": 0.781312,
+            "index": 23,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32356.89999961853,
+            "audioTime": 0.810857,
+            "index": 24,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32390.300000190735,
+            "audioTime": 0.842268,
+            "index": 25,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32423.599999427795,
+            "audioTime": 0.873819,
+            "index": 26,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32457.099999427795,
+            "audioTime": 0.903396,
+            "index": 27,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32490.39999961853,
+            "audioTime": 0.934867,
+            "index": 28,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32523.5,
+            "audioTime": 0.985697,
+            "index": 29,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32540.300000190735,
+            "audioTime": 1.000558,
+            "index": 30,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32590.199999809265,
+            "audioTime": 1.046706,
+            "index": 31,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32623.699999809265,
+            "audioTime": 1.078243,
+            "index": 32,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32657,
+            "audioTime": 1.109645,
+            "index": 33,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32690.300000190735,
+            "audioTime": 1.139327,
+            "index": 34,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32723.5,
+            "audioTime": 1.170622,
+            "index": 35,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32757,
+            "audioTime": 1.200267,
+            "index": 36,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32790.39999961853,
+            "audioTime": 1.253051,
+            "index": 37,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32807.199999809265,
+            "audioTime": 1.267996,
+            "index": 38,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32856.89999961853,
+            "audioTime": 1.314048,
+            "index": 39,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32890.199999809265,
+            "audioTime": 1.343496,
+            "index": 40,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32923.599999427795,
+            "audioTime": 1.375068,
+            "index": 41,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32957,
+            "audioTime": 1.406471,
+            "index": 42,
+            "reason": "playback"
+          },
+          {
+            "atMs": 32995.099999427795,
+            "audioTime": 1.440986,
+            "index": 43,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33053.800000190735,
+            "audioTime": 1.515219,
+            "index": 45,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33090.699999809265,
+            "audioTime": 1.549848,
+            "index": 46,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33123.699999809265,
+            "audioTime": 1.579408,
+            "index": 47,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33157,
+            "audioTime": 1.610943,
+            "index": 48,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33190.39999961853,
+            "audioTime": 1.640501,
+            "index": 49,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33223.800000190735,
+            "audioTime": 1.672003,
+            "index": 50,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33257,
+            "audioTime": 1.703279,
+            "index": 51,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33306.89999961853,
+            "audioTime": 1.749547,
+            "index": 52,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33323.599999427795,
+            "audioTime": 1.785767,
+            "index": 53,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33340.300000190735,
+            "audioTime": 1.800551,
+            "index": 54,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33390.89999961853,
+            "audioTime": 1.846873,
+            "index": 55,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33424.099999427795,
+            "audioTime": 1.876257,
+            "index": 56,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33457.89999961853,
+            "audioTime": 1.907958,
+            "index": 57,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33491.099999427795,
+            "audioTime": 1.93927,
+            "index": 58,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33524.5,
+            "audioTime": 1.96889,
+            "index": 59,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33557.89999961853,
+            "audioTime": 2.000352,
+            "index": 60,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33574.39999961853,
+            "audioTime": 2.03645,
+            "index": 61,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33607.800000190735,
+            "audioTime": 2.067989,
+            "index": 62,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33656.89999961853,
+            "audioTime": 2.113878,
+            "index": 63,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33690.699999809265,
+            "audioTime": 2.143585,
+            "index": 64,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33724.300000190735,
+            "audioTime": 2.173199,
+            "index": 65,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33757.599999427795,
+            "audioTime": 2.204682,
+            "index": 66,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33790.89999961853,
+            "audioTime": 2.236112,
+            "index": 67,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33840.099999427795,
+            "audioTime": 2.282043,
+            "index": 68,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33856.89999961853,
+            "audioTime": 2.318242,
+            "index": 69,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33891.300000190735,
+            "audioTime": 2.347918,
+            "index": 70,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33924.39999961853,
+            "audioTime": 2.379516,
+            "index": 71,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33957.39999961853,
+            "audioTime": 2.410856,
+            "index": 72,
+            "reason": "playback"
+          },
+          {
+            "atMs": 33991,
+            "audioTime": 2.440535,
+            "index": 73,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34024.199999809265,
+            "audioTime": 2.472026,
+            "index": 74,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34057.599999427795,
+            "audioTime": 2.501703,
+            "index": 75,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34107.699999809265,
+            "audioTime": 2.569204,
+            "index": 77,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34141.300000190735,
+            "audioTime": 2.600658,
+            "index": 78,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34190.89999961853,
+            "audioTime": 2.646883,
+            "index": 79,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34223.89999961853,
+            "audioTime": 2.676346,
+            "index": 80,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34257.099999427795,
+            "audioTime": 2.707961,
+            "index": 81,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34290.699999809265,
+            "audioTime": 2.73728,
+            "index": 82,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34323.5,
+            "audioTime": 2.768626,
+            "index": 83,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34357.39999961853,
+            "audioTime": 2.800267,
+            "index": 84,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34374.39999961853,
+            "audioTime": 2.834783,
+            "index": 85,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34423.699999809265,
+            "audioTime": 2.88049,
+            "index": 86,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34457,
+            "audioTime": 2.912117,
+            "index": 87,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34490.89999961853,
+            "audioTime": 2.943479,
+            "index": 88,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34524.300000190735,
+            "audioTime": 2.973099,
+            "index": 89,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34556.89999961853,
+            "audioTime": 3.004453,
+            "index": 90,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34590.89999961853,
+            "audioTime": 3.034211,
+            "index": 91,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34607.199999809265,
+            "audioTime": 3.070454,
+            "index": 92,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34640.300000190735,
+            "audioTime": 3.101639,
+            "index": 93,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34690.39999961853,
+            "audioTime": 3.147795,
+            "index": 94,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34723.599999427795,
+            "audioTime": 3.177418,
+            "index": 95,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34757.199999809265,
+            "audioTime": 3.20898,
+            "index": 96,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34790.699999809265,
+            "audioTime": 3.240464,
+            "index": 97,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34824.199999809265,
+            "audioTime": 3.269975,
+            "index": 98,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34856.800000190735,
+            "audioTime": 3.301285,
+            "index": 99,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34890.800000190735,
+            "audioTime": 3.352316,
+            "index": 100,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34907.300000190735,
+            "audioTime": 3.367092,
+            "index": 101,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34958.099999427795,
+            "audioTime": 3.413222,
+            "index": 102,
+            "reason": "playback"
+          },
+          {
+            "atMs": 34990.800000190735,
+            "audioTime": 3.444687,
+            "index": 103,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35024.099999427795,
+            "audioTime": 3.476208,
+            "index": 104,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35057.89999961853,
+            "audioTime": 3.506138,
+            "index": 105,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35091.099999427795,
+            "audioTime": 3.537454,
+            "index": 106,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35124,
+            "audioTime": 3.566991,
+            "index": 107,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35157.300000190735,
+            "audioTime": 3.619563,
+            "index": 108,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35174.39999961853,
+            "audioTime": 3.634512,
+            "index": 109,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35224.5,
+            "audioTime": 3.680716,
+            "index": 110,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35257.5,
+            "audioTime": 3.710287,
+            "index": 111,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35290.800000190735,
+            "audioTime": 3.741797,
+            "index": 112,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35323.89999961853,
+            "audioTime": 3.773055,
+            "index": 113,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35357.39999961853,
+            "audioTime": 3.802757,
+            "index": 114,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35390.5,
+            "audioTime": 3.834147,
+            "index": 115,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35407.099999427795,
+            "audioTime": 3.870418,
+            "index": 116,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35440.300000190735,
+            "audioTime": 3.901766,
+            "index": 117,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35490.599999427795,
+            "audioTime": 3.948048,
+            "index": 118,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35523.800000190735,
+            "audioTime": 3.977709,
+            "index": 119,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35557.099999427795,
+            "audioTime": 4.007175,
+            "index": 120,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35590.39999961853,
+            "audioTime": 4.038616,
+            "index": 121,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35623.599999427795,
+            "audioTime": 4.069946,
+            "index": 122,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35673.699999809265,
+            "audioTime": 4.116257,
+            "index": 123,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35690.5,
+            "audioTime": 4.152536,
+            "index": 124,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35706.89999961853,
+            "audioTime": 4.167024,
+            "index": 125,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35756.800000190735,
+            "audioTime": 4.21322,
+            "index": 126,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35790.39999961853,
+            "audioTime": 4.244872,
+            "index": 127,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35823.5,
+            "audioTime": 4.274244,
+            "index": 128,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35856.89999961853,
+            "audioTime": 4.305794,
+            "index": 129,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35890.300000190735,
+            "audioTime": 4.335462,
+            "index": 130,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35923.800000190735,
+            "audioTime": 4.366719,
+            "index": 131,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35940.199999809265,
+            "audioTime": 4.402905,
+            "index": 132,
+            "reason": "playback"
+          },
+          {
+            "atMs": 35973.39999961853,
+            "audioTime": 4.434167,
+            "index": 133,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36023.599999427795,
+            "audioTime": 4.480597,
+            "index": 134,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36056.699999809265,
+            "audioTime": 4.510029,
+            "index": 135,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36090.300000190735,
+            "audioTime": 4.54168,
+            "index": 136,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36123.599999427795,
+            "audioTime": 4.571155,
+            "index": 137,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36157,
+            "audioTime": 4.602734,
+            "index": 138,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36190.199999809265,
+            "audioTime": 4.634121,
+            "index": 139,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36207.099999427795,
+            "audioTime": 4.670263,
+            "index": 140,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36257,
+            "audioTime": 4.714526,
+            "index": 141,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36290.199999809265,
+            "audioTime": 4.745951,
+            "index": 142,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36323.39999961853,
+            "audioTime": 4.777301,
+            "index": 143,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36356.800000190735,
+            "audioTime": 4.806901,
+            "index": 144,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36390.099999427795,
+            "audioTime": 4.836417,
+            "index": 145,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36423.39999961853,
+            "audioTime": 4.867909,
+            "index": 146,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36473.39999961853,
+            "audioTime": 4.935343,
+            "index": 148,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36506.699999809265,
+            "audioTime": 4.966862,
+            "index": 149,
+            "reason": "playback"
+          },
+          {
+            "atMs": 36556.800000190735,
+            "audioTime": 5.008,
+            "index": 150,
+            "reason": "playback"
+          }
+        ],
+        "fingerprint": "ba453760e0268210c302b9276aeb4489487a3b207a014063d3e8e1041075a627",
+        "frame": 150,
+        "frameCount": 151,
+        "id": "clip-008",
+        "kind": "3d",
+        "playedFrames": 145,
+        "provider": "streamingtalker",
+        "case": "pause-00",
+        "status": "passed",
+        "seek_frame_sha256": [
+          "cefd82a1b00e6e48d3504a32a598d47305d1505b3306e01a8b9acd6b555164ae",
+          "8e00551f479b1acb85db073f0d97768b2d88b1d45ca527599b70d711cf0a566f",
+          "cefd82a1b00e6e48d3504a32a598d47305d1505b3306e01a8b9acd6b555164ae"
+        ]
+      }
+    ],
+    "rapid_selection": {
+      "requested": [
+        "clip-001",
+        "clip-002",
+        "clip-003"
+      ],
+      "selected": "clip-003",
+      "status": "passed"
+    },
+    "errors": [],
+    "code_sha256": {
+      "avatar_review.py": "434c8cb156de6a9e3fe405ce7773498a9ee6fa95f0dc1d2c76f06fc81fe2a109",
+      "evaluation/review.mjs": "4ff38be487820bf410853bea4516cd4ef16fb7334843ec70f2e96a7b098d29ff",
+      "evaluation/review-core.mjs": "0d2ef4ef72677d619a18c1b30699e5530413297d872aa4ba887dee8dfc7a2640",
+      "avatar-web/renderer.mjs": "3afa5fd5720a9370639953fd522c75ba4901d8489aca84b37bae7338b882c12f"
+    }
+  },
+  "annotation_roundtrip_test": {
+    "status": "passed",
+    "unconfirmed_rejected": true,
+    "unassessed_rejected": true,
+    "saved_as_automated": true,
+    "export_equals_persisted": true
+  },
+  "quality_annotations": {
+    "human": 0,
+    "automated_quality_scores": 0,
+    "ui_regression_records_in_separate_validation_directory": 1
+  },
+  "earlier_failures": [
+    {
+      "status": "failed",
+      "phase": "automation setup",
+      "reason": "CLI eval requires an async function wrapper; no clip playback began",
+      "correction": "wrap awaited page expressions in async IIFE"
+    },
+    {
+      "status": "failed",
+      "case": "streamingtalker-zh-00",
+      "phase": "seek screenshot assertion before playback",
+      "cause": "first read used already-composited WebGL buffer; source screenshot was transparent although viewport mesh visible",
+      "evidence": "3d-readback-investigation.json: after forcing a fresh draw, frame0 hashes match on both visits",
+      "completed_2d_playbacks": 6
+    }
+  ],
+  "webgl_readback_investigation": [
+    {
+      "index": 0,
+      "sha256": "87d2c165b9e976d99081c169e5d702d7564f3a036415eb6166da5fb63e3bfdb9",
+      "nontransparent": 0,
+      "size": [
+        575,
+        370
+      ]
+    },
+    {
+      "index": 1,
+      "sha256": "cefd82a1b00e6e48d3504a32a598d47305d1505b3306e01a8b9acd6b555164ae",
+      "nontransparent": 45884,
+      "size": [
+        575,
+        370
+      ]
+    },
+    {
+      "index": 2,
+      "sha256": "cefd82a1b00e6e48d3504a32a598d47305d1505b3306e01a8b9acd6b555164ae",
+      "nontransparent": 45884,
+      "size": [
+        575,
+        370
+      ]
+    }
+  ],
+  "review_fixes": [
+    "Serialize clip selection until old decode cleanup finishes; immediately close ready bitmaps on cancellation",
+    "Persist annotations in UTF-8 so valid Unicode requests can be read after restart"
+  ],
+  "checks": {
+    "review_server_tests": 15,
+    "review_core_tests": 9,
+    "all_node_tests": 58,
+    "idle_assertion_scripts": 1,
+    "spec_review": "passed",
+    "code_review": "passed"
+  },
+  "limitations": [
+    "playedFrames counts distinct frame redraws while playing; an initial preview of frame0 is excluded, and rendering can skip frames while following the audio clock",
+    "Preloaded replay does not reproduce online inference or transport gaps",
+    "Fixed frontal untextured 3D mesh is not comparable to portrait identity fidelity",
+    "No human phonetic/lip-sync score was produced by these functional checks"
+  ]
+}

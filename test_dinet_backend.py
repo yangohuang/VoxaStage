@@ -51,6 +51,25 @@ class NativeSocket:
 
 
 class DINetTests(unittest.IsolatedAsyncioTestCase):
+    async def test_optional_observer_separates_native_receive_and_encode_without_payloads(self):
+        socket = NativeSocket(frames=1)
+        observations = []
+        async def connect(*args, **kwargs):
+            return socket
+        backend = DINetBackend('ws://localhost/api/ws/live_video/test', connect=connect,
+                               observer=observations.append)
+        async def source():
+            yield bytes(1920)
+        events = [event async for event in backend.stream(source())]
+        kinds = [event['type'] for event in observations]
+        self.assertEqual(events[-1]['type'], 'clip_end')
+        self.assertIn('native_audio_sent', kinds)
+        self.assertLess(kinds.index('native_frame_header'), kinds.index('native_frame_body'))
+        self.assertLess(kinds.index('native_frame_body'), kinds.index('encode_start'))
+        self.assertLess(kinds.index('encode_start'), kinds.index('encode_end'))
+        self.assertTrue(all(set(event) <= {'type', 'frame', 'bytes', 'delay_s'} for event in observations))
+        self.assertNotIn('localhost', json.dumps(observations))
+
     async def test_final_input_marked_before_padding_can_produce_frames(self):
         socket = NativeSocket()
         bridge = NativeConnection(socket, 'test')
@@ -143,3 +162,35 @@ class DINetTests(unittest.IsolatedAsyncioTestCase):
         with self.assertRaisesRegex(RuntimeError, 'source failed'):
             await asyncio.wait_for(run(), 1)
         self.assertTrue(socket.closed)
+
+class DINetBusyRecoveryTests(unittest.IsolatedAsyncioTestCase):
+    @staticmethod
+    def busy(reason='Server error: No available workers'):
+        from websockets.exceptions import ConnectionClosedError
+        from websockets.frames import Close
+        return ConnectionClosedError(Close(1011, reason), Close(1011, reason), True)
+
+    async def test_only_explicit_busy_before_metadata_is_retried(self):
+        from unittest.mock import AsyncMock, patch
+        from avatar_video_backend import VideoBackend
+        expected = (object(), {'kind': '2d'})
+        with patch.object(VideoBackend, '_open', AsyncMock(side_effect=[self.busy(), expected])) as opening:
+            result = await DINetBackend('ws://localhost/test')._open()
+            self.assertEqual(result, expected)
+            self.assertEqual(opening.await_count, 2)
+
+    async def test_model_errors_are_not_retried(self):
+        from unittest.mock import AsyncMock, patch
+        from avatar_video_backend import VideoBackend
+        failure = self.busy('Worker disconnected: CUDA error: out of memory')
+        with patch.object(VideoBackend, '_open', AsyncMock(side_effect=failure)) as opening:
+            with self.assertRaises(type(failure)):
+                await DINetBackend('ws://localhost/test')._open()
+            self.assertEqual(opening.await_count, 1)
+
+    async def test_busy_retry_remains_cancelable(self):
+        from unittest.mock import AsyncMock, patch
+        from avatar_video_backend import VideoBackend
+        with patch.object(VideoBackend, '_open', AsyncMock(side_effect=self.busy())):
+            with self.assertRaises(TimeoutError):
+                await asyncio.wait_for(DINetBackend('ws://localhost/test')._open(), .025)

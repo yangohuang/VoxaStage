@@ -6,25 +6,34 @@ from pathlib import Path
 import tarfile
 
 ROOT = Path(__file__).resolve().parent
-FILES = '''bot.py backend.py services.py turn_observer.py turn_settings.py turn_strategy.py
+FILES = '''agent_tools.py agent_runtime.py avatar_profiles.py conversation_store.py playback_history.py
+test_agent_tools.py test_agent_runtime.py test_avatar_profiles.py test_conversation_store.py test_playback_history.py
+test_streaming_services.py test_avatar_playback.py test_avatar_conversations.py
+bot.py backend.py services.py turn_observer.py turn_settings.py turn_strategy.py
 avatar_backend.py avatar_session.py avatar_demo.py avatar_providers.py avatar_video_backend.py dinet_backend.py smoke_avatar.py smoke_video.py
 asr_server.py test_backend.py test_services.py test_turns.py test_asr_server.py
 test_avatar_backend.py test_avatar_session.py test_tts_lifecycle.py
 test_avatar_providers.py test_avatar_video_backend.py test_dinet_backend.py
 dialogue_backends.py omni_backend.py omni_processor.py
+visual_context.py test_visual_context.py test_visual_route.py
 api_backends.py test_api_backends.py test_voice_matching.py
 llm_server.py ctl.py asr_ctl.py test_ctl_config.py test_tts_resources.py
 test_dialogue_backends.py test_omni_backend.py test_omni_processor.py test_omni_route.py
+benchmark_avatar.py avatar_eval_metrics.py test_benchmark_avatar.py test_avatar_eval_metrics.py
+prepare_avatar_cases.py avatar_eval_capture.py capture_avatar.py
+test_prepare_avatar_cases.py test_avatar_eval_capture.py test_capture_avatar.py
+avatar_playback_lab.py test_avatar_playback_lab.py trace_dinet.py test_trace_dinet.py
+avatar_review.py test_avatar_review.py
 requirements.in requirements.lock install_demo.sh export_demo.py
 .env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
 AVATAR-PROTOCOL.md AVATAR-MULTIDRIVER-RESULTS.md
-docs/assets/dinet-idle.png docs/assets/flashhead-idle.png
-docs/assets/streamingtalker-idle.png docs/assets/conversation-preview.png'''.split()
+docs/assets/streaming-agent-preview.png docs/assets/dinet-idle.png docs/assets/flashhead-idle.png
+docs/assets/streamingtalker-idle.png docs/assets/conversation-preview.png docs/assets/visual-interaction-preview.png'''.split()
 
 
 def export(output):
     files = [ROOT / name for name in FILES]
-    for directory in ('avatar-web', 'avatar-server', 'video-server', 'omni-server', 'tts-compat', 'docs'):
+    for directory in ('avatar-web', 'avatar-server', 'video-server', 'dinet-server', 'omni-server', 'tts-compat', 'docs', 'evaluation'):
         for path in (ROOT / directory).rglob('*'):
             if (path.is_file() and not path.is_symlink() and '__pycache__' not in path.parts
                     and path.name != 'requirements.local.lock'
