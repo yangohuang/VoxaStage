@@ -1,0 +1,114 @@
+{
+  "deployment": {
+    "status": "passed",
+    "new_service": true,
+    "old_worker_present": false,
+    "prior_service_changed": false,
+    "validation_sha256": "23e26c5a30632325148e60b8cb6c143c43dfb08cedf8514dfbc7980b0763a501",
+    "rolled_back": false,
+    "unit_sha256": "05c0c36f989f580d6cadde6e1887949cec17e2417a79b795bac923c0f8734aa0",
+    "ready_s": 9.092178108985536,
+    "health": {
+      "ready": true,
+      "busy": false,
+      "model": "MiniCPM-o-4.5-AWQ",
+      "input_sample_rate": 16000,
+      "output_sample_rate": 24000,
+      "mode": "vad_segmented_end_to_end",
+      "capabilities": {
+        "image_input": true,
+        "visual_grounding_policy": "general",
+        "max_images": 2,
+        "max_image_bytes": 262144,
+        "max_image_dimension": 1024,
+        "capture_clock": "client_session_ms"
+      },
+      "requests": 0,
+      "cancelled": 0,
+      "failed": 0
+    },
+    "final_health": {
+      "ready": true,
+      "busy": false,
+      "model": "MiniCPM-o-4.5-AWQ",
+      "input_sample_rate": 16000,
+      "output_sample_rate": 24000,
+      "mode": "vad_segmented_end_to_end",
+      "capabilities": {
+        "image_input": true,
+        "visual_grounding_policy": "general",
+        "max_images": 2,
+        "max_image_bytes": 262144,
+        "max_image_dimension": 1024,
+        "capture_clock": "client_session_ms"
+      },
+      "requests": 1,
+      "cancelled": 0,
+      "failed": 0
+    },
+    "tracebacks": 0,
+    "error_lines": 0,
+    "service_ready": true,
+    "enabled": true,
+    "source_commit": "d89f96faccf1dc2172001c6c3d8492fcc740ffa6",
+    "publication": {
+      "source_sha256": "68e5ab38f8584270292e4b45f38e041ae901df4b91706491e534c8f83e40a94c",
+      "removed_fields": [
+        "service"
+      ]
+    }
+  },
+  "tunnel_generation": {
+    "status": "passed",
+    "voice": "male",
+    "samples": 89280,
+    "audio_chunks": 4,
+    "pcm_sha256": "115e5c58ebeff67a8e3440c0d7e8801249b944928f0ce18c69d014a951b7e766",
+    "text": "你好！很高兴见到你。有什么我可以帮你的吗？",
+    "wall_s": 1.5417714229843114,
+    "health_before": {
+      "ready": true,
+      "busy": false,
+      "model": "MiniCPM-o-4.5-AWQ",
+      "input_sample_rate": 16000,
+      "output_sample_rate": 24000,
+      "mode": "vad_segmented_end_to_end",
+      "capabilities": {
+        "image_input": true,
+        "visual_grounding_policy": "general",
+        "max_images": 2,
+        "max_image_bytes": 262144,
+        "max_image_dimension": 1024,
+        "capture_clock": "client_session_ms"
+      },
+      "requests": 1,
+      "cancelled": 0,
+      "failed": 0
+    },
+    "health_after": {
+      "ready": true,
+      "busy": false,
+      "model": "MiniCPM-o-4.5-AWQ",
+      "input_sample_rate": 16000,
+      "output_sample_rate": 24000,
+      "mode": "vad_segmented_end_to_end",
+      "capabilities": {
+        "image_input": true,
+        "visual_grounding_policy": "general",
+        "max_images": 2,
+        "max_image_bytes": 262144,
+        "max_image_dimension": 1024,
+        "capture_clock": "client_session_ms"
+      },
+      "requests": 2,
+      "cancelled": 0,
+      "failed": 0
+    },
+    "physical_device_test": false,
+    "publication": {
+      "source_sha256": "b9c07fcd1453f789729991c7919da7887538808d7fe6c1d05e24f8c7c2299e72",
+      "removed_fields": []
+    }
+  },
+  "scope": "42 independent validation requests plus2 separate production-entry checks; no physical device measurement"
+}

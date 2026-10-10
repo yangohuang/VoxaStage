@@ -12,6 +12,8 @@
 
 同日修复 [StreamingTalker 断连后终态发送竞态](STREAMINGTALKER-CLOSE-RACE.md)：旧代码两种受控回归失败，新代码49项协议测试通过；同输入90次真实请求通过且本轮服务端错误日志为0。随后已完成[日常服务切换](STREAMINGTALKER-DAILY-DEPLOYMENT.md)，原环境49项协议测试及上线后90次请求通过，日志未出现该异常。
 
+同日完成[MiniCPM-o独立环境与服务恢复](MINICPM-STANDALONE-VALIDATION.md)：119包完整锁、42次真实模型请求、上线后2次入口检查通过。保留Decord分发标签例外，CPU音色解码已验证；人工质量与空白GPU主机验收仍未完成。
+
 ## 已交付
 
 - 级联语音链路：话轮分段 ASR，增量 LLM 文字与 TTS 音频，真实项目文档检索/读取、计算与服务状态工具。
