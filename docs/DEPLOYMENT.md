@@ -103,7 +103,7 @@ python3 demo.py check --python .venv/bin/python --env-file .env --json
 | IndexTTS | [音色注册兼容层](../tts-compat/README.md)及应用协议适配 | 既有 TTS 推理服务、有权使用的男女参考音色；兼容层本身不是完整推理服务 |
 | MiniCPM-o | [worker、部署命令与已有环境说明](../omni-server/README.md) | 独立模型环境、权重、参考声音；看图需要显式开启视觉，尚未验收空白机器安装 |
 | FlashHead | [固定上游版本、安装脚本、模型准备和桥接服务](../video-server/README.md) | 独立 GPU 环境、权重、人物素材；按该文档的已验证范围部署 |
-| StreamingTalker | [固定上游补丁、服务依赖和启动命令](../avatar-server/README.md) | 模型/音频编码器权重与运行环境；当前说明不是全新机器验证过的完整安装器 |
+| StreamingTalker | [固定上游补丁、服务依赖和启动命令](../avatar-server/README.md) | 模型/音频编码器权重、人物模板与系统驱动；独立 Python 环境按 overlay 中的完整哈希锁安装，空白 GPU 主机仍需另行验收 |
 | DINet | [原生接口接入说明](DINET-DEPLOYMENT.md) | 已部署的兼容 DINet 服务与人物模板；本项目不包含完整人物训练/模型部署系统 |
 
 应用环境安装证据见[独立安装检查](SOURCE-INSTALL-VALIDATION.md)。统一检查/启动入口减少配置遗漏，**不代表空白 GPU 主机全模型一键安装已完成**。

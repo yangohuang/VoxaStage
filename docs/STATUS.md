@@ -8,6 +8,8 @@
 
 2026-10-10 部署补充：[Qwen ASR 独立环境](ASR-STANDALONE-VALIDATION.md)完成 111 包完整锁安装与 92 次真实请求复现，移除共享 Conda 包依赖；仍不代表空白 GPU 主机全模型部署通过。
 
+同日完成 [StreamingTalker 独立环境](STREAMINGTALKER-STANDALONE-VALIDATION.md)：固定上游源码、94 包完整锁、新环境 46 项协议测试及 90 次真实请求通过，包含取消后恢复。人工口型与物理设备验收仍待完成。
+
 ## 已交付
 
 - 级联语音链路：话轮分段 ASR，增量 LLM 文字与 TTS 音频，真实项目文档检索/读取、计算与服务状态工具。
