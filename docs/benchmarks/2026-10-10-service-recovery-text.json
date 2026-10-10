@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "date": "2026-10-10",
+  "application_commit": "bbcffedd87827f532543c236d16eaed5fc7c4eb6",
+  "execution": "real_models_headless_chrome",
+  "physical_devices": false,
+  "human_quality_accepted": false,
+  "full_goal_complete": false,
+  "selection": "Selected observed fields; session/conversation identifiers, local paths and full event traces omitted. Original artifact hash binds selection.",
+  "source_sha256": "3edea0eea5e98563f4b91a1509552a4e926e9092e90bcd0ebb2b4ca4681a3860",
+  "harness_sha256": "bf4f64ae3e32a58c89390344086526e027649c4b7f20c0fd2552bfa0896f09ce",
+  "browser_exceptions": 0,
+  "trials": [
+    {
+      "backend": "minicpm",
+      "profile": "dinet",
+      "status": "passed",
+      "messages": [
+        "请只说一句：你好，很高兴见到你。",
+        "你好，很高兴见到你。"
+      ],
+      "first_playback_observed_s": 5.4476471100060735,
+      "during_playback": {
+        "generation": 1,
+        "renderedFrames": 2,
+        "droppedStale": 0,
+        "playing": true,
+        "pendingFrames": 3,
+        "queuedSeconds": 0,
+        "scheduledSources": 4,
+        "scheduledSamples": 4800,
+        "audioTime": 4.096,
+        "connected": true,
+        "microphone": false,
+        "idle": false
+      },
+      "after_playback": {
+        "generation": 1,
+        "renderedFrames": 57,
+        "droppedStale": 0,
+        "playing": false,
+        "pendingFrames": 0,
+        "queuedSeconds": 0,
+        "scheduledSources": 0,
+        "scheduledSamples": 54720,
+        "audioTime": 6.453333333333333,
+        "connected": true,
+        "microphone": false,
+        "idle": true
+      },
+      "after_disconnect": {
+        "generation": 1,
+        "renderedFrames": 57,
+        "droppedStale": 0,
+        "playing": false,
+        "pendingFrames": 0,
+        "queuedSeconds": 0,
+        "scheduledSources": 0,
+        "scheduledSamples": 54720,
+        "audioTime": 6.464,
+        "connected": false,
+        "microphone": false,
+        "idle": true
+      }
+    },
+    {
+      "backend": "minicpm",
+      "profile": "flashhead",
+      "status": "passed",
+      "messages": [
+        "请只说一句：你好，很高兴见到你。",
+        "你好，很高兴见到你。"
+      ],
+      "first_playback_observed_s": 1.6144895870238543,
+      "during_playback": {
+        "generation": 1,
+        "renderedFrames": 5,
+        "droppedStale": 0,
+        "playing": true,
+        "pendingFrames": 19,
+        "queuedSeconds": 0.44,
+        "scheduledSources": 9,
+        "scheduledSamples": 12480,
+        "audioTime": 2.037333333333333,
+        "connected": true,
+        "microphone": false,
+        "idle": false
+      },
+      "after_playback": {
+        "generation": 1,
+        "renderedFrames": 53,
+        "droppedStale": 0,
+        "playing": false,
+        "pendingFrames": 0,
+        "queuedSeconds": 0,
+        "scheduledSources": 0,
+        "scheduledSamples": 50880,
+        "audioTime": 4.165333333333334,
+        "connected": true,
+        "microphone": false,
+        "idle": true
+      },
+      "after_disconnect": {
+        "generation": 1,
+        "renderedFrames": 53,
+        "droppedStale": 0,
+        "playing": false,
+        "pendingFrames": 0,
+        "queuedSeconds": 0,
+        "scheduledSources": 0,
+        "scheduledSamples": 50880,
+        "audioTime": 4.176,
+        "connected": false,
+        "microphone": false,
+        "idle": true
+      }
+    },
+    {
+      "backend": "minicpm",
+      "profile": "streamingtalker",
+      "status": "passed",
+      "messages": [
+        "请只说一句：你好，很高兴见到你。",
+        "你好，很高兴见到你。"
+      ],
+      "first_playback_observed_s": 1.4142235480248928,
+      "during_playback": {
+        "generation": 1,
+        "renderedFrames": 6,
+        "droppedStale": 0,
+        "playing": true,
+        "pendingFrames": 18,
+        "queuedSeconds": 0.23333333333333334,
+        "scheduledSources": 12,
+        "scheduledSamples": 13600,
+        "audioTime": 1.6426666666666667,
+        "connected": true,
+        "microphone": false,
+        "idle": false
+      },
+      "after_playback": {
+        "generation": 1,
+        "renderedFrames": 74,
+        "droppedStale": 0,
+        "playing": false,
+        "pendingFrames": 0,
+        "queuedSeconds": 0,
+        "scheduledSources": 0,
+        "scheduledSamples": 59520,
+        "audioTime": 3.941333333333333,
+        "connected": true,
+        "microphone": false,
+        "idle": true
+      },
+      "after_disconnect": {
+        "generation": 1,
+        "renderedFrames": 74,
+        "droppedStale": 0,
+        "playing": false,
+        "pendingFrames": 0,
+        "queuedSeconds": 0,
+        "scheduledSources": 0,
+        "scheduledSamples": 59520,
+        "audioTime": 3.941333333333333,
+        "connected": false,
+        "microphone": false,
+        "idle": true
+      }
+    }
+  ]
+}
