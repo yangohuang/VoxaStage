@@ -1,0 +1,111 @@
+{
+  "same_input_context_trials": 92,
+  "changes": [
+    {
+      "case": "en-00",
+      "variant": "terms",
+      "repeat": 0,
+      "old": "Hello, welcome to the voice laboratory.",
+      "new": "Hello, welcome to the Voice Laboratory."
+    },
+    {
+      "case": "en-00",
+      "variant": "plain",
+      "repeat": 0,
+      "old": "Hello, welcome to the voice laboratory.",
+      "new": "Hello. Welcome to the Voice Laboratory."
+    },
+    {
+      "case": "mixed-00",
+      "variant": "plain",
+      "repeat": 0,
+      "old": "介绍一下语音 agent 技术。",
+      "new": "介绍一下语音agent技术。"
+    },
+    {
+      "case": "mixed-01",
+      "variant": "plain",
+      "repeat": 0,
+      "old": "请解释一下 VIT 和 S R 的区别。",
+      "new": "请解释一下 white 和 sr 的区别。"
+    },
+    {
+      "case": "mixed-02",
+      "variant": "plain",
+      "repeat": 0,
+      "old": "我们用WebRTC传输语音，用Python处理模型输出。",
+      "new": "我们用 WebRTC 传输语音，用 Python 处理模型输出。"
+    },
+    {
+      "case": "en-00",
+      "variant": "plain",
+      "repeat": 1,
+      "old": "Hello, welcome to the voice laboratory.",
+      "new": "Hello. Welcome to the Voice Laboratory."
+    },
+    {
+      "case": "en-00",
+      "variant": "terms",
+      "repeat": 1,
+      "old": "Hello, welcome to the voice laboratory.",
+      "new": "Hello, welcome to the Voice Laboratory."
+    },
+    {
+      "case": "mixed-00",
+      "variant": "plain",
+      "repeat": 1,
+      "old": "介绍一下语音 agent 技术。",
+      "new": "介绍一下语音agent技术。"
+    },
+    {
+      "case": "mixed-01",
+      "variant": "plain",
+      "repeat": 1,
+      "old": "请解释一下 VIT 和 S R 的区别。",
+      "new": "请解释一下 white 和 sr 的区别。"
+    },
+    {
+      "case": "mixed-02",
+      "variant": "plain",
+      "repeat": 1,
+      "old": "我们用WebRTC传输语音，用Python处理模型输出。",
+      "new": "我们用 WebRTC 传输语音，用 Python 处理模型输出。"
+    },
+    {
+      "case": "en-00",
+      "variant": "terms",
+      "repeat": 2,
+      "old": "Hello, welcome to the voice laboratory.",
+      "new": "Hello, welcome to the Voice Laboratory."
+    },
+    {
+      "case": "en-00",
+      "variant": "plain",
+      "repeat": 2,
+      "old": "Hello, welcome to the voice laboratory.",
+      "new": "Hello. Welcome to the Voice Laboratory."
+    },
+    {
+      "case": "mixed-00",
+      "variant": "plain",
+      "repeat": 2,
+      "old": "介绍一下语音 agent 技术。",
+      "new": "介绍一下语音agent技术。"
+    },
+    {
+      "case": "mixed-01",
+      "variant": "plain",
+      "repeat": 2,
+      "old": "请解释一下 VIT 和 S R 的区别。",
+      "new": "请解释一下 white 和 sr 的区别。"
+    },
+    {
+      "case": "mixed-02",
+      "variant": "plain",
+      "repeat": 2,
+      "old": "我们用WebRTC传输语音，用Python处理模型输出。",
+      "new": "我们用 WebRTC 传输语音，用 Python 处理模型输出。"
+    }
+  ],
+  "quality_scope": "synthetic prompt comparison, not human CER"
+}

@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "date": "2026-10-10",
+  "application_commit": "1534e33861735849f2f82b2a4e28fc4a64882301",
+  "execution": "real_models_headless_chrome",
+  "physical_devices": false,
+  "human_quality_accepted": false,
+  "full_goal_complete": false,
+  "source_sha256": "e209b62729cbe0746fd801d5533cb314cddebeef81336d5d67cbf13fef51acd6",
+  "browser_exceptions": 0,
+  "selection": "Observed fields; session identifiers and full event traces omitted. Synthetic microphone and manual interruption only.",
+  "trials": [
+    {
+      "backend": "cascade",
+      "profile": "dinet",
+      "status": "passed",
+      "voice_round": {
+        "label": "cascade-dinet",
+        "passed": true,
+        "first": {
+          "round": 1,
+          "label": "cascade-dinet",
+          "lastActivePacketMs": 5856.300000011921,
+          "firstPacketMs": 3337,
+          "packetCount": 250,
+          "activePackets": 103,
+          "firstMediaMs": 7920.800000011921,
+          "firstScheduledStartMs": 8023.5,
+          "endOfActivePacketToMediaMs": 2064.5,
+          "endOfActivePacketToScheduledStartMs": 2167.199999988079,
+          "firstMediaToScheduledStartMs": 102.69999998807907,
+          "metrics": {
+            "generation": 1,
+            "renderedFrames": 8,
+            "droppedStale": 0,
+            "playing": true,
+            "pendingFrames": 0,
+            "queuedSeconds": 0,
+            "scheduledSources": 1,
+            "scheduledSamples": 7680,
+            "audioTime": 4.965333333333334,
+            "connected": true,
+            "microphone": false,
+            "idle": false
+          }
+        },
+        "interrupt": {
+          "requestedMs": 8328.09999999404,
+          "before": {
+            "generation": 1,
+            "renderedFrames": 8,
+            "droppedStale": 0,
+            "playing": true,
+            "pendingFrames": 0,
+            "queuedSeconds": 0,
+            "scheduledSources": 1,
+            "scheduledSamples": 7680,
+            "audioTime": 4.965333333333334,
+            "connected": true,
+            "microphone": false,
+            "idle": false
+          },
+          "stoppedMs": 8328.90000000596,
+          "after": {
+            "generation": 1,
+            "renderedFrames": 8,
+            "droppedStale": 0,
+            "playing": false,
+            "pendingFrames": 0,
+            "queuedSeconds": 0,
+            "scheduledSources": 0,
+            "scheduledSamples": 7680,
+            "audioTime": 4.976,
+            "connected": true,
+            "microphone": false,
+            "idle": false
+          },
+          "serverResetMs": 8349.200000017881,
+          "framesStable": true
+        },
+        "recovery": {
+          "requestedMs": 8599.40000000596,
+          "firstPlaybackObservedMs": 9184.700000017881,
+          "metrics": {
+            "generation": 3,
+            "renderedFrames": 30,
+            "droppedStale": 0,
+            "playing": false,
+            "pendingFrames": 0,
+            "queuedSeconds": 0,
+            "scheduledSources": 0,
+            "scheduledSamples": 28160,
+            "audioTime": 6.8853333333333335,
+            "connected": true,
+            "microphone": false,
+            "idle": true
+          }
+        },
+        "transcript": [
+          "好，这是服务恢复测试。",
+          "请只说你好。"
+        ],
+        "idleAfterPlayback": true,
+        "disconnected": {
+          "generation": 3,
+          "renderedFrames": 30,
+          "droppedStale": 0,
+          "playing": false,
+          "pendingFrames": 0,
+          "queuedSeconds": 0,
+          "scheduledSources": 0,
+          "scheduledSamples": 28160,
+          "audioTime": 7.189333333333333,
+          "connected": false,
+          "microphone": false,
+          "idle": true
+        },
+        "idleAfterDisconnect": true
+      }
+    },
+    {
+      "backend": "cascade",
+      "profile": "flashhead",
+      "status": "passed",
+      "voice_round": {
+        "label": "cascade-flashhead",
+        "passed": true,
+        "first": {
+          "round": 1,
+          "label": "cascade-flashhead",
+          "lastActivePacketMs": 4441.699999988079,
+          "firstPacketMs": 458.09999999403954,
+          "packetCount": 355,
+          "activePackets": 109,
+          "firstMediaMs": 7190.0999999940395,
+          "firstScheduledStartMs": 7233.699999988079,
+          "endOfActivePacketToMediaMs": 2748.4000000059605,
+          "endOfActivePacketToScheduledStartMs": 2792,
+          "firstMediaToScheduledStartMs": 43.599999994039536,
+          "metrics": {
+            "generation": 1,
+            "renderedFrames": 8,
+            "droppedStale": 0,
+            "playing": true,
+            "pendingFrames": 16,
+            "queuedSeconds": 0.32,
+            "scheduledSources": 9,
+            "scheduledSamples": 15360,
+            "audioTime": 7.328,
+            "connected": true,
+            "microphone": false,
+            "idle": false
+          }
+        },
+        "interrupt": {
+          "requestedMs": 7533,
+          "before": {
+            "generation": 1,
+            "renderedFrames": 8,
+            "droppedStale": 0,
+            "playing": true,
+            "pendingFrames": 16,
+            "queuedSeconds": 0.32,
+            "scheduledSources": 9,
+            "scheduledSamples": 15360,
+            "audioTime": 7.328,
+            "connected": true,
+            "microphone": false,
+            "idle": false
+          },
+          "stoppedMs": 7534.5,
+          "after": {
+            "generation": 1,
+            "renderedFrames": 8,
+            "droppedStale": 0,
+            "playing": false,
+            "pendingFrames": 0,
+            "queuedSeconds": 0,
+            "scheduledSources": 0,
+            "scheduledSamples": 15360,
+            "audioTime": 7.328,
+            "connected": true,
+            "microphone": false,
+            "idle": false
+          },
+          "serverResetMs": 7554.5,
+          "framesStable": true
+        },
+        "recovery": {
+          "requestedMs": 7811.0999999940395,
+          "firstPlaybackObservedMs": 8632.90000000596,
+          "metrics": {
+            "generation": 3,
+            "renderedFrames": 31,
+            "droppedStale": 0,
+            "playing": false,
+            "pendingFrames": 0,
+            "queuedSeconds": 0,
+            "scheduledSources": 0,
+            "scheduledSamples": 36864,
+            "audioTime": 9.525333333333334,
+            "connected": true,
+            "microphone": false,
+            "idle": true
+          }
+        },
+        "transcript": [
+          "你好，这是服务恢复测试。",
+          "请只说你好。"
+        ],
+        "idleAfterPlayback": true,
+        "disconnected": {
+          "generation": 3,
+          "renderedFrames": 31,
+          "droppedStale": 0,
+          "playing": false,
+          "pendingFrames": 0,
+          "queuedSeconds": 0,
+          "scheduledSources": 0,
+          "scheduledSamples": 36864,
+          "audioTime": 9.84,
+          "connected": false,
+          "microphone": false,
+          "idle": true
+        },
+        "idleAfterDisconnect": true
+      }
+    },
+    {
+      "backend": "cascade",
+      "profile": "streamingtalker",
+      "status": "passed",
+      "voice_round": {
+        "label": "cascade-streamingtalker",
+        "passed": true,
+        "first": {
+          "round": 1,
+          "label": "cascade-streamingtalker",
+          "lastActivePacketMs": 4483.5,
+          "firstPacketMs": 497.59999999403954,
+          "packetCount": 295,
+          "activePackets": 110,
+          "firstMediaMs": 6078,
+          "firstScheduledStartMs": 6122.699999988079,
+          "endOfActivePacketToMediaMs": 1594.5,
+          "endOfActivePacketToScheduledStartMs": 1639.199999988079,
+          "firstMediaToScheduledStartMs": 44.69999998807907,
+          "metrics": {
+            "generation": 1,
+            "renderedFrames": 9,
+            "droppedStale": 0,
+            "playing": true,
+            "pendingFrames": 3,
+            "queuedSeconds": 0,
+            "scheduledSources": 4,
+            "scheduledSamples": 9600,
+            "audioTime": 6.1546666666666665,
+            "connected": true,
+            "microphone": false,
+            "idle": false
+          }
+        },
+        "interrupt": {
+          "requestedMs": 6392,
+          "before": {
+            "generation": 1,
+            "renderedFrames": 9,
+            "droppedStale": 0,
+            "playing": true,
+            "pendingFrames": 3,
+            "queuedSeconds": 0,
+            "scheduledSources": 4,
+            "scheduledSamples": 9600,
+            "audioTime": 6.1546666666666665,
+            "connected": true,
+            "microphone": false,
+            "idle": false
+          },
+          "stoppedMs": 6392.699999988079,
+          "after": {
+            "generation": 1,
+            "renderedFrames": 9,
+            "droppedStale": 0,
+            "playing": false,
+            "pendingFrames": 0,
+            "queuedSeconds": 0,
+            "scheduledSources": 0,
+            "scheduledSamples": 9600,
+            "audioTime": 6.1546666666666665,
+            "connected": true,
+            "microphone": false,
+            "idle": false
+          },
+          "serverResetMs": 6413,
+          "framesStable": true
+        },
+        "recovery": {
+          "requestedMs": 6663.0999999940395,
+          "firstPlaybackObservedMs": 7133.4000000059605,
+          "metrics": {
+            "generation": 3,
+            "renderedFrames": 31,
+            "droppedStale": 0,
+            "playing": false,
+            "pendingFrames": 0,
+            "queuedSeconds": 0,
+            "scheduledSources": 0,
+            "scheduledSamples": 27008,
+            "audioTime": 7.8133333333333335,
+            "connected": true,
+            "microphone": false,
+            "idle": true
+          }
+        },
+        "transcript": [
+          "你好，这是服务恢复测试。",
+          "请只说你好。"
+        ],
+        "idleAfterPlayback": true,
+        "disconnected": {
+          "generation": 3,
+          "renderedFrames": 31,
+          "droppedStale": 0,
+          "playing": false,
+          "pendingFrames": 0,
+          "queuedSeconds": 0,
+          "scheduledSources": 0,
+          "scheduledSamples": 27008,
+          "audioTime": 8.117333333333333,
+          "connected": false,
+          "microphone": false,
+          "idle": true
+        },
+        "idleAfterDisconnect": true
+      }
+    }
+  ]
+}
