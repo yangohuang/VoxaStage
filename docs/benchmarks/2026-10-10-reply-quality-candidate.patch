@@ -1,0 +1,122 @@
+diff --git a/omni-server/worker.py b/omni-server/worker.py
+index fd8d7a9..ac416d8 100644
+--- a/omni-server/worker.py
++++ b/omni-server/worker.py
+@@ -18,6 +18,16 @@ from visual_grounding import POLICIES, build_system_prompt
+ SYSTEM = '你是中文语音助手。认真理解用户的中文和英文术语，依据上下文直接回答。简单问题简短回答，解释性问题给出关键原因和具体例子，每次回答控制在60字以内，优先一到两句，需要更多细节时等用户追问。用自然口语，不用Markdown。不确定时明确说明，听不清时请用户澄清，不编造事实。'
+ 
+ 
++REPLY_STYLES = {
++    'concise': (SYSTEM, 128),
++    'balanced': ('你是中文语音助手。认真理解用户的中文和英文术语，依据上下文回答当前问题。'
++                 '简单问题直接短答。解释、比较或排障问题先给结论，再说明关键理由或必要步骤；'
++                 '优先覆盖用户明确要求的要点，最多三点、约100字，不要只说空泛套话或让用户重复追问。'
++                 '用户纠正时采用最新信息，不沿用已被否定的说法。用自然口语，不用Markdown。'
++                 '不确定时明确说明，听不清时请用户澄清，不编造事实。', 192),
++}
++
++
+ def parse_messages(payload, *, vision_enabled=False):
+     messages = payload.get('messages') if isinstance(payload, dict) else None
+     if not isinstance(messages, list) or not 1 <= len(messages) <= 13:
+@@ -69,6 +79,7 @@ def create_app(engine):
+                     mode='vad_segmented_end_to_end',
+                     capabilities=dict(image_input=bool(getattr(engine, 'vision_enabled', False)),
+                                       visual_grounding_policy=getattr(engine, 'visual_grounding_policy', 'baseline'),
++                                      reply_style=getattr(engine, 'reply_style', 'concise'),
+                                       max_images=2, max_image_bytes=262144,
+                                       max_image_dimension=1024, capture_clock='client_session_ms'), **stats)
+ 
+@@ -177,10 +188,13 @@ def create_app(engine):
+ 
+ class MiniCPMEngine:
+     def __init__(self, model_path, *, male_reference=None, female_reference=None, vision_enabled=False,
+-                 visual_grounding_policy='baseline', speech_context=''):
++                 visual_grounding_policy='baseline', speech_context='', reply_style='concise'):
+         if not isinstance(speech_context, str) or len(speech_context) > 1024:
+             raise ValueError('Speech context must be a string of at most 1024 characters')
+         self.speech_context = speech_context.strip()
++        if not isinstance(reply_style, str) or reply_style not in REPLY_STYLES:
++            raise ValueError('Unknown reply style')
++        self.reply_style = reply_style
+         if visual_grounding_policy not in POLICIES:
+             raise ValueError('Unknown visual grounding policy')
+         self.visual_grounding_policy = visual_grounding_policy
+@@ -215,7 +229,7 @@ class MiniCPMEngine:
+         with self.torch.inference_mode():
+             self.model.reset_session(reset_token2wav_cache=False)
+             sid = 'pipecat-' + str(time.monotonic_ns())
+-            speech_prompt = SYSTEM
++            speech_prompt, token_budget = REPLY_STYLES[getattr(self, 'reply_style', 'concise')]
+             context = getattr(self, 'speech_context', '')
+             if context:
+                 speech_prompt += ('\n当前会话可能涉及这些中英文术语：' + context
+@@ -246,7 +260,7 @@ class MiniCPMEngine:
+                         msgs=[{'role':message['role'],'content':chunk}], omni_mode=False,
+                         is_last_chunk=i == len(chunks)-1)
+             generator = self.model.streaming_generate(session_id=sid, generate_audio=True,
+-                use_tts_template=True, do_sample=True, max_new_tokens=128)
++                use_tts_template=True, do_sample=True, max_new_tokens=token_budget)
+             try:
+                 for audio, text in generator:
+                     if stop.is_set():
+@@ -267,8 +281,10 @@ if __name__ == '__main__':
+     parser.add_argument('--visual-grounding', choices=POLICIES, default='baseline',
+                         help='Server-selected visual evidence prompt; baseline preserves the original prompt')
+     parser.add_argument('--speech-context', default='', help='Optional domain terms for audio understanding; not an ASR transcript')
++    parser.add_argument('--reply-style', choices=REPLY_STYLES, default='concise',
++                        help='Reply completeness policy; concise preserves the previous short-answer defaults')
+     args=parser.parse_args()
+     engine=MiniCPMEngine(args.model,male_reference=args.male_reference,female_reference=args.female_reference,
+                          vision_enabled=args.vision, visual_grounding_policy=args.visual_grounding,
+-                         speech_context=args.speech_context)
++                         speech_context=args.speech_context, reply_style=args.reply_style)
+     uvicorn.run(create_app(engine), host='127.0.0.1', port=args.port, limit_concurrency=16)
+diff --git a/omni-server/test_reply_style.py b/omni-server/test_reply_style.py
+new file mode 100644
+index 0000000..859abe4
+--- /dev/null
++++ b/omni-server/test_reply_style.py
+@@ -0,0 +1,42 @@
++import unittest
++from contextlib import nullcontext
++from types import SimpleNamespace
++import httpx
++from worker import MiniCPMEngine, SYSTEM, create_app
++
++
++class ReplyStyleTests(unittest.IsolatedAsyncioTestCase):
++    def capture(self, style=None):
++        prefill=[]; generation=[]
++        def generate(**kwargs):
++            generation.append(kwargs)
++            yield None,'回答'
++        engine=MiniCPMEngine.__new__(MiniCPMEngine)
++        engine.torch=SimpleNamespace(inference_mode=nullcontext)
++        engine.model=SimpleNamespace(reset_session=lambda **kw:None,
++            init_streaming_processor=lambda:None,
++            streaming_prefill=lambda **kw:prefill.extend(kw['msgs']),streaming_generate=generate)
++        if style is not None:engine.reply_style=style
++        list(engine.generate([{'role':'user','content':['请解释原因']}],SimpleNamespace(is_set=lambda:False)))
++        return prefill[0]['content'][0],generation[0]
++
++    def test_default_retains_current_concise_policy(self):
++        prompt,params=self.capture()
++        self.assertEqual(prompt,SYSTEM)
++        self.assertEqual(params['max_new_tokens'],128)
++
++    def test_balanced_reaches_model_with_larger_bounded_budget(self):
++        prompt,params=self.capture('balanced')
++        self.assertNotIn('60字',prompt)
++        self.assertIn('结论',prompt)
++        self.assertIn('理由',prompt)
++        self.assertEqual(params['max_new_tokens'],192)
++
++    def test_invalid_style_rejected_before_loading(self):
++        with self.assertRaises(ValueError):
++            MiniCPMEngine('/missing/model',reply_style='unbounded')
++
++    async def test_health_reports_selected_style(self):
++        engine=SimpleNamespace(reply_style='balanced')
++        async with httpx.AsyncClient(transport=httpx.ASGITransport(app=create_app(engine)),base_url='http://test') as client:
++            self.assertEqual((await client.get('/health')).json()['capabilities']['reply_style'],'balanced')
