@@ -1,0 +1,365 @@
+{
+  "status": "complete",
+  "cases": [
+    {
+      "id": "compare",
+      "messages": [
+        {
+          "role": "user",
+          "text": "比较级联语音助手和端到端语音助手：分别说明可调试性、延迟、错误定位三个方面的取舍。"
+        }
+      ],
+      "rubric": [
+        "both architectures compared",
+        "debuggability tradeoff",
+        "latency depends on implementation, not unconditional superiority",
+        "error localization tradeoff"
+      ]
+    },
+    {
+      "id": "triage",
+      "messages": [
+        {
+          "role": "user",
+          "text": "语音助手识别出来的文字是对的，但回答总是答非所问。请按顺序给我三个排查步骤，每步说清检查什么和为什么。"
+        }
+      ],
+      "rubric": [
+        "inspect actual LLM input/history",
+        "inspect system prompt or instruction conflicts",
+        "test model response separately; not simply replace ASR"
+      ]
+    },
+    {
+      "id": "constraints",
+      "messages": [
+        {
+          "role": "user",
+          "text": "我只有一张24GB显卡，已有语音助手；不能用云API，也不能买新硬件。要改善回答质量，请给出三个可执行步骤，同时兼顾响应速度。"
+        }
+      ],
+      "rubric": [
+        "local only/no new hardware",
+        "three actionable steps",
+        "quality measurement",
+        "latency/memory consideration"
+      ]
+    },
+    {
+      "id": "correction",
+      "messages": [
+        {
+          "role": "user",
+          "text": "项目代号是海星，预算800元。"
+        },
+        {
+          "role": "assistant",
+          "text": "记住了：海星，800元。"
+        },
+        {
+          "role": "user",
+          "text": "改一下，代号改成蓝鲸，预算改成600元。只告诉我现在的代号和预算。"
+        }
+      ],
+      "rubric": [
+        "latest codeword blue whale",
+        "latest budget 600",
+        "no stale value"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "repeat": 0,
+      "case": "compare",
+      "style": "concise",
+      "seed": 20261040,
+      "text": "可调试性方面，端到端语音助手因为模型封闭，调试困难；而级联架构各模块独立，便于定位和优化。延迟方面，端到端整体延迟较低，但级联结构可能因模块间通信增加延迟。错误定位方面，端到端模型错误难以溯源，级联结构则能快速定位是哪一环节出错。",
+      "audio_seconds": 21.56,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 7.63185534501099
+    },
+    {
+      "repeat": 0,
+      "case": "compare",
+      "style": "balanced",
+      "seed": 20261040,
+      "text": "可调试性方面，端到端语音助手因为模型封闭，出错后很难定位具体哪一步出问题。而级联架构中每层功能独立，更容易找到是哪一环节导致错误。延迟上，端到端通常更快，因为它省去了中间拆分的步骤。但级联如果中间某层处理慢，整体延迟可能更高。错误定位就更明显了，端到端的黑盒模型很难追溯错误源头，而级联结构各环节清晰，出错时能迅速锁定在哪一层出了问题。",
+      "audio_seconds": 32.44,
+      "error": null,
+      "within_audio_limit": false,
+      "elapsed_seconds": 9.934956809011055
+    },
+    {
+      "repeat": 0,
+      "case": "triage",
+      "style": "balanced",
+      "seed": 20261041,
+      "text": "排查步骤一，检查ASR识别的文本是否完全正确，确认语音转文字有没有漏字或错字。排查步骤二，查看LLM输入和输出的内容，确保模型理解了正确的语义。排查步骤三，确认TTS合成的语音与最终播放内容是否一致，防止音频处理环节出错。",
+      "audio_seconds": 21.56,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 6.431720869994024
+    },
+    {
+      "repeat": 0,
+      "case": "triage",
+      "style": "concise",
+      "seed": 20261041,
+      "text": "第一步，先看语音 agent 是否正确调用了 ASR。如果 ASR 识别错误，回答自然答非所问。第二步，检查 LLM 是否理解了 ASR 提供的内容。如果 LLM 误解了问题，回答就会偏离。第三步，确认 TTS 是否准确传达了 LLM 的回答。如果 TTS 发音或语速有问题，也会让人感觉答非所问。",
+      "audio_seconds": 30.32,
+      "error": null,
+      "within_audio_limit": false,
+      "elapsed_seconds": 8.85026445100084
+    },
+    {
+      "repeat": 0,
+      "case": "constraints",
+      "style": "concise",
+      "seed": 20261042,
+      "text": "1. 用 StreamingTalker 实时编码，减轻显卡压力。2. 降低 ASR 采样率，减少显存占用。3. 优化 MiniCPM-o Qwen 代码，缩短推理时间。",
+      "audio_seconds": 13.96,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 4.221735138999065
+    },
+    {
+      "repeat": 0,
+      "case": "constraints",
+      "style": "balanced",
+      "seed": 20261042,
+      "text": "1. 用 StreamingTalker 降低 ASR 的实时处理负担。2. 用 FlashHead 或 MiniCPM-o 提升推理速度。3. 优化 VAD 和 TTS，降低显存占用。",
+      "audio_seconds": 14.84,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 4.403864767984487
+    },
+    {
+      "repeat": 0,
+      "case": "correction",
+      "style": "balanced",
+      "seed": 20261043,
+      "text": "现在的代号是蓝鲸，预算600元。",
+      "audio_seconds": 3.92,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 1.343263931979891
+    },
+    {
+      "repeat": 0,
+      "case": "correction",
+      "style": "concise",
+      "seed": 20261043,
+      "text": "现在的代号是蓝鲸，预算600元。",
+      "audio_seconds": 3.56,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 1.2474544380092993
+    },
+    {
+      "repeat": 1,
+      "case": "compare",
+      "style": "balanced",
+      "seed": 20261050,
+      "text": "级联语音助手可调试性高，但延迟大，错误定位难。端到端语音助手延迟低，但调试困难，错误定位不直观。",
+      "audio_seconds": 9.52,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 2.9752682489925064
+    },
+    {
+      "repeat": 1,
+      "case": "compare",
+      "style": "concise",
+      "seed": 20261050,
+      "text": "级联语音助手是把识别、处理、语音合成分开，调试方便，但延迟大。端到端语音助手整体性好，延迟低，但调试难，错误定位难。",
+      "audio_seconds": 10.64,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 3.422270834998926
+    },
+    {
+      "repeat": 1,
+      "case": "triage",
+      "style": "concise",
+      "seed": 20261051,
+      "text": "第一步，先检查 ASR 是否正确，因为 ASR 是语音转文字的第一步，如果它出错，后续的推理自然就答非所问。第二步，确认 LLM 的输入是否准确，如果 ASR 有误，LLM 会基于错误信息推理，导致回答跑题。第三步，检查 TTS 是否正常，虽然它不直接影响回答内容，但如果输出卡顿或出错，可能影响用户体验，间接造成沟通误解。",
+      "audio_seconds": 31.28,
+      "error": null,
+      "within_audio_limit": false,
+      "elapsed_seconds": 9.190364795009373
+    },
+    {
+      "repeat": 1,
+      "case": "triage",
+      "style": "balanced",
+      "seed": 20261051,
+      "text": "第一步，先检查 ASR 识别的准确率，看看识别出来的文字是不是真的符合你的语音内容。第二步，确认 LLM 的输入是否完整，有时候 ASR 输出的文字不全会导致模型理解偏差。第三步，检查模型输出的逻辑，看看回答是否基于正确的上下文，而不是凭空编造。",
+      "audio_seconds": 23.2,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 6.708747723983834
+    },
+    {
+      "repeat": 1,
+      "case": "constraints",
+      "style": "balanced",
+      "seed": 20261052,
+      "text": "显卡容量有限且不能联网调用云API的情况下，改善回答质量的三个可执行步骤如下： 1. 优先使用本地知识库。将常用问答对本地化存储，避免频繁调用外部接口。 2. 降低模型推理负载。选择轻量级模型或剪枝后的版本，减少显存占用和延迟。 3. 优化语音处理流程。若显卡主要用于ASR或TTS，可尝试降低采样率或使用WebRTC等高效编码方案，以提升整体响应速度。",
+      "audio_seconds": 37.84,
+      "error": null,
+      "within_audio_limit": false,
+      "elapsed_seconds": 10.987016325991135
+    },
+    {
+      "repeat": 1,
+      "case": "constraints",
+      "style": "concise",
+      "seed": 20261052,
+      "text": "1. 用MiniCPM-o本地化模型，显存占用小。2. 用Pipecat流式处理，减少内存压力。3. 优化WebRTC网络传输，降低延迟。",
+      "audio_seconds": 11.44,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 3.626236512995092
+    },
+    {
+      "repeat": 1,
+      "case": "correction",
+      "style": "concise",
+      "seed": 20261053,
+      "text": "代号蓝鲸，预算600元。",
+      "audio_seconds": 2.6,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 1.0392878540151287
+    },
+    {
+      "repeat": 1,
+      "case": "correction",
+      "style": "balanced",
+      "seed": 20261053,
+      "text": "现在的代号是蓝鲸，预算600元。",
+      "audio_seconds": 2.92,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 1.1082390040101018
+    },
+    {
+      "repeat": 2,
+      "case": "compare",
+      "style": "concise",
+      "seed": 20261060,
+      "text": "分别说下。可调试性上，端到端的，比如 mini-cpm-o，这种，它模型比较大，训练和推理都比较难调。而像 cascade 的 pipeline 方式，每层都可以单独调试，比如 speech to text，或者 downstream task，这样调起来更灵活。延迟方面，端到端因为模型大，推理慢，整体延迟会高一些。而 cascade 方式，每一层可以单独优化，比如用 faster model 或者 quantization，整体延迟更低。错误定位上，端到端因为是黑盒，出错时很难知道具体在哪一步错了。而 cascade",
+      "audio_seconds": 40.24,
+      "error": null,
+      "within_audio_limit": false,
+      "elapsed_seconds": 11.799989460996585
+    },
+    {
+      "repeat": 2,
+      "case": "compare",
+      "style": "balanced",
+      "seed": 20261060,
+      "text": "端到端语音助手，比如 StreamingTalker，可调试性差，但延迟低、错误定位难。级联结构可调试性高，但延迟高、错误定位容易。",
+      "audio_seconds": 12.0,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 3.6461030670034233
+    },
+    {
+      "repeat": 2,
+      "case": "triage",
+      "style": "balanced",
+      "seed": 20261061,
+      "text": "1.先检查 ASR 识别结果，看看语音转文字有没有漏字或误听。2.确认 LLM 的 prompt 是否准确对应问题。3.看 TTS 输出的文本是否和最终回答一致。",
+      "audio_seconds": 15.52,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 4.538374144991394
+    },
+    {
+      "repeat": 2,
+      "case": "triage",
+      "style": "concise",
+      "seed": 20261061,
+      "text": "第一，检查语音识别结果是否准确，确保 ASR 识别内容和你说的完全一致。第二，确认你给 LLM 的 prompt 是否包含正确的问题和上下文。第三，看看 LLM 的回复是否确实基于你给它的 prompt 生成。",
+      "audio_seconds": 18.36,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 5.355416803009575
+    },
+    {
+      "repeat": 2,
+      "case": "constraints",
+      "style": "concise",
+      "seed": 20261062,
+      "text": "1. 优化本地模型：只保留关键对话模型，减少内存占用。2. 使用轻量化ASR/TTS：用高效语音引擎降低计算压力。3. VAD降噪：用本地VAD过滤噪音，提高音频质量。",
+      "audio_seconds": 16.64,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 4.923182462021941
+    },
+    {
+      "repeat": 2,
+      "case": "constraints",
+      "style": "balanced",
+      "seed": 20261062,
+      "text": "显卡容量有限，只能在现有基础上优化。首先，用轻量级模型，如MiniCPM-o，降低内存占用。其次，启用WebRTC的音视频编解码优化，减少延迟。最后，用FlashHead等高效框架，提升推理速度。",
+      "audio_seconds": 18.96,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 5.544640072010225
+    },
+    {
+      "repeat": 2,
+      "case": "correction",
+      "style": "balanced",
+      "seed": 20261063,
+      "text": "好的，现在的代号是蓝鲸，预算600元。",
+      "audio_seconds": 3.84,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 1.3682345710112713
+    },
+    {
+      "repeat": 2,
+      "case": "correction",
+      "style": "concise",
+      "seed": 20261063,
+      "text": "代号是蓝鲸，预算600元。",
+      "audio_seconds": 2.92,
+      "error": null,
+      "within_audio_limit": true,
+      "elapsed_seconds": 1.0733356539858505
+    }
+  ],
+  "inflight": null,
+  "method": "Direct engine; same pair seed and alternating order. Audio over30s counts as production failure, not HTTP success.",
+  "source_sha256": {
+    "visual_input.py": "c1aa6450d0874f74ba184649805bc6fb470bae17b5ecca71c1c7ffbdf14ecca1",
+    "worker.py": "90fdb348f96466ac03dd2dbce50cf731c4baa080b0bd013c3a5ad38eeafd7ee5",
+    "visual_grounding.py": "ae9b11b055d36137f2ff26b0269f49333b699d96aa1577025bd9739d8c8a53a0"
+  },
+  "model_revision": "a3073852f52e4beec3f278d1f6616d40c26fe343",
+  "base_commit": "3559a6786a184dd21fa2521dbc035213aa865111",
+  "deployed": false,
+  "decision": "Rejected: no demonstrated reliable improvement in complex answers; media over-limit remains.",
+  "speech_context": "语音 agent，VAD（语音活动检测），ASR（自动语音识别），LLM，TTS，WebRTC，Python，Pipecat，MiniCPM-o，DINet，FlashHead，StreamingTalker",
+  "voice_reference_sha256": "f725553f437e9b6f71b427b32e8bdeda95a6024452b75775a3409f24e13ea89c",
+  "visual_grounding": "general",
+  "voice": "male",
+  "sampling": "do_sample=True; seeds recorded per request; CUDA kernels not promised bitwise deterministic",
+  "summary": {
+    "concise": {
+      "requests": 12,
+      "over_30s": 3,
+      "model_errors": 0
+    },
+    "balanced": {
+      "requests": 12,
+      "over_30s": 2,
+      "model_errors": 0
+    }
+  }
+}

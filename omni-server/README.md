@@ -144,6 +144,8 @@ HTTP 请求不能覆盖此配置。提示要求结合实际语音、避免强行
 它不是时长保证，服务仍保留 30 秒音频硬上限。
 固定合成语音的 [30 次对照及已知失败](../docs/MINICPM-SPEECH-CONTEXT.md)显示 VAD/ASR 概念理解改善；真人中英混合输入仍待验证。
 
+后续[复杂回答质量基线](../docs/REPLY-QUALITY-BASELINE.md)保留了24次回复策略对照及未通过结论；放宽回复预算没有作为日常功能发布。
+
 ## 可选视觉输入
 
 增加`--vision`才加载视觉编码器，健康接口明确返回`capabilities.image_input`。用户消息可附带两张以内的有界JPEG/PNG及采集元数据；原语音按一秒分块，图片只附在首块。未启用视觉时明确拒绝图片，不静默忽略。启动部署需同时复制`worker.py`、`visual_input.py`和`visual_grounding.py`。
