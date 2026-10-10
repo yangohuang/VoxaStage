@@ -58,6 +58,10 @@ Cancellation can interrupt a terminal send already in flight, so delivery is
 not guaranteed when the connection is cancelled. To abort, send
 `{"type":"cancel"}` or disconnect. Reconnect creates a fresh session; there is
 no resume token or implicit continuation after a network disconnect.
+If a frame send has already disconnected the transport, a concurrently received
+cancel or invalid-input control does not attempt another terminal send. The
+normal cancellation and model-cleanup path still runs; no acknowledgement can
+be promised on a disconnected socket.
 
 The input queue holds four chunks and the output queue holds eight events.
 There can additionally be one input chunk waiting for capacity, one executing

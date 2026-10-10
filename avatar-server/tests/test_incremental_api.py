@@ -491,3 +491,62 @@ def test_cancel_then_disconnect_stops_a_claimed_terminal_send_that_never_returns
                 task.cancel()
             await asyncio.gather(task, return_exceptions=True)
     asyncio.run(scenario())
+
+
+@pytest.mark.parametrize('control', [{'type': 'cancel'}, {'type': 'unexpected'}],
+                         ids=['cancel', 'invalid_input'])
+def test_frame_send_disconnect_with_reader_terminal_cleans_up_and_recovers(control):
+    sessions = []
+    def factory(engine, config):
+        session = Session(engine, config)
+        sessions.append(session)
+        return session
+    app = make_app(factory)
+
+    async def scenario():
+        async def disconnect_during_frame(event):
+            if event['type'] == 'frame':
+                # Use the actual Starlette OSError -> DISCONNECTED transition.
+                # Wake the reader in the same turn as the failing writer.
+                await socket.text(control)
+                raise BrokenPipeError('peer closed during frame send')
+        socket = SocketHarness(app, on_event=disconnect_during_frame)
+        task = asyncio.create_task(socket.run())
+        try:
+            await socket.text({'type': 'start'})
+            await socket.audio()
+            await asyncio.wait_for(task, 2)
+            assert [event['type'] for event in socket.events] == ['metadata', 'frame']
+        finally:
+            if not task.done():
+                task.cancel()
+            await asyncio.gather(task, return_exceptions=True)
+            await wait_until(lambda: not app.state.worker_lock.locked())
+        assert sessions[0].closed
+        recovered = SocketHarness(app)
+        recovery = asyncio.create_task(recovered.run())
+        await recovered.text({'type': 'start'})
+        await recovered.audio()
+        await recovered.text({'type': 'end'})
+        await asyncio.wait_for(recovery, 2)
+        assert recovered.events[-1]['type'] == 'done'
+        assert recovered.events[-1]['cleanup_complete'] is True
+        assert len(sessions) == 2 and sessions[1].closed
+        assert not app.state.worker_lock.locked()
+    asyncio.run(scenario())
+
+
+def test_live_connection_terminal_runtime_error_is_not_suppressed():
+    app = make_app()
+    async def scenario():
+        async def fail_terminal(event):
+            if event['type'] == 'cancelled':
+                raise RuntimeError('unexpected live transport bug')
+        socket = SocketHarness(app, on_event=fail_terminal)
+        task = asyncio.create_task(socket.run())
+        await socket.text({'type': 'start'})
+        await socket.text({'type': 'cancel'})
+        with pytest.raises(RuntimeError, match='unexpected live transport bug'):
+            await asyncio.wait_for(task, 2)
+        await wait_until(lambda: not app.state.worker_lock.locked())
+    asyncio.run(scenario())
