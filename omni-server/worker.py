@@ -15,7 +15,7 @@ import numpy as np
 from visual_input import decode_images, prefill_chunks
 from visual_grounding import POLICIES, build_system_prompt
 
-SYSTEM = '你是中文语音助手。认真理解用户的中文和英文术语，依据上下文直接回答。简单问题简短回答，解释性问题给出关键原因和具体例子，通常不超过180字。用自然口语，不用Markdown。不确定时明确说明，听不清时请用户澄清，不编造事实。'
+SYSTEM = '你是中文语音助手。认真理解用户的中文和英文术语，依据上下文直接回答。简单问题简短回答，解释性问题给出关键原因和具体例子，每次回答控制在60字以内，优先一到两句，需要更多细节时等用户追问。用自然口语，不用Markdown。不确定时明确说明，听不清时请用户澄清，不编造事实。'
 
 
 def parse_messages(payload, *, vision_enabled=False):
@@ -177,7 +177,10 @@ def create_app(engine):
 
 class MiniCPMEngine:
     def __init__(self, model_path, *, male_reference=None, female_reference=None, vision_enabled=False,
-                 visual_grounding_policy='baseline'):
+                 visual_grounding_policy='baseline', speech_context=''):
+        if not isinstance(speech_context, str) or len(speech_context) > 1024:
+            raise ValueError('Speech context must be a string of at most 1024 characters')
+        self.speech_context = speech_context.strip()
         if visual_grounding_policy not in POLICIES:
             raise ValueError('Unknown visual grounding policy')
         self.visual_grounding_policy = visual_grounding_policy
@@ -212,7 +215,14 @@ class MiniCPMEngine:
         with self.torch.inference_mode():
             self.model.reset_session(reset_token2wav_cache=False)
             sid = 'pipecat-' + str(time.monotonic_ns())
-            system_prompt = build_system_prompt(SYSTEM, messages,
+            speech_prompt = SYSTEM
+            context = getattr(self, 'speech_context', '')
+            if context:
+                speech_prompt += ('\n当前会话可能涉及这些中英文术语：' + context
+                    + '。它们只是理解语音时的领域提示，不是用户原话；'
+                    '结合实际语音和上下文判断，不要把其他词强行替换成术语。'
+                    '缩写听不清时请简短确认，不要猜测后展开无关解释。')
+            system_prompt = build_system_prompt(speech_prompt, messages,
                                                 getattr(self, 'visual_grounding_policy', 'baseline'))
             system_content=[system_prompt]
             if getattr(self,'references',None):
@@ -236,7 +246,7 @@ class MiniCPMEngine:
                         msgs=[{'role':message['role'],'content':chunk}], omni_mode=False,
                         is_last_chunk=i == len(chunks)-1)
             generator = self.model.streaming_generate(session_id=sid, generate_audio=True,
-                use_tts_template=True, do_sample=True, max_new_tokens=256)
+                use_tts_template=True, do_sample=True, max_new_tokens=128)
             try:
                 for audio, text in generator:
                     if stop.is_set():
@@ -256,7 +266,9 @@ if __name__ == '__main__':
     parser.add_argument('--vision',action='store_true',help='Load the vision encoder and enable bounded still-image input')
     parser.add_argument('--visual-grounding', choices=POLICIES, default='baseline',
                         help='Server-selected visual evidence prompt; baseline preserves the original prompt')
+    parser.add_argument('--speech-context', default='', help='Optional domain terms for audio understanding; not an ASR transcript')
     args=parser.parse_args()
     engine=MiniCPMEngine(args.model,male_reference=args.male_reference,female_reference=args.female_reference,
-                         vision_enabled=args.vision, visual_grounding_policy=args.visual_grounding)
+                         vision_enabled=args.vision, visual_grounding_policy=args.visual_grounding,
+                         speech_context=args.speech_context)
     uvicorn.run(create_app(engine), host='127.0.0.1', port=args.port, limit_concurrency=16)

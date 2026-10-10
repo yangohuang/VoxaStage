@@ -8,6 +8,7 @@ import httpx
 import numpy as np
 from PIL import Image
 from worker import MiniCPMEngine, create_app, parse_messages
+from visual_input import prefill_chunks
 
 
 def picture(identifier='frame-1', size=(64, 64), fmt='PNG'):
@@ -16,6 +17,19 @@ def picture(identifier='frame-1', size=(64, 64), fmt='PNG'):
 
 
 class VisualInputTests(unittest.IsolatedAsyncioTestCase):
+    def test_short_audio_tail_retains_samples_and_adds_only_silence(self):
+        for length in (1, 180, 1999, 2000, 16000, 16180, 64180):
+            with self.subTest(length=length):
+                original = np.arange(length, dtype=np.float32)
+                chunks = prefill_chunks(['frame', original])
+                audio = [chunk[-1] for chunk in chunks]
+                self.assertTrue(all(2000 <= len(chunk) <= 16000 for chunk in audio))
+                joined = np.concatenate(audio)
+                np.testing.assert_array_equal(joined[:length], original)
+                self.assertTrue(np.all(joined[length:] == 0))
+                self.assertEqual(sum('frame' in c[:-1] for c in chunks), 1)
+                self.assertEqual(len(original), length)
+
     def test_image_and_audio_preserved_with_capture_metadata(self):
         msg={'role':'user','audio':base64.b64encode(bytes(64000)).decode(),'images':[picture()]}
         parsed=parse_messages({'messages':[msg]},vision_enabled=True)

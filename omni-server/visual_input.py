@@ -56,5 +56,13 @@ def prefill_chunks(content):
     if len(audios) != 1:
         raise ValueError('Expected one audio input per message')
     audio = audios[0]
-    return [(prefix if offset == 0 else []) + [audio[offset:offset + 16000]]
-            for offset in range(0, len(audio), 16000)]
+    chunks = []
+    for offset in range(0, len(audio), 16000):
+        chunk = audio[offset:offset + 16000]
+        # The streaming encoder pools five downsampled mel frames. A tiny
+        # final remainder can produce zero embeddings. Preserve every input
+        # sample and pad only that remainder to a supported 125 ms window.
+        if len(chunk) < 2000:
+            chunk = np.pad(chunk, (0, 2000 - len(chunk)))
+        chunks.append((prefix if offset == 0 else []) + [chunk])
+    return chunks

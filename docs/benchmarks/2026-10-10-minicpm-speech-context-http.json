@@ -1,0 +1,137 @@
+{
+  "scope": "Final version HTTP smoke; synthetic input, not physical microphone or perceptual quality. The 30-pair-condition experiment used earlier source.",
+  "worker_tests": 22,
+  "source_hashes": {
+    "visual_input.py": "c1aa6450d0874f74ba184649805bc6fb470bae17b5ecca71c1c7ffbdf14ecca1",
+    "worker.py": "f7a7c13046e5fc487b68ae248ec20fbd199fea397ad487b91d464b25d6176b3d",
+    "visual_grounding.py": "ae9b11b055d36137f2ff26b0269f49333b699d96aa1577025bd9739d8c8a53a0"
+  },
+  "deployment_short_tail": {
+    "terminal": "done",
+    "samples": 124800
+  },
+  "first_deployment": {
+    "status": "rolled_back",
+    "reason": "short-tail input encoded successfully but reply exceeded 30s cap",
+    "restored_ready": true
+  },
+  "results": [
+    {
+      "case": "mixed-00",
+      "voice": "male",
+      "text": "语音 agent技术是一种结合了语音识别、自然语言理解和语音合成的智能交互系统，能够通过语音与用户进行对话并完成任务。",
+      "audio_seconds": 14.08,
+      "first_audio_seconds": 0.7496030429902021,
+      "elapsed_seconds": 3.926638245990034,
+      "terminal": {
+        "type": "done",
+        "samples": 337920
+      },
+      "input_pcm_sha256": "b437fb72eb6830c767145c18aed3a8aa6b0674199af367fe8fca28b4b1e949ae"
+    },
+    {
+      "case": "mixed-01",
+      "voice": "male",
+      "text": "VAD是语音活动检测，用来判断有没有人说话。ASR是自动语音识别，用来把人说的话转成文字。",
+      "audio_seconds": 11.04,
+      "first_audio_seconds": 0.7290704530023504,
+      "elapsed_seconds": 3.4272025450190995,
+      "terminal": {
+        "type": "done",
+        "samples": 264960
+      },
+      "input_pcm_sha256": "f9361a74a64aa5b44064e0b84e58c8792dc623c23bb16003e5a369f0e95a42f6"
+    },
+    {
+      "case": "mixed-02",
+      "voice": "male",
+      "text": "我们用 WebRTC 传输语音，用 Python处理模型输出。",
+      "audio_seconds": 4.52,
+      "first_audio_seconds": 1.0075521069811657,
+      "elapsed_seconds": 1.6824243739829399,
+      "terminal": {
+        "type": "done",
+        "samples": 108480
+      },
+      "input_pcm_sha256": "e52cd3aca57a4759bebd8e15cf8052e6c04cff9eb26f21485f4d80e165871306"
+    },
+    {
+      "case": "vat-control",
+      "voice": "male",
+      "text": "VAT是向商品和服务附加的税，通常在销售环节收取。",
+      "audio_seconds": 5.52,
+      "first_audio_seconds": 0.7261223279929254,
+      "elapsed_seconds": 2.0351529000035953,
+      "terminal": {
+        "type": "done",
+        "samples": 132480
+      },
+      "input_pcm_sha256": "5f1cea4ab43e5930fb8de762e1c6c7eb7ddbd10c20aea0980c4f2a7a744c540b"
+    },
+    {
+      "case": "white-control",
+      "voice": "male",
+      "text": "White 是白色的意思，也可以指白色的物体。",
+      "audio_seconds": 5.48,
+      "first_audio_seconds": 0.8046210779866669,
+      "elapsed_seconds": 1.7816281989798881,
+      "terminal": {
+        "type": "done",
+        "samples": 131520
+      },
+      "input_pcm_sha256": "50c8e3a2d7a1ce32bb352cf2f49449f2601a6f1dbed16d3b554e927492169b8e"
+    },
+    {
+      "case": "male-5",
+      "voice": "male",
+      "text": "你好，欢迎体验语音数字人。",
+      "audio_seconds": 3.24,
+      "first_audio_seconds": 0.5962080089957453,
+      "elapsed_seconds": 1.058447568997508,
+      "terminal": {
+        "type": "done",
+        "samples": 77760
+      },
+      "input_pcm_sha256": null
+    },
+    {
+      "case": "female-6",
+      "voice": "female",
+      "text": "你好，欢迎体验语音数字人。",
+      "audio_seconds": 3.28,
+      "first_audio_seconds": 0.7107412379991729,
+      "elapsed_seconds": 1.243802062002942,
+      "terminal": {
+        "type": "done",
+        "samples": 78720
+      },
+      "input_pcm_sha256": null
+    },
+    {
+      "case": "male-7",
+      "voice": "male",
+      "text": "你好，欢迎体验语音数字人。",
+      "audio_seconds": 2.96,
+      "first_audio_seconds": 0.7964004419918638,
+      "elapsed_seconds": 1.1966069620102644,
+      "terminal": {
+        "type": "done",
+        "samples": 71040
+      },
+      "input_pcm_sha256": null
+    },
+    {
+      "case": "vision-red",
+      "voice": "male",
+      "text": "红色",
+      "audio_seconds": 1.28,
+      "first_audio_seconds": 0.5429521070036571,
+      "elapsed_seconds": 0.631596815015655,
+      "terminal": {
+        "type": "done",
+        "samples": 30720
+      },
+      "input_pcm_sha256": null
+    }
+  ]
+}
