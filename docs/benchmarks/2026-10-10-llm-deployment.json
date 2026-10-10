@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "prior_service_changed": false,
+  "validation_sha256": "bed68292a960433e63171aeb38ea4e45756881ea2b7feead99c51c8037e9d027",
+  "rolled_back": false,
+  "unit_sha256": "4c04a485f1436900bc5034e5001f7deff5d0d558178f5c869231360bd168f55c",
+  "ready_s": 5.072833829995943,
+  "health": {
+    "ready": true,
+    "mode": "llm",
+    "device": "cuda",
+    "quantization": "4bit",
+    "load_s": 4.0769659809884615,
+    "busy": false
+  },
+  "smoke": {
+    "chunks": 18,
+    "text": "语音助手是一种通过语音交互来执行任务、提供信息或控制设备的智能系统。"
+  },
+  "final_health": {
+    "ready": true,
+    "mode": "llm",
+    "device": "cuda",
+    "quantization": "4bit",
+    "load_s": 4.0769659809884615,
+    "busy": false
+  },
+  "tracebacks": 0,
+  "error_lines": 0,
+  "service_ready": true,
+  "enabled": true,
+  "publication": {
+    "source_sha256": "c804dfc704cff0c0ba5fa3f40069b8c4de346beb0c5b0adcea24758c88afa72a",
+    "removed_fields": [
+      "service"
+    ]
+  }
+}

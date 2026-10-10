@@ -1,0 +1,277 @@
+{
+  "status": "passed",
+  "python": "3.12.13",
+  "packages": {
+    "networkx": {
+      "version": "3.7",
+      "isolated": true
+    },
+    "rich": {
+      "version": "15.0.0",
+      "isolated": true
+    },
+    "nvidia-cufile": {
+      "version": "1.15.1.6",
+      "isolated": true
+    },
+    "nvidia-cusolver": {
+      "version": "12.0.4.66",
+      "isolated": true
+    },
+    "filelock": {
+      "version": "4.1.0",
+      "isolated": true
+    },
+    "nvidia-curand": {
+      "version": "10.4.0.35",
+      "isolated": true
+    },
+    "markupsafe": {
+      "version": "3.0.4",
+      "isolated": true
+    },
+    "nvidia-cuda-cupti": {
+      "version": "13.0.85",
+      "isolated": true
+    },
+    "typing-extensions": {
+      "version": "4.16.0",
+      "isolated": true
+    },
+    "regex": {
+      "version": "2026.9.29",
+      "isolated": true
+    },
+    "pygments": {
+      "version": "2.21.0",
+      "isolated": true
+    },
+    "uvicorn": {
+      "version": "0.51.0",
+      "isolated": true
+    },
+    "transformers": {
+      "version": "5.12.1",
+      "isolated": true
+    },
+    "tqdm": {
+      "version": "4.70.1",
+      "isolated": true
+    },
+    "torch": {
+      "version": "2.11.0",
+      "isolated": true
+    },
+    "packaging": {
+      "version": "26.3",
+      "isolated": true
+    },
+    "sympy": {
+      "version": "1.14.0",
+      "isolated": true
+    },
+    "nvidia-cudnn-cu13": {
+      "version": "9.19.0.56",
+      "isolated": true
+    },
+    "h11": {
+      "version": "0.16.0",
+      "isolated": true
+    },
+    "mpmath": {
+      "version": "1.3.0",
+      "isolated": true
+    },
+    "markdown-it-py": {
+      "version": "4.2.0",
+      "isolated": true
+    },
+    "typer": {
+      "version": "0.27.3",
+      "isolated": true
+    },
+    "triton": {
+      "version": "3.6.0",
+      "isolated": true
+    },
+    "nvidia-cufft": {
+      "version": "12.0.0.61",
+      "isolated": true
+    },
+    "click": {
+      "version": "8.5.0",
+      "isolated": true
+    },
+    "safetensors": {
+      "version": "0.8.0",
+      "isolated": true
+    },
+    "httpcore": {
+      "version": "1.0.9",
+      "isolated": true
+    },
+    "pydantic-core": {
+      "version": "2.50.0",
+      "isolated": true
+    },
+    "nvidia-cusparselt-cu13": {
+      "version": "0.8.0",
+      "isolated": true
+    },
+    "idna": {
+      "version": "3.20",
+      "isolated": true
+    },
+    "huggingface-hub": {
+      "version": "1.33.0",
+      "isolated": true
+    },
+    "cuda-pathfinder": {
+      "version": "1.8.3",
+      "isolated": true
+    },
+    "setuptools": {
+      "version": "81.0.0",
+      "isolated": true
+    },
+    "nvidia-nvjitlink": {
+      "version": "13.0.88",
+      "isolated": true
+    },
+    "annotated-types": {
+      "version": "0.8.0",
+      "isolated": true
+    },
+    "jinja2": {
+      "version": "3.1.6",
+      "isolated": true
+    },
+    "pyyaml": {
+      "version": "6.0.3",
+      "isolated": true
+    },
+    "anyio": {
+      "version": "4.15.1",
+      "isolated": true
+    },
+    "cuda-bindings": {
+      "version": "13.4.3",
+      "isolated": true
+    },
+    "bitsandbytes": {
+      "version": "0.50.2",
+      "isolated": true
+    },
+    "tokenizers": {
+      "version": "0.22.2",
+      "isolated": true
+    },
+    "mdurl": {
+      "version": "0.1.2",
+      "isolated": true
+    },
+    "nvidia-cusparse": {
+      "version": "12.6.3.3",
+      "isolated": true
+    },
+    "nvidia-cuda-runtime": {
+      "version": "13.0.96",
+      "isolated": true
+    },
+    "annotated-doc": {
+      "version": "0.0.5",
+      "isolated": true
+    },
+    "nvidia-cublas": {
+      "version": "13.1.0.3",
+      "isolated": true
+    },
+    "cuda-toolkit": {
+      "version": "13.0.2",
+      "isolated": true
+    },
+    "nvidia-nvtx": {
+      "version": "13.0.85",
+      "isolated": true
+    },
+    "shellingham": {
+      "version": "1.5.4",
+      "isolated": true
+    },
+    "psutil": {
+      "version": "7.2.2",
+      "isolated": true
+    },
+    "hf-xet": {
+      "version": "1.7.0",
+      "isolated": true
+    },
+    "nvidia-nvshmem-cu13": {
+      "version": "3.4.5",
+      "isolated": true
+    },
+    "fastapi": {
+      "version": "0.139.2",
+      "isolated": true
+    },
+    "httpx": {
+      "version": "0.28.1",
+      "isolated": true
+    },
+    "fsspec": {
+      "version": "2026.9.0",
+      "isolated": true
+    },
+    "pydantic": {
+      "version": "2.14.0",
+      "isolated": true
+    },
+    "nvidia-nccl-cu13": {
+      "version": "2.28.9",
+      "isolated": true
+    },
+    "typing-inspection": {
+      "version": "0.4.4",
+      "isolated": true
+    },
+    "numpy": {
+      "version": "2.5.3",
+      "isolated": true
+    },
+    "starlette": {
+      "version": "1.7.0",
+      "isolated": true
+    },
+    "accelerate": {
+      "version": "1.14.0",
+      "isolated": true
+    },
+    "nvidia-cuda-nvrtc": {
+      "version": "13.0.88",
+      "isolated": true
+    },
+    "certifi": {
+      "version": "2026.7.22",
+      "isolated": true
+    }
+  },
+  "package_count": 63,
+  "lock_sha256": "b23b79149066245978787ecab7f05d5bb363d956a0bbbe40047c54c8a8cc2313",
+  "cuda": "13.0",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "all_packages_isolated": true,
+  "system_site_packages": false,
+  "imports": [
+    "torch",
+    "transformers",
+    "bitsandbytes",
+    "accelerate",
+    "fastapi",
+    "uvicorn"
+  ],
+  "cuda_tensor_test": true,
+  "publication": {
+    "source_sha256": "88ac52b14373706f7f2077887bd1e074dca1378782f3dd45941ad9fb62737a0b",
+    "removed_fields": []
+  }
+}

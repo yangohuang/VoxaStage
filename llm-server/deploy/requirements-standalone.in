@@ -1,0 +1,8 @@
+# Existing Qwen3-4B NF4 worker; Linux x86_64, Python 3.12.
+# Pin the observed core versions before validating in an isolated environment.
+torch==2.11.0
+transformers==5.12.1
+bitsandbytes==0.50.2
+accelerate==1.14.0
+fastapi==0.139.2
+uvicorn==0.51.0

@@ -34,6 +34,33 @@ def bounded_result(result, max_bytes):
         prefix = prefix[:max(0, len(prefix) - max(1, (size - max_bytes + 1) // 2))]
 
 
+def _chinese_excerpt(content, pairs, size=600):
+    """Choose a bounded window with most distinct query pairs in linear time."""
+    pairs = set(pairs)
+    hits = [(i, content[i:i + 2]) for i in range(len(content) - 1)
+            if content[i:i + 2] in pairs]
+    counts = {}
+    left = right = best_start = best_count = 0
+    for anchor, _ in hits:
+        start = anchor
+        while right < len(hits) and hits[right][0] + 2 <= start + size:
+            term = hits[right][1]
+            counts[term] = counts.get(term, 0) + 1
+            right += 1
+        while left < right and hits[left][0] < start:
+            term = hits[left][1]
+            counts[term] -= 1
+            if not counts[term]:
+                del counts[term]
+            left += 1
+        if len(counts) > best_count:
+            # Add context only from spare space, preserving the last covered pair.
+            spare = size - (hits[right - 1][0] + 2 - start)
+            best_count = len(counts)
+            best_start = max(0, start - min(100, spare))
+    return content[best_start:best_start + size]
+
+
 class ToolRegistry:
     def __init__(self, project_root, *, documents=None, status_reader=None, max_result_bytes=8192):
         self.project_root = Path(project_root).resolve()
@@ -101,19 +128,35 @@ class ToolRegistry:
             if type(limit) is not int or not 1 <= limit <= 8:
                 raise ValueError('Search limit must be between 1 and 8')
             terms = query.casefold().split()
-            matches = []
+            documents = []
             for document_id in self.documents:
                 try:
                     content, _ = self._document(document_id)
                 except (ValueError, OSError):
                     continue
-                folded = content.casefold()
-                score = sum(folded.count(term) for term in terms)
-                if score:
-                    offset = min(folded.find(term) for term in terms if term in folded)
-                    matches.append({'document_id': document_id, 'score': score,
-                                    'excerpt': content[max(0, offset - 100):offset + 500]})
-            matches.sort(key=lambda match: (-match['score'], match['document_id']))
+                documents.append((document_id, content, content.casefold()))
+
+            def match(needles, *, fallback=False):
+                found = []
+                for document_id, content, folded in documents:
+                    hits = [term for term in needles if term in folded]
+                    # A lone common pair is insufficient evidence for a sentence query.
+                    if not hits or (fallback and len(hits) < 2):
+                        continue
+                    score = len(hits) if fallback else sum(folded.count(term) for term in needles)
+                    offset = min(folded.find(term) for term in hits)
+                    found.append({'document_id': document_id, 'score': score,
+                                  'excerpt': (_chinese_excerpt(content, needles) if fallback
+                                              else content[max(0, offset - 100):offset + 500])})
+                found.sort(key=lambda item: (-item['score'], item['document_id']))
+                return found
+
+            matches = match(terms)
+            if not matches:
+                # Keep exact/space-delimited search first; do not fragment Latin identifiers.
+                pairs = sorted({run[i:i + 2] for run in re.findall(r'[\u3400-\u9fff]+', query)
+                                for i in range(len(run) - 1)})
+                matches = match(pairs, fallback=True)
             result = {'matches': matches[:limit]}
         else:
             if self.status_reader is None:
