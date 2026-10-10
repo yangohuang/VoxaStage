@@ -1,0 +1,591 @@
+{
+  "scope": "Selected observations from retained raw records; protocol success is not semantic correctness",
+  "phases": [
+    {
+      "phase": "initial_validation",
+      "evidence": {
+        "status": "failed",
+        "error": "document search returned no matches",
+        "http_generation_requests": 21,
+        "agent_trials": [
+          {
+            "case": "calculate",
+            "question": "请用计算工具计算 (128 * 3 + 16) / 5，然后简短回答结果。",
+            "events": [
+              {
+                "type": "task",
+                "state": "running",
+                "label": "calculate",
+                "generation": 1
+              },
+              {
+                "type": "task",
+                "state": "completed",
+                "label": "calculate",
+                "generation": 1,
+                "result": {
+                  "expression": "(128 * 3 + 16) / 5",
+                  "result": 80.0
+                }
+              },
+              {
+                "type": "text",
+                "text": "计算",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "结果",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "为",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "80.0。",
+                "generation": 1
+              }
+            ],
+            "wall_s": 0.8203323319903575
+          },
+          {
+            "case": "search_project",
+            "question": "请查阅项目文档：视觉图片的采集时间和上下文历史如何管理？简短回答。",
+            "events": [
+              {
+                "type": "task",
+                "state": "running",
+                "label": "search_project",
+                "generation": 1
+              },
+              {
+                "type": "task",
+                "state": "completed",
+                "label": "search_project",
+                "generation": 1,
+                "result": {
+                  "matches": []
+                }
+              },
+              {
+                "type": "text",
+                "text": "当前",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "没有",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "找到",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "相关",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "文档",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "信息",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "。",
+                "generation": 1
+              }
+            ],
+            "wall_s": 0.8179198010184336
+          }
+        ],
+        "worker_stopped": true,
+        "model_assets_unchanged": true,
+        "log_errors": {
+          "ERROR": 0,
+          "Traceback": 0
+        }
+      },
+      "publication": {
+        "source_sha256": "17f23d222cde7b0bb4f7d3bf5609481dd675ba2360000e1c6db081b91b869a89",
+        "selected_fields": [
+          "status",
+          "error",
+          "http_generation_requests",
+          "agent_trials",
+          "worker_stopped",
+          "model_assets_unchanged",
+          "log_errors"
+        ]
+      }
+    },
+    {
+      "phase": "observed_query",
+      "evidence": {
+        "status": "failed",
+        "error": "document search returned no matches",
+        "http_generation_requests": 2,
+        "agent_trials": [
+          {
+            "case": "search_project",
+            "question": "请查阅项目文档：视觉图片的采集时间和上下文历史如何管理？简短回答。",
+            "events": [
+              {
+                "type": "task",
+                "state": "running",
+                "label": "search_project",
+                "generation": 1
+              },
+              {
+                "type": "task",
+                "state": "completed",
+                "label": "search_project",
+                "generation": 1,
+                "result": {
+                  "matches": []
+                }
+              },
+              {
+                "type": "text",
+                "text": "当前",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "没有",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "找到",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "相关",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "文档",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "信息",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "。",
+                "generation": 1
+              }
+            ],
+            "wall_s": 1.1608856020029634
+          }
+        ],
+        "tool_calls": [
+          {
+            "name": "search_project",
+            "arguments": {
+              "query": "视觉图片的采集时间和上下文历史如何管理？",
+              "limit": 5
+            }
+          }
+        ],
+        "worker_stopped": true,
+        "model_assets_unchanged": true,
+        "log_errors": {
+          "ERROR": 0,
+          "Traceback": 0
+        }
+      },
+      "publication": {
+        "source_sha256": "3d79262351005518f4725e7b94976c50611f6c133d130fcea82cfbb54e4fda7b",
+        "selected_fields": [
+          "status",
+          "error",
+          "http_generation_requests",
+          "agent_trials",
+          "tool_calls",
+          "worker_stopped",
+          "model_assets_unchanged",
+          "log_errors"
+        ]
+      }
+    },
+    {
+      "phase": "matched_document_wrong_answer",
+      "evidence": {
+        "status": "passed",
+        "http_generation_requests": 21,
+        "agent_trials": [
+          {
+            "case": "calculate",
+            "question": "请用计算工具计算 (128 * 3 + 16) / 5，然后简短回答结果。",
+            "events": [
+              {
+                "type": "task",
+                "state": "running",
+                "label": "calculate",
+                "generation": 1
+              },
+              {
+                "type": "task",
+                "state": "completed",
+                "label": "calculate",
+                "generation": 1,
+                "result": {
+                  "expression": "(128 * 3 + 16) / 5",
+                  "result": 80.0
+                }
+              },
+              {
+                "type": "text",
+                "text": "计算",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "结果",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "为",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "80.0。",
+                "generation": 1
+              }
+            ],
+            "wall_s": 0.8213065910094883
+          },
+          {
+            "case": "search_project",
+            "question": "请查阅项目文档：视觉图片的采集时间和上下文历史如何管理？简短回答。",
+            "events": [
+              {
+                "type": "task",
+                "state": "running",
+                "label": "search_project",
+                "generation": 1
+              },
+              {
+                "type": "task",
+                "state": "completed",
+                "label": "search_project",
+                "generation": 1,
+                "result": {
+                  "matches": [
+                    {
+                      "document_id": "visual-interaction",
+                      "score": 8,
+                      "excerpt": "# 按需画面与语音交互\n\n已完成真实视觉模型的受控探针、32次正式输入对照及三种数字人的9轮浏览器流程，详见[实测报告](REAL-MULTIMODAL-BASELINE.md)。仅语音缺图时编造视觉属性的问题已复现，不能据此宣称整体语义质量通过。现有默认语音服务没有启用此功能。图片理解来自 MiniCPM-o，本项目贡献是能力探测、画面与轮次绑定、有界历史及交互清理，不是新的视觉模型。\n\n## 使用流程\n\n视觉 worker 启动时显式添加 `--vision`，加载视觉编码器；`GET /health` 的 `capabilities.image_input` 才返回 true。应用在连接时重新检查实际能力，支持时显示画面面板。未启用的 worker 对图片请求明确报错，避免把“没看图”伪装成识图失败。\n\n```bash\npython omni-server/worker.py --model /path/to/pinned-model-snapshot \\\n  --port 18201 --vision \\\n  --male-reference /path/to/male.wav --female-referenc"
+                    },
+                    {
+                      "document_id": "demo-walkthrough",
+                      "score": 7,
+                      "excerpt": "# 数字人与多模态演示路线\n\n目标是在约两分钟内展示可验证的系统行为与一项受控实验。2026-09-20 的日常演示已接入流式工具、本地会话和视觉输入；新部署按各 worker 文档准备模型，页面根据实际能力显示功能。当前边界见[交付状态](STATUS.md)。\n\n## 准备\n\n使用[部署说明](DEPLOYMENT.md)配置三种数字人服务及idle素材。MiniCPM显式添加`--vision --visual-grounding general`，同时提供男女音色参考；健康接口应报告`image_input:true`和`visual_grounding_policy:\"general\"`。应用的`PIPECAT_MINICPM_URL`指向该worker，此时仅确认配置就绪；下面每个展示段分别选择后端并连接。具体启动参数见[worker说明](../omni-server/README.md)。\n\n准备两张相同构图的图：左侧圆形先红后绿，右侧均为蓝色方形。下面的结果来自合成输入及真实模型测试，现场真人语音的识别与听感需现场确认。\n\n## 流式 Agent 与会话演示\n\n1. 选择级联模型，连接后说“我的暗号是蓝鲸，请记住”。等回复播放完，断开并重新连接同一会话，再问暗号。\n2. 说“使用计算工具计算 137乘29加"
+                    },
+                    {
+                      "document_id": "acceptance",
+                      "score": 6,
+                      "excerpt": "# 阶段验收与证据索引\n\n当前功能交付见[交付状态](STATUS.md)。四个阶段的工程实现与受控实验已有记录；完整质量目标尚未验收。下面按原始目标区分已经验证的范围和缺失证据。历史检查点保留当时状态，不将后来通过的结果倒写进早期失败记录。\n\n2026-10-10 输入侧补充：[ASR 历史结果评分](ASR-EVIDENCE-BASELINE.md)覆盖三条合成提示词的四配置对照，支持复算、参考来源分组和失败覆盖率。参考尚未人工听写，不能用于关闭下表的人工转写或物理设备验收项。\n\n| 原始要求 | 已验证的范围与证据 | 尚未证明的范围 |\n| --- | --- | --- |\n| 数字人音画基线 | [统一输入与重复运行](AVATAR-BASELINE-2026-09-19.md)：三驱动54次请求；[输出捕获](AVATAR-OUTPUT-BASELINE-2026-09-19.md)：五类15条输入、45次输出、3644帧与PCM核验 | 人工转写、试听、音素口型与动态质量；协议成功不等于质量合格 |\n| 端到端性能边界 | [固定输入播放](FIXED-PLAYBACK-BASELINE.md)、[六种组合语音打断](VOICE-INTERRUPTION-BASELINE.md)、[浏览器采集样本映射](CAPTURE-TIMING-BASELI"
+                    },
+                    {
+                      "document_id": "readme",
+                      "score": 6,
+                      "excerpt": "界](#验证与边界)\n\n## 流式 Agent 与本地会话\n\n- **真实工具执行**：级联模型可检索项目文档、读取文档、计算及检查服务状态，页面显示任务进度；打断后丢弃旧任务结果。\n- **播放感知上下文**：按浏览器确认播放的完整语句段维护历史，中断后不把未听到的内容当作已经说过。\n- **保存与恢复**：在本地新建、载入和删除对话，恢复原来的模型、角色与上下文。\n- **角色配置**：形象、男／女声和 idle 视频一起选择，支持部署者增加已有驱动的角色资源。\n- **视觉输入**：启用视觉能力的 MiniCPM-o 可接收图片或单次摄像头画面，结合文字或语音流式回应。\n\n![工具计算与会话恢复](docs/assets/streaming-agent-preview.png)\n\n查看[使用方法与功能边界](docs/STREAMING-FUNCTIONS.md)。当前工具调度用于级联模式；MiniCPM-o 保留端到端多模态路径。语音输入仍按 VAD 话轮分段，不宣称原生全双工。\n\n## 效果预览\n\n| DINet · 康辉角色素材 | FlashHead Lite · 2D 女生 | StreamingTalker · 3D 头部 |\n| :---: | :---: | :---: |\n| <img src=\"docs/assets/dinet-kanghui.jpg\" "
+                    },
+                    {
+                      "document_id": "avatar-output",
+                      "score": 3,
+                      "excerpt": "，均有细小姿态变化。这不是整段动态观看、人工试听、音素口型准确性或身份评分；3D尚未进行渲染质量复核。所有感知质量字段仍为未测。\n\n## 浏览器六种组合\n\n同一条合成中文WAV，经Chrome假麦克风采集，前后附静音。专用headless Chrome 148.0.7778.178，ANGLE SwiftShader；真实点击连接解锁AudioContext，未绕过自动播放规则。三驱动共享RTX4090并预加载，按顺序运行；没有并行基准请求。每种组合只有一次最终观测，不报告稳定P50/P95，也不据此排名模型。\n\n| 对话后端 | 数字人 | 活跃包结束→安排首声（ms） | 首媒体→安排首声（ms） | 手动打断、恢复、idle |\n| --- | --- | ---: | ---: | --- |\n| Qwen级联 | FlashHead | 2749.4 | 54.6 | 通过 |\n| Qwen级联 | DINet | 2601.5 | 72.9 | 通过 |\n| Qwen级联 | StreamingTalker | 2731.2 | 47.9 | 通过 |\n| MiniCPM端到端 | FlashHead | 2221.2 | 73.7 | 通过 |\n| MiniCPM端到端 | DINet | 2034.6 | 67.8 | 通过 |\n| MiniCPM端到端 | Str"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "text",
+                "text": "根据",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "项目",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "文档",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "，视觉",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "图片",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "的",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "采集",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "时间",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "通过",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "`--vision`参数",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "显",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "式",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "加载",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "视觉",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "编码",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "器",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "，并",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "在",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "`GET ",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "/health`接口",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "中",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "返回",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "`capabilities.image_input`确认",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "。上下",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "文",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "历史",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "管理",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "包括",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "有",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "界",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "历史",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "及",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "交互",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "清理",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "，确保",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "流程",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "绑定",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "与",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "清理",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "。具体",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "实现",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "详见",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "[实",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "测",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "报告",
+                "generation": 1
+              },
+              {
+                "type": "text",
+                "text": "](REAL-MULTIMODAL-BASELINE.md)。",
+                "generation": 1
+              }
+            ],
+            "wall_s": 2.297495890990831
+          }
+        ],
+        "tool_calls": [
+          {
+            "name": "calculate",
+            "arguments": {
+              "expression": "(128 * 3 + 16) / 5"
+            }
+          },
+          {
+            "name": "search_project",
+            "arguments": {
+              "query": "视觉图片的采集时间和上下文历史如何管理？",
+              "limit": 5
+            }
+          }
+        ],
+        "worker_stopped": true,
+        "model_assets_unchanged": true,
+        "log_errors": {
+          "ERROR": 0,
+          "Traceback": 0
+        }
+      },
+      "publication": {
+        "source_sha256": "bed68292a960433e63171aeb38ea4e45756881ea2b7feead99c51c8037e9d027",
+        "selected_fields": [
+          "status",
+          "http_generation_requests",
+          "agent_trials",
+          "tool_calls",
+          "worker_stopped",
+          "model_assets_unchanged",
+          "log_errors"
+        ]
+      }
+    }
+  ]
+}

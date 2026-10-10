@@ -1,0 +1,975 @@
+{
+  "status": "passed",
+  "scope": "Same known typed question repeated three times against restored local worker; narrow document-fact checks only",
+  "source_sha256": {
+    "agent_tools.py": "c9481521b39b801cd96d0877fe364d9e94627013ead68834c1a5eeb83b320ed6",
+    "agent_runtime.py": "6e6db97bb7c427e35fcce64409775afc4d416941c41bb46269780d13a33afa0a",
+    "backend.py": "6db92c4e9ce9961e4b653016a38d1258192f6655bf692b9c83391e0090f2568d"
+  },
+  "catalog_sha256": {
+    "readme": "0b16f2f91b22c1a5c536e77c79d084142f8141e297304a4bbef7cc820f4d775c",
+    "acceptance": "4c906160da53605d850b86d3877ac1033f33cf1c2323e710809ae61980ae7471",
+    "demo-walkthrough": "da7f8bd641839fcb1274df4e21670860dc05549e2a6cce68f12f3dfbf62dcadf",
+    "source-install": "a0b6047ac8996693a934c549a20e44471876779d4f601bc1cc46127ebe6ff578",
+    "visual-interaction": "d20e9697c7b053efd3cb451a2d13da2b62950f38ba7f369a6f676f3539f3b2d7",
+    "avatar-output": "ae315d38b61bc6de09c89e1463131f37fa3f8fec42ed4162df46e0c393e1c21c",
+    "dinet-attribution": "67c9e0ae7fe6b801c6195775524fc6bd0c7cdd0c5527a16cd7f0c3d17722f7d4"
+  },
+  "generation_requests": 6,
+  "trials": [
+    {
+      "round": 0,
+      "question": "请查阅项目文档：视觉图片的采集时间和上下文历史如何管理？简短回答。",
+      "tool_calls": [
+        {
+          "name": "search_project",
+          "arguments": {
+            "query": "视觉图片的采集时间和上下文历史如何管理？",
+            "limit": 5
+          }
+        }
+      ],
+      "events": [
+        {
+          "type": "task",
+          "state": "running",
+          "label": "search_project",
+          "generation": 1
+        },
+        {
+          "type": "task",
+          "state": "completed",
+          "label": "search_project",
+          "generation": 1,
+          "result": {
+            "matches": [
+              {
+                "document_id": "visual-interaction",
+                "score": 8,
+                "excerpt": "PNG，或主动打开摄像头并点击拍照。文件选择上限 8MiB，浏览器缩放到最长边 512 像素并编码 JPEG。摄像头只在拍照时发送静态画面，不连续上传视频。上传时间表示文件被选中的时刻，不是图片原始拍摄时间。\n\n等待“画面已确认”后输入问题或说话。附件只绑定下一条文字或下一轮 VAD 完成的语音，后来的图片不会改变已启动的请求。回答后可以提交第二张图并询问前后变化；最多保留两张最近画面。移除按钮只移除尚未绑定的附件，不删除已经进入历史的图片。断开会话停止摄像头、清除尚未绑定的画面并保存有界历史；载入同一对话可继续，删除对话才移除持久记录。迟到的文件解码或摄像头授权结果不能进入新会话。\n\n## 时间、序号与上下文\n\n每张图片携带会话 ID、递增序号、图片 ID、来源及 `captured_at_ms`。客户端时间以本次连接为起点，范围 0–600000ms，与现有每会话最多 600 秒一致。服务另记相对接收时间及图片 SHA；两种时钟未做偏移标定，不能据此宣称物理音画同步。\n\n```mermaid\nsequenceDiagram\n    participant UI as 浏览器\n    participant Session as 会话\n    participant Model as MiniCPM worker\n    UI->>Session: 图片、会话ID、序号、采集时间"
+              },
+              {
+                "document_id": "demo-walkthrough",
+                "score": 7,
+                "excerpt": "当前记录。界面说明语音、图像可能随有界上下文保存在本地。\n\n## 视觉与数字人展示步骤\n\n先断开级联会话，将对话模型切换为 MiniCPM-o，点击「新建」再连接。无图问题使用新的空白历史，避免已保存的图片影响演示；确认页面出现图片输入区域。\n\n1. **无图问题**：直接问“图中左边是什么颜色和形状？”展示模型说明缺少图片。说明原提示在本探针8次都猜测，两个提示变体均为0/8；不要说已经解决通用幻觉。\n2. **当前画面**：上传红圆图，等“画面已确认”后用文字提问。指出画面先确认，再绑定下一轮；上传后不会改变已经开始的回答。\n3. **联合输入**：上传绿圆图，再说同一句问题。真实现场可用麦克风；已有自动化记录使用合成PCM经浏览器WebSocket和真实VAD，不能将它表述为真人麦克风验收。\n4. **历史与裁剪**：重新上传红圆图，询问与上一张的变化。展示绿色变红色的回答，并说明模型上下文最多保留最近两张画面。\n5. **打断**：要求详细描述，播放中点击打断，再换图提问。说明旧音源与画面停止，确认播放的语句段保留，未确认部分以中断标记代替；不声称所有已提交的GPU计算可强行取消。\n6. **驱动切换**：断开后换DINet/FlashHead/StreamingTalker，展示2D、3D以及男女声路由。等待及断开后的idle循环属于应用媒体状态管理。\n\n![真实3D视觉"
+              },
+              {
+                "document_id": "acceptance",
+                "score": 6,
+                "excerpt": "、[浏览器采集样本映射](CAPTURE-TIMING-BASELINE.md) | 物理麦克风到扬声器的声学标定；虚拟设备与注入PCM不能证明这一边界 |\n| 3D可检查性 | [结构基线](AVATAR-GEOMETRY-BASELINE.md)：15段1366帧数值与运动定位；[离线重放](AVATAR-QUALITY-REVIEW.md)支持逐帧和时间段标注 | 网格数值正常不等于口型、身份或观感正确 |\n| 实测瓶颈与一项优化 | [消费提前量实验](DINET-PACING-EXPERIMENT.md)及[原代理集成](DINET-PACING-INTEGRATION.md)：17次API、10次正式浏览器对照、故障恢复与回滚 | 单机单角色、小样本；没有证明算力加速、视觉零跳帧、长会话与四worker并发收益 |\n| 有时间与上下文的视觉语音 | [视觉会话契约](VISUAL-INTERACTION.md)与[真实模型实测](REAL-MULTIMODAL-BASELINE.md)：6次能力探针、32次正式四条件对照、三驱动9轮浏览器交互、3组播放打断恢复 | 合成静态图和语音；没有验证真实摄像头、物理麦克风或连续视频理解 |\n| 真实失败与方法消融 | [缺图提示实验](VISUAL-GROUNDING-ABLATION.md)：同代码三策略111次生成，缺图视觉"
+              },
+              {
+                "document_id": "readme",
+                "score": 6,
+                "excerpt": "界](#验证与边界)\n\n## 流式 Agent 与本地会话\n\n- **真实工具执行**：级联模型可检索项目文档、读取文档、计算及检查服务状态，页面显示任务进度；打断后丢弃旧任务结果。\n- **播放感知上下文**：按浏览器确认播放的完整语句段维护历史，中断后不把未听到的内容当作已经说过。\n- **保存与恢复**：在本地新建、载入和删除对话，恢复原来的模型、角色与上下文。\n- **角色配置**：形象、男／女声和 idle 视频一起选择，支持部署者增加已有驱动的角色资源。\n- **视觉输入**：启用视觉能力的 MiniCPM-o 可接收图片或单次摄像头画面，结合文字或语音流式回应。\n\n![工具计算与会话恢复](docs/assets/streaming-agent-preview.png)\n\n查看[使用方法与功能边界](docs/STREAMING-FUNCTIONS.md)。当前工具调度用于级联模式；MiniCPM-o 保留端到端多模态路径。语音输入仍按 VAD 话轮分段，不宣称原生全双工。\n\n## 效果预览\n\n| DINet · 康辉角色素材 | FlashHead Lite · 2D 女生 | StreamingTalker · 3D 头部 |\n| :---: | :---: | :---: |\n| <img src=\"docs/assets/dinet-kanghui.jpg\" "
+              },
+              {
+                "document_id": "avatar-output",
+                "score": 3,
+                "excerpt": "为相邻音源的`audioStart`减去前一音源的`audioStart + duration`，使用同一个AudioContext时钟。其他五条短恢复请求未观察到大于1ms的空隙。\n\n这证明本次调度时间线上存在空隙；尚不能归因于模型、网络、解码或浏览器事件循环，也不能直接推断物理听感。下一步固定恢复PCM并重复运行，逐层关联媒体接收、JPEG解码和安排起点；比较缓冲策略时同时报告首声代价与空隙减少，不能只增加预缓冲后宣称全面更快。\n\n## 验证与后续门槛\n\n114项应用/评测Python、6项worker、22项前端/浏览器探针测试通过。新增部分包含18项Python和6项浏览器测试；独立代码审查后补齐失败清理、错误文本隔离和部署描述。\n\n第一阶段尚缺完整动态质量复核、人工转写/试听、3D渲染观察、精确采集时刻与语音打断测量，以及重复样本下的空隙复现。先补这些证据，再将基线标记完整；本报告不将任何优化宣称为已生效。\n\n命令见[输出捕获说明](AVATAR-OUTPUT-CAPTURE.md)，边界见[质量协议](AVATAR-QUALITY-PROTOCOL.md)，全部45次捕获摘要、六轮浏览器事件/音源和源文件哈希见[机器记录](benchmarks/2026-09-19-output-browser-baseline.json)。原始画像、音频、顶点与机器配置不随源码分发。"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "text": "视觉",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "图片",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "的",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "采集",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "时间",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "通过",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "`captured_at_ms` ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "记",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "录",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "，客户端",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "时间",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "以",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "会",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "话",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "连接",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "为",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "起点",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "，服务",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "端",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "另",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "记",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "相对",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "接收",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "时间",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "及",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "图片",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "SHA。上下",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "文",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "历史",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "最多",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "保留",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "最近",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "两张",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "画面",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "，模型",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "根据",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "序",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "号",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "和",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "会",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "话",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "ID ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "管",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "理",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "图片",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "关联",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "。",
+          "generation": 1
+        }
+      ],
+      "status": "passed",
+      "wall_s": 2.017526348994579,
+      "text": "视觉图片的采集时间通过 `captured_at_ms` 记录，客户端时间以会话连接为起点，服务端另记相对接收时间及图片 SHA。上下文历史最多保留最近两张画面，模型根据序号和会话 ID 管理图片关联。",
+      "fact_checks": {
+        "timestamp_field_named": true,
+        "two_recent_images_named": true,
+        "does_not_describe_vision_flag_as_capture_time": true
+      }
+    },
+    {
+      "round": 1,
+      "question": "请查阅项目文档：视觉图片的采集时间和上下文历史如何管理？简短回答。",
+      "tool_calls": [
+        {
+          "name": "search_project",
+          "arguments": {
+            "query": "视觉图片的采集时间和上下文历史如何管理？",
+            "limit": 5
+          }
+        }
+      ],
+      "events": [
+        {
+          "type": "task",
+          "state": "running",
+          "label": "search_project",
+          "generation": 1
+        },
+        {
+          "type": "task",
+          "state": "completed",
+          "label": "search_project",
+          "generation": 1,
+          "result": {
+            "matches": [
+              {
+                "document_id": "visual-interaction",
+                "score": 8,
+                "excerpt": "PNG，或主动打开摄像头并点击拍照。文件选择上限 8MiB，浏览器缩放到最长边 512 像素并编码 JPEG。摄像头只在拍照时发送静态画面，不连续上传视频。上传时间表示文件被选中的时刻，不是图片原始拍摄时间。\n\n等待“画面已确认”后输入问题或说话。附件只绑定下一条文字或下一轮 VAD 完成的语音，后来的图片不会改变已启动的请求。回答后可以提交第二张图并询问前后变化；最多保留两张最近画面。移除按钮只移除尚未绑定的附件，不删除已经进入历史的图片。断开会话停止摄像头、清除尚未绑定的画面并保存有界历史；载入同一对话可继续，删除对话才移除持久记录。迟到的文件解码或摄像头授权结果不能进入新会话。\n\n## 时间、序号与上下文\n\n每张图片携带会话 ID、递增序号、图片 ID、来源及 `captured_at_ms`。客户端时间以本次连接为起点，范围 0–600000ms，与现有每会话最多 600 秒一致。服务另记相对接收时间及图片 SHA；两种时钟未做偏移标定，不能据此宣称物理音画同步。\n\n```mermaid\nsequenceDiagram\n    participant UI as 浏览器\n    participant Session as 会话\n    participant Model as MiniCPM worker\n    UI->>Session: 图片、会话ID、序号、采集时间"
+              },
+              {
+                "document_id": "demo-walkthrough",
+                "score": 7,
+                "excerpt": "当前记录。界面说明语音、图像可能随有界上下文保存在本地。\n\n## 视觉与数字人展示步骤\n\n先断开级联会话，将对话模型切换为 MiniCPM-o，点击「新建」再连接。无图问题使用新的空白历史，避免已保存的图片影响演示；确认页面出现图片输入区域。\n\n1. **无图问题**：直接问“图中左边是什么颜色和形状？”展示模型说明缺少图片。说明原提示在本探针8次都猜测，两个提示变体均为0/8；不要说已经解决通用幻觉。\n2. **当前画面**：上传红圆图，等“画面已确认”后用文字提问。指出画面先确认，再绑定下一轮；上传后不会改变已经开始的回答。\n3. **联合输入**：上传绿圆图，再说同一句问题。真实现场可用麦克风；已有自动化记录使用合成PCM经浏览器WebSocket和真实VAD，不能将它表述为真人麦克风验收。\n4. **历史与裁剪**：重新上传红圆图，询问与上一张的变化。展示绿色变红色的回答，并说明模型上下文最多保留最近两张画面。\n5. **打断**：要求详细描述，播放中点击打断，再换图提问。说明旧音源与画面停止，确认播放的语句段保留，未确认部分以中断标记代替；不声称所有已提交的GPU计算可强行取消。\n6. **驱动切换**：断开后换DINet/FlashHead/StreamingTalker，展示2D、3D以及男女声路由。等待及断开后的idle循环属于应用媒体状态管理。\n\n![真实3D视觉"
+              },
+              {
+                "document_id": "acceptance",
+                "score": 6,
+                "excerpt": "、[浏览器采集样本映射](CAPTURE-TIMING-BASELINE.md) | 物理麦克风到扬声器的声学标定；虚拟设备与注入PCM不能证明这一边界 |\n| 3D可检查性 | [结构基线](AVATAR-GEOMETRY-BASELINE.md)：15段1366帧数值与运动定位；[离线重放](AVATAR-QUALITY-REVIEW.md)支持逐帧和时间段标注 | 网格数值正常不等于口型、身份或观感正确 |\n| 实测瓶颈与一项优化 | [消费提前量实验](DINET-PACING-EXPERIMENT.md)及[原代理集成](DINET-PACING-INTEGRATION.md)：17次API、10次正式浏览器对照、故障恢复与回滚 | 单机单角色、小样本；没有证明算力加速、视觉零跳帧、长会话与四worker并发收益 |\n| 有时间与上下文的视觉语音 | [视觉会话契约](VISUAL-INTERACTION.md)与[真实模型实测](REAL-MULTIMODAL-BASELINE.md)：6次能力探针、32次正式四条件对照、三驱动9轮浏览器交互、3组播放打断恢复 | 合成静态图和语音；没有验证真实摄像头、物理麦克风或连续视频理解 |\n| 真实失败与方法消融 | [缺图提示实验](VISUAL-GROUNDING-ABLATION.md)：同代码三策略111次生成，缺图视觉"
+              },
+              {
+                "document_id": "readme",
+                "score": 6,
+                "excerpt": "界](#验证与边界)\n\n## 流式 Agent 与本地会话\n\n- **真实工具执行**：级联模型可检索项目文档、读取文档、计算及检查服务状态，页面显示任务进度；打断后丢弃旧任务结果。\n- **播放感知上下文**：按浏览器确认播放的完整语句段维护历史，中断后不把未听到的内容当作已经说过。\n- **保存与恢复**：在本地新建、载入和删除对话，恢复原来的模型、角色与上下文。\n- **角色配置**：形象、男／女声和 idle 视频一起选择，支持部署者增加已有驱动的角色资源。\n- **视觉输入**：启用视觉能力的 MiniCPM-o 可接收图片或单次摄像头画面，结合文字或语音流式回应。\n\n![工具计算与会话恢复](docs/assets/streaming-agent-preview.png)\n\n查看[使用方法与功能边界](docs/STREAMING-FUNCTIONS.md)。当前工具调度用于级联模式；MiniCPM-o 保留端到端多模态路径。语音输入仍按 VAD 话轮分段，不宣称原生全双工。\n\n## 效果预览\n\n| DINet · 康辉角色素材 | FlashHead Lite · 2D 女生 | StreamingTalker · 3D 头部 |\n| :---: | :---: | :---: |\n| <img src=\"docs/assets/dinet-kanghui.jpg\" "
+              },
+              {
+                "document_id": "avatar-output",
+                "score": 3,
+                "excerpt": "为相邻音源的`audioStart`减去前一音源的`audioStart + duration`，使用同一个AudioContext时钟。其他五条短恢复请求未观察到大于1ms的空隙。\n\n这证明本次调度时间线上存在空隙；尚不能归因于模型、网络、解码或浏览器事件循环，也不能直接推断物理听感。下一步固定恢复PCM并重复运行，逐层关联媒体接收、JPEG解码和安排起点；比较缓冲策略时同时报告首声代价与空隙减少，不能只增加预缓冲后宣称全面更快。\n\n## 验证与后续门槛\n\n114项应用/评测Python、6项worker、22项前端/浏览器探针测试通过。新增部分包含18项Python和6项浏览器测试；独立代码审查后补齐失败清理、错误文本隔离和部署描述。\n\n第一阶段尚缺完整动态质量复核、人工转写/试听、3D渲染观察、精确采集时刻与语音打断测量，以及重复样本下的空隙复现。先补这些证据，再将基线标记完整；本报告不将任何优化宣称为已生效。\n\n命令见[输出捕获说明](AVATAR-OUTPUT-CAPTURE.md)，边界见[质量协议](AVATAR-QUALITY-PROTOCOL.md)，全部45次捕获摘要、六轮浏览器事件/音源和源文件哈希见[机器记录](benchmarks/2026-09-19-output-browser-baseline.json)。原始画像、音频、顶点与机器配置不随源码分发。"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "text": "视觉",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "图片",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "的",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "采集",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "时间",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "通过",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "`captured_at_ms` ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "记",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "录",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "，客户端",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "时间",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "以",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "会",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "话",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "连接",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "为",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "起点",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "，服务",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "端",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "另",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "记",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "相对",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "接收",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "时间",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "及",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "图片",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "SHA。上下",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "文",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "历史",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "最多",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "保留",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "最近",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "两张",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "画面",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "，模型",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "根据",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "序",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "号",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "和",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "会",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "话",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "ID ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "管",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "理",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "图片",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "关联",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "。",
+          "generation": 1
+        }
+      ],
+      "status": "passed",
+      "wall_s": 1.9833848330017645,
+      "text": "视觉图片的采集时间通过 `captured_at_ms` 记录，客户端时间以会话连接为起点，服务端另记相对接收时间及图片 SHA。上下文历史最多保留最近两张画面，模型根据序号和会话 ID 管理图片关联。",
+      "fact_checks": {
+        "timestamp_field_named": true,
+        "two_recent_images_named": true,
+        "does_not_describe_vision_flag_as_capture_time": true
+      }
+    },
+    {
+      "round": 2,
+      "question": "请查阅项目文档：视觉图片的采集时间和上下文历史如何管理？简短回答。",
+      "tool_calls": [
+        {
+          "name": "search_project",
+          "arguments": {
+            "query": "视觉图片的采集时间和上下文历史如何管理？",
+            "limit": 5
+          }
+        }
+      ],
+      "events": [
+        {
+          "type": "task",
+          "state": "running",
+          "label": "search_project",
+          "generation": 1
+        },
+        {
+          "type": "task",
+          "state": "completed",
+          "label": "search_project",
+          "generation": 1,
+          "result": {
+            "matches": [
+              {
+                "document_id": "visual-interaction",
+                "score": 8,
+                "excerpt": "PNG，或主动打开摄像头并点击拍照。文件选择上限 8MiB，浏览器缩放到最长边 512 像素并编码 JPEG。摄像头只在拍照时发送静态画面，不连续上传视频。上传时间表示文件被选中的时刻，不是图片原始拍摄时间。\n\n等待“画面已确认”后输入问题或说话。附件只绑定下一条文字或下一轮 VAD 完成的语音，后来的图片不会改变已启动的请求。回答后可以提交第二张图并询问前后变化；最多保留两张最近画面。移除按钮只移除尚未绑定的附件，不删除已经进入历史的图片。断开会话停止摄像头、清除尚未绑定的画面并保存有界历史；载入同一对话可继续，删除对话才移除持久记录。迟到的文件解码或摄像头授权结果不能进入新会话。\n\n## 时间、序号与上下文\n\n每张图片携带会话 ID、递增序号、图片 ID、来源及 `captured_at_ms`。客户端时间以本次连接为起点，范围 0–600000ms，与现有每会话最多 600 秒一致。服务另记相对接收时间及图片 SHA；两种时钟未做偏移标定，不能据此宣称物理音画同步。\n\n```mermaid\nsequenceDiagram\n    participant UI as 浏览器\n    participant Session as 会话\n    participant Model as MiniCPM worker\n    UI->>Session: 图片、会话ID、序号、采集时间"
+              },
+              {
+                "document_id": "demo-walkthrough",
+                "score": 7,
+                "excerpt": "当前记录。界面说明语音、图像可能随有界上下文保存在本地。\n\n## 视觉与数字人展示步骤\n\n先断开级联会话，将对话模型切换为 MiniCPM-o，点击「新建」再连接。无图问题使用新的空白历史，避免已保存的图片影响演示；确认页面出现图片输入区域。\n\n1. **无图问题**：直接问“图中左边是什么颜色和形状？”展示模型说明缺少图片。说明原提示在本探针8次都猜测，两个提示变体均为0/8；不要说已经解决通用幻觉。\n2. **当前画面**：上传红圆图，等“画面已确认”后用文字提问。指出画面先确认，再绑定下一轮；上传后不会改变已经开始的回答。\n3. **联合输入**：上传绿圆图，再说同一句问题。真实现场可用麦克风；已有自动化记录使用合成PCM经浏览器WebSocket和真实VAD，不能将它表述为真人麦克风验收。\n4. **历史与裁剪**：重新上传红圆图，询问与上一张的变化。展示绿色变红色的回答，并说明模型上下文最多保留最近两张画面。\n5. **打断**：要求详细描述，播放中点击打断，再换图提问。说明旧音源与画面停止，确认播放的语句段保留，未确认部分以中断标记代替；不声称所有已提交的GPU计算可强行取消。\n6. **驱动切换**：断开后换DINet/FlashHead/StreamingTalker，展示2D、3D以及男女声路由。等待及断开后的idle循环属于应用媒体状态管理。\n\n![真实3D视觉"
+              },
+              {
+                "document_id": "acceptance",
+                "score": 6,
+                "excerpt": "、[浏览器采集样本映射](CAPTURE-TIMING-BASELINE.md) | 物理麦克风到扬声器的声学标定；虚拟设备与注入PCM不能证明这一边界 |\n| 3D可检查性 | [结构基线](AVATAR-GEOMETRY-BASELINE.md)：15段1366帧数值与运动定位；[离线重放](AVATAR-QUALITY-REVIEW.md)支持逐帧和时间段标注 | 网格数值正常不等于口型、身份或观感正确 |\n| 实测瓶颈与一项优化 | [消费提前量实验](DINET-PACING-EXPERIMENT.md)及[原代理集成](DINET-PACING-INTEGRATION.md)：17次API、10次正式浏览器对照、故障恢复与回滚 | 单机单角色、小样本；没有证明算力加速、视觉零跳帧、长会话与四worker并发收益 |\n| 有时间与上下文的视觉语音 | [视觉会话契约](VISUAL-INTERACTION.md)与[真实模型实测](REAL-MULTIMODAL-BASELINE.md)：6次能力探针、32次正式四条件对照、三驱动9轮浏览器交互、3组播放打断恢复 | 合成静态图和语音；没有验证真实摄像头、物理麦克风或连续视频理解 |\n| 真实失败与方法消融 | [缺图提示实验](VISUAL-GROUNDING-ABLATION.md)：同代码三策略111次生成，缺图视觉"
+              },
+              {
+                "document_id": "readme",
+                "score": 6,
+                "excerpt": "界](#验证与边界)\n\n## 流式 Agent 与本地会话\n\n- **真实工具执行**：级联模型可检索项目文档、读取文档、计算及检查服务状态，页面显示任务进度；打断后丢弃旧任务结果。\n- **播放感知上下文**：按浏览器确认播放的完整语句段维护历史，中断后不把未听到的内容当作已经说过。\n- **保存与恢复**：在本地新建、载入和删除对话，恢复原来的模型、角色与上下文。\n- **角色配置**：形象、男／女声和 idle 视频一起选择，支持部署者增加已有驱动的角色资源。\n- **视觉输入**：启用视觉能力的 MiniCPM-o 可接收图片或单次摄像头画面，结合文字或语音流式回应。\n\n![工具计算与会话恢复](docs/assets/streaming-agent-preview.png)\n\n查看[使用方法与功能边界](docs/STREAMING-FUNCTIONS.md)。当前工具调度用于级联模式；MiniCPM-o 保留端到端多模态路径。语音输入仍按 VAD 话轮分段，不宣称原生全双工。\n\n## 效果预览\n\n| DINet · 康辉角色素材 | FlashHead Lite · 2D 女生 | StreamingTalker · 3D 头部 |\n| :---: | :---: | :---: |\n| <img src=\"docs/assets/dinet-kanghui.jpg\" "
+              },
+              {
+                "document_id": "avatar-output",
+                "score": 3,
+                "excerpt": "为相邻音源的`audioStart`减去前一音源的`audioStart + duration`，使用同一个AudioContext时钟。其他五条短恢复请求未观察到大于1ms的空隙。\n\n这证明本次调度时间线上存在空隙；尚不能归因于模型、网络、解码或浏览器事件循环，也不能直接推断物理听感。下一步固定恢复PCM并重复运行，逐层关联媒体接收、JPEG解码和安排起点；比较缓冲策略时同时报告首声代价与空隙减少，不能只增加预缓冲后宣称全面更快。\n\n## 验证与后续门槛\n\n114项应用/评测Python、6项worker、22项前端/浏览器探针测试通过。新增部分包含18项Python和6项浏览器测试；独立代码审查后补齐失败清理、错误文本隔离和部署描述。\n\n第一阶段尚缺完整动态质量复核、人工转写/试听、3D渲染观察、精确采集时刻与语音打断测量，以及重复样本下的空隙复现。先补这些证据，再将基线标记完整；本报告不将任何优化宣称为已生效。\n\n命令见[输出捕获说明](AVATAR-OUTPUT-CAPTURE.md)，边界见[质量协议](AVATAR-QUALITY-PROTOCOL.md)，全部45次捕获摘要、六轮浏览器事件/音源和源文件哈希见[机器记录](benchmarks/2026-09-19-output-browser-baseline.json)。原始画像、音频、顶点与机器配置不随源码分发。"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "text": "视觉",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "图片",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "的",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "采集",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "时间",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "通过",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "`captured_at_ms` ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "记",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "录",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "，客户端",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "时间",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "以",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "会",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "话",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "连接",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "为",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "起点",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "，服务",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "端",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "另",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "记",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "相对",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "接收",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "时间",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "及",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "图片",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "SHA。上下",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "文",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "历史",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "最多",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "保留",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "最近",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "两张",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "画面",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "，模型",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "根据",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "序",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "号",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "和",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "会",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "话",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "ID ",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "管",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "理",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "图片",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "关联",
+          "generation": 1
+        },
+        {
+          "type": "text",
+          "text": "。",
+          "generation": 1
+        }
+      ],
+      "status": "passed",
+      "wall_s": 1.9506802829855587,
+      "text": "视觉图片的采集时间通过 `captured_at_ms` 记录，客户端时间以会话连接为起点，服务端另记相对接收时间及图片 SHA。上下文历史最多保留最近两张画面，模型根据序号和会话 ID 管理图片关联。",
+      "fact_checks": {
+        "timestamp_field_named": true,
+        "two_recent_images_named": true,
+        "does_not_describe_vision_flag_as_capture_time": true
+      }
+    }
+  ],
+  "health": {
+    "ready": true,
+    "mode": "llm",
+    "device": "cuda",
+    "quantization": "4bit",
+    "load_s": 4.0769659809884615,
+    "busy": false
+  },
+  "publication": {
+    "source_sha256": "28d7ddf9a1a1e0ec49703553a60a2eb477135e62736aa7e5d4b7c874bda177dd",
+    "removed_fields": []
+  }
+}
