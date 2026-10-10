@@ -1,0 +1,51 @@
+{
+  "analysis_date": "2026-10-10",
+  "execution": "offline_reanalysis_of_existing_model_outputs",
+  "new_model_inference": false,
+  "references_human_reviewed": false,
+  "source_logs": [
+    {
+      "name": "baseline.json",
+      "sha256": "d651d062f299c35f69b9e5d9501dd39b9caf2319d2a8c635e71a2116135c7af5"
+    },
+    {
+      "name": "qwen17.json",
+      "sha256": "5978bb48fd631d611feff0c394eb6f0f5ea41404ef18672df77d1aa654b10b56"
+    }
+  ],
+  "audio_snapshot": [
+    {
+      "case_id": "case-0",
+      "sha256": "588156a206f628c6e5d9826baafcbaf5e5f9b57185dfb16cd2ec398a058c9c98",
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "samples": 117419,
+      "duration_s": 7.3386875
+    },
+    {
+      "case_id": "case-1",
+      "sha256": "cac5e06c06f60938def5e3967229b295d91c7e44810087848cf7903722044d7f",
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "samples": 112640,
+      "duration_s": 7.04
+    },
+    {
+      "case_id": "case-2",
+      "sha256": "cf8e60c54b1a7307238117b76918a9065954c14fd8ed8da28f5360598b009fcb",
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "samples": 77824,
+      "duration_s": 4.864
+    }
+  ],
+  "limits": [
+    "The saved historical request records contain no request-time audio hash; current file hashes are inventory evidence, not proof of exact historical request bytes.",
+    "One result per case/configuration; no inference latency comparison or current deployment claim.",
+    "Synthesis prompts are not human-verified transcripts."
+  ],
+  "scoring_input_sha256": "d25a434bba068c20f6a3990f6a1e75aa8e87b4765f540b4e7b2985a510dca661"
+}
