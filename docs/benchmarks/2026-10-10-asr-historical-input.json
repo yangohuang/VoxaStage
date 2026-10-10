@@ -1,0 +1,110 @@
+[
+  {
+    "case_id": "case-0",
+    "variant": "qwen06-plain",
+    "reference": "介绍一下语音agent技术，重点说说Pipecat和MiniCPM-o的区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "介绍一下语音 agent 技术，重点说说 Pipecat 和 MiniPAMO 的区别。"
+  },
+  {
+    "case_id": "case-0",
+    "variant": "qwen06-terms",
+    "reference": "介绍一下语音agent技术，重点说说Pipecat和MiniCPM-o的区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "介绍一下语音 agent 技术，重点说说 PipCat 和 MiniCPM-O 的区别。"
+  },
+  {
+    "case_id": "case-1",
+    "variant": "qwen06-plain",
+    "reference": "我想把DINet、FlashHead和StreamingTalker接入同一个语音系统。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我想把Dyneet Flashhead和Streaming Toker接入同一个语音系统。"
+  },
+  {
+    "case_id": "case-1",
+    "variant": "qwen06-terms",
+    "reference": "我想把DINet、FlashHead和StreamingTalker接入同一个语音系统。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我想把 DINET、FlashHead 和 StreamingTalker 接入同一个语音系统。"
+  },
+  {
+    "case_id": "case-2",
+    "variant": "qwen06-plain",
+    "reference": "请解释一下VAD打断和ASR识别有什么区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请解释一下VAD打断和ASR识别有什么区别。"
+  },
+  {
+    "case_id": "case-2",
+    "variant": "qwen06-terms",
+    "reference": "请解释一下VAD打断和ASR识别有什么区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请解释一下VAD打断和ASR识别有什么区别？"
+  },
+  {
+    "case_id": "case-0",
+    "variant": "qwen17-plain",
+    "reference": "介绍一下语音agent技术，重点说说Pipecat和MiniCPM-o的区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "介绍一下语音agent技术，重点说说Pipecat和MiniPAMO的区别。"
+  },
+  {
+    "case_id": "case-0",
+    "variant": "qwen17-terms",
+    "reference": "介绍一下语音agent技术，重点说说Pipecat和MiniCPM-o的区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "介绍一下语音 agent 技术，重点说说 Pipecat 和 MiniCPM-o 的区别。"
+  },
+  {
+    "case_id": "case-1",
+    "variant": "qwen17-plain",
+    "reference": "我想把DINet、FlashHead和StreamingTalker接入同一个语音系统。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我想把 Dynate Flashhead 和 Streaming Talker 接入同一个语音系统。"
+  },
+  {
+    "case_id": "case-1",
+    "variant": "qwen17-terms",
+    "reference": "我想把DINet、FlashHead和StreamingTalker接入同一个语音系统。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我想把 DINet, FlashHead 和 StreamingTalker 接入同一个语音系统。"
+  },
+  {
+    "case_id": "case-2",
+    "variant": "qwen17-plain",
+    "reference": "请解释一下VAD打断和ASR识别有什么区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请解释一下VAD打断和ASR识别有什么区别？"
+  },
+  {
+    "case_id": "case-2",
+    "variant": "qwen17-terms",
+    "reference": "请解释一下VAD打断和ASR识别有什么区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请解释一下VAD打断和ASR识别有什么区别？"
+  }
+]
