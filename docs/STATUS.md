@@ -10,6 +10,8 @@
 
 同日完成 [StreamingTalker 独立环境](STREAMINGTALKER-STANDALONE-VALIDATION.md)：固定上游源码、94 包完整锁、新环境 46 项协议测试及 90 次真实请求通过，包含取消后恢复。人工口型与物理设备验收仍待完成。
 
+同日修复 [StreamingTalker 断连后终态发送竞态](STREAMINGTALKER-CLOSE-RACE.md)：旧代码两种受控回归失败，新代码49项协议测试通过；同输入90次真实请求通过且本轮服务端错误日志为0。日常服务尚未切换该修复。
+
 ## 已交付
 
 - 级联语音链路：话轮分段 ASR，增量 LLM 文字与 TTS 音频，真实项目文档检索/读取、计算与服务状态工具。

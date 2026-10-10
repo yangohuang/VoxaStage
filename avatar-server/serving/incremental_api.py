@@ -14,6 +14,7 @@ import threading
 
 import numpy as np
 from fastapi import WebSocket, WebSocketDisconnect
+from starlette.websockets import WebSocketState
 
 from serving.api import Cancelled, create_app
 
@@ -99,6 +100,10 @@ def create_incremental_app(engine, session_factory=None):
             # Claim before awaiting send: bytes can reach the peer before the
             # await completes, so writer.done() cannot identify this state.
             terminal_claimed = True
+            # A failed frame send may already have disconnected the writer
+            # while the reader concurrently produced cancel/invalid_input.
+            if websocket.application_state == WebSocketState.DISCONNECTED:
+                return
             await websocket.send_json(event)
 
         def emit(event):
