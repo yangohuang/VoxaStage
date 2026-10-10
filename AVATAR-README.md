@@ -114,7 +114,7 @@ cp .env.example .env
 
 ## 验证与边界
 
-2026-10-10 最近联调：[服务恢复与浏览器记录](docs/SERVICE-RECOVERY-VALIDATION.md)验证了MiniCPM配合三种数字人的文字、合成语音输入、手动打断、播放后idle，以及两张图片的上下文回答。默认级联链路的1.7B ASR恢复仍待验收；这些功能检查不代表物理麦克风或主观音画质量通过。
+2026-10-10 最近联调：[服务恢复与浏览器记录](docs/SERVICE-RECOVERY-VALIDATION.md)验证了MiniCPM配合三种数字人的文字、合成语音输入、手动打断、播放后idle，以及两张图片的上下文回答。随后完成[1.7B ASR恢复与级联验证](docs/ASR17-RECOVERY-VALIDATION.md)：92次真实识别请求和三驱动播放、合成输入、手动打断恢复通过，应用依赖健康检查通过。固定样本未证明1.7B优于0.6B；这些检查不代表物理麦克风或主观音画质量通过。
 
 新增[数字人适配层基线工具](docs/AVATAR-EVALUATION.md)：统一输入哈希、重复运行、失败计数、PCM与时间戳检查。完整质量与端到端评测按[阶段路线](docs/plans/2026-09-19-roadmap.md)逐步补齐；已验证范围与剩余门槛见[阶段验收](docs/ACCEPTANCE.md)。
 

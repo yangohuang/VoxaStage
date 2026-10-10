@@ -1,0 +1,812 @@
+[
+  {
+    "case_id": "zh-00@r0",
+    "variant": "plain",
+    "reference": "你好，欢迎来到语音实验室。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "你好，欢迎来到语音实验室。"
+  },
+  {
+    "case_id": "zh-00@r0",
+    "variant": "terms",
+    "reference": "你好，欢迎来到语音实验室。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "你好，欢迎来到语音实验室。"
+  },
+  {
+    "case_id": "zh-01@r0",
+    "variant": "terms",
+    "reference": "请帮我介绍一下实时数字人。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请帮我介绍一下实时数字人。"
+  },
+  {
+    "case_id": "zh-01@r0",
+    "variant": "plain",
+    "reference": "请帮我介绍一下实时数字人。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请帮我介绍一下实时数字人。"
+  },
+  {
+    "case_id": "zh-02@r0",
+    "variant": "plain",
+    "reference": "我们先听完这句话，再开始回答。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们先听完这句话，再开始回答。"
+  },
+  {
+    "case_id": "zh-02@r0",
+    "variant": "terms",
+    "reference": "我们先听完这句话，再开始回答。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们先听完这句话，再开始回答。"
+  },
+  {
+    "case_id": "en-00@r0",
+    "variant": "terms",
+    "reference": "Hello, welcome to the voice laboratory.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Hello, welcome to the Voice Laboratory."
+  },
+  {
+    "case_id": "en-00@r0",
+    "variant": "plain",
+    "reference": "Hello, welcome to the voice laboratory.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Hello. Welcome to the Voice Laboratory."
+  },
+  {
+    "case_id": "en-01@r0",
+    "variant": "plain",
+    "reference": "Please explain how a talking avatar works.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Please explain how a talking avatar works."
+  },
+  {
+    "case_id": "en-01@r0",
+    "variant": "terms",
+    "reference": "Please explain how a talking avatar works.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Please explain how a talking avatar works."
+  },
+  {
+    "case_id": "en-02@r0",
+    "variant": "terms",
+    "reference": "Wait until I finish speaking before you answer.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Wait until I finish speaking before you answer."
+  },
+  {
+    "case_id": "en-02@r0",
+    "variant": "plain",
+    "reference": "Wait until I finish speaking before you answer.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Wait until I finish speaking before you answer."
+  },
+  {
+    "case_id": "mixed-00@r0",
+    "variant": "plain",
+    "reference": "介绍一下语音 agent 技术。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "介绍一下语音agent技术。"
+  },
+  {
+    "case_id": "mixed-00@r0",
+    "variant": "terms",
+    "reference": "介绍一下语音 agent 技术。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "介绍一下语音 agent 技术。"
+  },
+  {
+    "case_id": "mixed-01@r0",
+    "variant": "terms",
+    "reference": "请解释一下 VAD 和 ASR 的区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请解释一下 VAD 和 ASR 的区别。"
+  },
+  {
+    "case_id": "mixed-01@r0",
+    "variant": "plain",
+    "reference": "请解释一下 VAD 和 ASR 的区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请解释一下 white 和 sr 的区别。"
+  },
+  {
+    "case_id": "mixed-02@r0",
+    "variant": "plain",
+    "reference": "我们用 WebRTC 传输语音，用 Python 处理模型输出。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们用 WebRTC 传输语音，用 Python 处理模型输出。"
+  },
+  {
+    "case_id": "mixed-02@r0",
+    "variant": "terms",
+    "reference": "我们用 WebRTC 传输语音，用 Python 处理模型输出。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们用 WebRTC 传输语音，用 Python 处理模型输出。"
+  },
+  {
+    "case_id": "silence-00@r0",
+    "variant": "terms",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-00@r0",
+    "variant": "plain",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-01@r0",
+    "variant": "plain",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-01@r0",
+    "variant": "terms",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-02@r0",
+    "variant": "terms",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-02@r0",
+    "variant": "plain",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "pause-00@r0",
+    "variant": "plain",
+    "reference": "你好，欢迎来到语音实验室。请帮我介绍一下实时数字人。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "你好，欢迎来到语音实验室，请帮我介绍一下实时数字人。"
+  },
+  {
+    "case_id": "pause-00@r0",
+    "variant": "terms",
+    "reference": "你好，欢迎来到语音实验室。请帮我介绍一下实时数字人。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "你好，欢迎来到语音实验室，请帮我介绍一下实时数字人。"
+  },
+  {
+    "case_id": "pause-01@r0",
+    "variant": "terms",
+    "reference": "请帮我介绍一下实时数字人。我们先听完这句话，再开始回答。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请帮我介绍一下实时数字人。我们先听完这句话，再开始回答。"
+  },
+  {
+    "case_id": "pause-01@r0",
+    "variant": "plain",
+    "reference": "请帮我介绍一下实时数字人。我们先听完这句话，再开始回答。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请帮我介绍一下实时数字人。我们先听完这句话，再开始回答。"
+  },
+  {
+    "case_id": "pause-02@r0",
+    "variant": "plain",
+    "reference": "我们先听完这句话，再开始回答。你好，欢迎来到语音实验室。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们先听完这句话，再开始回答。你好，欢迎来到语音实验室。"
+  },
+  {
+    "case_id": "pause-02@r0",
+    "variant": "terms",
+    "reference": "我们先听完这句话，再开始回答。你好，欢迎来到语音实验室。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们先听完这句话，再开始回答。你好，欢迎来到语音实验室。"
+  },
+  {
+    "case_id": "zh-00@r1",
+    "variant": "terms",
+    "reference": "你好，欢迎来到语音实验室。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "你好，欢迎来到语音实验室。"
+  },
+  {
+    "case_id": "zh-00@r1",
+    "variant": "plain",
+    "reference": "你好，欢迎来到语音实验室。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "你好，欢迎来到语音实验室。"
+  },
+  {
+    "case_id": "zh-01@r1",
+    "variant": "plain",
+    "reference": "请帮我介绍一下实时数字人。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请帮我介绍一下实时数字人。"
+  },
+  {
+    "case_id": "zh-01@r1",
+    "variant": "terms",
+    "reference": "请帮我介绍一下实时数字人。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请帮我介绍一下实时数字人。"
+  },
+  {
+    "case_id": "zh-02@r1",
+    "variant": "terms",
+    "reference": "我们先听完这句话，再开始回答。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们先听完这句话，再开始回答。"
+  },
+  {
+    "case_id": "zh-02@r1",
+    "variant": "plain",
+    "reference": "我们先听完这句话，再开始回答。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们先听完这句话，再开始回答。"
+  },
+  {
+    "case_id": "en-00@r1",
+    "variant": "plain",
+    "reference": "Hello, welcome to the voice laboratory.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Hello. Welcome to the Voice Laboratory."
+  },
+  {
+    "case_id": "en-00@r1",
+    "variant": "terms",
+    "reference": "Hello, welcome to the voice laboratory.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Hello, welcome to the Voice Laboratory."
+  },
+  {
+    "case_id": "en-01@r1",
+    "variant": "terms",
+    "reference": "Please explain how a talking avatar works.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Please explain how a talking avatar works."
+  },
+  {
+    "case_id": "en-01@r1",
+    "variant": "plain",
+    "reference": "Please explain how a talking avatar works.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Please explain how a talking avatar works."
+  },
+  {
+    "case_id": "en-02@r1",
+    "variant": "plain",
+    "reference": "Wait until I finish speaking before you answer.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Wait until I finish speaking before you answer."
+  },
+  {
+    "case_id": "en-02@r1",
+    "variant": "terms",
+    "reference": "Wait until I finish speaking before you answer.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Wait until I finish speaking before you answer."
+  },
+  {
+    "case_id": "mixed-00@r1",
+    "variant": "terms",
+    "reference": "介绍一下语音 agent 技术。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "介绍一下语音 agent 技术。"
+  },
+  {
+    "case_id": "mixed-00@r1",
+    "variant": "plain",
+    "reference": "介绍一下语音 agent 技术。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "介绍一下语音agent技术。"
+  },
+  {
+    "case_id": "mixed-01@r1",
+    "variant": "plain",
+    "reference": "请解释一下 VAD 和 ASR 的区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请解释一下 white 和 sr 的区别。"
+  },
+  {
+    "case_id": "mixed-01@r1",
+    "variant": "terms",
+    "reference": "请解释一下 VAD 和 ASR 的区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请解释一下 VAD 和 ASR 的区别。"
+  },
+  {
+    "case_id": "mixed-02@r1",
+    "variant": "terms",
+    "reference": "我们用 WebRTC 传输语音，用 Python 处理模型输出。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们用 WebRTC 传输语音，用 Python 处理模型输出。"
+  },
+  {
+    "case_id": "mixed-02@r1",
+    "variant": "plain",
+    "reference": "我们用 WebRTC 传输语音，用 Python 处理模型输出。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们用 WebRTC 传输语音，用 Python 处理模型输出。"
+  },
+  {
+    "case_id": "silence-00@r1",
+    "variant": "plain",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-00@r1",
+    "variant": "terms",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-01@r1",
+    "variant": "terms",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-01@r1",
+    "variant": "plain",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-02@r1",
+    "variant": "plain",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-02@r1",
+    "variant": "terms",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "pause-00@r1",
+    "variant": "terms",
+    "reference": "你好，欢迎来到语音实验室。请帮我介绍一下实时数字人。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "你好，欢迎来到语音实验室，请帮我介绍一下实时数字人。"
+  },
+  {
+    "case_id": "pause-00@r1",
+    "variant": "plain",
+    "reference": "你好，欢迎来到语音实验室。请帮我介绍一下实时数字人。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "你好，欢迎来到语音实验室，请帮我介绍一下实时数字人。"
+  },
+  {
+    "case_id": "pause-01@r1",
+    "variant": "plain",
+    "reference": "请帮我介绍一下实时数字人。我们先听完这句话，再开始回答。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请帮我介绍一下实时数字人。我们先听完这句话，再开始回答。"
+  },
+  {
+    "case_id": "pause-01@r1",
+    "variant": "terms",
+    "reference": "请帮我介绍一下实时数字人。我们先听完这句话，再开始回答。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请帮我介绍一下实时数字人。我们先听完这句话，再开始回答。"
+  },
+  {
+    "case_id": "pause-02@r1",
+    "variant": "terms",
+    "reference": "我们先听完这句话，再开始回答。你好，欢迎来到语音实验室。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们先听完这句话，再开始回答。你好，欢迎来到语音实验室。"
+  },
+  {
+    "case_id": "pause-02@r1",
+    "variant": "plain",
+    "reference": "我们先听完这句话，再开始回答。你好，欢迎来到语音实验室。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们先听完这句话，再开始回答。你好，欢迎来到语音实验室。"
+  },
+  {
+    "case_id": "zh-00@r2",
+    "variant": "plain",
+    "reference": "你好，欢迎来到语音实验室。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "你好，欢迎来到语音实验室。"
+  },
+  {
+    "case_id": "zh-00@r2",
+    "variant": "terms",
+    "reference": "你好，欢迎来到语音实验室。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "你好，欢迎来到语音实验室。"
+  },
+  {
+    "case_id": "zh-01@r2",
+    "variant": "terms",
+    "reference": "请帮我介绍一下实时数字人。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请帮我介绍一下实时数字人。"
+  },
+  {
+    "case_id": "zh-01@r2",
+    "variant": "plain",
+    "reference": "请帮我介绍一下实时数字人。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请帮我介绍一下实时数字人。"
+  },
+  {
+    "case_id": "zh-02@r2",
+    "variant": "plain",
+    "reference": "我们先听完这句话，再开始回答。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们先听完这句话，再开始回答。"
+  },
+  {
+    "case_id": "zh-02@r2",
+    "variant": "terms",
+    "reference": "我们先听完这句话，再开始回答。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们先听完这句话，再开始回答。"
+  },
+  {
+    "case_id": "en-00@r2",
+    "variant": "terms",
+    "reference": "Hello, welcome to the voice laboratory.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Hello, welcome to the Voice Laboratory."
+  },
+  {
+    "case_id": "en-00@r2",
+    "variant": "plain",
+    "reference": "Hello, welcome to the voice laboratory.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Hello. Welcome to the Voice Laboratory."
+  },
+  {
+    "case_id": "en-01@r2",
+    "variant": "plain",
+    "reference": "Please explain how a talking avatar works.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Please explain how a talking avatar works."
+  },
+  {
+    "case_id": "en-01@r2",
+    "variant": "terms",
+    "reference": "Please explain how a talking avatar works.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Please explain how a talking avatar works."
+  },
+  {
+    "case_id": "en-02@r2",
+    "variant": "terms",
+    "reference": "Wait until I finish speaking before you answer.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Wait until I finish speaking before you answer."
+  },
+  {
+    "case_id": "en-02@r2",
+    "variant": "plain",
+    "reference": "Wait until I finish speaking before you answer.",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "Wait until I finish speaking before you answer."
+  },
+  {
+    "case_id": "mixed-00@r2",
+    "variant": "plain",
+    "reference": "介绍一下语音 agent 技术。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "介绍一下语音agent技术。"
+  },
+  {
+    "case_id": "mixed-00@r2",
+    "variant": "terms",
+    "reference": "介绍一下语音 agent 技术。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "介绍一下语音 agent 技术。"
+  },
+  {
+    "case_id": "mixed-01@r2",
+    "variant": "terms",
+    "reference": "请解释一下 VAD 和 ASR 的区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请解释一下 VAD 和 ASR 的区别。"
+  },
+  {
+    "case_id": "mixed-01@r2",
+    "variant": "plain",
+    "reference": "请解释一下 VAD 和 ASR 的区别。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请解释一下 white 和 sr 的区别。"
+  },
+  {
+    "case_id": "mixed-02@r2",
+    "variant": "plain",
+    "reference": "我们用 WebRTC 传输语音，用 Python 处理模型输出。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们用 WebRTC 传输语音，用 Python 处理模型输出。"
+  },
+  {
+    "case_id": "mixed-02@r2",
+    "variant": "terms",
+    "reference": "我们用 WebRTC 传输语音，用 Python 处理模型输出。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们用 WebRTC 传输语音，用 Python 处理模型输出。"
+  },
+  {
+    "case_id": "silence-00@r2",
+    "variant": "terms",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-00@r2",
+    "variant": "plain",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-01@r2",
+    "variant": "plain",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-01@r2",
+    "variant": "terms",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-02@r2",
+    "variant": "terms",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "silence-02@r2",
+    "variant": "plain",
+    "reference": "",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": ""
+  },
+  {
+    "case_id": "pause-00@r2",
+    "variant": "plain",
+    "reference": "你好，欢迎来到语音实验室。请帮我介绍一下实时数字人。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "你好，欢迎来到语音实验室，请帮我介绍一下实时数字人。"
+  },
+  {
+    "case_id": "pause-00@r2",
+    "variant": "terms",
+    "reference": "你好，欢迎来到语音实验室。请帮我介绍一下实时数字人。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "你好，欢迎来到语音实验室，请帮我介绍一下实时数字人。"
+  },
+  {
+    "case_id": "pause-01@r2",
+    "variant": "terms",
+    "reference": "请帮我介绍一下实时数字人。我们先听完这句话，再开始回答。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请帮我介绍一下实时数字人。我们先听完这句话，再开始回答。"
+  },
+  {
+    "case_id": "pause-01@r2",
+    "variant": "plain",
+    "reference": "请帮我介绍一下实时数字人。我们先听完这句话，再开始回答。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "请帮我介绍一下实时数字人。我们先听完这句话，再开始回答。"
+  },
+  {
+    "case_id": "pause-02@r2",
+    "variant": "plain",
+    "reference": "我们先听完这句话，再开始回答。你好，欢迎来到语音实验室。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们先听完这句话，再开始回答。你好，欢迎来到语音实验室。"
+  },
+  {
+    "case_id": "pause-02@r2",
+    "variant": "terms",
+    "reference": "我们先听完这句话，再开始回答。你好，欢迎来到语音实验室。",
+    "reference_kind": "synthesis_prompt",
+    "transcript_reviewed": false,
+    "status": "ok",
+    "text": "我们先听完这句话，再开始回答。你好，欢迎来到语音实验室。"
+  }
+]
