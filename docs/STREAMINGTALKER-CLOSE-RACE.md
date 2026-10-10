@@ -56,3 +56,5 @@ PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=4 python -m pytest -p no:cacheprovider
 真实模型复验沿用独立部署报告的 benchmark_avatar.py 命令，固定 `--mode burst --rounds 3 --warmup 1 --timeout 90 --interrupt`，deployment-label 改为 `close-race-fixed-cuda124-rtx4090`。必须同时检查 worker 日志，客户端 passed 不足以证明服务端无异常。
 
 人工口型、身份/伪影、物理麦克风与真正独立 GPU 主机全量部署验收仍未完成。
+
+后续[日常服务上线记录](STREAMINGTALKER-DAILY-DEPLOYMENT.md)已验证实际切换；上文“日常服务未切换”描述本次修复实验结束时的状态。

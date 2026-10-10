@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "source_commit": "e4030351a8b965b5744a25ff9a257203efee1737",
+  "protocol_tests_in_daily_environment": 49,
+  "protocol_warnings": 1,
+  "scope": "daily StreamingTalker service overlay activation; no model or environment replacement",
+  "unit_sha256_before": "8e0dbd9796ca3df584db2ce575ac0f3444b51bee7a427c532ed71dc33a0ef4f7",
+  "assets_before": {
+    "checkpoints/diffar_voca_241120.ckpt": "aaa2422eb829a6e03252e915fa4f4846d47efd1f9ccb199f75f039438b02da36",
+    "checkpoints/voca_vae.ckpt": "da766a9af2f9b0b49f2c385777ae5d7a9c961e635dbc3fe616b8a1127baa8d5e",
+    "data/vocaset/templates.pkl": "10ab69b5f88a78a539476edb607a87759f918b38e5b283c732d98b4bafdd5774",
+    "data/vocaset/templates/FLAME_sample.ply": "318e7f64a4ffe6462ea253d58f134b768457ae1e5f8e4fdf2e49fc95c7f17a8b",
+    "data/vocaset/FLAME_masks.pkl": "ccefbe1ac0774ff78c68caf2c627b4abc067a6555ebeb0be5d5b0812366ab492",
+    "checkpoints/hubert-base-ls960/config.json": "56be398848bbd9cbc720172b0d45b2f01cac7652f2968f0f31f5faf9f2986acc",
+    "checkpoints/hubert-base-ls960/pytorch_model.bin": "062249fffb353eab67547a2fbc129f7c31a2f459faf641b19e8fb007cc5c48ad"
+  },
+  "source_sha256_before": "661a0552c55f49ce86b48623dc8e1ed91595e9cb155a62eb804722df13f24bf3",
+  "source_sha256_after_expected": "356aee2a2c844a221244239d354c70cbf2cbf2e396c1688e87ea5ceb383793c7",
+  "backup_sha256": "661a0552c55f49ce86b48623dc8e1ed91595e9cb155a62eb804722df13f24bf3",
+  "restart_to_ready_s": 5.380932984990068,
+  "health_after": {
+    "status": "ready",
+    "model": "StreamingTalker-VOCASET",
+    "busy": false,
+    "fps": 30,
+    "vertices": 5023,
+    "max_audio_seconds": 30,
+    "input_mode": "complete_audio",
+    "output_mode": "streamed_vertices"
+  },
+  "assets_after": {
+    "checkpoints/diffar_voca_241120.ckpt": "aaa2422eb829a6e03252e915fa4f4846d47efd1f9ccb199f75f039438b02da36",
+    "checkpoints/voca_vae.ckpt": "da766a9af2f9b0b49f2c385777ae5d7a9c961e635dbc3fe616b8a1127baa8d5e",
+    "data/vocaset/templates.pkl": "10ab69b5f88a78a539476edb607a87759f918b38e5b283c732d98b4bafdd5774",
+    "data/vocaset/templates/FLAME_sample.ply": "318e7f64a4ffe6462ea253d58f134b768457ae1e5f8e4fdf2e49fc95c7f17a8b",
+    "data/vocaset/FLAME_masks.pkl": "ccefbe1ac0774ff78c68caf2c627b4abc067a6555ebeb0be5d5b0812366ab492",
+    "checkpoints/hubert-base-ls960/config.json": "56be398848bbd9cbc720172b0d45b2f01cac7652f2968f0f31f5faf9f2986acc",
+    "checkpoints/hubert-base-ls960/pytorch_model.bin": "062249fffb353eab67547a2fbc129f7c31a2f459faf641b19e8fb007cc5c48ad"
+  },
+  "assets_unchanged": true,
+  "unit_sha256_after": "8e0dbd9796ca3df584db2ce575ac0f3444b51bee7a427c532ed71dc33a0ef4f7",
+  "worker_log_sha256": "21380ca3b1414712e1f0720218d95c2ca1ce20061a3de4b1e9493b4adc0f85ac",
+  "uncaught_asgi_exceptions": 0,
+  "tracebacks": 0,
+  "error_lines": 0,
+  "trials": 90,
+  "daily_worker_switched": true,
+  "rolled_back": false,
+  "service_ready": true,
+  "service_idle": true,
+  "service_verification": {
+    "pid_changed_on_restart": true,
+    "pid_unchanged_during_validation": true,
+    "restart_count_unchanged": true,
+    "final_active_state": "active",
+    "final_sub_state": "running"
+  },
+  "rollback_handler_probe": {
+    "rollback_runs_when_evidence_storage_fails": true,
+    "probe_uses_extracted_actual_exception_handler": true,
+    "real_service_rollback_exercised": false
+  },
+  "deployment_script_sha256": "3a6314abf402d2f480a990fa297f06072176cee80eaa5ff4b97a55105fcbad3f",
+  "publication": {
+    "raw_sha256": "7053020be6ca0445c9f789907853ddfc80d1ccbaaee763b8c9377c8b85995f75",
+    "removed_fields": [
+      "service_before",
+      "service_after",
+      "service_final"
+    ],
+    "added_fields": [
+      "publication",
+      "service_verification",
+      "rollback_handler_probe",
+      "deployment_script_sha256"
+    ]
+  }
+}

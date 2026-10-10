@@ -10,7 +10,7 @@
 
 同日完成 [StreamingTalker 独立环境](STREAMINGTALKER-STANDALONE-VALIDATION.md)：固定上游源码、94 包完整锁、新环境 46 项协议测试及 90 次真实请求通过，包含取消后恢复。人工口型与物理设备验收仍待完成。
 
-同日修复 [StreamingTalker 断连后终态发送竞态](STREAMINGTALKER-CLOSE-RACE.md)：旧代码两种受控回归失败，新代码49项协议测试通过；同输入90次真实请求通过且本轮服务端错误日志为0。日常服务尚未切换该修复。
+同日修复 [StreamingTalker 断连后终态发送竞态](STREAMINGTALKER-CLOSE-RACE.md)：旧代码两种受控回归失败，新代码49项协议测试通过；同输入90次真实请求通过且本轮服务端错误日志为0。随后已完成[日常服务切换](STREAMINGTALKER-DAILY-DEPLOYMENT.md)，原环境49项协议测试及上线后90次请求通过，日志未出现该异常。
 
 ## 已交付
 
