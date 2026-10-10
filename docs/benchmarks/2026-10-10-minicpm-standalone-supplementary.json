@@ -1,0 +1,639 @@
+{
+  "requests": [
+    {
+      "health_before": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 33,
+        "cancelled": 0,
+        "failed": 0
+      },
+      "health_after": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 34,
+        "cancelled": 0,
+        "failed": 0
+      },
+      "first_audio_health": {
+        "ready": true,
+        "busy": true,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 34,
+        "cancelled": 0,
+        "failed": 0
+      },
+      "id": "voice-male",
+      "voice": "male",
+      "interrupted": false,
+      "text": "实时语音交互是通过语音直接交流，实现人与设备或人与人之间的即时沟通。",
+      "audio_chunks": 9,
+      "samples": 209280,
+      "pcm_sha256": "99c070776d888a29b90161d4b0ac2c674888691c7ac4feb5bf1d54cd7c12c250",
+      "first_audio_s": 1.047567542991601,
+      "wall_s": 2.6952821529994253,
+      "request_sha256": "e2ceb53705fb8cb55bfd8ae0bc21b4ec722fe0beb27c2f565d94a703249ad4f7",
+      "status": "passed"
+    },
+    {
+      "health_before": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 34,
+        "cancelled": 0,
+        "failed": 0
+      },
+      "health_after": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 35,
+        "cancelled": 0,
+        "failed": 0
+      },
+      "first_audio_health": {
+        "ready": true,
+        "busy": true,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 35,
+        "cancelled": 0,
+        "failed": 0
+      },
+      "id": "voice-female",
+      "voice": "female",
+      "interrupted": false,
+      "text": "实时语音交互是通过声音进行即时的交流。",
+      "audio_chunks": 5,
+      "samples": 109440,
+      "pcm_sha256": "b7f867005687d55898777fe82c3ba21d83c03ef30423cf6edbae03adc8675b95",
+      "first_audio_s": 0.9146061760256998,
+      "wall_s": 1.4925641140143853,
+      "request_sha256": "e2ceb53705fb8cb55bfd8ae0bc21b4ec722fe0beb27c2f565d94a703249ad4f7",
+      "status": "passed"
+    },
+    {
+      "health_before": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 35,
+        "cancelled": 0,
+        "failed": 0
+      },
+      "health_after": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 36,
+        "cancelled": 1,
+        "failed": 0
+      },
+      "first_audio_health": {
+        "ready": true,
+        "busy": true,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 36,
+        "cancelled": 0,
+        "failed": 0
+      },
+      "id": "cancel-0",
+      "voice": "male",
+      "interrupted": true,
+      "text": "实时语音助手的处理流程是这样的：首先",
+      "audio_chunks": 1,
+      "samples": 24000,
+      "pcm_sha256": "383c540fe7510071beb74929964904c637aee780b7f111755da7e120d7678080",
+      "first_audio_s": 0.9864412610186264,
+      "wall_s": 0.9883631030097604,
+      "request_sha256": "29738f3626b8f31f59e50b4ba8f10159e314e753a0ebc87ad6fbd82826e97dc6",
+      "status": "passed"
+    },
+    {
+      "health_before": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 36,
+        "cancelled": 1,
+        "failed": 0
+      },
+      "health_after": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 37,
+        "cancelled": 1,
+        "failed": 0
+      },
+      "first_audio_health": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 37,
+        "cancelled": 1,
+        "failed": 0
+      },
+      "id": "recovery-0",
+      "voice": "female",
+      "interrupted": false,
+      "text": "你好！",
+      "audio_chunks": 2,
+      "samples": 25920,
+      "pcm_sha256": "d13ac2fa90242c7d4db2a2d66cff72eaaa7d0ad0bf9386c5628ff7e1f48bf356",
+      "first_audio_s": 0.5135775770177133,
+      "wall_s": 0.5158681810135022,
+      "request_sha256": "7fd1e35307321ff5f3cb522db222e822f59fc07306dc0ef41e69c9d7cf92fcc3",
+      "status": "passed"
+    },
+    {
+      "health_before": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 37,
+        "cancelled": 1,
+        "failed": 0
+      },
+      "health_after": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 38,
+        "cancelled": 2,
+        "failed": 0
+      },
+      "first_audio_health": {
+        "ready": true,
+        "busy": true,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 38,
+        "cancelled": 1,
+        "failed": 0
+      },
+      "id": "cancel-1",
+      "voice": "male",
+      "interrupted": true,
+      "text": "实时语音助手的处理流程大致是这样的。",
+      "audio_chunks": 1,
+      "samples": 24000,
+      "pcm_sha256": "6efeee6fb742eb3b1303cfa3300ff1d76b8ccfc8304f46670d270df1a2587876",
+      "first_audio_s": 0.9998451019928325,
+      "wall_s": 1.001971018005861,
+      "request_sha256": "29738f3626b8f31f59e50b4ba8f10159e314e753a0ebc87ad6fbd82826e97dc6",
+      "status": "passed"
+    },
+    {
+      "health_before": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 38,
+        "cancelled": 2,
+        "failed": 0
+      },
+      "health_after": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 39,
+        "cancelled": 2,
+        "failed": 0
+      },
+      "first_audio_health": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 39,
+        "cancelled": 2,
+        "failed": 0
+      },
+      "id": "recovery-1",
+      "voice": "female",
+      "interrupted": false,
+      "text": "你好！",
+      "audio_chunks": 2,
+      "samples": 30720,
+      "pcm_sha256": "642d03f9e8e94b7db71cd2da4c4e95b6342c15ea3a01389eeda12dc3dd21d23d",
+      "first_audio_s": 0.6311819220136385,
+      "wall_s": 0.6332201500190422,
+      "request_sha256": "7fd1e35307321ff5f3cb522db222e822f59fc07306dc0ef41e69c9d7cf92fcc3",
+      "status": "passed"
+    },
+    {
+      "health_before": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 39,
+        "cancelled": 2,
+        "failed": 0
+      },
+      "health_after": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 40,
+        "cancelled": 3,
+        "failed": 0
+      },
+      "first_audio_health": {
+        "ready": true,
+        "busy": true,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 40,
+        "cancelled": 2,
+        "failed": 0
+      },
+      "id": "cancel-2",
+      "voice": "male",
+      "interrupted": true,
+      "text": "实时语音助手的处理流程通常包括以下几个步骤",
+      "audio_chunks": 1,
+      "samples": 24000,
+      "pcm_sha256": "6bbda95037a079396cc82fffad902a5b8e56f5eecf5a3783979120d8c87de2da",
+      "first_audio_s": 0.9882576260133646,
+      "wall_s": 0.9900258780107833,
+      "request_sha256": "29738f3626b8f31f59e50b4ba8f10159e314e753a0ebc87ad6fbd82826e97dc6",
+      "status": "passed"
+    },
+    {
+      "health_before": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 40,
+        "cancelled": 3,
+        "failed": 0
+      },
+      "health_after": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 41,
+        "cancelled": 3,
+        "failed": 0
+      },
+      "first_audio_health": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 41,
+        "cancelled": 3,
+        "failed": 0
+      },
+      "id": "recovery-2",
+      "voice": "female",
+      "interrupted": false,
+      "text": "你好。",
+      "audio_chunks": 2,
+      "samples": 30720,
+      "pcm_sha256": "5a70b139f0a7883bcb7ae32233a279b7dec6e51fb635877fa0fd484db3e7e6de",
+      "first_audio_s": 0.6198388419870753,
+      "wall_s": 0.6218822869996075,
+      "request_sha256": "7fd1e35307321ff5f3cb522db222e822f59fc07306dc0ef41e69c9d7cf92fcc3",
+      "status": "passed"
+    },
+    {
+      "health_before": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 41,
+        "cancelled": 3,
+        "failed": 0
+      },
+      "health_after": {
+        "ready": true,
+        "busy": false,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 42,
+        "cancelled": 3,
+        "failed": 0
+      },
+      "first_audio_health": {
+        "ready": true,
+        "busy": true,
+        "model": "MiniCPM-o-4.5-AWQ",
+        "input_sample_rate": 16000,
+        "output_sample_rate": 24000,
+        "mode": "vad_segmented_end_to_end",
+        "capabilities": {
+          "image_input": true,
+          "visual_grounding_policy": "general",
+          "max_images": 2,
+          "max_image_bytes": 262144,
+          "max_image_dimension": 1024,
+          "capture_clock": "client_session_ms"
+        },
+        "requests": 42,
+        "cancelled": 3,
+        "failed": 0
+      },
+      "id": "streaming",
+      "voice": "female",
+      "interrupted": false,
+      "text": "语音助手通过麦克风接收用户说话的声音信号。它会将声音转换成文字，再结合自身知识库进行思考。最后，语音助手会根据思考结果生成语音回复并播放出来。",
+      "audio_chunks": 14,
+      "samples": 332160,
+      "pcm_sha256": "c2eb2cb510636f4ac11d1183f6f8f13a83ca3e9695477935c75b034841a700b4",
+      "first_audio_s": 0.8023420009994879,
+      "wall_s": 3.94133103499189,
+      "request_sha256": "50702dc353237530bf02062231b5829c3c738055ce95cd0344847756d8147e59",
+      "status": "passed"
+    }
+  ],
+  "publication": {
+    "source_sha256": "69c54939d470c04f5f2ce2df19bcf431a61a45a316f7ee6acffc8a6fde21ea85",
+    "removed_fields": [],
+    "raw_audio_and_logs_included": false
+  }
+}

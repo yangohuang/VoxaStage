@@ -13,4 +13,5 @@ httpx==0.28.1
 # librosa 0.9 imports pkg_resources at runtime.
 setuptools==70.3.0
 # TorchAudio 2.11 load() uses TorchCodec even with backend='soundfile'.
-torchcodec==0.11.1
+# Reference WAV decoding runs on CPU; avoid unused NPP CUDA video dependencies.
+torchcodec==0.11.1+cpu
