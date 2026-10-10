@@ -1,0 +1,16 @@
+# Linux x86_64 / Python 3.10; fixed MiniCPM-o AWQ serving runtime.
+torch==2.11.0+cu130
+torchaudio==2.11.0+cu130
+transformers==4.51.0
+autoawq==0.2.9
+minicpmo-utils[tts]==1.0.6
+accelerate==1.13.0
+numpy==2.2.6
+fastapi==0.135.3
+uvicorn==0.44.0
+sentencepiece==0.2.1
+httpx==0.28.1
+# librosa 0.9 imports pkg_resources at runtime.
+setuptools==70.3.0
+# TorchAudio 2.11 load() uses TorchCodec even with backend='soundfile'.
+torchcodec==0.11.1

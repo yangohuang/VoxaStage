@@ -6,6 +6,51 @@ MiniCPM-o 直接接收 16k 单声道原始语音或文字，生成增量文字�
 这条回复路径不调用外部 ASR、Qwen LLM 或 IndexTTS。
 数字人继续复用 DINet、FlashHead 或 StreamingTalker 的适配器。
 
+## 独立环境重建（待完成真实模型验证）
+
+`deploy/requirements-standalone.in` 声明 Python 3.10 / Linux x86_64 / CUDA 13.0 的运行依赖，`deploy/requirements-standalone.lock` 固定完整分发版本与 SHA256。它包含 MiniCPM TTS extras、AWQ 的 Triton 路径和参考音色读取所需 TorchCodec；不继承用户目录或旧 Conda 包。需要兼容 CUDA 13.0 的驱动及可供 TorchCodec 加载的 FFmpeg 动态库。
+
+下列命令只安装新的虚拟环境，不获取模型、音色或修改已有服务。先准备 Python 3.10 与 uv，从项目根目录运行：
+
+```sh
+test ! -e runtime/minicpm-standalone || exit 1
+uv venv --python python3.10 runtime/minicpm-standalone
+uv pip sync --python runtime/minicpm-standalone/bin/python --require-hashes \
+  --extra-index-url https://download.pytorch.org/whl/cu130 \
+  --index-strategy unsafe-best-match omni-server/deploy/requirements-standalone.lock
+uv pip check --python runtime/minicpm-standalone/bin/python
+```
+
+安装后必须在该解释器中验证 TorchCodec/FFmpeg 能读取实际参考 WAV，再运行 worker 契约测试及真实模型请求；`pip check` 无法发现未写入包元数据的运行依赖。TorchAudio 2.11 的 `load()` 使用 TorchCodec，即使调用处写了 `backend="soundfile"`；librosa 0.9 仍导入 pkg_resources，所以锁中保留支持该模块的 setuptools。
+
+参考音色解码与不加载权重的契约检查：
+
+```sh
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH \
+  PYTHONNOUSERSITE=1 runtime/minicpm-standalone/bin/python -c \
+  'import sys,torchaudio; audio,sr=torchaudio.load(sys.argv[1]); assert audio.numel()>0; print(sr,audio.shape)' \
+  /path/to/authorized-reference.wav
+(cd omni-server && env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH \
+  PYTHONNOUSERSITE=1 ../runtime/minicpm-standalone/bin/python \
+  -m unittest discover -p 'test_*.py' -q)
+```
+
+`evaluation/multimodal.py` 使用 `asyncio.timeout`，必须在 **Python 3.11 以上的应用/评测环境**运行，不能直接用本节 Python 3.10 模型环境执行。客户端通过 HTTP 访问独立模型服务，二者无需共享解释器。
+
+AWQ 的可选扩展未加入新锁：既有环境该扩展导入失败，实际 GEMM 使用 Triton，新环境需核验同一路径。AutoAWQ 会提示它的上游测试版本与本环境不同；只有真实推理验证能支持当前组合可用。不要用未经验证的新环境替换已验收的默认服务。
+
+重新解析依赖需要再次验证：
+
+```sh
+uv pip compile omni-server/deploy/requirements-standalone.in \
+  --python python3.10 --python-platform x86_64-unknown-linux-gnu \
+  --extra-index-url https://download.pytorch.org/whl/cu130 \
+  --index-strategy unsafe-best-match --generate-hashes --no-header --no-annotate \
+  --output-file omni-server/deploy/requirements-standalone.lock
+```
+
+模型自定义代码、权重、参考音色、系统库和基础解释器仍由部署者准备，锁不覆盖这些资产，也不锁定源码包构建工具。worker 代码、参考素材及启动配置应保存在持久部署目录，避免依赖重启后可能清理的系统临时目录。
+
 ## 部署
 
 模型需单独 GPU 环境，不能直接安装进 Pipecat 的锁定环境。已检查的既有环境为
