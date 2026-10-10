@@ -1,0 +1,6 @@
+# Linux x86_64 / Python 3.10 / CUDA 12.4, matching the validated core runtime.
+torch==2.5.1+cu124
+torchvision==0.20.1+cu124
+-r requirements-serving.txt
+setuptools==75.9.1
+-r requirements-tests.txt

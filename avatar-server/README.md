@@ -51,22 +51,37 @@ cp -R "$AVATAR_OVERLAY/serving" ./serving
 
 上游环境和完整训练依赖见
 [固定版本 README](https://github.com/zju3dv/StreamingTalker/blob/25b613ac273624947e5fa51c4c41c4933d8147be/README.md)
-及其 `requirements.txt`。本地演示所用组合是 Python 3.10、PyTorch 2.5.1/CUDA12.4，
-与上游文档列出的 PyTorch2.4 不同。下面提供现有运行环境中的直接依赖版本，
-用于推理服务；不要求安装上游完整训练/可视化栈：
+及其 `requirements.txt`。本地演示使用 Python 3.10、PyTorch 2.5.1/CUDA12.4，与上游列出的 PyTorch2.4 不同；不需要完整训练或 Blender 可视化依赖。
+
+### 独立环境
+
+`deploy/requirements-standalone.in` 固定 torch/torchvision 与已验证 serving 直接依赖，`deploy/requirements-standalone.lock` 为 Linux x86_64 / Python 3.10 的完整带 SHA256 依赖锁。CUDA wheels 使用官方 cu124 索引；需要兼容 CUDA 12.4 的 NVIDIA 驱动。
+
+完成上面的源码检出后，仍在上游根目录执行；先安装 Python 3.10 和 uv，`AVATAR_OVERLAY` 沿用上面的绝对目录：
 
 ```sh
-python3.10 -m venv .venv
-. .venv/bin/activate
-python -m pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu124
-python -m pip install -r "$AVATAR_OVERLAY/deploy/requirements-serving.txt"
-python -m pip check
+test ! -e .venv || exit 1
+uv venv --python python3.10 .venv
+uv pip sync --python .venv/bin/python --require-hashes \
+  --extra-index-url https://download.pytorch.org/whl/cu124 \
+  --index-strategy unsafe-best-match \
+  "$AVATAR_OVERLAY/deploy/requirements-standalone.lock"
+uv pip check --python .venv/bin/python
 ```
 
-这是安装说明和直接依赖清单，**不是全新机器验证过的安装器，也不是完整传递依赖锁**。
-CUDA驱动、系统动态库及包解析结果仍须在目标机器核验。现有
-`requirements-incremental.txt` 只增加 `websockets==15.0.1`，不能单独安装整个服务。
-无头补丁避免推理导入 Blender；可选离线可视化仍需上游自己的可视化依赖。
+目标须是新虚拟环境，不启用 `--system-site-packages`，不覆盖日常模型环境。锁包含模型运行与 CPU 协议测试依赖。原 `requirements-serving.txt` 是直接依赖输入，`requirements-incremental.txt` 只声明 WebSocket 增量依赖，二者均不能代替完整锁。
+
+重新解析会产生新的间接依赖组合，必须重新做真实验证：
+
+```sh
+uv pip compile "$AVATAR_OVERLAY/deploy/requirements-standalone.in" \
+  --python python3.10 --python-platform x86_64-unknown-linux-gnu \
+  --extra-index-url https://download.pytorch.org/whl/cu124 \
+  --index-strategy unsafe-best-match --generate-hashes --no-header --no-annotate \
+  --output-file "$AVATAR_OVERLAY/deploy/requirements-standalone.lock"
+```
+
+新环境验证范围见[独立部署记录](../docs/STREAMINGTALKER-STANDALONE-VALIDATION.md)。系统库、基础解释器、驱动、模型权重与人物模板仍须自行准备，依赖锁不会自动获取这些资产，也不锁定源码包构建工具。无头补丁避免推理导入 Blender；可选离线可视化仍需上游自己的依赖。
 
 ## 自行准备获准使用的权重和模板
 
@@ -90,10 +105,10 @@ CUDA驱动、系统动态库及包解析结果仍须在目标机器核验。现�
 
 ## 运行和连接
 
-从准备好的上游根目录、已激活的模型环境运行：
+从准备好的上游根目录，使用刚安装的独立环境运行：
 
 ```sh
-HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python -m serving.incremental_server --host 127.0.0.1 --port 12544
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH -u VIRTUAL_ENV -u CONDA_PREFIX HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONNOUSERSITE=1 .venv/bin/python -m serving.incremental_server --host 127.0.0.1 --port 12544
 ```
 
 离线环境变量让缺少本地 HuBERT 文件时直接失败，不尝试补下载。服务在启动时加载
@@ -110,20 +125,20 @@ HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python -m serving.incremental_server --h
 
 ## 本次验证与未覆盖范围
 
-从 overlay 目录可以直接运行 CPU 测试，不需要权重、素材或上游源码：
+完成上文独立环境安装后，从准备好的上游根目录保存解释器位置，再到 overlay 目录运行 CPU 测试；这些测试不加载权重或人物素材：
 
 ```sh
-python -m pip install -r deploy/requirements-tests.txt
-PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=4 python -m pytest -p no:cacheprovider tests -q
+STREAMINGTALKER_TEST_PYTHON="$(pwd)/.venv/bin/python"
+cd "$AVATAR_OVERLAY"
+env -u PYTHONPATH -u PYTHONHOME PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=4 "$STREAMINGTALKER_TEST_PYTHON" -m pytest -p no:cacheprovider tests -q
 ```
 
-该命令仍需已经安装 PyTorch、NumPy、FastAPI、SoundFile、SciPy 等运行依赖。
-本次在现有 Python3.10环境运行：**46 passed，1个第三方弃用警告，2.56秒**。
+完整独立锁已包含测试和运行依赖，无需在新环境中另用 pip 安装。以下为早期 overlay 验证记录：在现有 Python3.10环境运行，**46 passed，1个第三方弃用警告，2.56秒**。
 覆盖时钟、分包不变性、状态/随机数保留、有界历史、协议校验、背压、单worker准入、
 取消和断连清理。FastAPI TestClient 在受限沙箱的线程唤醒路径卡住；同一测试在
 获准解除沙箱限制后通过，没有加载真实模型或开启常驻服务。
 
 另已验证：固定上游源码文件指纹；补丁 `git apply --check` 和实际应用；
 overlay全部模块及补丁后的上游 `DIFF_AR` 在CPU环境可导入，未实例化模型。
-没有在全新机器重建环境，没有在这份导出目录运行真实GPU推理，没有测试未指定的
+该早期检查没有在全新机器重建环境，没有在当时导出目录运行真实GPU推理，没有测试未指定的
 PyTorch/CUDA/Transformers版本，也没有验证素材授权或素材在第三方机器上的可获得性。
