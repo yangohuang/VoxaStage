@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "date": "2026-10-10",
+  "application_commit": "bbcffedd87827f532543c236d16eaed5fc7c4eb6",
+  "execution": "real_models_headless_chrome",
+  "physical_devices": false,
+  "human_quality_accepted": false,
+  "full_goal_complete": false,
+  "selection": "Selected observed fields; session/conversation identifiers, local paths and full event traces omitted. Original artifact hash binds selection.",
+  "source_sha256": "69b9bdf4efa2a8ca0a58431c4252f4b48211791e2aff934789393873236cfe5d",
+  "harness_sha256": "f83448843a2018d650bae60b593aba40ff14862e8c8f9c7689d31f95247b8f76",
+  "browser_exceptions": 0,
+  "profile": "dinet",
+  "backend": "minicpm",
+  "status": "passed",
+  "input_source": "two existing synthetic still images uploaded through the product file control",
+  "input_sha256": {
+    "scene-a.png": "53d284f5ebc6104500571ff7d7bae8518be793ded1eed472f46056bce10699c4",
+    "scene-b.png": "2d07f7e8d68f37243fd769a75ae3c5fb196537c5cd78a0b16cd0f5fc512d9969"
+  },
+  "turns": [
+    {
+      "image": "scene-a.png",
+      "question": "请说出图中左边物体的颜色和形状，只用一句话。",
+      "messages": [
+        "请说出图中左边物体的颜色和形状，只用一句话。",
+        "[第 1 轮已附画面]",
+        "左边的物体是红色的圆形。"
+      ],
+      "metrics": {
+        "generation": 1,
+        "renderedFrames": 84,
+        "droppedStale": 0,
+        "playing": false,
+        "pendingFrames": 0,
+        "queuedSeconds": 0,
+        "scheduledSources": 0,
+        "scheduledSamples": 80640,
+        "audioTime": 3.504,
+        "connected": true,
+        "microphone": false,
+        "idle": true
+      }
+    },
+    {
+      "image": "scene-b.png",
+      "question": "和上一张图相比，左边物体的颜色发生了什么变化？请简短回答。",
+      "messages": [
+        "请说出图中左边物体的颜色和形状，只用一句话。",
+        "[第 1 轮已附画面]",
+        "左边的物体是红色的圆形。",
+        "和上一张图相比，左边物体的颜色发生了什么变化？请简短回答。",
+        "[第 2 轮已附画面]",
+        "左边物体的颜色由红色变成了绿色。"
+      ],
+      "metrics": {
+        "generation": 2,
+        "renderedFrames": 172,
+        "droppedStale": 0,
+        "playing": false,
+        "pendingFrames": 0,
+        "queuedSeconds": 0,
+        "scheduledSources": 0,
+        "scheduledSamples": 165120,
+        "audioTime": 8.778666666666666,
+        "connected": true,
+        "microphone": false,
+        "idle": true
+      }
+    }
+  ],
+  "image_bindings": [
+    {
+      "type": "visual_bound",
+      "atMs": 2085.4000000059605,
+      "round": 1,
+      "images": [
+        {
+          "id": "image-1",
+          "source": "upload",
+          "captured_at_ms": 190,
+          "received_at_ms": 258.6089629912749,
+          "sha256": "be698474e66062f056f17cc5923858547ce7c637357f05818f507da6b42db6b1"
+        }
+      ],
+      "turnId": 1,
+      "sequence": 1
+    },
+    {
+      "type": "visual_bound",
+      "atMs": 7099.5999999940395,
+      "round": 2,
+      "images": [
+        {
+          "id": "image-2",
+          "source": "upload",
+          "captured_at_ms": 5234,
+          "received_at_ms": 5260.228233993985,
+          "sha256": "bd487fe1370a6b0c4c1553eac04ce48e5bd4a7d408ac0ff5a3ed7bda5c4a6ddb"
+        }
+      ],
+      "turnId": 2,
+      "sequence": 2
+    }
+  ],
+  "after_disconnect": {
+    "generation": 2,
+    "renderedFrames": 172,
+    "droppedStale": 0,
+    "playing": false,
+    "pendingFrames": 0,
+    "queuedSeconds": 0,
+    "scheduledSources": 0,
+    "scheduledSamples": 165120,
+    "audioTime": 8.778666666666666,
+    "connected": false,
+    "microphone": false,
+    "idle": true
+  }
+}
