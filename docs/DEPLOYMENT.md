@@ -98,7 +98,7 @@ python3 demo.py check --python .venv/bin/python --env-file .env --json
 
 | 服务 | 本仓库提供什么 | 部署者还需准备什么 |
 | --- | --- | --- |
-| 本地 ASR | `asr_server.py`，支持 Qwen / SenseVoice 的话轮转写接口 | 相应推理环境与权重；例如在该环境运行 `python asr_server.py --engine qwen --model /path/to/model --port 18315`，应用地址与端口一致 |
+| 本地 ASR | `asr_server.py`，支持 Qwen / SenseVoice 的话轮转写接口 | [Qwen 独立环境](../asr-server/README.md)与自行准备的权重；例如在该环境运行 `python asr_server.py --engine qwen --model /path/to/model --port 18315`，应用地址与端口一致 |
 | 本地 LLM | `llm_server.py`，支持增量文字与工具生成 | 模型推理环境与权重；例如 `python llm_server.py --model /path/to/model --port 18311 --quantization 4bit`，量化需对应 GPU 依赖 |
 | IndexTTS | [音色注册兼容层](../tts-compat/README.md)及应用协议适配 | 既有 TTS 推理服务、有权使用的男女参考音色；兼容层本身不是完整推理服务 |
 | MiniCPM-o | [worker、部署命令与已有环境说明](../omni-server/README.md) | 独立模型环境、权重、参考声音；看图需要显式开启视觉，尚未验收空白机器安装 |
