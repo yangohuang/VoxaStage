@@ -141,6 +141,19 @@ def register_avatar_routes(app, make_components, active_sessions, active_workers
             raise HTTPException(404, 'Idle video has not been prepared')
         return FileResponse(path, media_type='video/mp4', headers={'Cache-Control':'public, max-age=3600'})
 
+    @app.get('/avatar/mesh/{asset_name}')
+    async def mesh_asset(asset_name: str):
+        allowed = {url for profile in profiles.profiles.values()
+                   for url in (profile.mesh_url, profile.retarget_url) if url}
+        if f'/avatar/mesh/{asset_name}' not in allowed:
+            raise HTTPException(404)
+        path = ROOT / 'runtime' / 'avatar-meshes' / asset_name
+        if not path.is_file():
+            raise HTTPException(404, 'Mesh asset has not been prepared')
+        return FileResponse(path, media_type=('model/gltf-binary' if path.suffix == '.glb'
+                                             else 'application/json'),
+                            headers={'Cache-Control': 'no-cache'})
+
     @app.websocket('/avatar/ws')
     async def websocket_endpoint(websocket: WebSocket):
         # Browser requests must be same-origin. A missing Origin is allowed for

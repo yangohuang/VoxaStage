@@ -34,7 +34,8 @@ class AvatarConversationRoutesTests(unittest.TestCase):
             {'id': 'kanghui', 'label': 'Kanghui', 'provider': 'dinet', 'voice': 'female',
              'idle_url': '/avatar/idle/kanghui-custom.mp4'},
             {'id': 'other', 'label': 'Other', 'provider': 'streamingtalker', 'voice': 'male',
-             'idle_url': '/avatar/idle/streamingtalker.mp4'}]}))
+             'idle_url': '/avatar/idle/streamingtalker.mp4',
+             'mesh_url':'/avatar/mesh/pet.glb','retarget_url':'/avatar/mesh/pet.json'}]}))
         self.profiles = ProfileRegistry(self.registry, config)
         self.dialogue = DialogueRegistry(self.root / 'dialogue.json', env={'PIPECAT_MINICPM_URL': 'http://worker'})
         self.store = ConversationStore(self.root / 'runtime')
@@ -104,6 +105,22 @@ class AvatarConversationRoutesTests(unittest.TestCase):
             'backend': 'cascade', 'profile_id': 'kanghui', **overrides})
         self.assertEqual(result.status_code, 200, result.text)
         return result.json()
+
+    def test_mesh_route_serves_only_configured_assets(self):
+        root = self.root / 'runtime/avatar-meshes'
+        root.mkdir()
+        (root / 'pet.glb').write_bytes(b'glTF')
+        (root / 'pet.json').write_text('{}')
+        (root / 'private.glb').write_bytes(b'private')
+        response = self.client.get('/avatar/mesh/pet.glb')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.content, b'glTF')
+        self.assertEqual(response.headers['content-type'], 'model/gltf-binary')
+        self.assertEqual(self.client.get('/avatar/mesh/pet.json').json(), {})
+        for name in ('private.glb', 'pet.txt', 'missing.glb', '%2e%2e%2fprivate.glb'):
+            self.assertEqual(self.client.get('/avatar/mesh/' + name).status_code, 404)
+        (root / 'pet.glb').unlink()
+        self.assertEqual(self.client.get('/avatar/mesh/pet.glb').status_code, 404)
 
     def test_http_crud_and_profile_metadata(self):
         record = self.create()

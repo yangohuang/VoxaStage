@@ -21,6 +21,7 @@ MindTalker 是作者此前基于 MiniCPM-o 的项目。本次端到端接入参�
 
 ## 配套依赖与素材
 
+- **3D 角色渲染**：随源码提供 [Three.js 0.180.0](https://github.com/mrdoob/three.js/tree/r180) 的模块构建、GLTFLoader 与 BufferGeometryUtils，保留 [MIT License](avatar-web/vendor/three/LICENSE) 和 [版本校验记录](avatar-web/vendor/three/NOTICE)。企鹅 mesh 与 rig 来自独立角色制作任务，不随源码分发；VoxaStage 新增的是嘴型映射和播放集成，详见[说明](docs/MESH-RETARGETING.md)。
 - **VAD**：使用 Pipecat 的 Silero VAD 集成，模型来自 [Silero VAD](https://github.com/snakers4/silero-vad)。
 - **音频与视频处理**：使用 [soxr](https://github.com/dofuuz/python-soxr)、[PyAV](https://github.com/PyAV-Org/PyAV) 等现有库。浏览器播放与绘制依托 Web Audio、Canvas2D 和 WebGL。直接与传递依赖见各环境锁文件。
 - **FlashHead 模型依赖**：Lite 管线还需要上游指定的 LTX VAE 和 wav2vec2 资源；下载器记录解析后的版本及文件校验值。它们不是 VoxaStage 自研模型，来源与部署入口见 [FlashHead 说明](video-server/README.md)及[下载器](video-server/fetch_models.py)。

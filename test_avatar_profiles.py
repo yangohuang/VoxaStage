@@ -184,6 +184,41 @@ class ProfileTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.registry(config)
 
+class MeshProfileTests(unittest.TestCase):
+    setUp = ProfileTests.setUp
+    registry = ProfileTests.registry
+    def config(self):
+        return {'version': 1, 'default_profile': 'human', 'profiles': [
+            {'id':'human', 'label':'Human', 'provider':'streamingtalker', 'voice':'male',
+             'idle_url':'/avatar/idle/human.mp4'},
+            {'id':'penguin', 'label':'Penguin', 'provider':'streamingtalker', 'voice':'male',
+             'idle_url':'/avatar/idle/penguin.mp4', 'mesh_url':'/avatar/mesh/penguin.glb',
+             'retarget_url':'/avatar/mesh/penguin.json'}]}
+
+    def test_distinct_mesh_can_share_predictor(self):
+        registry = self.registry(self.config())
+        self.assertEqual(registry.resolve('human').make_backend(self.providers).url,
+                         registry.resolve('penguin').make_backend(self.providers).url)
+        self.assertEqual(registry.public()['profiles'][1]['mesh_url'], '/avatar/mesh/penguin.glb')
+        self.assertNotIn('ws://', json.dumps(registry.public()))
+
+    def test_mesh_fields_are_paired_local_and_only_for_streamingtalker(self):
+        for changes in ({'mesh_url':None}, {'retarget_url':''}, {'mesh_url':'https://example.com/p.glb'},
+                        {'mesh_url':'/avatar/mesh/../p.glb'}, {'retarget_url':'/avatar/mesh/p.json?q=1'},
+                        {'provider':'dinet'}, {'mesh_url':'/avatar/mesh/p.json'}):
+            config=self.config();config['profiles'][1].update(changes)
+            with self.subTest(changes=changes), self.assertRaises(ValueError): self.registry(config)
+        for key in ('mesh_url','retarget_url'):
+            config=self.config();del config['profiles'][1][key]
+            with self.assertRaises(ValueError): self.registry(config)
+
+    def test_same_mesh_or_idle_cannot_masquerade_as_new_character(self):
+        for changes in ({'retarget_url':'/avatar/mesh/other.json'},
+                        {'mesh_url':'/avatar/mesh/other.glb','idle_url':'/avatar/idle/penguin.mp4'}):
+            config=self.config(); entry=dict(config['profiles'][1],id='alias',idle_url='/avatar/idle/alias.mp4')
+            entry.update(changes);config['profiles'].append(entry)
+            with self.assertRaises(ValueError): self.registry(config)
+
 
 if __name__ == '__main__':
     unittest.main()
