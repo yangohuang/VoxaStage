@@ -2,6 +2,7 @@ import { AvatarPlayer } from './audio.mjs';
 import { HeadRenderer, PortraitRenderer } from './renderer.mjs';
 import { Microphone } from './microphone.mjs';
 import { IdlePlayer } from './idle.mjs';
+import { MeshCharacter } from './mesh-character.mjs';
 import { VisualInput } from './visual.mjs';
 
 const $ = id => document.getElementById(id);
@@ -15,12 +16,26 @@ const idle=new IdlePlayer($('idle-video'),visible=>{
   if(visible)$('placeholder').hidden=true;
   else if(idle.wanted)$('placeholder').hidden=false;
 });
+const mesh = new MeshCharacter({
+  load: async profile => { const {PetRenderer} = await import('./pet-renderer.mjs'); return PetRenderer.create($('pet'),profile); },
+  changed: () => {
+    refresh();
+    if (mesh.error) { notice(mesh.error); $('placeholder').hidden = false; $('placeholder-text').textContent = mesh.error; }
+    else if (mesh.ready) { notice(); showIdle(); }
+  },
+});
+function showIdle() {
+  if (mesh.active) {
+    idle.hide(); mesh.clear(); $('placeholder').hidden = mesh.ready;
+    if (mesh.pending) $('placeholder-text').textContent = '正在加载角色…';
+  } else void idle.show();
+}
 function notice(message = '') { $('notice').textContent = message; $('notice').hidden = !message; }
 function activity(title, detail) { $('activity').textContent = title; $('activity-detail').textContent = detail; }
 function send(data) { if (socket?.readyState === WebSocket.OPEN) socket.send(JSON.stringify(data)); }
 function refresh() {
   const connected = socket?.readyState === WebSocket.OPEN;
-  $('connect').disabled = connecting || !!socket || conversationBusy;
+  $('connect').disabled = connecting || !!socket || conversationBusy || (mesh.active && !mesh.ready);
   $('disconnect').disabled = !socket;
   $('interrupt').disabled = !ready;
   $('microphone').disabled = !ready || micPending || (!!visual?.busy && !mic.active);
@@ -55,13 +70,14 @@ function append(role, text, status = '') {
 function clearStage(text = '等待下一句话') {
   renderer?.clear(); portraitRenderer?.clear(); $('placeholder').hidden = false; $('placeholder-text').textContent = text;
   document.querySelector('.audio-symbol').classList.remove('speaking');
-  void idle.show();
+  showIdle();
 }
 const player = new AvatarPlayer({
   onFrame(vertices, meta) {
     if (!meta) return;
     idle.hide();
     if (meta.kind === '2d') { portraitRenderer?.render(vertices); }
+    else if (mesh.active) { mesh.render(vertices, meta); }
     else { renderer?.setMeta(meta); renderer?.render(vertices); }
     $('placeholder').hidden = true;
   },
@@ -69,7 +85,7 @@ const player = new AvatarPlayer({
     send({ type: 'playback', generation: player.timeline.generation, state });
     document.querySelector('.audio-symbol').classList.toggle('speaking', state === 'started');
     if (state === 'started') { idle.hide(); activity('正在回应', '声音与表情同步播放；你可以随时打断。'); }
-    else { void idle.show(); activity(mic.active ? '正在聆听' : '等待你的下一句话', mic.active ? '麦克风已开启，直接说话即可。' : '输入文字，或开启麦克风继续。'); }
+    else { showIdle(); activity(mic.active ? '正在聆听' : '等待你的下一句话', mic.active ? '麦克风已开启，直接说话即可。' : '输入文字，或开启麦克风继续。'); }
   },
   onProgress({clip_id, played_samples}) {
     send({type:'playback', state:'progress', generation:player.timeline.generation, clip_id, played_samples});
@@ -97,7 +113,7 @@ function fail(message) {
 }
 
 async function connect() {
-  if (socket || connecting || conversationBusy) return;
+  if (socket || connecting || conversationBusy || (mesh.active && !mesh.ready)) return;
   connecting = true; notice(); refresh();
   try {
     await player.unlock();
@@ -128,7 +144,7 @@ async function connect() {
             providerKind = message.kind; setStageKind(providerKind);
             clearStage(); refresh(); activity('已连接，开始对话吧', '输入文字，或点击开启麦克风。'); break;
           case 'reset':
-            if (player.reset(message.generation)) { cancelTasks(); void idle.show(); assistantBubble = null; document.querySelector('.audio-symbol').classList.remove('speaking'); activity('正在准备回应', '正在组织回复…'); }
+            if (player.reset(message.generation)) { cancelTasks(); showIdle(); assistantBubble = null; document.querySelector('.audio-symbol').classList.remove('speaking'); activity('正在准备回应', '正在组织回复…'); }
             break;
           case 'avatar_meta': case 'media': case 'clip_end': player.handle(message); break;
           case 'transcript':
@@ -246,7 +262,8 @@ function selectProfile(id) {
   const profile = profileOptions.get(id);
   if (!profile) return;
   $('profile').value = id; $('provider').value = profile.provider;
-  providerKind = profile.kind; setStageKind(profile.kind); idle.select(profile.idle_url); clearStage();
+  void mesh.select(profile);
+  providerKind = profile.kind; setStageKind(profile.kind); idle.select(profile.mesh_url ? '' : profile.idle_url); clearStage(); refresh();
 }
 function forgetConversation() {
   conversationId = null; $('conversation-select').value = '';
@@ -344,8 +361,8 @@ $('text-input').addEventListener('keydown', event => {
 window.addEventListener('pagehide', disconnect);
 function setStageKind(kind) {
   const portrait = kind === '2d';
-  $('head').hidden = portrait; $('portrait').hidden = !portrait;
-  $('stage-label').textContent = portrait ? '2D 肖像 · 实时语音驱动' : '3D 头部示例 · 非真人形象';
+  $('head').hidden = portrait || mesh.active; $('portrait').hidden = !portrait; $('pet').hidden = !mesh.active;
+  $('stage-label').textContent = mesh.active ? '3D 宠物 · 实时语音驱动' : portrait ? '2D 肖像 · 实时语音驱动' : '3D 头部示例 · 非真人形象';
 }
 $('provider').addEventListener('change',()=>{
   if (socket || connecting || conversationBusy) return;
@@ -396,7 +413,7 @@ async function loadProviders() {
 }
 void loadProviders();
 window.avatarDemo = Object.freeze({ connect, disconnect, sendText, interrupt,
-  get metrics() { return { ...player.metrics, connected: ready, microphone: mic.active, sessionId, idle:!$('idle-video').hidden&&!$('idle-video').paused }; },
+  get metrics() { return { ...player.metrics, connected: ready, microphone: mic.active, sessionId, idle:mesh.active ? mesh.ready && !player.timeline.playing : !$('idle-video').hidden&&!$('idle-video').paused, meshReady:mesh.ready, mouthOpening:mesh.renderer?.opening ?? null }; },
   get generation() { return player.timeline.generation; },
   get renderedFrames() { return player.renderedFrames; },
   get droppedStale() { return player.timeline.droppedStale; },

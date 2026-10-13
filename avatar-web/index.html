@@ -19,6 +19,7 @@
     .task-card[data-state="failed"]{border-color:#bc8069}.task-card[data-state="cancelled"]{color:#8c9388}
     .conversation .messages{min-height:120px}
   </style>
+  <script type="importmap">{"imports":{"three":"/avatar/static/vendor/three/build/three.module.js"}}</script>
   <script type="module" src="/avatar/static/app.mjs"></script>
 </head>
 <body>
@@ -33,6 +34,7 @@
         <div class="viewport">
           <div class="halo" aria-hidden="true"></div>
           <canvas id="head" aria-label="由语音驱动的实时三维头部网格"></canvas>
+          <canvas id="pet" aria-label="由实时语音驱动的三维宠物" hidden></canvas>
           <canvas id="portrait" aria-label="由语音驱动的实时二维肖像" hidden></canvas>
           <video id="idle-video" muted loop playsinline preload="auto" aria-label="数字人待机动画" hidden></video>
           <div id="placeholder" class="placeholder"><span class="idle-mark" aria-hidden="true">◌</span><p id="placeholder-text">连接后，第一句话会点亮这里</p></div>

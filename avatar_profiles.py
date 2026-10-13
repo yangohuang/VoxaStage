@@ -1,7 +1,7 @@
 """Deployment-owned characters, independently selectable from their driver.
 
 Only a server configuration file may supply a backend URL. Browser selections
-are profile IDs; public metadata contains only a same-origin idle asset route.
+are profile IDs; public asset metadata contains only same-origin routes.
 """
 from dataclasses import dataclass, field, replace
 import json
@@ -16,7 +16,9 @@ _ID = re.compile(r'[a-z0-9][a-z0-9_-]{0,63}\Z')
 _IDLE = re.compile(r'/avatar/idle/[a-z0-9][a-z0-9_-]{0,63}\.mp4\Z')
 _DRIVERS = frozenset(('dinet', 'flashhead', 'streamingtalker'))
 _REQUIRED = frozenset(('id', 'label', 'provider', 'voice', 'idle_url'))
-_OPTIONAL = frozenset(('description', 'url'))
+_OPTIONAL = frozenset(('description', 'url', 'mesh_url', 'retarget_url'))
+_MESH = re.compile(r'/avatar/mesh/[a-z0-9][a-z0-9_-]{0,63}\.glb\Z')
+_RETARGET = re.compile(r'/avatar/mesh/[a-z0-9][a-z0-9_-]{0,63}\.json\Z')
 
 
 def _text(value, maximum):
@@ -48,6 +50,8 @@ class Profile:
     idle_url: str
     description: str = ''
     url: str = field(default='', repr=False)
+    mesh_url: str = ''
+    retarget_url: str = ''
 
     def make_backend(self, provider_registry):
         """Build the configured driver; a profile's voice is applied by dialogue."""
@@ -62,6 +66,7 @@ class Profile:
         return dict(id=self.id, label=self.label, provider=self.provider,
                     kind=provider.kind if provider else '', voice=self.voice,
                     idle_url=self.idle_url, configured=configured,
+                    mesh_url=self.mesh_url, retarget_url=self.retarget_url,
                     description=self.description if configured else '尚未配置模型服务')
 
 
@@ -99,12 +104,13 @@ class ProfileRegistry:
                 if provider is None:
                     raise ValueError('Avatar profile references an unknown driver')
                 endpoint = profile.url or provider.url
-                # Listing a new character must not simply alias the same model
-                # or idle clip and imply that another resource was deployed.
-                for other_endpoint, other_idle in resources.get(profile.provider, []):
-                    if endpoint == other_endpoint or profile.idle_url == other_idle:
-                        raise ValueError('Same-driver profiles require distinct backend and idle resources')
-                resources.setdefault(profile.provider, []).append((endpoint, profile.idle_url))
+                # A distinct mesh may share a facial predictor; label-only aliases
+                # still cannot imply that a new character resource exists.
+                for other_endpoint, other_idle, other_mesh in resources.get(profile.provider, []):
+                    same_render = profile.mesh_url == other_mesh
+                    if (endpoint == other_endpoint and same_render) or profile.idle_url == other_idle:
+                        raise ValueError('Same-driver profiles require a distinct backend or mesh and distinct idle resources')
+                resources.setdefault(profile.provider, []).append((endpoint, profile.idle_url, profile.mesh_url))
                 profiles[profile.id] = profile
             self.default = config['default_profile']
         self.default = env.get('PIPECAT_AVATAR_PROFILE') or self.default
@@ -125,6 +131,13 @@ class ProfileRegistry:
                 or not isinstance(entry.get('description', ''), str)
                 or len(entry.get('description', '')) > 1024):
             raise ValueError('Invalid avatar profile values')
+        if 'mesh_url' in entry or 'retarget_url' in entry:
+            if (entry['provider'] != 'streamingtalker'
+                    or not isinstance(entry.get('mesh_url'), str)
+                    or not _MESH.fullmatch(entry['mesh_url'])
+                    or not isinstance(entry.get('retarget_url'), str)
+                    or not _RETARGET.fullmatch(entry['retarget_url'])):
+                raise ValueError('Invalid avatar mesh resources')
         if 'url' in entry:
             _backend_url(entry['url'])
         return Profile(**entry)
