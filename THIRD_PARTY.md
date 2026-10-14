@@ -27,7 +27,7 @@ MindTalker 是作者此前基于 MiniCPM-o 的项目。本次端到端接入参�
 - **FlashHead 模型依赖**：Lite 管线还需要上游指定的 LTX VAE 和 wav2vec2 资源；下载器记录解析后的版本及文件校验值。它们不是 VoxaStage 自研模型，来源与部署入口见 [FlashHead 说明](video-server/README.md)及[下载器](video-server/fetch_models.py)。
 - **StreamingTalker 模型依赖**：需要 HuBERT、VQ-VAE、FLAME / VOCASET 模板等。文件来源与准备方式见 [StreamingTalker 部署说明](avatar-server/README.md)，权重与数据不随本仓库分发。
 - **演示音色**：当前男声参考使用 [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) 的固定音色离线生成，女声来自既有部署的参考资源。Qwen3-TTS 不是当前运行链路的必需服务；音频不随本仓库分发，部署者需自行准备音色。
-- **展示截图**：[docs/assets](docs/assets) 中的界面与人物预览来自本地联调、模型生成的 idle 画面及既有角色素材；`voxastage-overview.svg` 为本项目绘制的架构示意图，仅用于说明集成效果。它们不是基础人物素材或训练集；底层肖像的来源与许可未在本仓库完整记录，不能据此取得人物、肖像或音色的再使用权。
+- **展示截图**：[docs/assets](docs/assets) 中的界面与人物预览来自本地联调、模型生成的 idle 画面及既有角色素材；`voxastage-overview.svg` 与 `voxastage-architecture.svg/png` 为本项目绘制的架构示意图，仅用于说明集成效果。它们不是基础人物素材或训练集；底层肖像的来源与许可未在本仓库完整记录，不能据此取得人物、肖像或音色的再使用权。
 
 ## 本项目实现了什么
 

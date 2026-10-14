@@ -62,27 +62,7 @@ MiniCPM-o 可结合上传图片或单次摄像头快照回答；当前不包含�
 
 ## 系统架构
 
-```mermaid
-flowchart TB
-    Input["浏览器输入 · 麦克风 / 文字 / 图片快照"] --> Session["VoxaStage 会话层 · Pipecat<br/>VAD / 话轮 / 上下文 / 取消"]
-    Session --> ASR["级联语音 · Qwen3-ASR"]
-    ASR --> LLM["Qwen3 · 流式文字"]
-    Session -->|文字| LLM
-    LLM <-->|级联工具调用| Tools["文档检索 / 计算 / 服务检查"]
-    LLM --> TTS["IndexTTS · 语音合成"]
-    Session --> Omni["MiniCPM-o · 端到端语音<br/>可选图片输入"]
-    TTS --> Media["媒体适配层<br/>音频重采样 / 分段 / 背压 / 轮次隔离"]
-    Omni --> Media
-    Media --> D["DINet · 2D 视频帧"]
-    Media --> F["FlashHead Lite · 2D 视频帧"]
-    Media --> S["StreamingTalker · 3D 顶点"]
-    D --> Player["浏览器 · 音频播放时钟<br/>Canvas2D / WebGL / GLB 嘴型映射"]
-    F --> Player
-    S --> Player
-    Media -->|配对音频| Player
-    Player -->|已播放语句确认| Session
-    Idle["角色待机<br/>视频循环 / GLB 闭嘴姿态"] --> Player
-```
+![VoxaStage 系统架构：双语音后端、会话编排、媒体适配与数字人播放](docs/assets/voxastage-architecture.png)
 
 **Pipecat 负责管线编排，级联与端到端描述模型链路。** 两条链路均按 VAD 切分用户话轮；输出采用流式生成或分段播放，当前不宣称原生全双工。
 
