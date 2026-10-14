@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+  <title id="title">VoxaStage — Voice, intelligence, presence</title>
+  <desc id="desc">Local-first voice agents with cascaded and end-to-end speech backends, interruptible orchestration, and 2D or 3D avatar output. Conceptual architecture, not a product screenshot.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102b32"/><stop offset="1" stop-color="#08151e"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#6ce1c6"/><stop offset="1" stop-color="#87b9fa"/></linearGradient>
+  </defs>
+  <rect width="1200" height="390" rx="24" fill="url(#bg)"/>
+  <g fill="none" stroke="#36535e" opacity=".3"><circle cx="1080" cy="55" r="150"/><circle cx="1080" cy="55" r="210"/><path d="M0 300H1200M0 330H1200M0 360H1200"/></g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="58" y="54" fill="#80d8c6" font-size="12" letter-spacing="3">LOCAL-FIRST / REALTIME VOICE + AVATARS</text>
+    <text x="55" y="125" fill="#f4f7f7" font-size="62" font-weight="700" letter-spacing="-2">VoxaStage</text>
+    <text x="58" y="163" fill="#b2c7cf" font-size="20">Voice. Intelligence. Presence.</text>
+    <rect x="958" y="103" width="184" height="32" rx="16" fill="#193a40" stroke="#2d6263"/>
+    <circle cx="978" cy="119" r="4" fill="#6ce1c6"/>
+    <text x="991" y="124" fill="#afe7d9" font-size="12" letter-spacing="1">BUILT ON PIPECAT</text>
+    <path d="M378 264H426M774 264H822" stroke="url(#line)" stroke-width="2"/>
+    <path d="m417 259 9 5-9 5m396-10 9 5-9 5" fill="none" stroke="#87b9fa" stroke-width="2"/>
+    <g fill="#132e39" stroke="#30505d"><rect x="58" y="211" width="320" height="107" rx="13"/><rect x="426" y="211" width="348" height="107" rx="13"/><rect x="822" y="211" width="320" height="107" rx="13"/></g>
+    <g font-size="11" fill="#6ce1c6" letter-spacing="2"><text x="80" y="238">01 / UNDERSTAND</text><text x="448" y="238">02 / ORCHESTRATE</text><text x="844" y="238">03 / EMBODY</text></g>
+    <g font-size="18" fill="#f4f7f7" font-weight="600"><text x="80" y="269">Cascaded + End-to-end</text><text x="448" y="269">Interruptible Voice Agent</text><text x="844" y="269">2D + 3D Avatars</text></g>
+    <g font-size="12" fill="#a4bbc6"><text x="80" y="294">Speech / Text / Optional images</text><text x="448" y="294">Tools / Playback context / Sessions</text><text x="844" y="294">DINet / FlashHead / StreamingTalker</text></g>
+    <text x="58" y="356" fill="#87a7b5" font-size="11" letter-spacing="2">MODEL ADAPTERS</text><text x="286" y="356" fill="#87a7b5" font-size="11" letter-spacing="2">SHARED AUDIO CLOCK</text><text x="586" y="356" fill="#87a7b5" font-size="11" letter-spacing="2">CANCELLATION + BACKPRESSURE</text>
+  </g>
+</svg>
