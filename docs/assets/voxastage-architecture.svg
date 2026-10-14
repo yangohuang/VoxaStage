@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1460" viewBox="0 0 1400 1460" role="img" aria-labelledby="title desc">
+<title id="title">VoxaStage 系统架构</title><desc id="desc">浏览器输入经 Pipecat 会话层进入级联或 MiniCPM-o 端到端后端，再经媒体适配驱动 DINet、FlashHead 或 StreamingTalker。浏览器统一音画播放并回传语句播放确认。</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#547787"/></marker></defs>
+<rect width="1400" height="1460" rx="24" fill="#f5f8fa"/>
+<g font-family="Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif">
+<text x="70" y="70" font-size="34" font-weight="700" fill="#183945">VoxaStage 系统架构</text>
+<text x="70" y="110" font-size="19" fill="#597582">双语音后端 · 统一会话编排 · 2D / 3D 数字人呈现</text>
+
+<path d="M700 240V280" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M555 380V410H370V455" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="433" y="429" font-size="17" fill="#426773" text-anchor="middle" paint-order="stroke" stroke="#f5f8fa" stroke-width="7" stroke-linejoin="round">语音</text>
+<path d="M845 380V410H1020V500" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1040" y="442" font-size="17" fill="#426773" text-anchor="middle" paint-order="stroke" stroke="#f5f8fa" stroke-width="7" stroke-linejoin="round">语音 / 文字 / 可选图片</text>
+<path d="M435 345H170V650H220" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="163" y="550" font-size="17" fill="#426773" text-anchor="middle" paint-order="stroke" stroke="#f5f8fa" stroke-width="7" stroke-linejoin="round">文字直达 LLM</text>
+<path d="M370 545V605" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M520 650H620" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<text x="571" y="631" font-size="17" fill="#426773" text-anchor="middle" paint-order="stroke" stroke="#f5f8fa" stroke-width="7" stroke-linejoin="round">工具调用</text>
+<path d="M370 695V755" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M370 845V905H550V935" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1020 645V905H850V935" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M530 1035V1080H320V1120" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M700 1035V1120" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M870 1035V1080H1080V1120" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M320 1210V1250H550V1285" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M700 1210V1285" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1080 1210V1250H850V1285" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M980 985H1300V1260H1050V1320H1010" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1286" y="1065" font-size="17" fill="#426773" text-anchor="middle" paint-order="stroke" stroke="#f5f8fa" stroke-width="7" stroke-linejoin="round">配对原始音频</text>
+<path d="M390 1335H85V330H435" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)" stroke-dasharray="8 6"/>
+<text x="151" y="970" font-size="17" fill="#426773" text-anchor="middle" paint-order="stroke" stroke="#f5f8fa" stroke-width="7" stroke-linejoin="round">已播放语句确认</text>
+<path d="M1110 1380H1010" fill="none" stroke="#547787" stroke-width="2.5" marker-end="url(#arrow)" stroke-dasharray="8 6"/>
+<text x="1070" y="1363" font-size="17" fill="#426773" text-anchor="middle" paint-order="stroke" stroke="#f5f8fa" stroke-width="7" stroke-linejoin="round">待机</text>
+<rect x="435" y="150" width="530" height="90" rx="15" fill="#fff" stroke="#c1d4dd" stroke-width="1.5"/>
+<text x="700.0" y="186" font-size="23" font-weight="700" text-anchor="middle" fill="#173c49">浏览器输入</text>
+<text x="700.0" y="216" font-size="18" text-anchor="middle" fill="#557583">麦克风 / 文字 / 图片快照</text>
+<rect x="435" y="280" width="530" height="100" rx="15" fill="#183c47" stroke="#183c47" stroke-width="1.5"/>
+<text x="700.0" y="316" font-size="23" font-weight="700" text-anchor="middle" fill="#fff">VoxaStage 会话层 · Pipecat</text>
+<text x="700.0" y="346" font-size="18" text-anchor="middle" fill="#c6dce2">VAD / 话轮 / 上下文 / 取消</text>
+<rect x="220" y="455" width="300" height="90" rx="15" fill="#fff" stroke="#c1d4dd" stroke-width="1.5"/>
+<text x="370.0" y="491" font-size="23" font-weight="700" text-anchor="middle" fill="#173c49">Qwen3-ASR</text>
+<text x="370.0" y="521" font-size="18" text-anchor="middle" fill="#557583">级联 · 语音转文字</text>
+<rect x="220" y="605" width="300" height="90" rx="15" fill="#fff" stroke="#c1d4dd" stroke-width="1.5"/>
+<text x="370.0" y="641" font-size="23" font-weight="700" text-anchor="middle" fill="#173c49">Qwen3 LLM</text>
+<text x="370.0" y="671" font-size="18" text-anchor="middle" fill="#557583">流式文字生成</text>
+<rect x="620" y="605" width="255" height="90" rx="15" fill="#fff" stroke="#c1d4dd" stroke-width="1.5"/>
+<text x="747.5" y="641" font-size="23" font-weight="700" text-anchor="middle" fill="#173c49">工具执行</text>
+<text x="747.5" y="671" font-size="18" text-anchor="middle" fill="#557583">文档 / 计算 / 服务检查</text>
+<rect x="220" y="755" width="300" height="90" rx="15" fill="#fff" stroke="#c1d4dd" stroke-width="1.5"/>
+<text x="370.0" y="791" font-size="23" font-weight="700" text-anchor="middle" fill="#173c49">IndexTTS</text>
+<text x="370.0" y="821" font-size="18" text-anchor="middle" fill="#557583">语音合成</text>
+<rect x="900" y="500" width="330" height="145" rx="15" fill="#fff" stroke="#c1d4dd" stroke-width="1.5"/>
+<text x="1065.0" y="536" font-size="23" font-weight="700" text-anchor="middle" fill="#173c49">MiniCPM-o</text>
+<text x="1065.0" y="566" font-size="18" text-anchor="middle" fill="#557583">端到端语音后端</text>
+<text x="1065.0" y="593" font-size="18" text-anchor="middle" fill="#557583">回复文字 + 音频</text>
+<text x="1065.0" y="620" font-size="18" text-anchor="middle" fill="#557583">按需视觉输入</text>
+<rect x="420" y="935" width="560" height="100" rx="15" fill="#183c47" stroke="#183c47" stroke-width="1.5"/>
+<text x="700.0" y="971" font-size="23" font-weight="700" text-anchor="middle" fill="#fff">VoxaStage 媒体适配层</text>
+<text x="700.0" y="1001" font-size="18" text-anchor="middle" fill="#c6dce2">重采样 / 分段 / 背压 / 轮次隔离</text>
+<rect x="170" y="1120" width="300" height="90" rx="15" fill="#fff" stroke="#c1d4dd" stroke-width="1.5"/>
+<text x="320.0" y="1156" font-size="23" font-weight="700" text-anchor="middle" fill="#173c49">DINet</text>
+<text x="320.0" y="1186" font-size="18" text-anchor="middle" fill="#557583">2D 视频帧</text>
+<rect x="550" y="1120" width="300" height="90" rx="15" fill="#fff" stroke="#c1d4dd" stroke-width="1.5"/>
+<text x="700.0" y="1156" font-size="23" font-weight="700" text-anchor="middle" fill="#173c49">FlashHead Lite</text>
+<text x="700.0" y="1186" font-size="18" text-anchor="middle" fill="#557583">2D 视频帧</text>
+<rect x="930" y="1120" width="300" height="90" rx="15" fill="#fff" stroke="#c1d4dd" stroke-width="1.5"/>
+<text x="1080.0" y="1156" font-size="23" font-weight="700" text-anchor="middle" fill="#173c49">StreamingTalker</text>
+<text x="1080.0" y="1186" font-size="18" text-anchor="middle" fill="#557583">3D 顶点</text>
+<rect x="390" y="1285" width="620" height="115" rx="15" fill="#183c47" stroke="#183c47" stroke-width="1.5"/>
+<text x="700.0" y="1321" font-size="23" font-weight="700" text-anchor="middle" fill="#fff">浏览器播放器</text>
+<text x="700.0" y="1351" font-size="18" text-anchor="middle" fill="#c6dce2">共享音频播放时钟 · Canvas2D / WebGL</text>
+<text x="700.0" y="1378" font-size="18" text-anchor="middle" fill="#c6dce2">StreamingTalker 可映射到 GLB 嘴部节点</text>
+<rect x="1110" y="1310" width="230" height="100" rx="15" fill="#fff" stroke="#c1d4dd" stroke-width="1.5"/>
+<text x="1225.0" y="1346" font-size="23" font-weight="700" text-anchor="middle" fill="#173c49">角色待机</text>
+<text x="1225.0" y="1376" font-size="18" text-anchor="middle" fill="#557583">视频循环 / GLB 闭嘴</text>
+<text x="700" y="1436" font-size="17" text-anchor="middle" fill="#597582">输入按 VAD 话轮分段；工具调度目前用于级联链路；不宣称原生全双工。</text></g></svg>
