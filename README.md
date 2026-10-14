@@ -1,173 +1,184 @@
+<div align="center">
+
+<img src="docs/assets/voxastage-overview.svg" alt="VoxaStage：从语音理解、Agent 编排到 2D / 3D 数字人呈现" width="100%">
+
 # VoxaStage
 
-**让语音对话拥有一个可打断、会回应的 2D / 3D 数字人。**
+**让对话拥有声音、形象与行动。**
 
-VoxaStage 是基于 **Pipecat** 的本地优先语音数字人集成项目：把语音模型、数字人模型和浏览器交互连接起来，支持 **级联语音 / MiniCPM-o 端到端语音**两条对话链路，以及 **DINet / FlashHead / StreamingTalker** 三种形象驱动。对话后端与形象可以独立选择。
+本地优先的实时语音与数字人交互项目 · 基于 Pipecat
 
-[当前状态](docs/STATUS.md) · [效果预览](#效果预览) · [系统架构](#系统架构) · [来源与贡献](#来源与贡献) · [启动体验](#启动体验) · [验证与边界](#验证与边界)
+**双语音后端 · 三种数字人驱动 · 流式工具调用 · 可打断交互**
 
-## 流式 Agent 与本地会话
+[效果预览](#效果预览) · [核心设计](#核心设计) · [系统架构](#系统架构) · [快速开始](#快速开始) · [验证与路线](#验证与路线) · [来源与许可](#来源与许可)
 
-- **真实工具执行**：级联模型可检索项目文档、读取文档、计算及检查服务状态，页面显示任务进度；打断后丢弃旧任务结果。
-- **播放感知上下文**：按浏览器确认播放的完整语句段维护历史，中断后不把未听到的内容当作已经说过。
-- **保存与恢复**：在本地新建、载入和删除对话，恢复原来的模型、角色与上下文。
-- **3D 宠物 mesh**：可将 StreamingTalker 人脸预测映射到独立 GLB 的上下颚，复用音画同步和打断；[配置与边界](docs/MESH-RETARGETING.md)。角色素材另行准备。
-- **角色配置**：形象、男／女声和 idle 视频一起选择，支持部署者增加已有驱动的角色资源。
-- **视觉输入**：启用视觉能力的 MiniCPM-o 可接收图片或单次摄像头画面，结合文字或语音流式回应。
+</div>
 
-![工具计算与会话恢复](docs/assets/streaming-agent-preview.png)
+VoxaStage 将 **ASR → LLM → TTS 级联链路**与 **MiniCPM-o 端到端语音链路**接入统一会话层，让同一套交互可以驱动 **DINet、FlashHead 和 StreamingTalker**。对话模型与数字人形象独立选择，浏览器统一处理音画播放、用户打断和会话恢复。
 
-查看[使用方法与功能边界](docs/STREAMING-FUNCTIONS.md)。当前工具调度用于级联模式；MiniCPM-o 保留端到端多模态路径。语音输入仍按 VAD 话轮分段，不宣称原生全双工。
+项目重点是模型之间的协作：**新话轮如何取消旧任务、声音与画面如何对齐、用户打断后模型应该记住什么。** 基础模型由上游提供，VoxaStage 实现服务适配、会话编排、播放生命周期与验证工具。
+
+> **项目状态**：研究与工程演示，面向本地 / 可信网络单用户运行。仓库暂设为 **private**；功能与已知限制见[交付状态](docs/STATUS.md)。本页以主分支为准，独立实验分支中的动作编排不计入已交付能力。
 
 ## 效果预览
 
-| DINet · 康辉角色素材 | FlashHead Lite · 2D 女生 | StreamingTalker · 3D 头部 |
+![VoxaStage 浏览器界面：康辉数字人、工具计算、会话记忆与角色选择](docs/assets/streaming-agent-preview.png)
+
+*真实联调截图：同一页面完成角色选择、工具计算与历史会话恢复。音画同步和打断效果需要运行 demo 体验。*
+
+| DINet · 2D 肖像 | FlashHead Lite · 2D 肖像 | StreamingTalker · 3D 网格 |
 | :---: | :---: | :---: |
-| <img src="docs/assets/dinet-kanghui.jpg" alt="DINet 康辉角色素材图" height="240"> | <img src="docs/assets/flashhead-idle.png" alt="FlashHead 女生角色待机画面" height="240"> | <img src="docs/assets/streamingtalker-idle.png" alt="StreamingTalker 无纹理三维头部待机画面" height="240"> |
-| 男声 · 肖像帧 | 女声 · 肖像帧 | 男声 · 动态网格 |
+| <img src="docs/assets/dinet-kanghui.jpg" alt="DINet 康辉角色素材" height="220"> | <img src="docs/assets/flashhead-idle.png" alt="FlashHead 女生待机输出" height="220"> | <img src="docs/assets/streamingtalker-idle.png" alt="StreamingTalker 无纹理头部待机输出" height="220"> |
+| 男声参考 · 音频驱动视频帧 | 女声参考 · 音频驱动视频帧 | 男声参考 · 音频驱动三维顶点 |
 
-DINet 栏使用已有康辉角色素材图（原文件 `kanghui.jpg`）；FlashHead 与 StreamingTalker 栏为当前部署的**真实待机输出截帧**。对话时由对应模型生成嘴型与表情；等待、打断和通话结束后播放预先生成的无声 idle 循环。截图用于展示集成效果，不代表本项目训练了这些模型，也不包含人物素材的再使用授权。
+DINet 图为康辉角色素材；另两图为部署时的真实 idle 输出截帧。人物、声音和模型资源需另行准备，展示截图不授予素材再使用权。
 
-![浏览器中通过文字输入发起对话，StreamingTalker 输出三维头部并显示回复](docs/assets/conversation-preview.png)
+<details>
+<summary><strong>更多界面：按需视觉交互与三维头部</strong></summary>
 
-*早期本地联调界面实拍，页眉沿用当时的“语音实验室”；仓库中的界面现已更名为 VoxaStage。静态截图展示布局和模型输出，音画同步、打断及 idle 切换需要运行 demo 体验。*
+![图片输入与数字人对话](docs/assets/visual-interaction-preview.png)
 
-## 能做什么
+MiniCPM-o 可结合上传图片或单次摄像头快照回答；当前不包含连续视频理解。
 
-- **两条语音链路**：ASR → LLM → TTS 可单独替换组件；MiniCPM-o 直接处理语音并生成回复文字和声音。
-- **三种形象驱动**：DINet 和 FlashHead 输出 2D 视频帧，StreamingTalker 输出 3D 网格，统一在浏览器播放。
-- **可打断对话**：支持文字与麦克风；手动打断或 VAD 检测到新话轮后停止旧播放、清空队列，并丢弃迟到媒体。
-- **音画对齐**：回复音频与对应画面共用浏览器播放时钟；长回复连续分段，并限制队列与预送量。
-- **角色与待机**：男、女角色分别映射参考音色；等待和断开后继续播放同角色 idle 视频，无需持续模型推理。
-- **本地优先，可选云端**：默认连接本地模型服务；提供显式启用的 ASR / LLM 兼容 API 适配，密钥留在服务端。
+![早期 StreamingTalker 三维头部联调界面](docs/assets/conversation-preview.png)
 
-这是模型服务之上的工程集成 demo。基础模型能力来自下列上游项目；工具调度、任务取消、播放确认和会话持久化由本项目的编排层实现。
+早期联调界面页眉仍为“语音实验室”，现已更名为 VoxaStage。
+
+</details>
+
+## 核心设计
+
+| 设计 | 已实现的行为 | 工程价值 |
+| --- | --- | --- |
+| **对话与形象解耦** | 两条语音后端独立搭配三种数字人驱动 | 更换语音模型时复用播放与交互层 |
+| **流式 Agent** | 级联链路执行文档检索、读取、计算与服务检查；显示任务进度 | 将工具执行纳入可取消的语音话轮 |
+| **打断与旧结果隔离** | 新话轮停止旧播放，取消旧任务，清空队列并过滤迟到结果 | 改目标后，旧工具结果或旧音视频不会继续接管当前对话 |
+| **播放感知上下文** | 按浏览器确认播放的完整语句段保留历史，未确认部分记录中断 | 让下一轮基于实际播放进度继续，尚不支持逐词确认 |
+| **统一媒体时钟** | 音频与对应视频帧 / 网格按浏览器播放时钟调度；有界队列与背压 | 协调模型输出、网络传输与浏览器播放节奏 |
+| **会话与角色生命周期** | 本地会话保存 / 恢复 / 删除，角色绑定参考音色和 idle | 从短暂演示走向可持续交互 |
+| **按需视觉与 3D 扩展** | MiniCPM-o 接收图片；StreamingTalker 唇距映射到独立 GLB 上下颚 | 为多模态输入和自定义角色提供明确接入点 |
+
+工具编排目前用于级联链路。MiniCPM-o 保留端到端语音和可选视觉路径，尚未接入同一套工具调度。详见[流式功能](docs/STREAMING-FUNCTIONS.md)、[视觉交互](docs/VISUAL-INTERACTION.md)和 [3D 角色接入](docs/MESH-RETARGETING.md)。
 
 ## 系统架构
 
 ```mermaid
 flowchart TB
-    Browser["浏览器：麦克风 / 文字"] --> Session["VoxaStage 会话层 · Pipecat 编排<br/>VAD / 话轮 / 上下文 / 打断"]
-    Session --> ASR["级联：Qwen3-ASR"]
-    ASR --> LLM["Qwen3 LLM"]
-    Session -->|文字输入| LLM
-    LLM --> TTS["IndexTTS"]
-    Session --> Omni["端到端：MiniCPM-o<br/>语音 / 文字 → 回复文字 + 音频"]
-    TTS --> Media["VoxaStage 媒体适配<br/>保留播放音频 / 按驱动重采样 / 分段"]
+    Input["浏览器输入 · 麦克风 / 文字 / 图片快照"] --> Session["VoxaStage 会话层 · Pipecat<br/>VAD / 话轮 / 上下文 / 取消"]
+    Session --> ASR["级联语音 · Qwen3-ASR"]
+    ASR --> LLM["Qwen3 · 流式文字"]
+    Session -->|文字| LLM
+    LLM <-->|级联工具调用| Tools["文档检索 / 计算 / 服务检查"]
+    LLM --> TTS["IndexTTS · 语音合成"]
+    Session --> Omni["MiniCPM-o · 端到端语音<br/>可选图片输入"]
+    TTS --> Media["媒体适配层<br/>音频重采样 / 分段 / 背压 / 轮次隔离"]
     Omni --> Media
-    Media --> DINet["DINet · 2D 肖像帧"]
-    Media --> Flash["FlashHead Lite · 2D 肖像帧"]
-    Media --> ST["StreamingTalker · 3D 网格"]
-    DINet --> Player["浏览器播放器<br/>AudioContext + Canvas2D / WebGL"]
-    Flash --> Player
-    ST --> Player
-    Media -->|对应原始音频| Player
-    Idle["预生成无声 idle 视频"] -->|等待 / 打断 / 断开| Player
+    Media --> D["DINet · 2D 视频帧"]
+    Media --> F["FlashHead Lite · 2D 视频帧"]
+    Media --> S["StreamingTalker · 3D 顶点"]
+    D --> Player["浏览器 · 音频播放时钟<br/>Canvas2D / WebGL / GLB 嘴型映射"]
+    F --> Player
+    S --> Player
+    Media -->|配对音频| Player
+    Player -->|已播放语句确认| Session
+    Idle["角色待机<br/>视频循环 / GLB 闭嘴姿态"] --> Player
 ```
 
-**Pipecat 是编排框架，级联与端到端是对话后端的选择。** 接入 Pipecat 不会把级联模型变成端到端模型。当前 MiniCPM-o 分支按 VAD 切分用户话轮，不等同于模型原生全双工。
+**Pipecat 负责管线编排，级联与端到端描述模型链路。** 两条链路均按 VAD 切分用户话轮；输出采用流式生成或分段播放，当前不宣称原生全双工。
 
-两条语音链路与三种形象驱动的组合均完成过真实模型联调和打断恢复检查；详见[多驱动验收](AVATAR-MULTIDRIVER-RESULTS.md)与 [MiniCPM 验证](docs/MINICPM-RESULTS.md)。
+视频角色在等待、打断和通话结束后切回 idle；GLB 角色显示闭嘴模型。主分支的 GLB 接入只实现嘴部开合映射，不包含完整音素、情绪或全身动作生成。
 
-## 来源与贡献
+## 快速开始
 
-| 组成 | 上游项目 / 作者 | 上游提供 | VoxaStage 的接入与扩展 |
-| --- | --- | --- | --- |
-| 实时会话框架 | [Pipecat](https://github.com/pipecat-ai/pipecat) · Daily / 社区 | 处理器管线、VAD 集成、话轮与上下文机制、实时传输 | 本地服务适配、话轮策略、独立后端选择、共享会话准入 |
-| 语音识别 | [Qwen3-ASR](https://github.com/QwenLM/Qwen3-ASR) · Qwen 团队 | 语音转文字模型 | 本地 ASR 服务、术语上下文配置、识别质量对照 |
-| 文本大模型 | [Qwen3](https://github.com/QwenLM/Qwen3) · Qwen 团队 | 文本理解与生成模型 | 流式服务适配、语音回复提示、项目事实背景 |
-| 语音合成 | [IndexTTS](https://github.com/index-tts/index-tts) · IndexTTS 团队 | 文本到语音、参考音色能力 | 对接既有 TTS 服务、角色音色映射与固定音色兼容修复；完整 TTS 服务另行部署 |
-| 端到端语音 | [MiniCPM-o](https://github.com/OpenBMB/MiniCPM-o) · OpenBMB | 直接理解语音并生成语音的模型 | 独立 worker、话轮接入、音色条件与播放确认；参考本人此前 MindTalker 项目的 MiniCPM 接入经验 |
-| 2D 驱动 | [DINet](https://github.com/MRzzm/DINet) · 论文作者 | 音频驱动的人脸视频生成 | 连接既有部署服务的音频 WebSocket；该服务协议不是官方 DINet 标准 API |
-| 2D 驱动 | [SoulX-FlashHead](https://github.com/Soul-AILab/SoulX-FlashHead) · Soul AI Lab | FlashHead Lite 肖像视频生成 | 流式桥接 worker、音视频配对、单 GPU 兼容补丁 |
-| 3D 驱动 | [StreamingTalker](https://github.com/zju3dv/StreamingTalker) · ZJU3DV | 音频驱动的三维人脸生成 | 固定上游版本上的增量服务、WebSocket 协议、无头运行补丁、浏览器网格渲染 |
-
-**本项目主要实现的是集成与交互层**：后端与形象解耦、媒体协议、连续重采样、音画调度、打断隔离、取消清理、背压、idle 生命周期，以及相应回归测试。没有重新训练上述基础模型；数字人的神经网络、训练方法和基础生成质量不归为本项目原创。
-
-来源、固定版本、补丁范围和许可说明见 [THIRD_PARTY.md](THIRD_PARTY.md)。StreamingTalker 使用的历史代码版本保留 Apache-2.0 许可；上游后续已调整许可，**不能将当前上游或模型权重统一视为 Apache-2.0**。准确版本和原文见 [NOTICE](avatar-server/NOTICE.md)。
-
-## 启动体验
-
-需要 Python 3.11、`uv`，以及已部署的模型服务。安装本项目不会自动下载所有权重；GPU、显存和环境要求请分别查看各 worker 文档。目前尚未验收空白机器的一键完整部署。
+需要 **Python 3.11、uv，以及可访问的模型服务**。应用安装与模型部署分开进行；模型权重、人物模板、参考音色和 idle 视频不随仓库分发。
 
 ```bash
+git clone https://github.com/yangohuang/VoxaStage.git
+cd VoxaStage
 bash install_demo.sh
 cp .env.example .env
-# 编辑 .env：填写后端地址、已注册音色，以及需要启用的数字人 / MiniCPM 服务。
+# 编辑 .env：配置模型服务地址、已注册音色与数字人驱动。
 .venv/bin/python demo.py check
 .venv/bin/python demo.py run
 ```
 
-打开 **<http://127.0.0.1:18314/avatar>**，选择对话后端和形象，点击「连接会话」，再输入文字或开启麦克风。可用“介绍一下语音 agent 技术”体验中英混合输入；回答期间再次开口或点击「打断」，断开后查看 idle 循环。
+仓库为 private 期间，克隆需要已获授权的 GitHub 账号。
 
-远程运行时将端口通过 SSH 转发到 localhost，以满足浏览器麦克风安全上下文要求。纯语音入口为 `/`，与数字人入口共享单个会话名额。
+打开 **<http://127.0.0.1:18314/avatar>**，选择对话后端与数字人，点击「连接会话」，输入文字或开启麦克风。纯语音入口为 `/`；两个入口共享单个会话名额。远程部署请使用 localhost 端口转发或 HTTPS，满足浏览器麦克风安全上下文要求。
 
-| 要配置的能力 | 部署入口 |
+| 部署内容 | 文档 |
 | --- | --- |
-| 本地 ASR / LLM / TTS 与环境变量 | [部署与协议](docs/DEPLOYMENT.md)、[环境变量示例](.env.example) |
-| StreamingTalker 3D worker | [avatar-server/README.md](avatar-server/README.md) |
-| FlashHead Lite 2D worker | [video-server/README.md](video-server/README.md) |
-| 既有 DINet 服务 | [DINet 接入](docs/DINET-DEPLOYMENT.md) |
-| MiniCPM-o 端到端 worker | [omni-server/README.md](omni-server/README.md) |
-| 男女声、idle 素材、可选云端接口 | [体验配置](docs/EXPERIENCE-UPGRADE.md)、[TTS 音色兼容](tts-compat/README.md) |
+| 环境配置、协议与启动检查 | [部署指南](docs/DEPLOYMENT.md) · [.env.example](.env.example) |
+| 本地 ASR / LLM | [ASR 服务](asr-server/README.md) · [LLM 服务](llm-server/README.md) |
+| TTS 服务对接与音色 | [TTS 兼容层](tts-compat/README.md) · [体验配置](docs/EXPERIENCE-UPGRADE.md) |
+| 2D 数字人 | [DINet 接入](docs/DINET-DEPLOYMENT.md) · [FlashHead worker](video-server/README.md) |
+| 3D 数字人与自定义角色 | [StreamingTalker worker](avatar-server/README.md) · [GLB 嘴型映射](docs/MESH-RETARGETING.md) |
+| 端到端语音与视觉 | [MiniCPM-o worker](omni-server/README.md) |
 
-参考音色、人物模板、权重和 idle 视频由部署者自行准备。仓库中的静态展示截图不作为运行素材。
+### 一条演示路线
 
-## 验证与边界
+1. **对话**：用级联后端询问项目架构，观察文字、声音和画面输出。
+2. **工具**：输入“请使用计算工具计算 137 乘 29 加 81”，观察任务状态与结果。
+3. **打断**：回答期间再次开口或点击「打断」，改成另一项任务，检查旧回复是否停止。
+4. **恢复**：保存会话，重新载入后继续之前的话题。
+5. **多模态**：在已启用视觉的 MiniCPM-o 后端上传图片并提问，再切换数字人比较表现。
 
-2026-10-10 最近联调：[服务恢复与浏览器记录](docs/SERVICE-RECOVERY-VALIDATION.md)验证了MiniCPM配合三种数字人的文字、合成语音输入、手动打断、播放后idle，以及两张图片的上下文回答。随后完成[1.7B ASR恢复与级联验证](docs/ASR17-RECOVERY-VALIDATION.md)：92次真实识别请求和三驱动播放、合成输入、手动打断恢复通过，应用依赖健康检查通过。固定样本未证明1.7B优于0.6B；这些检查不代表物理麦克风或主观音画质量通过。
+完整步骤与预期行为见[演示路线](docs/DEMO-WALKTHROUGH.md)。
 
-新增[数字人适配层基线工具](docs/AVATAR-EVALUATION.md)：统一输入哈希、重复运行、失败计数、PCM与时间戳检查。完整质量与端到端评测按[阶段路线](docs/plans/2026-09-19-roadmap.md)逐步补齐；已验证范围与剩余门槛见[阶段验收](docs/ACCEPTANCE.md)。
+## 验证与路线
 
-2026-10-10 语音反馈修复：[MiniCPM 中英术语对照与短尾音频修复](docs/MINICPM-SPEECH-CONTEXT.md)记录了 VAD/ASR 概念理解从 0/3 到 3/3 的固定输入对照；同时保留 VAT 误解、短尾异常和长回复超限记录，不代表通用识别率验收。
+项目区分**功能正确性、固定输入实验和主观体验**。下表是带日期的历史证据，不代表服务当前在线，也不把一次演示外推为普遍质量结论。
 
-2026-10-10 回答质量补充：[复杂回答基线](docs/REPLY-QUALITY-BASELINE.md)记录24次MiniCPM策略对照及12次Qwen文字参考。基础记忆用户反馈通过；复杂回答仍有前提和概念错误，扩展策略未上线。
+| 范围 | 已有证据 | 仍需验证 |
+| --- | --- | --- |
+| 双链路 × 三驱动 | [多驱动验收](AVATAR-MULTIDRIVER-RESULTS.md)、[服务恢复](docs/SERVICE-RECOVERY-VALIDATION.md)记录真实模型播放与打断恢复 | 实际设备的回声、延迟与长期稳定性 |
+| 中英混合与 ASR | [固定输入采集](docs/ASR-LIVE-BASELINE.md)、[MiniCPM 术语对照](docs/MINICPM-SPEECH-CONTEXT.md)保留输入、配置与失败 | 真人语音、噪声和更广泛术语覆盖 |
+| 复杂回答 | [回答质量基线](docs/REPLY-QUALITY-BASELINE.md)：24 次 MiniCPM 策略对照及 12 次 Qwen 文字参考 | 前提理解与概念准确性；未采用的策略明确保留 |
+| 视觉交互 | [真实多模态基线](docs/REAL-MULTIMODAL-BASELINE.md)、[111 次提示消融](docs/VISUAL-GROUNDING-ABLATION.md) | 更广泛图片与场景，不能据此宣称解决幻觉 |
+| 媒体与数字人 | [输出基线](docs/AVATAR-OUTPUT-BASELINE-2026-09-19.md)、[3D 结构分析](docs/AVATAR-GEOMETRY-BASELINE.md)、[DINet 节奏实验](docs/DINET-PACING-INTEGRATION.md) | 人工口型、画面连续性与音色匹配 |
+| 自定义 3D 角色 | [GLB 接入](docs/MESH-RETARGETING.md)验证录制推理回放、闭嘴与旧帧过滤 | 在线完整对话、独立嘴型层与全身动画组合 |
 
-2026-09-20 功能回归通过 **240 项应用测试、18 项 MiniCPM worker 测试与全部 9 个前端测试文件**；真实浏览器验证了会话重连记忆、工具计算、播放中打断后改目标、三种驱动的看图回复，以及恢复后继续上传图片。物理麦克风与主观音画质量留待单独测试。测试命令：
+自动化检查入口：
 
 ```bash
 .venv/bin/python -m unittest discover -s . -p 'test_*.py'
 .venv/bin/python -m unittest discover -s omni-server -p 'test_*.py'
 .venv/bin/python -m unittest discover -s evaluation -p 'test_*.py'
 node --test avatar-web/tests/*.test.mjs
-# 已部署真实模型后：
+# 需要已部署的真实模型服务：
 .venv/bin/python smoke_avatar.py --interrupt
-# 语音输入：16kHz、单声道 PCM16 WAV
-.venv/bin/python smoke_avatar.py --input /path/to/test.wav --interrupt
 ```
 
-Node 18+ 仅用于前端测试。完整口径见[首轮验收](AVATAR-RESULTS.md)、[多驱动验收](AVATAR-MULTIDRIVER-RESULTS.md)与[体验升级记录](docs/EXPERIENCE-UPGRADE.md)。
+Node 18+ 用于前端测试。评测工具见[适配层评测](docs/AVATAR-EVALUATION.md)与[本地质量复核](docs/AVATAR-QUALITY-REVIEW.md)。
 
-| 当前边界 | 说明 |
-| --- | --- |
-| ASR 与回答质量 | 当前本地 ASR 已验证 1.7B，示例环境仍以 0.6B 为起点；术语样本改善不等于真实麦克风整体错误率下降。默认 LLM 为 Qwen3-4B，尚未证明通用能力升级。 |
-| 云端接入 | 已有协议适配和模拟 HTTP 测试，尚未进行真实云端 API 联调。 |
-| 运行范围 | 本地 / 可信网络单用户 demo，每会话最多 10 分钟；无公网认证和多租户隔离。 |
-| 连续播放 | 长回复以最多 30 秒的 clip 连续分段；有界队列和预送机制不能消除模型欠载、浏览器后台节流产生的停顿。 |
-| 打断后上下文 | 两条链路均按已确认播放的完整语句段保留上下文，未确认部分添加中断标记；没有逐词已听内容对齐。 |
-| 画面与带宽 | 3D 头部无真人纹理；当前 PCM / 网格 / 帧经 WebSocket 传输，尚未做面向公网的低带宽视频方案。 |
-| 实际听感 | 浏览器启用回声消除与降噪；物理麦克风回声、音色匹配和长期对话仍需实机试听。 |
+**下一阶段**：优先完善中英混合识别与回答质量评测、3D 角色动作与嘴型分层，以及空白 GPU 主机的完整部署复现。逐词播放确认需要真实对齐信息；连续视频理解、多用户与公网服务另行推进。详见[阶段验收](docs/ACCEPTANCE.md)。
 
-后续重点：混合语言识别与回答质量评测、具有真实对齐信息的逐词播放确认，以及更易复现的部署与传输优化。多用户和公网运行另行安排。
+当前限制：单会话最长 10 分钟；云端兼容接口已有协议适配但未完成真实 API 联调；有界队列不能消除推理欠载或浏览器后台节流。当前版本不提供公网认证与多租户隔离。
 
-## 许可与源码导出
+## 来源与许可
 
-VoxaStage 集成层和前端使用 [MIT License](LICENSE)。第三方代码保留各自许可和声明；模型权重、FLAME / VOCASET 等数据、人物与音色资源分别遵循其来源许可，集成层的 MIT 许可不授予这些资源的再分发权。详见 [第三方来源与许可](THIRD_PARTY.md)。
+| 上游项目 | 提供的基础能力 | VoxaStage 的工作 |
+| --- | --- | --- |
+| [Pipecat](https://github.com/pipecat-ai/pipecat) | 处理器管线、VAD、话轮与上下文机制 | 本地服务适配、后端组合、话轮策略与会话生命周期 |
+| [Qwen3-ASR](https://github.com/QwenLM/Qwen3-ASR) / [Qwen3](https://github.com/QwenLM/Qwen3) | 语音识别与文本生成 | 流式服务、术语配置、工具集成与对照评测 |
+| [IndexTTS](https://github.com/index-tts/index-tts) | 语音合成与参考音色 | 既有服务对接、角色音色映射与兼容修复 |
+| [MiniCPM-o](https://github.com/OpenBMB/MiniCPM-o) | 端到端语音与视觉理解 | 独立 worker、视觉输入契约、取消与播放确认；延续作者 MindTalker 的接入经验 |
+| [DINet](https://github.com/MRzzm/DINet) | 音频驱动人脸视频 | 特定既有部署的 WebSocket 客户端与节奏控制；不是官方标准 API |
+| [SoulX-FlashHead](https://github.com/Soul-AILab/SoulX-FlashHead) | Lite 肖像视频生成 | 流式桥接、音视频配对与单 GPU 兼容补丁 |
+| [StreamingTalker](https://github.com/zju3dv/StreamingTalker) | 音频驱动三维人脸 | 固定版本增量服务、取消协议、浏览器网格播放与角色嘴型映射 |
+| [Three.js](https://github.com/mrdoob/three.js) | 浏览器三维渲染与 GLTF 加载 | 独立 GLB 角色加载、嘴部节点映射与播放集成 |
+
+VoxaStage 不包含上述基础模型的预训练或原创网络设计。固定版本、分发范围、补丁归属与许可原文见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+
+集成层与前端采用 [MIT License](LICENSE)。第三方代码、模型权重、FLAME / VOCASET 数据及人物、声音素材分别遵循原始条款。StreamingTalker 随包历史基线与当前上游许可存在差异，以 [NOTICE](avatar-server/NOTICE.md) 为准；不能将全部权重与素材视为 MIT 或 Apache-2.0。
+
+<details>
+<summary><strong>源码导出与隐私边界</strong></summary>
 
 ```bash
 python3 export_demo.py
 ```
 
-生成 `dist/voxastage-source.tar.gz` 和 SHA256 文件清单。导出内容为源码、文档和本页列出的静态展示截图；排除密钥、机器配置、模型权重、日志、输入录音及运行时音视频。
+生成 `dist/voxastage-source.tar.gz` 与 SHA256 文件清单。导出包含源码、文档和明确列出的展示图片；排除运行配置、凭据、模型权重、日志、会话录音及运行时音视频。导出前仍应复核新增内容和素材授权。
 
-输出评测扩展：已覆盖五类15条受控探针、三驱动45次输出和六种浏览器组合；范围及未完成项见[输出与浏览器基线](docs/AVATAR-OUTPUT-BASELINE-2026-09-19.md)。
-
-已有捕获可用[本地质量复核页](docs/AVATAR-QUALITY-REVIEW.md)连续播放、逐帧回看和按时间段标注；人工判断与自动检查分开保存，未评估项不会自动计为通过。
-
-[3D结构与运动基线](docs/AVATAR-GEOMETRY-BASELINE.md)覆盖15段1366帧，记录逐帧面积与运动峰值；数值完整性与感知质量分别报告。
-
-[DINet消费提前量实验](docs/DINET-PACING-EXPERIMENT.md)已进一步完成[原代理集成与对照](docs/DINET-PACING-INTEGRATION.md)：17次API检查及10次正式浏览器对照通过，当前本地部署保留0.4秒提前量，并验证配置故障、取消恢复与回滚。该收益限于媒体等待与音频调度，不代表模型算力提升或视觉零跳帧。
-
-[按需视觉交互](docs/VISUAL-INTERACTION.md)已加入能力开关、上传/摄像头快照、会话时间与轮次绑定、最近两图历史。已完成[真实视觉与语音实测](docs/REAL-MULTIMODAL-BASELINE.md)：32次正式输入对照及三驱动9轮浏览器交互；无图时猜测视觉属性的失败另行记录。2026-09-20 的现有演示已启用视觉并采用 general 约束；新部署仍需显式开启 worker 的视觉能力。当前范围见[交付状态](docs/STATUS.md)。
-
-[视觉证据提示消融](docs/VISUAL-GROUNDING-ABLATION.md)完成111次真实生成：固定探针无图断言从baseline的8/8变为general/evidence各0/8，有图问答与普通问题控制保持正常；显式图片数量未显示额外收益，不外推通用幻觉解决。可按[演示路线](docs/DEMO-WALKTHROUGH.md)展示，worker 源码的默认策略仍为 baseline，日常演示已显式选择 general。
+</details>
