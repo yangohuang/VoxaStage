@@ -14,6 +14,42 @@ spec.loader.exec_module(capture)
 
 
 class CaptureTests(unittest.TestCase):
+    def test_condition_metadata_does_not_enter_generation_kwargs(self):
+        manifest = {'system_prompt': 'default', 'system_prompts': {'general': 'selected'}, 'enable_thinking': False}
+        case = {'messages': [{'role': 'user', 'content': 'question'}]}
+        condition = {'id': 'condition', 'seeds': [17], 'system_variant': 'general',
+                     'enable_thinking': True, 'do_sample': True, 'max_new_tokens': 1024}
+        messages, thinking, kwargs = capture.request_configuration(manifest, case, condition)
+        self.assertEqual(messages[0]['content'], 'selected')
+        self.assertTrue(thinking)
+        self.assertEqual(kwargs, {'do_sample': True, 'max_new_tokens': 1024})
+        messages, thinking, kwargs = capture.request_configuration(manifest, case, {'id': 'old', 'max_new_tokens': 256})
+        self.assertEqual(messages[0]['content'], 'default')
+        self.assertFalse(thinking)
+
+    def test_final_answer_waits_for_split_end_marker_and_nonblank_text(self):
+        chunks = [{'text': '<think>草稿</thi', 'elapsed_s': 1},
+                  {'text': 'nk>\n ', 'elapsed_s': 2}, {'text': '结论。', 'elapsed_s': 3}]
+        view = capture.final_answer_view(chunks, True)
+        self.assertEqual(view['final_text'], '结论。')
+        self.assertEqual(view['first_final_text_s'], 3)
+        self.assertTrue(view['thinking_closed'])
+
+    def test_unclosed_or_empty_thinking_is_not_a_final_answer(self):
+        for text in ['<think>仍在思考', '草稿没有结束标记', '<think>草稿</think>\n ']:
+            view = capture.final_answer_view([{'text': text, 'elapsed_s': 1}], True)
+            self.assertEqual(view['final_text'], '')
+            self.assertIsNone(view['first_final_text_s'])
+
+    def test_direct_answer_and_unexpected_thinking_are_distinguished(self):
+        view = capture.final_answer_view([{'text': ' ', 'elapsed_s': .1}, {'text': '你好。', 'elapsed_s': .2}], False)
+        self.assertEqual(view['final_text'], '你好。')
+        self.assertEqual(view['first_final_text_s'], .2)
+        self.assertIsNone(view['thinking_closed'])
+        view = capture.final_answer_view([{'text': '<think>草稿</think>结论', 'elapsed_s': 1}], False)
+        self.assertTrue(view['unexpected_thinking'])
+        self.assertEqual(view['final_text'], '结论')
+
     def test_matrix_is_complete_and_alternates_order(self):
         data = json.loads(path.with_name('2026-10-16-model-decoding-input.json').read_text())
         rows = capture.request_matrix(data)
@@ -22,6 +58,17 @@ class CaptureTests(unittest.TestCase):
         self.assertEqual(rows[0]['condition']['id'], 'greedy-256')
         self.assertEqual(rows[5]['condition']['id'], 'sample-256')
         self.assertEqual([r['seed'] for r in rows[5:8]], [29, 43, 17])
+
+    def test_context_thinking_matrix_has_all_64_unique_requests(self):
+        data = json.loads(path.with_name('2026-10-16-thinking-context-input.json').read_text())
+        rows = capture.request_matrix(data)
+        self.assertEqual(len(rows), 64)
+        self.assertEqual(len({(r['case']['id'], r['condition']['id'], r['seed']) for r in rows}), 64)
+        for row in rows:
+            messages, thinking, kwargs = capture.request_configuration(data, row['case'], row['condition'])
+            self.assertEqual(messages[0]['content'], data['system_prompts'][row['condition']['system_variant']])
+            self.assertEqual(thinking, row['condition']['enable_thinking'])
+            self.assertEqual(kwargs['max_new_tokens'], 1024)
 
     def test_eos_at_budget_is_not_mislabeled_as_length(self):
         self.assertEqual(capture.finish_reason([3, 9], [9], 2, None), 'eos')
@@ -77,6 +124,8 @@ class CaptureTests(unittest.TestCase):
             self.assertEqual(row['first_text_s'], .5)
 
     def test_actual_runner_preserves_partial_model_error_and_pending_rows(self):
+        template_calls = []
+        generation_calls = []
         class Tensor:
             def __init__(self, values): self.values = values
             @property
@@ -88,7 +137,9 @@ class CaptureTests(unittest.TestCase):
             def to(self, device): return self
         class Tokenizer:
             chat_template = 'fake template'
-            def apply_chat_template(self, *args, **kwargs): return 'fake prompt'
+            def apply_chat_template(self, messages, **kwargs):
+                template_calls.append((messages, kwargs))
+                return 'fake prompt'
             def __call__(self, *args, **kwargs): return Inputs(input_ids=Tensor([[101, 102]]))
             def decode(self, ids, **kwargs): return ''.join(str(i) for i in ids if i != 9)
         class Streamer:
@@ -108,6 +159,7 @@ class CaptureTests(unittest.TestCase):
             calls = 0
             def eval(self): return self
             def generate(self, input_ids, streamer, **kwargs):
+                generation_calls.append(kwargs)
                 self.calls += 1
                 streamer.put(input_ids)
                 for token in ([7, 9] if self.calls == 1 else [7, 8]):
@@ -131,24 +183,41 @@ class CaptureTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp); model_dir = root / 'Qwen3-4B'; model_dir.mkdir()
             (model_dir / 'config.json').write_text('{}')
-            output = root / 'result.json'
-            with patch.dict('sys.modules', {'torch': torch, 'transformers': transformers}), \
+            custom = json.loads(path.with_name('2026-10-16-thinking-context-input.json').read_text())
+            custom['conditions'] = [custom['conditions'][3]] + custom['conditions'][:3]
+            manifest_path = root / 'custom-input.json'
+            manifest_path.write_text(json.dumps(custom))
+            for index, manifest in enumerate([None, manifest_path]):
+                model.calls = 0
+                template_calls.clear()
+                generation_calls.clear()
+                output = root / f'result-{index}.json'
+                with patch.dict('sys.modules', {'torch': torch, 'transformers': transformers}), \
                     patch.object(capture, 'require_idle'), \
                     patch.object(capture, 'process_memory_bytes', return_value=20), \
                     patch.object(capture.importlib.metadata, 'version', return_value='fake'):
-                with self.assertRaisesRegex(RuntimeError, 'Model generation failed'):
-                    capture.run(SimpleNamespace(model=model_dir, output=output))
-            result = json.loads(output.read_text())
-            self.assertEqual(result['status'], 'failed')
-            self.assertEqual(result['warmup']['finish_reason'], 'eos')
-            failed = result['rows'][0]
-            self.assertEqual(failed['token_ids'], [7, 8])
-            self.assertEqual(failed['finish_reason'], 'model_error')
-            self.assertEqual(failed['model_error_type'], 'ValueError')
-            self.assertEqual(failed['text'], '78')
-            self.assertIsNotNone(failed['elapsed_s'])
-            self.assertEqual(failed['sampled_process_peak_bytes'], 20)
-            self.assertEqual(sum(row['status'] == 'pending' for row in result['rows']), 39)
+                    with self.assertRaisesRegex(RuntimeError, 'Model generation failed'):
+                        capture.run(SimpleNamespace(model=model_dir, output=output, manifest=manifest))
+                result = json.loads(output.read_text())
+                self.assertEqual(result['status'], 'failed')
+                self.assertEqual(result['warmup']['finish_reason'], 'eos')
+                failed = result['rows'][0]
+                self.assertEqual(failed['token_ids'], [7, 8])
+                self.assertEqual(failed['finish_reason'], 'model_error')
+                self.assertEqual(failed['model_error_type'], 'ValueError')
+                self.assertEqual(failed['text'], '78')
+                self.assertIsNotNone(failed['elapsed_s'])
+                self.assertEqual(failed['sampled_process_peak_bytes'], 20)
+                self.assertEqual(sum(row['status'] == 'pending' for row in result['rows']), 63 if manifest else 39)
+                self.assertFalse(template_calls[0][1]['enable_thinking'])
+                self.assertEqual(template_calls[1][1]['enable_thinking'], bool(manifest))
+                if manifest:
+                    self.assertEqual(template_calls[1][0][0]['content'], custom['system_prompts']['general'])
+                    self.assertEqual(failed['final_text'], '')
+                    self.assertFalse(failed['thinking_closed'])
+                    expected = capture.request_configuration(custom, custom['cases'][0], custom['conditions'][0])[2]
+                    self.assertEqual({key: generation_calls[1][key] for key in expected}, expected)
+                self.assertFalse({'system_variant', 'enable_thinking', 'seeds', 'id'} & generation_calls[1].keys())
 
 
 if __name__ == '__main__':

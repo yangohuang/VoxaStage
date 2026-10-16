@@ -60,6 +60,41 @@ def pending_rows(manifest):
             for item in request_matrix(manifest)]
 
 
+def request_configuration(manifest, case, condition):
+    system = manifest['system_prompt']
+    if 'system_variant' in condition:
+        system = manifest['system_prompts'][condition['system_variant']]
+    thinking = condition.get('enable_thinking', manifest['enable_thinking'])
+    metadata = {'id', 'seeds', 'system_variant', 'enable_thinking'}
+    kwargs = {key: value for key, value in condition.items() if key not in metadata}
+    return [{'role': 'system', 'content': system}] + case['messages'], thinking, kwargs
+
+
+def final_answer_view(chunks, thinking):
+    """Separate user-visible answers from reasoning, retaining stream timestamps.
+
+    Thinking mode requires an explicit closing marker, including templates that
+    put the opening marker in the prompt. Missing closure is never an answer.
+    """
+    text = ''.join(chunk['text'] for chunk in chunks)
+    unexpected = not thinking and ('<think>' in text or '</think>' in text)
+    reasoning = thinking or unexpected
+    close = text.find('</think>') if reasoning else -1
+    closed = close >= 0 if reasoning else None
+    start = close + len('</think>') if closed else (len(text) if reasoning else 0)
+    while start < len(text) and text[start].isspace():
+        start += 1
+    first = None
+    offset = 0
+    for chunk in chunks:
+        offset += len(chunk['text'])
+        if start < offset:
+            first = chunk['elapsed_s']
+            break
+    return {'final_text': text[start:].strip(), 'first_final_text_s': first,
+            'thinking_closed': closed, 'unexpected_thinking': unexpected}
+
+
 class TokenRecorder:
     """Keep every generated token even if generation raises before returning."""
     def __init__(self, delegate):
@@ -119,7 +154,7 @@ def require_idle():
 
 
 def run(args):
-    manifest_path = Path(__file__).with_name('2026-10-16-model-decoding-input.json')
+    manifest_path = getattr(args, 'manifest', None) or Path(__file__).with_name('2026-10-16-model-decoding-input.json')
     manifest = json.loads(manifest_path.read_text())
     model_path = args.model.resolve()
     if model_path.name not in manifest['models']:
@@ -178,10 +213,10 @@ def run(args):
             stop, monitor_done = threading.Event(), threading.Event()
             stopped, produced, errors, memory_samples = [], [], [], []
             tokens = worker = monitor_thread = None
-            kwargs = {k: v for k, v in condition.items() if k not in {'id', 'seeds'}}
+            kwargs = {'max_new_tokens': condition['max_new_tokens']}
+            thinking = condition.get('enable_thinking', manifest['enable_thinking'])
             eos = model.generation_config.eos_token_id
             eos = [eos] if isinstance(eos, int) else eos or []
-            row['generation_kwargs'] = kwargs
             row['process_memory_sample_interval_s'] = 1
             row['process_memory_sample_errors'] = 0
 
@@ -214,10 +249,13 @@ def run(args):
 
             try:
                 require_idle()
+                row['phase'] = 'configuration'
+                messages, thinking, kwargs = request_configuration(manifest, case, condition)
+                row.update(generation_kwargs=kwargs, enable_thinking=thinking,
+                           system_variant=condition.get('system_variant', 'default'))
                 row['phase'] = 'tokenization'
-                messages = [{'role': 'system', 'content': manifest['system_prompt']}] + case['messages']
                 prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True,
-                                                        enable_thinking=manifest['enable_thinking'])
+                                                        enable_thinking=thinking)
                 inputs = tokenizer(prompt, return_tensors='pt').to(model.device)
                 row.update(messages=messages, prompt=prompt, input_token_ids=inputs['input_ids'][0].tolist())
                 set_seed(seed)
@@ -277,6 +315,7 @@ def run(args):
                                  kwargs['max_new_tokens'], stopped[0] if stopped else None, elapsed)
                 row['attempt_elapsed_s'] = time.monotonic() - attempt_started
                 row['decoded_text'] = tokenizer.decode(row['token_ids'], skip_special_tokens=True)
+                row.update(final_answer_view(row['chunks'], thinking))
                 row['torch_peak_allocated_bytes'] = torch.cuda.max_memory_allocated() if started is not None else None
                 row['torch_peak_reserved_bytes'] = torch.cuda.max_memory_reserved() if started is not None else None
                 sample_memory()
@@ -310,4 +349,5 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--model', required=True, type=Path)
     parser.add_argument('--output', required=True, type=Path)
+    parser.add_argument('--manifest', type=Path, help='Predeclared experiment input; defaults to the original decoding comparison')
     run(parser.parse_args())
