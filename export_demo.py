@@ -11,6 +11,7 @@ test_agent_tools.py test_agent_runtime.py test_avatar_profiles.py test_conversat
 test_streaming_services.py test_avatar_playback.py test_avatar_conversations.py
 bot.py backend.py services.py turn_observer.py turn_settings.py turn_strategy.py
 avatar_backend.py avatar_session.py avatar_demo.py avatar_providers.py avatar_video_backend.py dinet_backend.py smoke_avatar.py smoke_video.py
+tts_server.py tts_runtime.py tts_native.py test_tts_server.py test_tts_native.py test_tts_wire.py
 asr_server.py test_backend.py test_services.py test_turns.py test_asr_server.py
 test_avatar_backend.py test_avatar_session.py test_tts_lifecycle.py
 test_avatar_providers.py test_avatar_video_backend.py test_dinet_backend.py
@@ -48,7 +49,7 @@ docs/wechat/assets/01-cover.png docs/wechat/assets/01-cover.svg docs/wechat/asse
 
 def export(output):
     files = [ROOT / name for name in FILES]
-    for directory in ('asr-server', 'llm-server', 'avatar-web', 'avatar-server', 'video-server', 'dinet-server', 'omni-server', 'tts-compat', 'docs', 'evaluation'):
+    for directory in ('tts-server', 'asr-server', 'llm-server', 'avatar-web', 'avatar-server', 'video-server', 'dinet-server', 'omni-server', 'tts-compat', 'docs', 'evaluation'):
         for path in (ROOT / directory).rglob('*'):
             if (path.is_file() and not path.is_symlink() and '__pycache__' not in path.parts
                     and not path.is_relative_to(ROOT / 'docs/wechat/build')

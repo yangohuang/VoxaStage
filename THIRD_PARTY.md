@@ -11,7 +11,7 @@ VoxaStage 是基于公开模型与既有模型服务构建的集成项目。本�
 | [Pipecat](https://github.com/pipecat-ai/pipecat) · Daily / 社区 | 会话处理器、VAD 集成、话轮、上下文聚合与传输。通过依赖安装，不复制整个框架。 | `pipecat-ai==1.10.0`，见 [requirements.in](requirements.in) 与锁文件。 |
 | [Qwen3-ASR](https://github.com/QwenLM/Qwen3-ASR) · Qwen 团队 | 本地语音识别模型；仓库提供 HTTP 服务与客户端适配，不含权重。 | 已部署验证 1.7B；模型 revision `7278e1e70fe206f11671096ffdd38061171dd6e5`。示例环境仍从 0.6B 起步。 |
 | [Qwen3](https://github.com/QwenLM/Qwen3) · Qwen 团队 | 级联链路中的文本大模型；仓库提供流式服务和提示配置，不含权重。 | 当前本地默认 Qwen3-4B NF4；候选比较见[体验记录](docs/EXPERIENCE-UPGRADE.md)。 |
-| [IndexTTS](https://github.com/index-tts/index-tts) · IndexTTS 团队 | 级联语音合成引擎。连接部署者已有的 WebSocket 服务；仓库包含客户端及固定音色兼容扩展，不包含完整推理服务。 | [TTS 兼容层](tts-compat/README.md)；不能把本项目协议当作上游原生 API。 |
+| [IndexTTS](https://github.com/index-tts/index-tts) · IndexTTS 团队 | 级联语音合成模型。日常链路连接已有服务；新增固定官方 2.5 源码的独立分段流式 worker，真实 GPU 合成验收待完成。 | [独立 worker](tts-server/README.md)、[既有兼容层](tts-compat/README.md)；协议和取消适配由本项目提供，模型、分段合成及声码器属于上游。 |
 | [MiniCPM-o](https://github.com/OpenBMB/MiniCPM-o) · OpenBMB | 端到端语音模型及可选视觉编码器；仓库提供 worker、历史与取消管理、按需画面输入契约，不含模型代码快照或权重。真实图文/图音推理已完成[受控验证](docs/REAL-MULTIMODAL-BASELINE.md)，广泛识图质量仍待验收。 | [`openbmb/MiniCPM-o-4_5-awq`](https://huggingface.co/openbmb/MiniCPM-o-4_5-awq)，revision `a3073852f52e4beec3f278d1f6616d40c26fe343`；[部署说明](omni-server/README.md)。 |
 | [DINet](https://github.com/MRzzm/DINet) · 论文作者 | 音频驱动的人脸视频生成。这里只分发客户端及特定既有部署的节奏启动器，不分发 DINet 训练代码、原生推理实现或角色资源。 | [部署协议](docs/DINET-DEPLOYMENT.md)。既有服务的完整实现与版本未在本仓库审计，不宣称与官方仓库原样等同。 |
 | [SoulX-FlashHead](https://github.com/Soul-AILab/SoulX-FlashHead) · Soul AI Lab | 使用 Lite 管线生成 2D 肖像帧；分发桥接 worker 和单 GPU 兼容补丁，不分发上游 checkout 或权重。 | 源码固定 `9bc03de06bb0de82cd6bc477804512ae06144bf2`；[worker 与补丁说明](video-server/README.md)。 |
