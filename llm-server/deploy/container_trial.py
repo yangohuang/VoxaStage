@@ -247,6 +247,7 @@ class Controller:
             cid = self.invoke(['docker', 'create', '--name', self.name,
                 '--label', 'org.voxastage.validation-run=' + self.run_id,
                 '--gpus', 'all', '--network', 'none', '--read-only',
+                '--env', 'USER=voxastage', '--env', 'HOME=/tmp',
                 '--tmpfs', '/tmp:rw,nosuid,size=256m', '--cap-drop', 'ALL',
                 '--security-opt', 'no-new-privileges', '--mount',
                 'type=bind,src=' + str(self.model) + ',dst=/model,readonly',

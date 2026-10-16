@@ -73,6 +73,13 @@ print(json.dumps({'event':'finished','requests':1}),flush=True)
         self.assertEqual(sum(c[1] == 'stop' for c in self.calls), 1)
         self.assertEqual(sum(c[1] == 'rm' for c in self.calls), 1)
 
+    def test_numeric_user_has_name_and_writable_cache_home(self):
+        self.controller().run()
+        creation = next(c for c in self.calls if c[1] == 'create')
+        environment = [creation[i+1] for i, item in enumerate(creation) if item == '--env']
+        self.assertIn('USER=voxastage', environment)
+        self.assertIn('HOME=/tmp', environment)
+
     def test_busy_after_hash_never_starts_container(self):
         c = self.controller()
         c.verify_models = lambda: setattr(self, 'busy', True)

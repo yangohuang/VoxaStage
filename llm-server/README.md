@@ -107,3 +107,14 @@ interval is a delay between probes. Its CLI expects two loopback health URLs
 and a new output directory. A timed-out create is discovered by a unique name,
 then cleanup still verifies full ID, image and run label. An unresolved create
 outcome is recorded as failure and must be inspected before any retry.
+
+The first model startup exposed a lazy-import gap in the initial CPU probe:
+`AutoModelForCausalLM` imported Torch Dynamo, whose cache initialization called
+`getpass.getuser()` for numeric UID65532 without a passwd entry. The container
+exited before any protocol request. Its [failed batch](../docs/benchmarks/2026-10-16-container-startup-failure.json)
+is retained separately. Both Dockerfiles now default to `USER=voxastage` and
+`HOME=/tmp`; the controller passes the same values explicitly. A CPU-only probe
+with those values passed the actual AutoConfig/AutoModelForCausalLM/AutoTokenizer
+imports and checked that the Torch cache directory is under `/tmp`. GPU protocol
+validation must still be rerun as a new complete batch; no answers were selected
+or discarded from the failed startup.
