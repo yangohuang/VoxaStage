@@ -1,0 +1,430 @@
+{
+  "model": "Qwen3-4B-Instruct-2507",
+  "raw_sha256": "b65758d54e1a71e404947740fda1564467d613c7789529d40bc9d37dc9f50671",
+  "manifest_sha256": "eeb64ed24cef0e8cfdb66e92348d584f0527cf0813b7198724441859c1aca15b",
+  "reviewer": "independent assistant non-blind text review; not human evaluation",
+  "scope": "Independent assistant review of all28 actual final_text outputs under the frozen rubric;26EOS and2length stops. Truncation is reported separately, without automatic failure or completion of missing text. No reasoning text, model identity blinding, acoustic assessment or production acceptance.",
+  "scoring_notes": [
+    "Checks follow the frozen rubric order and are assessed independently of extra_factual_errors. A factual error may also explain a rubric failure; it is still disclosed explicitly.",
+    "Same rule as baseline: an explicit final self-correction can satisfy a selection criterion; contradictory earlier assertions remain extra factual errors.",
+    "Actual input/fragment inspection can satisfy the capture criterion without requiring the literal word logging; input formatting alone with no retrieved-fragment correspondence is insufficient. Generic prompt clarity does not satisfy conflict/priority checking.",
+    "A correct selection of the played prefix demonstrates playback-based history even without an explanation; extra unqualified principles about complete sentences are assessed separately.",
+    "Ideal weight-only arithmetic is evaluated within the prompt assumptions; an extra restatement of ignored metadata is not mandatory if the output consistently limits itself to weight bytes.",
+    "Only actual final_text before a length stop is scored. If all rubric facts were already output, a trailing truncation does not automatically fail them."
+  ],
+  "rows": [
+    {
+      "case": "deploy-tail",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "extra_factual_errors": [
+        "错误声称A的P50=800ms低于B的500ms，并据此说A典型响应更快。",
+        "错误声称A的P95=1100ms高于B的1600ms，且对A尾部表现的前后判断相互矛盾。",
+        "仅凭P50/P95不能推出大多数逐个请求更快、体验更稳定或特定高负载场景表现。"
+      ],
+      "notes": [
+        "结尾按低P95选A明确，第一项通过；没有纠正P50代价，第二项失败。未编均值、最大值或跨硬件结论，第三项单独通过；其他数值/分布错误另列。"
+      ]
+    },
+    {
+      "case": "deploy-tail",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [
+        "开头优势段将A的800ms说成优于B的500ms，之后结尾才给出正确P50代价。",
+        "代价段将1100ms说成高于1600ms，并推导相互矛盾的尾部表现，后文才纠正。"
+      ],
+      "notes": [
+        "与基线同一原则：最终明确选A、说明A的P95较低和P50较高，按最终自我纠正计前两项通过；不抹去前文错误。没有均值/最大值/跨硬件编造，第三项通过。"
+      ]
+    },
+    {
+      "case": "deploy-median",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [
+        "P50较低不能单凭两个分位数推出大多数用户请求逐个响应更快。"
+      ],
+      "notes": [
+        "选择及P95代价正确；“可能卡顿或超时”是条件性的风险举例，不视作已测得超时。未声称两项指标同时改善。"
+      ]
+    },
+    {
+      "case": "deploy-median",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [
+        "由P50比较推出多数用户在B会经历更长等待，超出两个分位数能确定的逐个请求或用户体验结论。"
+      ],
+      "notes": [
+        "正确选择A并交代P95更高；“可能达到1500ms”没有明确声称1500ms是最大值，不按最大值幻觉处理。"
+      ]
+    },
+    {
+      "case": "weights-bytes",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    },
+    {
+      "case": "weights-bytes",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    },
+    {
+      "case": "four-bit-count",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [
+        "把1GB=10^9字节的十进制换算解释为1000^4；1000^4=10^12，正确应为1000^3。"
+      ],
+      "notes": [
+        "参数8e9、权重4e9字节/4GB均已正确输出。全部计算限定于每权重4bit的权重字节数，按题设理想权重范围计第三项通过；不额外要求重复“忽略元数据”字样。错误的旁注单列，不隐藏于正确最终数字。"
+      ]
+    },
+    {
+      "case": "four-bit-count",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    },
+    {
+      "case": "cancelled-lookup",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    },
+    {
+      "case": "cancelled-lookup",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": [
+        "“请求已被主动终止”按用户取消的对话目标理解，不视作声称底层网络调用已强制终止；回答明确隔离迟到结果，也未取消新话轮。"
+      ]
+    },
+    {
+      "case": "no-calendar-access",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "extra_factual_errors": [],
+      "notes": [
+        "真实说明没有日历接口且不能更改，前两项通过；未提出手动调整、连接工具或其他真实下一步，冻结第三项失败。该回复遵守了不虚假宣称成功，未通过全部rubric不等于仍在编造执行。"
+      ]
+    },
+    {
+      "case": "no-calendar-access",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "extra_factual_errors": [],
+      "notes": [
+        "真实说明没有日历接口且不能更改，前两项通过；未提出手动调整、连接工具或其他真实下一步，冻结第三项失败。该回复遵守了不虚假宣称成功，未通过全部rubric不等于仍在编造执行。"
+      ]
+    },
+    {
+      "case": "visual-time-boundary",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": [
+        "关于没有其他位置更新信息，按仅依据题给记录的范围理解，不视作声称已检查某个外部传感器。"
+      ]
+    },
+    {
+      "case": "visual-time-boundary",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    },
+    {
+      "case": "document-version",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    },
+    {
+      "case": "document-version",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    },
+    {
+      "case": "actual-input-debug",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        false,
+        false
+      ],
+      "extra_factual_errors": [],
+      "notes": [
+        "明确核对实际送入模型的文本与检索结果并查看原始prompt，足以计实际输入/片段检查；没有检查指令优先级或SYSTEM/文档冲突，明确引用要求不等于冲突排查；没有相同输入的独立重放。第一步仍花在题设已正确的检索相关性上。"
+      ]
+    },
+    {
+      "case": "actual-input-debug",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        false,
+        false
+      ],
+      "extra_factual_errors": [
+        "将未给出的“上下文感知/意图识别模式”当作模型调用配置或API中可启用的模式，缺少已知后端或真实参数依据，不能作为此系统已有功能的事实。"
+      ],
+      "notes": [
+        "检查检索输出到模型输入的实际文本及关键内容是否遗漏，第一项按可执行的实际输入核对计通过；其余没有指令优先级/上下文冲突检查，也没有同输入独立重放。关于配置模式的无依据建议另列。"
+      ]
+    },
+    {
+      "case": "current-facts",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    },
+    {
+      "case": "current-facts",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    },
+    {
+      "case": "heard-context",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": [
+        "只保存第一句，正确排除生成但未播放的第二句，选择结果体现按播放确认而不是生成完成记录；不要求额外复述推理过程才能通过第三项。"
+      ]
+    },
+    {
+      "case": "heard-context",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [
+        "额外把已听内容限定为完整播放完且确认的整句，原则过窄：已播放并确认的部分句子/前缀也可以记录为已听；本题第二句完全未播放，具体保存结果仍正确。"
+      ],
+      "notes": [
+        "明确根据播放器确认保存第一句，三项rubric均满足。关于整句播放完成的过度推广单列，不改变此场景结论。"
+      ]
+    },
+    {
+      "case": "mixed-literal",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    },
+    {
+      "case": "mixed-literal",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "new_diagnostic",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    },
+    {
+      "case": "anchor-nf4-size",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "historical_anchor",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [
+        "在已知条件中无依据加入每个参数原本是float32；原题没有给出原始存储精度。"
+      ],
+      "notes": [
+        "length截断发生在尾部“注意”处；此前已完整说明60亿参数不变、3GB及忽略元数据，三个评分点均满足。只评已输出内容，不补全最后提示；额外float32假设不影响给定4bit计算，但仍单列。"
+      ]
+    },
+    {
+      "case": "anchor-nf4-size",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "historical_anchor",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": [
+        "length截断发生在重复答案段；前文已完整输出60亿参数不变、3GB以及忽略元数据，三个评分点均满足。未补写被截断的末句。"
+      ]
+    },
+    {
+      "case": "anchor-quoted-instruction",
+      "condition": "sample-direct",
+      "seed": 43,
+      "group": "historical_anchor",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    },
+    {
+      "case": "anchor-quoted-instruction",
+      "condition": "sample-direct",
+      "seed": 17,
+      "group": "historical_anchor",
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "extra_factual_errors": [],
+      "notes": []
+    }
+  ]
+}

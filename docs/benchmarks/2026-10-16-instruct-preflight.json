@@ -1,0 +1,21 @@
+{
+  "status": "preflight_passed_models_not_ready",
+  "formal_generations": 0,
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.11.0+cu130",
+    "transformers": "4.57.3",
+    "accelerate": "1.12.0",
+    "bitsandbytes": "0.50.2"
+  },
+  "environment_scope": "new venv with read-only base packages; isolated Python startup; not a clean full GPU deployment",
+  "local_contract_tests": 7,
+  "remote_isolated_contract_tests": 7,
+  "transformers_isolated_import": "passed",
+  "cuda_available": true,
+  "loopback_forwarded_idle_guards": "both passed at preflight; rechecked by collector before and during generation",
+  "manifest_sha256": "eeb64ed24cef0e8cfdb66e92348d584f0527cf0813b7198724441859c1aca15b",
+  "collector_sha256": "4af09f8fb0abce868eab3fce3ea08f3b62bb939b8b7d8d6374f45f8f0a1a1aa5",
+  "production_changed": false,
+  "download_note": "Initial baseline HTTP stream ended before expected size and was rejected. Baseline transfer now uses previously verified public files; candidate mirror transport remains subject to frozen upstream hash checks. No failed or unverified weight is admitted."
+}
