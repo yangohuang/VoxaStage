@@ -29,8 +29,12 @@
 ## 执行步骤
 
 - [ ] 冻结输入与参考，提交计划；在独立目录下载并核对两模型全部20个核心文件。
-- [ ] 复制`2026-10-16-run-precision-check.py`为本轮采集器；先新增无`hashlib.file_digest`条件下的文件哈希测试，再用分块`hashlib.sha256().update()`实现兼容。新清单沿用14题×2seed，原采集契约六项测试重新针对新副本运行。
-- [ ] 独立审查输入、参考、采集代码和停止条件，准备仅包含公开清单/源码的远端包。以`python docs/benchmarks/test_instruct_capture.py`验证CPU契约。
+- [x] 复制`2026-10-16-run-precision-check.py`为本轮采集器；先新增无`hashlib.file_digest`条件下的文件哈希测试，再用分块`hashlib.sha256().update()`实现兼容。新清单沿用14题×2seed，原采集契约六项测试重新针对新副本运行。
+- [x] 独立审查输入、参考、采集代码和停止条件，准备仅包含公开清单/源码的远端包。以`python docs/benchmarks/test_instruct_capture.py`验证CPU契约。
 - [ ] 依次运行两个`--precision bf16 --model "$LOCAL_MODEL_DIR" --manifest docs/benchmarks/2026-10-16-instruct-input.json --output "$NEW_RESULT_PATH"`，输出文件必须不存在；保留两份原始结果。
 - [ ] 核对模型来源、实际messages、采样、EOS与截断、token和流式拼接；逐条独立评分，再按冻结门槛决定后续。
 - [ ] 报告、脱敏、PR交付；保持人工音画、物理设备、广泛真实输入和独立完整部署验收待完成。
+
+执行前补充：独立包装通过TERM/HUP清理保存、原子拒绝重复启动、全部模型文件准入、哈希失败不加载、基线失败不执行候选等CPU故障验证。两套权重全部核验后才开始正式生成，实际任务尚在等待候选下载。
+
+结果复算脚本`docs/benchmarks/2026-10-16-summarize-instruct.py`已完成，6项门槛测试及独立结构/完整假数据检查通过。它核对来源、实际消息、生成参数、EOS/截断及语义审查记录，严格按预注册门槛决定是否进入下一项回归；不据此批准生产部署。尚无模型语义评分或质量结论。
