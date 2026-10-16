@@ -1,6 +1,6 @@
 # 组合会话验收客户端
 
-当前是验收工具准备阶段，尚未完成三容器控制器或真实模型组合批次。已有单组件报告不能替代组合结果。
+已完成客户端、三容器控制器和无 GPU 的真实 Docker 生命周期演练。固定四项真实模型组合结果见[组合会话验证](../../docs/COMPOSED-SESSION-VALIDATION.md)；已有单组件和 CPU fixture 结果不能替代组合结果。
 
 客户端连接隔离应用的 `/avatar/ws`，选择 StreamingTalker 与级联后端。`cases.json` 固定四项：文字、既有中英混合合成 WAV、媒体输出后的显式打断及恢复、重连第三项会话。WAV 只记录文件哈希与合成提示词；原始素材不纳入公开源码，也不把提示词作为人工核准转写。
 
@@ -31,4 +31,22 @@ python deploy/session/session_client.py \
   --url http://127.0.0.1:23714
 ```
 
-该命令需由后续宿主控制器驱动 stdin 准入。真实执行前仍须完成容器归属校验、模型哈希、资源准入、日常服务监测和异常清理；目前不提供绕过这些检查的自动放行方式。
+该命令由 `composed_trial.py` 驱动 stdin 准入。控制器使用私有配置、冻结载荷和新输出目录：
+
+```sh
+python deploy/session/composed_trial.py \
+  --config /path/to/private-config.json \
+  --manifest /path/to/frozen-payload/manifest.json \
+  --payload /path/to/frozen-payload \
+  --output /path/to/new-run-directory
+```
+
+私有配置包含 `images`（`llm/asr/app` 的不可变镜像 ID）、`models`（两个模型目录）、`ports`（三个独立端口）、`daily_health`（日常应用、LLM、ASR 的三个回环健康地址）、`tts_url`、`avatar_url`、`male_speaker` 和 `minimum_free_mib`。服务转发必须显式绑定 `127.0.0.1`，不能与测试端口冲突。模型目录只读挂载；应用无 GPU，并使用独立临时会话目录。
+
+冻结 manifest 除 `cases` 外包含 `payload_sha256` 和 `models`；后者为 `llm/asr` 各自的 `revision` 与文件名到 SHA256 的 `files` 映射。载荷必须包含运行中的控制器/客户端及其依赖源码、用例文件和指定 WAV；这些内容前后重新校验。模型分别核对 10/12 个既有来源文件。
+
+启动前至少需要 16 GiB 空闲显存；在 LLM 启动前重新检查，ASR 启动前须仍有 8 GiB。门槛是本部署的保守准入限制，不是通用显存需求或性能保证。日常应用和模型状态持续监测、逐请求准入；TTS 只暴露音色可用性，不具备可用的占用探针。3D 服务在批次前后检查空闲。
+
+使用宿主网络访问回环转发，因此额外核对每个服务的监听 socket 属于本容器 PID1，且地址为回环。停止/删除前再次核对完整容器 ID、镜像 ID 和本轮标签；日志读取失败仍尝试删除已安全停止的容器，保留错误并判定整批失败。
+
+`check_composed_docker.py` 只执行 CPU 生命周期演练，模型哈希和 GPU 准入明确标记为不适用。它启动三份 HTTP 假服务，分别运行正常协议和注入失败协议；验证真实 Docker 停止/删除及部分事件保存。演练中的 PID1 未处理 SIGTERM，实际退出码为 `137`（Docker 超时强制停止），不能称为优雅退出。

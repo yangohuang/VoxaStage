@@ -1,0 +1,220 @@
+{
+  "status": "passed",
+  "run_id": "61a1fb3adccd4986be7a22d12f32905d",
+  "units": {
+    "llm": {
+      "status": "preparing",
+      "run_id": "61a1fb3adccd4986be7a22d12f32905d",
+      "name": "voxastage-composed-61a1fb3adccd4986be7a22d12f32905d-llm",
+      "image_id": "sha256:52c11d4beef410a82a1a78f60ca6e7209c1ba3904214d2419f463fd02938c6d1",
+      "removed": true,
+      "cleanup_errors": [],
+      "health_probes": 0,
+      "max_health_probe_s": 0,
+      "source_sha256": {
+        "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+        "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+        "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+      },
+      "manifest_sha256_canonical": "991db3936fac5376001c01b80d0f763aaaeaa9bbfd9b39763701f10a06cc2dcc",
+      "container_id": "0de350f8c79f9709e907a8b0f3e3fa57ae7122a304f6eb63a15ec638c85e28da",
+      "container_exit": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-16T13:21:19.581577571Z",
+        "FinishedAt": "2026-10-16T13:23:06.571856272Z"
+      }
+    },
+    "asr": {
+      "status": "preparing",
+      "run_id": "61a1fb3adccd4986be7a22d12f32905d",
+      "name": "voxastage-composed-61a1fb3adccd4986be7a22d12f32905d-asr",
+      "image_id": "sha256:7cbd3e055a371d25f7ee387eed2e5021486429aa1910092d16024cb487316567",
+      "removed": true,
+      "cleanup_errors": [],
+      "health_probes": 0,
+      "max_health_probe_s": 0,
+      "source_sha256": {
+        "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+        "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+        "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+      },
+      "manifest_sha256_canonical": "991db3936fac5376001c01b80d0f763aaaeaa9bbfd9b39763701f10a06cc2dcc",
+      "container_id": "630beafce6e65b5d33abb9a0d06953fb3a842ad3fd41fbc240bb8681a863ffe8",
+      "container_exit": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-16T13:21:24.370679549Z",
+        "FinishedAt": "2026-10-16T13:23:05.835331168Z"
+      }
+    },
+    "app": {
+      "status": "preparing",
+      "run_id": "61a1fb3adccd4986be7a22d12f32905d",
+      "name": "voxastage-composed-61a1fb3adccd4986be7a22d12f32905d-app",
+      "image_id": "sha256:c5892ec958ab8f20f3718934b58b4d408372bd4a813921c9b4a4f7c5d463bd70",
+      "removed": true,
+      "cleanup_errors": [],
+      "health_probes": 0,
+      "max_health_probe_s": 0,
+      "source_sha256": {
+        "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+        "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+        "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+      },
+      "manifest_sha256_canonical": "991db3936fac5376001c01b80d0f763aaaeaa9bbfd9b39763701f10a06cc2dcc",
+      "container_id": "8f565ae16d9f791dad774b2b48b29fee01b5ea4b96b2a92bba429f01ad83b97a",
+      "container_exit": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 0,
+        "Error": "",
+        "StartedAt": "2026-10-16T13:21:30.158354375Z",
+        "FinishedAt": "2026-10-16T13:23:04.838015969Z"
+      }
+    }
+  },
+  "cleanup_errors": [],
+  "health_probes": 314,
+  "max_health_probe_s": 0.5420726540032774,
+  "source_sha256": {
+    "deploy/session/composed_trial.py": "91d73875fc4380c27898101cfe7910c7d76ad16ef1586a791ed6c8ba995b9f9c",
+    "deploy/session/session_client.py": "d8f45d6af4ac508d3fa6f0a4156fa477337639de42a105d66dddb77aacb4107b",
+    "llm-server/deploy/container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+    "llm-server/deploy/container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+    "llm-server/deploy/protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+  },
+  "config_sha256": "568f6b227c574d9780c51934fb6056a7d353dea0a4ce902c314dbce4b875ad6a",
+  "manifest_sha256": "8ef79859b2eb603a98e974dc2967ce77e361eab9da56b918e5fc887ff0db24b4",
+  "external_checks": [
+    {
+      "tts_speaker_available": true,
+      "tts_occupancy_observable": false,
+      "avatar_ready": true,
+      "avatar_idle": true
+    },
+    {
+      "tts_speaker_available": true,
+      "tts_occupancy_observable": false,
+      "avatar_ready": true,
+      "avatar_idle": true
+    },
+    {
+      "tts_speaker_available": true,
+      "tts_occupancy_observable": false,
+      "avatar_ready": true,
+      "avatar_idle": true
+    }
+  ],
+  "gpu_admissions": [
+    {
+      "role": null,
+      "free_mib": 18801,
+      "required_mib": 16384
+    },
+    {
+      "role": null,
+      "free_mib": 18801,
+      "required_mib": 16384
+    },
+    {
+      "role": "llm",
+      "free_mib": 18801,
+      "required_mib": 16384
+    },
+    {
+      "role": "asr",
+      "free_mib": 15753,
+      "required_mib": 8192
+    }
+  ],
+  "model_hash_checks": [
+    {
+      "llm": {
+        "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+        "generation_config.json": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "model-00001-of-00003.safetensors": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+        "model-00002-of-00003.safetensors": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+        "model-00003-of-00003.safetensors": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+        "model.safetensors.index.json": "6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2",
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "asr": {
+        ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+        "README.md": "5058416891bc47a2051557765997e8c42f8eb78a0e33c3e775bd17d4b0ba4d50",
+        "chat_template.json": "75a8cfca24f00de72d796fbfed6858fc9614ef3dabd8696684cc3bc03a9c58ff",
+        "config.json": "2e74a751548b8ad7d7526d29365ad8144c345d8b412b1152d25dc6698452712f",
+        "generation_config.json": "1da527824d81e07118facff437e03f2e24a23311e3bdeb2368973fe77e5f275c",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "model-00001-of-00002.safetensors": "a4cd1f1a04d90b757dc7f7dd26254e69a013b19e80efe590a83c6a3bde8608d6",
+        "model-00002-of-00002.safetensors": "6e0b9d9e09e2e0238e7ef3cc8a484ab387e91b90f1900bedf88bc92d7929ccfc",
+        "model.safetensors.index.json": "f994739fe38e5210b9e3e8ce6c6307315e2ceac3cb630e7b7414d69dce520f60",
+        "preprocessor_config.json": "45e120a4eda2c20c5d7f2ea9354e63536bf35e27aa573fb7cdf78017b378770d",
+        "tokenizer_config.json": "4942d005604266809309cabc9f4e9cb89ce855d59b14681fdc0e1cc62ea26c4c",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    {
+      "llm": {
+        "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+        "generation_config.json": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "model-00001-of-00003.safetensors": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+        "model-00002-of-00003.safetensors": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+        "model-00003-of-00003.safetensors": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+        "model.safetensors.index.json": "6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2",
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "asr": {
+        ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+        "README.md": "5058416891bc47a2051557765997e8c42f8eb78a0e33c3e775bd17d4b0ba4d50",
+        "chat_template.json": "75a8cfca24f00de72d796fbfed6858fc9614ef3dabd8696684cc3bc03a9c58ff",
+        "config.json": "2e74a751548b8ad7d7526d29365ad8144c345d8b412b1152d25dc6698452712f",
+        "generation_config.json": "1da527824d81e07118facff437e03f2e24a23311e3bdeb2368973fe77e5f275c",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "model-00001-of-00002.safetensors": "a4cd1f1a04d90b757dc7f7dd26254e69a013b19e80efe590a83c6a3bde8608d6",
+        "model-00002-of-00002.safetensors": "6e0b9d9e09e2e0238e7ef3cc8a484ab387e91b90f1900bedf88bc92d7929ccfc",
+        "model.safetensors.index.json": "f994739fe38e5210b9e3e8ce6c6307315e2ceac3cb630e7b7414d69dce520f60",
+        "preprocessor_config.json": "45e120a4eda2c20c5d7f2ea9354e63536bf35e27aa573fb7cdf78017b378770d",
+        "tokenizer_config.json": "4942d005604266809309cabc9f4e9cb89ce855d59b14681fdc0e1cc62ea26c4c",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    }
+  ],
+  "owned_loopback_listeners": [
+    "llm",
+    "asr",
+    "app"
+  ],
+  "completed_cases": [
+    "text",
+    "mixed-audio",
+    "interrupt-recover",
+    "restore-interrupted-history"
+  ],
+  "client_exit_code": 0
+}

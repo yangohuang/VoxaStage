@@ -34,8 +34,11 @@ deploy/application/build-bootstrap.lock
 deploy/session/session_client.py deploy/session/test_session_client.py
 deploy/session/test_session_evidence.py deploy/session/test_session_wire.py
 deploy/session/cases.json deploy/session/README.md
+deploy/session/composed_trial.py deploy/session/test_composed_trial.py
+deploy/session/check_composed_docker.py
 docs/benchmarks/2026-10-16-container-protocol-events.jsonl
 docs/benchmarks/2026-10-16-asr-container-events.jsonl
+docs/benchmarks/2026-10-16-composed-session-events.jsonl
 .env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
 AVATAR-PROTOCOL.md AVATAR-MULTIDRIVER-RESULTS.md
 docs/assets/voxastage-architecture.png docs/assets/voxastage-architecture.svg docs/assets/voxastage-overview.svg docs/assets/streaming-agent-preview.png docs/assets/dinet-kanghui.jpg docs/assets/flashhead-idle.png

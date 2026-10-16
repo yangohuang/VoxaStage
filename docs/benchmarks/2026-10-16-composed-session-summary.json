@@ -1,0 +1,346 @@
+{
+  "scope": "Real streamed cascade session through isolated app/ASR/LLM containers with existing TTS and 3D service; synthetic received-sample playback acknowledgements",
+  "status": "passed",
+  "cases": [
+    {
+      "case": "text",
+      "status": "passed",
+      "completed_generation": 1,
+      "first_media_from_ready_s": {
+        "1": 1.6298922259593382
+      },
+      "clips": 1,
+      "complete_clips": 1,
+      "frames": 361,
+      "pcm_samples": 288768,
+      "pcm_duration_s": 12.032,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "你好，请用一句话介绍实时数字人。",
+          "status": "input"
+        },
+        {
+          "role": "assistant",
+          "text": "实时数字人是一种能够通过语音和文本实时生成和驱动的虚拟形象，可以与用户进行自然对话并执行复杂任务。",
+          "generated_text": "实时数字人是一种能够通过语音和文本实时生成和驱动的虚拟形象，可以与用户进行自然对话并执行复杂任务。",
+          "heard_text": "实时数字人是一种能够通过语音和文本实时生成和驱动的虚拟形象，可以与用户进行自然对话并执行复杂任务。",
+          "status": "heard"
+        }
+      ],
+      "restored_history_matches": null,
+      "interrupted_generation": null
+    },
+    {
+      "case": "mixed-audio",
+      "status": "passed",
+      "completed_generation": 1,
+      "first_media_from_ready_s": {
+        "1": 4.043769737007096
+      },
+      "clips": 2,
+      "complete_clips": 2,
+      "frames": 1387,
+      "pcm_samples": 1108992,
+      "pcm_duration_s": 46.208,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "介绍一下语音 agent 技术。",
+          "status": "input"
+        },
+        {
+          "role": "assistant",
+          "text": "语音 agent 技术是让机器能理解并回应人类语音的系统。它通常包括几个部分：首先，语音识别（ASR）将语音转为文本；然后，语言模型（LLM）处理文本，生成回应；最后，文本转语音（TTS）将回应转为语音。此外，还有多模态模型，如MiniCPM-o，能直接理解语音并生成语音，实现更自然的交互。例如，Pipecat框架支持这些流程，让数字人能更真实地与人对话。",
+          "generated_text": "语音 agent 技术是让机器能理解并回应人类语音的系统。它通常包括几个部分：首先，语音识别（ASR）将语音转为文本；然后，语言模型（LLM）处理文本，生成回应；最后，文本转语音（TTS）将回应转为语音。此外，还有多模态模型，如MiniCPM-o，能直接理解语音并生成语音，实现更自然的交互。例如，Pipecat框架支持这些流程，让数字人能更真实地与人对话。",
+          "heard_text": "语音 agent 技术是让机器能理解并回应人类语音的系统。它通常包括几个部分：首先，语音识别（ASR）将语音转为文本；然后，语言模型（LLM）处理文本，生成回应；最后，文本转语音（TTS）将回应转为语音。此外，还有多模态模型，如MiniCPM-o，能直接理解语音并生成语音，实现更自然的交互。例如，Pipecat框架支持这些流程，让数字人能更真实地与人对话。",
+          "status": "heard"
+        }
+      ],
+      "restored_history_matches": null,
+      "interrupted_generation": null
+    },
+    {
+      "case": "interrupt-recover",
+      "status": "passed",
+      "completed_generation": 3,
+      "first_media_from_ready_s": {
+        "1": 0.39324747305363417,
+        "3": 1.5080363339511678
+      },
+      "clips": 2,
+      "complete_clips": 1,
+      "frames": 272,
+      "pcm_samples": 216864,
+      "pcm_duration_s": 9.036,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "请分三点详细介绍实时数字人的语音识别、语言模型和语音合成流程。",
+          "status": "input"
+        },
+        {
+          "role": "assistant",
+          "text": "1. **语音识别**：通过ASR将语音转为文本，如“你好”转为",
+          "generated_text": "1. **语音识别**：通过ASR将语音转为文本，如“你好”转为",
+          "heard_text": "",
+          "status": "interrupted"
+        },
+        {
+          "role": "user",
+          "text": "现在只用一句话告诉我语音识别的作用。",
+          "status": "input"
+        },
+        {
+          "role": "assistant",
+          "text": "语音识别的作用是将用户的语音输入转换为文本，以便后续的自然语言处理和理解。",
+          "generated_text": "语音识别的作用是将用户的语音输入转换为文本，以便后续的自然语言处理和理解。",
+          "heard_text": "语音识别的作用是将用户的语音输入转换为文本，以便后续的自然语言处理和理解。",
+          "status": "heard"
+        }
+      ],
+      "restored_history_matches": null,
+      "interrupted_generation": 1
+    },
+    {
+      "case": "restore-interrupted-history",
+      "status": "passed",
+      "completed_generation": 1,
+      "first_media_from_ready_s": {
+        "1": 1.1666792429750785
+      },
+      "clips": 1,
+      "complete_clips": 1,
+      "frames": 396,
+      "pcm_samples": 316416,
+      "pcm_duration_s": 13.184,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "请分三点详细介绍实时数字人的语音识别、语言模型和语音合成流程。",
+          "status": "input"
+        },
+        {
+          "role": "assistant",
+          "text": "1. **语音识别**：通过ASR将语音转为文本，如“你好”转为",
+          "generated_text": "1. **语音识别**：通过ASR将语音转为文本，如“你好”转为",
+          "heard_text": "",
+          "status": "interrupted"
+        },
+        {
+          "role": "user",
+          "text": "现在只用一句话告诉我语音识别的作用。",
+          "status": "input"
+        },
+        {
+          "role": "assistant",
+          "text": "语音识别的作用是将用户的语音输入转换为文本，以便后续的自然语言处理和理解。",
+          "generated_text": "语音识别的作用是将用户的语音输入转换为文本，以便后续的自然语言处理和理解。",
+          "heard_text": "语音识别的作用是将用户的语音输入转换为文本，以便后续的自然语言处理和理解。",
+          "status": "heard"
+        },
+        {
+          "role": "user",
+          "text": "请用一句话概括我们刚才讨论的内容。",
+          "status": "input"
+        },
+        {
+          "role": "assistant",
+          "text": "我们刚才讨论了实时数字人系统中语音识别、语言模型和语音合成的流程，以及它们在整体系统中的作用和协作方式。",
+          "generated_text": "我们刚才讨论了实时数字人系统中语音识别、语言模型和语音合成的流程，以及它们在整体系统中的作用和协作方式。",
+          "heard_text": "我们刚才讨论了实时数字人系统中语音识别、语言模型和语音合成的流程，以及它们在整体系统中的作用和协作方式。",
+          "status": "heard"
+        }
+      ],
+      "restored_history_matches": true,
+      "interrupted_generation": null
+    }
+  ],
+  "event_lines": 5241,
+  "events_sha256": "5e815cd7bc145c7e22b02d1d213446fbea98ca72a066f726b0f40fd71cf529e5",
+  "controller_tests": 17,
+  "client_tests": 19,
+  "base_controller_tests": 26,
+  "postflight": {
+    "verification": "Read-only Docker inspect after controller exit confirmed all three IDs absent; health probes confirmed daily idle and external availability",
+    "containers_absent": 3,
+    "daily_services_idle": true,
+    "external_available": true,
+    "free_gpu_mib": 18801,
+    "dedicated_tunnel_closed": true
+  },
+  "source_payload_sha256": "dcd1242268bc9caa426e93b0862da1c9b63e32d929fec281a304c8808bbd66ab",
+  "initial_cpu_fixture": {
+    "success": {
+      "status": "passed",
+      "run_id": "4e6c2f99febc46f696ca248c31f8b4cf",
+      "units": {
+        "llm": {
+          "status": "preparing",
+          "run_id": "4e6c2f99febc46f696ca248c31f8b4cf",
+          "name": "voxastage-composed-4e6c2f99febc46f696ca248c31f8b4cf-llm",
+          "image_id": "sha256:c5892ec958ab8f20f3718934b58b4d408372bd4a813921c9b4a4f7c5d463bd70",
+          "removed": true,
+          "cleanup_errors": [],
+          "health_probes": 0,
+          "max_health_probe_s": 0,
+          "source_sha256": {
+            "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+            "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+            "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+          },
+          "manifest_sha256_canonical": "360e60e3bfdd207d8d99ed9cff1340fa1c405001d4fb3a274bb963d1b1a17758",
+          "container_id": "a6f0eea7588430a2942277e343d63a74c496d1c0439a202126d58fce9df1af91",
+          "container_exit": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 137,
+            "Error": "",
+            "StartedAt": "2026-10-16T13:17:29.424569176Z",
+            "FinishedAt": "2026-10-16T13:17:45.809514608Z"
+          }
+        },
+        "asr": {
+          "status": "preparing",
+          "run_id": "4e6c2f99febc46f696ca248c31f8b4cf",
+          "name": "voxastage-composed-4e6c2f99febc46f696ca248c31f8b4cf-asr",
+          "image_id": "sha256:c5892ec958ab8f20f3718934b58b4d408372bd4a813921c9b4a4f7c5d463bd70",
+          "removed": true,
+          "cleanup_errors": [],
+          "health_probes": 0,
+          "max_health_probe_s": 0,
+          "source_sha256": {
+            "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+            "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+            "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+          },
+          "manifest_sha256_canonical": "360e60e3bfdd207d8d99ed9cff1340fa1c405001d4fb3a274bb963d1b1a17758",
+          "container_id": "92f529a28fbc4bf1f6ddb7f4236825ad31130a103f1cc1ecf4b713fbae49b8ad",
+          "container_exit": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 137,
+            "Error": "",
+            "StartedAt": "2026-10-16T13:17:29.697829115Z",
+            "FinishedAt": "2026-10-16T13:17:40.679875943Z"
+          }
+        },
+        "app": {
+          "status": "preparing",
+          "run_id": "4e6c2f99febc46f696ca248c31f8b4cf",
+          "name": "voxastage-composed-4e6c2f99febc46f696ca248c31f8b4cf-app",
+          "image_id": "sha256:c5892ec958ab8f20f3718934b58b4d408372bd4a813921c9b4a4f7c5d463bd70",
+          "removed": true,
+          "cleanup_errors": [],
+          "health_probes": 0,
+          "max_health_probe_s": 0,
+          "source_sha256": {
+            "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+            "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+            "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+          },
+          "manifest_sha256_canonical": "360e60e3bfdd207d8d99ed9cff1340fa1c405001d4fb3a274bb963d1b1a17758",
+          "container_id": "e699d693723593ed593003b6bde9a4a071e3ade31adae4727a627dfa69ca772b",
+          "container_exit": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 137,
+            "Error": "",
+            "StartedAt": "2026-10-16T13:17:29.990662966Z",
+            "FinishedAt": "2026-10-16T13:17:35.561394107Z"
+          }
+        }
+      },
+      "cleanup_errors": [],
+      "health_probes": 19,
+      "max_health_probe_s": 0.03693772095721215,
+      "source_sha256": {
+        "deploy/session/composed_trial.py": "91d73875fc4380c27898101cfe7910c7d76ad16ef1586a791ed6c8ba995b9f9c",
+        "deploy/session/session_client.py": "d8f45d6af4ac508d3fa6f0a4156fa477337639de42a105d66dddb77aacb4107b",
+        "llm-server/deploy/container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+        "llm-server/deploy/container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+        "llm-server/deploy/protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+      },
+      "config_sha256": "3327f0d0356238c97535c81f6c929b2a4d571c14d1d9d9dc728c105689ce3a6a",
+      "manifest_sha256": "1ed4bd56badf4aabac220e54e1e98fbba760337559b203b4b231def63bd0d9a2",
+      "scope": "CPU-only lifecycle fixture: no GPU, model loading, audio, avatar or physical playback",
+      "external_checks": [
+        {
+          "tts_speaker_available": true,
+          "tts_occupancy_observable": false,
+          "avatar_ready": true,
+          "avatar_idle": true
+        },
+        {
+          "tts_speaker_available": true,
+          "tts_occupancy_observable": false,
+          "avatar_ready": true,
+          "avatar_idle": true
+        },
+        {
+          "tts_speaker_available": true,
+          "tts_occupancy_observable": false,
+          "avatar_ready": true,
+          "avatar_idle": true
+        }
+      ],
+      "gpu_admission": "not_applicable_cpu_fixture",
+      "model_hash_checks": "not_applicable_no_model_mounts",
+      "owned_loopback_listeners": [
+        "llm",
+        "asr",
+        "app"
+      ],
+      "completed_cases": [
+        "text",
+        "mixed-audio",
+        "interrupt-recover",
+        "restore-interrupted-history"
+      ],
+      "client_exit_code": 0
+    },
+    "failure": {
+      "status": "failed",
+      "run_id": "102f25113d3341aeada7826a7673c35e",
+      "units": {},
+      "cleanup_errors": [],
+      "health_probes": 1,
+      "max_health_probe_s": 0.02705140400212258,
+      "source_sha256": {
+        "deploy/session/composed_trial.py": "91d73875fc4380c27898101cfe7910c7d76ad16ef1586a791ed6c8ba995b9f9c",
+        "deploy/session/session_client.py": "d8f45d6af4ac508d3fa6f0a4156fa477337639de42a105d66dddb77aacb4107b",
+        "llm-server/deploy/container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+        "llm-server/deploy/container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+        "llm-server/deploy/protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+      },
+      "config_sha256": "3327f0d0356238c97535c81f6c929b2a4d571c14d1d9d9dc728c105689ce3a6a",
+      "manifest_sha256": "1ed4bd56badf4aabac220e54e1e98fbba760337559b203b4b231def63bd0d9a2",
+      "scope": "CPU-only lifecycle fixture: no GPU, model loading, audio, avatar or physical playback",
+      "error_type": "OSError",
+      "error": "[Errno 98] Address already in use"
+    },
+    "diagnosis": "Second batch reused TIME_WAIT ports; no containers created in that batch. Fixture v2 allocates new ports per batch."
+  },
+  "limitations": [
+    "One fixed synthetic audio sample; no human ASR scoring",
+    "No physical microphone/speaker or browser rendering measurement",
+    "Existing host kernel/driver and TTS/3D services, not full clean-host deployment",
+    "TTS list API has no occupancy observation",
+    "Interrupted model output contained Markdown despite spoken-style instruction; response quality not accepted by this protocol trial"
+  ]
+}
