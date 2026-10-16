@@ -38,6 +38,8 @@ DINet 设置 `PIPECAT_DINET_URL=ws://127.0.0.1:19003/api/ws/live_video/<characte
 
 源码包已完成[独立应用环境安装检查](SOURCE-INSTALL-VALIDATION.md)：新建虚拟环境安装100个锁定依赖，203项分层测试及本机页面/能力/健康接口检查通过。该检查复用现有系统库，未安装GPU模型或验证真实推理。
 
+另有[独立应用容器验证](APPLICATION-CONTAINER-VALIDATION.md)：固定 Python 3.11 / Debian 镜像、补充发行文件哈希锁，292 项应用测试、34 项评测测试及实际 HTTP 启动通过。此容器检查没有连接模型；真实模型组合部署仍需单独验收。
+
 1. 安装 Python 3.11、`uv`、Node 18+（仅测试需要），以及系统音频依赖。
 2. 解压源码包，在目录中执行 `bash install_demo.sh`。仅创建本目录 `.venv`，按锁文件安装
    Pipecat 1.10.0 和依赖，下载并校验 NLTK 分句资源。

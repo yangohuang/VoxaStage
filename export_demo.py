@@ -28,6 +28,9 @@ demo.py deployment_check.py test_demo.py test_deployment_check.py
 requirements.in requirements.lock install_demo.sh export_demo.py
 llm-server/deploy/Dockerfile llm-server/deploy/Dockerfile.cached-wheels
 asr-server/deploy/Dockerfile
+deploy/application/Dockerfile deploy/application/acquire_distributions.py
+deploy/application/probe_environment.py deploy/application/requirements.container.lock
+deploy/application/build-bootstrap.lock
 docs/benchmarks/2026-10-16-container-protocol-events.jsonl
 docs/benchmarks/2026-10-16-asr-container-events.jsonl
 .env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
