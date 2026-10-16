@@ -1,0 +1,30 @@
+{
+  "status": "failed",
+  "run_id": "a558c5327d984bb68ab931f585ca0a49",
+  "name": "voxastage-asr-trial-a558c5327d984bb68ab931f585ca0a49",
+  "image_id": "sha256:7cbd3e055a371d25f7ee387eed2e5021486429aa1910092d16024cb487316567",
+  "removed": false,
+  "cleanup_errors": [],
+  "health_probes": 10,
+  "max_health_probe_s": 0.38300441892351955,
+  "source_sha256": {
+    "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+    "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+    "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+  },
+  "manifest_sha256_canonical": "bb08191d896eaedaa482a81dbafd179bdd5b75c343ae6354d537ca6cfaba7a9f",
+  "asr_source_sha256": {
+    "asr-server/deploy/container_trial.py": "7cf8b156917fbaf27618a79c567c209b56c7837312d0218772213408cff6dd9e",
+    "asr-server/deploy/protocol_client.py": "bdf223d02e42691d210871388c77c8a8341b4575315638040681375540cf3b70",
+    "evaluation/asr_capture.py": "cf1f3646c2ca6efc25cc651559cdc41bf5698a657c95df94ec560c46a77e4deb",
+    "evaluation/asr_scoring.py": "3d2b78ffa47e51dbde5640405e7c020ff9593ead5f17403f71b65ee04e143387"
+  },
+  "admitted_free_mib": 18801,
+  "error_type": "FileNotFoundError",
+  "error": "Missing model-00002-of-00002.safetensors in the historical model directory",
+  "publication": {
+    "redaction": "Private absolute model path removed from error; all other fields preserved.",
+    "container_created": false,
+    "recovery": "Used a separate model directory; restored missing shard from previously acquired bytes, then revalidated all 12 original hashes."
+  }
+}

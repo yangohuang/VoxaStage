@@ -1,0 +1,80 @@
+{
+  "scope": "Same 92 completed WAV inputs, ordering and contexts; observational deployment comparison, not a controlled latency experiment or human speech accuracy test.",
+  "baseline": "2026-10-10-asr17-capture.json",
+  "same_input_context_trials": 92,
+  "literal_text_changes": [],
+  "normalized_text_changes": [],
+  "normalization": "nfkc-casefold-no-punctuation-or-whitespace-v1",
+  "scoring_equal": true,
+  "timing_quantiles": "p50 median; p95 nearest rank; measured only, excludes two warmups",
+  "timing": {
+    "previous": {
+      "plain": {
+        "request_wall_s": {
+          "n": 45,
+          "p50_s": 0.10710933301015757,
+          "p95_s": 0.17494894698029384,
+          "min_s": 0.0008124070009216666,
+          "max_s": 0.17637492399080656
+        },
+        "server_elapsed_s": {
+          "n": 45,
+          "p50_s": 0.10561253197374754,
+          "p95_s": 0.17322649699053727,
+          "min_s": 1.3576995115727186e-05,
+          "max_s": 0.17493433598428965
+        }
+      },
+      "terms": {
+        "request_wall_s": {
+          "n": 45,
+          "p50_s": 0.10709664699970745,
+          "p95_s": 0.17529998300597072,
+          "min_s": 0.0008253010164480656,
+          "max_s": 0.1820245799899567
+        },
+        "server_elapsed_s": {
+          "n": 45,
+          "p50_s": 0.10568880799110048,
+          "p95_s": 0.17370180899160914,
+          "min_s": 1.320798764936626e-05,
+          "max_s": 0.1802348159835674
+        }
+      }
+    },
+    "container": {
+      "plain": {
+        "request_wall_s": {
+          "n": 45,
+          "p50_s": 0.1152912910329178,
+          "p95_s": 0.1849817909533158,
+          "min_s": 0.001492857001721859,
+          "max_s": 0.18916129996068776
+        },
+        "server_elapsed_s": {
+          "n": 45,
+          "p50_s": 0.11302932095713913,
+          "p95_s": 0.1823569310363382,
+          "min_s": 2.9577058739960194e-05,
+          "max_s": 0.18726158293429762
+        }
+      },
+      "terms": {
+        "request_wall_s": {
+          "n": 45,
+          "p50_s": 0.1142265999224037,
+          "p95_s": 0.1875886550405994,
+          "min_s": 0.0014102431014180183,
+          "max_s": 0.19726000796072185
+        },
+        "server_elapsed_s": {
+          "n": 45,
+          "p50_s": 0.11238372907973826,
+          "p95_s": 0.18540165398735553,
+          "min_s": 2.818298526108265e-05,
+          "max_s": 0.19462563493289053
+        }
+      }
+    }
+  }
+}

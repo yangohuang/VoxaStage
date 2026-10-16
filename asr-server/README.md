@@ -53,5 +53,6 @@ env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH -u VIRTUAL_ENV -u CONDA_PREFI
 `deploy/Dockerfile` 的 Python 安装步骤禁网，`deploy/build-bootstrap.lock`
 只提取原锁内的 setuptools，用于构建锁定的 sox 源码包。
 
-该镜像尚未完成 GPU 转写验证，不沿用之前虚拟环境的 92 次请求作为本镜像成绩。
-原始文件来源、模型 revision 核验、构建/检查命令与后续门槛见报告。
+该镜像另行完成当前 1.7B 的 92 次真实 GPU 转写，文本与此前同输入结果逐字一致；
+运行前后 12 个模型文件哈希不变，测试容器已清理，日常服务未切换。
+原始文件来源、模型 revision、完整事件、构建/检查命令与验收边界见报告。

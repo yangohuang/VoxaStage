@@ -29,6 +29,7 @@ requirements.in requirements.lock install_demo.sh export_demo.py
 llm-server/deploy/Dockerfile llm-server/deploy/Dockerfile.cached-wheels
 asr-server/deploy/Dockerfile
 docs/benchmarks/2026-10-16-container-protocol-events.jsonl
+docs/benchmarks/2026-10-16-asr-container-events.jsonl
 .env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
 AVATAR-PROTOCOL.md AVATAR-MULTIDRIVER-RESULTS.md
 docs/assets/voxastage-architecture.png docs/assets/voxastage-architecture.svg docs/assets/voxastage-overview.svg docs/assets/streaming-agent-preview.png docs/assets/dinet-kanghui.jpg docs/assets/flashhead-idle.png
