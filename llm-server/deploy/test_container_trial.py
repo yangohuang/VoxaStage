@@ -65,6 +65,27 @@ print(json.dumps({'event':'finished','requests':1}),flush=True)
         c.exec_args = lambda: [sys.executable, '-u', '-c', self.script]
         return c
 
+    def test_overall_deadline_bounds_individually_timely_phases(self):
+        controller = self.controller()
+        controller.manifest['timeouts_s']['overall'] = .05
+        self.script = self.script.replace("print(json.dumps({'event':'complete'", "import time; time.sleep(.15)\nprint(json.dumps({'event':'complete'")
+        result = controller.run()
+        self.assertEqual(result['status'], 'failed')
+        self.assertEqual(result['error_type'], 'TimeoutError')
+        self.assertTrue(result['removed'])
+
+    def test_creation_hook_controls_actual_docker_startup(self):
+        controller = self.controller()
+        original = controller.create_args
+        def create():
+            args = original()
+            args[-1] = 'test-mode'
+            return args
+        controller.create_args = create
+        result = controller.run()
+        self.assertEqual(result['status'], 'passed')
+        self.assertEqual(next(c for c in self.calls if c[1] == 'create')[-1], 'test-mode')
+
     def test_success_persists_output_and_removes_owned_container(self):
         result = self.controller().run()
         self.assertEqual(result['status'], 'passed')

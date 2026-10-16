@@ -42,6 +42,67 @@ def result(text='你好 agent'):
 
 
 class CaptureTests(unittest.IsolatedAsyncioTestCase):
+    async def test_checkpoints_preserve_full_report_when_cancelled_before_next_post(self):
+        with tempfile.TemporaryDirectory() as d:
+            args, _, _ = fixture(d)
+            checkpoints = []
+            second_ready = asyncio.Event()
+            ready_count = 0
+            async def handler(request):
+                return health() if request.method == 'GET' else result()
+            async def observe(event, trial):
+                nonlocal ready_count
+                if event == 'request_ready':
+                    ready_count += 1
+                    if ready_count == 2:
+                        second_ready.set()
+                        await asyncio.Event().wait()
+            task = asyncio.create_task(run(args, transport=httpx.MockTransport(handler), observer=observe,
+                                           checkpoint=lambda report:checkpoints.append(json.loads(json.dumps(report)))))
+            await asyncio.wait_for(second_ready.wait(), 1)
+            task.cancel()
+            with self.assertRaises(asyncio.CancelledError): await task
+            last = checkpoints[-1]
+            self.assertEqual(last['status'], 'aborted')
+            self.assertEqual([t['status'] for t in last['trials']], ['ok', 'aborted'])
+            self.assertIn('cases', last); self.assertIn('variants', last)
+            self.assertIn('source_sha256', last); self.assertIn('health_snapshot_sha256', last)
+
+    async def test_observer_denial_prevents_audio_post_and_retains_failed_trial(self):
+        with tempfile.TemporaryDirectory() as d:
+            args, _, _ = fixture(d)
+            requests = []
+            async def handler(request):
+                requests.append(request.method)
+                return health() if request.method == 'GET' else result()
+            async def observe(event, trial):
+                if event == 'request_ready':
+                    raise RuntimeError('host_denied')
+            report = await run(args, transport=httpx.MockTransport(handler), observer=observe)
+            self.assertEqual(requests, ['GET'])
+            self.assertEqual(report['status'], 'failed')
+            self.assertEqual(report['trials'][0]['status'], 'aborted')
+
+    async def test_observer_receives_ordered_actual_trials_and_can_stop_on_error(self):
+        with tempfile.TemporaryDirectory() as d:
+            args, _, _ = fixture(d)
+            events = []
+            posts = []
+            async def handler(request):
+                if request.method == 'GET': return health()
+                posts.append(request.content)
+                return httpx.Response(500, json={'error': 'injected'})
+            async def observe(event, trial):
+                events.append((event, dict(trial)))
+                if event == 'complete' and trial['status'] != 'ok':
+                    raise RuntimeError('stop_failed_batch')
+            report = await run(args, transport=httpx.MockTransport(handler), observer=observe)
+            self.assertEqual(len(posts), 1)
+            self.assertEqual([e[0] for e in events], ['request_ready', 'complete'])
+            self.assertEqual(events[-1][1]['http_status'], 500)
+            self.assertEqual(report['trials'][0]['status'], 'error')
+            self.assertEqual(report['status'], 'failed')
+
     def test_header_whitespace_rejected_before_http(self):
         for context in (' agent', 'agent ', ' ', '\tagent'):
             raw=json.dumps(dict(version=1,variants=[dict(id='invalid',context=context)])).encode()

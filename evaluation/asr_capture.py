@@ -148,7 +148,7 @@ def validate_args(args):
         raise ValueError('invalid run settings')
 
 
-async def run(args, *, transport=None):
+async def run(args, *, transport=None, observer=None, checkpoint=None):
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=False)
     path = output / 'results.json'
@@ -157,7 +157,11 @@ async def run(args, *, transport=None):
                   scope='Completed WAV request/response timing; not streaming input or physical microphone latency.',
                   trials=[], source_sha256={name: digest(Path(__file__).with_name(name).read_bytes())
                     for name in ('asr_capture.py', 'asr_scoring.py')})
-    persist(path, report)
+    def save_report():
+        persist(path, report)
+        if checkpoint is not None:
+            checkpoint(report)
+    save_report()
     try:
         validate_args(args)
         manifest = bounded(args.manifest, MAX_JSON)
@@ -168,7 +172,7 @@ async def run(args, *, transport=None):
                       expected_model=args.expected_model, declared_model_revision=args.model_revision,
                       reported_model_revision=None, rounds=args.rounds, timeout_s=args.timeout,
                       order='one warmup per variant, then rotate variants by round and case index')
-        persist(path, report)
+        save_report()
         async with httpx.AsyncClient(transport=transport, trust_env=False, follow_redirects=False,
                                      timeout=args.timeout) as client:
             endpoint = args.url.rstrip('/')
@@ -204,7 +208,14 @@ async def run(args, *, transport=None):
                              audio_sha256=public['audio_sha256'], context_sha256=variant['context_sha256'],
                              status='running', text=None)
                 report['trials'].append(trial)
-                persist(path, report)
+                save_report()
+                if observer is not None:
+                    try:
+                        await observer('request_ready', dict(trial))
+                    except BaseException:
+                        trial['status'] = 'aborted'
+                        save_report()
+                        raise
                 started = time.perf_counter()
                 try:
                     response = await request_json(client, 'POST', endpoint + '/transcribe', timeout=args.timeout,
@@ -225,7 +236,9 @@ async def run(args, *, transport=None):
                     raise
                 finally:
                     trial['request_wall_s'] = time.perf_counter() - started
-                    persist(path, report)
+                    save_report()
+                if observer is not None:
+                    await observer('complete', dict(trial))
                 if phase == 'measured':
                     scoring.append(dict(case_id=f'{public["id"]}@r{repeat}', variant=variant['id'],
                         reference=public['reference'], reference_kind=public['reference_kind'],
@@ -239,7 +252,7 @@ async def run(args, *, transport=None):
         report['status'] = 'aborted'
         raise
     finally:
-        persist(path, report)
+        save_report()
     return report
 
 
