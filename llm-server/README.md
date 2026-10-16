@@ -23,98 +23,28 @@ The service listens only on localhost. `GET /health` reports readiness and the i
 
 The application uses `PIPECAT_LLM_URL=http://127.0.0.1:18311`. A ready health response alone does not prove usable replies, tool correctness or answer quality. This installation lock does not include a GPU driver or system libraries, and does not validate a fresh operating system. See the [validation report](../docs/LLM-STANDALONE-VALIDATION.md): 63 isolated packages, 21 protocol-stage generations, persistent service restoration and a separate three-round real retrieval regression. Original failed and incorrect-answer cases remain disclosed.
 
-## Container validation in progress
+## Isolated container validation
 
-`deploy/Dockerfile` starts from a digest-pinned Python3.12 Debian image, installs
-`libgomp1`, and installs the same hash-locked packages into `/opt/worker`. Runtime
-uses a non-root user and isolated Python mode. The initial build timed out while downloading a dependency. A retry with a120s
-read timeout received only part of a large wheel and correctly failed its hash
-check. Both failures are retained.
-This image has not yet passed the frozen17-request protocol check. See the
-[deployment plan](../docs/plans/2026-10-16-container-deployment.md) for scope and
-remaining checks.
+The hash-locked worker passed a fresh container deployment and 17 real protocol
+requests on 2026-10-16: 14 full replies and 3 stream closures followed by successful
+recovery. The initial startup failure and unsuccessful build attempts are retained.
+See the [container validation report](../docs/CONTAINER-LLM-VALIDATION.md) for raw
+records, environment provenance, minimal build/run commands and limitations.
 
-Before running any GPU trial, the host controller must recheck daily-service
-health after model hashing, continuously monitor occupancy, and stop only its
-own container on a failed check. `deploy/container_guard.py` provides those
-monitoring and ownership primitives; it is not the complete trial controller.
-Every mutation verifies full container ID, immutable image ID and a nonempty
-run label. A failed probe remains failed even if the service later becomes idle.
-The200ms interval is between completed bounded probes, not a maximum reaction
-time.
+`deploy/Dockerfile.cached-wheels` is the validated installation path. It requires
+all 63 original locked wheels and disables network during Python installation.
+Base-image and APT retrieval still require network. `deploy/Dockerfile` provides
+the online-install alternative; that path encountered download failures in this
+run. Both use the same lock, isolated `/opt/worker` environment, non-root numeric
+user, and writable cache identity (`USER=voxastage`, `HOME=/tmp`). Weights remain
+outside the image and are mounted read-only.
 
-Run the CPU unit checks without Docker:
+`deploy/container_trial.py` supervises the actual GPU protocol. It checks daily
+service occupancy, bounds health probes, preserves partial output and only cleans
+up containers matching the full ID, image and run label. The separate
+`deploy/check_guard_docker.py` exercises CPU Docker faults. The report gives their
+validation boundaries; passing one worker does not validate an entire deployment.
 
-```sh
-python llm-server/deploy/test_container_guard.py
-```
-
-An optional Docker fault drill creates network-isolated CPU-only containers and
-checks occupancy/timeout aborts, rejection of a different run label, retained
-partial logs, and cleanup. Supply the immutable ID of an already-present Python
-image and a new output directory:
-
-```sh
-python llm-server/deploy/check_guard_docker.py \
-  --image "$PYTHON_IMAGE_ID" --output /tmp/voxastage-guard-drill-new
-```
-
-This drill does not load a model or validate GPU inference. Container validation
-also shares the host kernel and GPU driver, and cannot replace full installation
-on an independent blank GPU host.
-
-For unreliable large downloads, `deploy/Dockerfile.cached-wheels` accepts a
-complete `wheels/` directory in its minimal build context. It mounts original wheel files
-read-only during installation, disables network for that build step, and uses
-`--no-index --find-links`; all packages still have
-to match the unchanged lock hashes. This does not copy an installed host
-environment. Missing wheels fail the offline install. Keep wheel
-files out of git. Record their filenames, sizes and SHA256 before transfer and
-verify them again on the build host. BuildKit is required for this variant.
-
-The CPU Docker fault drill passed both injected cases on2026-10-16. Both
-containers rejected a different run label, retained their logs, stopped once
-and were removed. Docker escalated after the configured5s stop timeout
-(exit137), so this is evidence of bounded termination, not graceful shutdown.
-It does not cover controller TERM/HUP, Docker creation timeouts or GPU work.
-
-The partial-cache attempt still selected an index URL for a duplicate version
-and was stopped (exit130). The revised build requires all63 locked packages
-in the wheelhouse before it starts; no fallback network download is allowed
-during Python dependency installation. APT/base-image retrieval remains online.
-
-`deploy/protocol_client.py` is the inside-container collector for the frozen
-17-request manifest. It emits JSONL evidence immediately, including malformed
-raw lines, then asks the host to acknowledge each case before posting. Full
-requests have a wall timeout; cancellation requires busy-at-first-text evidence,
-then an idle health response before the next request. These are client/HTTP
-observations, not internal GPU cancellation events. Run its CPU transport tests
-with `python llm-server/deploy/test_protocol_client.py`. The complete host
-controller is still required before an actual GPU trial.
-
-The complete-wheelhouse build succeeded and a CPU-only environment probe
-verified all63 pinned versions and their locations under `/opt/worker`, isolated
-Python mode, non-root execution, `pip check`, and imports of Torch, Transformers,
-BitsAndBytes and Accelerate. See the [environment evidence](../docs/benchmarks/2026-10-16-container-environment.json)
-and [wheel manifest](../docs/benchmarks/2026-10-16-container-wheels.json).
-This evidence does not yet include model loading or generation.
-
-`deploy/container_trial.py` is the host controller under final review. It
-rechecks service health after model hashing and before startup, serializes
-startup with abort, and captures client stdout incrementally. Each complete
-health probe has a5s wall deadline and a64KiB response limit; the200ms monitor
-interval is a delay between probes. Its CLI expects two loopback health URLs
-and a new output directory. A timed-out create is discovered by a unique name,
-then cleanup still verifies full ID, image and run label. An unresolved create
-outcome is recorded as failure and must be inspected before any retry.
-
-The first model startup exposed a lazy-import gap in the initial CPU probe:
-`AutoModelForCausalLM` imported Torch Dynamo, whose cache initialization called
-`getpass.getuser()` for numeric UID65532 without a passwd entry. The container
-exited before any protocol request. Its [failed batch](../docs/benchmarks/2026-10-16-container-startup-failure.json)
-is retained separately. Both Dockerfiles now default to `USER=voxastage` and
-`HOME=/tmp`; the controller passes the same values explicitly. A CPU-only probe
-with those values passed the actual AutoConfig/AutoModelForCausalLM/AutoTokenizer
-imports and checked that the Torch cache directory is under `/tmp`. GPU protocol
-validation must still be rerun as a new complete batch; no answers were selected
-or discarded from the failed startup.
+The container shares the host kernel and GPU driver. Direct HTTP first-text timing
+is not microphone-to-audio latency, and protocol success is not answer-quality
+acceptance. ASR, TTS, avatar workers and independent-host validation remain separate.
