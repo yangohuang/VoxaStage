@@ -1,0 +1,458 @@
+{
+  "reviewer": "AI assistant independent semantic review; not human or blind evaluation",
+  "source_sha256": "c96b5490f00423faf55e6a50f2b29c4dfbbb188b9ee5f3d9ec79e5b51e1f92b3",
+  "manifest_sha256": "40ee78d5362da4493ffbd064a98ed9859776d315482e410a697d3e25092b803e",
+  "policy": "Checks follow each predeclared input rubric in order. EOS indicates generation termination only. Semantically clear paraphrases count; partial mentions do not satisfy required diagnostic steps. Formatting and brevity issues are noted but do not add rubric items. No benchmark or deployment claim.",
+  "rows": [
+    {
+      "case": "compare-original",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": "比较了两类架构、可调试性和错误定位；延迟仍按架构给出方向，未说明流式实现、模型/硬件等条件会改变排序。可能/通常是弱限定，不能完整满足实现依赖这一项。Markdown另违反SYSTEM风格，未加入rubric扣分。"
+    },
+    {
+      "case": "compare-original",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": "比较了两类架构、可调试性和错误定位；延迟仍按架构给出方向，未说明流式实现、模型/硬件等条件会改变排序。可能/通常是弱限定，不能完整满足实现依赖这一项。Markdown另违反SYSTEM风格，未加入rubric扣分。"
+    },
+    {
+      "case": "compare-original",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": "比较了两类架构、可调试性和错误定位；延迟仍按架构给出方向，未说明流式实现、模型/硬件等条件会改变排序。可能/通常是弱限定，不能完整满足实现依赖这一项。Markdown另违反SYSTEM风格，未加入rubric扣分。"
+    },
+    {
+      "case": "compare-original",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": "比较了两类架构、可调试性和错误定位。端到端优化后延迟更低给出了弱实施条件，但仍预设相对级联更低，没有说明具体实现/测量会改变排序，因此实现依赖项未完全满足。Markdown风格问题不加入rubric。"
+    },
+    {
+      "case": "compare-original",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": "比较了两类架构、可调试性和错误定位；延迟仍按架构给出方向，未说明流式实现、模型/硬件等条件会改变排序。可能/通常是弱限定，不能完整满足实现依赖这一项。Markdown另违反SYSTEM风格，未加入rubric扣分。"
+    },
+    {
+      "case": "triage-original",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": "已知ASR文本正确却从复查ASR开始；没有核对实际送入LLM的消息/历史，没有检查system指令冲突，也未给出脱离链路单测模型的方法。仅建议调整提示词或检查输出不等同于这些诊断步骤。"
+    },
+    {
+      "case": "triage-original",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": "已知ASR文本正确却从复查ASR开始；没有核对实际送入LLM的消息/历史，没有检查system指令冲突，也未给出脱离链路单测模型的方法。仅建议调整提示词或检查输出不等同于这些诊断步骤。"
+    },
+    {
+      "case": "triage-original",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": "已知ASR文本正确却从复查ASR开始；没有核对实际送入LLM的消息/历史，没有检查system指令冲突，也未给出脱离链路单测模型的方法。仅建议调整提示词或检查输出不等同于这些诊断步骤。"
+    },
+    {
+      "case": "triage-original",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": "已知ASR文本正确却从复查ASR开始；没有核对实际送入LLM的消息/历史，没有检查system指令冲突，也未给出脱离链路单测模型的方法。仅建议调整提示词或检查输出不等同于这些诊断步骤。 ASR误识别例子的原句与识别结果完全相同，也无法支持其诊断。"
+    },
+    {
+      "case": "triage-original",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": "已知ASR文本正确却从复查ASR开始；没有核对实际送入LLM的消息/历史，没有检查system指令冲突，也未给出脱离链路单测模型的方法。仅建议调整提示词或检查输出不等同于这些诊断步骤。 ASR误识别例子的原句与识别结果完全相同，也无法支持其诊断。"
+    },
+    {
+      "case": "constraints-original",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": "没有建议云API或新硬件，并涉及显存/延迟；但三条围绕假定组件的优化，没有形成改善回答质量的三个可执行步骤，也没有固定问题集/正确性对照等质量测量。 假定Pipecat可按需加载模型部分，且降低渲染分辨率不直接改善文本回答质量。"
+    },
+    {
+      "case": "constraints-original",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": "没有建议云API或新硬件，并涉及显存/延迟；但三条围绕假定组件的优化，没有形成改善回答质量的三个可执行步骤，也没有固定问题集/正确性对照等质量测量。 假定Pipecat可按需加载模型部分，且降低渲染分辨率不直接改善文本回答质量。"
+    },
+    {
+      "case": "constraints-original",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": "没有建议云API或新硬件，并涉及显存/延迟；但三条围绕假定组件的优化，没有形成改善回答质量的三个可执行步骤，也没有固定问题集/正确性对照等质量测量。 限制ASR与TTS处理深度、为不同渲染器缓存常用表情缺乏明确定义或适用前提。"
+    },
+    {
+      "case": "constraints-original",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": "没有建议云API或新硬件，并涉及显存/延迟；但三条围绕假定组件的优化，没有形成改善回答质量的三个可执行步骤，也没有固定问题集/正确性对照等质量测量。 2048上下文和FP16是具体设置，但未确认现有组件适用性，更未建立其能提高回答质量的依据。"
+    },
+    {
+      "case": "constraints-original",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": "没有建议云API或新硬件，并涉及显存/延迟；但三条围绕假定组件的优化，没有形成改善回答质量的三个可执行步骤，也没有固定问题集/正确性对照等质量测量。 Pipecat显存复用策略未说明实际实现；把图像分辨率和上下文长度称为推理精度也不准确。"
+    },
+    {
+      "case": "goal-correction",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "正确采用松鼠和450，不保留旧值；改名/预算表述属于当前对话更新，未声称执行外部工具。存在多余确认语句，未严格只报代号与预算，此项不在固定rubric内。"
+    },
+    {
+      "case": "goal-correction",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "正确采用松鼠和450，不保留旧值；改名/预算表述属于当前对话更新，未声称执行外部工具。存在多余确认语句，未严格只报代号与预算，此项不在固定rubric内。"
+    },
+    {
+      "case": "goal-correction",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "正确采用松鼠和450，不保留旧值；改名/预算表述属于当前对话更新，未声称执行外部工具。存在多余确认语句，未严格只报代号与预算，此项不在固定rubric内。"
+    },
+    {
+      "case": "goal-correction",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "正确采用松鼠和450，不保留旧值；改名/预算表述属于当前对话更新，未声称执行外部工具。存在多余确认语句，未严格只报代号与预算，此项不在固定rubric内。"
+    },
+    {
+      "case": "goal-correction",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "正确采用松鼠和450，不保留旧值；改名/预算表述属于当前对话更新，未声称执行外部工具。存在多余确认语句，未严格只报代号与预算，此项不在固定rubric内。"
+    },
+    {
+      "case": "given-measurements",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        true
+      ],
+      "notes": "反向选择P95更差的级联；虽引用1450与1100，未据较低P95选择端到端，也未承认级联P50更低。端到端整体更快的说法忽略P50；未外推到其他硬件。"
+    },
+    {
+      "case": "given-measurements",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        true
+      ],
+      "notes": "反向选择P95更差的级联；虽引用1450与1100，未据较低P95选择端到端，也未承认级联P50更低。端到端整体更快的说法忽略P50；未外推到其他硬件。"
+    },
+    {
+      "case": "given-measurements",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        false,
+        false,
+        true
+      ],
+      "notes": "反向选择P95更差的级联；虽引用1450与1100，未据较低P95选择端到端，也未承认级联P50更低。端到端整体更快的说法忽略P50；未外推到其他硬件。"
+    },
+    {
+      "case": "given-measurements",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        false,
+        false,
+        true
+      ],
+      "notes": "反向选择P95更差的级联；虽引用1450与1100，未据较低P95选择端到端，也未承认级联P50更低。端到端整体更快的说法忽略P50；未外推到其他硬件。 此条还明确写出不能推断其他硬件性能。"
+    },
+    {
+      "case": "given-measurements",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        true
+      ],
+      "notes": "反向选择P95更差的级联；虽引用1450与1100，未据较低P95选择端到端，也未承认级联P50更低。端到端整体更快的说法忽略P50；未外推到其他硬件。"
+    },
+    {
+      "case": "missing-evidence",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "notes": "没有编造音画偏差数值，承认证据不足以判断是否超过最新方法；建议查日志/联系团队/查文档报告，没有提出新增同步测量或匹配条件的基线比较。"
+    },
+    {
+      "case": "missing-evidence",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "notes": "没有编造音画偏差数值，承认证据不足以判断是否超过最新方法；建议查日志/联系团队/查文档报告，没有提出新增同步测量或匹配条件的基线比较。"
+    },
+    {
+      "case": "missing-evidence",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "notes": "没有编造音画偏差数值，承认证据不足以判断是否超过最新方法；建议查日志/联系团队/查文档报告，没有提出新增同步测量或匹配条件的基线比较。"
+    },
+    {
+      "case": "missing-evidence",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "没有编造数值，承认证据不足；在明确讨论音画偏差与延迟的上下文中提出实际测试获取数据，语义上满足测量建议，但未细化测量方案或对照方法。"
+    },
+    {
+      "case": "missing-evidence",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "没有编造数值，承认证据不足；在明确讨论音画偏差与延迟的上下文中提出实际测试获取数据，语义上满足测量建议，但未细化测量方案或对照方法。"
+    },
+    {
+      "case": "semantic-interruption",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "首句继续可对应第一声嗯；第二次将介绍流式ASR误解为切换执行模块/工具流程，未清楚表达停止旧回复并转向讲解。旧结果不再作为当前输入或不再处理，可满足防污染项。"
+    },
+    {
+      "case": "semantic-interruption",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "首句继续可对应第一声嗯；第二次将介绍流式ASR误解为切换执行模块/工具流程，未清楚表达停止旧回复并转向讲解。旧结果不再作为当前输入或不再处理，可满足防污染项。"
+    },
+    {
+      "case": "semantic-interruption",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "第一句继续对应嗯；第二次优先新指令并转向流式ASR讲解，语义上满足停止旧回复/切换话题；停止旧工具结果处理可满足防污染。旧工具结果应被终止用语不精确，但未建议让其进入新回合。"
+    },
+    {
+      "case": "semantic-interruption",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "首句继续可对应第一声嗯；第二次将介绍流式ASR误解为切换执行模块/工具流程，未清楚表达停止旧回复并转向讲解。旧结果不再作为当前输入或不再处理，可满足防污染项。"
+    },
+    {
+      "case": "semantic-interruption",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "notes": "第一声嗯继续听，第二次优先新指令并调整讲解内容，语义上满足前两项；将嗯错当旧工具结果，没有说明真正旧工具结果的隔离/丢弃，防污染项不满足。"
+    },
+    {
+      "case": "visual-temporal-evidence",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "正确复述最新记录中的蓝杯与红杯移走，没有添加未见物体；但将12秒记录用于断言13秒当前状态，未说明无法保证实时状态，部分输出还误称13秒提问为最新记录。"
+    },
+    {
+      "case": "visual-temporal-evidence",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "正确复述最新记录中的蓝杯与红杯移走，没有添加未见物体；但将12秒记录用于断言13秒当前状态，未说明无法保证实时状态，部分输出还误称13秒提问为最新记录。"
+    },
+    {
+      "case": "visual-temporal-evidence",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "正确复述最新记录中的蓝杯与红杯移走，没有添加未见物体；但将12秒记录用于断言13秒当前状态，未说明无法保证实时状态，部分输出还误称13秒提问为最新记录。"
+    },
+    {
+      "case": "visual-temporal-evidence",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "正确复述最新记录中的蓝杯与红杯移走，没有添加未见物体；但将12秒记录用于断言13秒当前状态，未说明无法保证实时状态，部分输出还误称13秒提问为最新记录。"
+    },
+    {
+      "case": "visual-temporal-evidence",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "正确复述最新记录中的蓝杯与红杯移走，没有添加未见物体；但将12秒记录用于断言13秒当前状态，未说明无法保证实时状态，部分输出还误称13秒提问为最新记录。"
+    }
+  ]
+}
