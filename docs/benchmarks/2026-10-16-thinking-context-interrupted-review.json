@@ -1,0 +1,548 @@
+{
+  "source_sha256": "eb049e26c92317ca676cb6f66f8d2ea84050f227131d84067638eb5d8cf4b630",
+  "manifest_sha256": "40cf30d070ccb72bbff8eeb18db675b43be5228d42c6ae41c085a58087e383fe",
+  "reviewer": "independent assistant review, not human blind evaluation",
+  "scope": "Only 40 complete rows of the interrupted attempt; final_text only. Failed and pending rows are unscored. Not the primary completed experiment.",
+  "checks_order": "Boolean list follows each case rubric order in the preregistered manifest.",
+  "scoring_notes": [
+    "Implementation-dependent latency must be explained; hedged architecture ranking alone is insufficient. Incomplete caveat in compare-original/production-thinking/43 is recorded as ambiguous and not credited.",
+    "For triage, inspecting actual LLM input/history and instructions qualifies; merely checking whether an answer matches intent does not establish an isolated model test.",
+    "Three actionable steps need three concrete operations applicable to the stated task; feasibility errors are not credited. Quality measurement requires a measurement or evaluation proposal, not a claimed accuracy number.",
+    "Conversational renaming or acknowledging remembered context does not by itself claim an external tool or persistent-memory action.",
+    "P95 tail wording is allowed as informal language unless explicitly treated as a maximum; unsupported overall speed/capability claims fail the no-generalization criterion."
+  ],
+  "rows": [
+    {
+      "case": "compare-original",
+      "condition": "production-direct",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "将端到端延迟低作为无条件架构结论，未说明实现或模型差异；使用Markdown违背SYSTEM格式要求。"
+      ]
+    },
+    {
+      "case": "compare-original",
+      "condition": "production-direct",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "虽以“可能/通常”弱化方向，仍未说明延迟取决于实现；使用Markdown。"
+      ]
+    },
+    {
+      "case": "compare-original",
+      "condition": "production-thinking",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "将多阶段必然高延迟、单模型必然低延迟直接等同，未给实现条件。"
+      ]
+    },
+    {
+      "case": "compare-original",
+      "condition": "production-thinking",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "延迟段仍断言端到端更低；“但可能因模型复杂度增加”语句未完成，无法明确判断其在限定延迟结论，故该项不计通过。调试困难归因训练数据不足缺少依据。使用Markdown。"
+      ]
+    },
+    {
+      "case": "compare-original",
+      "condition": "general-direct",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "无依据宣称级联因模块快而低延迟，端到端因整体处理而高延迟。使用Markdown。"
+      ]
+    },
+    {
+      "case": "compare-original",
+      "condition": "general-direct",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "“可能更高/通常更低”未解释实现依赖；使用Markdown。"
+      ]
+    },
+    {
+      "case": "compare-original",
+      "condition": "general-thinking",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "断言端到端延迟更低；额外错误：端到端对话中断不必然需要重新训练模型。"
+      ]
+    },
+    {
+      "case": "compare-original",
+      "condition": "general-thinking",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "将级联延迟较高、端到端延迟低作为固定结论。"
+      ]
+    },
+    {
+      "case": "triage-original",
+      "condition": "general-thinking",
+      "seed": 43,
+      "checks": [
+        true,
+        false,
+        false
+      ],
+      "notes": [
+        "检查历史上下文传递可计输入检查；未检查SYSTEM或指令冲突，未提出单独测试模型。天气与温度查询重叠，示例不足以证明意图错误。"
+      ]
+    },
+    {
+      "case": "triage-original",
+      "condition": "general-thinking",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        false
+      ],
+      "notes": [
+        "检查上下文传递；未检查SYSTEM或指令冲突，未提出单独测试模型。天气后追问“明天”通常仍指明天天气，示例把它解释为日期，语义不合理。"
+      ]
+    },
+    {
+      "case": "triage-original",
+      "condition": "general-direct",
+      "seed": 43,
+      "checks": [
+        true,
+        false,
+        false
+      ],
+      "notes": [
+        "检查历史可计第一项；忽略ASR转写已正确前提，重复要求核对识别；缺少提示指令排查和单独模型测试。做蛋糕后明确问煮饭是话题变化，不应一概归因未关联历史。"
+      ]
+    },
+    {
+      "case": "triage-original",
+      "condition": "general-direct",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": [
+        "围绕说话关键词、设备连接、语音设置排查，偏离转写正确而回答跑题的既知前提；未覆盖三项rubric。"
+      ]
+    },
+    {
+      "case": "triage-original",
+      "condition": "production-thinking",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "notes": [
+        "核对ASR文本传给LLM及LLM指令均有明确检查对象，可计前两项；第三步转向输出格式，没有隔离测试LLM。未使用换行符必然截断的例子依赖未给出的解析器假设。"
+      ]
+    },
+    {
+      "case": "triage-original",
+      "condition": "production-thinking",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": [
+        "重查ASR违反既知前提，且“天气怎么样”被识别成同一句不能导致所述识别偏差；仅要求验证意图理解，不构成实际输入/历史检查或单独模型测试；TTS转语言不是本题已知证据。"
+      ]
+    },
+    {
+      "case": "triage-original",
+      "condition": "production-direct",
+      "seed": 43,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": [
+        "重查ASR忽略前提；“需调整提示词”是泛泛处理建议，未检查实际SYSTEM或指令冲突；查看LLM输出不等于提出单独输入重放/隔离测试。"
+      ]
+    },
+    {
+      "case": "triage-original",
+      "condition": "production-direct",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": [
+        "机械检查ASR、LLM、TTS，忽略ASR正确前提；未检查实际输入/历史或指令冲突，也未提出单独测试模型。"
+      ]
+    },
+    {
+      "case": "constraints-original",
+      "condition": "production-direct",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "给出量化、上下文限长、混合精度三个操作，但没有质量测量；没有依据保证这些速度/显存措施显著提升回答质量，限长还可能损失上下文。"
+      ]
+    },
+    {
+      "case": "constraints-original",
+      "condition": "production-direct",
+      "seed": 43,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": [
+        "没有质量测量；所谓Pipecat中ASR/TTS处理深度及DINet/StreamingTalker常用表情预加载缺少具体、已知可执行机制，不能计为三个可执行步骤；渲染优化不能据此改善回答质量。"
+      ]
+    },
+    {
+      "case": "constraints-original",
+      "condition": "production-thinking",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": [
+        "额外事实错误：量化改变位宽，不会把7B参数变成4B参数。合并ASR和LLM中间结果避免重复解码的操作不明确；加入蒸馏却未给可执行方案。没有质量测量。"
+      ]
+    },
+    {
+      "case": "constraints-original",
+      "condition": "production-thinking",
+      "seed": 43,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": [
+        "INT8的70B权重约70GB，仅权重已超过24GB，所举单卡配置不可执行；“90%以上准确率”“提速20%”均无测量依据。FFmpeg处理音频不等于运行ASR。无质量测量。"
+      ]
+    },
+    {
+      "case": "constraints-original",
+      "condition": "general-direct",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "量化、剪枝、缓存是可识别的操作，虽前两步重叠仍有三个操作；全部着重速度/大小，未建立回答质量测量。"
+      ]
+    },
+    {
+      "case": "constraints-original",
+      "condition": "general-direct",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "量化、剪枝、缓存/批处理构成可识别操作；未测量回答质量。批处理可能提高吞吐但不保证单次响应更快，不能直接把它作为已知延迟收益。"
+      ]
+    },
+    {
+      "case": "constraints-original",
+      "condition": "general-thinking",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": [
+        "已有语音助手的推理优化中加入混合精度训练，未说明训练方案或为什么能改善现有回答，不能计三个适用的可执行步骤；假设现状FP32、batch32没有输入依据；无质量测量。"
+      ]
+    },
+    {
+      "case": "constraints-original",
+      "condition": "general-thinking",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "量化、缓存、采样率调整是三个具体操作，且提醒ASR兼容性；仍没有回答质量测量。降采样可能损失语音信息，没有证明它能改善回答质量。"
+      ]
+    },
+    {
+      "case": "goal-correction",
+      "condition": "general-thinking",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": []
+    },
+    {
+      "case": "goal-correction",
+      "condition": "general-thinking",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": [
+        "“记住了”按当前会话更新理解，不视作声称外部持久化动作；比“只报当前代号和预算”多了确认句。"
+      ]
+    },
+    {
+      "case": "goal-correction",
+      "condition": "general-direct",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": [
+        "正确更新会话事实，没有外部动作声称；重复确认超出“只报”要求。"
+      ]
+    },
+    {
+      "case": "goal-correction",
+      "condition": "general-direct",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": [
+        "正确更新会话事实，没有外部动作声称；重复确认超出“只报”要求。"
+      ]
+    },
+    {
+      "case": "goal-correction",
+      "condition": "production-thinking",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": []
+    },
+    {
+      "case": "goal-correction",
+      "condition": "production-thinking",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": [
+        "“已更改”按会话中代号更新理解，不视作外部工具动作；额外后续承诺超出“只报”要求。"
+      ]
+    },
+    {
+      "case": "goal-correction",
+      "condition": "production-direct",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": [
+        "正确给出当前事实；“当前代号和预算已报”是本回复实际动作，非编造外部动作，但属冗余。"
+      ]
+    },
+    {
+      "case": "goal-correction",
+      "condition": "production-direct",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": [
+        "正确给出当前事实；“当前代号和预算已报”是本回复实际动作，非编造外部动作，但属冗余。"
+      ]
+    },
+    {
+      "case": "given-measurements",
+      "condition": "production-direct",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": [
+        "正确抄出P95却反向选择更慢的级联，理由自相矛盾；不承认级联P50更低；“端到端整体更快”超出给定两分位数证据。"
+      ]
+    },
+    {
+      "case": "given-measurements",
+      "condition": "production-direct",
+      "seed": 43,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": [
+        "反向选择P95更高的级联；未承认级联P50优势；虽明确不推断其他硬件，“端到端整体更快”仍超过数据能支持的结论。"
+      ]
+    },
+    {
+      "case": "given-measurements",
+      "condition": "production-thinking",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": [
+        "正确选择较低P95并承认P50取舍；“极端情况下”宜表述为给定P95对应的尾部体验，P95不提供最大延迟保证。此处未明说最大值，第三项计通过。"
+      ]
+    },
+    {
+      "case": "given-measurements",
+      "condition": "production-thinking",
+      "seed": 43,
+      "checks": [
+        true,
+        false,
+        false
+      ],
+      "notes": [
+        "正确选择较低P95，但漏掉级联P50更快；额外错误：把级联/端到端路径说成不同层的框架，混淆架构、Pipecat与MiniCPM-o；“端到端无法替代级联多模态能力”没有给定证据支持。"
+      ]
+    },
+    {
+      "case": "given-measurements",
+      "condition": "general-direct",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        true
+      ],
+      "notes": [
+        "明知级联P95更高仍选择级联，方向错误；遗漏级联P50更低；明确限定本机本批输入。"
+      ]
+    },
+    {
+      "case": "given-measurements",
+      "condition": "general-direct",
+      "seed": 43,
+      "checks": [
+        false,
+        false,
+        true
+      ],
+      "notes": [
+        "明知级联P95更高仍选择级联，方向错误；遗漏级联P50更低；明确限定本机本批输入。"
+      ]
+    },
+    {
+      "case": "given-measurements",
+      "condition": "general-thinking",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": [
+        "正确选择较低P95且限定给定数据；未承认级联P50优势。“极端延迟”是宽泛措辞，不应解释为最大延迟已知。"
+      ]
+    },
+    {
+      "case": "given-measurements",
+      "condition": "general-thinking",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "notes": [
+        "选择与P50取舍正确；额外错误：把P95的1450ms称为“最慢的1450ms”，P95不等于最大值。两分位数不足以断言整个延迟分布波动已减少。"
+      ]
+    }
+  ]
+}
