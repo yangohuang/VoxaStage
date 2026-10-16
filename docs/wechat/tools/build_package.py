@@ -72,13 +72,21 @@ def main():
             text=f'# {title}\n\n![第{num}篇封面](../assets/{num}-cover.png)\n\n{prerequisite}\n\n'+body+refs
         renderer=Inline(source);renderer.feed(markdown.markdown(text,extensions=['tables','fenced_code']))
         name=destination(source,source.name)
-        (OUT/name).write_text(html_page(title,''.join(renderer.parts)))
+        toolbar=''
+        if '<!-- article:begin -->' in source.read_text():
+            original='source/'+source.relative_to(ROOT).as_posix()
+            toolbar=f'<nav aria-label="稿件格式" style="font-size:14px;margin-bottom:20px;color:#476579"><a href="index.html">系列目录</a> · <a href="{original}" download="{source.name}">下载原始 Markdown</a></nav>'
+        (OUT/name).write_text(html_page(title,toolbar+''.join(renderer.parts)))
     # The landing page uses cards, avoiding wide editorial tables on phones.
     entries=[]
     for item in series['articles']:
         url=destination(ROOT/'README.md',item['file'])
         label='完整稿' if item['status']=='draft' else '选题简报'
-        entries.append(f'<p style="{STYLE["p"]}"><a style="{STYLE["a"]}" href="{url}">{escape(item["id"]+" · "+item["title"])}</a><br><small>{label} · 尚未在公众号发表</small></p>')
+        formats=''
+        if item['status']=='draft':
+            original='source/'+item['file']
+            formats=f'<br><a href="{url}">阅读 HTML</a> · <a href="{original}" download="{Path(item["file"]).name}">原始 Markdown</a>'
+        entries.append(f'<p style="{STYLE["p"]}"><a style="{STYLE["a"]}" href="{url}">{escape(item["id"]+" · "+item["title"])}</a><br><small>{label} · 尚未在公众号发表</small>{formats}</p>')
     landing=f'<h1 style="{STYLE["h1"]}">{escape(series["series"])}</h1><p style="{STYLE["p"]}">前三篇完整稿与素材，后续选题简报。此页为离线阅读入口，不是公众号页面。</p>'+''.join(entries)+f'<p style="{STYLE["p"]}"><a href="PUBLISHING.html">发布说明</a> · <a href="DELIVERY.html">交付检查</a> · <a href="EVIDENCE.html">证据索引</a></p>'
     (OUT/'index.html').write_text(html_page(series['series'],landing))
     shutil.copytree(ROOT/'assets',OUT/'assets')

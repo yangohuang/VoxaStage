@@ -14,7 +14,7 @@ python docs/wechat/tools/check_package.py
 
 打开生成的 `build/index.html`，分别检查三篇完整稿。HTML使用内联正文样式，不加载外部字体、脚本或统计服务。用390px手机宽度检查图中文字、长链接、段落和标题，再在公众号后台检查最终版；浏览器检查不能代替平台检查。
 
-发布包 `build/voxastage-wechat-batch-01.zip` 内含离线HTML、PNG/SVG、源稿、后续简报与SHA256清单。解压后打开 `index.html` 即可阅读。`source/`保留可编辑原稿；已有PNG不依赖模型或GPU。
+发布包 `build/voxastage-wechat-batch-01.zip` 内含离线HTML、PNG/SVG、源稿、后续简报与SHA256清单。解压后打开 `index.html` 即可阅读。`source/`保留可编辑原稿；已有PNG不依赖模型或GPU。三篇阅读页顶部和目录均有“原始 Markdown”下载入口，下载的是含元信息、正文及参考资料的完整源文件。单独取走HTML或Markdown时，也需保留对应图片目录；完整ZIP已包含这些资源。
 
 ## 把一篇稿件移入公众号
 
