@@ -1,0 +1,24 @@
+{
+  "checked_utc": "2026-10-16T09:16:49.476957+00:00",
+  "device": "NVIDIA GeForce RTX 4090",
+  "free_mib": 4892,
+  "total_mib": 24564,
+  "required_free_mib": {
+    "nf4": 8192,
+    "bf16": 11264
+  },
+  "health": {
+    "application": {
+      "ready": true,
+      "active_sessions": 0
+    },
+    "daily_model": {
+      "ready": true,
+      "busy": false,
+      "quantization": "4bit",
+      "load_s": 99.58220631402219
+    }
+  },
+  "experiment_started": false,
+  "reason": "insufficient_free_memory"
+}
