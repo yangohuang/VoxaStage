@@ -116,6 +116,7 @@ cp .env.example .env
 | 复杂回答 | [回答质量基线](docs/REPLY-QUALITY-BASELINE.md)：24 次 MiniCPM 策略对照及 12 次 Qwen 文字参考 | 前提理解与概念准确性；未采用的策略明确保留 |
 | 视觉交互 | [真实多模态基线](docs/REAL-MULTIMODAL-BASELINE.md)、[111 次提示消融](docs/VISUAL-GROUNDING-ABLATION.md) | 更广泛图片与场景，不能据此宣称解决幻觉 |
 | 媒体与数字人 | [输出基线](docs/AVATAR-OUTPUT-BASELINE-2026-09-19.md)、[3D 结构分析](docs/AVATAR-GEOMETRY-BASELINE.md)、[DINet 节奏实验](docs/DINET-PACING-INTEGRATION.md) | 人工口型、画面连续性与音色匹配 |
+| 容器与组合会话 | [真实组合验证](docs/COMPOSED-SESSION-VALIDATION.md)：隔离应用/ASR/LLM 连接既有 TTS 和 3D 服务，固定四项含打断、历史重连通过 | 浏览器实际播放、长期运行与空白 GPU 主机全量安装 |
 | 自定义 3D 角色 | [GLB 接入](docs/MESH-RETARGETING.md)验证录制推理回放、闭嘴与旧帧过滤 | 在线完整对话、独立嘴型层与全身动画组合 |
 
 自动化检查入口：

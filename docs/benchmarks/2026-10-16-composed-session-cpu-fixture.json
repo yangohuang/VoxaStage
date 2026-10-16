@@ -1,0 +1,282 @@
+{
+  "scope": "CPU Docker fixture only",
+  "cases": [
+    {
+      "status": "passed",
+      "run_id": "9ee4fc2bb3ff4206b18ece4c656e5326",
+      "units": {
+        "llm": {
+          "status": "preparing",
+          "run_id": "9ee4fc2bb3ff4206b18ece4c656e5326",
+          "name": "voxastage-composed-9ee4fc2bb3ff4206b18ece4c656e5326-llm",
+          "image_id": "sha256:c5892ec958ab8f20f3718934b58b4d408372bd4a813921c9b4a4f7c5d463bd70",
+          "removed": true,
+          "cleanup_errors": [],
+          "health_probes": 0,
+          "max_health_probe_s": 0,
+          "source_sha256": {
+            "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+            "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+            "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+          },
+          "manifest_sha256_canonical": "991db3936fac5376001c01b80d0f763aaaeaa9bbfd9b39763701f10a06cc2dcc",
+          "container_id": "3d7c9e20c26513b2b2009e1a5969835fe1aa01064e36c7a257bc7dc225b89819",
+          "container_exit": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 137,
+            "Error": "",
+            "StartedAt": "2026-10-16T13:19:05.993280371Z",
+            "FinishedAt": "2026-10-16T13:19:22.449142478Z"
+          }
+        },
+        "asr": {
+          "status": "preparing",
+          "run_id": "9ee4fc2bb3ff4206b18ece4c656e5326",
+          "name": "voxastage-composed-9ee4fc2bb3ff4206b18ece4c656e5326-asr",
+          "image_id": "sha256:c5892ec958ab8f20f3718934b58b4d408372bd4a813921c9b4a4f7c5d463bd70",
+          "removed": true,
+          "cleanup_errors": [],
+          "health_probes": 0,
+          "max_health_probe_s": 0,
+          "source_sha256": {
+            "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+            "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+            "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+          },
+          "manifest_sha256_canonical": "991db3936fac5376001c01b80d0f763aaaeaa9bbfd9b39763701f10a06cc2dcc",
+          "container_id": "e1686b2b7c19d82b0ee51b4647c5373671ecdfa18a10d7969064de3c8960df57",
+          "container_exit": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 137,
+            "Error": "",
+            "StartedAt": "2026-10-16T13:19:06.296809189Z",
+            "FinishedAt": "2026-10-16T13:19:17.288804832Z"
+          }
+        },
+        "app": {
+          "status": "preparing",
+          "run_id": "9ee4fc2bb3ff4206b18ece4c656e5326",
+          "name": "voxastage-composed-9ee4fc2bb3ff4206b18ece4c656e5326-app",
+          "image_id": "sha256:c5892ec958ab8f20f3718934b58b4d408372bd4a813921c9b4a4f7c5d463bd70",
+          "removed": true,
+          "cleanup_errors": [],
+          "health_probes": 0,
+          "max_health_probe_s": 0,
+          "source_sha256": {
+            "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+            "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+            "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+          },
+          "manifest_sha256_canonical": "991db3936fac5376001c01b80d0f763aaaeaa9bbfd9b39763701f10a06cc2dcc",
+          "container_id": "fdf679df9978bc843065bddb65d9d374317d32995757a3e0501505cb2b1ecf69",
+          "container_exit": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 137,
+            "Error": "",
+            "StartedAt": "2026-10-16T13:19:06.587391417Z",
+            "FinishedAt": "2026-10-16T13:19:12.166853127Z"
+          }
+        }
+      },
+      "cleanup_errors": [],
+      "health_probes": 19,
+      "max_health_probe_s": 0.03409748198464513,
+      "source_sha256": {
+        "deploy/session/composed_trial.py": "91d73875fc4380c27898101cfe7910c7d76ad16ef1586a791ed6c8ba995b9f9c",
+        "deploy/session/session_client.py": "d8f45d6af4ac508d3fa6f0a4156fa477337639de42a105d66dddb77aacb4107b",
+        "llm-server/deploy/container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+        "llm-server/deploy/container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+        "llm-server/deploy/protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+      },
+      "config_sha256": "3adbddb1de10f9a99312276402afb99db890d3688b7b3397ab58c663dcfb507c",
+      "manifest_sha256": "8ef79859b2eb603a98e974dc2967ce77e361eab9da56b918e5fc887ff0db24b4",
+      "scope": "CPU-only lifecycle fixture: no GPU, model loading, audio, avatar or physical playback",
+      "external_checks": [
+        {
+          "tts_speaker_available": true,
+          "tts_occupancy_observable": false,
+          "avatar_ready": true,
+          "avatar_idle": true
+        },
+        {
+          "tts_speaker_available": true,
+          "tts_occupancy_observable": false,
+          "avatar_ready": true,
+          "avatar_idle": true
+        },
+        {
+          "tts_speaker_available": true,
+          "tts_occupancy_observable": false,
+          "avatar_ready": true,
+          "avatar_idle": true
+        }
+      ],
+      "gpu_admission": "not_applicable_cpu_fixture",
+      "model_hash_checks": "not_applicable_no_model_mounts",
+      "owned_loopback_listeners": [
+        "llm",
+        "asr",
+        "app"
+      ],
+      "completed_cases": [
+        "text",
+        "mixed-audio",
+        "interrupt-recover",
+        "restore-interrupted-history"
+      ],
+      "client_exit_code": 0
+    },
+    {
+      "status": "failed",
+      "run_id": "3eb307ceaecb49c8980047aa28f8cb36",
+      "units": {
+        "llm": {
+          "status": "preparing",
+          "run_id": "3eb307ceaecb49c8980047aa28f8cb36",
+          "name": "voxastage-composed-3eb307ceaecb49c8980047aa28f8cb36-llm",
+          "image_id": "sha256:c5892ec958ab8f20f3718934b58b4d408372bd4a813921c9b4a4f7c5d463bd70",
+          "removed": true,
+          "cleanup_errors": [],
+          "health_probes": 0,
+          "max_health_probe_s": 0,
+          "source_sha256": {
+            "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+            "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+            "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+          },
+          "manifest_sha256_canonical": "991db3936fac5376001c01b80d0f763aaaeaa9bbfd9b39763701f10a06cc2dcc",
+          "container_id": "15a89b03595d33577cb2f4a5277e8d955431e0073b562f5e9ecc5e25997cbc0a",
+          "container_exit": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 137,
+            "Error": "",
+            "StartedAt": "2026-10-16T13:19:22.739960975Z",
+            "FinishedAt": "2026-10-16T13:19:39.06327074Z"
+          }
+        },
+        "asr": {
+          "status": "preparing",
+          "run_id": "3eb307ceaecb49c8980047aa28f8cb36",
+          "name": "voxastage-composed-3eb307ceaecb49c8980047aa28f8cb36-asr",
+          "image_id": "sha256:c5892ec958ab8f20f3718934b58b4d408372bd4a813921c9b4a4f7c5d463bd70",
+          "removed": true,
+          "cleanup_errors": [],
+          "health_probes": 0,
+          "max_health_probe_s": 0,
+          "source_sha256": {
+            "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+            "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+            "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+          },
+          "manifest_sha256_canonical": "991db3936fac5376001c01b80d0f763aaaeaa9bbfd9b39763701f10a06cc2dcc",
+          "container_id": "28fa1e225c5e52380125dfb2894bc449a0d598e70217b2ba41a4ab8202fc40d7",
+          "container_exit": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 137,
+            "Error": "",
+            "StartedAt": "2026-10-16T13:19:23.060630702Z",
+            "FinishedAt": "2026-10-16T13:19:33.930984212Z"
+          }
+        },
+        "app": {
+          "status": "preparing",
+          "run_id": "3eb307ceaecb49c8980047aa28f8cb36",
+          "name": "voxastage-composed-3eb307ceaecb49c8980047aa28f8cb36-app",
+          "image_id": "sha256:c5892ec958ab8f20f3718934b58b4d408372bd4a813921c9b4a4f7c5d463bd70",
+          "removed": true,
+          "cleanup_errors": [],
+          "health_probes": 0,
+          "max_health_probe_s": 0,
+          "source_sha256": {
+            "container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+            "container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+            "protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+          },
+          "manifest_sha256_canonical": "991db3936fac5376001c01b80d0f763aaaeaa9bbfd9b39763701f10a06cc2dcc",
+          "container_id": "4bca53d1d2bcd8bdd62f07eccfe07ff735be6a80eb004d31bcece473c0af3a69",
+          "container_exit": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 137,
+            "Error": "",
+            "StartedAt": "2026-10-16T13:19:23.3625692Z",
+            "FinishedAt": "2026-10-16T13:19:28.802990417Z"
+          }
+        }
+      },
+      "cleanup_errors": [],
+      "health_probes": 16,
+      "max_health_probe_s": 0.035339619033038616,
+      "source_sha256": {
+        "deploy/session/composed_trial.py": "91d73875fc4380c27898101cfe7910c7d76ad16ef1586a791ed6c8ba995b9f9c",
+        "deploy/session/session_client.py": "d8f45d6af4ac508d3fa6f0a4156fa477337639de42a105d66dddb77aacb4107b",
+        "llm-server/deploy/container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+        "llm-server/deploy/container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+        "llm-server/deploy/protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711"
+      },
+      "config_sha256": "7056294c35670f682e83c19049238d83bbb211e41a7fc372bc5f2505be62f34d",
+      "manifest_sha256": "8ef79859b2eb603a98e974dc2967ce77e361eab9da56b918e5fc887ff0db24b4",
+      "scope": "CPU-only lifecycle fixture: no GPU, model loading, audio, avatar or physical playback",
+      "external_checks": [
+        {
+          "tts_speaker_available": true,
+          "tts_occupancy_observable": false,
+          "avatar_ready": true,
+          "avatar_idle": true
+        },
+        {
+          "tts_speaker_available": true,
+          "tts_occupancy_observable": false,
+          "avatar_ready": true,
+          "avatar_idle": true
+        }
+      ],
+      "gpu_admission": "not_applicable_cpu_fixture",
+      "model_hash_checks": "not_applicable_no_model_mounts",
+      "owned_loopback_listeners": [
+        "llm",
+        "asr",
+        "app"
+      ],
+      "client_exit_code": 0,
+      "error_type": "RuntimeError",
+      "error": "client_reported_failure"
+    }
+  ],
+  "fixture_sha256": "37bd0a5db58cc8d479cb7e1cc6de483c1aac2611445c4b5241311f64e63745f8"
+}
