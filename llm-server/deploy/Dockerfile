@@ -6,7 +6,7 @@ RUN apt-get update \
 
 RUN python -m venv /opt/worker
 COPY llm-server/deploy/requirements-standalone.lock /opt/requirements.lock
-RUN /opt/worker/bin/python -m pip install --no-cache-dir --require-hashes -r /opt/requirements.lock \
+RUN /opt/worker/bin/python -m pip install --timeout 120 --no-cache-dir --require-hashes -r /opt/requirements.lock \
     && /opt/worker/bin/python -m pip check
 
 COPY llm_server.py /opt/app/llm_server.py

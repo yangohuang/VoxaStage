@@ -1,0 +1,65 @@
+{
+  "scope": "CPU-only guard primitives and real Docker fault drills; not full controller or GPU protocol acceptance",
+  "unit_tests": 12,
+  "docker_cases": [
+    {
+      "fault": "application_busy",
+      "gpu_used": false,
+      "events": [
+        "abort"
+      ],
+      "foreign_cleanup_rejected": true,
+      "exit_state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 137,
+        "Error": "",
+        "StartedAt": "2026-10-16T11:29:58.093310556Z",
+        "FinishedAt": "2026-10-16T11:30:03.34853251Z"
+      },
+      "failure_sticky": true,
+      "passed": true,
+      "removed": true
+    },
+    {
+      "fault": "health_timeout",
+      "gpu_used": false,
+      "events": [
+        "abort"
+      ],
+      "foreign_cleanup_rejected": true,
+      "exit_state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 137,
+        "Error": "",
+        "StartedAt": "2026-10-16T11:30:03.551765013Z",
+        "FinishedAt": "2026-10-16T11:30:08.810574706Z"
+      },
+      "failure_sticky": true,
+      "passed": true,
+      "removed": true
+    }
+  ],
+  "source_sha256": {
+    "container_guard.py": "3909a8c363a7fcf4f53d6d8d9f5b42ef4e86767c173c0ab88a292bdc286b041c",
+    "test_container_guard.py": "3ec269464da565fdc8234e6c4507aa67cdfa41a189f3e610192223b301129e28",
+    "check_guard_docker.py": "922f5d6193ef243c90f94a0121aa826c16ff00d91323611d105fd31849125008"
+  },
+  "termination": "Docker stop timeout5s then exit137; no graceful-stop claim",
+  "remaining": [
+    "full controller integration",
+    "TERM/HUP and Docker creation-timeout handling",
+    "17 frozen GPU protocol requests"
+  ]
+}

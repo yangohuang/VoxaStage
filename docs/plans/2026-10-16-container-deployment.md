@@ -35,7 +35,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 RUN python -m venv /opt/worker
 COPY llm-server/deploy/requirements-standalone.lock /opt/requirements.lock
-RUN /opt/worker/bin/python -m pip install --no-cache-dir --require-hashes -r /opt/requirements.lock \
+RUN /opt/worker/bin/python -m pip install --timeout 120 --no-cache-dir --require-hashes -r /opt/requirements.lock \
     && /opt/worker/bin/python -m pip check
 COPY llm_server.py /opt/app/llm_server.py
 ENV HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONNOUSERSITE=1 PYTHONUNBUFFERED=1
@@ -59,4 +59,24 @@ ENTRYPOINT ["/opt/worker/bin/python", "-I", "/opt/app/llm_server.py"]
 - [ ] 发布实际镜像/环境/输入/协议结果，独立复核、脱敏检查后通过PR交付；仅描述实测范围。
 - [ ] 对余下ASR、应用、端到端、2D/3D驱动和TTS逐项推进安装与组合启动，避免通过单项冒充完整部署。继续保留物理设备与人工质量所需证据。
 
-当前已启动项目镜像构建，正在完整哈希安装依赖，尚未运行上述17次请求，不将准备状态记为部署成功。构建文件静态审查通过；GPU阶段仍须落实并验证持续占用保护。后续任务按此计划在当前会话顺序执行，不额外创建其他任务窗口。
+首次构建在下载 Python 包时因读取超时失败，完整日志保留。确认进程已经退出后，仅将 pip 下载读取超时调整为120秒，再进行一次有界重试；锁文件和 worker 不变。尚未运行上述17次请求，不将准备状态记为部署成功。
+
+持续占用保护与按完整容器ID、镜像ID、非空运行标签核验的清理原语已实现，12项CPU测试通过；审查发现的空标签漏洞已新增负例并修复。下一步用不占GPU的真实Docker故障演练验证这两项原语，随后再将其接入完整推理包装器。原语通过不等于完整包装器或GPU测试已通过。后续任务按此计划在当前会话顺序执行，不额外创建其他任务窗口。
+
+## 下载故障恢复与保护验证
+
+第一次构建因读取超时失败；第二次把读取超时增至120秒后，423.1MB的
+`nvidia-cublas` wheel只收到约231.8MB，哈希校验拒绝安装。两次退出码均为1，
+日志保留，不改锁内哈希来接纳不完整文件。
+
+已有10个同版本原始wheel共2,525,741,588字节，逐个SHA256均在现有锁内。
+使用独立`Dockerfile.cached-wheels`把这些文件作为BuildKit只读挂载，
+`--find-links`提供下载缓存，其余小包照常联网下载。安装仍有完整
+`--require-hashes`与`pip check`；不复制宿主Python包或Conda环境，
+不把wheel写进最终镜像层。传输后须再次验证大小和哈希。该恢复方案
+静态审查通过，构建与真实模型推理结果分别记录。
+
+占用与健康超时两项真实CPU Docker故障演练均通过：错误运行标签的清理
+被拒绝，partial日志保留，失败不会恢复成可继续状态，本轮容器均已移除。
+Docker在5秒停止期限后升级终止，退出137；这证明有界强停，不是优雅退出。
+完整推理控制器、TERM/HUP和创建超时处理仍待实现和验证。
