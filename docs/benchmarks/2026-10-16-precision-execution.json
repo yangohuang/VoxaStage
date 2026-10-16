@@ -1,0 +1,42 @@
+{
+  "status": "experiment_complete",
+  "experiment_runs": [
+    {
+      "precision": "nf4",
+      "exit_code": 0,
+      "artifact": "nf4.json"
+    },
+    {
+      "precision": "bf16",
+      "exit_code": 0,
+      "artifact": "bf16.json"
+    }
+  ],
+  "openjev_restored": true,
+  "openjev_before": {
+    "ready": true,
+    "error": null,
+    "status": "instruction_baseline",
+    "device": "cuda",
+    "scope": "Frozen general instruction baseline, not shared-state",
+    "engine": "PyTorch",
+    "model_repo": "Qwen/Qwen3-4B"
+  },
+  "openjev_identity": {
+    "model_repo": "Qwen/Qwen3-4B",
+    "model_revision": "local-cache-revision-unverified",
+    "protocol_sha256": "dad529b413631cae93ffe2082aa61a17e0672415dc8a08c4f32f9356e6c51b8e",
+    "dtype": "bfloat16",
+    "backend": "instruction",
+    "project_training": false
+  },
+  "scope": "Authorized temporary pause of an independent GPU service; restored with original model identity and startup environment. Daily application and model remained ready; no production configuration change.",
+  "post_restore_checks": {
+    "independent_service_ready": true,
+    "identity_matches_before": true,
+    "private_environment_snapshot_deleted": true,
+    "daily_application_ready": true,
+    "daily_model_ready": true,
+    "daily_model_quantization": "4bit"
+  }
+}
