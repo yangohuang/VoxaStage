@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "distributions": 111,
+  "source_sha256": {
+    "asr_server.py": "8cc1438a1ddd31c26356262b43eceb8a7e5ea5b0751d48c96a8db20d7ea04a66",
+    "asr-server/requirements.lock": "f3179c3d8fe7fb84cba010aaff5e5c4b3d774bfb56d1bcb8eab55e36f0796975",
+    "asr-server/deploy/Dockerfile": "d5208cf739af59d300d9fbc31910df608ee93b0b2e6949850b68b9788aa8af67",
+    "asr-server/deploy/build-bootstrap.lock": "b6206c4a1d406b21064923913ac50610d81f325a67f97d82ee198f78cdbbd1e1"
+  },
+  "started_at": 1792152703.4822414,
+  "tag": "voxastage-asr-isolated:20261016",
+  "exit_code": 0,
+  "image_id": "sha256:7cbd3e055a371d25f7ee387eed2e5021486429aa1910092d16024cb487316567",
+  "elapsed_s": 160.67362999916077,
+  "source_distribution_build": {
+    "package": "sox",
+    "version": "1.5.0",
+    "original_sdist_sha256": "12c7be5bb1f548d891fe11e82c08cf5f1a1d74e225298f60082e5aeb2469ada0",
+    "locally_built_wheel_sha256": "a6d0721470d698f5f81efc0b9ad13bb7f325de0a53c1a77352bce6c89cf3e9e9",
+    "wheel_hash_scope": "Observed build output; not an official source hash or a guarantee of bitwise reproduction"
+  }
+}

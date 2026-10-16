@@ -1,0 +1,869 @@
+{
+  "scope": "Current daily1.7B isolated container WAV request validation; synthetic prompts, not human CER or physical acoustics",
+  "model_name": "Qwen3-ASR-1.7B",
+  "model_revision": "7278e1e70fe206f11671096ffdd38061171dd6e5",
+  "timeouts_s": {
+    "startup": 180,
+    "request": 30,
+    "recovery": 20,
+    "overall": 600
+  },
+  "requests": [
+    {
+      "case": "warmup--1-zh-00-plain",
+      "phase": "warmup",
+      "repeat": -1,
+      "case_id": "zh-00",
+      "variant": "plain",
+      "audio_sha256": "46c5cf0cd819848fb2c8db566764be2bb001756fe4acb19b78d5130e72730a26",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "warmup--1-zh-00-terms",
+      "phase": "warmup",
+      "repeat": -1,
+      "case_id": "zh-00",
+      "variant": "terms",
+      "audio_sha256": "46c5cf0cd819848fb2c8db566764be2bb001756fe4acb19b78d5130e72730a26",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-zh-00-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "zh-00",
+      "variant": "plain",
+      "audio_sha256": "46c5cf0cd819848fb2c8db566764be2bb001756fe4acb19b78d5130e72730a26",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-zh-00-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "zh-00",
+      "variant": "terms",
+      "audio_sha256": "46c5cf0cd819848fb2c8db566764be2bb001756fe4acb19b78d5130e72730a26",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-zh-01-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "zh-01",
+      "variant": "terms",
+      "audio_sha256": "bd0a30bc415266efac7cf2753ffaac31cffe331f15bc8077780d7de79c80221a",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-zh-01-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "zh-01",
+      "variant": "plain",
+      "audio_sha256": "bd0a30bc415266efac7cf2753ffaac31cffe331f15bc8077780d7de79c80221a",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-zh-02-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "zh-02",
+      "variant": "plain",
+      "audio_sha256": "cebc981d412c453f25e2ee36abaf5b1f6f2af38707757a2d27c865c518482b4a",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-zh-02-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "zh-02",
+      "variant": "terms",
+      "audio_sha256": "cebc981d412c453f25e2ee36abaf5b1f6f2af38707757a2d27c865c518482b4a",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-en-00-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "en-00",
+      "variant": "terms",
+      "audio_sha256": "4b5edef1df1fe74f0fdf29d61eacf6ea1a2fded5d7c92e824a2f2f76928d2385",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-en-00-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "en-00",
+      "variant": "plain",
+      "audio_sha256": "4b5edef1df1fe74f0fdf29d61eacf6ea1a2fded5d7c92e824a2f2f76928d2385",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-en-01-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "en-01",
+      "variant": "plain",
+      "audio_sha256": "644434bdeb574988a5b79b362c09e38e5ad4f530151a998ff135e75b31d1b72e",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-en-01-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "en-01",
+      "variant": "terms",
+      "audio_sha256": "644434bdeb574988a5b79b362c09e38e5ad4f530151a998ff135e75b31d1b72e",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-en-02-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "en-02",
+      "variant": "terms",
+      "audio_sha256": "d85fc8d3234f9473f3d2c34622e8032915c34e3f98422e0de1df0b22921fa50b",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-en-02-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "en-02",
+      "variant": "plain",
+      "audio_sha256": "d85fc8d3234f9473f3d2c34622e8032915c34e3f98422e0de1df0b22921fa50b",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-mixed-00-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "mixed-00",
+      "variant": "plain",
+      "audio_sha256": "d7ab797543e4517ba9d48daaaf7a77c8a1602ae2169a270b42c63357b7ba3b03",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-mixed-00-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "mixed-00",
+      "variant": "terms",
+      "audio_sha256": "d7ab797543e4517ba9d48daaaf7a77c8a1602ae2169a270b42c63357b7ba3b03",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-mixed-01-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "mixed-01",
+      "variant": "terms",
+      "audio_sha256": "b173d03ec107607783fed65d36332e5721cbaf435d2481e315bf06e77a305c5c",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-mixed-01-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "mixed-01",
+      "variant": "plain",
+      "audio_sha256": "b173d03ec107607783fed65d36332e5721cbaf435d2481e315bf06e77a305c5c",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-mixed-02-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "mixed-02",
+      "variant": "plain",
+      "audio_sha256": "349c3bf52d32a1aca87e4bdd8a25a2231eba41810b515ab9167ad3ad3c50ae68",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-mixed-02-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "mixed-02",
+      "variant": "terms",
+      "audio_sha256": "349c3bf52d32a1aca87e4bdd8a25a2231eba41810b515ab9167ad3ad3c50ae68",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-silence-00-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "silence-00",
+      "variant": "terms",
+      "audio_sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-silence-00-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "silence-00",
+      "variant": "plain",
+      "audio_sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-silence-01-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "silence-01",
+      "variant": "plain",
+      "audio_sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-silence-01-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "silence-01",
+      "variant": "terms",
+      "audio_sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-silence-02-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "silence-02",
+      "variant": "terms",
+      "audio_sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-silence-02-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "silence-02",
+      "variant": "plain",
+      "audio_sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-pause-00-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "pause-00",
+      "variant": "plain",
+      "audio_sha256": "c06668fdd8c6a06f237d0ccf8a78e502b457809b485c751ac252befbef5ef3b1",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-pause-00-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "pause-00",
+      "variant": "terms",
+      "audio_sha256": "c06668fdd8c6a06f237d0ccf8a78e502b457809b485c751ac252befbef5ef3b1",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-pause-01-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "pause-01",
+      "variant": "terms",
+      "audio_sha256": "12bce7ac1a646e744261ebda68a772191c9a17264e3480955158b0e057eea4b1",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-0-pause-01-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "pause-01",
+      "variant": "plain",
+      "audio_sha256": "12bce7ac1a646e744261ebda68a772191c9a17264e3480955158b0e057eea4b1",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-pause-02-plain",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "pause-02",
+      "variant": "plain",
+      "audio_sha256": "58ebbcb3ba684be2728857093af832b9986410755c8212785c000bf1415a4db4",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-0-pause-02-terms",
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "pause-02",
+      "variant": "terms",
+      "audio_sha256": "58ebbcb3ba684be2728857093af832b9986410755c8212785c000bf1415a4db4",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-zh-00-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "zh-00",
+      "variant": "terms",
+      "audio_sha256": "46c5cf0cd819848fb2c8db566764be2bb001756fe4acb19b78d5130e72730a26",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-zh-00-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "zh-00",
+      "variant": "plain",
+      "audio_sha256": "46c5cf0cd819848fb2c8db566764be2bb001756fe4acb19b78d5130e72730a26",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-zh-01-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "zh-01",
+      "variant": "plain",
+      "audio_sha256": "bd0a30bc415266efac7cf2753ffaac31cffe331f15bc8077780d7de79c80221a",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-zh-01-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "zh-01",
+      "variant": "terms",
+      "audio_sha256": "bd0a30bc415266efac7cf2753ffaac31cffe331f15bc8077780d7de79c80221a",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-zh-02-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "zh-02",
+      "variant": "terms",
+      "audio_sha256": "cebc981d412c453f25e2ee36abaf5b1f6f2af38707757a2d27c865c518482b4a",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-zh-02-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "zh-02",
+      "variant": "plain",
+      "audio_sha256": "cebc981d412c453f25e2ee36abaf5b1f6f2af38707757a2d27c865c518482b4a",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-en-00-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "en-00",
+      "variant": "plain",
+      "audio_sha256": "4b5edef1df1fe74f0fdf29d61eacf6ea1a2fded5d7c92e824a2f2f76928d2385",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-en-00-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "en-00",
+      "variant": "terms",
+      "audio_sha256": "4b5edef1df1fe74f0fdf29d61eacf6ea1a2fded5d7c92e824a2f2f76928d2385",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-en-01-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "en-01",
+      "variant": "terms",
+      "audio_sha256": "644434bdeb574988a5b79b362c09e38e5ad4f530151a998ff135e75b31d1b72e",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-en-01-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "en-01",
+      "variant": "plain",
+      "audio_sha256": "644434bdeb574988a5b79b362c09e38e5ad4f530151a998ff135e75b31d1b72e",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-en-02-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "en-02",
+      "variant": "plain",
+      "audio_sha256": "d85fc8d3234f9473f3d2c34622e8032915c34e3f98422e0de1df0b22921fa50b",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-en-02-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "en-02",
+      "variant": "terms",
+      "audio_sha256": "d85fc8d3234f9473f3d2c34622e8032915c34e3f98422e0de1df0b22921fa50b",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-mixed-00-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "mixed-00",
+      "variant": "terms",
+      "audio_sha256": "d7ab797543e4517ba9d48daaaf7a77c8a1602ae2169a270b42c63357b7ba3b03",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-mixed-00-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "mixed-00",
+      "variant": "plain",
+      "audio_sha256": "d7ab797543e4517ba9d48daaaf7a77c8a1602ae2169a270b42c63357b7ba3b03",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-mixed-01-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "mixed-01",
+      "variant": "plain",
+      "audio_sha256": "b173d03ec107607783fed65d36332e5721cbaf435d2481e315bf06e77a305c5c",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-mixed-01-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "mixed-01",
+      "variant": "terms",
+      "audio_sha256": "b173d03ec107607783fed65d36332e5721cbaf435d2481e315bf06e77a305c5c",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-mixed-02-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "mixed-02",
+      "variant": "terms",
+      "audio_sha256": "349c3bf52d32a1aca87e4bdd8a25a2231eba41810b515ab9167ad3ad3c50ae68",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-mixed-02-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "mixed-02",
+      "variant": "plain",
+      "audio_sha256": "349c3bf52d32a1aca87e4bdd8a25a2231eba41810b515ab9167ad3ad3c50ae68",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-silence-00-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "silence-00",
+      "variant": "plain",
+      "audio_sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-silence-00-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "silence-00",
+      "variant": "terms",
+      "audio_sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-silence-01-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "silence-01",
+      "variant": "terms",
+      "audio_sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-silence-01-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "silence-01",
+      "variant": "plain",
+      "audio_sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-silence-02-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "silence-02",
+      "variant": "plain",
+      "audio_sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-silence-02-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "silence-02",
+      "variant": "terms",
+      "audio_sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-pause-00-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "pause-00",
+      "variant": "terms",
+      "audio_sha256": "c06668fdd8c6a06f237d0ccf8a78e502b457809b485c751ac252befbef5ef3b1",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-pause-00-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "pause-00",
+      "variant": "plain",
+      "audio_sha256": "c06668fdd8c6a06f237d0ccf8a78e502b457809b485c751ac252befbef5ef3b1",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-pause-01-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "pause-01",
+      "variant": "plain",
+      "audio_sha256": "12bce7ac1a646e744261ebda68a772191c9a17264e3480955158b0e057eea4b1",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-1-pause-01-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "pause-01",
+      "variant": "terms",
+      "audio_sha256": "12bce7ac1a646e744261ebda68a772191c9a17264e3480955158b0e057eea4b1",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-pause-02-terms",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "pause-02",
+      "variant": "terms",
+      "audio_sha256": "58ebbcb3ba684be2728857093af832b9986410755c8212785c000bf1415a4db4",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-1-pause-02-plain",
+      "phase": "measured",
+      "repeat": 1,
+      "case_id": "pause-02",
+      "variant": "plain",
+      "audio_sha256": "58ebbcb3ba684be2728857093af832b9986410755c8212785c000bf1415a4db4",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-zh-00-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "zh-00",
+      "variant": "plain",
+      "audio_sha256": "46c5cf0cd819848fb2c8db566764be2bb001756fe4acb19b78d5130e72730a26",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-zh-00-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "zh-00",
+      "variant": "terms",
+      "audio_sha256": "46c5cf0cd819848fb2c8db566764be2bb001756fe4acb19b78d5130e72730a26",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-zh-01-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "zh-01",
+      "variant": "terms",
+      "audio_sha256": "bd0a30bc415266efac7cf2753ffaac31cffe331f15bc8077780d7de79c80221a",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-zh-01-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "zh-01",
+      "variant": "plain",
+      "audio_sha256": "bd0a30bc415266efac7cf2753ffaac31cffe331f15bc8077780d7de79c80221a",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-zh-02-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "zh-02",
+      "variant": "plain",
+      "audio_sha256": "cebc981d412c453f25e2ee36abaf5b1f6f2af38707757a2d27c865c518482b4a",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-zh-02-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "zh-02",
+      "variant": "terms",
+      "audio_sha256": "cebc981d412c453f25e2ee36abaf5b1f6f2af38707757a2d27c865c518482b4a",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-en-00-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "en-00",
+      "variant": "terms",
+      "audio_sha256": "4b5edef1df1fe74f0fdf29d61eacf6ea1a2fded5d7c92e824a2f2f76928d2385",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-en-00-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "en-00",
+      "variant": "plain",
+      "audio_sha256": "4b5edef1df1fe74f0fdf29d61eacf6ea1a2fded5d7c92e824a2f2f76928d2385",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-en-01-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "en-01",
+      "variant": "plain",
+      "audio_sha256": "644434bdeb574988a5b79b362c09e38e5ad4f530151a998ff135e75b31d1b72e",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-en-01-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "en-01",
+      "variant": "terms",
+      "audio_sha256": "644434bdeb574988a5b79b362c09e38e5ad4f530151a998ff135e75b31d1b72e",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-en-02-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "en-02",
+      "variant": "terms",
+      "audio_sha256": "d85fc8d3234f9473f3d2c34622e8032915c34e3f98422e0de1df0b22921fa50b",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-en-02-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "en-02",
+      "variant": "plain",
+      "audio_sha256": "d85fc8d3234f9473f3d2c34622e8032915c34e3f98422e0de1df0b22921fa50b",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-mixed-00-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "mixed-00",
+      "variant": "plain",
+      "audio_sha256": "d7ab797543e4517ba9d48daaaf7a77c8a1602ae2169a270b42c63357b7ba3b03",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-mixed-00-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "mixed-00",
+      "variant": "terms",
+      "audio_sha256": "d7ab797543e4517ba9d48daaaf7a77c8a1602ae2169a270b42c63357b7ba3b03",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-mixed-01-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "mixed-01",
+      "variant": "terms",
+      "audio_sha256": "b173d03ec107607783fed65d36332e5721cbaf435d2481e315bf06e77a305c5c",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-mixed-01-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "mixed-01",
+      "variant": "plain",
+      "audio_sha256": "b173d03ec107607783fed65d36332e5721cbaf435d2481e315bf06e77a305c5c",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-mixed-02-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "mixed-02",
+      "variant": "plain",
+      "audio_sha256": "349c3bf52d32a1aca87e4bdd8a25a2231eba41810b515ab9167ad3ad3c50ae68",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-mixed-02-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "mixed-02",
+      "variant": "terms",
+      "audio_sha256": "349c3bf52d32a1aca87e4bdd8a25a2231eba41810b515ab9167ad3ad3c50ae68",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-silence-00-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "silence-00",
+      "variant": "terms",
+      "audio_sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-silence-00-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "silence-00",
+      "variant": "plain",
+      "audio_sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-silence-01-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "silence-01",
+      "variant": "plain",
+      "audio_sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-silence-01-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "silence-01",
+      "variant": "terms",
+      "audio_sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-silence-02-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "silence-02",
+      "variant": "terms",
+      "audio_sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-silence-02-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "silence-02",
+      "variant": "plain",
+      "audio_sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-pause-00-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "pause-00",
+      "variant": "plain",
+      "audio_sha256": "c06668fdd8c6a06f237d0ccf8a78e502b457809b485c751ac252befbef5ef3b1",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-pause-00-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "pause-00",
+      "variant": "terms",
+      "audio_sha256": "c06668fdd8c6a06f237d0ccf8a78e502b457809b485c751ac252befbef5ef3b1",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-pause-01-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "pause-01",
+      "variant": "terms",
+      "audio_sha256": "12bce7ac1a646e744261ebda68a772191c9a17264e3480955158b0e057eea4b1",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    },
+    {
+      "case": "measured-2-pause-01-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "pause-01",
+      "variant": "plain",
+      "audio_sha256": "12bce7ac1a646e744261ebda68a772191c9a17264e3480955158b0e057eea4b1",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-pause-02-plain",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "pause-02",
+      "variant": "plain",
+      "audio_sha256": "58ebbcb3ba684be2728857093af832b9986410755c8212785c000bf1415a4db4",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "measured-2-pause-02-terms",
+      "phase": "measured",
+      "repeat": 2,
+      "case_id": "pause-02",
+      "variant": "terms",
+      "audio_sha256": "58ebbcb3ba684be2728857093af832b9986410755c8212785c000bf1415a4db4",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    }
+  ],
+  "payload_sha256": {
+    "asr-server/deploy/container_trial.py": "7cf8b156917fbaf27618a79c567c209b56c7837312d0218772213408cff6dd9e",
+    "asr-server/deploy/protocol_client.py": "bdf223d02e42691d210871388c77c8a8341b4575315638040681375540cf3b70",
+    "evaluation/asr_capture.py": "cf1f3646c2ca6efc25cc651559cdc41bf5698a657c95df94ec560c46a77e4deb",
+    "evaluation/asr_scoring.py": "3d2b78ffa47e51dbde5640405e7c020ff9593ead5f17403f71b65ee04e143387",
+    "inputs/cases.json": "00c2062297349f331e8f08cdc600e5138ed36c371a90f0976e1252c9c2b694cb",
+    "inputs/en-00.wav": "4b5edef1df1fe74f0fdf29d61eacf6ea1a2fded5d7c92e824a2f2f76928d2385",
+    "inputs/en-01.wav": "644434bdeb574988a5b79b362c09e38e5ad4f530151a998ff135e75b31d1b72e",
+    "inputs/en-02.wav": "d85fc8d3234f9473f3d2c34622e8032915c34e3f98422e0de1df0b22921fa50b",
+    "inputs/mixed-00.wav": "d7ab797543e4517ba9d48daaaf7a77c8a1602ae2169a270b42c63357b7ba3b03",
+    "inputs/mixed-01.wav": "b173d03ec107607783fed65d36332e5721cbaf435d2481e315bf06e77a305c5c",
+    "inputs/mixed-02.wav": "349c3bf52d32a1aca87e4bdd8a25a2231eba41810b515ab9167ad3ad3c50ae68",
+    "inputs/pause-00.wav": "c06668fdd8c6a06f237d0ccf8a78e502b457809b485c751ac252befbef5ef3b1",
+    "inputs/pause-01.wav": "12bce7ac1a646e744261ebda68a772191c9a17264e3480955158b0e057eea4b1",
+    "inputs/pause-02.wav": "58ebbcb3ba684be2728857093af832b9986410755c8212785c000bf1415a4db4",
+    "inputs/provenance.json": "7a6c3f303d7dcb22e6dd0cb0067c118fe36b7746fd347b2f9553a35753033fd9",
+    "inputs/silence-00.wav": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+    "inputs/silence-01.wav": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+    "inputs/silence-02.wav": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+    "inputs/variants.json": "45a9ed69b42159c2987c0bad0d86df963ff6cd03f5b1775591aeed86c88a6ac6",
+    "inputs/zh-00.wav": "46c5cf0cd819848fb2c8db566764be2bb001756fe4acb19b78d5130e72730a26",
+    "inputs/zh-01.wav": "bd0a30bc415266efac7cf2753ffaac31cffe331f15bc8077780d7de79c80221a",
+    "inputs/zh-02.wav": "cebc981d412c453f25e2ee36abaf5b1f6f2af38707757a2d27c865c518482b4a",
+    "llm-server/deploy/container_guard.py": "2ba26c31e336e1c3d96e7030e9a59f7e9569bfdf03e91753c22a571b6f90ba4d",
+    "llm-server/deploy/container_trial.py": "52c9bde71b173106c5f184ec473f2117f5c7f8e885c82e2398fd33e4f1c44fd8",
+    "llm-server/deploy/protocol_client.py": "8f4e718eedec37d2b961d9e798effb66a8d965f644f978dfd705217a701a9711",
+    "provenance.json": "67ac8c413ae09238adcbe07638ac3dff6c0adea9dd0b75361477c5ca30412899"
+  }
+}

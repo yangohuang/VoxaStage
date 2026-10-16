@@ -1,0 +1,20 @@
+{
+  "container_absent": true,
+  "daily_health": [
+    {
+      "ready": true,
+      "active_sessions": 0
+    },
+    {
+      "ready": true,
+      "busy": false
+    },
+    {
+      "ready": true,
+      "busy": false
+    }
+  ],
+  "free_mib": 18801,
+  "health_forwarding_closed": true,
+  "verification": "Separate post-run Docker inspect, loopback HTTP health reads and nvidia-smi; dedicated SSH control connection exited."
+}

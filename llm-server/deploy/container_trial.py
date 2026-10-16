@@ -124,6 +124,7 @@ class Controller:
         admitted, completed, finished = [], [], False
         limits = self.manifest['timeouts_s']
         deadline = time.monotonic() + limits['startup'] + 10
+        overall_deadline = time.monotonic() + limits.get('overall', float('inf'))
         pending = b''
         with (self.output/'events.jsonl').open('wb') as raw, (self.output/'client-stderr.log').open('wb') as stderr:
             self.child = subprocess.Popen(self.exec_args(), stdin=subprocess.PIPE,
@@ -131,7 +132,7 @@ class Controller:
             try:
                 while True:
                     self.guard.raise_if_failed()
-                    if time.monotonic() >= deadline:
+                    if time.monotonic() >= min(deadline, overall_deadline):
                         raise TimeoutError('client_phase_timeout')
                     ready, _, _ = select.select([self.child.stdout], [], [], .1)
                     if not ready:
@@ -233,6 +234,16 @@ class Controller:
         if self.state['cleanup_errors']:
             self.state['status'] = 'failed'
 
+    def create_args(self):
+        return ['docker', 'create', '--name', self.name,
+            '--label', 'org.voxastage.validation-run=' + self.run_id,
+            '--gpus', 'all', '--network', 'none', '--read-only',
+            '--env', 'USER=voxastage', '--env', 'HOME=/tmp',
+            '--tmpfs', '/tmp:rw,nosuid,size=256m', '--cap-drop', 'ALL',
+            '--security-opt', 'no-new-privileges', '--mount',
+            'type=bind,src=' + str(self.model) + ',dst=/model,readonly',
+            self.image, '--model', '/model', '--port', '18311', '--quantization', '4bit']
+
     def run(self):
         self.output.mkdir(parents=True, exist_ok=False)
         self.save()
@@ -244,14 +255,7 @@ class Controller:
             self.guard.check_now()
             self.gpu_admit()
             self.create_attempted = True
-            cid = self.invoke(['docker', 'create', '--name', self.name,
-                '--label', 'org.voxastage.validation-run=' + self.run_id,
-                '--gpus', 'all', '--network', 'none', '--read-only',
-                '--env', 'USER=voxastage', '--env', 'HOME=/tmp',
-                '--tmpfs', '/tmp:rw,nosuid,size=256m', '--cap-drop', 'ALL',
-                '--security-opt', 'no-new-privileges', '--mount',
-                'type=bind,src=' + str(self.model) + ',dst=/model,readonly',
-                self.image, '--model', '/model', '--port', '18311', '--quantization', '4bit']).strip()
+            cid = self.invoke(self.create_args()).strip()
             self.owned = OwnedContainer(cid, self.image, self.run_id, self.invoke)
             self.state.update(container_id=cid, status='running'); self.save()
             self.guard.check_now()

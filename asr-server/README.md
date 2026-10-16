@@ -45,3 +45,14 @@ env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH -u VIRTUAL_ENV -u CONDA_PREFI
 `asr_ctl.py` 保留原演示机器的环境目录约定，不负责本独立环境的启动；以上前台命令是此部署方式的入口。
 
 使用[固定输入采集器](../docs/ASR-REQUEST-CAPTURE.md)验证真实推理，另在应用 `.venv` 内运行其命令；不要把模型依赖安装到应用环境。完整 WAV 转写仍为话轮式 ASR，流式 LLM/TTS 不受此安装说明影响。
+
+## 独立 Linux 用户空间
+
+2026-10-16 的[容器安装验证](../docs/ASR-CONTAINER-VALIDATION.md)补齐了系统库和
+源码包构建检查：111 个锁定依赖、实际 SDK 导入和 3 项 CPU 协议测试通过。
+`deploy/Dockerfile` 的 Python 安装步骤禁网，`deploy/build-bootstrap.lock`
+只提取原锁内的 setuptools，用于构建锁定的 sox 源码包。
+
+该镜像另行完成当前 1.7B 的 92 次真实 GPU 转写，文本与此前同输入结果逐字一致；
+运行前后 12 个模型文件哈希不变，测试容器已清理，日常服务未切换。
+原始文件来源、模型 revision、完整事件、构建/检查命令与验收边界见报告。

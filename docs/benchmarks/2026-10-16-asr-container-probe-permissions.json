@@ -1,0 +1,14 @@
+[
+  {
+    "phase": "mktemp_default",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nPermissionError: [Errno 13] Permission denied: '/probe/probe_environment.py'\n"
+  },
+  {
+    "phase": "explicit_read_permissions",
+    "exit_code": 0,
+    "stdout": "readable\n",
+    "stderr": ""
+  }
+]
