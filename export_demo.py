@@ -31,6 +31,9 @@ asr-server/deploy/Dockerfile
 deploy/application/Dockerfile deploy/application/acquire_distributions.py
 deploy/application/probe_environment.py deploy/application/requirements.container.lock
 deploy/application/build-bootstrap.lock
+deploy/session/session_client.py deploy/session/test_session_client.py
+deploy/session/test_session_evidence.py deploy/session/test_session_wire.py
+deploy/session/cases.json deploy/session/README.md
 docs/benchmarks/2026-10-16-container-protocol-events.jsonl
 docs/benchmarks/2026-10-16-asr-container-events.jsonl
 .env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md

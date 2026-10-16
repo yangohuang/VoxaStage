@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "scope": "Protocol integration; synthetic received-sample acknowledgements, not physical playback or human quality acceptance",
+  "cases": [
+    {
+      "case": "text",
+      "kind": "text",
+      "text": "你好，请用一句话介绍实时数字人。",
+      "timeout_s": 90
+    },
+    {
+      "case": "mixed-audio",
+      "kind": "wav",
+      "file": "mixed-00.wav",
+      "sha256": "d7ab797543e4517ba9d48daaaf7a77c8a1602ae2169a270b42c63357b7ba3b03",
+      "synthesis_prompt": "介绍一下语音 agent 技术。",
+      "transcript_reviewed": false,
+      "source": "synthetic",
+      "timeout_s": 90
+    },
+    {
+      "case": "interrupt-recover",
+      "kind": "text",
+      "text": "请分三点详细介绍实时数字人的语音识别、语言模型和语音合成流程。",
+      "interrupt": true,
+      "recovery_text": "现在只用一句话告诉我语音识别的作用。",
+      "timeout_s": 120
+    },
+    {
+      "case": "restore-interrupted-history",
+      "kind": "text",
+      "text": "请用一句话概括我们刚才讨论的内容。",
+      "restore_case": "interrupt-recover",
+      "timeout_s": 90
+    }
+  ]
+}
