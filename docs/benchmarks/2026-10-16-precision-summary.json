@@ -1,0 +1,132 @@
+{
+  "scope": "28 requests per precision; one excluded warmup each; descriptive same-host metrics, not acoustic latency",
+  "manifest_sha256": "bbbd1cb393dcf9b8e4a0290a034da4505f689b95f5555272161b23e72d2bba3e",
+  "collector_sha256": "60385371cd41e63c9a66798375708dfeae1b2b55391e0d19aa67be861cb2849c",
+  "precisions": {
+    "nf4": {
+      "raw_sha256": "dc51f157cd1b602fb63154b2241a9c4d421f81a1b8792073fb379a335b9eda09",
+      "requests": 28,
+      "finish_reasons": {
+        "eos": 28
+      },
+      "load_s": 1.8733126069419086,
+      "first_final_text_s": {
+        "n": 28,
+        "median": 0.046666749578434974,
+        "p95_nearest_rank": 0.1306712729856372,
+        "max": 0.13294815993867815
+      },
+      "elapsed_s": {
+        "n": 28,
+        "median": 3.7838306084740907,
+        "p95_nearest_rank": 7.828412191011012,
+        "max": 9.079812648007646
+      },
+      "generated_tokens": {
+        "n": 28,
+        "median": 182.0,
+        "p95_nearest_rank": 375,
+        "max": 437
+      },
+      "torch_peak_allocated_bytes": {
+        "n": 28,
+        "median": 2759639552.0,
+        "p95_nearest_rank": 2767435776,
+        "max": 2780219904
+      },
+      "torch_peak_reserved_bytes": {
+        "n": 28,
+        "median": 2879389696.0,
+        "p95_nearest_rank": 2879389696,
+        "max": 2879389696
+      },
+      "sampled_process_peak_bytes": {
+        "n": 28,
+        "median": 3368026112.0,
+        "p95_nearest_rank": 3368026112,
+        "max": 3368026112
+      },
+      "semantic_review": {
+        "sha256": "4983c6cf5283ca24919f30a0d4010c9d62cf95a55a764acf202b4fb499e5d99d",
+        "scope": "independent assistant review, not human blind evaluation",
+        "groups": {
+          "ambiguous_choice": {
+            "answers": 4,
+            "all_rubric_checks_passed": 1
+          },
+          "new_diagnostic": {
+            "answers": 20,
+            "all_rubric_checks_passed": 13
+          },
+          "historical_anchor": {
+            "answers": 4,
+            "all_rubric_checks_passed": 0
+          }
+        }
+      }
+    },
+    "bf16": {
+      "raw_sha256": "f65e6b43a30357200e7237a28a37914786f91763e469a83543a4b36f90462335",
+      "requests": 28,
+      "finish_reasons": {
+        "eos": 28
+      },
+      "load_s": 1.6109688790747896,
+      "first_final_text_s": {
+        "n": 28,
+        "median": 0.03211167152039707,
+        "p95_nearest_rank": 0.09500157705042511,
+        "max": 0.10254477907437831
+      },
+      "elapsed_s": {
+        "n": 28,
+        "median": 1.9677005925332196,
+        "p95_nearest_rank": 4.351633027894422,
+        "max": 5.088556417031214
+      },
+      "generated_tokens": {
+        "n": 28,
+        "median": 133.0,
+        "p95_nearest_rank": 293,
+        "max": 336
+      },
+      "torch_peak_allocated_bytes": {
+        "n": 28,
+        "median": 8095485440.0,
+        "p95_nearest_rank": 8121738752,
+        "max": 8128079360
+      },
+      "torch_peak_reserved_bytes": {
+        "n": 28,
+        "median": 8153726976.0,
+        "p95_nearest_rank": 8153726976,
+        "max": 8153726976
+      },
+      "sampled_process_peak_bytes": {
+        "n": 28,
+        "median": 8640266240.0,
+        "p95_nearest_rank": 8640266240,
+        "max": 8640266240
+      },
+      "semantic_review": {
+        "sha256": "572ea41ede8ec45503079bc095d5b4ad7a814d4438e924cd4fe431d6994ef818",
+        "scope": "independent assistant review, not human blind evaluation",
+        "groups": {
+          "ambiguous_choice": {
+            "answers": 4,
+            "all_rubric_checks_passed": 4
+          },
+          "new_diagnostic": {
+            "answers": 20,
+            "all_rubric_checks_passed": 12
+          },
+          "historical_anchor": {
+            "answers": 4,
+            "all_rubric_checks_passed": 0
+          }
+        }
+      }
+    }
+  },
+  "paired_inputs_verified": 28
+}
