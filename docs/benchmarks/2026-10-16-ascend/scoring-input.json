@@ -1,0 +1,1082 @@
+[
+  {
+    "case_id": "ascend-00646@r0",
+    "variant": "plain",
+    "reference": "我觉得是tennis",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "我觉得是 tennis。"
+  },
+  {
+    "case_id": "ascend-00646@r0",
+    "variant": "terms",
+    "reference": "我觉得是tennis",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "我觉得是 tennis。"
+  },
+  {
+    "case_id": "ascend-01149@r0",
+    "variant": "terms",
+    "reference": "大陆的那个OFO它的一个过去在不同的年份不同的时间点的用量然后去",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "大陆的那个OFO，它的一个过去在不同的年份、不同的时间点的用量，然后去。"
+  },
+  {
+    "case_id": "ascend-01149@r0",
+    "variant": "plain",
+    "reference": "大陆的那个OFO它的一个过去在不同的年份不同的时间点的用量然后去",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "大陆的那个OFO，它的一个过去在不同的年份、不同的时间点的用量，然后去。"
+  },
+  {
+    "case_id": "ascend-00143@r0",
+    "variant": "plain",
+    "reference": "但那个办那个 i n g i a n g是不是只有之后打算留香港的人才能",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那但那个i n g i n g是不是只有之后打算留香港的人才？"
+  },
+  {
+    "case_id": "ascend-00143@r0",
+    "variant": "terms",
+    "reference": "但那个办那个 i n g i a n g是不是只有之后打算留香港的人才能",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那但那个ING，ING是不是只有之后打算留香港的人才？"
+  },
+  {
+    "case_id": "ascend-00415@r0",
+    "variant": "terms",
+    "reference": "呃possible supervisor",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "A possible supervisor."
+  },
+  {
+    "case_id": "ascend-00415@r0",
+    "variant": "plain",
+    "reference": "呃possible supervisor",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "A possible supervisor."
+  },
+  {
+    "case_id": "ascend-00920@r0",
+    "variant": "plain",
+    "reference": "其实我那时候非常的urgent就是我到了",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "其实我那时候非常的urgent，就是我到了。"
+  },
+  {
+    "case_id": "ascend-00920@r0",
+    "variant": "terms",
+    "reference": "其实我那时候非常的urgent就是我到了",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "其实我那时候非常的 urgent，就是我到了。"
+  },
+  {
+    "case_id": "ascend-00660@r0",
+    "variant": "terms",
+    "reference": "另外一个因素呢是就是the the court for tennis",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "另外一个因素呢，是就是 the the court for tennis."
+  },
+  {
+    "case_id": "ascend-00660@r0",
+    "variant": "plain",
+    "reference": "另外一个因素呢是就是the the court for tennis",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "另外一个因素呢，是就是 the the court for tennis。"
+  },
+  {
+    "case_id": "ascend-01001@r0",
+    "variant": "plain",
+    "reference": "都是一个hard choice",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "都是一个 hard choice。"
+  },
+  {
+    "case_id": "ascend-01001@r0",
+    "variant": "terms",
+    "reference": "都是一个hard choice",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "都是一个 hard choice."
+  },
+  {
+    "case_id": "ascend-01006@r0",
+    "variant": "terms",
+    "reference": "第二个呢就是你因为根据你的scenario的不同它可能会make different uh",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "第二个呢，就是你因为根据你的 scenario 的不同，它可能会 make difference。"
+  },
+  {
+    "case_id": "ascend-01006@r0",
+    "variant": "plain",
+    "reference": "第二个呢就是你因为根据你的scenario的不同它可能会make different uh",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "第二个呢，就是你因为根据你的 scenario 的不同，它可能会 make difference。"
+  },
+  {
+    "case_id": "ascend-00068@r0",
+    "variant": "plain",
+    "reference": "computer languages是",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "Computer language."
+  },
+  {
+    "case_id": "ascend-00068@r0",
+    "variant": "terms",
+    "reference": "computer languages是",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "Computer language."
+  },
+  {
+    "case_id": "ascend-00494@r0",
+    "variant": "terms",
+    "reference": "所以你平时就现在大部分时间还是tennis就打网球",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "所以你平时就现在大部分时间还是 tennis 就打网球。"
+  },
+  {
+    "case_id": "ascend-00494@r0",
+    "variant": "plain",
+    "reference": "所以你平时就现在大部分时间还是tennis就打网球",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "所以你平时就现在大部分时间还是，tennis就打网球。"
+  },
+  {
+    "case_id": "ascend-00966@r0",
+    "variant": "plain",
+    "reference": "interview或是一些",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "interview或者是一些。"
+  },
+  {
+    "case_id": "ascend-00966@r0",
+    "variant": "terms",
+    "reference": "interview或是一些",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "interview或者是一些。"
+  },
+  {
+    "case_id": "ascend-00214@r0",
+    "variant": "terms",
+    "reference": "他的名字叫Tony",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "他的名字叫托尼。"
+  },
+  {
+    "case_id": "ascend-00214@r0",
+    "variant": "plain",
+    "reference": "他的名字叫Tony",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "他的名字叫托尼。"
+  },
+  {
+    "case_id": "ascend-00211@r0",
+    "variant": "plain",
+    "reference": "那个玩basketball的然后我有时候有时候会邀我的friends啊一起打在就是after class的时候",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那个玩 basketball 的，然后我就说，稍微邀我的 friends 啊一起打，在就是 after class 的时候。"
+  },
+  {
+    "case_id": "ascend-00211@r0",
+    "variant": "terms",
+    "reference": "那个玩basketball的然后我有时候有时候会邀我的friends啊一起打在就是after class的时候",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那个玩 basketball 的，然后我就说，稍微邀我的 friends 啊一起打，在就是 after class 的时候。"
+  },
+  {
+    "case_id": "ascend-01130@r0",
+    "variant": "terms",
+    "reference": "做一些优化啊cleaning啊",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "做一些优化，cleaning啊。"
+  },
+  {
+    "case_id": "ascend-01130@r0",
+    "variant": "plain",
+    "reference": "做一些优化啊cleaning啊",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "做一些优化，cleaning啊。"
+  },
+  {
+    "case_id": "ascend-00080@r0",
+    "variant": "plain",
+    "reference": "嗯yeah",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "Hmm. Yeah."
+  },
+  {
+    "case_id": "ascend-00080@r0",
+    "variant": "terms",
+    "reference": "嗯yeah",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "Hmm. Yeah."
+  },
+  {
+    "case_id": "ascend-01068@r0",
+    "variant": "terms",
+    "reference": "当然我小时候我也没有smartphone但是呢我是小时候比较早接触过那个电脑",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "当然，我小时候我也没有 smartphone，但是呢，我是小时候比较早接触那个电脑。"
+  },
+  {
+    "case_id": "ascend-01068@r0",
+    "variant": "plain",
+    "reference": "当然我小时候我也没有smartphone但是呢我是小时候比较早接触过那个电脑",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "当然，我小时候我也没有 smartphone，但是呢，我是小时候比较早接触那个电脑。"
+  },
+  {
+    "case_id": "ascend-00317@r0",
+    "variant": "plain",
+    "reference": "来hong kong的时候是做那个",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "来Hong Kong的时候是坐那个。"
+  },
+  {
+    "case_id": "ascend-00317@r0",
+    "variant": "terms",
+    "reference": "来hong kong的时候是做那个",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "来 Hong Kong 的时候是做那个。"
+  },
+  {
+    "case_id": "ascend-00345@r0",
+    "variant": "terms",
+    "reference": "大陆继续念啊不去呃US",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "大陆继续念啊，不续啊，U.S."
+  },
+  {
+    "case_id": "ascend-00345@r0",
+    "variant": "plain",
+    "reference": "大陆继续念啊不去呃US",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "大陆继续念啊，不续啊，U.S."
+  },
+  {
+    "case_id": "ascend-01128@r0",
+    "variant": "plain",
+    "reference": "呃对它analyzed或者是哦对就你刚你说的那些东西",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "呃，data analyst，或者是啊，对，就刚刚你刚刚说的那些东西。"
+  },
+  {
+    "case_id": "ascend-01128@r0",
+    "variant": "terms",
+    "reference": "呃对它analyzed或者是哦对就你刚你说的那些东西",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "呃，data analyst，或者是啊，对，就刚刚你刚刚说的那些东西。"
+  },
+  {
+    "case_id": "ascend-01041@r0",
+    "variant": "terms",
+    "reference": "那这个又是另一回事那就是第三方那个take this responsibility",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那这个又是另一回事，那就是第三方那个 take this responsibility."
+  },
+  {
+    "case_id": "ascend-01041@r0",
+    "variant": "plain",
+    "reference": "那这个又是另一回事那就是第三方那个take this responsibility",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那这个又是另一回事，那就是第三方那个 take this responsibility。"
+  },
+  {
+    "case_id": "ascend-01094@r0",
+    "variant": "plain",
+    "reference": "so you will walk slowly and slowly and then you you you should呃",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "So it will work slowly and slowly, and then you you you should."
+  },
+  {
+    "case_id": "ascend-01094@r0",
+    "variant": "terms",
+    "reference": "so you will walk slowly and slowly and then you you you should呃",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "So it will work slowly and slowly, and then you you you should."
+  },
+  {
+    "case_id": "ascend-00933@r0",
+    "variant": "terms",
+    "reference": "那to be honest你觉得",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那To be honest，你觉得？"
+  },
+  {
+    "case_id": "ascend-00933@r0",
+    "variant": "plain",
+    "reference": "那to be honest你觉得",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那To be honest，你觉得？"
+  },
+  {
+    "case_id": "ascend-00226@r0",
+    "variant": "plain",
+    "reference": "对所以我们以后可以一起去play basketball",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "对，所以我们以后可以一起去 play basketball。"
+  },
+  {
+    "case_id": "ascend-00226@r0",
+    "variant": "terms",
+    "reference": "对所以我们以后可以一起去play basketball",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "对，所以我们以后可以一起去 play basketball。"
+  },
+  {
+    "case_id": "ascend-00891@r0",
+    "variant": "terms",
+    "reference": "个人的personalities还有那个",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "个人的 personalities，还有那个。"
+  },
+  {
+    "case_id": "ascend-00891@r0",
+    "variant": "plain",
+    "reference": "个人的personalities还有那个",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "个人的 personalities，还有那个。"
+  },
+  {
+    "case_id": "ascend-01157@r0",
+    "variant": "plain",
+    "reference": "哦那个是那个是wind好像是做",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "哦，那个是那个是wind，好像是做。"
+  },
+  {
+    "case_id": "ascend-01157@r0",
+    "variant": "terms",
+    "reference": "哦那个是那个是wind好像是做",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "哦，那个是那个是Wind，好像是做。"
+  },
+  {
+    "case_id": "ascend-00428@r0",
+    "variant": "terms",
+    "reference": "呃secrete方向走",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "呃，secret 方向走。"
+  },
+  {
+    "case_id": "ascend-00428@r0",
+    "variant": "plain",
+    "reference": "呃secrete方向走",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "呃，secret方向走。"
+  },
+  {
+    "case_id": "ascend-00256@r0",
+    "variant": "plain",
+    "reference": "就是会带我们组织一些activity",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "就是会带我们组织一些activity。"
+  },
+  {
+    "case_id": "ascend-00256@r0",
+    "variant": "terms",
+    "reference": "就是会带我们组织一些activity",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "就是会带我们组织一些 activity。"
+  },
+  {
+    "case_id": "ascend-01166@r0",
+    "variant": "terms",
+    "reference": "还有呃so",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "Have uh so."
+  },
+  {
+    "case_id": "ascend-01166@r0",
+    "variant": "plain",
+    "reference": "还有呃so",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "Have, so."
+  },
+  {
+    "case_id": "ascend-00402@r0",
+    "variant": "plain",
+    "reference": "所以但是跟那这跟major没关系的你说的major可能是哦我接下来要apply到graduate school的时候我要往computer science和往electric engineering",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "所以那是跟那跟major没关系的。你说的major可能是哦，我接下来apply到graduate school的时候，我要往computer science，我要往electrical engineering。"
+  },
+  {
+    "case_id": "ascend-00402@r0",
+    "variant": "terms",
+    "reference": "所以但是跟那这跟major没关系的你说的major可能是哦我接下来要apply到graduate school的时候我要往computer science和往electric engineering",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "所以那是跟那跟 major 没关系的。你说的 major 可能是哦，我接下来 apply 到 graduate school 的时候，我要往 computer science 或往 electrical engineering。"
+  },
+  {
+    "case_id": "ascend-00246@r0",
+    "variant": "terms",
+    "reference": "呃大概一千位的students",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "呃，大概一千位的 students。"
+  },
+  {
+    "case_id": "ascend-00246@r0",
+    "variant": "plain",
+    "reference": "呃大概一千位的students",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "呃，大概一千位的 students。"
+  },
+  {
+    "case_id": "ascend-00081@r0",
+    "variant": "plain",
+    "reference": "所以我上学期也学了python",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "所以我上学期也学了Python。"
+  },
+  {
+    "case_id": "ascend-00081@r0",
+    "variant": "terms",
+    "reference": "所以我上学期也学了python",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "所以，我上学期也学了 Python。"
+  },
+  {
+    "case_id": "ascend-00150@r0",
+    "variant": "terms",
+    "reference": "想过但是因为最近project有点多",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "想过，但是因为这阵子 project 有点多。"
+  },
+  {
+    "case_id": "ascend-00150@r0",
+    "variant": "plain",
+    "reference": "想过但是因为最近project有点多",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "想过，但是因为这阵子project有点多。"
+  },
+  {
+    "case_id": "ascend-01278@r0",
+    "variant": "plain",
+    "reference": "可以用mobile payments但是大多数一些奢侈品品牌或者是一些mall里面",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "可以用mobile payments，但是大多数一些奢侈品品牌或者是一些mall里面。"
+  },
+  {
+    "case_id": "ascend-01278@r0",
+    "variant": "terms",
+    "reference": "可以用mobile payments但是大多数一些奢侈品品牌或者是一些mall里面",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "可以用 mobile payments，但是大多数一些奢侈品品牌或者是一些 mall 里面。"
+  },
+  {
+    "case_id": "ascend-00999@r0",
+    "variant": "terms",
+    "reference": "就是hard choice",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "就是 hard choice."
+  },
+  {
+    "case_id": "ascend-00999@r0",
+    "variant": "plain",
+    "reference": "就是hard choice",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "It's a hard choice."
+  },
+  {
+    "case_id": "ascend-00311@r0",
+    "variant": "plain",
+    "reference": "然后呃或者是去book一个电影的票啊或者是",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "然后啊，或者是去book一个电影的票啊，或者是。"
+  },
+  {
+    "case_id": "ascend-00311@r0",
+    "variant": "terms",
+    "reference": "然后呃或者是去book一个电影的票啊或者是",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "然后啊，或者是去book一个电影的票啊，或者是。"
+  },
+  {
+    "case_id": "ascend-00748@r0",
+    "variant": "terms",
+    "reference": "对他们来说可以强化他们的memory呀什么的",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "对他们来说，可以强化他们的 memory 啊什么的。"
+  },
+  {
+    "case_id": "ascend-00748@r0",
+    "variant": "plain",
+    "reference": "对他们来说可以强化他们的memory呀什么的",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "对他们来说，可以强化他们的memory啊什么的。"
+  },
+  {
+    "case_id": "ascend-00701@r0",
+    "variant": "plain",
+    "reference": "就是he's faster stronger and more scared for than the other players",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "He is faster, stronger, and more skillful than other players."
+  },
+  {
+    "case_id": "ascend-00701@r0",
+    "variant": "terms",
+    "reference": "就是he's faster stronger and more scared for than the other players",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "Is he is faster, stronger, and more skillful than other players."
+  },
+  {
+    "case_id": "ascend-00612@r0",
+    "variant": "terms",
+    "reference": "like like呃",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "Like, like uh."
+  },
+  {
+    "case_id": "ascend-00612@r0",
+    "variant": "plain",
+    "reference": "like like呃",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "Like, like uh."
+  },
+  {
+    "case_id": "ascend-00623@r0",
+    "variant": "plain",
+    "reference": "一个是basketball一个是badminton",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "一个是 basketball，一个是 badminton。"
+  },
+  {
+    "case_id": "ascend-00623@r0",
+    "variant": "terms",
+    "reference": "一个是basketball一个是badminton",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "一个是 basketball, 一个是 badminton."
+  },
+  {
+    "case_id": "ascend-00990@r0",
+    "variant": "terms",
+    "reference": "AI做出了一个错误的判断",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "AI做出了一个错误的判断。"
+  },
+  {
+    "case_id": "ascend-00990@r0",
+    "variant": "plain",
+    "reference": "AI做出了一个错误的判断",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "A.I.做出了一个错误的判断。"
+  },
+  {
+    "case_id": "ascend-00995@r0",
+    "variant": "plain",
+    "reference": "我要问题就是有没有一个choice就是说可以停车",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "我要问，就是有没有一个 choice，就是说可以停车。"
+  },
+  {
+    "case_id": "ascend-00995@r0",
+    "variant": "terms",
+    "reference": "我要问题就是有没有一个choice就是说可以停车",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "我要问，就是有没有一个 choice，就是说可以停车。"
+  },
+  {
+    "case_id": "ascend-00871@r0",
+    "variant": "terms",
+    "reference": "you can not wear your呃clothes",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "You cannot wear your, um, clothes."
+  },
+  {
+    "case_id": "ascend-00871@r0",
+    "variant": "plain",
+    "reference": "you can not wear your呃clothes",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "You cannot wear your, um, clothes."
+  },
+  {
+    "case_id": "ascend-00347@r0",
+    "variant": "plain",
+    "reference": "我觉得Hong Kong这样比较in between就是western还有eastern的的那种",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "我觉得 Hong Kong 这样比较 in between，就是 Western 还有 Eastern 的的那种。"
+  },
+  {
+    "case_id": "ascend-00347@r0",
+    "variant": "terms",
+    "reference": "我觉得Hong Kong这样比较in between就是western还有eastern的的那种",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "我觉得 Hong Kong 这样比较 in between，就是 Western 还有 Eastern 的的那种。"
+  },
+  {
+    "case_id": "ascend-00239@r0",
+    "variant": "terms",
+    "reference": "就professor多不多啊",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "就 professor 多不多？"
+  },
+  {
+    "case_id": "ascend-00239@r0",
+    "variant": "plain",
+    "reference": "就professor多不多啊",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "就 professor 多不多？"
+  },
+  {
+    "case_id": "ascend-01284@r0",
+    "variant": "plain",
+    "reference": "mobile phone number还有你的嗯",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "mobile phone number,还有你的嗯。"
+  },
+  {
+    "case_id": "ascend-01284@r0",
+    "variant": "terms",
+    "reference": "mobile phone number还有你的嗯",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "mobile phone number，还有你的，嗯。"
+  },
+  {
+    "case_id": "ascend-01213@r0",
+    "variant": "terms",
+    "reference": "然后它可能会record your personal life",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "然后他可能会 record your personal."
+  },
+  {
+    "case_id": "ascend-01213@r0",
+    "variant": "plain",
+    "reference": "然后它可能会record your personal life",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "然后他可能会 record your personal."
+  },
+  {
+    "case_id": "ascend-00722@r0",
+    "variant": "plain",
+    "reference": "然后McGrady他本身打球就是也是特别帅的那一种",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "然后，McGrady他本身打球就是也是特别帅的那一种。"
+  },
+  {
+    "case_id": "ascend-00722@r0",
+    "variant": "terms",
+    "reference": "然后McGrady他本身打球就是也是特别帅的那一种",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "然后 McGregor 他本身打球就是也是特别帅的那一种。"
+  },
+  {
+    "case_id": "ascend-00352@r0",
+    "variant": "terms",
+    "reference": "比较就是对我来说比较new但是又就是说比比较容易习惯",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "比较就是对我来说比较new，但是又就是说比比较容易习惯。"
+  },
+  {
+    "case_id": "ascend-00352@r0",
+    "variant": "plain",
+    "reference": "比较就是对我来说比较new但是又就是说比比较容易习惯",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "比较就是对我来说比较new，但是又就是说比比较容易习惯。"
+  },
+  {
+    "case_id": "ascend-00190@r0",
+    "variant": "plain",
+    "reference": "那你有没有什么favourite foods",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那你有没有什么favorite food？"
+  },
+  {
+    "case_id": "ascend-00190@r0",
+    "variant": "terms",
+    "reference": "那你有没有什么favourite foods",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那你有没有什么 favorite food?"
+  },
+  {
+    "case_id": "ascend-00803@r0",
+    "variant": "terms",
+    "reference": "我不觉得one year有点短",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "我不觉得玩意儿有点短。"
+  },
+  {
+    "case_id": "ascend-00803@r0",
+    "variant": "plain",
+    "reference": "我不觉得one year有点短",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "我不觉得玩意儿有点短。"
+  },
+  {
+    "case_id": "ascend-01276@r0",
+    "variant": "plain",
+    "reference": "mobile payment的",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "母巴陪们的。"
+  },
+  {
+    "case_id": "ascend-01276@r0",
+    "variant": "terms",
+    "reference": "mobile payment的",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "慕巴配门的。"
+  },
+  {
+    "case_id": "ascend-00380@r0",
+    "variant": "terms",
+    "reference": "就professor就第一个是这个学校的rank也不要",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "就 Professor, 就第一个是这个学校的 rank 也不要。"
+  },
+  {
+    "case_id": "ascend-00380@r0",
+    "variant": "plain",
+    "reference": "就professor就第一个是这个学校的rank也不要",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "就 professor 就第一个是这个学校的 rank 也不要。"
+  },
+  {
+    "case_id": "ascend-01081@r0",
+    "variant": "plain",
+    "reference": "你要就是教导就是自己的孩子如何使用smartphone是一个非常关键的",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "你要就是教导就是自己的孩子如何使用smartphone，是一个非常关键的。"
+  },
+  {
+    "case_id": "ascend-01081@r0",
+    "variant": "terms",
+    "reference": "你要就是教导就是自己的孩子如何使用smartphone是一个非常关键的",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "你要就是教导就是自己的孩子如何使用 smartphone 是一个非常关键的。"
+  },
+  {
+    "case_id": "ascend-00698@r0",
+    "variant": "terms",
+    "reference": "um那个第一是Michael Jordan",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那个第一是 Michael Jordan。"
+  },
+  {
+    "case_id": "ascend-00698@r0",
+    "variant": "plain",
+    "reference": "um那个第一是Michael Jordan",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那个第一是Michael Jordan。"
+  },
+  {
+    "case_id": "ascend-01142@r0",
+    "variant": "plain",
+    "reference": "computer language还有problem language的东西我还是不太懂",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "Computer language还有program language的东西，我还是不太懂。"
+  },
+  {
+    "case_id": "ascend-01142@r0",
+    "variant": "terms",
+    "reference": "computer language还有problem language的东西我还是不太懂",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "computer language还有program language的东西，我还是不太懂。"
+  },
+  {
+    "case_id": "ascend-00944@r0",
+    "variant": "terms",
+    "reference": "对business那边social活动多一点就有很多活动要参加",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "对，毕竟那边搜索的活动多一点，就有很多活动要参加。"
+  },
+  {
+    "case_id": "ascend-00944@r0",
+    "variant": "plain",
+    "reference": "对business那边social活动多一点就有很多活动要参加",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "对，毕竟那边搜索的活动多一点，就有很多活动要参加。"
+  },
+  {
+    "case_id": "ascend-00332@r0",
+    "variant": "plain",
+    "reference": "这个是我觉得比较interesting part的的那个topic",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "这个是我觉得比较 interesting 的的的那个 topic。"
+  },
+  {
+    "case_id": "ascend-00332@r0",
+    "variant": "terms",
+    "reference": "这个是我觉得比较interesting part的的那个topic",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "这个是我觉得比较 interesting part 的的那个 topic。"
+  },
+  {
+    "case_id": "ascend-01196@r0",
+    "variant": "terms",
+    "reference": "privacy嗯",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "Privacy."
+  },
+  {
+    "case_id": "ascend-01196@r0",
+    "variant": "plain",
+    "reference": "privacy嗯",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "Privacy."
+  },
+  {
+    "case_id": "ascend-00427@r0",
+    "variant": "plain",
+    "reference": "那个往material的方向走或者往那个integrities",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那个往material的方向走，或者往那个integrated。"
+  },
+  {
+    "case_id": "ascend-00427@r0",
+    "variant": "terms",
+    "reference": "那个往material的方向走或者往那个integrities",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "那个往 material 的方向走，或者往那个 integrated。"
+  },
+  {
+    "case_id": "ascend-01055@r0",
+    "variant": "terms",
+    "reference": "好那我们现在开始我们第二个topic就是你认为你就是你认为children应不应该有自己的smart phone",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "好，那我们现在开始我们第二个 topic，就是你认为，你就是你认为，children 应不应该有自己的 smartphone？"
+  },
+  {
+    "case_id": "ascend-01055@r0",
+    "variant": "plain",
+    "reference": "好那我们现在开始我们第二个topic就是你认为你就是你认为children应不应该有自己的smart phone",
+    "reference_kind": "human_transcript",
+    "transcript_reviewed": true,
+    "status": "ok",
+    "text": "好，那我们现在开始我们第二个 topic，就是你认为，你就是你认为 children 应不应该有自己的 smartphone？"
+  }
+]

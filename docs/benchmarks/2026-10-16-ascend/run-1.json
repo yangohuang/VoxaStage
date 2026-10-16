@@ -1,0 +1,1201 @@
+{
+  "version": 1,
+  "status": "passed",
+  "created_at": "2026-10-16T15:59:17.073061+00:00",
+  "execution": "http_worker",
+  "scope": "Completed WAV request/response timing; not streaming input or physical microphone latency.",
+  "trials": [
+    {
+      "phase": "warmup",
+      "repeat": -1,
+      "case_id": "ascend-00646",
+      "variant": "plain",
+      "audio_sha256": "285c0b50232859df61172c509b25d5bbc35716a4c654c513fad8b30317b15958",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "我觉得是 tennis。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.10888275795150548,
+      "request_wall_s": 0.1966887660091743
+    },
+    {
+      "phase": "warmup",
+      "repeat": -1,
+      "case_id": "ascend-00646",
+      "variant": "terms",
+      "audio_sha256": "285c0b50232859df61172c509b25d5bbc35716a4c654c513fad8b30317b15958",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "我觉得是 tennis。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.09266781399492174,
+      "request_wall_s": 0.12521037191618234
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00646",
+      "variant": "plain",
+      "audio_sha256": "285c0b50232859df61172c509b25d5bbc35716a4c654c513fad8b30317b15958",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "我觉得是 tennis。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.07356664899270982,
+      "request_wall_s": 0.09880839893594384
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00646",
+      "variant": "terms",
+      "audio_sha256": "285c0b50232859df61172c509b25d5bbc35716a4c654c513fad8b30317b15958",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "我觉得是 tennis。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.07430586102418602,
+      "request_wall_s": 0.10751711099874228
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01149",
+      "variant": "terms",
+      "audio_sha256": "0bacc8a51766e910aaefa6584f3c28a3f37972b68c53790193f1a5230c1d0204",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "大陆的那个OFO，它的一个过去在不同的年份、不同的时间点的用量，然后去。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.24835446302313358,
+      "request_wall_s": 0.32138128601945937
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01149",
+      "variant": "plain",
+      "audio_sha256": "0bacc8a51766e910aaefa6584f3c28a3f37972b68c53790193f1a5230c1d0204",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "大陆的那个OFO，它的一个过去在不同的年份、不同的时间点的用量，然后去。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.22907270898576826,
+      "request_wall_s": 0.2938595409505069
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00143",
+      "variant": "plain",
+      "audio_sha256": "63749ee6ed5286c622632e72470141ccf68e4ff650ced558ab04eee33b037fc0",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "那但那个i n g i n g是不是只有之后打算留香港的人才？",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.2123426910256967,
+      "request_wall_s": 0.25258499290794134
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00143",
+      "variant": "terms",
+      "audio_sha256": "63749ee6ed5286c622632e72470141ccf68e4ff650ced558ab04eee33b037fc0",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "那但那个ING，ING是不是只有之后打算留香港的人才？",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1765714349457994,
+      "request_wall_s": 0.20937290997244418
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00415",
+      "variant": "terms",
+      "audio_sha256": "15ca09e28f32dc9d98247b06640989221c329dfa32a8a19b00c6cbdfdeab7d9f",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "A possible supervisor.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.08564077608752996,
+      "request_wall_s": 0.10670470097102225
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00415",
+      "variant": "plain",
+      "audio_sha256": "15ca09e28f32dc9d98247b06640989221c329dfa32a8a19b00c6cbdfdeab7d9f",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "A possible supervisor.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.07320095098111778,
+      "request_wall_s": 0.08801572793163359
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00920",
+      "variant": "plain",
+      "audio_sha256": "8fb5d49ae65922925dcfb06f5d464b88365ae60f16734c09591e031480a085b8",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "其实我那时候非常的urgent，就是我到了。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1354816920356825,
+      "request_wall_s": 0.166322180069983
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00920",
+      "variant": "terms",
+      "audio_sha256": "8fb5d49ae65922925dcfb06f5d464b88365ae60f16734c09591e031480a085b8",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "其实我那时候非常的 urgent，就是我到了。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.135090350988321,
+      "request_wall_s": 0.1635691849514842
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00660",
+      "variant": "terms",
+      "audio_sha256": "74a68e38beebd8379499736a1f8bcfb9c5193aeec916b271109c0cc9ad20793b",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "另外一个因素呢，是就是 the the court for tennis.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1571391629986465,
+      "request_wall_s": 0.18873674201313406
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00660",
+      "variant": "plain",
+      "audio_sha256": "74a68e38beebd8379499736a1f8bcfb9c5193aeec916b271109c0cc9ad20793b",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "另外一个因素呢，是就是 the the court for tennis。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1526197389466688,
+      "request_wall_s": 0.21662571793422103
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01001",
+      "variant": "plain",
+      "audio_sha256": "a7b0fad1791762390af0b49abfd91f6388bf2bb428e633db643b8f90bb2de338",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "都是一个 hard choice。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.0819813139969483,
+      "request_wall_s": 0.09487670799717307
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01001",
+      "variant": "terms",
+      "audio_sha256": "a7b0fad1791762390af0b49abfd91f6388bf2bb428e633db643b8f90bb2de338",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "都是一个 hard choice.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.0947612141026184,
+      "request_wall_s": 0.10714150802232325
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01006",
+      "variant": "terms",
+      "audio_sha256": "24e879ca3ff0578495c653ab41abf4bf226c3aa0d2b9094507127ffb5a41deae",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "第二个呢，就是你因为根据你的 scenario 的不同，它可能会 make difference。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.20078947697766125,
+      "request_wall_s": 0.2328924349276349
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01006",
+      "variant": "plain",
+      "audio_sha256": "24e879ca3ff0578495c653ab41abf4bf226c3aa0d2b9094507127ffb5a41deae",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "第二个呢，就是你因为根据你的 scenario 的不同，它可能会 make difference。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1826927000656724,
+      "request_wall_s": 0.22032431804109365
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00068",
+      "variant": "plain",
+      "audio_sha256": "ddf1d1241915e223a8f46e6e00e9f5c0b6574add6d6c984fab26ee5508897958",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "Computer language.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.07796537596732378,
+      "request_wall_s": 0.08810253604315221
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00068",
+      "variant": "terms",
+      "audio_sha256": "ddf1d1241915e223a8f46e6e00e9f5c0b6574add6d6c984fab26ee5508897958",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "Computer language.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.06498531601391733,
+      "request_wall_s": 0.08090080600231886
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00494",
+      "variant": "terms",
+      "audio_sha256": "a50bcdd16a6e6485da66e4394cac7e716c643372ba6478dc6af29627b6981a2d",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "所以你平时就现在大部分时间还是 tennis 就打网球。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.17777946195565164,
+      "request_wall_s": 0.21163411706220359
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00494",
+      "variant": "plain",
+      "audio_sha256": "a50bcdd16a6e6485da66e4394cac7e716c643372ba6478dc6af29627b6981a2d",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "所以你平时就现在大部分时间还是，tennis就打网球。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.17577342397999018,
+      "request_wall_s": 0.2087669549509883
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00966",
+      "variant": "plain",
+      "audio_sha256": "06e84d4c409e6ce9d25abda1da5fff9c52d094438aaf935c7a6750cf1ca2964f",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "interview或者是一些。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.09361973206978291,
+      "request_wall_s": 0.10772581899072975
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00966",
+      "variant": "terms",
+      "audio_sha256": "06e84d4c409e6ce9d25abda1da5fff9c52d094438aaf935c7a6750cf1ca2964f",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "interview或者是一些。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.09076623490545899,
+      "request_wall_s": 0.1023586360970512
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00214",
+      "variant": "terms",
+      "audio_sha256": "5986a54a6256a5a96fd55e46b674bbd9de651ffac5237824f1b4798a4c3c13d1",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "他的名字叫托尼。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.10509419499430805,
+      "request_wall_s": 0.16390383907128125
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00214",
+      "variant": "plain",
+      "audio_sha256": "5986a54a6256a5a96fd55e46b674bbd9de651ffac5237824f1b4798a4c3c13d1",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "他的名字叫托尼。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.092460623010993,
+      "request_wall_s": 0.10245073796249926
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00211",
+      "variant": "plain",
+      "audio_sha256": "8fe6e89df1db5582908c26326fc0cd48e4ce35aff24edd25ae70fe69809f8db0",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "那个玩 basketball 的，然后我就说，稍微邀我的 friends 啊一起打，在就是 after class 的时候。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.2731884910026565,
+      "request_wall_s": 0.3073302359553054
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00211",
+      "variant": "terms",
+      "audio_sha256": "8fe6e89df1db5582908c26326fc0cd48e4ce35aff24edd25ae70fe69809f8db0",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "那个玩 basketball 的，然后我就说，稍微邀我的 friends 啊一起打，在就是 after class 的时候。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.24379244807641953,
+      "request_wall_s": 0.28328783600591123
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01130",
+      "variant": "terms",
+      "audio_sha256": "da5f931383771bf20440ecb4fe0ee9f79e27d2d5c7168e39894bc41f44f72d72",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "做一些优化，cleaning啊。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.11280084995087236,
+      "request_wall_s": 0.12982810800895095
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01130",
+      "variant": "plain",
+      "audio_sha256": "da5f931383771bf20440ecb4fe0ee9f79e27d2d5c7168e39894bc41f44f72d72",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "做一些优化，cleaning啊。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.09806168696377426,
+      "request_wall_s": 0.11034162505529821
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00080",
+      "variant": "plain",
+      "audio_sha256": "8d3d7def5dfde742f885a9992a68ae50aab172ec7306a5f969aae8e2a86c7fa7",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "Hmm. Yeah.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.08645255898591131,
+      "request_wall_s": 0.0978759090648964
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00080",
+      "variant": "terms",
+      "audio_sha256": "8d3d7def5dfde742f885a9992a68ae50aab172ec7306a5f969aae8e2a86c7fa7",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "Hmm. Yeah.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.07465074199717492,
+      "request_wall_s": 0.08588289807084948
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01068",
+      "variant": "terms",
+      "audio_sha256": "9f57d91794977a4b011070157461d1093bcf0b76b5b8b51cea85dd697827f898",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "当然，我小时候我也没有 smartphone，但是呢，我是小时候比较早接触那个电脑。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.23099637404084206,
+      "request_wall_s": 0.26215336902532727
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01068",
+      "variant": "plain",
+      "audio_sha256": "9f57d91794977a4b011070157461d1093bcf0b76b5b8b51cea85dd697827f898",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "当然，我小时候我也没有 smartphone，但是呢，我是小时候比较早接触那个电脑。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.20141694392077625,
+      "request_wall_s": 0.2360757349524647
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00317",
+      "variant": "plain",
+      "audio_sha256": "312a3da2672b80d52dedcd118db806fe5f99a4e5e3af6e82f7f1d3d8f944876a",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "来Hong Kong的时候是坐那个。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.13021769595798105,
+      "request_wall_s": 0.15222987602464855
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00317",
+      "variant": "terms",
+      "audio_sha256": "312a3da2672b80d52dedcd118db806fe5f99a4e5e3af6e82f7f1d3d8f944876a",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "来 Hong Kong 的时候是做那个。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.12953772104810923,
+      "request_wall_s": 0.14739397901576012
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00345",
+      "variant": "terms",
+      "audio_sha256": "1e68b09cea25e3fb235a423eac133be7d18b953f00047e70e1a4472f4d99f2e2",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "大陆继续念啊，不续啊，U.S.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.16276127297896892,
+      "request_wall_s": 0.19203543395269662
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00345",
+      "variant": "plain",
+      "audio_sha256": "1e68b09cea25e3fb235a423eac133be7d18b953f00047e70e1a4472f4d99f2e2",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "大陆继续念啊，不续啊，U.S.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.14103412895929068,
+      "request_wall_s": 0.16084722697269171
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01128",
+      "variant": "plain",
+      "audio_sha256": "85868f2153848e603431b6387256cef02f4c9e6c2723c776cfca7dd3c567d633",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "呃，data analyst，或者是啊，对，就刚刚你刚刚说的那些东西。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.21036890510004014,
+      "request_wall_s": 0.46064479905180633
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01128",
+      "variant": "terms",
+      "audio_sha256": "85868f2153848e603431b6387256cef02f4c9e6c2723c776cfca7dd3c567d633",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "呃，data analyst，或者是啊，对，就刚刚你刚刚说的那些东西。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1981458510272205,
+      "request_wall_s": 0.2253021290525794
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01041",
+      "variant": "terms",
+      "audio_sha256": "bbb2ae95fed72a3a06a4339b0bd5b1e9ce00b03d98d3240d070df18769436c30",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "那这个又是另一回事，那就是第三方那个 take this responsibility.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.16987681202590466,
+      "request_wall_s": 0.19888416805770248
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01041",
+      "variant": "plain",
+      "audio_sha256": "bbb2ae95fed72a3a06a4339b0bd5b1e9ce00b03d98d3240d070df18769436c30",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "那这个又是另一回事，那就是第三方那个 take this responsibility。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.15002857008948922,
+      "request_wall_s": 0.1722645410336554
+    }
+  ],
+  "source_sha256": {
+    "asr_capture.py": "cf1f3646c2ca6efc25cc651559cdc41bf5698a657c95df94ec560c46a77e4deb",
+    "asr_scoring.py": "3d2b78ffa47e51dbde5640405e7c020ff9593ead5f17403f71b65ee04e143387"
+  },
+  "manifest_sha256": "5ee75cd2d9db3e149ef884ec645af19aae1c45181e1f4b831333c3c0d52f5299",
+  "variants_file_sha256": "45a9ed69b42159c2987c0bad0d86df963ff6cd03f5b1775591aeed86c88a6ac6",
+  "cases": [
+    {
+      "reference": "我觉得是tennis",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00646",
+      "audio_sha256": "285c0b50232859df61172c509b25d5bbc35716a4c654c513fad8b30317b15958",
+      "pcm_sha256": "d8ffeb27f7453470c213e17a16c835a12ed38a6679b5570a04b93979e094c4aa",
+      "input_samples": 36480,
+      "audio_s": 2.28
+    },
+    {
+      "reference": "大陆的那个OFO它的一个过去在不同的年份不同的时间点的用量然后去",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01149",
+      "audio_sha256": "0bacc8a51766e910aaefa6584f3c28a3f37972b68c53790193f1a5230c1d0204",
+      "pcm_sha256": "c5f48404cbe922da86cae4b9ceb0192047e9c8881e44c4ca38ad7b7a26157752",
+      "input_samples": 135680,
+      "audio_s": 8.48
+    },
+    {
+      "reference": "但那个办那个 i n g i a n g是不是只有之后打算留香港的人才能",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00143",
+      "audio_sha256": "63749ee6ed5286c622632e72470141ccf68e4ff650ced558ab04eee33b037fc0",
+      "pcm_sha256": "f079c27b02d429b07f304cded28f7c03b6880deb464b9c600d9dbcbc4a36dd82",
+      "input_samples": 77760,
+      "audio_s": 4.86
+    },
+    {
+      "reference": "呃possible supervisor",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00415",
+      "audio_sha256": "15ca09e28f32dc9d98247b06640989221c329dfa32a8a19b00c6cbdfdeab7d9f",
+      "pcm_sha256": "aa030fe19410ae3873e6bfa5a0767b7816573590ee2119de5a2ddc90e65c5cc4",
+      "input_samples": 27200,
+      "audio_s": 1.7
+    },
+    {
+      "reference": "其实我那时候非常的urgent就是我到了",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00920",
+      "audio_sha256": "8fb5d49ae65922925dcfb06f5d464b88365ae60f16734c09591e031480a085b8",
+      "pcm_sha256": "df1c5a391a421f7986a9db64977cbc16056a8ae045a61de4d0cc112b1126296f",
+      "input_samples": 61440,
+      "audio_s": 3.84
+    },
+    {
+      "reference": "另外一个因素呢是就是the the court for tennis",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00660",
+      "audio_sha256": "74a68e38beebd8379499736a1f8bcfb9c5193aeec916b271109c0cc9ad20793b",
+      "pcm_sha256": "894b5c7a81a1f5f9ef6df6220b2eea5e8ac47de38da36a81de974da58ed18973",
+      "input_samples": 87360,
+      "audio_s": 5.46
+    },
+    {
+      "reference": "都是一个hard choice",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01001",
+      "audio_sha256": "a7b0fad1791762390af0b49abfd91f6388bf2bb428e633db643b8f90bb2de338",
+      "pcm_sha256": "dbd827ca0ae36310e66c70cc044fa03ed132d0bee2eb0aee620f06518a4d1094",
+      "input_samples": 24320,
+      "audio_s": 1.52
+    },
+    {
+      "reference": "第二个呢就是你因为根据你的scenario的不同它可能会make different uh",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01006",
+      "audio_sha256": "24e879ca3ff0578495c653ab41abf4bf226c3aa0d2b9094507127ffb5a41deae",
+      "pcm_sha256": "10a6e4f9fc1088d6d4cdf86bcad2f3476216c7782dac87af619f50069c402834",
+      "input_samples": 102400,
+      "audio_s": 6.4
+    },
+    {
+      "reference": "computer languages是",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00068",
+      "audio_sha256": "ddf1d1241915e223a8f46e6e00e9f5c0b6574add6d6c984fab26ee5508897958",
+      "pcm_sha256": "3be1476ab16ab8844c74807aa212589a4c4bcd34bffda7a1f167fc8fa287a43d",
+      "input_samples": 23200,
+      "audio_s": 1.45
+    },
+    {
+      "reference": "所以你平时就现在大部分时间还是tennis就打网球",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00494",
+      "audio_sha256": "a50bcdd16a6e6485da66e4394cac7e716c643372ba6478dc6af29627b6981a2d",
+      "pcm_sha256": "66b8c94100bff3ffa81c17c054a8a39ce6191d9ed0def006f1047a4ec298c8a0",
+      "input_samples": 105920,
+      "audio_s": 6.62
+    },
+    {
+      "reference": "interview或是一些",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00966",
+      "audio_sha256": "06e84d4c409e6ce9d25abda1da5fff9c52d094438aaf935c7a6750cf1ca2964f",
+      "pcm_sha256": "85ad8a98149a97c296fcc9640a96ec49b2c7e78d749f00659f9f1e632d811052",
+      "input_samples": 27840,
+      "audio_s": 1.74
+    },
+    {
+      "reference": "他的名字叫Tony",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00214",
+      "audio_sha256": "5986a54a6256a5a96fd55e46b674bbd9de651ffac5237824f1b4798a4c3c13d1",
+      "pcm_sha256": "75443d8f34d24fbf1a81b8a08f7dbb49031e2a2039e6e00e2fe282acbed949f3",
+      "input_samples": 20800,
+      "audio_s": 1.3
+    },
+    {
+      "reference": "那个玩basketball的然后我有时候有时候会邀我的friends啊一起打在就是after class的时候",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00211",
+      "audio_sha256": "8fe6e89df1db5582908c26326fc0cd48e4ce35aff24edd25ae70fe69809f8db0",
+      "pcm_sha256": "37725d919f876f18a04a3f1646aec86a7448702bdc1c27272f370d6848599732",
+      "input_samples": 126400,
+      "audio_s": 7.9
+    },
+    {
+      "reference": "做一些优化啊cleaning啊",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01130",
+      "audio_sha256": "da5f931383771bf20440ecb4fe0ee9f79e27d2d5c7168e39894bc41f44f72d72",
+      "pcm_sha256": "ed9480d136362e5d52dc0d2785e1e477646559b50b6e98b64dcb5e74d84b9a87",
+      "input_samples": 36000,
+      "audio_s": 2.25
+    },
+    {
+      "reference": "嗯yeah",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00080",
+      "audio_sha256": "8d3d7def5dfde742f885a9992a68ae50aab172ec7306a5f969aae8e2a86c7fa7",
+      "pcm_sha256": "b3dc9eb5d63d628e92bb61a1a3126a65d0d34225686b9827d31ea9a062c306a7",
+      "input_samples": 16480,
+      "audio_s": 1.03
+    },
+    {
+      "reference": "当然我小时候我也没有smartphone但是呢我是小时候比较早接触过那个电脑",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01068",
+      "audio_sha256": "9f57d91794977a4b011070157461d1093bcf0b76b5b8b51cea85dd697827f898",
+      "pcm_sha256": "d7133ceaa577bddaf4e19b487cbd072a13bd802a881b2b7afa374852c5153014",
+      "input_samples": 119040,
+      "audio_s": 7.44
+    },
+    {
+      "reference": "来hong kong的时候是做那个",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00317",
+      "audio_sha256": "312a3da2672b80d52dedcd118db806fe5f99a4e5e3af6e82f7f1d3d8f944876a",
+      "pcm_sha256": "18bba7c710ffa3d61a242790089dc10132ae6d096df429a324094799041f9856",
+      "input_samples": 58240,
+      "audio_s": 3.64
+    },
+    {
+      "reference": "大陆继续念啊不去呃US",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00345",
+      "audio_sha256": "1e68b09cea25e3fb235a423eac133be7d18b953f00047e70e1a4472f4d99f2e2",
+      "pcm_sha256": "caeaa19f75ad5ad4f63d1d712207704890e5dcd866233464d32ccaa05f74cccd",
+      "input_samples": 59840,
+      "audio_s": 3.74
+    },
+    {
+      "reference": "呃对它analyzed或者是哦对就你刚你说的那些东西",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01128",
+      "audio_sha256": "85868f2153848e603431b6387256cef02f4c9e6c2723c776cfca7dd3c567d633",
+      "pcm_sha256": "777efe173bbc7d3df87362219fcf0e5b2cf075fc52e0a62021079c29c1001391",
+      "input_samples": 69760,
+      "audio_s": 4.36
+    },
+    {
+      "reference": "那这个又是另一回事那就是第三方那个take this responsibility",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01041",
+      "audio_sha256": "bbb2ae95fed72a3a06a4339b0bd5b1e9ce00b03d98d3240d070df18769436c30",
+      "pcm_sha256": "9cf3ef2e710e192ff4134379f11a2daf3f25215e57b8a635888fa6bd94b343c3",
+      "input_samples": 88640,
+      "audio_s": 5.54
+    }
+  ],
+  "variants": [
+    {
+      "id": "plain",
+      "context": "",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "terms",
+      "context": "agent, Pipecat, MiniCPM-o, DINet, FlashHead, StreamingTalker, VAD, ASR, WebRTC, Python",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    }
+  ],
+  "expected_model": "Qwen3-ASR-1.7B",
+  "declared_model_revision": null,
+  "reported_model_revision": null,
+  "rounds": 1,
+  "timeout_s": 30,
+  "order": "one warmup per variant, then rotate variants by round and case index",
+  "health_snapshot_sha256": "1e4b6b848c52e205f22bf2be3a13aa7d850c2ad3ed8f969ac284670cf654d183",
+  "reported_execution_metadata": {
+    "device": "cuda:0",
+    "dtype": "bfloat16",
+    "threads": null
+  },
+  "model_configuration_complete": false,
+  "planned_trials": 42,
+  "planned_measured_trials": 40,
+  "scoring": {
+    "schema_version": 1,
+    "normalization": "nfkc-casefold-no-punctuation-or-whitespace-v1",
+    "unit": "unicode_codepoint",
+    "aggregation": "sum_edits_divided_by_sum_reference_characters",
+    "quality_scope": "offline text comparison; no physical-device or perceptual quality claim",
+    "variants": {
+      "plain": {
+        "attempted": 20,
+        "succeeded": 20,
+        "failed": 0,
+        "complete": true,
+        "reference_groups": {
+          "human_transcript": {
+            "metric": "normalized_cer",
+            "attempted": 20,
+            "failed": 0,
+            "scored_cases": 20,
+            "reference_characters": 466,
+            "attempted_reference_characters": 466,
+            "rate_scope": "successful_nonempty_references_only",
+            "edit_count": 42,
+            "exact_match_cases": 7,
+            "empty_reference_cases": 0,
+            "empty_reference_nonempty_outputs": 0,
+            "empty_reference_inserted_characters": 0,
+            "rate": 0.09012875536480687,
+            "reference_character_coverage": 1.0,
+            "complete": true
+          }
+        },
+        "cases": [
+          {
+            "case_id": "ascend-00068@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 18,
+            "edit_count": 2,
+            "rate": 0.1111111111111111
+          },
+          {
+            "case_id": "ascend-00080@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 5,
+            "edit_count": 3,
+            "rate": 0.6
+          },
+          {
+            "case_id": "ascend-00143@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 29,
+            "edit_count": 5,
+            "rate": 0.1724137931034483
+          },
+          {
+            "case_id": "ascend-00211@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 54,
+            "edit_count": 7,
+            "rate": 0.12962962962962962
+          },
+          {
+            "case_id": "ascend-00214@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 9,
+            "edit_count": 4,
+            "rate": 0.4444444444444444
+          },
+          {
+            "case_id": "ascend-00317@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 16,
+            "edit_count": 1,
+            "rate": 0.0625
+          },
+          {
+            "case_id": "ascend-00345@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 11,
+            "edit_count": 2,
+            "rate": 0.18181818181818182
+          },
+          {
+            "case_id": "ascend-00415@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 19,
+            "edit_count": 1,
+            "rate": 0.05263157894736842
+          },
+          {
+            "case_id": "ascend-00494@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 25,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00646@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 10,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00660@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 30,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00920@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 20,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00966@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 13,
+            "edit_count": 1,
+            "rate": 0.07692307692307693
+          },
+          {
+            "case_id": "ascend-01001@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 14,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-01006@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 43,
+            "edit_count": 3,
+            "rate": 0.06976744186046512
+          },
+          {
+            "case_id": "ascend-01041@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 39,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-01068@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 38,
+            "edit_count": 1,
+            "rate": 0.02631578947368421
+          },
+          {
+            "case_id": "ascend-01128@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 26,
+            "edit_count": 11,
+            "rate": 0.4230769230769231
+          },
+          {
+            "case_id": "ascend-01130@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 15,
+            "edit_count": 1,
+            "rate": 0.06666666666666667
+          },
+          {
+            "case_id": "ascend-01149@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 32,
+            "edit_count": 0,
+            "rate": 0.0
+          }
+        ]
+      },
+      "terms": {
+        "attempted": 20,
+        "succeeded": 20,
+        "failed": 0,
+        "complete": true,
+        "reference_groups": {
+          "human_transcript": {
+            "metric": "normalized_cer",
+            "attempted": 20,
+            "failed": 0,
+            "scored_cases": 20,
+            "reference_characters": 466,
+            "attempted_reference_characters": 466,
+            "rate_scope": "successful_nonempty_references_only",
+            "edit_count": 41,
+            "exact_match_cases": 8,
+            "empty_reference_cases": 0,
+            "empty_reference_nonempty_outputs": 0,
+            "empty_reference_inserted_characters": 0,
+            "rate": 0.08798283261802575,
+            "reference_character_coverage": 1.0,
+            "complete": true
+          }
+        },
+        "cases": [
+          {
+            "case_id": "ascend-00068@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 18,
+            "edit_count": 2,
+            "rate": 0.1111111111111111
+          },
+          {
+            "case_id": "ascend-00080@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 5,
+            "edit_count": 3,
+            "rate": 0.6
+          },
+          {
+            "case_id": "ascend-00143@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 29,
+            "edit_count": 5,
+            "rate": 0.1724137931034483
+          },
+          {
+            "case_id": "ascend-00211@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 54,
+            "edit_count": 7,
+            "rate": 0.12962962962962962
+          },
+          {
+            "case_id": "ascend-00214@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 9,
+            "edit_count": 4,
+            "rate": 0.4444444444444444
+          },
+          {
+            "case_id": "ascend-00317@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 16,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00345@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 11,
+            "edit_count": 2,
+            "rate": 0.18181818181818182
+          },
+          {
+            "case_id": "ascend-00415@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 19,
+            "edit_count": 1,
+            "rate": 0.05263157894736842
+          },
+          {
+            "case_id": "ascend-00494@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 25,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00646@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 10,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00660@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 30,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00920@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 20,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00966@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 13,
+            "edit_count": 1,
+            "rate": 0.07692307692307693
+          },
+          {
+            "case_id": "ascend-01001@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 14,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-01006@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 43,
+            "edit_count": 3,
+            "rate": 0.06976744186046512
+          },
+          {
+            "case_id": "ascend-01041@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 39,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-01068@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 38,
+            "edit_count": 1,
+            "rate": 0.02631578947368421
+          },
+          {
+            "case_id": "ascend-01128@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 26,
+            "edit_count": 11,
+            "rate": 0.4230769230769231
+          },
+          {
+            "case_id": "ascend-01130@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 15,
+            "edit_count": 1,
+            "rate": 0.06666666666666667
+          },
+          {
+            "case_id": "ascend-01149@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 32,
+            "edit_count": 0,
+            "rate": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "publication": {
+    "raw_sha256": "cc5ddc9cf1afc62d0ced6dd2c939982191315f7f3330526483600bd93bfe267b",
+    "removed": [
+      "endpoint"
+    ],
+    "reference_review": "ASCEND annotators; no VoxaStage listening review",
+    "license": "CC-BY-SA-4.0"
+  }
+}

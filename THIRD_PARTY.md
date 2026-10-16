@@ -21,6 +21,8 @@ MindTalker 是作者此前基于 MiniCPM-o 的项目。本次端到端接入参�
 
 ## 配套依赖与素材
 
+- **真人 ASR 评测数据**：使用 [ASCEND](https://huggingface.co/datasets/CAiRE/ASCEND) 官方测试集的固定 60 条中英混合语音及人工转写，数据集由 Holy Lovenia 等作者发布。本仓库不分发音频；转写及评测衍生 JSON 单独遵循 [CC-BY-SA-4.0 与署名说明](docs/benchmarks/2026-10-16-ascend/LICENSE.md)，不归入集成代码的 MIT 许可。[结果与边界](docs/ASR-ASCEND-BASELINE.md)。
+
 - **3D 角色渲染**：随源码提供 [Three.js 0.180.0](https://github.com/mrdoob/three.js/tree/r180) 的模块构建、GLTFLoader 与 BufferGeometryUtils，保留 [MIT License](avatar-web/vendor/three/LICENSE) 和 [版本校验记录](avatar-web/vendor/three/NOTICE)。企鹅 mesh 与 rig 来自独立角色制作任务，不随源码分发；VoxaStage 新增的是嘴型映射和播放集成，详见[说明](docs/MESH-RETARGETING.md)。
 - **VAD**：使用 Pipecat 的 Silero VAD 集成，模型来自 [Silero VAD](https://github.com/snakers4/silero-vad)。
 - **音频与视频处理**：使用 [soxr](https://github.com/dofuuz/python-soxr)、[PyAV](https://github.com/PyAV-Org/PyAV) 等现有库。浏览器播放与绘制依托 Web Audio、Canvas2D 和 WebGL。直接与传递依赖见各环境锁文件。

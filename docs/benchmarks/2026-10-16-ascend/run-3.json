@@ -1,0 +1,1201 @@
+{
+  "version": 1,
+  "status": "passed",
+  "created_at": "2026-10-16T15:59:38.673784+00:00",
+  "execution": "http_worker",
+  "scope": "Completed WAV request/response timing; not streaming input or physical microphone latency.",
+  "trials": [
+    {
+      "phase": "warmup",
+      "repeat": -1,
+      "case_id": "ascend-00995",
+      "variant": "plain",
+      "audio_sha256": "14df73b7339c2390c38ece50d6bbde52c4121f016aa8c38356b93d26889e0ba8",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "我要问，就是有没有一个 choice，就是说可以停车。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.16575588600244373,
+      "request_wall_s": 0.18267966399434954
+    },
+    {
+      "phase": "warmup",
+      "repeat": -1,
+      "case_id": "ascend-00995",
+      "variant": "terms",
+      "audio_sha256": "14df73b7339c2390c38ece50d6bbde52c4121f016aa8c38356b93d26889e0ba8",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "我要问，就是有没有一个 choice，就是说可以停车。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.14900350500829518,
+      "request_wall_s": 0.1670194520847872
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00995",
+      "variant": "plain",
+      "audio_sha256": "14df73b7339c2390c38ece50d6bbde52c4121f016aa8c38356b93d26889e0ba8",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "我要问，就是有没有一个 choice，就是说可以停车。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.15901376400142908,
+      "request_wall_s": 0.17972878995351493
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00995",
+      "variant": "terms",
+      "audio_sha256": "14df73b7339c2390c38ece50d6bbde52c4121f016aa8c38356b93d26889e0ba8",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "我要问，就是有没有一个 choice，就是说可以停车。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1631824600044638,
+      "request_wall_s": 0.1814452379476279
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00871",
+      "variant": "terms",
+      "audio_sha256": "189a84a2d623fc5e451e21ba45b5a4de4e072d4978c79d14e3848ac03724a62d",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "You cannot wear your, um, clothes.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.12482481903862208,
+      "request_wall_s": 0.1427966170012951
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00871",
+      "variant": "plain",
+      "audio_sha256": "189a84a2d623fc5e451e21ba45b5a4de4e072d4978c79d14e3848ac03724a62d",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "You cannot wear your, um, clothes.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.11627240700181574,
+      "request_wall_s": 0.13156773801892996
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00347",
+      "variant": "plain",
+      "audio_sha256": "2dec19f73ca2b68a45abbacc4343f39668e9e8fd7ca1b76eea16f5c99fcda859",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "我觉得 Hong Kong 这样比较 in between，就是 Western 还有 Eastern 的的那种。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.21522278105840087,
+      "request_wall_s": 0.24135437794029713
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00347",
+      "variant": "terms",
+      "audio_sha256": "2dec19f73ca2b68a45abbacc4343f39668e9e8fd7ca1b76eea16f5c99fcda859",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "我觉得 Hong Kong 这样比较 in between，就是 Western 还有 Eastern 的的那种。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.2018171059899032,
+      "request_wall_s": 0.23159590095747262
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00239",
+      "variant": "terms",
+      "audio_sha256": "b6bd05545bd358465b7524765f23ce3cc4c970b96f1157bf57c41c605343caa9",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "就 professor 多不多？",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.10294503602199256,
+      "request_wall_s": 0.11642243294045329
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00239",
+      "variant": "plain",
+      "audio_sha256": "b6bd05545bd358465b7524765f23ce3cc4c970b96f1157bf57c41c605343caa9",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "就 professor 多不多？",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.09135679702740163,
+      "request_wall_s": 0.10235141799785197
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01284",
+      "variant": "plain",
+      "audio_sha256": "b734605d0a5cc8ae976f40231b317a47b91571b73576ddeda4775029817e93be",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "mobile phone number,还有你的嗯。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.10707207699306309,
+      "request_wall_s": 0.12180685997009277
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01284",
+      "variant": "terms",
+      "audio_sha256": "b734605d0a5cc8ae976f40231b317a47b91571b73576ddeda4775029817e93be",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "mobile phone number，还有你的，嗯。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.11427513905800879,
+      "request_wall_s": 0.13242427993100137
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01213",
+      "variant": "terms",
+      "audio_sha256": "d093a51ed5c1d528b8ae04d0bf02f9582f4c60f1e9a57fa258c0ac79717e1ed6",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "然后他可能会 record your personal.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.11118796200025827,
+      "request_wall_s": 0.12277688109315932
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01213",
+      "variant": "plain",
+      "audio_sha256": "d093a51ed5c1d528b8ae04d0bf02f9582f4c60f1e9a57fa258c0ac79717e1ed6",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "然后他可能会 record your personal.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.10911886696703732,
+      "request_wall_s": 0.1702757920138538
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00722",
+      "variant": "plain",
+      "audio_sha256": "d237a4b7debc4e8e239f7b4d65670786aa0df359cd0930c58f021b93abaa97e1",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "然后，McGrady他本身打球就是也是特别帅的那一种。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.19144199404399842,
+      "request_wall_s": 0.21221075393259525
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00722",
+      "variant": "terms",
+      "audio_sha256": "d237a4b7debc4e8e239f7b4d65670786aa0df359cd0930c58f021b93abaa97e1",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "然后 McGregor 他本身打球就是也是特别帅的那一种。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.15651452005840838,
+      "request_wall_s": 0.18277630291413516
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00352",
+      "variant": "terms",
+      "audio_sha256": "d1daa5f7d89db94ba54b654afe7bd589e609f7bd7a4f912983e1529e24ce9fcd",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "比较就是对我来说比较new，但是又就是说比比较容易习惯。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.18630291195586324,
+      "request_wall_s": 0.21266374993138015
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00352",
+      "variant": "plain",
+      "audio_sha256": "d1daa5f7d89db94ba54b654afe7bd589e609f7bd7a4f912983e1529e24ce9fcd",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "比较就是对我来说比较new，但是又就是说比比较容易习惯。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.16558934899512678,
+      "request_wall_s": 0.18904653296340257
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00190",
+      "variant": "plain",
+      "audio_sha256": "04319697c0c36641b88680fced103dbdaa2d167c9a538256f8d8b2f7c1356b92",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "那你有没有什么favorite food？",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.09908906603232026,
+      "request_wall_s": 0.11251066892873496
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00190",
+      "variant": "terms",
+      "audio_sha256": "04319697c0c36641b88680fced103dbdaa2d167c9a538256f8d8b2f7c1356b92",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "那你有没有什么 favorite food?",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.09151083196047693,
+      "request_wall_s": 0.10734511003829539
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00803",
+      "variant": "terms",
+      "audio_sha256": "347967e9b0aba9792139c811f6c58d975970fb91786204e63623053be3e189ac",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "我不觉得玩意儿有点短。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.10980293701868504,
+      "request_wall_s": 0.12335255101788789
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00803",
+      "variant": "plain",
+      "audio_sha256": "347967e9b0aba9792139c811f6c58d975970fb91786204e63623053be3e189ac",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "我不觉得玩意儿有点短。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.09725284902378917,
+      "request_wall_s": 0.1085608450230211
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01276",
+      "variant": "plain",
+      "audio_sha256": "5f795561fa9a726a2d99156eeff65d84786d623c4f2dbb7288630f773349ece6",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "母巴陪们的。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.09737904404755682,
+      "request_wall_s": 0.10878767108079046
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01276",
+      "variant": "terms",
+      "audio_sha256": "5f795561fa9a726a2d99156eeff65d84786d623c4f2dbb7288630f773349ece6",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "慕巴配门的。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.0909402510151267,
+      "request_wall_s": 0.10089169698767364
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00380",
+      "variant": "terms",
+      "audio_sha256": "c5143f20a2e01c3d2c0f96f5825a35109200b99c02e3a3ed9057792462eca5c6",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "就 Professor, 就第一个是这个学校的 rank 也不要。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.16261990508064628,
+      "request_wall_s": 0.19819524697959423
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00380",
+      "variant": "plain",
+      "audio_sha256": "c5143f20a2e01c3d2c0f96f5825a35109200b99c02e3a3ed9057792462eca5c6",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "就 professor 就第一个是这个学校的 rank 也不要。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1455340819666162,
+      "request_wall_s": 0.16076232003979385
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01081",
+      "variant": "plain",
+      "audio_sha256": "69a3abe94210dfe8a55b64e602de0e74388b151c86dfdbfdbe47050e2d31cf7c",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "你要就是教导就是自己的孩子如何使用smartphone，是一个非常关键的。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.18789881700649858,
+      "request_wall_s": 0.21371323405764997
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01081",
+      "variant": "terms",
+      "audio_sha256": "69a3abe94210dfe8a55b64e602de0e74388b151c86dfdbfdbe47050e2d31cf7c",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "你要就是教导就是自己的孩子如何使用 smartphone 是一个非常关键的。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1884982669726014,
+      "request_wall_s": 0.21518753608688712
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00698",
+      "variant": "terms",
+      "audio_sha256": "621e6df72ebdf5c8743dc05b66df80de35dd5b514f671412d36e54c9febffbaf",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "那个第一是 Michael Jordan。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.10740648803766817,
+      "request_wall_s": 0.13318470201920718
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00698",
+      "variant": "plain",
+      "audio_sha256": "621e6df72ebdf5c8743dc05b66df80de35dd5b514f671412d36e54c9febffbaf",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "那个第一是Michael Jordan。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.10149403801187873,
+      "request_wall_s": 0.12644656200427562
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01142",
+      "variant": "plain",
+      "audio_sha256": "676eca80e9c86a4eeab2057e7be37b666a981a92513d5ab3ba9490641a8da35d",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "Computer language还有program language的东西，我还是不太懂。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1480396609986201,
+      "request_wall_s": 0.21302944200579077
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01142",
+      "variant": "terms",
+      "audio_sha256": "676eca80e9c86a4eeab2057e7be37b666a981a92513d5ab3ba9490641a8da35d",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "computer language还有program language的东西，我还是不太懂。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1303471609717235,
+      "request_wall_s": 0.14750136889051646
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00944",
+      "variant": "terms",
+      "audio_sha256": "20c670c1cbc5a7222d824cbcad9d9f24ad785f6153f690f0503e1d6d2c11f624",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "对，毕竟那边搜索的活动多一点，就有很多活动要参加。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.18832595797721297,
+      "request_wall_s": 0.2092407060554251
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00944",
+      "variant": "plain",
+      "audio_sha256": "20c670c1cbc5a7222d824cbcad9d9f24ad785f6153f690f0503e1d6d2c11f624",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "对，毕竟那边搜索的活动多一点，就有很多活动要参加。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.17234282800927758,
+      "request_wall_s": 0.4086772899609059
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00332",
+      "variant": "plain",
+      "audio_sha256": "86cbadba60ab717a2a6db0165f02224a4620931a1c54915510293432621c707c",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "这个是我觉得比较 interesting 的的的那个 topic。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.13648675300646573,
+      "request_wall_s": 0.16346619208343327
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00332",
+      "variant": "terms",
+      "audio_sha256": "86cbadba60ab717a2a6db0165f02224a4620931a1c54915510293432621c707c",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "这个是我觉得比较 interesting part 的的那个 topic。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.12334625003859401,
+      "request_wall_s": 0.14514381799381226
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01196",
+      "variant": "terms",
+      "audio_sha256": "acb86f3821d17481a106bc958ce5a2e2f50793a00e35f985853fe1dd81fc5412",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "Privacy.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.05575797101482749,
+      "request_wall_s": 0.07314491190481931
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01196",
+      "variant": "plain",
+      "audio_sha256": "acb86f3821d17481a106bc958ce5a2e2f50793a00e35f985853fe1dd81fc5412",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "Privacy.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.05659807298798114,
+      "request_wall_s": 0.0667845830321312
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00427",
+      "variant": "plain",
+      "audio_sha256": "b9f9632a459f8fff24e5d74556b4288347693a49651d649ec5882c5191ecdd99",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "那个往material的方向走，或者往那个integrated。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.16527316998690367,
+      "request_wall_s": 0.18702913098968565
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00427",
+      "variant": "terms",
+      "audio_sha256": "b9f9632a459f8fff24e5d74556b4288347693a49651d649ec5882c5191ecdd99",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "那个往 material 的方向走，或者往那个 integrated。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.16498975595459342,
+      "request_wall_s": 0.18776138999965042
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01055",
+      "variant": "terms",
+      "audio_sha256": "bcf70b6b7c577b06997dedac119073e163cfd9a43772006f33f93bb288a7bb9c",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "好，那我们现在开始我们第二个 topic，就是你认为，你就是你认为，children 应不应该有自己的 smartphone？",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.26965030597057194,
+      "request_wall_s": 0.29969397000968456
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01055",
+      "variant": "plain",
+      "audio_sha256": "bcf70b6b7c577b06997dedac119073e163cfd9a43772006f33f93bb288a7bb9c",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "好，那我们现在开始我们第二个 topic，就是你认为，你就是你认为 children 应不应该有自己的 smartphone？",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.2553458920447156,
+      "request_wall_s": 0.30286151508335024
+    }
+  ],
+  "source_sha256": {
+    "asr_capture.py": "cf1f3646c2ca6efc25cc651559cdc41bf5698a657c95df94ec560c46a77e4deb",
+    "asr_scoring.py": "3d2b78ffa47e51dbde5640405e7c020ff9593ead5f17403f71b65ee04e143387"
+  },
+  "manifest_sha256": "e3724bb0524092e8f19f25719538389162e2321cdac2ad833558be05dee091a8",
+  "variants_file_sha256": "45a9ed69b42159c2987c0bad0d86df963ff6cd03f5b1775591aeed86c88a6ac6",
+  "cases": [
+    {
+      "reference": "我要问题就是有没有一个choice就是说可以停车",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00995",
+      "audio_sha256": "14df73b7339c2390c38ece50d6bbde52c4121f016aa8c38356b93d26889e0ba8",
+      "pcm_sha256": "098a578465740ad2a956c37d63ae71ab6a8e1eebf355b1ccfc6c65bbfe5aa2ad",
+      "input_samples": 70400,
+      "audio_s": 4.4
+    },
+    {
+      "reference": "you can not wear your呃clothes",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00871",
+      "audio_sha256": "189a84a2d623fc5e451e21ba45b5a4de4e072d4978c79d14e3848ac03724a62d",
+      "pcm_sha256": "d39228d3737cf8f41f628750ec0271f2520c6b4fac0ba8627c7af08f362f37c7",
+      "input_samples": 53760,
+      "audio_s": 3.36
+    },
+    {
+      "reference": "我觉得Hong Kong这样比较in between就是western还有eastern的的那种",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00347",
+      "audio_sha256": "2dec19f73ca2b68a45abbacc4343f39668e9e8fd7ca1b76eea16f5c99fcda859",
+      "pcm_sha256": "c11d3f4d245869fa26e588ef6bd5ccdc21fa1732f8ef5821abeef521a02caa5c",
+      "input_samples": 110720,
+      "audio_s": 6.92
+    },
+    {
+      "reference": "就professor多不多啊",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00239",
+      "audio_sha256": "b6bd05545bd358465b7524765f23ce3cc4c970b96f1157bf57c41c605343caa9",
+      "pcm_sha256": "acafa044fb5fb36660438cf4e90fdedbd646edc30f70d836b84712b23a5348d2",
+      "input_samples": 20800,
+      "audio_s": 1.3
+    },
+    {
+      "reference": "mobile phone number还有你的嗯",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01284",
+      "audio_sha256": "b734605d0a5cc8ae976f40231b317a47b91571b73576ddeda4775029817e93be",
+      "pcm_sha256": "e29992705561152f39f7329e3477468cf05f35e7f2a3f64f0dcfff751007df18",
+      "input_samples": 47200,
+      "audio_s": 2.95
+    },
+    {
+      "reference": "然后它可能会record your personal life",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01213",
+      "audio_sha256": "d093a51ed5c1d528b8ae04d0bf02f9582f4c60f1e9a57fa258c0ac79717e1ed6",
+      "pcm_sha256": "fb6920dd4eef27c93dcf61ad6092c093f7bc766845495c5d875dd19aa7e742b8",
+      "input_samples": 48960,
+      "audio_s": 3.06
+    },
+    {
+      "reference": "然后McGrady他本身打球就是也是特别帅的那一种",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00722",
+      "audio_sha256": "d237a4b7debc4e8e239f7b4d65670786aa0df359cd0930c58f021b93abaa97e1",
+      "pcm_sha256": "56c3d83b6fa0791878611d08e4e89d17ad16d1d4be8e99e7e798620703ff02b2",
+      "input_samples": 88320,
+      "audio_s": 5.52
+    },
+    {
+      "reference": "比较就是对我来说比较new但是又就是说比比较容易习惯",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00352",
+      "audio_sha256": "d1daa5f7d89db94ba54b654afe7bd589e609f7bd7a4f912983e1529e24ce9fcd",
+      "pcm_sha256": "21e18c75cfd1d4e55f1b83b93ed55690e0b27fb649ef4a42844ff09ba17b1bdf",
+      "input_samples": 110080,
+      "audio_s": 6.88
+    },
+    {
+      "reference": "那你有没有什么favourite foods",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00190",
+      "audio_sha256": "04319697c0c36641b88680fced103dbdaa2d167c9a538256f8d8b2f7c1356b92",
+      "pcm_sha256": "a7f64b60f4dde19890e5f3b5b02bc60396aed5167780b9685bcb4378ecf9c0ee",
+      "input_samples": 46240,
+      "audio_s": 2.89
+    },
+    {
+      "reference": "我不觉得one year有点短",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00803",
+      "audio_sha256": "347967e9b0aba9792139c811f6c58d975970fb91786204e63623053be3e189ac",
+      "pcm_sha256": "262a4b6c095fa46afc79ab05b9bb0d85d6d34af767b851d6b7d8ee29c31233f5",
+      "input_samples": 31680,
+      "audio_s": 1.98
+    },
+    {
+      "reference": "mobile payment的",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01276",
+      "audio_sha256": "5f795561fa9a726a2d99156eeff65d84786d623c4f2dbb7288630f773349ece6",
+      "pcm_sha256": "9a574872a30f0d8ad66f812b1abf961b927645b928e2bde7618dd79a6f111096",
+      "input_samples": 20160,
+      "audio_s": 1.26
+    },
+    {
+      "reference": "就professor就第一个是这个学校的rank也不要",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00380",
+      "audio_sha256": "c5143f20a2e01c3d2c0f96f5825a35109200b99c02e3a3ed9057792462eca5c6",
+      "pcm_sha256": "90e009c38be3c4197e6a7318da200bb65f142315ac0a7928cd2d9bda9d5b5825",
+      "input_samples": 58880,
+      "audio_s": 3.68
+    },
+    {
+      "reference": "你要就是教导就是自己的孩子如何使用smartphone是一个非常关键的",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01081",
+      "audio_sha256": "69a3abe94210dfe8a55b64e602de0e74388b151c86dfdbfdbe47050e2d31cf7c",
+      "pcm_sha256": "66fd7045c4f7a94fcdf0678941d21a2aac7a898fc1cc6514a0d36a83b54547e5",
+      "input_samples": 109760,
+      "audio_s": 6.86
+    },
+    {
+      "reference": "um那个第一是Michael Jordan",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00698",
+      "audio_sha256": "621e6df72ebdf5c8743dc05b66df80de35dd5b514f671412d36e54c9febffbaf",
+      "pcm_sha256": "11aa0567ca9ab653ad8fc8afad89f0abc054a4d5b5f476a1c9019f6e4a90f39c",
+      "input_samples": 87040,
+      "audio_s": 5.44
+    },
+    {
+      "reference": "computer language还有problem language的东西我还是不太懂",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01142",
+      "audio_sha256": "676eca80e9c86a4eeab2057e7be37b666a981a92513d5ab3ba9490641a8da35d",
+      "pcm_sha256": "50ed0dc1f2b9af136c9b11d28a55d7cdb05c456d9b0febd1844b37531c4588da",
+      "input_samples": 58240,
+      "audio_s": 3.64
+    },
+    {
+      "reference": "对business那边social活动多一点就有很多活动要参加",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00944",
+      "audio_sha256": "20c670c1cbc5a7222d824cbcad9d9f24ad785f6153f690f0503e1d6d2c11f624",
+      "pcm_sha256": "337801d93da378b035f07619c292ae79b9bbb87eb4cac20fd96db232aaa4ea21",
+      "input_samples": 80960,
+      "audio_s": 5.06
+    },
+    {
+      "reference": "这个是我觉得比较interesting part的的那个topic",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00332",
+      "audio_sha256": "86cbadba60ab717a2a6db0165f02224a4620931a1c54915510293432621c707c",
+      "pcm_sha256": "e0f6d486b5ea35922c36997b5a1d5470502bcd837ba8abf85c8de48b8874d6a2",
+      "input_samples": 84800,
+      "audio_s": 5.3
+    },
+    {
+      "reference": "privacy嗯",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01196",
+      "audio_sha256": "acb86f3821d17481a106bc958ce5a2e2f50793a00e35f985853fe1dd81fc5412",
+      "pcm_sha256": "0d3d5498c788e06c57de3cc505fb806526218ff750ac6c1a95ffff68aa3a4097",
+      "input_samples": 17120,
+      "audio_s": 1.07
+    },
+    {
+      "reference": "那个往material的方向走或者往那个integrities",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00427",
+      "audio_sha256": "b9f9632a459f8fff24e5d74556b4288347693a49651d649ec5882c5191ecdd99",
+      "pcm_sha256": "c4ae176ea5bfcfc130648582e4722f86757f4afa7a0dccb294eacf926fc6e062",
+      "input_samples": 77120,
+      "audio_s": 4.82
+    },
+    {
+      "reference": "好那我们现在开始我们第二个topic就是你认为你就是你认为children应不应该有自己的smart phone",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01055",
+      "audio_sha256": "bcf70b6b7c577b06997dedac119073e163cfd9a43772006f33f93bb288a7bb9c",
+      "pcm_sha256": "2d52847e2725ddcf84498f5f4334ff930ae0b40288954c8a705aa36eb3460e7f",
+      "input_samples": 181440,
+      "audio_s": 11.34
+    }
+  ],
+  "variants": [
+    {
+      "id": "plain",
+      "context": "",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "terms",
+      "context": "agent, Pipecat, MiniCPM-o, DINet, FlashHead, StreamingTalker, VAD, ASR, WebRTC, Python",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    }
+  ],
+  "expected_model": "Qwen3-ASR-1.7B",
+  "declared_model_revision": null,
+  "reported_model_revision": null,
+  "rounds": 1,
+  "timeout_s": 30,
+  "order": "one warmup per variant, then rotate variants by round and case index",
+  "health_snapshot_sha256": "1e4b6b848c52e205f22bf2be3a13aa7d850c2ad3ed8f969ac284670cf654d183",
+  "reported_execution_metadata": {
+    "device": "cuda:0",
+    "dtype": "bfloat16",
+    "threads": null
+  },
+  "model_configuration_complete": false,
+  "planned_trials": 42,
+  "planned_measured_trials": 40,
+  "scoring": {
+    "schema_version": 1,
+    "normalization": "nfkc-casefold-no-punctuation-or-whitespace-v1",
+    "unit": "unicode_codepoint",
+    "aggregation": "sum_edits_divided_by_sum_reference_characters",
+    "quality_scope": "offline text comparison; no physical-device or perceptual quality claim",
+    "variants": {
+      "plain": {
+        "attempted": 20,
+        "succeeded": 20,
+        "failed": 0,
+        "complete": true,
+        "reference_groups": {
+          "human_transcript": {
+            "metric": "normalized_cer",
+            "attempted": 20,
+            "failed": 0,
+            "scored_cases": 20,
+            "reference_characters": 540,
+            "attempted_reference_characters": 540,
+            "rate_scope": "successful_nonempty_references_only",
+            "edit_count": 58,
+            "exact_match_cases": 7,
+            "empty_reference_cases": 0,
+            "empty_reference_nonempty_outputs": 0,
+            "empty_reference_inserted_characters": 0,
+            "rate": 0.10740740740740741,
+            "reference_character_coverage": 1.0,
+            "complete": true
+          }
+        },
+        "cases": [
+          {
+            "case_id": "ascend-00190@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 21,
+            "edit_count": 2,
+            "rate": 0.09523809523809523
+          },
+          {
+            "case_id": "ascend-00239@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 14,
+            "edit_count": 1,
+            "rate": 0.07142857142857142
+          },
+          {
+            "case_id": "ascend-00332@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 32,
+            "edit_count": 4,
+            "rate": 0.125
+          },
+          {
+            "case_id": "ascend-00347@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 46,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00352@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 26,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00380@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 27,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00427@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 31,
+            "edit_count": 3,
+            "rate": 0.0967741935483871
+          },
+          {
+            "case_id": "ascend-00698@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 20,
+            "edit_count": 2,
+            "rate": 0.1
+          },
+          {
+            "case_id": "ascend-00722@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 25,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00803@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 14,
+            "edit_count": 7,
+            "rate": 0.5
+          },
+          {
+            "case_id": "ascend-00871@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 25,
+            "edit_count": 2,
+            "rate": 0.08
+          },
+          {
+            "case_id": "ascend-00944@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 31,
+            "edit_count": 14,
+            "rate": 0.45161290322580644
+          },
+          {
+            "case_id": "ascend-00995@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 24,
+            "edit_count": 1,
+            "rate": 0.041666666666666664
+          },
+          {
+            "case_id": "ascend-01055@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 55,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-01081@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 35,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-01142@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 42,
+            "edit_count": 3,
+            "rate": 0.07142857142857142
+          },
+          {
+            "case_id": "ascend-01196@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 8,
+            "edit_count": 1,
+            "rate": 0.125
+          },
+          {
+            "case_id": "ascend-01213@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 28,
+            "edit_count": 5,
+            "rate": 0.17857142857142858
+          },
+          {
+            "case_id": "ascend-01276@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 14,
+            "edit_count": 13,
+            "rate": 0.9285714285714286
+          },
+          {
+            "case_id": "ascend-01284@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 22,
+            "edit_count": 0,
+            "rate": 0.0
+          }
+        ]
+      },
+      "terms": {
+        "attempted": 20,
+        "succeeded": 20,
+        "failed": 0,
+        "complete": true,
+        "reference_groups": {
+          "human_transcript": {
+            "metric": "normalized_cer",
+            "attempted": 20,
+            "failed": 0,
+            "scored_cases": 20,
+            "reference_characters": 540,
+            "attempted_reference_characters": 540,
+            "rate_scope": "successful_nonempty_references_only",
+            "edit_count": 58,
+            "exact_match_cases": 7,
+            "empty_reference_cases": 0,
+            "empty_reference_nonempty_outputs": 0,
+            "empty_reference_inserted_characters": 0,
+            "rate": 0.10740740740740741,
+            "reference_character_coverage": 1.0,
+            "complete": true
+          }
+        },
+        "cases": [
+          {
+            "case_id": "ascend-00190@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 21,
+            "edit_count": 2,
+            "rate": 0.09523809523809523
+          },
+          {
+            "case_id": "ascend-00239@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 14,
+            "edit_count": 1,
+            "rate": 0.07142857142857142
+          },
+          {
+            "case_id": "ascend-00332@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 32,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00347@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 46,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00352@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 26,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00380@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 27,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00427@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 31,
+            "edit_count": 3,
+            "rate": 0.0967741935483871
+          },
+          {
+            "case_id": "ascend-00698@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 20,
+            "edit_count": 2,
+            "rate": 0.1
+          },
+          {
+            "case_id": "ascend-00722@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 25,
+            "edit_count": 4,
+            "rate": 0.16
+          },
+          {
+            "case_id": "ascend-00803@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 14,
+            "edit_count": 7,
+            "rate": 0.5
+          },
+          {
+            "case_id": "ascend-00871@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 25,
+            "edit_count": 2,
+            "rate": 0.08
+          },
+          {
+            "case_id": "ascend-00944@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 31,
+            "edit_count": 14,
+            "rate": 0.45161290322580644
+          },
+          {
+            "case_id": "ascend-00995@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 24,
+            "edit_count": 1,
+            "rate": 0.041666666666666664
+          },
+          {
+            "case_id": "ascend-01055@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 55,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-01081@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 35,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-01142@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 42,
+            "edit_count": 3,
+            "rate": 0.07142857142857142
+          },
+          {
+            "case_id": "ascend-01196@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 8,
+            "edit_count": 1,
+            "rate": 0.125
+          },
+          {
+            "case_id": "ascend-01213@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 28,
+            "edit_count": 5,
+            "rate": 0.17857142857142858
+          },
+          {
+            "case_id": "ascend-01276@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 14,
+            "edit_count": 13,
+            "rate": 0.9285714285714286
+          },
+          {
+            "case_id": "ascend-01284@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 22,
+            "edit_count": 0,
+            "rate": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "publication": {
+    "raw_sha256": "d33ed08c1397e2a536c5b9a4d1227506cd285829772faa54441cb447f2fd69e2",
+    "removed": [
+      "endpoint"
+    ],
+    "reference_review": "ASCEND annotators; no VoxaStage listening review",
+    "license": "CC-BY-SA-4.0"
+  }
+}
