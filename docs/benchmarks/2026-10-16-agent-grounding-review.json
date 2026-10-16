@@ -1,0 +1,101 @@
+{
+  "review_type": "Assistant text/code review, not human listening or independent statistical evaluation",
+  "runs": [
+    {
+      "stage": "attempt1",
+      "file": "2026-10-16-agent-grounding-attempt1.json",
+      "sha256": "3dfc5528bf56f73e480cb80b30e34e2a8d1fc214a9aa3e14f3cc1d02d4ad30b1",
+      "turns": 6,
+      "model_requests": 7,
+      "source_hashes": {
+        "bot.py": "678e9430cb8d75622459aef62e6b53a10975c5c9ffab3f2c2fba10de24cac8ab",
+        "backend.py": "6db92c4e9ce9961e4b653016a38d1258192f6655bf692b9c83391e0090f2568d",
+        "agent_runtime.py": "6e6db97bb7c427e35fcce64409775afc4d416941c41bb46269780d13a33afa0a",
+        "agent_tools.py": "c9481521b39b801cd96d0877fe364d9e94627013ead68834c1a5eeb83b320ed6",
+        "README.md": "6058dd37d9824044c8ca9468e092e30b06569b5af5db0dedcd26ebcb21aa68d5",
+        "docs/ACCEPTANCE.md": "8cb12f18de21c726acdeb80404f4d50d32136f919a067a9afbbbedf48c84a897",
+        "docs/DEMO-WALKTHROUGH.md": "da7f8bd641839fcb1274df4e21670860dc05549e2a6cce68f12f3dfbf62dcadf",
+        "docs/SOURCE-INSTALL-VALIDATION.md": "a0b6047ac8996693a934c549a20e44471876779d4f601bc1cc46127ebe6ff578",
+        "docs/VISUAL-INTERACTION.md": "d20e9697c7b053efd3cb451a2d13da2b62950f38ba7f369a6f676f3539f3b2d7",
+        "docs/AVATAR-OUTPUT-BASELINE-2026-09-19.md": "ae315d38b61bc6de09c89e1463131f37fa3f8fec42ed4162df46e0c393e1c21c",
+        "docs/DINET-DELIVERY-ATTRIBUTION.md": "67c9e0ae7fe6b801c6195775524fc6bd0c7cdd0c5527a16cd7f0c3d17722f7d4"
+      }
+    },
+    {
+      "stage": "candidate1",
+      "file": "2026-10-16-agent-grounding-candidate1.json",
+      "sha256": "c6f7083718c49ea2f9470f9e47371b672674874738ad17e9c0ff80e89664b129",
+      "turns": 6,
+      "model_requests": 7,
+      "source_hashes": {
+        "bot.py": "678e9430cb8d75622459aef62e6b53a10975c5c9ffab3f2c2fba10de24cac8ab",
+        "backend.py": "6db92c4e9ce9961e4b653016a38d1258192f6655bf692b9c83391e0090f2568d",
+        "agent_runtime.py": "96e8df4b8364c87bc1b692cc84f1f24f4be0f8341ded7da467e222c8594e2b5e",
+        "agent_tools.py": "c9481521b39b801cd96d0877fe364d9e94627013ead68834c1a5eeb83b320ed6",
+        "README.md": "6058dd37d9824044c8ca9468e092e30b06569b5af5db0dedcd26ebcb21aa68d5",
+        "docs/ACCEPTANCE.md": "8cb12f18de21c726acdeb80404f4d50d32136f919a067a9afbbbedf48c84a897",
+        "docs/DEMO-WALKTHROUGH.md": "da7f8bd641839fcb1274df4e21670860dc05549e2a6cce68f12f3dfbf62dcadf",
+        "docs/SOURCE-INSTALL-VALIDATION.md": "a0b6047ac8996693a934c549a20e44471876779d4f601bc1cc46127ebe6ff578",
+        "docs/VISUAL-INTERACTION.md": "d20e9697c7b053efd3cb451a2d13da2b62950f38ba7f369a6f676f3539f3b2d7",
+        "docs/AVATAR-OUTPUT-BASELINE-2026-09-19.md": "ae315d38b61bc6de09c89e1463131f37fa3f8fec42ed4162df46e0c393e1c21c",
+        "docs/DINET-DELIVERY-ATTRIBUTION.md": "67c9e0ae7fe6b801c6195775524fc6bd0c7cdd0c5527a16cd7f0c3d17722f7d4"
+      }
+    },
+    {
+      "stage": "candidate2",
+      "file": "2026-10-16-agent-grounding-candidate2.json",
+      "sha256": "e78215400c328178e5149e09b9257ae082a1e30d746a2e708d2f6262decb15ee",
+      "turns": 6,
+      "model_requests": 7,
+      "source_hashes": {
+        "bot.py": "678e9430cb8d75622459aef62e6b53a10975c5c9ffab3f2c2fba10de24cac8ab",
+        "backend.py": "6db92c4e9ce9961e4b653016a38d1258192f6655bf692b9c83391e0090f2568d",
+        "agent_runtime.py": "96e8df4b8364c87bc1b692cc84f1f24f4be0f8341ded7da467e222c8594e2b5e",
+        "agent_tools.py": "5649167d99910e4345eef0d2b60af62ff668265fb9c0b8d2edb7aeb80184d296",
+        "README.md": "6058dd37d9824044c8ca9468e092e30b06569b5af5db0dedcd26ebcb21aa68d5",
+        "docs/ACCEPTANCE.md": "8cb12f18de21c726acdeb80404f4d50d32136f919a067a9afbbbedf48c84a897",
+        "docs/DEMO-WALKTHROUGH.md": "da7f8bd641839fcb1274df4e21670860dc05549e2a6cce68f12f3dfbf62dcadf",
+        "docs/SOURCE-INSTALL-VALIDATION.md": "a0b6047ac8996693a934c549a20e44471876779d4f601bc1cc46127ebe6ff578",
+        "docs/VISUAL-INTERACTION.md": "d20e9697c7b053efd3cb451a2d13da2b62950f38ba7f369a6f676f3539f3b2d7",
+        "docs/AVATAR-OUTPUT-BASELINE-2026-09-19.md": "ae315d38b61bc6de09c89e1463131f37fa3f8fec42ed4162df46e0c393e1c21c",
+        "docs/DINET-DELIVERY-ATTRIBUTION.md": "67c9e0ae7fe6b801c6195775524fc6bd0c7cdd0c5527a16cd7f0c3d17722f7d4"
+      }
+    },
+    {
+      "stage": "candidate3",
+      "file": "2026-10-16-agent-grounding-candidate3.json",
+      "sha256": "fdb16000458bc6594d036f7abe322ad5948eba5bac719adf6f9a00a9db52e379",
+      "turns": 6,
+      "model_requests": 7,
+      "source_hashes": {
+        "bot.py": "678e9430cb8d75622459aef62e6b53a10975c5c9ffab3f2c2fba10de24cac8ab",
+        "backend.py": "6db92c4e9ce9961e4b653016a38d1258192f6655bf692b9c83391e0090f2568d",
+        "agent_runtime.py": "bc2587b2855728beb38f5098ed4ea6c43e1500de5c112e443fb57e23d2460069",
+        "agent_tools.py": "70836204306bea538329fe8714186c378e802f709ba6e5e99de8927415a9b5a4",
+        "README.md": "6058dd37d9824044c8ca9468e092e30b06569b5af5db0dedcd26ebcb21aa68d5",
+        "docs/ACCEPTANCE.md": "8cb12f18de21c726acdeb80404f4d50d32136f919a067a9afbbbedf48c84a897",
+        "docs/DEMO-WALKTHROUGH.md": "da7f8bd641839fcb1274df4e21670860dc05549e2a6cce68f12f3dfbf62dcadf",
+        "docs/SOURCE-INSTALL-VALIDATION.md": "a0b6047ac8996693a934c549a20e44471876779d4f601bc1cc46127ebe6ff578",
+        "docs/VISUAL-INTERACTION.md": "d20e9697c7b053efd3cb451a2d13da2b62950f38ba7f369a6f676f3539f3b2d7",
+        "docs/AVATAR-OUTPUT-BASELINE-2026-09-19.md": "ae315d38b61bc6de09c89e1463131f37fa3f8fec42ed4162df46e0c393e1c21c",
+        "docs/DINET-DELIVERY-ATTRIBUTION.md": "67c9e0ae7fe6b801c6195775524fc6bd0c7cdd0c5527a16cd7f0c3d17722f7d4"
+      }
+    }
+  ],
+  "observations": {
+    "baseline_document_lookup": "0/2 explicit project-document questions executed search_project",
+    "candidate3_document_lookup": "2/2 executed search_project",
+    "candidate3_core_roles": "2D/2D/3D correct, but renderer audio-video synchronization attribution remains inaccurate; README excerpt truncates before StreamingTalker definition and SYSTEM also supplies roles, so causal credit cannot be assigned solely to retrieval",
+    "candidate3_visual_context": "captured_at_ms, client-relative time, server receipt metadata and SHA, latest two images, in-flight request unchanged",
+    "general_answers": "compare-original, triage-original, constraints-original and calculate texts are identical in all four runs; triage and constraints remain inadequate",
+    "calculate": "actual calculate result 4054; answer includes explanatory words rather than just digits"
+  },
+  "limitations": [
+    "Six authored cases, one run per stage; development evidence, no held-out/general accuracy claim",
+    "Same model, SYSTEM, backend and document hashes across stages; intended runtime/tools code changed",
+    "No ASR/TTS/avatar/browser/physical-device measurement",
+    "Model endpoint has no EOS/finish_reason/token count; complete marks iterator exhaustion only",
+    "Original scope field copied from baseline input describes no intervention; candidate1-3 are interventions documented in report",
+    "Intermediate candidate source hashes and actual model inputs retained; only baseline and final source are committed snapshots"
+  ]
+}

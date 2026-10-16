@@ -25,6 +25,40 @@ class ToolTests(unittest.IsolatedAsyncioTestCase):
         self.assertIn('支持流式语音', document['content'])
         self.assertEqual(await self.tools.execute('search_project', {'query': 'absent'}), {'matches': []})
 
+    async def test_mixed_question_preserves_named_models_and_late_evidence(self):
+        (self.root / 'guide.md').write_text('介绍。' * 300 + 'DINet和FlashHead输出2D视频，StreamingTalker输出3D网格。')
+        (self.root / 'other.md').write_text('分别负责什么，提升识别和回答正确率。' * 8)
+        tools = ToolRegistry(self.root, documents={'guide': 'guide.md', 'other': 'other.md'})
+        result = await tools.execute('search_project', {'query': 'DINet、FlashHead、StreamingTalker分别负责什么？'})
+        first = result['matches'][0]
+        self.assertEqual(first['document_id'], 'guide')
+        for name in ['DINet', 'FlashHead', 'StreamingTalker']:
+            self.assertIn(name, first['excerpt'])
+        self.assertLessEqual(len(first['excerpt']), 600)
+
+    async def test_mixed_identifier_does_not_match_a_longer_name(self):
+        (self.root / 'guide.md').write_text('DINetwork生成画面。')
+        result = await self.tools.execute('search_project', {'query': 'DINet呢？'})
+        self.assertEqual(result['matches'], [])
+
+    async def test_generic_latin_term_does_not_suppress_chinese_topic_evidence(self):
+        (self.root / 'guide.md').write_text('每张图片记录采集时间 captured_at_ms，上下文保留两张图片及对应历史。')
+        (self.root / 'other.md').write_text('Qwen API语音模型介绍。')
+        tools = ToolRegistry(self.root, documents={'guide': 'guide.md', 'other': 'other.md'})
+        for name in ['Qwen', 'API']:
+            with self.subTest(name=name):
+                result = await tools.execute('search_project', {
+                    'query': name + '视觉图片的采集时间和上下文历史如何管理？'})
+                self.assertEqual(result['matches'][0]['document_id'], 'guide')
+                self.assertIn('captured_at_ms', result['matches'][0]['excerpt'])
+                self.assertIn('两张图片', result['matches'][0]['excerpt'])
+
+    async def test_identifier_fallback_preserves_hyphens_and_underscores(self):
+        (self.root / 'guide.md').write_text('MiniCPM-o使用captured_at_ms。')
+        result = await self.tools.execute('search_project', {'query': 'MiniCPM-o、captured_at_ms呢？'})
+        self.assertTrue(result['matches'], 'Mixed identifiers must retrieve their document')
+        self.assertEqual(result['matches'][0]['document_id'], 'guide')
+
     async def test_natural_chinese_question_finds_separated_document_terms(self):
         (self.root / 'guide.md').write_text('每张图片记录采集时间。上下文最多保留两张图片及对应历史。')
         query = '视觉图片的采集时间和上下文历史如何管理？'
