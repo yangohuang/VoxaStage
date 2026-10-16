@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "worker_commit": "88620f9cf78c21f59e1e6226ffce31850a1ae311",
+  "source_revision": "a371df7d0746a0ae7fdf075798b6b04e34a0132e",
+  "model_manifest_sha256": "4c73f363a4d8349af46a59d6aaf4bf2e02033d002e9a3dc0023542121fce7064",
+  "environments": [
+    {
+      "environment": "local",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+      "packages": 154,
+      "exact_versions": true,
+      "all_distribution_locations_isolated": true,
+      "tests": 27,
+      "test_duration_s": 1.469,
+      "tests_exit": 0,
+      "model_import_exit": 0,
+      "pip_check_passed": true,
+      "lock_sha256": "c3f2605a56eb61d52e34546b7ba67d106ddbd13561a2ead15ec3c78058ea7322"
+    },
+    {
+      "environment": "remote",
+      "python": "3.11.15 (main, Jul 18 2026, 17:02:49) [Clang 22.1.3 ]",
+      "packages": 154,
+      "exact_versions": true,
+      "all_distribution_locations_isolated": true,
+      "tests": 27,
+      "test_duration_s": 1.193,
+      "tests_exit": 0,
+      "model_import_exit": 0,
+      "pip_check_passed": true,
+      "lock_sha256": "c3f2605a56eb61d52e34546b7ba67d106ddbd13561a2ead15ec3c78058ea7322"
+    }
+  ],
+  "installation": {
+    "initial_online_attempts": "both failed with incomplete TLS response",
+    "recovered_cuda_wheels_remote": 7,
+    "recovered_cuda_wheels_local": 3,
+    "find_links_only_offline_attempt": "failed to select local wheel instead of index URL",
+    "recovery": "explicit local wheel requirements with original per-package hashes, then offline sync of unchanged complete lock",
+    "clean_gpu_host_tested": false
+  },
+  "gpu_model_load": {
+    "scope": "official GPU model construction only; no reference audio, synthesis, or service readiness claim",
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.8.0+cu128",
+    "free_before_bytes": 19303170048,
+    "total_bytes": 25243287552,
+    "source_revision": "a371df7d0746a0ae7fdf075798b6b04e34a0132e",
+    "model_files_verified": 14,
+    "model_loaded": true,
+    "load_s": 20.813416904071346,
+    "peak_allocated_bytes": 5346367488,
+    "peak_reserved_bytes": 5400166400,
+    "free_after_cleanup_bytes": 19238158336,
+    "allocated_after_cleanup_bytes": 0,
+    "reserved_after_cleanup_bytes": 0
+  },
+  "process_exit": {
+    "code": 0,
+    "free_before_mib": 18801,
+    "free_after_mib": 18801
+  },
+  "not_verified": [
+    "real voice synthesis",
+    "first PCM latency",
+    "real inference cancellation recovery",
+    "speaker matching",
+    "perceptual audio/video quality",
+    "physical microphone/speaker behavior",
+    "clean GPU host installation"
+  ],
+  "production_changed": false
+}

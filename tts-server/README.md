@@ -6,8 +6,10 @@
 VoxaStage 新增协议服务、单模型调度、取消清理、管理员音色映射及流式重采样。
 **上游先完整合成一个文本片段，再输出该片段音频；这不是语音 token 级流式推理。**
 
-目前完成独立 Python 环境安装、模型类导入及 CPU 协议验证，尚未完成此 worker 的
-真实 GPU 模型加载、双音色合成和首包时延验证。现有日常服务没有切换。
+目前已在两个独立 Python 环境重建154个锁定包，分别通过27项 CPU 协议测试及模型类导入；
+远端 RTX 4090 的真实模型加载与退出释放也已通过。
+双音色合成、真实首包时延及推理中的取消恢复尚未验证，现有日常服务没有切换。
+安装中的下载失败、离线恢复方式及测量边界见[独立部署验证记录](../docs/TTS-STANDALONE-VALIDATION.md)。
 参考 [实施与验收计划](../docs/plans/2026-10-16-tts-standalone.md)。
 
 ## 安装与资源
@@ -30,6 +32,9 @@ uv pip check --python runtime/tts-standalone/bin/python
 ```
 
 索引策略允许解析 PyTorch 的 `+cu128` 包；精确版本和 SHA256 仍必须匹配锁文件。
+本次在线安装遇到大型 CUDA wheel 的 TLS 响应提前关闭，未能一次完成。
+恢复时先按原锁中的版本和哈希安装完整本地 wheel，再用原完整锁离线同步；
+仅增加 `--find-links` 未能覆盖索引地址选择。详细过程见上述验证记录。
 重新生成锁使用相同索引及
 `uv pip compile --generate-hashes --no-header --no-annotate tts-server/requirements-standalone.in`。
 模型来源为 [IndexTeam/IndexTTS-2.5](https://huggingface.co/IndexTeam/IndexTTS-2.5)。
