@@ -91,3 +91,19 @@ then an idle health response before the next request. These are client/HTTP
 observations, not internal GPU cancellation events. Run its CPU transport tests
 with `python llm-server/deploy/test_protocol_client.py`. The complete host
 controller is still required before an actual GPU trial.
+
+The complete-wheelhouse build succeeded and a CPU-only environment probe
+verified all63 pinned versions and their locations under `/opt/worker`, isolated
+Python mode, non-root execution, `pip check`, and imports of Torch, Transformers,
+BitsAndBytes and Accelerate. See the [environment evidence](../docs/benchmarks/2026-10-16-container-environment.json)
+and [wheel manifest](../docs/benchmarks/2026-10-16-container-wheels.json).
+This evidence does not yet include model loading or generation.
+
+`deploy/container_trial.py` is the host controller under final review. It
+rechecks service health after model hashing and before startup, serializes
+startup with abort, and captures client stdout incrementally. Each complete
+health probe has a5s wall deadline and a64KiB response limit; the200ms monitor
+interval is a delay between probes. Its CLI expects two loopback health URLs
+and a new output directory. A timed-out create is discovered by a unique name,
+then cleanup still verifies full ID, image and run label. An unresolved create
+outcome is recorded as failure and must be inspected before any retry.

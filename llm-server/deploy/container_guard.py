@@ -49,6 +49,15 @@ class OwnedContainer:
             self.invoke(['docker', 'stop', '--time', '5', self.container_id])
             self._stopped = True
 
+    def start(self):
+        # An abort may arrive after final admission but before Docker starts.
+        # Share the stop lock so a stopped container cannot be started later.
+        with self._lock:
+            if self._stopped:
+                raise RuntimeError('container_already_stopped')
+            self._verify()
+            self.invoke(['docker', 'start', self.container_id])
+
     def remove(self):
         with self._lock:
             if not self._stopped:

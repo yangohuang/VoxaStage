@@ -201,6 +201,44 @@ class GuardTests(unittest.TestCase):
             owned.remove()
         self.assertFalse(any(c[1] == 'rm' for c in commands))
 
+    def test_abort_before_start_prevents_late_start(self):
+        owned, commands = self.owned_fixture()
+        self.assertTrue(hasattr(owned, 'start'), 'serialized lifecycle start missing')
+        owned.stop()
+        with self.assertRaisesRegex(RuntimeError, 'container_already_stopped'):
+            owned.start()
+        self.assertFalse(any(c[1] == 'start' for c in commands))
+
+    def test_abort_waits_for_inflight_start_then_stops(self):
+        owned, commands = self.owned_fixture()
+        self.assertTrue(hasattr(owned, 'start'), 'serialized lifecycle start missing')
+        entered, release, stopped = threading.Event(), threading.Event(), threading.Event()
+        invoke = owned.invoke
+        def blocked(command):
+            if command[1] == 'start':
+                entered.set()
+                if not release.wait(2):
+                    raise RuntimeError('test_start_not_released')
+            return invoke(command)
+        owned.invoke = blocked
+        starter = threading.Thread(target=owned.start)
+        def stop():
+            owned.stop()
+            stopped.set()
+        stopper = threading.Thread(target=stop)
+        starter.start()
+        try:
+            self.assertTrue(entered.wait(1))
+            stopper.start()
+            self.assertFalse(stopped.wait(.03))
+        finally:
+            release.set()
+            starter.join(2)
+            if stopper.ident:
+                stopper.join(2)
+        self.assertTrue(stopped.is_set())
+        self.assertEqual([c[1] for c in commands if c[1] in ('start','stop')], ['start','stop'])
+
 
 if __name__ == '__main__':
     unittest.main()
