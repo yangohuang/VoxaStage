@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "date": "2026-10-16",
+  "scope": "Single-model text-input factorial prompt experiment; four task families, eight authored cases; no ASR/TTS, no human evaluation.",
+  "generation": {
+    "max_new_tokens": 256,
+    "do_sample": false,
+    "enable_thinking": false
+  },
+  "conditions": [
+    {
+      "id": "baseline",
+      "domain": false,
+      "premise": false,
+      "system_prompt": "你是中文语音助手。依据上下文回答当前问题。简单问题直接短答，复杂问题先给结论，再覆盖用户要求的理由和步骤，约100字。不要编造。"
+    },
+    {
+      "id": "domain",
+      "domain": true,
+      "premise": false,
+      "system_prompt": "你是中文语音助手。依据上下文回答当前问题。简单问题直接短答，复杂问题先给结论，再覆盖用户要求的理由和步骤，约100字。不要编造。\n当前领域可能出现以下术语：语音 agent，VAD（语音活动检测），ASR（自动语音识别），LLM，TTS，WebRTC，Python，Pipecat，MiniCPM-o，DINet，FlashHead，StreamingTalker。"
+    },
+    {
+      "id": "premise",
+      "domain": false,
+      "premise": true,
+      "system_prompt": "你是中文语音助手。依据上下文回答当前问题。简单问题直接短答，复杂问题先给结论，再覆盖用户要求的理由和步骤，约100字。不要编造。\n作答前核对用户明确给出的事实、否定条件和最新更正。把已确认的前提当作约束，不重复建议已经排除的原因；缺少依据时说明条件，不把相关性说成因果，也不把一个模块的能力归给另一个模块。直接输出回答，不展示内部推理。"
+    },
+    {
+      "id": "domain_premise",
+      "domain": true,
+      "premise": true,
+      "system_prompt": "你是中文语音助手。依据上下文回答当前问题。简单问题直接短答，复杂问题先给结论，再覆盖用户要求的理由和步骤，约100字。不要编造。\n当前领域可能出现以下术语：语音 agent，VAD（语音活动检测），ASR（自动语音识别），LLM，TTS，WebRTC，Python，Pipecat，MiniCPM-o，DINet，FlashHead，StreamingTalker。\n作答前核对用户明确给出的事实、否定条件和最新更正。把已确认的前提当作约束，不重复建议已经排除的原因；缺少依据时说明条件，不把相关性说成因果，也不把一个模块的能力归给另一个模块。直接输出回答，不展示内部推理。"
+    }
+  ],
+  "cases": [
+    {
+      "id": "compare-original",
+      "family": "compare",
+      "split": "original_failure_probe",
+      "messages": [
+        {
+          "role": "user",
+          "content": "比较级联语音助手和端到端语音助手：分别说明可调试性、延迟、错误定位三个方面的取舍。"
+        }
+      ],
+      "rubric": [
+        "both architectures compared",
+        "debuggability tradeoff",
+        "latency depends on implementation, not unconditional superiority",
+        "error localization tradeoff"
+      ]
+    },
+    {
+      "id": "triage-original",
+      "family": "triage",
+      "split": "original_failure_probe",
+      "messages": [
+        {
+          "role": "user",
+          "content": "语音助手识别出来的文字是对的，但回答总是答非所问。请按顺序给我三个排查步骤，每步说清检查什么和为什么。"
+        }
+      ],
+      "rubric": [
+        "inspect actual LLM input/history",
+        "inspect system prompt or instruction conflicts",
+        "test model response separately; not simply replace ASR"
+      ]
+    },
+    {
+      "id": "constraints-original",
+      "family": "constraints",
+      "split": "original_failure_probe",
+      "messages": [
+        {
+          "role": "user",
+          "content": "我只有一张24GB显卡，已有语音助手；不能用云API，也不能买新硬件。要改善回答质量，请给出三个可执行步骤，同时兼顾响应速度。"
+        }
+      ],
+      "rubric": [
+        "local only/no new hardware",
+        "three actionable steps",
+        "quality measurement",
+        "latency/memory consideration"
+      ]
+    },
+    {
+      "id": "correction-original",
+      "family": "correction",
+      "split": "original_failure_probe",
+      "messages": [
+        {
+          "role": "user",
+          "content": "项目代号是海星，预算800元。"
+        },
+        {
+          "role": "assistant",
+          "content": "记住了：海星，800元。"
+        },
+        {
+          "role": "user",
+          "content": "改一下，代号改成蓝鲸，预算改成600元。只告诉我现在的代号和预算。"
+        }
+      ],
+      "rubric": [
+        "latest codeword blue whale",
+        "latest budget 600",
+        "no stale value"
+      ]
+    },
+    {
+      "id": "compare-variant",
+      "family": "compare",
+      "split": "predeclared_variant",
+      "messages": [
+        {
+          "role": "user",
+          "content": "把语音识别、语言模型、语音合成串起来，与直接语音到语音的模型相比，分别怎样调试、定位错误和评估响应延迟？不要假定任何一方必然更快。"
+        }
+      ],
+      "rubric": [
+        "both architectures compared",
+        "debuggability tradeoff",
+        "latency depends on implementation, not unconditional superiority",
+        "error localization tradeoff"
+      ]
+    },
+    {
+      "id": "triage-variant",
+      "family": "triage",
+      "split": "predeclared_variant",
+      "messages": [
+        {
+          "role": "user",
+          "content": "我已经核对了传给语言模型的当前用户文字，与原话完全一致。但它经常回答另一个问题。列出三个优先检查项并解释原因。"
+        }
+      ],
+      "rubric": [
+        "inspect actual LLM input/history",
+        "inspect system prompt or instruction conflicts",
+        "test model response separately; not simply replace ASR"
+      ]
+    },
+    {
+      "id": "constraints-variant",
+      "family": "constraints",
+      "split": "predeclared_variant",
+      "messages": [
+        {
+          "role": "user",
+          "content": "现有机器只有24GB显存，必须离线运行，也不能添置硬件。语音助手经常答错，但还需要保持响应速度。请按顺序提出三个具体改进步骤。"
+        }
+      ],
+      "rubric": [
+        "local only/no new hardware",
+        "three actionable steps",
+        "quality measurement",
+        "latency/memory consideration"
+      ]
+    },
+    {
+      "id": "correction-variant",
+      "family": "correction",
+      "split": "predeclared_variant",
+      "messages": [
+        {
+          "role": "user",
+          "content": "代号叫松果，预算1200元。"
+        },
+        {
+          "role": "assistant",
+          "content": "记下了：松果，1200元。"
+        },
+        {
+          "role": "user",
+          "content": "更正：改成白鹭，预算900元。仅回复最新代号和预算。"
+        }
+      ],
+      "rubric": [
+        "latest codeword 白鹭",
+        "latest budget 900",
+        "no stale value"
+      ]
+    }
+  ],
+  "measurement": "HTTP stream first nonempty text and total request duration; worker does not expose generated token count or finish reason.",
+  "deployment_gate": "No automatic deployment. Review premise adherence, factual/constraint correctness and completeness for every response; report regressions. Four variant cases are related authored probes, not a broad independent test set."
+}

@@ -1,0 +1,293 @@
+{
+  "scope": "Assistant-authored observations against predeclared rubric; not blinded, not human annotation, not a general quality score. Findings include factual checks beyond the original rubric and identify them explicitly.",
+  "rows": [
+    {
+      "case": "compare-original",
+      "condition": "baseline",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "四种条件都把级联高延迟、端到端低延迟直接绑定到架构；没有给出实现和硬件条件。",
+      "unconditional_architecture_latency_order": true,
+      "unqualified_additive_latency": false
+    },
+    {
+      "case": "compare-original",
+      "condition": "domain",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "四种条件都把级联高延迟、端到端低延迟直接绑定到架构；没有给出实现和硬件条件。",
+      "unconditional_architecture_latency_order": true,
+      "unqualified_additive_latency": false
+    },
+    {
+      "case": "compare-original",
+      "condition": "premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "四种条件都把级联高延迟、端到端低延迟直接绑定到架构；没有给出实现和硬件条件。",
+      "unconditional_architecture_latency_order": true,
+      "unqualified_additive_latency": false
+    },
+    {
+      "case": "compare-original",
+      "condition": "domain_premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "四种条件都把级联高延迟、端到端低延迟直接绑定到架构；没有给出实现和硬件条件。",
+      "unconditional_architecture_latency_order": true,
+      "unqualified_additive_latency": false
+    },
+    {
+      "case": "triage-original",
+      "condition": "domain",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "未完整覆盖实际输入/历史、系统提示、独立模型测试三个排查方向。",
+      "explicitly_rechecks_ruled_out_asr": false,
+      "explicit_system_prompt_or_instruction_check": false,
+      "explicit_independent_model_test": false
+    },
+    {
+      "case": "triage-original",
+      "condition": "premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "未完整覆盖实际输入/历史、系统提示、独立模型测试三个排查方向。",
+      "explicitly_rechecks_ruled_out_asr": true,
+      "explicit_system_prompt_or_instruction_check": false,
+      "explicit_independent_model_test": false
+    },
+    {
+      "case": "triage-original",
+      "condition": "domain_premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "未完整覆盖实际输入/历史、系统提示、独立模型测试三个排查方向。",
+      "explicitly_rechecks_ruled_out_asr": false,
+      "explicit_system_prompt_or_instruction_check": false,
+      "explicit_independent_model_test": false
+    },
+    {
+      "case": "triage-original",
+      "condition": "baseline",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "未完整覆盖实际输入/历史、系统提示、独立模型测试三个排查方向。",
+      "explicitly_rechecks_ruled_out_asr": true,
+      "explicit_system_prompt_or_instruction_check": false,
+      "explicit_independent_model_test": false
+    },
+    {
+      "case": "constraints-original",
+      "condition": "premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "没有提出对回答质量建立失败集或对照评价；主要转向资源和速度措施。",
+      "quality_evaluation_step": false,
+      "unsupported_avatar_module_claim": false
+    },
+    {
+      "case": "constraints-original",
+      "condition": "domain_premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "没有提出对回答质量建立失败集或对照评价；主要转向资源和速度措施。 将DINet用于ASR；将FlashHead称作量化技术。",
+      "quality_evaluation_step": false,
+      "unsupported_avatar_module_claim": true
+    },
+    {
+      "case": "constraints-original",
+      "condition": "baseline",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "没有提出对回答质量建立失败集或对照评价；主要转向资源和速度措施。",
+      "quality_evaluation_step": false,
+      "unsupported_avatar_module_claim": false
+    },
+    {
+      "case": "constraints-original",
+      "condition": "domain",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "没有提出对回答质量建立失败集或对照评价；主要转向资源和速度措施。 将DINet用于ASR，并在禁止云端的题目里讨论减少云端延迟。",
+      "quality_evaluation_step": false,
+      "unsupported_avatar_module_claim": true
+    },
+    {
+      "case": "correction-original",
+      "condition": "domain_premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "正确采用最新代号蓝鲸和预算600元，无旧值。",
+      "latest_values_correct": true
+    },
+    {
+      "case": "correction-original",
+      "condition": "baseline",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "正确采用最新代号蓝鲸和预算600元，无旧值。",
+      "latest_values_correct": true
+    },
+    {
+      "case": "correction-original",
+      "condition": "domain",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "正确采用最新代号蓝鲸和预算600元，无旧值。",
+      "latest_values_correct": true
+    },
+    {
+      "case": "correction-original",
+      "condition": "premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "正确采用最新代号蓝鲸和预算600元，无旧值。",
+      "latest_values_correct": true
+    },
+    {
+      "case": "compare-variant",
+      "condition": "baseline",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "没有直接声称端到端必然更快，但将模块耗时直接相加，没有限定串行处理，未考虑流式重叠与首音频测量边界。",
+      "unconditional_architecture_latency_order": false,
+      "unqualified_additive_latency": true
+    },
+    {
+      "case": "compare-variant",
+      "condition": "domain",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "没有直接声称端到端必然更快，但将模块耗时直接相加，没有限定串行处理，未考虑流式重叠与首音频测量边界。",
+      "unconditional_architecture_latency_order": false,
+      "unqualified_additive_latency": true
+    },
+    {
+      "case": "compare-variant",
+      "condition": "premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "没有直接声称端到端必然更快，但将模块耗时直接相加，没有限定串行处理，未考虑流式重叠与首音频测量边界。",
+      "unconditional_architecture_latency_order": false,
+      "unqualified_additive_latency": true
+    },
+    {
+      "case": "compare-variant",
+      "condition": "domain_premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "没有直接声称端到端必然更快，但将模块耗时直接相加，没有限定串行处理，未考虑流式重叠与首音频测量边界。",
+      "unconditional_architecture_latency_order": false,
+      "unqualified_additive_latency": true
+    },
+    {
+      "case": "triage-variant",
+      "condition": "domain",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "未完整覆盖实际输入/历史、系统提示、独立模型测试三个排查方向。",
+      "explicitly_rechecks_ruled_out_asr": false,
+      "explicit_system_prompt_or_instruction_check": false,
+      "explicit_independent_model_test": false
+    },
+    {
+      "case": "triage-variant",
+      "condition": "premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "未完整覆盖实际输入/历史、系统提示、独立模型测试三个排查方向。",
+      "explicitly_rechecks_ruled_out_asr": false,
+      "explicit_system_prompt_or_instruction_check": false,
+      "explicit_independent_model_test": false
+    },
+    {
+      "case": "triage-variant",
+      "condition": "domain_premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "未完整覆盖实际输入/历史、系统提示、独立模型测试三个排查方向。",
+      "explicitly_rechecks_ruled_out_asr": false,
+      "explicit_system_prompt_or_instruction_check": false,
+      "explicit_independent_model_test": false
+    },
+    {
+      "case": "triage-variant",
+      "condition": "baseline",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "未完整覆盖实际输入/历史、系统提示、独立模型测试三个排查方向。",
+      "explicitly_rechecks_ruled_out_asr": false,
+      "explicit_system_prompt_or_instruction_check": false,
+      "explicit_independent_model_test": false
+    },
+    {
+      "case": "constraints-variant",
+      "condition": "premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "没有提出对回答质量建立失败集或对照评价；主要转向资源和速度措施。",
+      "quality_evaluation_step": false,
+      "unsupported_avatar_module_claim": false
+    },
+    {
+      "case": "constraints-variant",
+      "condition": "domain_premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "没有提出对回答质量建立失败集或对照评价；主要转向资源和速度措施。 将DINet用于ASR；将StreamingTalker作为降低资源开销的建议，缺少与回答质量的联系。",
+      "quality_evaluation_step": false,
+      "unsupported_avatar_module_claim": true
+    },
+    {
+      "case": "constraints-variant",
+      "condition": "baseline",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "没有提出对回答质量建立失败集或对照评价；主要转向资源和速度措施。 梯度累加是训练手段，未说明如何适用于现有推理问题。",
+      "quality_evaluation_step": false,
+      "unsupported_avatar_module_claim": false
+    },
+    {
+      "case": "constraints-variant",
+      "condition": "domain",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "没有提出对回答质量建立失败集或对照评价；主要转向资源和速度措施。提出StreamingTalker作为整体推理速度和准确性的改进，缺少有效依据。",
+      "quality_evaluation_step": false,
+      "unsupported_avatar_module_claim": true
+    },
+    {
+      "case": "correction-variant",
+      "condition": "domain_premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "正确采用最新代号白鹭和预算900元，无旧值。",
+      "latest_values_correct": true
+    },
+    {
+      "case": "correction-variant",
+      "condition": "baseline",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "正确采用最新代号白鹭和预算900元，无旧值。",
+      "latest_values_correct": true
+    },
+    {
+      "case": "correction-variant",
+      "condition": "domain",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "正确采用最新代号白鹭和预算900元，无旧值。",
+      "latest_values_correct": true
+    },
+    {
+      "case": "correction-variant",
+      "condition": "premise",
+      "reviewer": "assistant_text_inspection",
+      "human_review": false,
+      "note": "正确采用最新代号白鹭和预算900元，无旧值。",
+      "latest_values_correct": true
+    }
+  ]
+}
