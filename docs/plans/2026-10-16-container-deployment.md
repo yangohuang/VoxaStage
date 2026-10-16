@@ -80,3 +80,8 @@ ENTRYPOINT ["/opt/worker/bin/python", "-I", "/opt/app/llm_server.py"]
 被拒绝，partial日志保留，失败不会恢复成可继续状态，本轮容器均已移除。
 Docker在5秒停止期限后升级终止，退出137；这证明有界强停，不是优雅退出。
 完整推理控制器、TERM/HUP和创建超时处理仍待实现和验证。
+
+部分缓存构建实测仍从索引选择同版本URL，已核验本轮构建进程身份后终止
+（退出130），保留日志。改为先下载其余53个锁定wheel并逐个复核，组成
+完整63包wheelhouse；Python安装步骤设置`--network=none`和`--no-index`，
+有缺失就失败，不再回退到网络。基础镜像和APT获取仍联网，不称整次构建离线。

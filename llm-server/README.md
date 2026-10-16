@@ -64,10 +64,11 @@ also shares the host kernel and GPU driver, and cannot replace full installation
 on an independent blank GPU host.
 
 For unreliable large downloads, `deploy/Dockerfile.cached-wheels` accepts a
-`wheels/` directory in its minimal build context. It mounts original wheel files
-read-only during installation and uses `--find-links`; all packages still have
+complete `wheels/` directory in its minimal build context. It mounts original wheel files
+read-only during installation, disables network for that build step, and uses
+`--no-index --find-links`; all packages still have
 to match the unchanged lock hashes. This does not copy an installed host
-environment. Wheels not in that directory are downloaded normally. Keep wheel
+environment. Missing wheels fail the offline install. Keep wheel
 files out of git. Record their filenames, sizes and SHA256 before transfer and
 verify them again on the build host. BuildKit is required for this variant.
 
@@ -76,3 +77,17 @@ containers rejected a different run label, retained their logs, stopped once
 and were removed. Docker escalated after the configured5s stop timeout
 (exit137), so this is evidence of bounded termination, not graceful shutdown.
 It does not cover controller TERM/HUP, Docker creation timeouts or GPU work.
+
+The partial-cache attempt still selected an index URL for a duplicate version
+and was stopped (exit130). The revised build requires all63 locked packages
+in the wheelhouse before it starts; no fallback network download is allowed
+during Python dependency installation. APT/base-image retrieval remains online.
+
+`deploy/protocol_client.py` is the inside-container collector for the frozen
+17-request manifest. It emits JSONL evidence immediately, including malformed
+raw lines, then asks the host to acknowledge each case before posting. Full
+requests have a wall timeout; cancellation requires busy-at-first-text evidence,
+then an idle health response before the next request. These are client/HTTP
+observations, not internal GPU cancellation events. Run its CPU transport tests
+with `python llm-server/deploy/test_protocol_client.py`. The complete host
+controller is still required before an actual GPU trial.
