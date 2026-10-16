@@ -1,0 +1,203 @@
+{
+  "scope": "real loopback service, public demo voices; no perceptual or production-voice acceptance",
+  "service_ready_s": 14.8720802658936,
+  "health": {
+    "ready": true,
+    "busy": false,
+    "model": "IndexTTS-2.5",
+    "streaming": "text-segment",
+    "sample_rate": 24000
+  },
+  "voices": {
+    "speaker_ids": [
+      "voice_03",
+      "voice_04"
+    ]
+  },
+  "cases": [
+    {
+      "id": "voice_03-zh",
+      "voice": "voice_03",
+      "text": "你好，我们正在测试实时语音对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "total_s": 3.288931558956392,
+      "first_pcm_s": 3.2260756619507447,
+      "packets": 74,
+      "bytes": 139446,
+      "duration_s": 2.905125,
+      "rms": 5673.5745602441975,
+      "clipping_fraction": 5.736987794558467e-05,
+      "pcm_sha256": "28b40976d3290357276069fb67f5858c5545947c6f0128b9441aabd399fa5832",
+      "idle_after_s": 0.0017182279843837023
+    },
+    {
+      "id": "voice_03-mixed",
+      "voice": "voice_03",
+      "text": "这个 voice agent 使用 ASR、LLM 和 TTS 完成对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "total_s": 0.8752715470036492,
+      "first_pcm_s": 0.8072920610429719,
+      "packets": 105,
+      "bytes": 199074,
+      "duration_s": 4.147375,
+      "rms": 6906.258066171323,
+      "clipping_fraction": 5.023257683072626e-05,
+      "pcm_sha256": "ee93e9790ae3b9dfdbc32c193b62da0243ca64fd78416a66da58b8186ff7f092",
+      "idle_after_s": 0.0015064090257510543
+    },
+    {
+      "id": "voice_04-zh",
+      "voice": "voice_04",
+      "text": "你好，我们正在测试实时语音对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "total_s": 0.8461573439417407,
+      "first_pcm_s": 0.7838982009561732,
+      "packets": 66,
+      "bytes": 124400,
+      "duration_s": 2.591666666666667,
+      "rms": 1225.4656147596306,
+      "clipping_fraction": 0.0,
+      "pcm_sha256": "9374722648224624a5d9617b9b7c02ad871798ba27adcbda57369713d1dc57d5",
+      "idle_after_s": 0.0016653150087222457
+    },
+    {
+      "id": "voice_04-mixed",
+      "voice": "voice_04",
+      "text": "这个 voice agent 使用 ASR、LLM 和 TTS 完成对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "total_s": 0.7916047719772905,
+      "first_pcm_s": 0.7243403859902173,
+      "packets": 95,
+      "bytes": 180128,
+      "duration_s": 3.752666666666667,
+      "rms": 2223.968693559642,
+      "clipping_fraction": 0.0,
+      "pcm_sha256": "9a77cd6b40f7ef312164207e224224d8a37360a1f215ed7762e8845a56f88b22",
+      "idle_after_s": 0.0014789500273764133
+    },
+    {
+      "id": "recovery-before_first_packet",
+      "voice": "voice_04",
+      "text": "已经恢复，可以继续对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "total_s": 0.6281134650344029,
+      "first_pcm_s": 0.5684786050114781,
+      "packets": 49,
+      "bytes": 91520,
+      "duration_s": 1.9066666666666667,
+      "rms": 763.0580658406054,
+      "clipping_fraction": 0.0,
+      "pcm_sha256": "95ed02676075318a36b298f8a8ab607d72537ec95fcc5065e3dd7035bd9d9aaf",
+      "idle_after_s": 0.0015563019551336765
+    },
+    {
+      "id": "recovery-after_first_packet",
+      "voice": "voice_04",
+      "text": "已经恢复，可以继续对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "total_s": 0.6142056270036846,
+      "first_pcm_s": 0.5577183810528368,
+      "packets": 51,
+      "bytes": 95420,
+      "duration_s": 1.9879166666666668,
+      "rms": 1343.0814092963556,
+      "clipping_fraction": 0.0,
+      "pcm_sha256": "00568061076ea44fffef0b8f50766deecdaecbd72d6f12dc8f1c981f6ee4e9b0",
+      "idle_after_s": 0.0010777320712804794
+    }
+  ],
+  "cancellations": [
+    {
+      "mode": "before_first_packet",
+      "text": "我们正在验证语音流的打断和恢复。第一段介绍流式合成，第二段检查旧音频是否停止。请按照正常速度说明实时语音交互的完整过程，包括识别、思考、回答和动作。我们正在验证语音流的打断和恢复。第一段介绍流式合成，第二段检查旧音频是否停止。请按照正常速度说明实时语音交互的完整过程，包括识别、思考、回答和动作。我们正在验证语音流的打断和恢复。第一段介绍流式合成，第二段检查旧音频是否停止。请按照正常速度说明实时语音交互的完整过程，包括识别、思考、回答和动作。我们正在验证语音流的打断和恢复。第一段介绍流式合成，第二段检查旧音频是否停止。请按照正常速度说明实时语音交互的完整过程，包括识别、思考、回答和动作。我们正在验证语音流的打断和恢复。第一段介绍流式合成，第二段检查旧音频是否停止。请按照正常速度说明实时语音交互的完整过程，包括识别、思考、回答和动作。",
+      "received_packets_before_close": 0,
+      "busy_before_close": true,
+      "request_to_close_s": 0.3028565440326929,
+      "close_handshake_s": 0.0003478860016912222,
+      "busy_after_close": true,
+      "contender_result": {
+        "error": "Worker busy",
+        "code": 409
+      },
+      "close_to_idle_s": 2.026011907029897,
+      "passed": true
+    },
+    {
+      "mode": "after_first_packet",
+      "text": "我们正在验证语音流的打断和恢复。第一段介绍流式合成，第二段检查旧音频是否停止。请按照正常速度说明实时语音交互的完整过程，包括识别、思考、回答和动作。我们正在验证语音流的打断和恢复。第一段介绍流式合成，第二段检查旧音频是否停止。请按照正常速度说明实时语音交互的完整过程，包括识别、思考、回答和动作。我们正在验证语音流的打断和恢复。第一段介绍流式合成，第二段检查旧音频是否停止。请按照正常速度说明实时语音交互的完整过程，包括识别、思考、回答和动作。我们正在验证语音流的打断和恢复。第一段介绍流式合成，第二段检查旧音频是否停止。请按照正常速度说明实时语音交互的完整过程，包括识别、思考、回答和动作。我们正在验证语音流的打断和恢复。第一段介绍流式合成，第二段检查旧音频是否停止。请按照正常速度说明实时语音交互的完整过程，包括识别、思考、回答和动作。",
+      "received_packets_before_close": 1,
+      "busy_before_close": true,
+      "request_to_close_s": 2.3322955010225996,
+      "close_handshake_s": 0.00027357996441423893,
+      "busy_after_close": true,
+      "contender_result": {
+        "error": "Worker busy",
+        "code": 409
+      },
+      "close_to_idle_s": 0.10202149208635092,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "worker_exit_code": -15,
+  "gpu_free_before_mib": "18801",
+  "gpu_free_after_mib": "18801",
+  "worker_code_revision": "88620f9cf78c21f59e1e6226ffce31850a1ae311",
+  "upstream_revision": "a371df7d0746a0ae7fdf075798b6b04e34a0132e",
+  "device": "NVIDIA RTX 4090",
+  "reference_provenance": {
+    "source": "official IndexTeam demo examples",
+    "space_metadata_license": "apache-2.0",
+    "scope": "functional testing only; no redistribution or production speaker identity claim",
+    "files": [
+      {
+        "name": "voice_03.wav",
+        "url": "https://huggingface.co/spaces/IndexTeam/IndexTTS-2-Demo/resolve/b01840e8e4fd9753743a6d0466cd73ae1d634a68/examples/voice_03.wav",
+        "repository_revision": "b01840e8e4fd9753743a6d0466cd73ae1d634a68",
+        "upstream_sha256": "50e8b632efd794418919e2d33c8c2aab9189a57f4d21ef55020413be9f2b292a",
+        "original_sample_rate": 48000,
+        "original_channels": 2,
+        "duration_s": 2.111104166666667,
+        "prepared_sha256": "c11aa4aaee339dd3d43396fe326f2884d746f2d96d5538ecac19df3f08b887f4",
+        "preparation": "channel mean if needed; PCM16 WAV; no trim or resampling"
+      },
+      {
+        "name": "voice_04.wav",
+        "url": "https://huggingface.co/spaces/IndexTeam/IndexTTS-2-Demo/resolve/b01840e8e4fd9753743a6d0466cd73ae1d634a68/examples/voice_04.wav",
+        "repository_revision": "b01840e8e4fd9753743a6d0466cd73ae1d634a68",
+        "upstream_sha256": "2a3d2536245f45fd5e1eef046dd768ae7b72a0dba3ec3f370f145862fe64b3b2",
+        "original_sample_rate": 48000,
+        "original_channels": 2,
+        "duration_s": 2.345625,
+        "prepared_sha256": "2b4f776c0bcfc120a418a743e9a1d52ed4d5fd5d7167634251ca34a05d37f0d7",
+        "preparation": "channel mean if needed; PCM16 WAV; no trim or resampling"
+      }
+    ]
+  },
+  "measurement_notes": [
+    "One process and one observation per case; sampling enabled without fixed seed; no percentile or quality score.",
+    "first_pcm_s starts after fourth request message send completes; loopback transport only; excludes audio playback and ASR/LLM.",
+    "before_first_packet is the harness scenario name: disconnect 0.3 s after busy without calling recv; it does not prove no audio was generated or buffered.",
+    "close_to_idle_s is measured from the start of idle polling after close and contender check; it is not the exact disconnect-to-free interval.",
+    "Worker terminated with SIGTERM after successful tests; uvicorn logs application shutdown complete; controller exits zero; no forced kill.",
+    "No generated or reference audio distributed; public voice IDs do not claim production gender or speaker matching."
+  ]
+}
