@@ -1,0 +1,835 @@
+{
+  "scope": "real model, injected 50 ms service deadline, 30 sequential requests; not production 90 s deadline or long-session acceptance",
+  "deadline_s": 0.05,
+  "sequential": [
+    {
+      "index": 0,
+      "voice": "voice_03",
+      "text": "你好，现在可以继续语音对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.6846124629955739,
+      "total_s": 0.7432756670750678,
+      "packets": 57,
+      "bytes": 107124,
+      "duration_s": 2.23175,
+      "pcm_sha256": "a82f70bf1a8edb0a412344994d5ff06d02e3c6b40d0a657caa26536c4ae9933d",
+      "peak_amplitude": 32768,
+      "memory_after_idle": {
+        "allocated_bytes": 5503692288,
+        "reserved_bytes": 5695864832,
+        "rss_bytes": 4524662784
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 1,
+      "voice": "voice_04",
+      "text": "语音 agent 使用 ASR、LLM 和 TTS 完成回复。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8550711559364572,
+      "total_s": 0.9181465290021151,
+      "packets": 92,
+      "bytes": 173998,
+      "duration_s": 3.6249583333333333,
+      "pcm_sha256": "efbb2f36b168698b31099ab5c22c99533b50d4ebe2e9c6f294700ec3a60ff57b",
+      "peak_amplitude": 13357,
+      "memory_after_idle": {
+        "allocated_bytes": 5510808064,
+        "reserved_bytes": 5735710720,
+        "rss_bytes": 4528029696
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 2,
+      "voice": "voice_03",
+      "text": "今天需要完成三项检查：语音、动作，以及上下文。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8544927270850167,
+      "total_s": 0.9167854520492256,
+      "packets": 98,
+      "bytes": 185700,
+      "duration_s": 3.86875,
+      "pcm_sha256": "1efad9377e8cb150cab233ae4da6ae453c1d372c8bfe5c8f711b09e72eee4441",
+      "peak_amplitude": 32758,
+      "memory_after_idle": {
+        "allocated_bytes": 5503712768,
+        "reserved_bytes": 5725224960,
+        "rss_bytes": 4537581568
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 3,
+      "voice": "voice_04",
+      "text": "你好，现在可以继续语音对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.6230119870742783,
+      "total_s": 0.6814048670930788,
+      "packets": 53,
+      "bytes": 99322,
+      "duration_s": 2.0692083333333335,
+      "pcm_sha256": "72bb742c28ab1d8f7bc007498684ca1605cccdef6cfe5b995fe7d08cc24ba587",
+      "peak_amplitude": 10956,
+      "memory_after_idle": {
+        "allocated_bytes": 5512918528,
+        "reserved_bytes": 5647630336,
+        "rss_bytes": 4537630720
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 4,
+      "voice": "voice_03",
+      "text": "语音 agent 使用 ASR、LLM 和 TTS 完成回复。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.9018536779331043,
+      "total_s": 0.9655788659583777,
+      "packets": 103,
+      "bytes": 195174,
+      "duration_s": 4.066125,
+      "pcm_sha256": "7c42e7235888b8226e39e0d20eba39d05214f2ecd279d4d9b1ac8fb83118a779",
+      "peak_amplitude": 32768,
+      "memory_after_idle": {
+        "allocated_bytes": 5502493184,
+        "reserved_bytes": 5718933504,
+        "rss_bytes": 4547497984
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 5,
+      "voice": "voice_04",
+      "text": "今天需要完成三项检查：语音、动作，以及上下文。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8282269849441946,
+      "total_s": 0.8915083059109747,
+      "packets": 92,
+      "bytes": 173998,
+      "duration_s": 3.6249583333333333,
+      "pcm_sha256": "f85e17bf6da40d52a2142c5c4eb6c767e4288d1e34dcfe5ffe7b481c15f286e2",
+      "peak_amplitude": 12221,
+      "memory_after_idle": {
+        "allocated_bytes": 5511506432,
+        "reserved_bytes": 5727322112,
+        "rss_bytes": 4556390400
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 6,
+      "voice": "voice_03",
+      "text": "你好，现在可以继续语音对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.6563469449756667,
+      "total_s": 0.7144995919661596,
+      "packets": 64,
+      "bytes": 120498,
+      "duration_s": 2.510375,
+      "pcm_sha256": "1db215a104f8676ab05496ddb46aa5a3ea69d248477aa54bc5c16f20096418d5",
+      "peak_amplitude": 28471,
+      "memory_after_idle": {
+        "allocated_bytes": 5502923264,
+        "reserved_bytes": 5656018944,
+        "rss_bytes": 4561383424
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 7,
+      "voice": "voice_04",
+      "text": "语音 agent 使用 ASR、LLM 和 TTS 完成回复。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8089732710504904,
+      "total_s": 0.8716411290224642,
+      "packets": 91,
+      "bytes": 172326,
+      "duration_s": 3.590125,
+      "pcm_sha256": "e1d7a3132b0902498de5103d1eb53006b3433b55d97b69566df207fd1661d92c",
+      "peak_amplitude": 16325,
+      "memory_after_idle": {
+        "allocated_bytes": 5511561728,
+        "reserved_bytes": 5702156288,
+        "rss_bytes": 4570779648
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 8,
+      "voice": "voice_03",
+      "text": "今天需要完成三项检查：语音、动作，以及上下文。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8625991330482066,
+      "total_s": 0.9250235890503973,
+      "packets": 96,
+      "bytes": 181800,
+      "duration_s": 3.7875,
+      "pcm_sha256": "eaab1dac7f2ee8b8f1a65a7243440cfe3bd97640626a7c04036de6db325765f2",
+      "peak_amplitude": 32615,
+      "memory_after_idle": {
+        "allocated_bytes": 5502987776,
+        "reserved_bytes": 5723127808,
+        "rss_bytes": 4578430976
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 9,
+      "voice": "voice_04",
+      "text": "你好，现在可以继续语音对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.6539398590102792,
+      "total_s": 0.7117803560104221,
+      "packets": 60,
+      "bytes": 112696,
+      "duration_s": 2.3478333333333334,
+      "pcm_sha256": "784d7ef64ffc18ec039428b0e75587f9a294733bd3692ed83b28f576356d66df",
+      "peak_amplitude": 19640,
+      "memory_after_idle": {
+        "allocated_bytes": 5512845824,
+        "reserved_bytes": 5660213248,
+        "rss_bytes": 4587024384
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 10,
+      "voice": "voice_03",
+      "text": "语音 agent 使用 ASR、LLM 和 TTS 完成回复。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.92303288099356,
+      "total_s": 0.9862452270463109,
+      "packets": 100,
+      "bytes": 189602,
+      "duration_s": 3.9500416666666665,
+      "pcm_sha256": "fe7b7fbcdb6394d4b5192acd2d95ba4a3ce5c25614b4858a8c202002e2db642a",
+      "peak_amplitude": 32768,
+      "memory_after_idle": {
+        "allocated_bytes": 5503731200,
+        "reserved_bytes": 5704253440,
+        "rss_bytes": 4596084736
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 11,
+      "voice": "voice_04",
+      "text": "今天需要完成三项检查：语音、动作，以及上下文。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8188513290369883,
+      "total_s": 0.8821895390283316,
+      "packets": 89,
+      "bytes": 168424,
+      "duration_s": 3.5088333333333335,
+      "pcm_sha256": "d945b856eff10b1266be792f047a2e655fe67e55dabed44fcddb693b35835757",
+      "peak_amplitude": 17718,
+      "memory_after_idle": {
+        "allocated_bytes": 5511862784,
+        "reserved_bytes": 5700059136,
+        "rss_bytes": 4598648832
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 12,
+      "voice": "voice_03",
+      "text": "你好，现在可以继续语音对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.7278562060091645,
+      "total_s": 0.7871444839984179,
+      "packets": 69,
+      "bytes": 129972,
+      "duration_s": 2.70775,
+      "pcm_sha256": "ac44fd02ff99a817d53fc5938580b473d27d10873913a083eec72ab17aba82c8",
+      "peak_amplitude": 29503,
+      "memory_after_idle": {
+        "allocated_bytes": 5503967744,
+        "reserved_bytes": 5679087616,
+        "rss_bytes": 4598767616
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 13,
+      "voice": "voice_04",
+      "text": "语音 agent 使用 ASR、LLM 和 TTS 完成回复。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8149927270133048,
+      "total_s": 0.8782549529569224,
+      "packets": 88,
+      "bytes": 166752,
+      "duration_s": 3.474,
+      "pcm_sha256": "57d50c5106c2cd170c1fd86675182b8fd91c37d9eb5fa64e5695ac63567ab839",
+      "peak_amplitude": 19347,
+      "memory_after_idle": {
+        "allocated_bytes": 5512094208,
+        "reserved_bytes": 5704253440,
+        "rss_bytes": 4600885248
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 14,
+      "voice": "voice_03",
+      "text": "今天需要完成三项检查：语音、动作，以及上下文。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8546964949928224,
+      "total_s": 0.9167685949942097,
+      "packets": 99,
+      "bytes": 187372,
+      "duration_s": 3.903583333333333,
+      "pcm_sha256": "0c27708297b5b3bf23c135492bfe0a81370a44f5f5469c061e1cf15650cce169",
+      "peak_amplitude": 32675,
+      "memory_after_idle": {
+        "allocated_bytes": 5503071744,
+        "reserved_bytes": 5708447744,
+        "rss_bytes": 4611563520
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 15,
+      "voice": "voice_04",
+      "text": "你好，现在可以继续语音对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.6237396209035069,
+      "total_s": 0.6815514490008354,
+      "packets": 58,
+      "bytes": 108796,
+      "duration_s": 2.266583333333333,
+      "pcm_sha256": "ae7b45e2263b5bcbf9bd49775b320ff488d6414162e820a84d5443225d027024",
+      "peak_amplitude": 12919,
+      "memory_after_idle": {
+        "allocated_bytes": 5511534080,
+        "reserved_bytes": 5664407552,
+        "rss_bytes": 4614545408
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 16,
+      "voice": "voice_03",
+      "text": "语音 agent 使用 ASR、LLM 和 TTS 完成回复。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8577155020320788,
+      "total_s": 0.9201048919931054,
+      "packets": 99,
+      "bytes": 187372,
+      "duration_s": 3.903583333333333,
+      "pcm_sha256": "d3665fa74b7d813c7445c630a751a409e2875b6fc8544065768122a0e7699630",
+      "peak_amplitude": 32767,
+      "memory_after_idle": {
+        "allocated_bytes": 5503558144,
+        "reserved_bytes": 5704253440,
+        "rss_bytes": 4614832128
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 17,
+      "voice": "voice_04",
+      "text": "今天需要完成三项检查：语音、动作，以及上下文。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8573337510460988,
+      "total_s": 0.9203146359650418,
+      "packets": 94,
+      "bytes": 177898,
+      "duration_s": 3.7062083333333335,
+      "pcm_sha256": "61f93ee4cebdc64c53596e07639a4cc60cf6d243c568e6eeffae42bc1bf93d57",
+      "peak_amplitude": 12329,
+      "memory_after_idle": {
+        "allocated_bytes": 5511039488,
+        "reserved_bytes": 5718933504,
+        "rss_bytes": 4616097792
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 18,
+      "voice": "voice_03",
+      "text": "你好，现在可以继续语音对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.6472789809340611,
+      "total_s": 0.7056331370258704,
+      "packets": 67,
+      "bytes": 126072,
+      "duration_s": 2.6265,
+      "pcm_sha256": "ca6b38d906c73ee922211247655df3ece559d8de84703d3ccf7aba029424820d",
+      "peak_amplitude": 27042,
+      "memory_after_idle": {
+        "allocated_bytes": 5505094144,
+        "reserved_bytes": 5656018944,
+        "rss_bytes": 4616978432
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 19,
+      "voice": "voice_04",
+      "text": "语音 agent 使用 ASR、LLM 和 TTS 完成回复。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8849522010423243,
+      "total_s": 0.9483590850140899,
+      "packets": 96,
+      "bytes": 181800,
+      "duration_s": 3.7875,
+      "pcm_sha256": "dc17569b7cb27cb65c304f0964018cc786a1627f3c4c5ac1f55431f29f08724a",
+      "peak_amplitude": 13834,
+      "memory_after_idle": {
+        "allocated_bytes": 5511422464,
+        "reserved_bytes": 5723127808,
+        "rss_bytes": 4617039872
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 20,
+      "voice": "voice_03",
+      "text": "今天需要完成三项检查：语音、动作，以及上下文。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.9109860439784825,
+      "total_s": 0.9735636489931494,
+      "packets": 98,
+      "bytes": 185700,
+      "duration_s": 3.86875,
+      "pcm_sha256": "3831d548645276ae14f992075bac165f778427d2d4293a0d520f7e5d37eeb97a",
+      "peak_amplitude": 32282,
+      "memory_after_idle": {
+        "allocated_bytes": 5503476224,
+        "reserved_bytes": 5712642048,
+        "rss_bytes": 4617101312
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 21,
+      "voice": "voice_04",
+      "text": "你好，现在可以继续语音对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.7036940490361303,
+      "total_s": 0.7621086030267179,
+      "packets": 61,
+      "bytes": 114926,
+      "duration_s": 2.3942916666666667,
+      "pcm_sha256": "f82c5920de4ef84610043378adcff524165c1c2e266caa344fdf5c9b768bf788",
+      "peak_amplitude": 14337,
+      "memory_after_idle": {
+        "allocated_bytes": 5512648192,
+        "reserved_bytes": 5668601856,
+        "rss_bytes": 4617142272
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 22,
+      "voice": "voice_03",
+      "text": "语音 agent 使用 ASR、LLM 和 TTS 完成回复。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8916834510164335,
+      "total_s": 0.9535352190723643,
+      "packets": 100,
+      "bytes": 189602,
+      "duration_s": 3.9500416666666665,
+      "pcm_sha256": "5596dae329f6b881671849a471915710525d2ba5bf7fcc654a42598ac1dd21c2",
+      "peak_amplitude": 32768,
+      "memory_after_idle": {
+        "allocated_bytes": 5503520256,
+        "reserved_bytes": 5712642048,
+        "rss_bytes": 4617687040
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 23,
+      "voice": "voice_04",
+      "text": "今天需要完成三项检查：语音、动作，以及上下文。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8562727030366659,
+      "total_s": 0.918987455079332,
+      "packets": 92,
+      "bytes": 173998,
+      "duration_s": 3.6249583333333333,
+      "pcm_sha256": "d88b6a42a6cf0b9617256904f1c0980e703798ca8405b0365c73522d45e45577",
+      "peak_amplitude": 10613,
+      "memory_after_idle": {
+        "allocated_bytes": 5511952896,
+        "reserved_bytes": 5721030656,
+        "rss_bytes": 4617699328
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 24,
+      "voice": "voice_03",
+      "text": "你好，现在可以继续语音对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.6484350370010361,
+      "total_s": 0.7112500329967588,
+      "packets": 64,
+      "bytes": 120498,
+      "duration_s": 2.510375,
+      "pcm_sha256": "2423554f06a0255af2493109a45f1fbefecd01d812a5bb59b975a70626623bc8",
+      "peak_amplitude": 32767,
+      "memory_after_idle": {
+        "allocated_bytes": 5504430592,
+        "reserved_bytes": 5651824640,
+        "rss_bytes": 4617699328
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 25,
+      "voice": "voice_04",
+      "text": "语音 agent 使用 ASR、LLM 和 TTS 完成回复。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8051742810057476,
+      "total_s": 0.8690300390589982,
+      "packets": 92,
+      "bytes": 173998,
+      "duration_s": 3.6249583333333333,
+      "pcm_sha256": "6933ad46e079c32e7ab5f9a7c6ee22d2f853a27fea5c13ea13762d92237727c6",
+      "peak_amplitude": 15255,
+      "memory_after_idle": {
+        "allocated_bytes": 5510169088,
+        "reserved_bytes": 5714739200,
+        "rss_bytes": 4617682944
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 26,
+      "voice": "voice_03",
+      "text": "今天需要完成三项检查：语音、动作，以及上下文。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8510329109849408,
+      "total_s": 0.9140203079441562,
+      "packets": 94,
+      "bytes": 177898,
+      "duration_s": 3.7062083333333335,
+      "pcm_sha256": "580cac48b235d1d04706b08eec423514841ab9940b54a596f54e69cfca1dc006",
+      "peak_amplitude": 32768,
+      "memory_after_idle": {
+        "allocated_bytes": 5503755776,
+        "reserved_bytes": 5708447744,
+        "rss_bytes": 4626419712
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 27,
+      "voice": "voice_04",
+      "text": "你好，现在可以继续语音对话。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.6130387970479205,
+      "total_s": 0.6717816690215841,
+      "packets": 57,
+      "bytes": 105452,
+      "duration_s": 2.1969166666666666,
+      "pcm_sha256": "377c168c6528123f265a8f1c4ac3532421268839ea0e32b02918a76afc692d64",
+      "peak_amplitude": 12721,
+      "memory_after_idle": {
+        "allocated_bytes": 5513744896,
+        "reserved_bytes": 5664407552,
+        "rss_bytes": 4633300992
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 28,
+      "voice": "voice_03",
+      "text": "语音 agent 使用 ASR、LLM 和 TTS 完成回复。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8864391769748181,
+      "total_s": 0.9578647239832208,
+      "packets": 102,
+      "bytes": 193502,
+      "duration_s": 4.031291666666666,
+      "pcm_sha256": "255e3c52fb5d18503d8d62fe9ce20a3e9fd9bc3c0449452f90ae13ae428782f0",
+      "peak_amplitude": 32071,
+      "memory_after_idle": {
+        "allocated_bytes": 5503015936,
+        "reserved_bytes": 5708447744,
+        "rss_bytes": 4633300992
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    },
+    {
+      "index": 29,
+      "voice": "voice_04",
+      "text": "今天需要完成三项检查：语音、动作，以及上下文。",
+      "terminal": {
+        "is_end": 1,
+        "code": 0
+      },
+      "first_pcm_s": 0.8743318639462814,
+      "total_s": 0.9461989169940352,
+      "packets": 98,
+      "bytes": 185700,
+      "duration_s": 3.86875,
+      "pcm_sha256": "40ec0514b81ba04882e28b1f3cd04f950b1cca0010d5bf1b8a0d5fc0f5b53a5e",
+      "peak_amplitude": 17695,
+      "memory_after_idle": {
+        "allocated_bytes": 5511621120,
+        "reserved_bytes": 5718933504,
+        "rss_bytes": 4643651584
+      },
+      "retained_jobs": 1,
+      "alive_jobs": 0
+    }
+  ],
+  "timeouts": [
+    {
+      "label": "before_sequence",
+      "result": {
+        "terminal": {
+          "error": "Synthesis timed out",
+          "code": 504
+        },
+        "first_pcm_s": null,
+        "total_s": 0.05510687502101064,
+        "packets": 0,
+        "bytes": 0,
+        "duration_s": 0.0,
+        "pcm_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_amplitude": 0
+      },
+      "busy_after_504": true,
+      "contender": {
+        "terminal": {
+          "error": "Worker busy",
+          "code": 409
+        },
+        "first_pcm_s": null,
+        "total_s": 0.0003156339516863227,
+        "packets": 0,
+        "bytes": 0,
+        "duration_s": 0.0,
+        "pcm_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_amplitude": 0
+      },
+      "join_wait_s": 1.5313762730220333,
+      "jobs_after_join": 1,
+      "alive_jobs_after_join": 0,
+      "busy_after_join": false,
+      "recovery": {
+        "terminal": {
+          "is_end": 1,
+          "code": 0
+        },
+        "first_pcm_s": 0.6801405189326033,
+        "total_s": 0.738454591948539,
+        "packets": 57,
+        "bytes": 107124,
+        "duration_s": 2.23175,
+        "pcm_sha256": "9d9c87e483fa8b23eeb122bef766605d38bca7d9607d09941952d58020a81f61",
+        "peak_amplitude": 10838
+      },
+      "memory_after_recovery": {
+        "allocated_bytes": 5512267264,
+        "reserved_bytes": 5689573376,
+        "rss_bytes": 4509876224
+      },
+      "passed": true
+    },
+    {
+      "label": "after_sequence",
+      "result": {
+        "terminal": {
+          "error": "Synthesis timed out",
+          "code": 504
+        },
+        "first_pcm_s": null,
+        "total_s": 0.05128218198660761,
+        "packets": 0,
+        "bytes": 0,
+        "duration_s": 0.0,
+        "pcm_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_amplitude": 0
+      },
+      "busy_after_504": true,
+      "contender": {
+        "terminal": {
+          "error": "Worker busy",
+          "code": 409
+        },
+        "first_pcm_s": null,
+        "total_s": 0.0003874730318784714,
+        "packets": 0,
+        "bytes": 0,
+        "duration_s": 0.0,
+        "pcm_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "peak_amplitude": 0
+      },
+      "join_wait_s": 0.9952549710869789,
+      "jobs_after_join": 1,
+      "alive_jobs_after_join": 0,
+      "busy_after_join": false,
+      "recovery": {
+        "terminal": {
+          "is_end": 1,
+          "code": 0
+        },
+        "first_pcm_s": 0.6174807420466095,
+        "total_s": 0.6801072930684313,
+        "packets": 54,
+        "bytes": 101552,
+        "duration_s": 2.115666666666667,
+        "pcm_sha256": "316f8ca183cd5446dcab67b1a9ca96223728d70beda945adc4bc677604998142",
+        "peak_amplitude": 11783
+      },
+      "memory_after_recovery": {
+        "allocated_bytes": 5510977024,
+        "reserved_bytes": 5693767680,
+        "rss_bytes": 4649136128
+      },
+      "passed": true
+    }
+  ],
+  "device": "NVIDIA GeForce RTX 4090",
+  "torch": "2.8.0+cu128",
+  "load_s": 13.364176735049114,
+  "memory_before_sequence": {
+    "allocated_bytes": 5512267264,
+    "reserved_bytes": 5689573376,
+    "rss_bytes": 4509896704
+  },
+  "sequence_elapsed_s": 25.96567451802548,
+  "sequence_peak_allocated_bytes": 5592951808,
+  "sequence_peak_reserved_bytes": 5735710720,
+  "passed": true,
+  "engine_closed": true,
+  "alive_jobs_at_shutdown": 0,
+  "worker_revision": "88620f9cf78c21f59e1e6226ffce31850a1ae311",
+  "reference_revision": "b01840e8e4fd9753743a6d0466cd73ae1d634a68",
+  "controller": {
+    "exit_code": 0,
+    "gpu_free_before_mib": 18801,
+    "gpu_free_after_mib": 18801
+  },
+  "harness_sha256": "b25803721711e138b20e1da013f3c23e1dcb1e581e74696c963a5e80d623fe79",
+  "measurement_notes": [
+    "Same real Engine shared by two loopback service instances, with 0.05 s and default 90 s deadlines; no production configuration change.",
+    "Injected 50 ms deadline validates the timeout cleanup branch, not actual 90-second production timeout behavior.",
+    "All measured RSS includes model, two ASGI services, HTTP/WS test client and growing result dictionary in one process; not standalone worker RSS.",
+    "First/last RSS growth is 118988800 bytes; sequence baseline differs from first completed request. Growth not yet attributed.",
+    "One short 30-request batch, sampling enabled without fixed seed, not long-session stability or perceptual acceptance.",
+    "No generated audio distributed; SHA256 and length only.",
+    "Receiver stops at first JSON terminal; zero PCM before504 does not prove the server never attempted any send after504."
+  ]
+}
