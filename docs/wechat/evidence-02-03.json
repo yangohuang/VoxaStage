@@ -1,0 +1,505 @@
+{
+  "baseline_commit": "dd44878",
+  "repository": "https://github.com/yangohuang/VoxaStage",
+  "verification_scope": "Read-only local source review; no services, network, model inference, or tests executed for these articles.",
+  "count_method": "正文 article 标记内 U+4E00..U+9FFF 汉字，排除图片 Markdown 与图注，含小标题；不含元信息、引用和导航。",
+  "articles": [
+    {
+      "article": "docs/wechat/articles/02-cascade-and-omni.md",
+      "claims": [
+        {
+          "id": "02-01",
+          "claim": "两条语音后端以不同管线接入同一会话及媒体层，对话后端独立于数字人驱动。",
+          "sources": [
+            {
+              "path": "avatar_demo.py",
+              "symbols_or_sections": "websocket_endpoint: dialogue_id 分支与 AvatarSession 初始化"
+            },
+            {
+              "path": "dialogue_backends.py",
+              "symbols_or_sections": "DialogueRegistry"
+            },
+            {
+              "path": "README.md",
+              "symbols_or_sections": "核心设计、系统架构"
+            }
+          ],
+          "evidence_boundary": [
+            "统一入口不表示能力与历史格式相同。",
+            "未对全部后端组合进行本次在线验收。"
+          ]
+        },
+        {
+          "id": "02-02",
+          "claim": "基础识别、文本生成、语音合成、端到端语音和管线设施来自上游；本项目负责适配和编排。",
+          "sources": [
+            {
+              "path": "README.md",
+              "symbols_or_sections": "来源与许可"
+            },
+            {
+              "path": "THIRD_PARTY.md",
+              "symbols_or_sections": "上游归属与分发边界"
+            }
+          ],
+          "evidence_boundary": [
+            "不声称基础模型训练或原创网络设计。",
+            "项目名用于准确归属，不扩大权重或素材授权。"
+          ]
+        },
+        {
+          "id": "02-03",
+          "claim": "级联输入采用VAD分段识别，文本增量生成并经过独立合成适配器。",
+          "sources": [
+            {
+              "path": "services.py",
+              "symbols_or_sections": "LocalASRSTT、LocalQwenLLM、LocalIndexTTS"
+            },
+            {
+              "path": "avatar_demo.py",
+              "symbols_or_sections": "级联 processors 列表"
+            }
+          ],
+          "evidence_boundary": [
+            "阶段边界可观察不代表已完成所有场景的质量验收。",
+            "输入为话轮分段，不称连续流式识别。"
+          ]
+        },
+        {
+          "id": "02-04",
+          "claim": "长语音识别等待最后相关片段完成后发布最终转写，话轮等待参数可配置。",
+          "sources": [
+            {
+              "path": "services.py",
+              "symbols_or_sections": "LocalASRSTT._segment_task_handler"
+            },
+            {
+              "path": "turn_settings.py",
+              "symbols_or_sections": "TurnSettings"
+            }
+          ],
+          "evidence_boundary": [
+            "参数是配置值，不可直接换算为整体延迟。",
+            "讨论停顿取舍属于工程分析，不是实测优劣结论。"
+          ]
+        },
+        {
+          "id": "02-05",
+          "claim": "级联有真实受限工具调度，MiniCPM-o尚未接入同一套工具。",
+          "sources": [
+            {
+              "path": "agent_runtime.py",
+              "symbols_or_sections": "AgentRuntime.stream、_Parser"
+            },
+            {
+              "path": "agent_tools.py",
+              "symbols_or_sections": "ToolRegistry.execute"
+            },
+            {
+              "path": "docs/STREAMING-FUNCTIONS.md",
+              "symbols_or_sections": "工具任务"
+            }
+          ],
+          "evidence_boundary": [
+            "不描述为原生函数调用。",
+            "MiniCPM生成文本不等于已经具备工具调度。"
+          ]
+        },
+        {
+          "id": "02-06",
+          "claim": "MiniCPM-o直接接收VAD收集的语音；语音输入标签不是ASR转写。",
+          "sources": [
+            {
+              "path": "omni_processor.py",
+              "symbols_or_sections": "OmniConversation.audio、begin、respond"
+            },
+            {
+              "path": "avatar_demo.py",
+              "symbols_or_sections": "minicpm processors 分支"
+            }
+          ],
+          "evidence_boundary": [
+            "直接语音路径不保证识别或理解准确。",
+            "应用仍等待话轮边界，不是原生全双工。"
+          ]
+        },
+        {
+          "id": "02-07",
+          "claim": "端到端客户端校验元信息、事件顺序、音频采样数和结束事件；旧轮清理忙时可等待重试。",
+          "sources": [
+            {
+              "path": "omni_backend.py",
+              "symbols_or_sections": "OmniBackend.generate"
+            }
+          ],
+          "evidence_boundary": [
+            "协议检查与模型质量无直接等价关系。",
+            "清理等待有界，不承诺即时接收所有新请求。"
+          ]
+        },
+        {
+          "id": "02-08",
+          "claim": "端到端可选图片或摄像头快照，历史和图片身份有独立约束。",
+          "sources": [
+            {
+              "path": "omni_processor.py",
+              "symbols_or_sections": "VisualContext 绑定与 control"
+            },
+            {
+              "path": "playback_history.py",
+              "symbols_or_sections": "PlaybackHistory.__init__、_trim"
+            },
+            {
+              "path": "docs/STREAMING-FUNCTIONS.md",
+              "symbols_or_sections": "播放确认与保存、本轮边界"
+            }
+          ],
+          "evidence_boundary": [
+            "不是连续视频理解。",
+            "视觉必须在部署中启用；不推断所有环境可用。"
+          ]
+        },
+        {
+          "id": "02-09",
+          "claim": "共同会话层管理轮次、片段、积压、媒体与播放确认，恢复绑定原模型和角色。",
+          "sources": [
+            {
+              "path": "avatar_session.py",
+              "symbols_or_sections": "AvatarSession"
+            },
+            {
+              "path": "avatar_demo.py",
+              "symbols_or_sections": "载入会话时检查 profile_id 与 backend"
+            },
+            {
+              "path": "playback_history.py",
+              "symbols_or_sections": "PlaybackHistory"
+            }
+          ],
+          "evidence_boundary": [
+            "共同PCM消费入口不代表所有后端文本音频对齐精度相同。",
+            "恢复上下文不等于跨后端转换或恢复旧异步任务。"
+          ]
+        },
+        {
+          "id": "02-10",
+          "claim": "端到端在开始说话时中断，安静或缓冲达到限制时提交当前音频。",
+          "sources": [
+            {
+              "path": "omni_processor.py",
+              "symbols_or_sections": "OmniConversation.audio"
+            }
+          ],
+          "evidence_boundary": [
+            "声音触发打断机制不等于语义打断。",
+            "流式输出不等于原生全双工。"
+          ]
+        },
+        {
+          "id": "02-11",
+          "claim": "比较链路需要区分输入、生成、媒体与播放边界，本文未给出实测排名。",
+          "sources": [
+            {
+              "path": "README.md",
+              "symbols_or_sections": "验证与路线"
+            },
+            {
+              "path": "docs/STATUS.md",
+              "symbols_or_sections": "尚未完成与暂缓项"
+            },
+            {
+              "path": "avatar_session.py",
+              "symbols_or_sections": "媒体发送与播放确认分离"
+            }
+          ],
+          "evidence_boundary": [
+            "分阶段采集是文章建议，不声称已新增完整采集实现。",
+            "未运行服务、网络或性能实验；历史结果不作为本文新测量。"
+          ]
+        }
+      ],
+      "body_han_character_count": 2871
+    },
+    {
+      "article": "docs/wechat/articles/03-interruption-and-tools.md",
+      "claims": [
+        {
+          "id": "03-01",
+          "claim": "打断涉及工具、生成、媒体和历史多项状态，停止声音不能代表全部工作结束。",
+          "sources": [
+            {
+              "path": "agent_runtime.py",
+              "symbols_or_sections": "AgentRuntime.cancel、_wait"
+            },
+            {
+              "path": "avatar_session.py",
+              "symbols_or_sections": "AvatarSession.reset"
+            },
+            {
+              "path": "playback_history.py",
+              "symbols_or_sections": "PlaybackHistory.interrupt"
+            }
+          ],
+          "evidence_boundary": [
+            "开头情境明确为说明时序的假设，不是实测经历。",
+            "并发职责不应读成严格串行或固定耗时。"
+          ]
+        },
+        {
+          "id": "03-02",
+          "claim": "四类工具真实执行且限制参数、文档目录、算术语法和结果大小。",
+          "sources": [
+            {
+              "path": "agent_tools.py",
+              "symbols_or_sections": "ToolRegistry、_document、execute、_calculate"
+            },
+            {
+              "path": "services.py",
+              "symbols_or_sections": "LocalQwenLLM._agent_status"
+            }
+          ],
+          "evidence_boundary": [
+            "工具范围为只读或计算。",
+            "没有任意命令、任意路径或任意URL执行。"
+          ]
+        },
+        {
+          "id": "03-03",
+          "claim": "文本工具协议与普通输出分离，明确文档请求有范围受限的预检索规则。",
+          "sources": [
+            {
+              "path": "agent_runtime.py",
+              "symbols_or_sections": "_Parser、_explicit_document_query、AgentRuntime.stream"
+            }
+          ],
+          "evidence_boundary": [
+            "不是所有问题都必然检索。",
+            "工具文本协议不是模型原生函数调用。"
+          ]
+        },
+        {
+          "id": "03-04",
+          "claim": "工具结果被标为外部数据并带回原问题；调度只存在于级联链路。",
+          "sources": [
+            {
+              "path": "agent_runtime.py",
+              "symbols_or_sections": "_prompt、stream 中 UNTRUSTED TOOL RESULT"
+            },
+            {
+              "path": "docs/STREAMING-FUNCTIONS.md",
+              "symbols_or_sections": "工具任务"
+            },
+            {
+              "path": "avatar_demo.py",
+              "symbols_or_sections": "两条 processors 分支"
+            }
+          ],
+          "evidence_boundary": [
+            "不把提示词标记等同于绝对防注入保证。",
+            "MiniCPM-o工具调度尚未完成。"
+          ]
+        },
+        {
+          "id": "03-05",
+          "claim": "默认最多三次工具迭代、单工具八秒、整轮六十秒，并有输出预算及任务生命周期事件。",
+          "sources": [
+            {
+              "path": "agent_runtime.py",
+              "symbols_or_sections": "AgentRuntime.__init__、stream、_event"
+            },
+            {
+              "path": "avatar-web/app.mjs",
+              "symbols_or_sections": "agent_task 处理与 cancelTasks"
+            }
+          ],
+          "evidence_boundary": [
+            "预算是默认配置，不是测得性能。",
+            "工具完成、生成完成和播放结束是不同状态。"
+          ]
+        },
+        {
+          "id": "03-06",
+          "claim": "取消后仍可能收到旧结果；运行时在执行前与返回后核验有效性，不等待拒绝取消的操作作为新轮前提。",
+          "sources": [
+            {
+              "path": "agent_runtime.py",
+              "symbols_or_sections": "_wait、_current、cancel、stream finally"
+            },
+            {
+              "path": "test_agent_runtime.py",
+              "symbols_or_sections": "test_cancel_after_running_event_does_not_start_the_tool、test_cancel_ignores_late_result_from_cancellation_resistant_tool、test_timeout_ignores_late_result_even_if_tool_suppresses_cancellation"
+            }
+          ],
+          "evidence_boundary": [
+            "本次只阅读受控测试，未声称重新运行通过。",
+            "取消请求不保证下游推理已瞬时停止。",
+            "对只读工具的隔离不能推广成外部副作用回滚。"
+          ]
+        },
+        {
+          "id": "03-07",
+          "claim": "会话在发送锁内切换generation并清理队列，浏览器和异步解码再次过滤旧轮媒体。",
+          "sources": [
+            {
+              "path": "avatar_session.py",
+              "symbols_or_sections": "AvatarSession.send、reset"
+            },
+            {
+              "path": "avatar-web/audio.mjs",
+              "symbols_or_sections": "stop、reset、decode2D、flushDecoded"
+            },
+            {
+              "path": "avatar-web/timeline.mjs",
+              "symbols_or_sections": "reset、accepts"
+            },
+            {
+              "path": "avatar-web/app.mjs",
+              "symbols_or_sections": "reset 分支与 showIdle"
+            }
+          ],
+          "evidence_boundary": [
+            "双端轮次检查解决输出归属，不保证零延迟或所有资源已经释放。",
+            "图示按责任分组，不声称固定执行顺序。"
+          ]
+        },
+        {
+          "id": "03-08",
+          "claim": "文字与TTS帧携带轮次，延迟旧结束/中断事件不能误作用于新回答。",
+          "sources": [
+            {
+              "path": "services.py",
+              "symbols_or_sections": "LocalQwenLLM.process_frame、LocalIndexTTS.on_turn_context_created、push_frame"
+            },
+            {
+              "path": "avatar_session.py",
+              "symbols_or_sections": "AvatarText、AvatarOutput.process_frame"
+            }
+          ],
+          "evidence_boundary": [
+            "描述固定版本的状态防护，不外推所有第三方实现。"
+          ]
+        },
+        {
+          "id": "03-09",
+          "claim": "历史只接纳已发送上界内、单调且连续确认的完整文本段；后段不能越过前段缺口。",
+          "sources": [
+            {
+              "path": "playback_history.py",
+              "symbols_or_sections": "delivered、mark、acknowledge、_heard、_complete_if_heard"
+            },
+            {
+              "path": "test_playback_history.py",
+              "symbols_or_sections": "test_partial_clip_commits_only_completed_phrase、test_future_clip_cannot_skip_unheard_earlier_audio"
+            },
+            {
+              "path": "avatar_session.py",
+              "symbols_or_sections": "playback_progress、mark_text"
+            }
+          ],
+          "evidence_boundary": [
+            "不是逐词确认，不按播放时长比例猜测字符。",
+            "部分听到的当前段可能被保守舍弃。"
+          ]
+        },
+        {
+          "id": "03-10",
+          "claim": "浏览器仅在当前音频自然结束时报告进度，打断不会把强制停止冒充正常播放。",
+          "sources": [
+            {
+              "path": "avatar-web/audio.mjs",
+              "symbols_or_sections": "stop、tick 中 source.onended"
+            },
+            {
+              "path": "avatar-web/app.mjs",
+              "symbols_or_sections": "onProgress"
+            }
+          ],
+          "evidence_boundary": [
+            "软件回执不是用户实际听觉、注意力或理解的证明。",
+            "A/B/C是抽象示意，不是实际采样实验。"
+          ]
+        },
+        {
+          "id": "03-11",
+          "claim": "展示记录可保留生成全文，模型历史保留确认部分和中断标记；快照保守但不终止活跃轮次。",
+          "sources": [
+            {
+              "path": "playback_history.py",
+              "symbols_or_sections": "_assistant、_pending_transcript、snapshot、transcript"
+            },
+            {
+              "path": "test_playback_history.py",
+              "symbols_or_sections": "test_snapshot_is_conservative_without_ending_live_turn"
+            }
+          ],
+          "evidence_boundary": [
+            "中断标记告知未确认播放，不对用户下一步意图作语义推断。"
+          ]
+        },
+        {
+          "id": "03-12",
+          "claim": "会话恢复绑定原角色与后端；保存具备文件锁、原子写入、版本控制，应用等待后台写入完成以更新版本。",
+          "sources": [
+            {
+              "path": "conversation_store.py",
+              "symbols_or_sections": "ConversationStore._locked、save、原子写入路径"
+            },
+            {
+              "path": "avatar_demo.py",
+              "symbols_or_sections": "websocket_endpoint、persist"
+            }
+          ],
+          "evidence_boundary": [
+            "恢复的是上下文，不恢复取消工具或旧媒体队列。",
+            "这是本地受限会话存储，不是多租户持久任务系统。"
+          ]
+        },
+        {
+          "id": "03-13",
+          "claim": "端到端历史有轮次、音频、图片预算，恢复图片标识隔离于新连接。",
+          "sources": [
+            {
+              "path": "playback_history.py",
+              "symbols_or_sections": "PlaybackHistory.__init__、_trim"
+            },
+            {
+              "path": "docs/STREAMING-FUNCTIONS.md",
+              "symbols_or_sections": "播放确认与保存"
+            }
+          ],
+          "evidence_boundary": [
+            "历史裁剪不等于永久记忆。",
+            "不夸大连续视频能力。"
+          ]
+        },
+        {
+          "id": "03-14",
+          "claim": "VAD新说话、手动按钮、新文字可触发打断；语义意图判断和原生全双工尚未完成。",
+          "sources": [
+            {
+              "path": "omni_processor.py",
+              "symbols_or_sections": "OmniConversation.audio、control"
+            },
+            {
+              "path": "avatar_session.py",
+              "symbols_or_sections": "AvatarInput.process_frame"
+            },
+            {
+              "path": "services.py",
+              "symbols_or_sections": "LocalQwenLLM.process_frame"
+            },
+            {
+              "path": "docs/STATUS.md",
+              "symbols_or_sections": "尚未完成与暂缓项"
+            }
+          ],
+          "evidence_boundary": [
+            "回应词、背景人声等讨论属于后续需求分析。",
+            "未提供真实麦克风、回声或打断延迟的新验收。"
+          ]
+        }
+      ],
+      "body_han_character_count": 3159
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1034" viewBox="0 0 1080 1034">
+<rect width="1080" height="1034" fill="#f4f7fa"/>
+<text x="60" y="42" font-family="Noto Sans CJK SC, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#007e87">VOXASTAGE  /  实时数字人，从模型到交互</text>
+<text x="60" y="100" font-family="Noto Sans CJK SC, sans-serif" font-size="46" dominant-baseline="text-before-edge" fill="#163044">生成过，不等于用户听到过</text>
+<text x="60" y="168" font-family="Noto Sans CJK SC, sans-serif" font-size="30" dominant-baseline="text-before-edge" fill="#476579">以三个语句段 A / B / C 为例</text>
+<rect x="55" y="235" width="970" height="195" rx="20" fill="#ffffff" stroke="#d9e4eb" stroke-width="2"/>
+<rect x="55" y="235" width="8" height="195" rx="20" fill="#007e87" stroke="#007e87" stroke-width="2"/>
+<text x="88" y="259" font-family="Noto Sans CJK SC, sans-serif" font-size="38" dominant-baseline="text-before-edge" fill="#007e87">A / 已自然播完并确认</text>
+<text x="88" y="318" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">模型历史保留完整语句段</text>
+<text x="88" y="366" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">服务端核对已发送的采样数量</text>
+<rect x="55" y="473" width="970" height="195" rx="20" fill="#ffffff" stroke="#d9e4eb" stroke-width="2"/>
+<rect x="55" y="473" width="8" height="195" rx="20" fill="#007e87" stroke="#007e87" stroke-width="2"/>
+<text x="88" y="497" font-family="Noto Sans CJK SC, sans-serif" font-size="38" dominant-baseline="text-before-edge" fill="#007e87">B / 播放中途被打断</text>
+<text x="88" y="556" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">不能把整段当作已经听完</text>
+<text x="88" y="604" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">记录中断；不推断逐词进度</text>
+<rect x="55" y="711" width="970" height="195" rx="20" fill="#ffffff" stroke="#d9e4eb" stroke-width="2"/>
+<rect x="55" y="711" width="8" height="195" rx="20" fill="#007e87" stroke="#007e87" stroke-width="2"/>
+<text x="88" y="735" font-family="Noto Sans CJK SC, sans-serif" font-size="38" dominant-baseline="text-before-edge" fill="#007e87">C / 已生成但尚未播放</text>
+<text x="88" y="794" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">不能当作已向用户解释过</text>
+<text x="88" y="842" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">显示记录与模型历史分开处理</text>
+<text x="60" y="979" font-family="Noto Sans CJK SC, sans-serif" font-size="27" dominant-baseline="text-before-edge" fill="#476579">播放确认是浏览器事件，不证明声音实际被人听见。</text>
+</svg>

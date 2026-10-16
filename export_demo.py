@@ -29,7 +29,8 @@ requirements.in requirements.lock install_demo.sh export_demo.py
 .env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
 AVATAR-PROTOCOL.md AVATAR-MULTIDRIVER-RESULTS.md
 docs/assets/voxastage-architecture.png docs/assets/voxastage-architecture.svg docs/assets/voxastage-overview.svg docs/assets/streaming-agent-preview.png docs/assets/dinet-kanghui.jpg docs/assets/flashhead-idle.png
-docs/assets/streamingtalker-idle.png docs/assets/conversation-preview.png docs/assets/visual-interaction-preview.png'''.split()
+docs/assets/streamingtalker-idle.png docs/assets/conversation-preview.png docs/assets/visual-interaction-preview.png
+docs/wechat/assets/01-cover.png docs/wechat/assets/01-cover.svg docs/wechat/assets/01-layers.png docs/wechat/assets/01-layers.svg docs/wechat/assets/01-lifecycle.png docs/wechat/assets/01-lifecycle.svg docs/wechat/assets/02-cover.png docs/wechat/assets/02-cover.svg docs/wechat/assets/02-paths.png docs/wechat/assets/02-paths.svg docs/wechat/assets/02-tradeoffs.png docs/wechat/assets/02-tradeoffs.svg docs/wechat/assets/03-cancellation.png docs/wechat/assets/03-cancellation.svg docs/wechat/assets/03-cover.png docs/wechat/assets/03-cover.svg docs/wechat/assets/03-playback.png docs/wechat/assets/03-playback.svg'''.split()
 
 
 def export(output):
@@ -37,6 +38,7 @@ def export(output):
     for directory in ('asr-server', 'llm-server', 'avatar-web', 'avatar-server', 'video-server', 'dinet-server', 'omni-server', 'tts-compat', 'docs', 'evaluation'):
         for path in (ROOT / directory).rglob('*'):
             if (path.is_file() and not path.is_symlink() and '__pycache__' not in path.parts
+                    and not path.is_relative_to(ROOT / 'docs/wechat/build')
                     and path.name != 'requirements.local.lock'
                     and (path.suffix in ('.py', '.mjs', '.js', '.html', '.css', '.md', '.txt', '.json', '.patch', '.sh', '.sha256', '.in', '.lock')
                          or path.name in ('LICENSE', 'NOTICE'))):

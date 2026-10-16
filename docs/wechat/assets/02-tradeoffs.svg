@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1034" viewBox="0 0 1080 1034">
+<rect width="1080" height="1034" fill="#f4f7fa"/>
+<text x="60" y="42" font-family="Noto Sans CJK SC, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#007e87">VOXASTAGE  /  实时数字人，从模型到交互</text>
+<text x="60" y="100" font-family="Noto Sans CJK SC, sans-serif" font-size="46" dominant-baseline="text-before-edge" fill="#163044">比较模型前，先统一观察点</text>
+<text x="60" y="168" font-family="Noto Sans CJK SC, sans-serif" font-size="30" dominant-baseline="text-before-edge" fill="#476579">没有脱离实现条件的延迟胜负</text>
+<rect x="55" y="235" width="970" height="195" rx="20" fill="#ffffff" stroke="#d9e4eb" stroke-width="2"/>
+<rect x="55" y="235" width="8" height="195" rx="20" fill="#007e87" stroke="#007e87" stroke-width="2"/>
+<text x="88" y="259" font-family="Noto Sans CJK SC, sans-serif" font-size="38" dominant-baseline="text-before-edge" fill="#007e87">级联：逐环节定位</text>
+<text x="88" y="318" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">转写文本 → 模型消息 → 合成音频</text>
+<text x="88" y="366" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">中间结果明确，也增加跨服务边界</text>
+<rect x="55" y="473" width="970" height="195" rx="20" fill="#ffffff" stroke="#d9e4eb" stroke-width="2"/>
+<rect x="55" y="473" width="8" height="195" rx="20" fill="#007e87" stroke="#007e87" stroke-width="2"/>
+<text x="88" y="497" font-family="Noto Sans CJK SC, sans-serif" font-size="38" dominant-baseline="text-before-edge" fill="#007e87">端到端：检查输入与整体输出</text>
+<text x="88" y="556" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">语音上下文 → 模型 → 输出语音</text>
+<text x="88" y="604" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">减少显式模块，内部错误归因更难</text>
+<rect x="55" y="711" width="970" height="195" rx="20" fill="#ffffff" stroke="#d9e4eb" stroke-width="2"/>
+<rect x="55" y="711" width="8" height="195" rx="20" fill="#007e87" stroke="#007e87" stroke-width="2"/>
+<text x="88" y="735" font-family="Noto Sans CJK SC, sans-serif" font-size="38" dominant-baseline="text-before-edge" fill="#007e87">共同：比较真实用户体验</text>
+<text x="88" y="794" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">质量、首声、打断、恢复与资源</text>
+<text x="88" y="842" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">模型首字不能代替物理首声</text>
+<text x="60" y="979" font-family="Noto Sans CJK SC, sans-serif" font-size="27" dominant-baseline="text-before-edge" fill="#476579">同硬件、同输入、同测量口径，才能解释差异。</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="460" viewBox="0 0 1080 460">
+<rect width="1080" height="460" fill="#f4f7fa"/>
+<rect x="0" y="0" width="1080" height="460" rx="20" fill="#102e42" stroke="#102e42" stroke-width="2"/>
+<rect x="52" y="50" width="95" height="60" rx="20" fill="#0a8f97" stroke="#0a8f97" stroke-width="2"/>
+<text x="74" y="60" font-family="Noto Sans CJK SC, sans-serif" font-size="42" dominant-baseline="text-before-edge" fill="#ffffff">02</text>
+<text x="175" y="67" font-family="Noto Sans CJK SC, sans-serif" font-size="32" dominant-baseline="text-before-edge" fill="#a4d9dc">实时数字人，从模型到交互</text>
+<text x="52" y="173" font-family="Noto Sans CJK SC, sans-serif" font-size="64" dominant-baseline="text-before-edge" fill="#ffffff">两条语音链路，一套系统</text>
+<text x="52" y="280" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#d2e3ec">级联与端到端：接口、调试与边界</text>
+<text x="52" y="386" font-family="Noto Sans CJK SC, sans-serif" font-size="27" dominant-baseline="text-before-edge" fill="#a4d9dc">VoxaStage  /  工程实践系列</text>
+</svg>
