@@ -2,6 +2,7 @@ import contextlib
 import io
 import json
 import os
+import sys
 from pathlib import Path
 import tempfile
 import unittest
@@ -52,7 +53,7 @@ class DemoTests(unittest.TestCase):
         self.assertFalse(json.loads(out.getvalue())['ready'])
     def test_interpreter_keeps_venv_symlink_path(self):
         env=self.root/'.venv/bin';env.mkdir(parents=True)
-        (env/'python').symlink_to('/usr/bin/python3')
+        (env/'python').symlink_to(sys.executable)
         self.assertEqual(demo.choose_python(self.root,None),str(env/'python'))
     def test_relative_resource_directories_use_project_root(self):
         env=demo.resource_environment(self.root,{'NLTK_DATA':'assets/nltk','NUMBA_CACHE_DIR':'cache/numba'})

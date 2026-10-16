@@ -1,0 +1,39 @@
+test_cancellation_persists_aborted_state (test_asr_capture.CaptureTests.test_cancellation_persists_aborted_state) ... ok
+test_checkpoints_preserve_full_report_when_cancelled_before_next_post (test_asr_capture.CaptureTests.test_checkpoints_preserve_full_report_when_cancelled_before_next_post) ... ok
+test_frozen_request_bytes_rotated_order_and_scoring (test_asr_capture.CaptureTests.test_frozen_request_bytes_rotated_order_and_scoring) ... ok
+test_header_whitespace_rejected_before_http (test_asr_capture.CaptureTests.test_header_whitespace_rejected_before_http) ... ok
+test_health_mismatch_prevents_inference (test_asr_capture.CaptureTests.test_health_mismatch_prevents_inference) ... ok
+test_http_failure_keeps_formal_denominator_and_empty_output (test_asr_capture.CaptureTests.test_http_failure_keeps_formal_denominator_and_empty_output) ... ok
+test_manifest_hash_format_and_path_validation (test_asr_capture.CaptureTests.test_manifest_hash_format_and_path_validation) ... ok
+test_observer_denial_prevents_audio_post_and_retains_failed_trial (test_asr_capture.CaptureTests.test_observer_denial_prevents_audio_post_and_retains_failed_trial) ... ok
+test_observer_receives_ordered_actual_trials_and_can_stop_on_error (test_asr_capture.CaptureTests.test_observer_receives_ordered_actual_trials_and_can_stop_on_error) ... ok
+test_real_audio_requires_transcript_and_sources_are_separate (test_asr_capture.CaptureTests.test_real_audio_requires_transcript_and_sources_are_separate) ... ok
+test_reusing_output_and_invalid_context_do_not_send_requests (test_asr_capture.CaptureTests.test_reusing_output_and_invalid_context_do_not_send_requests) ... ok
+test_timeout_and_malformed_reply_are_failures (test_asr_capture.CaptureTests.test_timeout_and_malformed_reply_are_failures) ... ok
+test_all_failed_does_not_report_zero_error (test_asr_scoring.AsrScoringTests.test_all_failed_does_not_report_zero_error) ... ok
+test_cli_reproduces_result_and_refuses_input_overwrite (test_asr_scoring.AsrScoringTests.test_cli_reproduces_result_and_refuses_input_overwrite) ... ok
+test_duplicate_missing_and_mismatched_references_rejected (test_asr_scoring.AsrScoringTests.test_duplicate_missing_and_mismatched_references_rejected) ... ok
+test_empty_recognition_is_deletion_not_failure (test_asr_scoring.AsrScoringTests.test_empty_recognition_is_deletion_not_failure) ... ok
+test_failure_retained_and_incomplete_score_identified (test_asr_scoring.AsrScoringTests.test_failure_retained_and_incomplete_score_identified) ... ok
+test_invalid_records_and_false_review_claim_rejected (test_asr_scoring.AsrScoringTests.test_invalid_records_and_false_review_claim_rejected) ... ok
+test_micro_average_and_separate_human_reference (test_asr_scoring.AsrScoringTests.test_micro_average_and_separate_human_reference) ... ok
+test_normalization_and_mixed_language (test_asr_scoring.AsrScoringTests.test_normalization_and_mixed_language) ... ok
+test_order_does_not_change_aggregates (test_asr_scoring.AsrScoringTests.test_order_does_not_change_aggregates) ... ok
+test_silence_insertions_have_no_cer_denominator (test_asr_scoring.AsrScoringTests.test_silence_insertions_have_no_cer_denominator) ... ok
+test_collapsed_triangle_and_topology_diagnostics (test_geometry_audit.GeometryAuditTests.test_collapsed_triangle_and_topology_diagnostics) ... ok
+test_invalid_geometry_and_clock_are_rejected (test_geometry_audit.GeometryAuditTests.test_invalid_geometry_and_clock_are_rejected) ... ok
+test_known_area_and_stationary_motion (test_geometry_audit.GeometryAuditTests.test_known_area_and_stationary_motion) ... ok
+test_one_frame_has_no_motion_summary (test_geometry_audit.GeometryAuditTests.test_one_frame_has_no_motion_summary) ... ok
+test_translation_peak_and_scale_invariance (test_geometry_audit.GeometryAuditTests.test_translation_peak_and_scale_invariance) ... ok
+test_http_client_checks_capability_before_sending_inputs (test_multimodal.MultimodalTests.test_http_client_checks_capability_before_sending_inputs) ... ok
+test_http_stream_failure_is_counted_and_saved_pcm_is_valid (test_multimodal.MultimodalTests.test_http_stream_failure_is_counted_and_saved_pcm_is_valid) ... ok
+test_input_hashes_and_ablation_do_not_leak_reference_answer (test_multimodal.MultimodalTests.test_input_hashes_and_ablation_do_not_leak_reference_answer) ... ok
+test_manifest_digest_binds_the_same_parsed_snapshot (test_multimodal.MultimodalTests.test_manifest_digest_binds_the_same_parsed_snapshot) ... ok
+test_manifest_rejects_duplicate_cases (test_multimodal.MultimodalTests.test_manifest_rejects_duplicate_cases) ... ok
+test_rotated_order_failure_denominator_and_unrated_semantics (test_multimodal.MultimodalTests.test_rotated_order_failure_denominator_and_unrated_semantics) ... ok
+test_timeout_closes_generator_and_keeps_failure_record (test_multimodal.MultimodalTests.test_timeout_closes_generator_and_keeps_failure_record) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.234s
+
+OK

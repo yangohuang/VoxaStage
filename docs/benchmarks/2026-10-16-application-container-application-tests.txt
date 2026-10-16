@@ -1,0 +1,480 @@
+2026-10-16 12:49:30.128 | INFO     | pipecat:<module>:54 - ᓚᘏᗢ Pipecat 1.10.0 (Python 3.11.17 (main, Oct  6 2026, 02:01:58) [GCC 12.2.0]) ᓚᘏᗢ
+test_cancel_after_running_event_does_not_start_the_tool (test_agent_runtime.RuntimeTests.test_cancel_after_running_event_does_not_start_the_tool) ... ok
+test_cancel_before_explicit_lookup_does_not_invoke_tool_or_model (test_agent_runtime.RuntimeTests.test_cancel_before_explicit_lookup_does_not_invoke_tool_or_model) ... ok
+test_cancel_ignores_late_result_from_cancellation_resistant_tool (test_agent_runtime.RuntimeTests.test_cancel_ignores_late_result_from_cancellation_resistant_tool) ... ok
+test_consumer_cancellation_propagates_and_cancels_tool (test_agent_runtime.RuntimeTests.test_consumer_cancellation_propagates_and_cancels_tool) ... ok
+test_explicit_lookup_cancellation_discards_resistant_late_result (test_agent_runtime.RuntimeTests.test_explicit_lookup_cancellation_discards_resistant_late_result) ... ok
+test_explicit_lookup_checks_negation_before_truncating_question (test_agent_runtime.RuntimeTests.test_explicit_lookup_checks_negation_before_truncating_question) ... ok
+test_explicit_lookup_english_and_empty_result_remain_untrusted (test_agent_runtime.RuntimeTests.test_explicit_lookup_english_and_empty_result_remain_untrusted) ... ok
+test_explicit_project_lookup_consumes_tool_budget (test_agent_runtime.RuntimeTests.test_explicit_project_lookup_consumes_tool_budget) ... ok
+test_explicit_project_lookup_is_narrow_and_honors_disabled_tools (test_agent_runtime.RuntimeTests.test_explicit_project_lookup_is_narrow_and_honors_disabled_tools) ... ok
+test_explicit_project_lookup_runs_before_first_model_answer (test_agent_runtime.RuntimeTests.test_explicit_project_lookup_runs_before_first_model_answer) ... ok
+test_malformed_or_incomplete_tool_payload_never_becomes_speech (test_agent_runtime.RuntimeTests.test_malformed_or_incomplete_tool_payload_never_becomes_speech) ... ok
+test_new_turn_automatically_cancels_old_model_generation (test_agent_runtime.RuntimeTests.test_new_turn_automatically_cancels_old_model_generation) ... ok
+test_original_system_and_question_survive_worker_context_limits (test_agent_runtime.RuntimeTests.test_original_system_and_question_survive_worker_context_limits) ... ok
+test_output_and_wall_time_are_bounded (test_agent_runtime.RuntimeTests.test_output_and_wall_time_are_bounded) ... ok
+test_plain_answer_streams_before_model_finishes (test_agent_runtime.RuntimeTests.test_plain_answer_streams_before_model_finishes) ... ok
+test_retrieved_document_is_returned_as_untrusted_model_input (test_agent_runtime.RuntimeTests.test_retrieved_document_is_returned_as_untrusted_model_input) ... ok
+test_slow_status_timeout_does_not_block_or_poison_next_turn (test_agent_runtime.RuntimeTests.test_slow_status_timeout_does_not_block_or_poison_next_turn) ... ok
+test_split_protocol_executes_real_tool_and_model_receives_result (test_agent_runtime.RuntimeTests.test_split_protocol_executes_real_tool_and_model_receives_result) ... ok
+test_timeout_ignores_late_result_even_if_tool_suppresses_cancellation (test_agent_runtime.RuntimeTests.test_timeout_ignores_late_result_even_if_tool_suppresses_cancellation) ... ok
+test_tool_iterations_are_bounded (test_agent_runtime.RuntimeTests.test_tool_iterations_are_bounded) ... ok
+test_unknown_tool_fails_then_model_can_explain_failure (test_agent_runtime.RuntimeTests.test_unknown_tool_fails_then_model_can_explain_failure) ... ok
+test_calculation_evaluates_numeric_expression (test_agent_tools.ToolTests.test_calculation_evaluates_numeric_expression) ... ok
+test_calculation_rejects_code_and_unbounded_work (test_agent_tools.ToolTests.test_calculation_rejects_code_and_unbounded_work) ... ok
+test_chinese_excerpt_keeps_distant_terms_that_fit_one_window (test_agent_tools.ToolTests.test_chinese_excerpt_keeps_distant_terms_that_fit_one_window) ... ok
+test_chinese_excerpt_matches_exhaustive_window_coverage (test_agent_tools.ToolTests.test_chinese_excerpt_matches_exhaustive_window_coverage) ... ok
+test_chinese_fallback_excerpt_covers_dense_later_evidence (test_agent_tools.ToolTests.test_chinese_fallback_excerpt_covers_dense_later_evidence) ... ok
+test_chinese_fallback_keeps_latin_identifier_whole (test_agent_tools.ToolTests.test_chinese_fallback_keeps_latin_identifier_whole) ... ok
+test_chinese_fallback_requires_two_distinct_bigrams (test_agent_tools.ToolTests.test_chinese_fallback_requires_two_distinct_bigrams) ... ok
+test_exact_match_precedes_chinese_fallback (test_agent_tools.ToolTests.test_exact_match_precedes_chinese_fallback) ... ok
+test_exact_search_retains_document_id_tie_break (test_agent_tools.ToolTests.test_exact_search_retains_document_id_tie_break) ... ok
+test_generic_latin_term_does_not_suppress_chinese_topic_evidence (test_agent_tools.ToolTests.test_generic_latin_term_does_not_suppress_chinese_topic_evidence) ... ok
+test_identifier_fallback_preserves_hyphens_and_underscores (test_agent_tools.ToolTests.test_identifier_fallback_preserves_hyphens_and_underscores) ... ok
+test_mixed_identifier_does_not_match_a_longer_name (test_agent_tools.ToolTests.test_mixed_identifier_does_not_match_a_longer_name) ... ok
+test_mixed_question_preserves_named_models_and_late_evidence (test_agent_tools.ToolTests.test_mixed_question_preserves_named_models_and_late_evidence) ... ok
+test_natural_chinese_question_finds_separated_document_terms (test_agent_tools.ToolTests.test_natural_chinese_question_finds_separated_document_terms) ... ok
+test_rejects_arbitrary_paths_urls_unknown_tools_and_arguments (test_agent_tools.ToolTests.test_rejects_arbitrary_paths_urls_unknown_tools_and_arguments) ... ok
+test_search_and_read_use_real_catalog_documents (test_agent_tools.ToolTests.test_search_and_read_use_real_catalog_documents) ... ok
+test_status_is_injected_and_cancellation_propagates (test_agent_tools.ToolTests.test_status_is_injected_and_cancellation_propagates) ... ok
+test_symlink_cannot_escape_catalog_root (test_agent_tools.ToolTests.test_symlink_cannot_escape_catalog_root) ... ok
+test_unicode_results_are_byte_bounded (test_agent_tools.ToolTests.test_unicode_results_are_byte_bounded) ... ok
+test_opt_in_and_configuration_validation (test_api_backends.APITests.test_opt_in_and_configuration_validation) ... ok
+test_streaming_chat_and_truncated_stream (test_api_backends.APITests.test_streaming_chat_and_truncated_stream) ... ok
+test_transcription_multipart_keeps_source_audio (test_api_backends.APITests.test_transcription_multipart_keeps_source_audio) ... ok
+test_audio_contract_and_silence (test_asr_server.ASRTests.test_audio_contract_and_silence) ... ok
+test_busy_and_recovery_after_inference_error (test_asr_server.ASRTests.test_busy_and_recovery_after_inference_error) ... ok
+test_context_is_bounded_and_passed_without_rewriting_audio (test_asr_server.ASRTests.test_context_is_bounded_and_passed_without_rewriting_audio) ... ok
+test_audio_source_failure_wakes_pending_receive (test_avatar_backend.AvatarBackendTests.test_audio_source_failure_wakes_pending_receive) ... ok
+test_non_finite_mesh_is_rejected_and_connection_closed (test_avatar_backend.AvatarBackendTests.test_non_finite_mesh_is_rejected_and_connection_closed) ... ok
+test_pcm_preserved_including_partial_final_video_frame (test_avatar_backend.AvatarBackendTests.test_pcm_preserved_including_partial_final_video_frame) ... ok
+test_resampling_rounding_does_not_create_an_extra_empty_mesh_frame (test_avatar_backend.AvatarBackendTests.test_resampling_rounding_does_not_create_an_extra_empty_mesh_frame) ... ok
+test_cancelled_save_updates_revision_before_releasing_save_lock (test_avatar_conversations.AvatarConversationRoutesTests.test_cancelled_save_updates_revision_before_releasing_save_lock) ... ok
+test_http_crud_and_profile_metadata (test_avatar_conversations.AvatarConversationRoutesTests.test_http_crud_and_profile_metadata) ... ok
+test_legacy_provider_auto_creates_conversation_and_exclusive_admission (test_avatar_conversations.AvatarConversationRoutesTests.test_legacy_provider_auto_creates_conversation_and_exclusive_admission) ... ok
+test_mesh_route_serves_only_configured_assets (test_avatar_conversations.AvatarConversationRoutesTests.test_mesh_route_serves_only_configured_assets) ... ok
+test_mutations_reject_cross_origin_and_unconfigured_choices (test_avatar_conversations.AvatarConversationRoutesTests.test_mutations_reject_cross_origin_and_unconfigured_choices) ... ok
+test_resume_mismatch_rejected_before_pipeline_and_origin_checked (test_avatar_conversations.AvatarConversationRoutesTests.test_resume_mismatch_rejected_before_pipeline_and_origin_checked) ... ok
+test_websocket_restore_active_delete_and_disconnect_persistence (test_avatar_conversations.AvatarConversationRoutesTests.test_websocket_restore_active_delete_and_disconnect_persistence) ... ok
+test_2d_preserves_original_payload_pcm_and_index (test_avatar_eval_capture.ClipCaptureTests.test_2d_preserves_original_payload_pcm_and_index) ... ok
+test_bad_visuals_fail_without_writing_partial_frame (test_avatar_eval_capture.ClipCaptureTests.test_bad_visuals_fail_without_writing_partial_frame) ... ok
+test_changed_pixels_have_normalized_mean_absolute_delta (test_avatar_eval_capture.ClipCaptureTests.test_changed_pixels_have_normalized_mean_absolute_delta) ... ok
+test_existing_directory_is_never_reused (test_avatar_eval_capture.ClipCaptureTests.test_existing_directory_is_never_reused) ... ok
+test_explicit_failure_sanitizes_error_and_closes_wav (test_avatar_eval_capture.ClipCaptureTests.test_explicit_failure_sanitizes_error_and_closes_wav) ... ok
+test_frame_limit_fails_and_keeps_verified_prefix (test_avatar_eval_capture.ClipCaptureTests.test_frame_limit_fails_and_keeps_verified_prefix) ... ok
+test_input_and_frame_configuration_bounds (test_avatar_eval_capture.ClipCaptureTests.test_input_and_frame_configuration_bounds) ... ok
+test_invalid_mesh_and_metadata_are_rejected (test_avatar_eval_capture.ClipCaptureTests.test_invalid_mesh_and_metadata_are_rejected) ... ok
+test_large_finite_mesh_values_keep_diagnostics_finite (test_avatar_eval_capture.ClipCaptureTests.test_large_finite_mesh_values_keep_diagnostics_finite) ... ok
+test_mesh_preserves_float32_topology_and_displacement (test_avatar_eval_capture.ClipCaptureTests.test_mesh_preserves_float32_topology_and_displacement) ... ok
+test_metadata_and_frame_timing_errors_persist_failed_status (test_avatar_eval_capture.ClipCaptureTests.test_metadata_and_frame_timing_errors_persist_failed_status) ... ok
+test_no_end_and_invalid_pcm_never_pass (test_avatar_eval_capture.ClipCaptureTests.test_no_end_and_invalid_pcm_never_pass) ... ok
+test_single_frame_has_no_adjacent_observations (test_avatar_eval_capture.ClipCaptureTests.test_single_frame_has_no_adjacent_observations) ... ok
+test_truncated_pcm_and_events_after_clip_end_are_failed (test_avatar_eval_capture.ClipCaptureTests.test_truncated_pcm_and_events_after_clip_end_are_failed) ... ok
+test_arrival_and_finish_times_must_be_finite_nonnegative_monotonic (test_avatar_eval_metrics.MediaMeasurementTests.test_arrival_and_finish_times_must_be_finite_nonnegative_monotonic) ... ok
+test_complete_2d_and_legacy_3d_with_short_tail (test_avatar_eval_metrics.MediaMeasurementTests.test_complete_2d_and_legacy_3d_with_short_tail) ... ok
+test_custom_sample_rate_controls_pts_and_duration (test_avatar_eval_metrics.MediaMeasurementTests.test_custom_sample_rate_controls_pts_and_duration) ... ok
+test_finish_without_media_is_never_a_success (test_avatar_eval_metrics.MediaMeasurementTests.test_finish_without_media_is_never_a_success) ... ok
+test_interrupt_measures_only_verified_prefix (test_avatar_eval_metrics.MediaMeasurementTests.test_interrupt_measures_only_verified_prefix) ... ok
+test_metadata_does_not_require_visual_payloads (test_avatar_eval_metrics.MediaMeasurementTests.test_metadata_does_not_require_visual_payloads) ... ok
+test_metadata_must_precede_media_and_occur_once (test_avatar_eval_metrics.MediaMeasurementTests.test_metadata_must_precede_media_and_occur_once) ... ok
+test_pts_tolerance_is_absolute (test_avatar_eval_metrics.MediaMeasurementTests.test_pts_tolerance_is_absolute) ... ok
+test_rejects_events_after_end_and_unknown_types (test_avatar_eval_metrics.MediaMeasurementTests.test_rejects_events_after_end_and_unknown_types) ... ok
+test_rejects_incomplete_or_incorrect_completion (test_avatar_eval_metrics.MediaMeasurementTests.test_rejects_incomplete_or_incorrect_completion) ... ok
+test_rejects_invalid_input_pcm_and_rate (test_avatar_eval_metrics.MediaMeasurementTests.test_rejects_invalid_input_pcm_and_rate) ... ok
+test_rejects_invalid_metadata (test_avatar_eval_metrics.MediaMeasurementTests.test_rejects_invalid_metadata) ... ok
+test_rejects_malformed_and_out_of_order_media (test_avatar_eval_metrics.MediaMeasurementTests.test_rejects_malformed_and_out_of_order_media) ... ok
+test_single_frame_has_no_receive_gap (test_avatar_eval_metrics.MediaMeasurementTests.test_single_frame_has_no_receive_gap) ... ok
+test_failed_only_group_and_single_sample_group (test_avatar_eval_metrics.SummaryTests.test_failed_only_group_and_single_sample_group) ... ok
+test_malformed_measured_rows_are_rejected (test_avatar_eval_metrics.SummaryTests.test_malformed_measured_rows_are_rejected) ... ok
+test_nonmeasured_phases_excluded_and_groups_separated_sorted (test_avatar_eval_metrics.SummaryTests.test_nonmeasured_phases_excluded_and_groups_separated_sorted) ... ok
+test_percentile_interpolates_and_handles_empty_and_single_sample (test_avatar_eval_metrics.SummaryTests.test_percentile_interpolates_and_handles_empty_and_single_sample) ... ok
+test_percentile_rejects_invalid_values (test_avatar_eval_metrics.SummaryTests.test_percentile_rejects_invalid_values) ... ok
+test_summary_counts_failures_without_including_failure_latency (test_avatar_eval_metrics.SummaryTests.test_summary_counts_failures_without_including_failure_latency) ... ok
+test_queued_marker_delivery_ack_and_persistence (test_avatar_playback.PlaybackIntegration.test_queued_marker_delivery_ack_and_persistence) ... ok
+test_serializer_accepts_only_bounded_progress (test_avatar_playback.PlaybackIntegration.test_serializer_accepts_only_bounded_progress) ... ok
+test_stale_text_and_end_never_reach_tts_or_new_history (test_avatar_playback.PlaybackIntegration.test_stale_text_and_end_never_reach_tts_or_new_history) ... ok
+test_backend_failure_is_sanitized (test_avatar_playback_lab.LabTests.test_backend_failure_is_sanitized) ... ok
+test_busy_rejection_and_disconnect_cleanup (test_avatar_playback_lab.LabTests.test_busy_rejection_and_disconnect_cleanup) ... ok
+test_config_never_exposes_local_paths (test_avatar_playback_lab.LabTests.test_config_never_exposes_local_paths) ... ok
+test_fixed_input_completes_and_closes (test_avatar_playback_lab.LabTests.test_fixed_input_completes_and_closes) ... ok
+test_foreign_host_is_rejected_even_with_matching_origin (test_avatar_playback_lab.LabTests.test_foreign_host_is_rejected_even_with_matching_origin) ... ok
+test_invalid_choice_and_cross_origin_are_rejected (test_avatar_playback_lab.LabTests.test_invalid_choice_and_cross_origin_are_rejected) ... ok
+test_timeout_is_terminal_and_closes_backend (test_avatar_playback_lab.LabTests.test_timeout_is_terminal_and_closes_backend) ... ok
+test_distinct_mesh_can_share_predictor (test_avatar_profiles.MeshProfileTests.test_distinct_mesh_can_share_predictor) ... ok
+test_mesh_fields_are_paired_local_and_only_for_streamingtalker (test_avatar_profiles.MeshProfileTests.test_mesh_fields_are_paired_local_and_only_for_streamingtalker) ... ok
+test_same_mesh_or_idle_cannot_masquerade_as_new_character (test_avatar_profiles.MeshProfileTests.test_same_mesh_or_idle_cannot_masquerade_as_new_character) ... ok
+test_deployment_override_supports_a_distinct_same_driver_resource (test_avatar_profiles.ProfileTests.test_deployment_override_supports_a_distinct_same_driver_resource) ... ok
+test_duplicate_driver_resources_need_distinct_endpoints_and_idle_assets (test_avatar_profiles.ProfileTests.test_duplicate_driver_resources_need_distinct_endpoints_and_idle_assets) ... ok
+test_empty_environment_override_preserves_configured_default (test_avatar_profiles.ProfileTests.test_empty_environment_override_preserves_configured_default) ... ok
+test_environment_overrides_default_but_explicit_selection_wins (test_avatar_profiles.ProfileTests.test_environment_overrides_default_but_explicit_selection_wins) ... ok
+test_explicit_profile_is_immutable_and_public_contains_no_endpoint (test_avatar_profiles.ProfileTests.test_explicit_profile_is_immutable_and_public_contains_no_endpoint) ... ok
+test_known_enum_driver_must_exist_in_the_provider_registry (test_avatar_profiles.ProfileTests.test_known_enum_driver_must_exist_in_the_provider_registry) ... ok
+test_missing_config_preserves_legacy_default_choices_and_voices (test_avatar_profiles.ProfileTests.test_missing_config_preserves_legacy_default_choices_and_voices) ... ok
+test_missing_provider_endpoint_is_visible_but_cannot_resolve (test_avatar_profiles.ProfileTests.test_missing_provider_endpoint_is_visible_but_cannot_resolve) ... ok
+test_override_can_configure_a_known_driver_without_a_global_endpoint (test_avatar_profiles.ProfileTests.test_override_can_configure_a_known_driver_without_a_global_endpoint) ... ok
+test_rejects_duplicate_ids_and_unknown_lookup (test_avatar_profiles.ProfileTests.test_rejects_duplicate_ids_and_unknown_lookup) ... ok
+test_rejects_invalid_document_schema_and_defaults (test_avatar_profiles.ProfileTests.test_rejects_invalid_document_schema_and_defaults) ... ok
+test_rejects_invalid_profile_fields_and_unknown_fields (test_avatar_profiles.ProfileTests.test_rejects_invalid_profile_fields_and_unknown_fields) ... ok
+test_rejects_malformed_json_and_excessive_profiles (test_avatar_profiles.ProfileTests.test_rejects_malformed_json_and_excessive_profiles) ... ok
+test_rejects_unsafe_backend_urls (test_avatar_profiles.ProfileTests.test_rejects_unsafe_backend_urls) ... ok
+test_default_compatible_and_public_has_no_urls (test_avatar_providers.ProviderTests.test_default_compatible_and_public_has_no_urls) ... ok
+test_dinet_replaces_mindtalker_and_uses_native_adapter (test_avatar_providers.ProviderTests.test_dinet_replaces_mindtalker_and_uses_native_adapter) ... ok
+test_explicit_2d_config_and_environment_override (test_avatar_providers.ProviderTests.test_explicit_2d_config_and_environment_override) ... ok
+test_unknown_unconfigured_and_bad_addresses_fail_clearly (test_avatar_providers.ProviderTests.test_unknown_unconfigured_and_bad_addresses_fail_clearly) ... ok
+test_voice_and_idle_follow_character (test_avatar_providers.ProviderTests.test_voice_and_idle_follow_character) ... ok
+test_annotation_validation_and_persistence (test_avatar_review.ReviewHTTPTests.test_annotation_validation_and_persistence) ... ok
+test_anonymous_api_and_media (test_avatar_review.ReviewHTTPTests.test_anonymous_api_and_media) ... ok
+test_changed_media_rejected_without_paths (test_avatar_review.ReviewHTTPTests.test_changed_media_rejected_without_paths) ... ok
+test_changed_topology_rejected (test_avatar_review.ReviewHTTPTests.test_changed_topology_rejected) ... ok
+test_host_origin_and_unknown_paths (test_avatar_review.ReviewHTTPTests.test_host_origin_and_unknown_paths) ... ok
+test_oversized_json_and_unknown_annotation_fields (test_avatar_review.ReviewHTTPTests.test_oversized_json_and_unknown_annotation_fields) ... ok
+test_runtime_symlink_cannot_escape_root (test_avatar_review.ReviewHTTPTests.test_runtime_symlink_cannot_escape_root) ... ok
+test_unicode_annotation_survives_restart (test_avatar_review.ReviewHTTPTests.test_unicode_annotation_survives_restart) ... ok
+test_conflicting_key_rejected (test_avatar_review.ReviewLoadTests.test_conflicting_key_rejected) ... ok
+test_decoded_memory_limit (test_avatar_review.ReviewLoadTests.test_decoded_memory_limit) ... ok
+test_index_path_and_clock_rejected (test_avatar_review.ReviewLoadTests.test_index_path_and_clock_rejected) ... ok
+test_invalid_pcm_hash_rejected (test_avatar_review.ReviewLoadTests.test_invalid_pcm_hash_rejected) ... ok
+test_invalid_topology_and_huge_npy_header_rejected (test_avatar_review.ReviewLoadTests.test_invalid_topology_and_huge_npy_header_rejected) ... ok
+test_symlink_frame_rejected (test_avatar_review.ReviewLoadTests.test_symlink_frame_rejected) ... ok
+test_valid_small_capture_and_stable_key (test_avatar_review.ReviewLoadTests.test_valid_small_capture_and_stable_key) ... ok
+test_audio_backlog_is_bounded (test_avatar_session.SessionTests.test_audio_backlog_is_bounded) ... ok
+test_generation_end_does_not_tell_transport_browser_stopped_playing (test_avatar_session.SessionTests.test_generation_end_does_not_tell_transport_browser_stopped_playing) ... ok
+test_long_audio_splits_at_bound_without_loss_and_reset_clears_count (test_avatar_session.SessionTests.test_long_audio_splits_at_bound_without_loss_and_reset_clears_count) ... ok
+test_new_clip_survives_slow_previous_backend_cancellation (test_avatar_session.SessionTests.test_new_clip_survives_slow_previous_backend_cancellation) ... ok
+test_renderer_stall_does_not_accumulate_browser_send_credit (test_avatar_session.SessionTests.test_renderer_stall_does_not_accumulate_browser_send_credit) ... ok
+test_repeated_reset_preserves_all_pending_backend_cleanup (test_avatar_session.SessionTests.test_repeated_reset_preserves_all_pending_backend_cleanup) ... ok
+test_reset_cancels_backend_and_rejects_stale_output (test_avatar_session.SessionTests.test_reset_cancels_backend_and_rejects_stale_output) ... ok
+test_reset_during_pacing_waits_for_backend_cleanup (test_avatar_session.SessionTests.test_reset_during_pacing_waits_for_backend_cleanup) ... ok
+test_serializer_rejects_malformed_or_oversized_input (test_avatar_session.SessionTests.test_serializer_rejects_malformed_or_oversized_input) ... ok
+test_upstream_model_error_resets_media_and_notifies_browser (test_avatar_session.SessionTests.test_upstream_model_error_resets_media_and_notifies_browser) ... ok
+test_malformed_image_and_incomplete_video_rejected (test_avatar_video_backend.VideoTests.test_malformed_image_and_incomplete_video_rejected) ... ok
+test_pcm_and_partial_tail_preserved (test_avatar_video_backend.VideoTests.test_pcm_and_partial_tail_preserved) ... ok
+test_source_failure_wakes_receiver_and_cancels (test_avatar_video_backend.VideoTests.test_source_failure_wakes_receiver_and_cancels) ... ok
+test_asr_diagnostics_preserve_audio_and_empty_transcription (test_backend.BackendTests.test_asr_diagnostics_preserve_audio_and_empty_transcription) ... ok
+test_history_preserves_system_and_latest_turn (test_backend.BackendTests.test_history_preserves_system_and_latest_turn) ... ok
+test_ndjson_stream_and_error (test_backend.BackendTests.test_ndjson_stream_and_error) ... ok
+test_pcm_reassembles_odd_transport_boundaries (test_backend.BackendTests.test_pcm_reassembles_odd_transport_boundaries) ... ok
+test_rejects_truncated_pcm (test_backend.BackendTests.test_rejects_truncated_pcm) ... ok
+test_loads_manifest_relative_to_its_directory (test_benchmark_avatar.ManifestTests.test_loads_manifest_relative_to_its_directory) ... ok
+test_rejects_duplicate_case_and_implicit_review (test_benchmark_avatar.ManifestTests.test_rejects_duplicate_case_and_implicit_review) ... ok
+test_rejects_input_changed_after_manifest_was_created (test_benchmark_avatar.ManifestTests.test_rejects_input_changed_after_manifest_was_created) ... ok
+test_rejects_truncated_wav (test_benchmark_avatar.ManifestTests.test_rejects_truncated_wav) ... ok
+test_external_cancel_waits_for_transport_cleanup (test_benchmark_avatar.RunnerTests.test_external_cancel_waits_for_transport_cleanup) ... ok
+test_failed_run_replaces_old_success_and_keeps_denominator (test_benchmark_avatar.RunnerTests.test_failed_run_replaces_old_success_and_keeps_denominator) ... {"provider": "flashhead", "case_id": "mixed-01", "phase": "measured", "status": "failed"}
+{"provider": "flashhead", "case_id": "mixed-01", "phase": "measured", "status": "failed"}
+ok
+test_interrupt_cleanup_outlives_operation_deadline (test_benchmark_avatar.RunnerTests.test_interrupt_cleanup_outlives_operation_deadline) ... ok
+test_manifest_error_also_invalidates_prior_success (test_benchmark_avatar.RunnerTests.test_manifest_error_also_invalidates_prior_success) ... ok
+test_manifest_hash_uses_the_executed_snapshot (test_benchmark_avatar.RunnerTests.test_manifest_hash_uses_the_executed_snapshot) ... {"provider": "flashhead", "case_id": "mixed-01", "phase": "measured", "status": "failed"}
+ok
+test_serial_phases_cleanup_and_report_scope (test_benchmark_avatar.RunnerTests.test_serial_phases_cleanup_and_report_scope) ... {"provider": "flashhead", "case_id": "mixed-01", "phase": "warmup", "status": "passed"}
+{"provider": "flashhead", "case_id": "mixed-01", "phase": "measured", "status": "passed"}
+{"provider": "flashhead", "case_id": "mixed-01", "phase": "measured", "status": "passed"}
+{"provider": "flashhead", "case_id": "mixed-01", "phase": "interrupt", "status": "passed"}
+{"provider": "flashhead", "case_id": "mixed-01", "phase": "recovery", "status": "passed"}
+ok
+test_timeout_closes_generator (test_benchmark_avatar.RunnerTests.test_timeout_closes_generator) ... {"provider": "flashhead", "case_id": "mixed-01", "phase": "measured", "status": "failed"}
+ok
+test_captures_all_cases_and_preserves_provenance (test_capture_avatar.CaptureRunnerTests.test_captures_all_cases_and_preserves_provenance) ... {"provider": "flashhead", "case_id": "zh-00", "status": "passed"}
+{"provider": "flashhead", "case_id": "zh-01", "status": "passed"}
+{"provider": "flashhead", "case_id": "zh-02", "status": "passed"}
+{"provider": "flashhead", "case_id": "en-00", "status": "passed"}
+{"provider": "flashhead", "case_id": "en-01", "status": "passed"}
+{"provider": "flashhead", "case_id": "en-02", "status": "passed"}
+{"provider": "flashhead", "case_id": "mixed-00", "status": "passed"}
+{"provider": "flashhead", "case_id": "mixed-01", "status": "passed"}
+{"provider": "flashhead", "case_id": "mixed-02", "status": "passed"}
+{"provider": "flashhead", "case_id": "silence-00", "status": "passed"}
+{"provider": "flashhead", "case_id": "silence-01", "status": "passed"}
+{"provider": "flashhead", "case_id": "silence-02", "status": "passed"}
+{"provider": "flashhead", "case_id": "pause-00", "status": "passed"}
+{"provider": "flashhead", "case_id": "pause-01", "status": "passed"}
+{"provider": "flashhead", "case_id": "pause-02", "status": "passed"}
+ok
+test_failure_is_recorded_without_backend_error_text (test_capture_avatar.CaptureRunnerTests.test_failure_is_recorded_without_backend_error_text) ... {"provider": "flashhead", "case_id": "zh-00", "status": "failed"}
+{"provider": "flashhead", "case_id": "zh-01", "status": "failed"}
+{"provider": "flashhead", "case_id": "zh-02", "status": "failed"}
+{"provider": "flashhead", "case_id": "en-00", "status": "failed"}
+{"provider": "flashhead", "case_id": "en-01", "status": "failed"}
+{"provider": "flashhead", "case_id": "en-02", "status": "failed"}
+{"provider": "flashhead", "case_id": "mixed-00", "status": "failed"}
+{"provider": "flashhead", "case_id": "mixed-01", "status": "failed"}
+{"provider": "flashhead", "case_id": "mixed-02", "status": "failed"}
+{"provider": "flashhead", "case_id": "silence-00", "status": "failed"}
+{"provider": "flashhead", "case_id": "silence-01", "status": "failed"}
+{"provider": "flashhead", "case_id": "silence-02", "status": "failed"}
+{"provider": "flashhead", "case_id": "pause-00", "status": "failed"}
+{"provider": "flashhead", "case_id": "pause-01", "status": "failed"}
+{"provider": "flashhead", "case_id": "pause-02", "status": "failed"}
+ok
+test_failed_write_preserves_existing_session (test_conversation_store.ConversationStoreTests.test_failed_write_preserves_existing_session) ... ok
+test_independent_processes_observe_one_shared_count_limit (test_conversation_store.ConversationStoreTests.test_independent_processes_observe_one_shared_count_limit) ... ok
+test_invalid_ids_metadata_and_unbounded_or_unknown_shapes_rejected (test_conversation_store.ConversationStoreTests.test_invalid_ids_metadata_and_unbounded_or_unknown_shapes_rejected) ... ok
+test_invalid_image_timestamp_has_stable_validation_error (test_conversation_store.ConversationStoreTests.test_invalid_image_timestamp_has_stable_validation_error) ... ok
+test_minicpm_audio_image_and_interrupted_turn_roundtrip (test_conversation_store.ConversationStoreTests.test_minicpm_audio_image_and_interrupted_turn_roundtrip) ... ok
+test_minicpm_rejects_bad_base64_and_bad_image_metadata (test_conversation_store.ConversationStoreTests.test_minicpm_rejects_bad_base64_and_bad_image_metadata) ... ok
+test_orphan_write_recovery_and_failed_replace_preserve_committed_file (test_conversation_store.ConversationStoreTests.test_orphan_write_recovery_and_failed_replace_preserve_committed_file) ... ok
+test_reopen_and_new_process_recover_saved_history (test_conversation_store.ConversationStoreTests.test_reopen_and_new_process_recover_saved_history) ... ok
+test_session_total_and_count_limits_leave_previous_state (test_conversation_store.ConversationStoreTests.test_session_total_and_count_limits_leave_previous_state) ... ok
+test_stale_revision_and_parallel_creation_are_consistent (test_conversation_store.ConversationStoreTests.test_stale_revision_and_parallel_creation_are_consistent) ... ok
+test_symlink_paths_and_tampered_records_rejected (test_conversation_store.ConversationStoreTests.test_symlink_paths_and_tampered_records_rejected) ... ok
+test_persistent_endpoints_with_environment_override (test_ctl_config.BackendConfigTests.test_persistent_endpoints_with_environment_override) ... ok
+test_rejects_unrelated_process_environment (test_ctl_config.BackendConfigTests.test_rejects_unrelated_process_environment) ... ok
+test_explicit_missing_env_is_clean_error_without_echo (test_demo.DemoTests.test_explicit_missing_env_is_clean_error_without_echo) ... ok
+test_failed_required_check_never_executes_or_creates_runtime (test_demo.DemoTests.test_failed_required_check_never_executes_or_creates_runtime) ... ok
+test_interpreter_keeps_venv_symlink_path (test_demo.DemoTests.test_interpreter_keeps_venv_symlink_path) ... ok
+test_json_report_and_exit_match_dependency_failure (test_demo.DemoTests.test_json_report_and_exit_match_dependency_failure) ... ok
+test_occupied_port_refuses_start (test_demo.DemoTests.test_occupied_port_refuses_start) ... ok
+test_relative_resource_directories_use_project_root (test_demo.DemoTests.test_relative_resource_directories_use_project_root) ... ok
+test_run_preserves_secrets_in_child_only_and_applies_actual_selection (test_demo.DemoTests.test_run_preserves_secrets_in_child_only_and_applies_actual_selection) ... ok
+test_runtime_never_prints_arbitrary_interpreter_stdout_on_failure (test_demo.DemoTests.test_runtime_never_prints_arbitrary_interpreter_stdout_on_failure) ... ok
+test_runtime_reports_mismatch_and_missing_nltk_without_raw_child_output (test_demo.DemoTests.test_runtime_reports_mismatch_and_missing_nltk_without_raw_child_output) ... ok
+test_api_is_configuration_only_and_does_not_probe_external_endpoints (test_deployment_check.DeploymentTests.test_api_is_configuration_only_and_does_not_probe_external_endpoints) ... ok
+test_bad_or_oversized_environment_has_redacted_errors (test_deployment_check.DeploymentTests.test_bad_or_oversized_environment_has_redacted_errors) ... ok
+test_cascade_checks_only_selected_dependencies_and_missing_idle_warns (test_deployment_check.DeploymentTests.test_cascade_checks_only_selected_dependencies_and_missing_idle_warns) ... ok
+test_deployment_import_uses_only_standard_library (test_deployment_check.DeploymentTests.test_deployment_import_uses_only_standard_library) ... ok
+test_dinet_only_checks_tcp_and_warns_model_unverified (test_deployment_check.DeploymentTests.test_dinet_only_checks_tcp_and_warns_model_unverified) ... ok
+test_environment_precedence_literal_and_no_process_mutation (test_deployment_check.DeploymentTests.test_environment_precedence_literal_and_no_process_mutation) ... ok
+test_flashhead_uses_http_health_and_idle_is_relative_to_root (test_deployment_check.DeploymentTests.test_flashhead_uses_http_health_and_idle_is_relative_to_root) ... ok
+test_health_failures_and_exceptions_never_disclose_service_data (test_deployment_check.DeploymentTests.test_health_failures_and_exceptions_never_disclose_service_data) ... ok
+test_invalid_turn_settings_block_before_probing_without_leaking_input (test_deployment_check.DeploymentTests.test_invalid_turn_settings_block_before_probing_without_leaking_input) ... ok
+test_local_service_bases_are_normalized_for_both_check_and_launch (test_deployment_check.DeploymentTests.test_local_service_bases_are_normalized_for_both_check_and_launch) ... ok
+test_minicpm_is_independent_and_vision_must_be_explicit (test_deployment_check.DeploymentTests.test_minicpm_is_independent_and_vision_must_be_explicit) ... ok
+test_missing_explicit_env_is_error_but_default_is_optional (test_deployment_check.DeploymentTests.test_missing_explicit_env_is_error_but_default_is_optional) ... ok
+test_profile_voice_and_endpoint_override_are_used (test_deployment_check.DeploymentTests.test_profile_voice_and_endpoint_override_are_used) ... ok
+test_selection_errors_are_redacted (test_deployment_check.DeploymentTests.test_selection_errors_are_redacted) ... ok
+test_probe_has_bounded_timeout (test_deployment_check.HTTPProbeTests.test_probe_has_bounded_timeout) ... ok
+test_real_http_probe_rejects_redirect_errors_nonobjects_and_unbounded_bodies (test_deployment_check.HTTPProbeTests.test_real_http_probe_rejects_redirect_errors_nonobjects_and_unbounded_bodies) ... ok
+test_slow_drip_body_cannot_extend_the_probe_deadline (test_deployment_check.HTTPProbeTests.test_slow_drip_body_cannot_extend_the_probe_deadline) ... ok
+test_slow_response_headers_obey_total_deadline_and_leave_no_timer (test_deployment_check.HTTPProbeTests.test_slow_response_headers_obey_total_deadline_and_leave_no_timer) ... ok
+test_default_and_configured_endpoint_remain_server_owned (test_dialogue_backends.DialogueTests.test_default_and_configured_endpoint_remain_server_owned) ... ok
+test_busy_retry_remains_cancelable (test_dinet_backend.DINetBusyRecoveryTests.test_busy_retry_remains_cancelable) ... ok
+test_model_errors_are_not_retried (test_dinet_backend.DINetBusyRecoveryTests.test_model_errors_are_not_retried) ... ok
+test_only_explicit_busy_before_metadata_is_retried (test_dinet_backend.DINetBusyRecoveryTests.test_only_explicit_busy_before_metadata_is_retried) ... ok
+test_bad_size_gap_and_truncated_frame_fail_closed (test_dinet_backend.DINetTests.test_bad_size_gap_and_truncated_frame_fail_closed) ... ok
+test_cancel_closes_and_sends_interrupt (test_dinet_backend.DINetTests.test_cancel_closes_and_sends_interrupt) ... ok
+test_excess_native_frames_reject_sample_rate_mismatch (test_dinet_backend.DINetTests.test_excess_native_frames_reject_sample_rate_mismatch) ... ok
+test_final_input_marked_before_padding_can_produce_frames (test_dinet_backend.DINetTests.test_final_input_marked_before_padding_can_produce_frames) ... ok
+test_native_fragmented_video_tail_and_original_audio (test_dinet_backend.DINetTests.test_native_fragmented_video_tail_and_original_audio) ... ok
+test_native_input_has_only_complete_200ms_blocks_before_final_tail (test_dinet_backend.DINetTests.test_native_input_has_only_complete_200ms_blocks_before_final_tail) ... ok
+test_optional_observer_separates_native_receive_and_encode_without_payloads (test_dinet_backend.DINetTests.test_optional_observer_separates_native_receive_and_encode_without_payloads) ... ok
+test_source_error_does_not_wait_for_native_media (test_dinet_backend.DINetTests.test_source_error_does_not_wait_for_native_media) ... ok
+test_heard_reply_and_bounded_history (test_omni_backend.OmniTests.test_heard_reply_and_bounded_history) ... ok
+test_original_audio_and_text_stream (test_omni_backend.OmniTests.test_original_audio_and_text_stream) ... ok
+test_truncation_and_wrong_sample_count_fail (test_omni_backend.OmniTests.test_truncation_and_wrong_sample_count_fail) ... ok
+test_unheard_reply_is_not_replayed_as_completed (test_omni_backend.OmniTests.test_unheard_reply_is_not_replayed_as_completed) ... ok
+test_voice_is_sent_with_model_request (test_omni_backend.OmniTests.test_voice_is_sent_with_model_request) ... ok
+test_late_result_after_cancel_is_discarded (test_omni_processor.OmniConversationTests.test_late_result_after_cancel_is_discarded) ... 2026-10-16 12:49:35.353 | INFO     | omni_processor:interrupt:30 - OMNI_TURN interrupt generation=0 reason=text
+2026-10-16 12:49:35.353 | INFO     | omni_processor:begin:44 - OMNI_TURN input generation=1 kind=text audio_bytes=0
+2026-10-16 12:49:35.353 | INFO     | omni_processor:interrupt:30 - OMNI_TURN interrupt generation=1 reason=interrupt
+ok
+test_text_turn_commits_only_after_playback (test_omni_processor.OmniConversationTests.test_text_turn_commits_only_after_playback) ... 2026-10-16 12:49:35.354 | INFO     | omni_processor:interrupt:30 - OMNI_TURN interrupt generation=0 reason=text
+2026-10-16 12:49:35.354 | INFO     | omni_processor:begin:44 - OMNI_TURN input generation=1 kind=text audio_bytes=0
+2026-10-16 12:49:35.354 | INFO     | omni_processor:respond:80 - OMNI_TURN first_audio generation=1 seconds=0.000
+2026-10-16 12:49:35.354 | INFO     | omni_processor:respond:92 - OMNI_TURN generated generation=1 samples=480 seconds=0.000
+ok
+test_vad_passes_raw_audio_to_model_without_transcription (test_omni_processor.OmniConversationTests.test_vad_passes_raw_audio_to_model_without_transcription) ... 2026-10-16 12:49:35.355 | INFO     | omni_processor:interrupt:30 - OMNI_TURN interrupt generation=0 reason=speech_started
+2026-10-16 12:49:35.355 | INFO     | omni_processor:begin:44 - OMNI_TURN input generation=1 kind=audio audio_bytes=1281
+2026-10-16 12:49:35.355 | INFO     | omni_processor:respond:80 - OMNI_TURN first_audio generation=1 seconds=0.000
+2026-10-16 12:49:35.355 | INFO     | omni_processor:respond:92 - OMNI_TURN generated generation=1 samples=480 seconds=0.000
+ok
+test_attachment_ack_bind_once_and_reject_stale_session (test_omni_processor.VisualConversationTests.test_attachment_ack_bind_once_and_reject_stale_session) ... 2026-10-16 12:49:35.356 | INFO     | omni_processor:interrupt:30 - OMNI_TURN interrupt generation=0 reason=text
+2026-10-16 12:49:35.356 | INFO     | omni_processor:begin:44 - OMNI_TURN input generation=1 kind=text audio_bytes=0
+2026-10-16 12:49:35.356 | INFO     | omni_processor:respond:80 - OMNI_TURN first_audio generation=1 seconds=0.000
+2026-10-16 12:49:35.356 | INFO     | omni_processor:respond:92 - OMNI_TURN generated generation=1 samples=480 seconds=0.000
+2026-10-16 12:49:35.356 | INFO     | omni_processor:interrupt:30 - OMNI_TURN interrupt generation=1 reason=text
+2026-10-16 12:49:35.356 | INFO     | omni_processor:begin:44 - OMNI_TURN input generation=2 kind=text audio_bytes=0
+2026-10-16 12:49:35.357 | INFO     | omni_processor:respond:80 - OMNI_TURN first_audio generation=2 seconds=0.000
+2026-10-16 12:49:35.357 | INFO     | omni_processor:respond:92 - OMNI_TURN generated generation=2 samples=480 seconds=0.000
+ok
+test_disconnect_during_visual_binding_cannot_restart_inference (test_omni_processor.VisualConversationTests.test_disconnect_during_visual_binding_cannot_restart_inference) ... 2026-10-16 12:49:35.357 | INFO     | omni_processor:begin:44 - OMNI_TURN input generation=0 kind=text audio_bytes=0
+ok
+test_raw_voice_turn_binds_picture_and_close_releases_history (test_omni_processor.VisualConversationTests.test_raw_voice_turn_binds_picture_and_close_releases_history) ... 2026-10-16 12:49:35.358 | INFO     | omni_processor:interrupt:30 - OMNI_TURN interrupt generation=0 reason=speech_started
+2026-10-16 12:49:35.358 | INFO     | omni_processor:begin:44 - OMNI_TURN input generation=1 kind=audio audio_bytes=1281
+2026-10-16 12:49:35.358 | INFO     | omni_processor:respond:80 - OMNI_TURN first_audio generation=1 seconds=0.000
+2026-10-16 12:49:35.358 | INFO     | omni_processor:respond:92 - OMNI_TURN generated generation=1 samples=480 seconds=0.000
+ok
+test_pipecat_branch_bypasses_cascade_and_streams_to_avatar (test_omni_route.OmniRouteTests.test_pipecat_branch_bypasses_cascade_and_streams_to_avatar) ... 2026-10-16 12:49:35.364 | DEBUG    | pipecat.audio.vad.silero:__init__:147 - Loading Silero VAD model...
+/opt/application/lib/python3.11/site-packages/pipecat/audio/vad/silero.py:160: DeprecationWarning: path is deprecated. Use files() instead. Refer to https://importlib-resources.readthedocs.io/en/latest/using.html#migrating-from-legacy for migration advice.
+  with impresources.path(package_path, model_name) as f:
+2026-10-16 12:49:35.394 | DEBUG    | pipecat.audio.vad.silero:__init__:169 - Loaded Silero VAD
+2026-10-16 12:49:35.394 | DEBUG    | pipecat.audio.vad.vad_analyzer:set_params:157 - Setting VAD params to: confidence=0.7 start_secs=0.2 stop_secs=0.7 min_volume=0.6
+2026-10-16 12:49:35.394 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking Pipeline#0::Source -> FastAPIWebsocketInputTransport#0
+2026-10-16 12:49:35.394 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking FastAPIWebsocketInputTransport#0 -> OmniProcessor#0
+2026-10-16 12:49:35.394 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking OmniProcessor#0 -> FastAPIWebsocketOutputTransport#0
+2026-10-16 12:49:35.394 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking FastAPIWebsocketOutputTransport#0 -> Pipeline#0::Sink
+2026-10-16 12:49:35.394 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking PipelineWorker#0::Source -> Pipeline#0
+2026-10-16 12:49:35.394 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking Pipeline#0 -> PipelineWorker#0::Sink
+2026-10-16 12:49:35.394 | DEBUG    | pipecat.workers.runner:add_workers:233 - WorkerRunner 'runner-cb36157c': added worker 'PipelineWorker#0'
+2026-10-16 12:49:35.394 | DEBUG    | pipecat.workers.runner:run:277 - WorkerRunner 'runner-cb36157c': started running
+2026-10-16 12:49:35.394 | DEBUG    | pipecat.workers.runner:_start_worker:461 - WorkerRunner 'runner-cb36157c': starting worker 'PipelineWorker#0'
+2026-10-16 12:49:35.472 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_start:1197 - PipelineWorker#0: Starting. Waiting for StartFrame#0 to reach the end of the pipeline...
+2026-10-16 12:49:35.472 | DEBUG    | pipecat.registry.registry:register:132 - Worker 'PipelineWorker#0' ready (local)
+2026-10-16 12:49:35.472 | DEBUG    | pipecat.workers.runner:_send_registry:513 - WorkerRunner 'runner-cb36157c': broadcasting registry: ['PipelineWorker#0']
+2026-10-16 12:49:35.472 | DEBUG    | pipecat.workers.base_worker:_maybe_activate:1277 - Worker 'PipelineWorker#0': activated
+2026-10-16 12:49:35.472 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_start:1210 - PipelineWorker#0: StartFrame#0 reached the end of the pipeline, pipeline is now ready.
+2026-10-16 12:49:35.473 | INFO     | omni_processor:interrupt:30 - OMNI_TURN interrupt generation=0 reason=text
+2026-10-16 12:49:35.473 | INFO     | omni_processor:begin:44 - OMNI_TURN input generation=1 kind=text audio_bytes=0
+2026-10-16 12:49:35.474 | INFO     | omni_processor:respond:80 - OMNI_TURN first_audio generation=1 seconds=0.000
+2026-10-16 12:49:35.474 | INFO     | omni_processor:respond:92 - OMNI_TURN generated generation=1 samples=960 seconds=0.000
+2026-10-16 12:49:35.475 | DEBUG    | pipecat.pipeline.worker:_cancel:1130 - Cancelling pipeline worker PipelineWorker#0
+2026-10-16 12:49:35.475 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_end:1230 - PipelineWorker#0: Closing. Waiting for CancelFrame#0(reason: None) to reach the end of the pipeline...
+2026-10-16 12:49:35.475 | DEBUG    | pipecat.pipeline.worker:_handle_worker_cancel:1369 - Worker 'PipelineWorker#0': received cancel
+2026-10-16 12:49:35.475 | DEBUG    | pipecat.pipeline.worker:run:867 - Pipeline worker PipelineWorker#0 got cancelled from outside...
+2026-10-16 12:49:35.475 | DEBUG    | pipecat.pipeline.worker:run:880 - Pipeline worker PipelineWorker#0 is finishing...
+ok
+test_ack_before_marker_promotes_when_marker_arrives (test_playback_history.PlaybackHistoryTests.test_ack_before_marker_promotes_when_marker_arrives) ... ok
+test_audio_budget_discards_oldest_turn (test_playback_history.PlaybackHistoryTests.test_audio_budget_discards_oldest_turn) ... ok
+test_audio_user_and_images_preserved_with_raw_audio_label (test_playback_history.PlaybackHistoryTests.test_audio_user_and_images_preserved_with_raw_audio_label) ... ok
+test_finish_cannot_skip_a_queued_mismatching_marker (test_playback_history.PlaybackHistoryTests.test_finish_cannot_skip_a_queued_mismatching_marker) ... ok
+test_finish_needs_all_audio_and_all_generated_text (test_playback_history.PlaybackHistoryTests.test_finish_needs_all_audio_and_all_generated_text) ... ok
+test_finish_waits_for_audio_beyond_last_text_marker (test_playback_history.PlaybackHistoryTests.test_finish_waits_for_audio_beyond_last_text_marker) ... ok
+test_future_clip_cannot_skip_unheard_earlier_audio (test_playback_history.PlaybackHistoryTests.test_future_clip_cannot_skip_unheard_earlier_audio) ... ok
+test_interrupted_long_minicpm_reply_fits_actual_worker_text_limit (test_playback_history.PlaybackHistoryTests.test_interrupted_long_minicpm_reply_fits_actual_worker_text_limit) ... ok
+test_invalid_clip_identifiers_are_ignored (test_playback_history.PlaybackHistoryTests.test_invalid_clip_identifiers_are_ignored) ... ok
+test_invalid_stale_and_repeated_acks_do_not_change_history (test_playback_history.PlaybackHistoryTests.test_invalid_stale_and_repeated_acks_do_not_change_history) ... ok
+test_minicpm_eighth_turn_stays_within_worker_message_limit (test_playback_history.PlaybackHistoryTests.test_minicpm_eighth_turn_stays_within_worker_message_limit) ... ok
+test_missing_earlier_marker_cannot_promote_later_text (test_playback_history.PlaybackHistoryTests.test_missing_earlier_marker_cannot_promote_later_text) ... ok
+test_partial_clip_commits_only_completed_phrase (test_playback_history.PlaybackHistoryTests.test_partial_clip_commits_only_completed_phrase) ... ok
+test_queued_marker_can_precede_actual_pcm_delivery (test_playback_history.PlaybackHistoryTests.test_queued_marker_can_precede_actual_pcm_delivery) ... ok
+test_restore_both_backends (test_playback_history.PlaybackHistoryTests.test_restore_both_backends) ... ok
+test_restored_image_ids_do_not_collide_with_new_browser_session (test_playback_history.PlaybackHistoryTests.test_restored_image_ids_do_not_collide_with_new_browser_session) ... ok
+test_restored_minicpm_context_keeps_six_most_recent_turns (test_playback_history.PlaybackHistoryTests.test_restored_minicpm_context_keeps_six_most_recent_turns) ... ok
+test_snapshot_is_conservative_without_ending_live_turn (test_playback_history.PlaybackHistoryTests.test_snapshot_is_conservative_without_ending_live_turn) ... ok
+test_turn_limit_and_defensive_copies (test_playback_history.PlaybackHistoryTests.test_turn_limit_and_defensive_copies) ... ok
+test_failure_never_publishes_complete_manifest_and_existing_dir_is_untouched (test_prepare_avatar_cases.PreparationTests.test_failure_never_publishes_complete_manifest_and_existing_dir_is_untouched) ... ok
+test_five_categories_and_silence_are_distinct_from_speech (test_prepare_avatar_cases.PreparationTests.test_five_categories_and_silence_are_distinct_from_speech) ... ok
+test_continuous_speech_is_split_before_backend_limit (test_services.ServiceTests.test_continuous_speech_is_split_before_backend_limit) ... ok
+test_empty_tail_completes_and_failure_does_not_poison_next_segment (test_services.ServiceTests.test_empty_tail_completes_and_failure_does_not_poison_next_segment) ... ok
+test_older_segment_waits_for_resumed_speech_and_empty_tail (test_services.ServiceTests.test_older_segment_waits_for_resumed_speech_and_empty_tail) ... ok
+test_partial_segments_wait_for_delayed_final_transcript (test_services.ServiceTests.test_partial_segments_wait_for_delayed_final_transcript) ... ok
+test_asr_turn_without_interruption_advances_session_before_history_begin (test_streaming_services.StreamingServiceTests.test_asr_turn_without_interruption_advances_session_before_history_begin) ... Executing <Task pending name='Task-1575' coro=<StreamingServiceTests.test_asr_turn_without_interruption_advances_session_before_history_begin() running at /opt/app/test_streaming_services.py:182> wait_for=<Future pending cb=[Task.task_wakeup()] created at /usr/local/lib/python3.11/asyncio/base_events.py:428> cb=[_run_until_complete_cb() at /usr/local/lib/python3.11/asyncio/base_events.py:181] created at /usr/local/lib/python3.11/asyncio/runners.py:100> took 0.309 seconds
+ok
+test_avatar_maps_task_generation_and_tracks_only_visible_answer (test_streaming_services.StreamingServiceTests.test_avatar_maps_task_generation_and_tracks_only_visible_answer) ... ok
+test_cancel_agent_without_session_generation_change_stops_old_events (test_streaming_services.StreamingServiceTests.test_cancel_agent_without_session_generation_change_stops_old_events) ... ok
+test_concurrent_context_waits_for_interruption_reset_before_begin (test_streaming_services.StreamingServiceTests.test_concurrent_context_waits_for_interruption_reset_before_begin) ... ok
+test_heard_history_replaces_unconfirmed_aggregator_history (test_streaming_services.StreamingServiceTests.test_heard_history_replaces_unconfirmed_aggregator_history) ... ok
+test_interrupt_and_cancel_frames_discard_old_model_text (test_streaming_services.StreamingServiceTests.test_interrupt_and_cancel_frames_discard_old_model_text) ... ok
+test_late_output_interruption_does_not_cancel_new_context_during_save (test_streaming_services.StreamingServiceTests.test_late_output_interruption_does_not_cancel_new_context_during_save) ... ok
+test_new_user_turn_is_persisted_before_model_request (test_streaming_services.StreamingServiceTests.test_new_user_turn_is_persisted_before_model_request) ... ok
+test_non_avatar_tools_execute_and_only_answer_reaches_tts (test_streaming_services.StreamingServiceTests.test_non_avatar_tools_execute_and_only_answer_reaches_tts) ... ok
+test_plain_text_reaches_tts_before_model_finishes (test_streaming_services.StreamingServiceTests.test_plain_text_reaches_tts_before_model_finishes) ... ok
+test_service_status_removes_urls_paths_errors_and_unknown_fields (test_streaming_services.StreamingServiceTests.test_service_status_removes_urls_paths_errors_and_unknown_fields) ... ok
+test_session_generation_change_discards_tool_completion_and_answer (test_streaming_services.StreamingServiceTests.test_session_generation_change_discards_tool_completion_and_answer) ... ok
+test_status_reader_exception_does_not_leak_private_error (test_streaming_services.StreamingServiceTests.test_status_reader_exception_does_not_leak_private_error) ... ok
+test_avatar_output_discards_old_context_and_accepts_new_context_after_reset (test_streaming_services.TTSGenerationTests.test_avatar_output_discards_old_context_and_accepts_new_context_after_reset) ... ok
+test_evicted_or_unknown_context_is_never_stamped_with_current_generation (test_streaming_services.TTSGenerationTests.test_evicted_or_unknown_context_is_never_stamped_with_current_generation) ... ok
+test_late_backend_error_keeps_its_old_audio_context_generation (test_streaming_services.TTSGenerationTests.test_late_backend_error_keeps_its_old_audio_context_generation) ... ok
+test_old_context_audio_text_and_stop_stay_old_after_new_turn (test_streaming_services.TTSGenerationTests.test_old_context_audio_text_and_stop_stay_old_after_new_turn) ... ok
+test_real_sdk_queue_preserves_generations_for_two_audio_contexts (test_streaming_services.TTSGenerationTests.test_real_sdk_queue_preserves_generations_for_two_audio_contexts) ... 2026-10-16 12:49:36.600 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking Pipeline#2::Source -> LocalIndexTTS#4
+2026-10-16 12:49:36.600 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking LocalIndexTTS#4 -> Capture#0
+2026-10-16 12:49:36.600 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking Capture#0 -> Pipeline#2::Sink
+2026-10-16 12:49:36.600 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking PipelineWorker#1::Source -> Pipeline#2
+2026-10-16 12:49:36.600 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking Pipeline#2 -> PipelineWorker#1::Sink
+2026-10-16 12:49:36.600 | DEBUG    | pipecat.workers.runner:add_workers:233 - WorkerRunner 'runner-c2ff8d29': added worker 'PipelineWorker#1'
+2026-10-16 12:49:36.600 | DEBUG    | pipecat.workers.runner:run:277 - WorkerRunner 'runner-c2ff8d29': started running
+2026-10-16 12:49:36.601 | DEBUG    | pipecat.workers.runner:_start_worker:461 - WorkerRunner 'runner-c2ff8d29': starting worker 'PipelineWorker#1'
+2026-10-16 12:49:36.604 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_start:1197 - PipelineWorker#1: Starting. Waiting for StartFrame#1 to reach the end of the pipeline...
+2026-10-16 12:49:36.606 | DEBUG    | pipecat.registry.registry:register:132 - Worker 'PipelineWorker#1' ready (local)
+2026-10-16 12:49:36.606 | DEBUG    | pipecat.workers.runner:_send_registry:513 - WorkerRunner 'runner-c2ff8d29': broadcasting registry: ['PipelineWorker#1']
+2026-10-16 12:49:36.606 | DEBUG    | pipecat.workers.base_worker:_maybe_activate:1277 - Worker 'PipelineWorker#1': activated
+2026-10-16 12:49:36.607 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_start:1210 - PipelineWorker#1: StartFrame#1 reached the end of the pipeline, pipeline is now ready.
+2026-10-16 12:49:36.607 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_end:1230 - PipelineWorker#1: Closing. Waiting for EndFrame#0(reason: None) to reach the end of the pipeline...
+2026-10-16 12:49:36.608 | DEBUG    | pipecat.services.tts_service:_push_tts_frames:1309 - LocalIndexTTS#4: Generating TTS [第一句。]
+2026-10-16 12:49:36.608 | DEBUG    | pipecat.services.tts_service:_push_tts_frames:1309 - LocalIndexTTS#4: Generating TTS [第二句。]
+2026-10-16 12:49:36.612 | DEBUG    | pipecat.services.tts_service:push_frame:937 - LocalIndexTTS#4 cleaning up TTS context 5e9182da-40e7-4077-bebd-04e7e801739c
+2026-10-16 12:49:36.616 | DEBUG    | pipecat.services.tts_service:push_frame:937 - LocalIndexTTS#4 cleaning up TTS context 16da7bbc-54a8-4f6f-a4b5-dfb85402c1ba
+2026-10-16 12:49:36.617 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_end:1239 - PipelineWorker#1: EndFrame#0(reason: None) reached the end of the pipeline, pipeline is closing.
+2026-10-16 12:49:36.618 | DEBUG    | pipecat.utils.base_object:cleanup:176 - PipelineWorker#1: waiting on event handlers to finish ['on_pipeline_finished']...
+2026-10-16 12:49:36.620 | DEBUG    | pipecat.pipeline.worker:run:880 - Pipeline worker PipelineWorker#1 is finishing...
+2026-10-16 12:49:36.620 | DEBUG    | pipecat.pipeline.worker:run:884 - Pipeline worker PipelineWorker#1 has finished
+2026-10-16 12:49:36.621 | DEBUG    | pipecat.workers.runner:run:320 - WorkerRunner 'runner-c2ff8d29': finished running
+ok
+test_failure_is_saved_without_raw_exception (test_trace_dinet.TraceTests.test_failure_is_saved_without_raw_exception) ... {"index": 0, "phase": "warmup", "status": "failed"}
+{"index": 1, "phase": "measured", "status": "failed"}
+ok
+test_same_pcm_warmup_and_repeats_with_ordered_events (test_trace_dinet.TraceTests.test_same_pcm_warmup_and_repeats_with_ordered_events) ... {"index": 0, "phase": "warmup", "status": "passed"}
+{"index": 1, "phase": "measured", "status": "passed"}
+{"index": 2, "phase": "measured", "status": "passed"}
+ok
+test_two_sentences_have_one_audio_context_and_one_final_stop (test_tts_lifecycle.TTSLifecycleTests.test_two_sentences_have_one_audio_context_and_one_final_stop) ... 2026-10-16 12:49:36.639 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking Pipeline#4::Source -> LocalIndexTTS#5
+2026-10-16 12:49:36.639 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking LocalIndexTTS#5 -> Capture#1
+2026-10-16 12:49:36.639 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking Capture#1 -> Pipeline#4::Sink
+2026-10-16 12:49:36.639 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking PipelineWorker#2::Source -> Pipeline#4
+2026-10-16 12:49:36.639 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking Pipeline#4 -> PipelineWorker#2::Sink
+2026-10-16 12:49:36.639 | DEBUG    | pipecat.workers.runner:add_workers:233 - WorkerRunner 'runner-a941b524': added worker 'PipelineWorker#2'
+2026-10-16 12:49:36.639 | DEBUG    | pipecat.workers.runner:run:277 - WorkerRunner 'runner-a941b524': started running
+2026-10-16 12:49:36.640 | DEBUG    | pipecat.workers.runner:_start_worker:461 - WorkerRunner 'runner-a941b524': starting worker 'PipelineWorker#2'
+2026-10-16 12:49:36.643 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_start:1197 - PipelineWorker#2: Starting. Waiting for StartFrame#2 to reach the end of the pipeline...
+2026-10-16 12:49:36.645 | DEBUG    | pipecat.registry.registry:register:132 - Worker 'PipelineWorker#2' ready (local)
+2026-10-16 12:49:36.645 | DEBUG    | pipecat.workers.runner:_send_registry:513 - WorkerRunner 'runner-a941b524': broadcasting registry: ['PipelineWorker#2']
+2026-10-16 12:49:36.645 | DEBUG    | pipecat.workers.base_worker:_maybe_activate:1277 - Worker 'PipelineWorker#2': activated
+2026-10-16 12:49:36.645 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_start:1210 - PipelineWorker#2: StartFrame#2 reached the end of the pipeline, pipeline is now ready.
+2026-10-16 12:49:36.646 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_end:1230 - PipelineWorker#2: Closing. Waiting for EndFrame#1(reason: None) to reach the end of the pipeline...
+2026-10-16 12:49:36.659 | DEBUG    | pipecat.services.tts_service:_push_tts_frames:1309 - LocalIndexTTS#5: Generating TTS [你好。]
+2026-10-16 12:49:36.659 | DEBUG    | pipecat.services.tts_service:_push_tts_frames:1309 - LocalIndexTTS#5: Generating TTS [再见。]
+2026-10-16 12:49:36.664 | DEBUG    | pipecat.services.tts_service:push_frame:937 - LocalIndexTTS#5 cleaning up TTS context 31a92482-d445-4d88-9f8b-cf87572cc694
+2026-10-16 12:49:36.666 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_end:1239 - PipelineWorker#2: EndFrame#1(reason: None) reached the end of the pipeline, pipeline is closing.
+2026-10-16 12:49:36.666 | DEBUG    | pipecat.utils.base_object:cleanup:176 - PipelineWorker#2: waiting on event handlers to finish ['on_pipeline_finished']...
+2026-10-16 12:49:36.669 | DEBUG    | pipecat.pipeline.worker:run:880 - Pipeline worker PipelineWorker#2 is finishing...
+2026-10-16 12:49:36.669 | DEBUG    | pipecat.pipeline.worker:run:884 - Pipeline worker PipelineWorker#2 has finished
+2026-10-16 12:49:36.670 | DEBUG    | pipecat.workers.runner:run:320 - WorkerRunner 'runner-a941b524': finished running
+ok
+test_explicit_local_voices_resolve_and_load_at_startup (test_tts_resources.ResourceTests.test_explicit_local_voices_resolve_and_load_at_startup) ... ok
+test_no_mapping_preserves_original_fixed_behavior (test_tts_resources.ResourceTests.test_no_mapping_preserves_original_fixed_behavior) ... ok
+test_broadcast_does_not_double_count_vad (test_turns.ObserverTests.test_broadcast_does_not_double_count_vad) ... ok
+test_first_stage_only_and_new_turn_resets (test_turns.ObserverTests.test_first_stage_only_and_new_turn_resets) ... ok
+test_explicit_baseline_can_be_restored (test_turns.SettingsTests.test_explicit_baseline_can_be_restored) ... ok
+test_rejects_invalid_timing_before_startup (test_turns.SettingsTests.test_rejects_invalid_timing_before_startup) ... ok
+test_resume_cancels_deadline_and_waits_for_tail_transcript (test_turns.TurnPolicyTests.test_resume_cancels_deadline_and_waits_for_tail_transcript) ... 2026-10-16 12:49:36.673 | DEBUG    | pipecat.turns.user_stop.speech_timeout_user_turn_stop_strategy:process_frame:163 - LocalTurnStopStrategy#0 VADUserStartedSpeakingFrame received
+2026-10-16 12:49:36.673 | DEBUG    | pipecat.turns.user_stop.speech_timeout_user_turn_stop_strategy:process_frame:166 - LocalTurnStopStrategy#0 VADUserStoppedSpeakingFrame received
+2026-10-16 12:49:36.683 | DEBUG    | pipecat.turns.user_stop.speech_timeout_user_turn_stop_strategy:process_frame:163 - LocalTurnStopStrategy#0 VADUserStartedSpeakingFrame received
+2026-10-16 12:49:36.764 | DEBUG    | pipecat.turns.user_stop.speech_timeout_user_turn_stop_strategy:process_frame:166 - LocalTurnStopStrategy#0 VADUserStoppedSpeakingFrame received
+ok
+test_only_visual_controls_get_large_message_budget (test_visual_context.VisualSerializerTests.test_only_visual_controls_get_large_message_budget) ... ok
+test_history_retains_two_images_and_marks_omission (test_visual_context.VisualTests.test_history_retains_two_images_and_marks_omission) ... ok
+test_session_sequence_and_bad_data_do_not_replace_pending (test_visual_context.VisualTests.test_session_sequence_and_bad_data_do_not_replace_pending) ... ok
+test_snapshot_clear_and_disabled (test_visual_context.VisualTests.test_snapshot_clear_and_disabled) ... ok
+test_confirmed_picture_reaches_model_and_old_picture_is_trimmed (test_visual_route.VisualRouteTests.test_confirmed_picture_reaches_model_and_old_picture_is_trimmed) ... 2026-10-16 12:49:36.854 | DEBUG    | pipecat.audio.vad.silero:__init__:147 - Loading Silero VAD model...
+/opt/application/lib/python3.11/site-packages/pipecat/audio/vad/silero.py:160: DeprecationWarning: path is deprecated. Use files() instead. Refer to https://importlib-resources.readthedocs.io/en/latest/using.html#migrating-from-legacy for migration advice.
+  with impresources.path(package_path, model_name) as f:
+2026-10-16 12:49:36.888 | DEBUG    | pipecat.audio.vad.silero:__init__:169 - Loaded Silero VAD
+2026-10-16 12:49:36.888 | DEBUG    | pipecat.audio.vad.vad_analyzer:set_params:157 - Setting VAD params to: confidence=0.7 start_secs=0.2 stop_secs=0.7 min_volume=0.6
+2026-10-16 12:49:36.888 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking Pipeline#6::Source -> FastAPIWebsocketInputTransport#1
+2026-10-16 12:49:36.888 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking FastAPIWebsocketInputTransport#1 -> OmniProcessor#1
+2026-10-16 12:49:36.888 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking OmniProcessor#1 -> FastAPIWebsocketOutputTransport#1
+2026-10-16 12:49:36.888 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking FastAPIWebsocketOutputTransport#1 -> Pipeline#6::Sink
+2026-10-16 12:49:36.888 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking PipelineWorker#3::Source -> Pipeline#6
+2026-10-16 12:49:36.888 | DEBUG    | pipecat.processors.frame_processor:link:679 - Linking Pipeline#6 -> PipelineWorker#3::Sink
+2026-10-16 12:49:36.888 | DEBUG    | pipecat.workers.runner:add_workers:233 - WorkerRunner 'runner-69b7b558': added worker 'PipelineWorker#3'
+2026-10-16 12:49:36.888 | DEBUG    | pipecat.workers.runner:run:277 - WorkerRunner 'runner-69b7b558': started running
+2026-10-16 12:49:36.888 | DEBUG    | pipecat.workers.runner:_start_worker:461 - WorkerRunner 'runner-69b7b558': starting worker 'PipelineWorker#3'
+2026-10-16 12:49:36.889 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_start:1197 - PipelineWorker#3: Starting. Waiting for StartFrame#3 to reach the end of the pipeline...
+2026-10-16 12:49:36.890 | DEBUG    | pipecat.registry.registry:register:132 - Worker 'PipelineWorker#3' ready (local)
+2026-10-16 12:49:36.890 | DEBUG    | pipecat.workers.runner:_send_registry:513 - WorkerRunner 'runner-69b7b558': broadcasting registry: ['PipelineWorker#3']
+2026-10-16 12:49:36.890 | DEBUG    | pipecat.workers.base_worker:_maybe_activate:1277 - Worker 'PipelineWorker#3': activated
+2026-10-16 12:49:36.890 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_start:1210 - PipelineWorker#3: StartFrame#3 reached the end of the pipeline, pipeline is now ready.
+2026-10-16 12:49:36.891 | INFO     | omni_processor:interrupt:30 - OMNI_TURN interrupt generation=0 reason=text
+2026-10-16 12:49:36.892 | INFO     | omni_processor:begin:44 - OMNI_TURN input generation=1 kind=text audio_bytes=0
+2026-10-16 12:49:36.893 | INFO     | omni_processor:respond:80 - OMNI_TURN first_audio generation=1 seconds=0.000
+2026-10-16 12:49:36.893 | INFO     | omni_processor:respond:92 - OMNI_TURN generated generation=1 samples=960 seconds=0.001
+2026-10-16 12:49:36.895 | INFO     | omni_processor:interrupt:30 - OMNI_TURN interrupt generation=1 reason=text
+2026-10-16 12:49:36.896 | INFO     | omni_processor:begin:44 - OMNI_TURN input generation=2 kind=text audio_bytes=0
+2026-10-16 12:49:36.897 | INFO     | omni_processor:respond:80 - OMNI_TURN first_audio generation=2 seconds=0.000
+2026-10-16 12:49:36.897 | INFO     | omni_processor:respond:92 - OMNI_TURN generated generation=2 samples=960 seconds=0.000
+2026-10-16 12:49:36.898 | INFO     | omni_processor:interrupt:30 - OMNI_TURN interrupt generation=2 reason=text
+2026-10-16 12:49:36.899 | INFO     | omni_processor:begin:44 - OMNI_TURN input generation=3 kind=text audio_bytes=0
+2026-10-16 12:49:36.900 | INFO     | omni_processor:respond:80 - OMNI_TURN first_audio generation=3 seconds=0.000
+2026-10-16 12:49:36.900 | INFO     | omni_processor:respond:92 - OMNI_TURN generated generation=3 samples=960 seconds=0.000
+2026-10-16 12:49:36.901 | DEBUG    | pipecat.pipeline.worker:_cancel:1130 - Cancelling pipeline worker PipelineWorker#3
+2026-10-16 12:49:36.901 | DEBUG    | pipecat.pipeline.worker:_wait_for_pipeline_end:1230 - PipelineWorker#3: Closing. Waiting for CancelFrame#2(reason: None) to reach the end of the pipeline...
+2026-10-16 12:49:36.901 | DEBUG    | pipecat.pipeline.worker:_handle_worker_cancel:1369 - Worker 'PipelineWorker#3': received cancel
+2026-10-16 12:49:36.901 | DEBUG    | pipecat.pipeline.worker:run:867 - Pipeline worker PipelineWorker#3 got cancelled from outside...
+2026-10-16 12:49:36.901 | DEBUG    | pipecat.pipeline.worker:run:880 - Pipeline worker PipelineWorker#3 is finishing...
+ok
+test_both_character_voices_reach_tts_without_global_override (test_voice_matching.VoiceMatchingTests.test_both_character_voices_reach_tts_without_global_override) ... ok
+
+----------------------------------------------------------------------
+Ran 292 tests in 6.536s
+
+OK

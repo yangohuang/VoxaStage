@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "application_distributions": 100,
+  "bootstrap_distributions": 1,
+  "source_files": 508,
+  "source_archive_sha256": "9d5b3b9347c2665c6c1e97e6c8fad8d73437e1aeb6b369bde1219d69e6d0ca6d",
+  "source_manifest_sha256": "6521676b5508b8a518cfb988531114884489dc2a20c1e44e889b35dc8c1eb2fb",
+  "build_inputs_sha256": {
+    "Dockerfile": "2ef8b8d88d0757f370e84d27fce043d68ae93c92cbfe5715a4bc6acecc974ba5",
+    "requirements.container.lock": "2dde119b529be17a2167d61ba04b842091c7ef310cd0b41783e6de0e68d36a86",
+    "build-bootstrap.lock": "6ab91624ebf7586929471d12fab8099dd2d74d97987e86d1f457a34094cc7620",
+    "punkt_tab.zip": "e57f64187974277726a3417ca6f181ec5403676c717672eef6a748a7b20e0106"
+  },
+  "started_at": 1792154967.4975224,
+  "tag": "voxastage-app-isolated:20261016-v3",
+  "build_pid": 3155050,
+  "exit_code": 0,
+  "image_id": "sha256:c5892ec958ab8f20f3718934b58b4d408372bd4a813921c9b4a4f7c5d463bd70",
+  "elapsed_s": 1.5906450748443604,
+  "initial_dependency_build": {
+    "status": "complete",
+    "application_distributions": 100,
+    "bootstrap_distributions": 1,
+    "source_files": 508,
+    "source_archive_sha256": "b84b5de0ab9003b69c6e56861e1b8dab58b4a36ee48930b132ccb88056221875",
+    "source_manifest_sha256": "48fa0b15b85abc3c631659de90444db9ad2b3cb03f7c4ff7a2c0de7999af4b03",
+    "build_inputs_sha256": {
+      "Dockerfile": "2ced29905bc7af2d80e40c0bb679df81e50d4f091ba376ddaefa19a8d60b32a4",
+      "requirements.container.lock": "2dde119b529be17a2167d61ba04b842091c7ef310cd0b41783e6de0e68d36a86",
+      "build-bootstrap.lock": "6ab91624ebf7586929471d12fab8099dd2d74d97987e86d1f457a34094cc7620",
+      "punkt_tab.zip": "e57f64187974277726a3417ca6f181ec5403676c717672eef6a748a7b20e0106"
+    },
+    "started_at": 1792154778.1318476,
+    "tag": "voxastage-app-isolated:20261016",
+    "build_pid": 3150479,
+    "exit_code": 0,
+    "image_id": "sha256:b0eb837877819c368ddb579ff13325c041066461196baf3c09da9f8ab5752ba5",
+    "elapsed_s": 44.39069437980652
+  },
+  "docopt_built_wheel": {
+    "filename": "docopt-0.6.2-py2.py3-none-any.whl",
+    "bytes": 13781,
+    "sha256": "e29fbf1133901824b02d1552fb53f4c2a83d15a49a1c092559c2b85e5aa29972",
+    "origin": "Locally built from verified official sdist; not an official wheel or a bitwise reproducibility guarantee"
+  },
+  "logs_sha256": {
+    "build.log": "5260f51baf691cffbfee0804e62acaac12b2fdfd660dddb0334cf008b7d1bf2f",
+    "build-v2.log": "2a832def218e2cb0707584c3fd25eb3668275dd27069139c506639c3a49c121f",
+    "build-v3.log": "e6c1621d8d08999033b930ef9a675471d0eb40568f3965f921f92f50faa5440a"
+  }
+}

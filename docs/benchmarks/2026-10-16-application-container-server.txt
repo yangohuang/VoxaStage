@@ -1,0 +1,16 @@
+2026-10-16 12:49:37.615 | INFO     | pipecat:<module>:54 - ᓚᘏᗢ Pipecat 1.10.0 (Python 3.11.17 (main, Oct  6 2026, 02:01:58) [GCC 12.2.0]) ᓚᘏᗢ
+2026-10-16 12:49:37.970 | DEBUG    | pipecat.transports.smallwebrtc.connection:<module>:67 - [SCTP] USERDATA_MAX_LENGTH set to 1100
+INFO:     Started server process [367]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on socket ('127.0.0.1', 39129) (Press CTRL+C to quit)
+INFO:     127.0.0.1:32972 - "GET /avatar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32986 - "GET /avatar/static/app.mjs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32998 - "GET /avatar/static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33014 - "GET /avatar/static/visual.mjs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33020 - "GET /avatar/providers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33026 - "GET /health HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [367]

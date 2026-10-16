@@ -1,0 +1,515 @@
+{
+  "status": "passed",
+  "scope": "Application container installation, regressions and no-model HTTP startup; not model inference.",
+  "checks": [
+    {
+      "name": "pip-check",
+      "exit_code": 0,
+      "elapsed_s": 0.36499849997926503,
+      "log_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "name": "system-libraries",
+      "exit_code": 0,
+      "elapsed_s": 0.003941294038668275,
+      "log_sha256": "7c7cbb431d90f8126485b0326ee29ed3dc12232bf357a4eebc02bffdf27dc451"
+    },
+    {
+      "name": "application-tests",
+      "exit_code": 0,
+      "elapsed_s": 7.179839499061927,
+      "log_sha256": "3bcf60d668c07af66798b69410cbd19e948524b86b89a6a7a47d4279e2700a66",
+      "tests": 292
+    },
+    {
+      "name": "evaluation-tests",
+      "exit_code": 0,
+      "elapsed_s": 0.4648669350426644,
+      "log_sha256": "f6b4779799622b8620a911439ef828f747d7f42b2bfe39b2422b5eb341c6bb37",
+      "tests": 34
+    }
+  ],
+  "source_before": {
+    "files": 508,
+    "manifest_sha256": "6521676b5508b8a518cfb988531114884489dc2a20c1e44e889b35dc8c1eb2fb"
+  },
+  "environment": {
+    "python": "3.11.17 (main, Oct  6 2026, 02:01:58) [GCC 12.2.0]",
+    "uid": 65532,
+    "packages": {
+      "agent-detector": {
+        "version": "2.0.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "aiofiles": {
+        "version": "25.1.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "aiohappyeyeballs": {
+        "version": "2.7.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "aiohttp": {
+        "version": "3.14.3",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "aioice": {
+        "version": "0.10.2",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "aiortc": {
+        "version": "1.15.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "aiosignal": {
+        "version": "1.4.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "annotated-doc": {
+        "version": "0.0.5",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "annotated-types": {
+        "version": "0.8.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "anyio": {
+        "version": "4.15.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "attrs": {
+        "version": "26.1.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "av": {
+        "version": "17.1.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "certifi": {
+        "version": "2026.7.22",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "cffi": {
+        "version": "2.1.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "click": {
+        "version": "8.5.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "cloudpickle": {
+        "version": "3.1.2",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "cryptography": {
+        "version": "50.0.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "defusedxml": {
+        "version": "0.7.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "detect-installer": {
+        "version": "0.2.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "dnspython": {
+        "version": "2.8.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "docopt": {
+        "version": "0.6.2",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "docstring-parser": {
+        "version": "0.18.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "email-validator": {
+        "version": "2.3.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "fastapi": {
+        "version": "0.141.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "fastapi-cli": {
+        "version": "0.0.32",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "fastapi-cloud-cli": {
+        "version": "0.26.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "fastar": {
+        "version": "0.12.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "flatbuffers": {
+        "version": "25.12.19",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "frozenlist": {
+        "version": "1.8.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "google-crc32c": {
+        "version": "1.8.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "h11": {
+        "version": "0.16.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "httpcore": {
+        "version": "1.0.9",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "httpcore2": {
+        "version": "2.13.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "httptools": {
+        "version": "0.8.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "httpx": {
+        "version": "0.28.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "httpx2": {
+        "version": "2.13.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "idna": {
+        "version": "3.19",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "ifaddr": {
+        "version": "0.2.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "itsdangerous": {
+        "version": "2.2.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "jinja2": {
+        "version": "3.1.6",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "jiter": {
+        "version": "0.17.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "joblib": {
+        "version": "1.6.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "llvmlite": {
+        "version": "0.49.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "loguru": {
+        "version": "0.7.3",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "loudness": {
+        "version": "0.2.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "markdown": {
+        "version": "3.10.3",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "markdown-it-py": {
+        "version": "4.2.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "markupsafe": {
+        "version": "3.0.3",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "mdurl": {
+        "version": "0.1.2",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "mpmath": {
+        "version": "1.3.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "multidict": {
+        "version": "6.8.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "nltk": {
+        "version": "3.10.3",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "num2words": {
+        "version": "0.5.14",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "numba": {
+        "version": "0.67.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "numpy": {
+        "version": "2.4.6",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "onnxruntime": {
+        "version": "1.24.4",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "openai": {
+        "version": "3.14.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "opencv-python-headless": {
+        "version": "4.14.0.94",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "packaging": {
+        "version": "26.3",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pillow": {
+        "version": "12.3.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pipecat-ai": {
+        "version": "1.10.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pipecat-ai-prebuilt": {
+        "version": "1.1.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "propcache": {
+        "version": "0.5.4",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "protobuf": {
+        "version": "6.33.6",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pycparser": {
+        "version": "3.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pydantic": {
+        "version": "2.13.5",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pydantic-core": {
+        "version": "2.46.5",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pydantic-extra-types": {
+        "version": "2.11.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pydantic-settings": {
+        "version": "2.15.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pyee": {
+        "version": "13.0.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pygments": {
+        "version": "2.21.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pylibsrtp": {
+        "version": "1.0.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pyopenssl": {
+        "version": "26.4.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "python-dotenv": {
+        "version": "1.2.3",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "python-multipart": {
+        "version": "0.0.32",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "pyyaml": {
+        "version": "6.0.3",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "regex": {
+        "version": "2026.9.10",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "resampy": {
+        "version": "0.4.3",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "rich": {
+        "version": "15.0.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "rich-toolkit": {
+        "version": "0.20.5",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "rignore": {
+        "version": "0.8.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "sentry-sdk": {
+        "version": "2.69.2",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "shellingham": {
+        "version": "1.5.4",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "sniffio": {
+        "version": "1.3.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "soundfile": {
+        "version": "0.13.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "soxr": {
+        "version": "1.0.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "starlette": {
+        "version": "1.6.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "sympy": {
+        "version": "1.14.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "tqdm": {
+        "version": "4.70.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "truststore": {
+        "version": "0.10.4",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "typer": {
+        "version": "0.27.2",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "typing-extensions": {
+        "version": "4.16.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "typing-inspection": {
+        "version": "0.4.4",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "urllib3": {
+        "version": "2.8.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "uvicorn": {
+        "version": "0.53.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "uvloop": {
+        "version": "0.22.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "wait-for2": {
+        "version": "0.4.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "watchfiles": {
+        "version": "1.2.0",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "websockets": {
+        "version": "17.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      },
+      "yarl": {
+        "version": "1.25.1",
+        "location": "/opt/application/lib/python3.11/site-packages"
+      }
+    },
+    "nltk_resource": "/opt/application/nltk_data/tokenizers/punkt_tab/english",
+    "silero_constructed": true,
+    "bootstrap_setuptools": "81.0.0",
+    "source_lock_sha256": "09a98590ab267b0d8a6eab355105b3ff90e6cc1922db24c8144c66448c586eb1"
+  },
+  "startup": {
+    "routes": [
+      {
+        "route": "/avatar",
+        "status": 200
+      },
+      {
+        "route": "/avatar/static/app.mjs",
+        "status": 200,
+        "bytes": 23979
+      },
+      {
+        "route": "/avatar/static/style.css",
+        "status": 200,
+        "bytes": 8150
+      },
+      {
+        "route": "/avatar/static/visual.mjs",
+        "status": 200,
+        "bytes": 6815
+      },
+      {
+        "route": "/avatar/providers",
+        "status": 200,
+        "bytes": 1609
+      },
+      {
+        "route": "/health",
+        "status": 200,
+        "bytes": 589
+      }
+    ],
+    "models_configured": false,
+    "model_inference_tested": false
+  },
+  "source_after": {
+    "files": 508,
+    "manifest_sha256": "6521676b5508b8a518cfb988531114884489dc2a20c1e44e889b35dc8c1eb2fb"
+  },
+  "server_exit_code": -15,
+  "shutdown": {
+    "sigterm_requested": true,
+    "kill_used": false,
+    "graceful_shutdown_logged": true
+  },
+  "container": {
+    "status": "complete",
+    "image_id": "sha256:c5892ec958ab8f20f3718934b58b4d408372bd4a813921c9b4a4f7c5d463bd70",
+    "run_id": "277a6d0e331c469782e96fb5b7ab8300",
+    "name": "voxastage-app-probe-277a6d0e331c469782e96fb5b7ab8300",
+    "container_id": "aec317fedba6f446b79512b35960df97d989a1be048630db76c419a0cd2d2d57",
+    "exit_code": 0,
+    "container_exit": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-16T12:49:29.16208442Z",
+      "FinishedAt": "2026-10-16T12:49:38.259926522Z"
+    },
+    "removed": true
+  },
+  "server_log_sha256": "57d1aff35df4be6e6ddb2b1361b133348030a7dcdf3ef104b48a398b7d9fda60",
+  "probe_source_sha256": "d464cb9ddea8054c4be23a497bbf06546f2fb4222ee2cc253f580701a9ddc12e"
+}
