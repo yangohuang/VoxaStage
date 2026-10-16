@@ -38,7 +38,7 @@ DINet 设置 `PIPECAT_DINET_URL=ws://127.0.0.1:19003/api/ws/live_video/<characte
 
 源码包已完成[独立应用环境安装检查](SOURCE-INSTALL-VALIDATION.md)：新建虚拟环境安装100个锁定依赖，203项分层测试及本机页面/能力/健康接口检查通过。该检查复用现有系统库，未安装GPU模型或验证真实推理。
 
-另有[独立应用容器验证](APPLICATION-CONTAINER-VALIDATION.md)：固定 Python 3.11 / Debian 镜像、补充发行文件哈希锁，292 项应用测试、34 项评测测试及实际 HTTP 启动通过。此容器检查没有连接模型；真实模型组合部署仍需单独验收。
+另有[独立应用容器验证](APPLICATION-CONTAINER-VALIDATION.md)：固定 Python 3.11 / Debian 镜像、补充发行文件哈希锁，292 项应用测试、34 项评测测试及实际 HTTP 启动通过。该次容器检查没有连接模型；后续[真实组合会话验证](COMPOSED-SESSION-VALIDATION.md)已覆盖独立应用、ASR、LLM 容器连接现有 TTS 和 StreamingTalker 的四个固定场景，尚不等于全部 worker 或空白 GPU 主机安装通过。
 
 1. 安装 Python 3.11、`uv`、Node 18+（仅测试需要），以及系统音频依赖。
 2. 解压源码包，在目录中执行 `bash install_demo.sh`。仅创建本目录 `.venv`，按锁文件安装
@@ -102,7 +102,7 @@ python3 demo.py check --python .venv/bin/python --env-file .env --json
 | --- | --- | --- |
 | 本地 ASR | `asr_server.py`，支持 Qwen / SenseVoice 的话轮转写接口 | [Qwen 独立环境](../asr-server/README.md)与自行准备的权重；例如在该环境运行 `python asr_server.py --engine qwen --model /path/to/model --port 18315`，应用地址与端口一致 |
 | 本地 LLM | `llm_server.py`，支持增量文字与工具生成 | [独立模型环境与完整哈希锁](../llm-server/README.md)、自行准备的权重；例如 `python llm_server.py --model /path/to/model --port 18311 --quantization 4bit`，量化需对应 GPU 依赖 |
-| IndexTTS | [音色注册兼容层](../tts-compat/README.md)及应用协议适配 | 既有 TTS 推理服务、有权使用的男女参考音色；兼容层本身不是完整推理服务 |
+| IndexTTS | 日常服务继续使用[音色注册兼容层](../tts-compat/README.md)；新增[独立 2.5 worker](../tts-server/README.md)和完整 Python 依赖锁 | 两个独立环境重建、27项协议回归及 RTX 4090 模型加载/释放通过，见[验证记录](TTS-STANDALONE-VALIDATION.md)；公开参考音色的6次真实合成、2次断连恢复及 Chrome/3D 三轮组合已测，生产音色与人工质量待验收；需完整权重和有权使用的参考音色 |
 | MiniCPM-o | [worker、部署命令与已有环境说明](../omni-server/README.md) | 独立模型环境、权重、参考声音；看图需要显式开启视觉，尚未验收空白机器安装 |
 | FlashHead | [固定上游版本、安装脚本、模型准备和桥接服务](../video-server/README.md) | 独立 GPU 环境、权重、人物素材；按该文档的已验证范围部署 |
 | StreamingTalker | [固定上游补丁、服务依赖和启动命令](../avatar-server/README.md) | 模型/音频编码器权重、人物模板与系统驱动；独立 Python 环境按 overlay 中的完整哈希锁安装，空白 GPU 主机仍需另行验收 |

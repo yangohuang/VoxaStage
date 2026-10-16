@@ -1,0 +1,4 @@
+# Add to the official frozen base environment, constrained by its exported lock.
+fastapi==0.116.2
+uvicorn==0.35.0
+websockets==17.1
