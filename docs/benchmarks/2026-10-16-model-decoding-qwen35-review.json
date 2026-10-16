@@ -1,0 +1,458 @@
+{
+  "reviewer": "AI assistant independent semantic review; not human or blind evaluation",
+  "source_sha256": "18dbcfbed9f6319cb67cc1e57a948eda2f99d9f695d102838a843492beba01b3",
+  "manifest_sha256": "40ee78d5362da4493ffbd064a98ed9859776d315482e410a697d3e25092b803e",
+  "policy": "Checks follow each predeclared input rubric in order and the Qwen3 review standard. EOS indicates generation termination only. Semantically clear paraphrases count; partial diagnostic steps do not. Latency comparison requires implementation dependence. Measurements beyond provided overall percentiles do not establish internal stage causality. Formatting, arithmetic and brevity issues are noted without inventing rubric items. No benchmark or deployment claim.",
+  "rows": [
+    {
+      "case": "compare-original",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "notes": "比较两类架构并说明模块化调试优势，但直接认定端到端更低延迟，未说明实现/测量条件可改变排序。还把级联和端到端均说成难定位错误，没有准确给出级联中间结果便于逐环节定位这一取舍。"
+    },
+    {
+      "case": "compare-original",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "notes": "比较两类架构并说明模块化调试优势，但直接认定端到端更低延迟，未说明实现/测量条件可改变排序。还把级联和端到端均说成难定位错误，没有准确给出级联中间结果便于逐环节定位这一取舍。"
+    },
+    {
+      "case": "compare-original",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "notes": "比较两类架构并说明模块化调试优势，但直接认定端到端更低延迟，未说明实现/测量条件可改变排序。还把级联和端到端均说成难定位错误，没有准确给出级联中间结果便于逐环节定位这一取舍。"
+    },
+    {
+      "case": "compare-original",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": "准确比较模块化调试与逐环节定位优势；但无条件断言级联延迟高或累加、端到端更低/极低，没有说明具体实现与测量条件会改变排序。场景推荐也建立在这一绝对化判断上。"
+    },
+    {
+      "case": "compare-original",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "notes": "准确比较模块化调试与逐环节定位优势；但无条件断言级联延迟高或累加、端到端更低/极低，没有说明具体实现与测量条件会改变排序。场景推荐也建立在这一绝对化判断上。"
+    },
+    {
+      "case": "triage-original",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": "忽略已确认ASR文本正确的前提，仍从ASR准确率排查开始；没有检查实际送入LLM的消息/历史、system指令冲突，也没有脱离链路单测LLM。检查生成输出切不切题不等于核对输入或隔离复现。"
+    },
+    {
+      "case": "triage-original",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": "忽略已确认ASR文本正确的前提，仍从ASR准确率排查开始；没有检查实际送入LLM的消息/历史、system指令冲突，也没有脱离链路单测LLM。检查生成输出切不切题不等于核对输入或隔离复现。"
+    },
+    {
+      "case": "triage-original",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": "忽略已确认ASR文本正确的前提，仍从ASR准确率排查开始；没有检查实际送入LLM的消息/历史、system指令冲突，也没有脱离链路单测LLM。检查生成输出切不切题不等于核对输入或隔离复现。"
+    },
+    {
+      "case": "triage-original",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": "忽略已确认ASR文本正确的前提，仍从ASR准确率排查开始；没有检查实际送入LLM的消息/历史、system指令冲突，也没有脱离链路单测LLM。检查生成输出切不切题不等于核对输入或隔离复现。"
+    },
+    {
+      "case": "triage-original",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": "忽略已确认ASR文本正确的前提，仍从ASR准确率排查开始；没有检查实际送入LLM的消息/历史、system指令冲突，也没有脱离链路单测LLM。检查生成输出切不切题不等于核对输入或隔离复现。"
+    },
+    {
+      "case": "constraints-original",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": "建议本地方案、没有新增硬件，并涉及速度/显存；但三条未构成改善回答质量的可执行方案，依赖未给定组件或混合互斥路径，没有质量测量与对照。提及具体模型名不自动满足可执行性。 假定现有ASR是通用大模型且LLM在云端；降为Whisper-tiny及未具体定义的轻量TTS并不能证明回答质量提高，MiniCPM-o文本替换也缺少适配/显存验证。"
+    },
+    {
+      "case": "constraints-original",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": "建议本地方案、没有新增硬件，并涉及速度/显存；但三条未构成改善回答质量的可执行方案，依赖未给定组件或混合互斥路径，没有质量测量与对照。提及具体模型名不自动满足可执行性。 假定现有ASR是通用大模型且LLM在云端；降为Whisper-tiny及未具体定义的轻量TTS并不能证明回答质量提高，MiniCPM-o文本替换也缺少适配/显存验证。"
+    },
+    {
+      "case": "constraints-original",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": "建议本地方案、没有新增硬件，并涉及速度/显存；但三条未构成改善回答质量的可执行方案，依赖未给定组件或混合互斥路径，没有质量测量与对照。提及具体模型名不自动满足可执行性。 同时要求串联ASR/LLM/TTS与利用端到端能力省掉中间文本，实施方向混杂；保持渲染器不变不能直接推出节省显存或改善回答质量。"
+    },
+    {
+      "case": "constraints-original",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": "建议本地方案、没有新增硬件，并涉及速度/显存；但三条未构成改善回答质量的可执行方案，依赖未给定组件或混合互斥路径，没有质量测量与对照。提及具体模型名不自动满足可执行性。 将流式输出解释为避免加载全部上下文、显著降低上下文显存是错误机制；先改端到端又更换TTS缺少路径说明，还无依据保证秒级响应。"
+    },
+    {
+      "case": "constraints-original",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "notes": "建议本地方案、没有新增硬件，并涉及速度/显存；但三条未构成改善回答质量的可执行方案，依赖未给定组件或混合互斥路径，没有质量测量与对照。提及具体模型名不自动满足可执行性。 假定原ASR在云端；先换ASR、调LLM再切端到端路径缺少一致实施目标，调低温度与缩短输出也未建立质量收益。"
+    },
+    {
+      "case": "goal-correction",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "正确仅报松鼠和450元，没有沿用旧值或声称执行外部动作；较Qwen3少了多余确认，但固定rubric内同为通过。"
+    },
+    {
+      "case": "goal-correction",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "正确仅报松鼠和450元，没有沿用旧值或声称执行外部动作；较Qwen3少了多余确认，但固定rubric内同为通过。"
+    },
+    {
+      "case": "goal-correction",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "正确仅报松鼠和450元，没有沿用旧值或声称执行外部动作；较Qwen3少了多余确认，但固定rubric内同为通过。"
+    },
+    {
+      "case": "goal-correction",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "正确仅报松鼠和450元，没有沿用旧值或声称执行外部动作；较Qwen3少了多余确认，但固定rubric内同为通过。"
+    },
+    {
+      "case": "goal-correction",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "正确仅报松鼠和450元，没有沿用旧值或声称执行外部动作；较Qwen3少了多余确认，但固定rubric内同为通过。"
+    },
+    {
+      "case": "given-measurements",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        false,
+        true,
+        true
+      ],
+      "notes": "承认级联P50更低但仍选择P95更差的级联，违背用户更重视慢尾部的目标；明确或隐含限于当前方案，没有外推到其他硬件。将800-620错误写成220ms为额外算术错误。"
+    },
+    {
+      "case": "given-measurements",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        false,
+        true,
+        true
+      ],
+      "notes": "承认级联P50更低但仍选择P95更差的级联，违背用户更重视慢尾部的目标；明确或隐含限于当前方案，没有外推到其他硬件。将800-620错误写成220ms为额外算术错误。"
+    },
+    {
+      "case": "given-measurements",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        false,
+        false,
+        false
+      ],
+      "notes": "仍选级联，没有承认级联P50优势且称端到端首声快；仅凭整体P50/P95就断言慢速来自ASR/LLM而非TTS、TTS稳定，超出给定数据。600ms假设没有观测依据，并不能支持最终选择。"
+    },
+    {
+      "case": "given-measurements",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "notes": "选端到端并以级联P95长尾更差为理由，也承认级联P50略快，前两项改善；但进一步把该P95归因于ASR/LLM串行及端到端省去文本处理，用架构机制解释低延迟与稳定性，整体分位数数据不足以支持这些因果/架构归纳，因此第三项不完全满足。"
+    },
+    {
+      "case": "given-measurements",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        false,
+        true,
+        true
+      ],
+      "notes": "承认级联P50更低但据此反向选择级联，不满足重视慢尾部的用户目标；没有外推到其他硬件。另有800-620写220ms、后又写180ms的自相矛盾，并把P50误称平均；关于感知显著性的解释无实测支持。"
+    },
+    {
+      "case": "missing-evidence",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "notes": "没有编造平均音画偏差，也承认缺少比较证据；仅建议肉眼观察或查询文档/日志，未提出新增可量化的同步测量或同条件基线比较。与Qwen3相同，观察现象不自动等于测量毫秒偏差。"
+    },
+    {
+      "case": "missing-evidence",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "notes": "没有编造平均音画偏差，也承认缺少比较证据；仅建议肉眼观察或查询文档/日志，未提出新增可量化的同步测量或同条件基线比较。与Qwen3相同，观察现象不自动等于测量毫秒偏差。"
+    },
+    {
+      "case": "missing-evidence",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        true,
+        true,
+        true
+      ],
+      "notes": "不编造毫秒数，明确没有数据/基准不能声称超过最新方法；提出观察实际同步情况后再进行测量，满足与问题相关的测量建议，与Qwen3提出实际测试采用同一语义尺度。"
+    },
+    {
+      "case": "missing-evidence",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "notes": "没有编造平均音画偏差，也承认缺少比较证据；仅建议肉眼观察或查询文档/日志，未提出新增可量化的同步测量或同条件基线比较。与Qwen3相同，观察现象不自动等于测量毫秒偏差。"
+    },
+    {
+      "case": "missing-evidence",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        true,
+        true,
+        false
+      ],
+      "notes": "没有编造平均音画偏差，也承认缺少比较证据；仅建议肉眼观察或查询文档/日志，未提出新增可量化的同步测量或同条件基线比较。与Qwen3相同，观察现象不自动等于测量毫秒偏差。"
+    },
+    {
+      "case": "semantic-interruption",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "第一声嗯继续，第二次停一下立即停止生成，且明确旧结果不复用；但把用户要求介绍流式ASR错解成切换MiniCPM-o执行路径，没有转向流式ASR讲解，因此第二项仅部分满足。"
+    },
+    {
+      "case": "semantic-interruption",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "第一声嗯继续，第二次停一下立即停止生成，且明确旧结果不复用；但把用户要求介绍流式ASR错解成切换MiniCPM-o执行路径，没有转向流式ASR讲解，因此第二项仅部分满足。"
+    },
+    {
+      "case": "semantic-interruption",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        false
+      ],
+      "notes": "继续可满足第一声嗯，但对第二次明确停一下仍声称只是口头指令、未触发工具就无需中断，要求用户再执行工具动作；还说旧结果依然有效无需处理，未防止旧结果进入新回合。较Qwen3同seed明显回归。"
+    },
+    {
+      "case": "semantic-interruption",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        true,
+        false,
+        false
+      ],
+      "notes": "正确把嗯视为确认，并识别停一下要求暂停；但未转向已经明确给出的流式ASR讲解，且建议旧链路完成后恢复继续输出，不能阻止旧任务内容污染新回合。"
+    },
+    {
+      "case": "semantic-interruption",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "嗯继续、停一下停止，且明确旧结果不用于新内容生成，防污染通过；但用户已经给出新话题，回答仍要等待新指令，没有转向介绍流式ASR，所以第二项只部分满足。"
+    },
+    {
+      "case": "visual-temporal-evidence",
+      "condition": "sample-256",
+      "seed": 29,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "正确复述蓝杯出现、红杯移走，没有添加未见对象；把12秒记录直接当作13秒实时状态，未说明最新记录不能保证此刻事实。"
+    },
+    {
+      "case": "visual-temporal-evidence",
+      "condition": "sample-256",
+      "seed": 43,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "正确复述蓝杯出现、红杯移走，没有添加未见对象；把12秒记录直接当作13秒实时状态，未说明最新记录不能保证此刻事实。"
+    },
+    {
+      "case": "visual-temporal-evidence",
+      "condition": "sample-256",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "正确复述蓝杯出现、红杯移走，没有添加未见对象；把12秒记录直接当作13秒实时状态，未说明最新记录不能保证此刻事实。"
+    },
+    {
+      "case": "visual-temporal-evidence",
+      "condition": "greedy-512",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "正确复述蓝杯出现、红杯移走，没有添加未见对象；把12秒记录直接当作13秒实时状态，未说明最新记录不能保证此刻事实。"
+    },
+    {
+      "case": "visual-temporal-evidence",
+      "condition": "greedy-256",
+      "seed": 17,
+      "checks": [
+        true,
+        false,
+        true
+      ],
+      "notes": "正确复述蓝杯出现、红杯移走，没有添加未见对象；把12秒记录直接当作13秒实时状态，未说明最新记录不能保证此刻事实。"
+    }
+  ]
+}
