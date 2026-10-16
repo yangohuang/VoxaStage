@@ -1,0 +1,18 @@
+{
+  "runtime_source": {
+    "name": "llm_server.py",
+    "sha256": "52499584c781f0232f113e5cb01731fc74f726dd9866e530da00ed4ca879d295",
+    "matches_repository_file": true,
+    "runtime_arguments": {
+      "quantization": "4bit",
+      "model_basename": "Qwen3-4B"
+    }
+  },
+  "generation_observed_in_source": {
+    "do_sample": false,
+    "enable_thinking": false,
+    "max_new_tokens_limit": 256
+  },
+  "model_health_identity_is_not_weights_digest": true,
+  "note": "Port-to-process mapping checked locally after requests; private deployment paths and process identifiers are not exported."
+}
