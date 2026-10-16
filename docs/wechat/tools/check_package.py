@@ -69,6 +69,12 @@ def main():
         parser=Links();parser.feed(page.read_text());assert not parser.scripts
         for link in parser.links:
             if '://' not in link and not link.startswith(('#','mailto:')):assert (page.parent/unquote(link.split('#')[0])).exists(),(page.name,link)
+    for item in series['articles']:
+        if item['status']!='draft':continue
+        html=build/(item['file'].replace('/','--')[:-3]+'.html')
+        link='source/'+item['file']
+        assert f'href="{link}"' in html.read_text() and f'href="{link}"' in (build/'index.html').read_text()
+        assert (build/link).read_bytes()==(ROOT/item['file']).read_bytes()
     with zipfile.ZipFile(build/'voxastage-wechat-batch-01.zip') as archive:
         assert archive.testzip() is None
         assert set(archive.namelist())=={item['path'] for item in manifest}|{'manifest.json'}

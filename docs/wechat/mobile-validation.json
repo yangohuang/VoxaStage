@@ -1,5 +1,6 @@
 {
   "scope": "Local Chrome mobile emulation; not WeChat backend preview",
+  "edition": "prose rewrite, HTML and original Markdown",
   "viewport": {
     "width": 390,
     "height": 844
@@ -23,7 +24,8 @@
           "complete": true
         }
       ],
-      "overflow": 0
+      "overflow": 0,
+      "html_sha256": "46fa0b2236919d245dc3a35c225f27ef7dd300c2b62be1ec6b9881aa56c626f3"
     },
     {
       "page": "articles--02-cascade-and-omni.html",
@@ -43,7 +45,8 @@
           "complete": true
         }
       ],
-      "overflow": 0
+      "overflow": 0,
+      "html_sha256": "17362a79e49f80082051d0d2deaac16ab863c9ce42e6edcd0509c3b8ca074c32"
     },
     {
       "page": "articles--03-interruption-and-tools.html",
@@ -63,7 +66,8 @@
           "complete": true
         }
       ],
-      "overflow": 0
+      "overflow": 0,
+      "html_sha256": "ecac310f09d6f8faaf6a7ef540d7b9f37086c3b1ed8ce044d97d04823e83f1eb"
     }
   ]
 }
