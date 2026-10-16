@@ -1,0 +1,15 @@
+{
+  "scope": "Independent local-files-only tokenizer recheck in the same isolated runtime; no GPU model load",
+  "models": {
+    "Qwen3-4B": {
+      "raw_sha256": "84fc577c14fe8a2f43148ecb923c1aab47f74d89b5674e9d3d1df77847a6f7b7",
+      "rows_with_warmup_verified": 29,
+      "template_input_tokens_output_decode": "passed"
+    },
+    "Qwen3-4B-Instruct-2507": {
+      "raw_sha256": "b65758d54e1a71e404947740fda1564467d613c7789529d40bc9d37dc9f50671",
+      "rows_with_warmup_verified": 29,
+      "template_input_tokens_output_decode": "passed"
+    }
+  }
+}
