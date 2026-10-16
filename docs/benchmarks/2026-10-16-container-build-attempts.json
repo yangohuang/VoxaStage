@@ -1,0 +1,60 @@
+{
+  "scope": "Selected build-state fields; full local logs retained; includes every attempted image build",
+  "attempts": [
+    {
+      "attempt": "build",
+      "description": "initial online download timed out",
+      "status": "failed",
+      "exit_code": 1,
+      "elapsed_s": 400.6708037853241
+    },
+    {
+      "attempt": "build-retry",
+      "description": "timeout120 retry rejected truncated wheel hash",
+      "status": "failed",
+      "exit_code": 1,
+      "elapsed_s": 183.2392611503601
+    },
+    {
+      "attempt": "build-cached",
+      "description": "partial find-links cache still selected index URL; owned build stopped",
+      "status": "failed",
+      "exit_code": 130,
+      "elapsed_s": 118.72798466682434,
+      "source_sha256": {
+        "llm-server/deploy/Dockerfile": "6bb1c56f56e3028d7fe514fa1f9035f254944c11bc01f0ea4998a36304da0f92",
+        "llm-server/deploy/Dockerfile.cached-wheels": "73e9695376722ea2da94db0f5a0d9ac400cafb6009911d312ddccc0d6507020c",
+        "llm-server/deploy/requirements-standalone.lock": "b23b79149066245978787ecab7f05d5bb363d956a0bbbe40047c54c8a8cc2313",
+        "llm_server.py": "52499584c781f0232f113e5cb01731fc74f726dd9866e530da00ed4ca879d295"
+      }
+    },
+    {
+      "attempt": "build-offline",
+      "description": "complete verified wheelhouse, offline Python installation",
+      "status": "complete",
+      "exit_code": 0,
+      "image_id": "sha256:91d0254265a0d179cb438e93304d2eb300c397bec4d7000ef472e668fa080278",
+      "elapsed_s": 129.0085368156433,
+      "source_sha256": {
+        "llm-server/deploy/Dockerfile": "6bb1c56f56e3028d7fe514fa1f9035f254944c11bc01f0ea4998a36304da0f92",
+        "llm-server/deploy/Dockerfile.cached-wheels": "9674beeaa93b55df0975de61bbcda0a7e8143befeeab5aecace84726ce0bdcb3",
+        "llm-server/deploy/requirements-standalone.lock": "b23b79149066245978787ecab7f05d5bb363d956a0bbbe40047c54c8a8cc2313",
+        "llm_server.py": "52499584c781f0232f113e5cb01731fc74f726dd9866e530da00ed4ca879d295"
+      }
+    },
+    {
+      "attempt": "build-runtime-user",
+      "description": "runtime USER/HOME defaults, cached filesystem layers",
+      "status": "complete",
+      "exit_code": 0,
+      "image_id": "sha256:52c11d4beef410a82a1a78f60ca6e7209c1ba3904214d2419f463fd02938c6d1",
+      "elapsed_s": 10.10184121131897,
+      "source_sha256": {
+        "llm-server/deploy/Dockerfile": "44b3cc703ed8f2395fbd9948fb49c39faff993c7f7e1b210d6e4f9b2ed95724a",
+        "llm-server/deploy/Dockerfile.cached-wheels": "928ea1b9458f306e5711205a0b59aa115e6dae7bfecc89bcfdc0dcb8a983783a",
+        "llm-server/deploy/requirements-standalone.lock": "b23b79149066245978787ecab7f05d5bb363d956a0bbbe40047c54c8a8cc2313",
+        "llm_server.py": "52499584c781f0232f113e5cb01731fc74f726dd9866e530da00ed4ca879d295"
+      }
+    }
+  ]
+}

@@ -26,6 +26,8 @@ avatar_playback_lab.py test_avatar_playback_lab.py trace_dinet.py test_trace_din
 avatar_review.py test_avatar_review.py
 demo.py deployment_check.py test_demo.py test_deployment_check.py
 requirements.in requirements.lock install_demo.sh export_demo.py
+llm-server/deploy/Dockerfile llm-server/deploy/Dockerfile.cached-wheels
+docs/benchmarks/2026-10-16-container-protocol-events.jsonl
 .env.example .gitignore LICENSE THIRD_PARTY.md AVATAR-README.md AVATAR-PLAN.md AVATAR-RESULTS.md
 AVATAR-PROTOCOL.md AVATAR-MULTIDRIVER-RESULTS.md
 docs/assets/voxastage-architecture.png docs/assets/voxastage-architecture.svg docs/assets/voxastage-overview.svg docs/assets/streaming-agent-preview.png docs/assets/dinet-kanghui.jpg docs/assets/flashhead-idle.png

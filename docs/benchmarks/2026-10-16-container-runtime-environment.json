@@ -1,0 +1,286 @@
+{
+  "image_id": "sha256:52c11d4beef410a82a1a78f60ca6e7209c1ba3904214d2419f463fd02938c6d1",
+  "container_id": "1652991e613e20d0743c75216619b1f75c46f9004e9ad1f703428eda30282cb1",
+  "gpu_used": false,
+  "exit_code": 0,
+  "environment": {
+    "scope": "CPU-only environment probe; no model inference",
+    "python": "3.12.15 (main, Oct  6 2026, 02:02:31) [GCC 12.2.0]",
+    "uid": 65532,
+    "isolated": 1,
+    "sys_path": [
+      "/usr/local/lib/python312.zip",
+      "/usr/local/lib/python3.12",
+      "/usr/local/lib/python3.12/lib-dynload",
+      "/opt/worker/lib/python3.12/site-packages"
+    ],
+    "pyvenv_cfg": "home = /usr/local/bin\ninclude-system-site-packages = false\nversion = 3.12.15\nexecutable = /usr/local/bin/python3.12\ncommand = /usr/local/bin/python -m venv /opt/worker\n",
+    "locked_packages": {
+      "accelerate": {
+        "version": "1.14.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "annotated-doc": {
+        "version": "0.0.5",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "annotated-types": {
+        "version": "0.8.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "anyio": {
+        "version": "4.15.1",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "bitsandbytes": {
+        "version": "0.50.2",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "certifi": {
+        "version": "2026.7.22",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "click": {
+        "version": "8.5.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "cuda-bindings": {
+        "version": "13.4.3",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "cuda-pathfinder": {
+        "version": "1.8.3",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "cuda-toolkit": {
+        "version": "13.0.2",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "fastapi": {
+        "version": "0.139.2",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "filelock": {
+        "version": "4.1.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "fsspec": {
+        "version": "2026.9.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "h11": {
+        "version": "0.16.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "hf-xet": {
+        "version": "1.7.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "httpcore": {
+        "version": "1.0.9",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "httpx": {
+        "version": "0.28.1",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "huggingface-hub": {
+        "version": "1.33.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "idna": {
+        "version": "3.20",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "jinja2": {
+        "version": "3.1.6",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "markdown-it-py": {
+        "version": "4.2.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "markupsafe": {
+        "version": "3.0.4",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "mdurl": {
+        "version": "0.1.2",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "mpmath": {
+        "version": "1.3.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "networkx": {
+        "version": "3.7",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "numpy": {
+        "version": "2.5.3",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-cublas": {
+        "version": "13.1.0.3",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-cuda-cupti": {
+        "version": "13.0.85",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-cuda-nvrtc": {
+        "version": "13.0.88",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-cuda-runtime": {
+        "version": "13.0.96",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-cudnn-cu13": {
+        "version": "9.19.0.56",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-cufft": {
+        "version": "12.0.0.61",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-cufile": {
+        "version": "1.15.1.6",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-curand": {
+        "version": "10.4.0.35",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-cusolver": {
+        "version": "12.0.4.66",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-cusparse": {
+        "version": "12.6.3.3",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-cusparselt-cu13": {
+        "version": "0.8.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-nccl-cu13": {
+        "version": "2.28.9",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-nvjitlink": {
+        "version": "13.0.88",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-nvshmem-cu13": {
+        "version": "3.4.5",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "nvidia-nvtx": {
+        "version": "13.0.85",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "packaging": {
+        "version": "26.3",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "psutil": {
+        "version": "7.2.2",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "pydantic": {
+        "version": "2.14.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "pydantic-core": {
+        "version": "2.50.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "pygments": {
+        "version": "2.21.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "pyyaml": {
+        "version": "6.0.3",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "regex": {
+        "version": "2026.9.29",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "rich": {
+        "version": "15.0.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "safetensors": {
+        "version": "0.8.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "setuptools": {
+        "version": "81.0.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "shellingham": {
+        "version": "1.5.4",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "starlette": {
+        "version": "1.7.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "sympy": {
+        "version": "1.14.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "tokenizers": {
+        "version": "0.22.2",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "torch": {
+        "version": "2.11.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "tqdm": {
+        "version": "4.70.1",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "transformers": {
+        "version": "5.12.1",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "triton": {
+        "version": "3.6.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "typer": {
+        "version": "0.27.3",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "typing-extensions": {
+        "version": "4.16.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "typing-inspection": {
+        "version": "0.4.4",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      },
+      "uvicorn": {
+        "version": "0.51.0",
+        "location": "/opt/worker/lib/python3.12/site-packages"
+      }
+    },
+    "pip_version": "25.0.1",
+    "pip_check": "No broken requirements found.\n",
+    "system_packages": "ca-certificates 20250419~deb12u1\nlibc6 2.36-9+deb12u14\nlibgomp1 12.2.0-14+deb12u1\nlibstdc++6 12.2.0-14+deb12u1\n",
+    "torch_import": "2.11.0+cu130",
+    "transformers_import": "5.12.1",
+    "bitsandbytes_import": "0.50.2",
+    "accelerate_import": "1.14.0",
+    "cuda_available": false,
+    "worker_sha256": "52499584c781f0232f113e5cb01731fc74f726dd9866e530da00ed4ca879d295"
+  },
+  "status": "passed",
+  "removed": true,
+  "probe_source_sha256": "9fd0fd33373124701e1a9ec099bdeab9d4ac5f9f6f5f50b1f9e7365882cee3a2",
+  "explicit_user_home_override": false
+}

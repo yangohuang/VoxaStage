@@ -1,0 +1,155 @@
+{
+  "scope": "direct loopback HTTP protocol; not answer quality, ASR, acoustic or full-chain acceptance",
+  "requests": 17,
+  "warmups": 1,
+  "full_responses": 14,
+  "cancellation_recovery_pairs": 3,
+  "failed_startup_batch_requests": 0,
+  "load_s": 3.6831199740990996,
+  "language_requests": 9,
+  "unique_language_prompts": 3,
+  "language_first_text_median_ms": 47.6237089606002,
+  "language_completion_median_ms": 1531.7476759664714,
+  "health_probes": 128,
+  "max_health_probe_s": 0.2997610190650448,
+  "model_core_files_verified_before_and_after": 10,
+  "container_removed": true,
+  "cases": [
+    {
+      "case": "warmup",
+      "chunks": 16,
+      "first_text_s": 0.24920374795328826,
+      "elapsed_s": 0.5458748158998787,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "zh-0",
+      "chunks": 78,
+      "first_text_s": 0.041494015022180974,
+      "elapsed_s": 1.7886901990277693,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "en-0",
+      "chunks": 39,
+      "first_text_s": 0.047662440105341375,
+      "elapsed_s": 0.6858496060594916,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "mixed-0",
+      "chunks": 72,
+      "first_text_s": 0.05908825993537903,
+      "elapsed_s": 1.5234500319929793,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "zh-1",
+      "chunks": 78,
+      "first_text_s": 0.04218390095047653,
+      "elapsed_s": 1.7973527780268341,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "en-1",
+      "chunks": 39,
+      "first_text_s": 0.0476237089606002,
+      "elapsed_s": 0.6870774159906432,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "mixed-1",
+      "chunks": 72,
+      "first_text_s": 0.07211435795761645,
+      "elapsed_s": 1.5327122260350734,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "zh-2",
+      "chunks": 78,
+      "first_text_s": 0.032006882946006954,
+      "elapsed_s": 1.778543881024234,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "en-2",
+      "chunks": 39,
+      "first_text_s": 0.044674856937490404,
+      "elapsed_s": 0.7105457369470969,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "mixed-2",
+      "chunks": 72,
+      "first_text_s": 0.055684398976154625,
+      "elapsed_s": 1.5317476759664714,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "long",
+      "chunks": 199,
+      "first_text_s": 0.04230274900328368,
+      "elapsed_s": 3.9331224779598415,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "cancel-0",
+      "chunks": 1,
+      "first_text_s": 0.025290926918387413,
+      "elapsed_s": 0.02704339101910591,
+      "busy_at_first": true,
+      "cancelled_by_client": true
+    },
+    {
+      "case": "recovery-0",
+      "chunks": 3,
+      "first_text_s": 0.02909126493614167,
+      "elapsed_s": 0.07649445801507682,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "cancel-1",
+      "chunks": 1,
+      "first_text_s": 0.02495759294833988,
+      "elapsed_s": 0.026698770932853222,
+      "busy_at_first": true,
+      "cancelled_by_client": true
+    },
+    {
+      "case": "recovery-1",
+      "chunks": 3,
+      "first_text_s": 0.024912219028919935,
+      "elapsed_s": 0.07214583700988442,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    },
+    {
+      "case": "cancel-2",
+      "chunks": 1,
+      "first_text_s": 0.03226899798028171,
+      "elapsed_s": 0.03363835997879505,
+      "busy_at_first": true,
+      "cancelled_by_client": true
+    },
+    {
+      "case": "recovery-2",
+      "chunks": 3,
+      "first_text_s": 0.024775695987045765,
+      "elapsed_s": 0.07296392205171287,
+      "busy_at_first": true,
+      "cancelled_by_client": false
+    }
+  ]
+}

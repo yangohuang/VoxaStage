@@ -1,0 +1,301 @@
+{
+  "scope": "Clean-container deployment protocol verification of the unchanged daily Qwen3-4B NF4 worker, not a new model quality comparison, ASR, acoustic latency or full deployment acceptance. Reuses the 17 direct-request inputs from the 2026-10-10 standalone validation; no Agent-tool trials in this stage.",
+  "model": "Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "quantization": "4bit",
+  "input_repetitions": "Three language prompts repeated three times; repetitions are not independent questions.",
+  "timeouts_s": {
+    "startup": 180,
+    "request": 90,
+    "recovery": 20
+  },
+  "host_idle_guard_interval_s": 0.2,
+  "checks": [
+    "all full responses contain nonempty text and no NDJSON error",
+    "long reply has multiple chunks, first chunk before full completion and busy at first text",
+    "each cancellation observes busy at first text before stream close",
+    "each cancellation returns to idle and following recovery produces nonempty text",
+    "model source files unchanged and no host Python package imports",
+    "only this test container stops on completion, failure or guard violation"
+  ],
+  "claims_excluded": [
+    "semantic correctness",
+    "internal GPU cancellation event",
+    "whole voice or avatar chain acceptance",
+    "fresh host kernel or driver installation"
+  ],
+  "requests": [
+    {
+      "case": "warmup",
+      "phase": "warmup",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "你好，请用一句话自我介绍。"
+        }
+      ],
+      "max_new_tokens": 48,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "zh-0",
+      "phase": "formal",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "介绍一下语音 agent 技术，说明 ASR、LLM 和 TTS 各自做什么。"
+        }
+      ],
+      "max_new_tokens": 128,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "en-0",
+      "phase": "formal",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "Explain why a voice agent should stop stale audio after an interruption."
+        }
+      ],
+      "max_new_tokens": 128,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "mixed-0",
+      "phase": "formal",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "解释 streaming inference 与 batch inference 的区别，并举一个语音 agent 的例子。"
+        }
+      ],
+      "max_new_tokens": 128,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "zh-1",
+      "phase": "formal",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "介绍一下语音 agent 技术，说明 ASR、LLM 和 TTS 各自做什么。"
+        }
+      ],
+      "max_new_tokens": 128,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "en-1",
+      "phase": "formal",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "Explain why a voice agent should stop stale audio after an interruption."
+        }
+      ],
+      "max_new_tokens": 128,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "mixed-1",
+      "phase": "formal",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "解释 streaming inference 与 batch inference 的区别，并举一个语音 agent 的例子。"
+        }
+      ],
+      "max_new_tokens": 128,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "zh-2",
+      "phase": "formal",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "介绍一下语音 agent 技术，说明 ASR、LLM 和 TTS 各自做什么。"
+        }
+      ],
+      "max_new_tokens": 128,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "en-2",
+      "phase": "formal",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "Explain why a voice agent should stop stale audio after an interruption."
+        }
+      ],
+      "max_new_tokens": 128,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "mixed-2",
+      "phase": "formal",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "解释 streaming inference 与 batch inference 的区别，并举一个语音 agent 的例子。"
+        }
+      ],
+      "max_new_tokens": 128,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "long",
+      "phase": "formal",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "请详细解释语音助手从麦克风输入到数字人播放的全过程，逐项说明分段、流式生成、打断和上下文维护。"
+        }
+      ],
+      "max_new_tokens": 256,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "cancel-0",
+      "phase": "cancellation",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "请详细介绍一百项不同的计算机技术，每项解释两句话。"
+        }
+      ],
+      "max_new_tokens": 256,
+      "cancel_after_first_text": true
+    },
+    {
+      "case": "recovery-0",
+      "phase": "recovery",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "只回答：恢复完成。"
+        }
+      ],
+      "max_new_tokens": 48,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "cancel-1",
+      "phase": "cancellation",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "请详细介绍一百项不同的计算机技术，每项解释两句话。"
+        }
+      ],
+      "max_new_tokens": 256,
+      "cancel_after_first_text": true
+    },
+    {
+      "case": "recovery-1",
+      "phase": "recovery",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "只回答：恢复完成。"
+        }
+      ],
+      "max_new_tokens": 48,
+      "cancel_after_first_text": false
+    },
+    {
+      "case": "cancel-2",
+      "phase": "cancellation",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "请详细介绍一百项不同的计算机技术，每项解释两句话。"
+        }
+      ],
+      "max_new_tokens": 256,
+      "cancel_after_first_text": true
+    },
+    {
+      "case": "recovery-2",
+      "phase": "recovery",
+      "messages": [
+        {
+          "role": "system",
+          "content": "请准确、简洁地回答问题。不要虚构当前系统状态。"
+        },
+        {
+          "role": "user",
+          "content": "只回答：恢复完成。"
+        }
+      ],
+      "max_new_tokens": 48,
+      "cancel_after_first_text": false
+    }
+  ]
+}
