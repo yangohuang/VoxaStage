@@ -1,0 +1,114 @@
+{
+  "scope": "Completion segment for the last two predeclared development questions after two production-busy interruptions; same conditions, seeds and within-case order. Not an independent dataset.",
+  "base_commit": "3b4bc335d065809b73f2d7fa5e2b022f27a2f909",
+  "models": [
+    "Qwen3-4B"
+  ],
+  "quantization": "NF4 double quantization with bfloat16 compute",
+  "enable_thinking": false,
+  "system_prompt": "你是中文语音助手。依据上下文准确回答，保留英文技术术语。简单问题简短回答；解释性问题说清关键原因并给一个具体例子，通常不超过180字。使用自然口语，不用Markdown。不确定时明确说明，听不清或问题含糊时先澄清，不编造事实或实时信息。 仅在问题涉及本演示项目时参考以下事实：Pipecat是由Daily与社区维护的实时语音和多模态Agent编排框架；MiniCPM-o是OpenBMB项目的端到端多模态模型。框架与模型处于不同层，不能当作互斥的两种模型。本演示的级联路径为ASR识别、LLM生成文本、TTS合成声音；另一路MiniCPM-o直接理解语音并生成语音，仍由Pipecat处理会话。数字人形象驱动独立于对话后端：DINet和FlashHead输出2D视频，StreamingTalker输出3D网格。音色决定声音，渲染器决定形象；分离后可以换形象而保留声音，或换声音而不重写渲染器。不要编造厂商归属、已执行的工具动作、联网结果或实时数据。",
+  "system_prompts": {
+    "production": "你是中文语音助手。依据上下文准确回答，保留英文技术术语。简单问题简短回答；解释性问题说清关键原因并给一个具体例子，通常不超过180字。使用自然口语，不用Markdown。不确定时明确说明，听不清或问题含糊时先澄清，不编造事实或实时信息。 仅在问题涉及本演示项目时参考以下事实：Pipecat是由Daily与社区维护的实时语音和多模态Agent编排框架；MiniCPM-o是OpenBMB项目的端到端多模态模型。框架与模型处于不同层，不能当作互斥的两种模型。本演示的级联路径为ASR识别、LLM生成文本、TTS合成声音；另一路MiniCPM-o直接理解语音并生成语音，仍由Pipecat处理会话。数字人形象驱动独立于对话后端：DINet和FlashHead输出2D视频，StreamingTalker输出3D网格。音色决定声音，渲染器决定形象；分离后可以换形象而保留声音，或换声音而不重写渲染器。不要编造厂商归属、已执行的工具动作、联网结果或实时数据。",
+    "general": "你是中文语音助手。依据上下文准确回答，保留英文技术术语。简单问题简短回答；解释性问题说清关键原因并给一个具体例子，通常不超过180字。使用自然口语，不用Markdown。不确定时明确说明，听不清或问题含糊时先澄清，不编造事实或实时信息。 不要编造厂商归属、已执行的工具动作、联网结果或实时数据。"
+  },
+  "conditions": [
+    {
+      "id": "production-direct",
+      "system_variant": "production",
+      "enable_thinking": false,
+      "max_new_tokens": 1024,
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repetition_penalty": 1.0,
+      "seeds": [
+        17,
+        43
+      ]
+    },
+    {
+      "id": "production-thinking",
+      "system_variant": "production",
+      "enable_thinking": true,
+      "max_new_tokens": 1024,
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repetition_penalty": 1.0,
+      "seeds": [
+        17,
+        43
+      ]
+    },
+    {
+      "id": "general-direct",
+      "system_variant": "general",
+      "enable_thinking": false,
+      "max_new_tokens": 1024,
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repetition_penalty": 1.0,
+      "seeds": [
+        17,
+        43
+      ]
+    },
+    {
+      "id": "general-thinking",
+      "system_variant": "general",
+      "enable_thinking": true,
+      "max_new_tokens": 1024,
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repetition_penalty": 1.0,
+      "seeds": [
+        17,
+        43
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "semantic-interruption",
+      "messages": [
+        {
+          "role": "user",
+          "content": "助手讲解时用户说了一声“嗯”，随后继续听；第二次用户说“停一下，改为介绍流式ASR”。请分别说明该继续还是停止当前回复，并说明旧工具结果怎么处理。"
+        }
+      ],
+      "rubric": [
+        "first ack normally continues with context-sensitive caveat allowed",
+        "second explicit change stops old reply and shifts to streaming ASR",
+        "old results must not contaminate new turn"
+      ]
+    },
+    {
+      "id": "visual-temporal-evidence",
+      "messages": [
+        {
+          "role": "user",
+          "content": "相机记录：10秒时桌上只有红杯子；12秒时红杯子被移走，出现蓝杯子。用户在13秒问“现在桌上是什么，刚才那个还在吗？”请只根据这两条记录回答，区分最新记录与实时事实。"
+        }
+      ],
+      "rubric": [
+        "latest record blue cup and red removed",
+        "acknowledges 12s record cannot guarantee 13s live state",
+        "does not invent unseen objects"
+      ]
+    }
+  ],
+  "order": "Case order fixed; reverse conditions for odd indices, rotate the two seeds by index. One nonthinking16token warmup excluded.",
+  "decision_gate": "Do not deploy if historical triage/constraints still fail, important new-case regressions occur, final answer is missing or reasoning leaks into speech. Report final-answer latency and length stops; one short development experiment cannot establish overall superiority.",
+  "parameters_note": "Same sampler across modes isolates the mode flag; it is not a claim of each mode optimal settings. Max1024includes reasoning and answer. Generation budget is identical across four conditions; thought can consume final-answer budget.",
+  "parent_manifest_sha256": "40cf30d070ccb72bbff8eeb18db675b43be5228d42c6ae41c085a58087e383fe"
+}
