@@ -1,0 +1,4813 @@
+{
+  "scope": "headless Chrome WebAudio scheduling and 3D rendering; no physical sound or human quality score",
+  "application_revision": "d4a22411667df90c64c726ee04799d19f729701e",
+  "tts_worker_revision": "88620f9cf78c21f59e1e6226ffce31850a1ae311",
+  "reference_revision": "b01840e8e4fd9753743a6d0466cd73ae1d634a68",
+  "browser_profile": "streamingtalker",
+  "browser_reference_id": "voice_04",
+  "production_gender_matching_claim": false,
+  "backend_cases": [
+    {
+      "configured_role": "male",
+      "public_voice_id": "voice_03",
+      "speaker_gender_not_verified": true,
+      "first_pcm_s": 1.2868916420266032,
+      "total_s": 1.3501122860470787,
+      "bytes": 116598,
+      "duration_s": 2.429125,
+      "pcm_sha256": "d0d0f8e0a19f3c44f625fe204244cf28eb446ac1382cfb818f314a1e22a56921",
+      "status": "passed"
+    },
+    {
+      "configured_role": "female",
+      "public_voice_id": "voice_04",
+      "speaker_gender_not_verified": true,
+      "first_pcm_s": 0.6853927619522437,
+      "total_s": 0.7506203909870237,
+      "bytes": 112696,
+      "duration_s": 2.3478333333333334,
+      "pcm_sha256": "972b62471be14c0a85b19ef33e187429590aeee27f8ced764263b28b279e0546",
+      "status": "passed"
+    }
+  ],
+  "cases": [
+    {
+      "case": "short",
+      "input_text": "请只回复：你好，欢迎体验实时语音对话。",
+      "status": "passed",
+      "observed_first_playback_s": 1.2170509250136092,
+      "event_counts": {
+        "round_begin": 1,
+        "sent_text": 1,
+        "transcript": 1,
+        "reset": 1,
+        "assistant_text": 7,
+        "avatar_meta": 1,
+        "media": 73,
+        "sent_playback": 75,
+        "clip_end": 1
+      },
+      "scheduled_audio_sources": 73,
+      "ended_sources": 73,
+      "stopped_sources": 0,
+      "scheduled_duration_s": 2.429125,
+      "after": {
+        "generation": 1,
+        "renderedFrames": 73,
+        "droppedStale": 0,
+        "playing": false,
+        "pendingFrames": 0,
+        "queuedSeconds": 0,
+        "scheduledSources": 0,
+        "scheduledSamples": 58299,
+        "audioTime": 3.525333333333333,
+        "connected": true,
+        "microphone": false,
+        "idle": true,
+        "meshReady": false,
+        "mouthOpening": null
+      }
+    },
+    {
+      "case": "interrupt",
+      "input_text": "请用三句话介绍语音 agent 的工作过程。",
+      "status": "passed",
+      "observed_first_playback_s": 2.8258642490254715,
+      "event_counts": {
+        "round_begin": 1,
+        "sent_text": 1,
+        "transcript": 1,
+        "reset": 2,
+        "assistant_text": 47,
+        "avatar_meta": 1,
+        "media": 18,
+        "sent_playback": 5,
+        "sent_interrupt": 1
+      },
+      "scheduled_audio_sources": 15,
+      "ended_sources": 15,
+      "stopped_sources": 11,
+      "scheduled_duration_s": 0.5,
+      "after": {
+        "generation": 3,
+        "renderedFrames": 78,
+        "droppedStale": 1,
+        "playing": false,
+        "pendingFrames": 0,
+        "queuedSeconds": 0,
+        "scheduledSources": 0,
+        "scheduledSamples": 70299,
+        "audioTime": 6.8853333333333335,
+        "connected": true,
+        "microphone": false,
+        "idle": true,
+        "meshReady": false,
+        "mouthOpening": null
+      },
+      "immediately_after_interrupt": {
+        "generation": 2,
+        "renderedFrames": 78,
+        "droppedStale": 1,
+        "playing": false,
+        "pendingFrames": 0,
+        "queuedSeconds": 0,
+        "scheduledSources": 0,
+        "scheduledSamples": 70299,
+        "audioTime": 6.384,
+        "connected": true,
+        "microphone": false,
+        "idle": true,
+        "meshReady": false,
+        "mouthOpening": null
+      }
+    },
+    {
+      "case": "recovery",
+      "input_text": "请只回复：已经恢复，可以继续对话。",
+      "status": "passed",
+      "observed_first_playback_s": 1.820199133013375,
+      "event_counts": {
+        "round_begin": 1,
+        "sent_text": 1,
+        "transcript": 1,
+        "reset": 1,
+        "assistant_text": 6,
+        "avatar_meta": 1,
+        "media": 57,
+        "sent_playback": 59,
+        "clip_end": 1
+      },
+      "scheduled_audio_sources": 57,
+      "ended_sources": 57,
+      "stopped_sources": 0,
+      "scheduled_duration_s": 1.8718333333333332,
+      "after": {
+        "generation": 4,
+        "renderedFrames": 135,
+        "droppedStale": 1,
+        "playing": false,
+        "pendingFrames": 0,
+        "queuedSeconds": 0,
+        "scheduledSources": 0,
+        "scheduledSamples": 115223,
+        "audioTime": 10.544,
+        "connected": true,
+        "microphone": false,
+        "idle": true,
+        "meshReady": false,
+        "mouthOpening": null
+      }
+    }
+  ],
+  "transcript": [
+    {
+      "role": "user",
+      "text": "请只回复：你好，欢迎体验实时语音对话。",
+      "status": "input"
+    },
+    {
+      "role": "assistant",
+      "text": "你好，欢迎体验实时语音对话。",
+      "generated_text": "你好，欢迎体验实时语音对话。",
+      "heard_text": "你好，欢迎体验实时语音对话。",
+      "status": "heard"
+    },
+    {
+      "role": "user",
+      "text": "请用三句话介绍语音 agent 的工作过程。",
+      "status": "input"
+    },
+    {
+      "role": "assistant",
+      "text": "语音 agent 的工作过程包括：首先接收用户的语音输入，然后通过 ASR（自动语音识别）将语音转换为文本。接着，LLM（大语言模型）处理文本并生成响应内容。最后，TTS（文本到语音）将生成的文本转换为语音输出给用户。",
+      "generated_text": "语音 agent 的工作过程包括：首先接收用户的语音输入，然后通过 ASR（自动语音识别）将语音转换为文本。接着，LLM（大语言模型）处理文本并生成响应内容。最后，TTS（文本到语音）将生成的文本转换为语音输出给用户。",
+      "heard_text": "",
+      "status": "interrupted"
+    },
+    {
+      "role": "user",
+      "text": "请只回复：已经恢复，可以继续对话。",
+      "status": "input"
+    },
+    {
+      "role": "assistant",
+      "text": "已经恢复，可以继续对话。",
+      "generated_text": "已经恢复，可以继续对话。",
+      "heard_text": "已经恢复，可以继续对话。",
+      "status": "heard"
+    }
+  ],
+  "llm_history": [
+    {
+      "role": "user",
+      "content": "请只回复：你好，欢迎体验实时语音对话。"
+    },
+    {
+      "role": "assistant",
+      "content": "你好，欢迎体验实时语音对话。"
+    },
+    {
+      "role": "user",
+      "content": "请用三句话介绍语音 agent 的工作过程。"
+    },
+    {
+      "role": "assistant",
+      "content": "[上轮回复已中断；后续内容未确认播放，请勿假定用户已经听到。]"
+    },
+    {
+      "role": "user",
+      "content": "请只回复：已经恢复，可以继续对话。"
+    },
+    {
+      "role": "assistant",
+      "content": "已经恢复，可以继续对话。"
+    }
+  ],
+  "cleanup": [
+    {
+      "name": "chrome",
+      "exit_code": 0,
+      "forced_kill": false
+    },
+    {
+      "name": "application",
+      "exit_code": -15,
+      "forced_kill": false
+    },
+    {
+      "name": "remote",
+      "exit_code": 0,
+      "forced_kill": false
+    }
+  ],
+  "worker_cleanup": {
+    "worker_exit_code": -15,
+    "free_before_mib": 18801,
+    "free_after_mib": 18801,
+    "stop_reason": "supervisor stdin closed"
+  },
+  "daily_app_idle_after": true,
+  "avatar_idle_after": true,
+  "browser_runtime_exceptions": 0,
+  "after_disconnect": {
+    "generation": 4,
+    "renderedFrames": 135,
+    "droppedStale": 1,
+    "playing": false,
+    "pendingFrames": 0,
+    "queuedSeconds": 0,
+    "scheduledSources": 0,
+    "scheduledSamples": 115223,
+    "audioTime": 10.709333333333333,
+    "connected": false,
+    "microphone": false,
+    "idle": true,
+    "meshReady": false,
+    "mouthOpening": null
+  },
+  "measurement_notes": [
+    "One session, three text turns, no ASR input or physical microphone/speaker measurement.",
+    "WebAudio ended events prove browser scheduling lifecycle, not actual audible sound.",
+    "First playback is host-polled rendered frame plus scheduled source after sendText; includes polling and CDP overhead. Not TTFA, P95 or speech-end latency.",
+    "Early stopping of scheduled audio buffers is not proof of sub-millisecond physical silence.",
+    "Two direct client roles map to public example IDs without claiming speaker gender.",
+    "Headless Chrome uses software WebGL; screenshots and original raw media remain private."
+  ],
+  "probe_events": [
+    {
+      "type": "ready",
+      "atMs": 2753.7000000476837,
+      "round": 0,
+      "generation": 0
+    },
+    {
+      "type": "round_begin",
+      "atMs": 2852,
+      "round": 1,
+      "label": "short"
+    },
+    {
+      "type": "sent_text",
+      "atMs": 2855,
+      "round": 1,
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "transcript",
+      "atMs": 2858.3000000715256,
+      "round": 1,
+      "text": "请只回复：你好，欢迎体验实时语音对话。"
+    },
+    {
+      "type": "reset",
+      "atMs": 2860.100000023842,
+      "round": 1,
+      "generation": 1
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 3080.600000023842,
+      "round": 1,
+      "generation": 1
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 3134.9000000953674,
+      "round": 1,
+      "generation": 1
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 3157.4000000953674,
+      "round": 1,
+      "generation": 1
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 3180.2000000476837,
+      "round": 1,
+      "generation": 1
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 3201.600000023842,
+      "round": 1,
+      "generation": 1
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 3223.2000000476837,
+      "round": 1,
+      "generation": 1
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 3266.9000000953674,
+      "round": 1,
+      "generation": 1
+    },
+    {
+      "type": "avatar_meta",
+      "atMs": 3311.9000000953674,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1"
+    },
+    {
+      "type": "media",
+      "atMs": 4002.100000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 0,
+      "startSample": 0
+    },
+    {
+      "type": "media",
+      "atMs": 4022.2000000476837,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 1,
+      "startSample": 800
+    },
+    {
+      "type": "media",
+      "atMs": 4028.8000000715256,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 2,
+      "startSample": 1600
+    },
+    {
+      "type": "media",
+      "atMs": 4033.2000000476837,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 3,
+      "startSample": 2400
+    },
+    {
+      "type": "media",
+      "atMs": 4037.7000000476837,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 4,
+      "startSample": 3200
+    },
+    {
+      "type": "media",
+      "atMs": 4041.7000000476837,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 5,
+      "startSample": 4000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4069.3000000715256,
+      "round": 1,
+      "generation": 1,
+      "state": "started",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4070.5,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 6,
+      "startSample": 4800
+    },
+    {
+      "type": "media",
+      "atMs": 4073.7000000476837,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 7,
+      "startSample": 5600
+    },
+    {
+      "type": "media",
+      "atMs": 4076.9000000953674,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 8,
+      "startSample": 6400
+    },
+    {
+      "type": "media",
+      "atMs": 4081.4000000953674,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 9,
+      "startSample": 7200
+    },
+    {
+      "type": "media",
+      "atMs": 4087.2000000476837,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 10,
+      "startSample": 8000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4096.300000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4096.5,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 11,
+      "startSample": 8800
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4123.200000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4148.100000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 12,
+      "startSample": 9600
+    },
+    {
+      "type": "media",
+      "atMs": 4152,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 13,
+      "startSample": 10400
+    },
+    {
+      "type": "media",
+      "atMs": 4156.100000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 14,
+      "startSample": 11200
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4160.300000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4160.5,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 15,
+      "startSample": 12000
+    },
+    {
+      "type": "media",
+      "atMs": 4166.800000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 16,
+      "startSample": 12800
+    },
+    {
+      "type": "media",
+      "atMs": 4171,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 17,
+      "startSample": 13600
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4193.200000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4221.800000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 18,
+      "startSample": 14400
+    },
+    {
+      "type": "media",
+      "atMs": 4226.600000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 19,
+      "startSample": 15200
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4231.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4231.700000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 20,
+      "startSample": 16000
+    },
+    {
+      "type": "media",
+      "atMs": 4234.800000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 21,
+      "startSample": 16800
+    },
+    {
+      "type": "media",
+      "atMs": 4237.900000095367,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 22,
+      "startSample": 17600
+    },
+    {
+      "type": "media",
+      "atMs": 4240.800000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 23,
+      "startSample": 18400
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4262.800000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4294.600000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 24,
+      "startSample": 19200
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4298,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4298.200000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 25,
+      "startSample": 20000
+    },
+    {
+      "type": "media",
+      "atMs": 4301.600000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 26,
+      "startSample": 20800
+    },
+    {
+      "type": "media",
+      "atMs": 4305.200000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 27,
+      "startSample": 21600
+    },
+    {
+      "type": "media",
+      "atMs": 4310.300000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 28,
+      "startSample": 22400
+    },
+    {
+      "type": "media",
+      "atMs": 4314.400000095367,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 29,
+      "startSample": 23200
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4320.700000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4355.5,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4367.400000095367,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 30,
+      "startSample": 24000
+    },
+    {
+      "type": "media",
+      "atMs": 4374.400000095367,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 31,
+      "startSample": 24800
+    },
+    {
+      "type": "media",
+      "atMs": 4378.700000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 32,
+      "startSample": 25600
+    },
+    {
+      "type": "media",
+      "atMs": 4382.300000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 33,
+      "startSample": 26400
+    },
+    {
+      "type": "media",
+      "atMs": 4385.800000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 34,
+      "startSample": 27200
+    },
+    {
+      "type": "media",
+      "atMs": 4389.200000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 35,
+      "startSample": 28000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4393.700000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4425,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4440.300000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 36,
+      "startSample": 28800
+    },
+    {
+      "type": "media",
+      "atMs": 4447.200000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 37,
+      "startSample": 29600
+    },
+    {
+      "type": "media",
+      "atMs": 4452.800000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 38,
+      "startSample": 30400
+    },
+    {
+      "type": "media",
+      "atMs": 4456.900000095367,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 39,
+      "startSample": 31200
+    },
+    {
+      "type": "media",
+      "atMs": 4461.100000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 40,
+      "startSample": 32000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4464.400000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4464.5,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 41,
+      "startSample": 32800
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4494.700000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4514.200000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 42,
+      "startSample": 33600
+    },
+    {
+      "type": "media",
+      "atMs": 4518,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 43,
+      "startSample": 34400
+    },
+    {
+      "type": "media",
+      "atMs": 4522.200000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 44,
+      "startSample": 35200
+    },
+    {
+      "type": "media",
+      "atMs": 4527.200000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 45,
+      "startSample": 36000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4533.200000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4535.900000095367,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 46,
+      "startSample": 36800
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4553,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4569.700000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 47,
+      "startSample": 37600
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4587.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4603.100000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 48,
+      "startSample": 38400
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4622.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4636,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 49,
+      "startSample": 39200
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4657.5,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4669.700000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 50,
+      "startSample": 40000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4692.100000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4704.600000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 51,
+      "startSample": 40800
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4727,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4735.100000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 52,
+      "startSample": 41600
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4750.200000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4769.800000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 53,
+      "startSample": 42400
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4796.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4802.5,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 54,
+      "startSample": 43200
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4819.800000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4841.400000095367,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 55,
+      "startSample": 44000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4854.900000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4878.300000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 56,
+      "startSample": 44800
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4895.300000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4911,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 57,
+      "startSample": 45600
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4924.700000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4943.5,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 58,
+      "startSample": 46400
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4959.200000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 4978.900000095367,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 59,
+      "startSample": 47200
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 4994.300000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5010.400000095367,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 60,
+      "startSample": 48000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5021.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5041.800000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 61,
+      "startSample": 48800
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5063.900000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5075.700000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 62,
+      "startSample": 49600
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5088.400000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5108.5,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 63,
+      "startSample": 50400
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5121.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5141.100000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 64,
+      "startSample": 51200
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5156.800000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5177.300000071526,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 65,
+      "startSample": 52000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5191.5,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5208.100000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 66,
+      "startSample": 52800
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5226.300000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5240.600000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 67,
+      "startSample": 53600
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5261.200000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5275.400000095367,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 68,
+      "startSample": 54400
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5284.200000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5307.700000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 69,
+      "startSample": 55200
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5330.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5341.200000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 70,
+      "startSample": 56000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5354.100000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5375.600000023842,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 71,
+      "startSample": 56800
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5388.900000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 5408,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1",
+      "frameIndex": 72,
+      "startSample": 57600
+    },
+    {
+      "type": "clip_end",
+      "atMs": 5419.700000047684,
+      "round": 1,
+      "generation": 1,
+      "clipId": "1"
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5423.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5458.700000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5493.300000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5528.300000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5551.400000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5586.400000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5620.800000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5656.100000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5691,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5725.400000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5760.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5783.800000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5818.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5853.200000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5888.400000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5922.900000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5957.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 5992.700000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6027.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6050.700000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6085.5,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6120.300000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6155,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6190,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6224.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6259.900000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6294.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6317.800000071526,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6352.5,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6387.400000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6421.900000095367,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6456.700000047684,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6491.600000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 6493.100000023842,
+      "round": 1,
+      "generation": 1,
+      "state": "ended",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "round_begin",
+      "atMs": 6538.5,
+      "round": 2,
+      "label": "interrupt"
+    },
+    {
+      "type": "sent_text",
+      "atMs": 6541.5,
+      "round": 2,
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "transcript",
+      "atMs": 6543.600000023842,
+      "round": 2,
+      "text": "请用三句话介绍语音 agent 的工作过程。"
+    },
+    {
+      "type": "reset",
+      "atMs": 6544.900000095367,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 6732,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 6754,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 6775,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 6818.300000071526,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 6841.5,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 6862.5,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 6904.400000095367,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 6925.800000071526,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 6946.600000023842,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 6970.700000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 6997.200000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7040.900000095367,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7062.200000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7248.400000095367,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7313.300000071526,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7334.700000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7357,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7399.700000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7421.100000023842,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7442.700000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7464.600000023842,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7486.200000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7529.600000023842,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "avatar_meta",
+      "atMs": 7649.400000095367,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2"
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7651.200000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7656.5,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7677.900000095367,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7720.700000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7741.900000095367,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7763.5,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7785.100000023842,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7806.700000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7828.700000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7871.5,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7975.5,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 7996.700000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 8017.900000095367,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 8061.200000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 8082.200000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 8103.5,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 8125,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 8146.800000071526,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 8168,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 8192.5,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 8215.200000047684,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 8239.100000023842,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 8260.900000095367,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 8304.900000095367,
+      "round": 2,
+      "generation": 2
+    },
+    {
+      "type": "media",
+      "atMs": 9191.600000023842,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 0,
+      "startSample": 0
+    },
+    {
+      "type": "media",
+      "atMs": 9196,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 1,
+      "startSample": 800
+    },
+    {
+      "type": "media",
+      "atMs": 9199.400000095367,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 2,
+      "startSample": 1600
+    },
+    {
+      "type": "media",
+      "atMs": 9202.700000047684,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 3,
+      "startSample": 2400
+    },
+    {
+      "type": "media",
+      "atMs": 9207.900000095367,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 4,
+      "startSample": 3200
+    },
+    {
+      "type": "media",
+      "atMs": 9213.700000047684,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 5,
+      "startSample": 4000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 9231.800000071526,
+      "round": 2,
+      "generation": 2,
+      "state": "started",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 9254.700000047684,
+      "round": 2,
+      "generation": 2,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 9273.800000071526,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 6,
+      "startSample": 4800
+    },
+    {
+      "type": "media",
+      "atMs": 9276.600000023842,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 7,
+      "startSample": 5600
+    },
+    {
+      "type": "media",
+      "atMs": 9279.700000047684,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 8,
+      "startSample": 6400
+    },
+    {
+      "type": "media",
+      "atMs": 9283.200000047684,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 9,
+      "startSample": 7200
+    },
+    {
+      "type": "media",
+      "atMs": 9289.100000023842,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 10,
+      "startSample": 8000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 9293.800000071526,
+      "round": 2,
+      "generation": 2,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 9294.100000023842,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 11,
+      "startSample": 8800
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 9324,
+      "round": 2,
+      "generation": 2,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 9346.900000095367,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 12,
+      "startSample": 9600
+    },
+    {
+      "type": "media",
+      "atMs": 9351.600000023842,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 13,
+      "startSample": 10400
+    },
+    {
+      "type": "media",
+      "atMs": 9356.900000095367,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 14,
+      "startSample": 11200
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 9362,
+      "round": 2,
+      "generation": 2,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 9362.300000071526,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 15,
+      "startSample": 12000
+    },
+    {
+      "type": "media",
+      "atMs": 9365.900000095367,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 16,
+      "startSample": 12800
+    },
+    {
+      "type": "sent_interrupt",
+      "atMs": 9370.900000095367,
+      "round": 2,
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 9371.100000023842,
+      "round": 2,
+      "generation": 2,
+      "clipId": "2",
+      "frameIndex": 17,
+      "startSample": 13600
+    },
+    {
+      "type": "reset",
+      "atMs": 9372.5,
+      "round": 2,
+      "generation": 3
+    },
+    {
+      "type": "round_begin",
+      "atMs": 9889.900000095367,
+      "round": 3,
+      "label": "recovery"
+    },
+    {
+      "type": "sent_text",
+      "atMs": 9891,
+      "round": 3,
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "transcript",
+      "atMs": 9892.200000047684,
+      "round": 3,
+      "text": "请只回复：已经恢复，可以继续对话。"
+    },
+    {
+      "type": "reset",
+      "atMs": 9936.900000095367,
+      "round": 3,
+      "generation": 4
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 10134.700000047684,
+      "round": 3,
+      "generation": 4
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 10165.700000047684,
+      "round": 3,
+      "generation": 4
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 10209.400000095367,
+      "round": 3,
+      "generation": 4
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 10230.300000071526,
+      "round": 3,
+      "generation": 4
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 10252.700000047684,
+      "round": 3,
+      "generation": 4
+    },
+    {
+      "type": "assistant_text",
+      "atMs": 10303.400000095367,
+      "round": 3,
+      "generation": 4
+    },
+    {
+      "type": "avatar_meta",
+      "atMs": 10996.600000023842,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3"
+    },
+    {
+      "type": "media",
+      "atMs": 11541,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 0,
+      "startSample": 0
+    },
+    {
+      "type": "media",
+      "atMs": 11547.800000071526,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 1,
+      "startSample": 800
+    },
+    {
+      "type": "media",
+      "atMs": 11552.5,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 2,
+      "startSample": 1600
+    },
+    {
+      "type": "media",
+      "atMs": 11555.400000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 3,
+      "startSample": 2400
+    },
+    {
+      "type": "media",
+      "atMs": 11558.300000071526,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 4,
+      "startSample": 3200
+    },
+    {
+      "type": "media",
+      "atMs": 11561.400000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 5,
+      "startSample": 4000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11596.200000047684,
+      "round": 3,
+      "generation": 4,
+      "state": "started",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11611.100000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 11616.700000047684,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 6,
+      "startSample": 4800
+    },
+    {
+      "type": "media",
+      "atMs": 11620.100000023842,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 7,
+      "startSample": 5600
+    },
+    {
+      "type": "media",
+      "atMs": 11623.300000071526,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 8,
+      "startSample": 6400
+    },
+    {
+      "type": "media",
+      "atMs": 11626.900000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 9,
+      "startSample": 7200
+    },
+    {
+      "type": "media",
+      "atMs": 11631.200000047684,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 10,
+      "startSample": 8000
+    },
+    {
+      "type": "media",
+      "atMs": 11635,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 11,
+      "startSample": 8800
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11657.400000095367,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11680.600000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 11690.900000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 12,
+      "startSample": 9600
+    },
+    {
+      "type": "media",
+      "atMs": 11695.600000023842,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 13,
+      "startSample": 10400
+    },
+    {
+      "type": "media",
+      "atMs": 11698.5,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 14,
+      "startSample": 11200
+    },
+    {
+      "type": "media",
+      "atMs": 11701.5,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 15,
+      "startSample": 12000
+    },
+    {
+      "type": "media",
+      "atMs": 11705.100000023842,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 16,
+      "startSample": 12800
+    },
+    {
+      "type": "media",
+      "atMs": 11711.200000047684,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 17,
+      "startSample": 13600
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11715.600000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11750.5,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 11775.300000071526,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 18,
+      "startSample": 14400
+    },
+    {
+      "type": "media",
+      "atMs": 11780.100000023842,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 19,
+      "startSample": 15200
+    },
+    {
+      "type": "media",
+      "atMs": 11783.900000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 20,
+      "startSample": 16000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11787.200000047684,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 11791.600000023842,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 21,
+      "startSample": 16800
+    },
+    {
+      "type": "media",
+      "atMs": 11796.400000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 22,
+      "startSample": 17600
+    },
+    {
+      "type": "media",
+      "atMs": 11800.5,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 23,
+      "startSample": 18400
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11819.900000095367,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11854.900000095367,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 11855.900000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 24,
+      "startSample": 19200
+    },
+    {
+      "type": "media",
+      "atMs": 11860.700000047684,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 25,
+      "startSample": 20000
+    },
+    {
+      "type": "media",
+      "atMs": 11865.600000023842,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 26,
+      "startSample": 20800
+    },
+    {
+      "type": "media",
+      "atMs": 11870.5,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 27,
+      "startSample": 21600
+    },
+    {
+      "type": "media",
+      "atMs": 11874.400000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 28,
+      "startSample": 22400
+    },
+    {
+      "type": "media",
+      "atMs": 11877.900000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 29,
+      "startSample": 23200
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11881.800000071526,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11924.600000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 11946.300000071526,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 30,
+      "startSample": 24000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11951.100000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 11951.400000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 31,
+      "startSample": 24800
+    },
+    {
+      "type": "media",
+      "atMs": 11955.700000047684,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 32,
+      "startSample": 25600
+    },
+    {
+      "type": "media",
+      "atMs": 11959.800000071526,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 33,
+      "startSample": 26400
+    },
+    {
+      "type": "media",
+      "atMs": 11964.400000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 34,
+      "startSample": 27200
+    },
+    {
+      "type": "media",
+      "atMs": 11967.200000047684,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 35,
+      "startSample": 28000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 11982.600000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12017.5,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 12018.5,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 36,
+      "startSample": 28800
+    },
+    {
+      "type": "media",
+      "atMs": 12023.400000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 37,
+      "startSample": 29600
+    },
+    {
+      "type": "media",
+      "atMs": 12027.700000047684,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 38,
+      "startSample": 30400
+    },
+    {
+      "type": "media",
+      "atMs": 12031.900000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 39,
+      "startSample": 31200
+    },
+    {
+      "type": "media",
+      "atMs": 12035.900000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 40,
+      "startSample": 32000
+    },
+    {
+      "type": "media",
+      "atMs": 12040.300000071526,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 41,
+      "startSample": 32800
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12052.200000047684,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12087.200000047684,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 12103.5,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 42,
+      "startSample": 33600
+    },
+    {
+      "type": "media",
+      "atMs": 12108.100000023842,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 43,
+      "startSample": 34400
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12113.5,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 12113.800000071526,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 44,
+      "startSample": 35200
+    },
+    {
+      "type": "media",
+      "atMs": 12117.800000071526,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 45,
+      "startSample": 36000
+    },
+    {
+      "type": "media",
+      "atMs": 12121.800000071526,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 46,
+      "startSample": 36800
+    },
+    {
+      "type": "media",
+      "atMs": 12125.900000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 47,
+      "startSample": 37600
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12145.200000047684,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12180,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 12190.400000095367,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 48,
+      "startSample": 38400
+    },
+    {
+      "type": "media",
+      "atMs": 12195.600000023842,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 49,
+      "startSample": 39200
+    },
+    {
+      "type": "media",
+      "atMs": 12209.100000023842,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 50,
+      "startSample": 40000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12215.600000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 12243.700000047684,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 51,
+      "startSample": 40800
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12254,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 12277.200000047684,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 52,
+      "startSample": 41600
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12284.800000071526,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 12315.600000023842,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 53,
+      "startSample": 42400
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12324,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 12344.5,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 54,
+      "startSample": 43200
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12354.100000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12377.600000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 12380.300000071526,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 55,
+      "startSample": 44000
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12412.100000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "media",
+      "atMs": 12415,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3",
+      "frameIndex": 56,
+      "startSample": 44800
+    },
+    {
+      "type": "clip_end",
+      "atMs": 12427.100000023842,
+      "round": 3,
+      "generation": 4,
+      "clipId": "3"
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12447,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12481.800000071526,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12516.600000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12551.300000071526,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12586.100000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12621,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12644.300000071526,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12679.200000047684,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12714,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12748.800000071526,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12783.600000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12818.5,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12853,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12887.900000095367,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12911.300000071526,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12946,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 12980.900000095367,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13027.800000071526,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13062.400000095367,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13097.200000047684,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13132.100000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13155.100000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13189.900000095367,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13225,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13259.700000047684,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13294.5,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13329.300000071526,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13352.400000095367,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13398.900000095367,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13422,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13456.900000095367,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13469.300000071526,
+      "round": 3,
+      "generation": 4,
+      "state": "progress",
+      "lastActivePacketMs": null
+    },
+    {
+      "type": "sent_playback",
+      "atMs": 13483.100000023842,
+      "round": 3,
+      "generation": 4,
+      "state": "ended",
+      "lastActivePacketMs": null
+    }
+  ],
+  "audio_source_observations": [
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4037.4000000953674,
+      "scheduledMs": 4062.4000000953674,
+      "audioStart": 1.0596666666666665,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4096.300000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4037.5,
+      "scheduledMs": 4095.8333333333335,
+      "audioStart": 1.093,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4123.300000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4037.5,
+      "scheduledMs": 4129.166666666667,
+      "audioStart": 1.1263333333333334,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4160.400000095367
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4037.600000023842,
+      "scheduledMs": 4162.600000023842,
+      "audioStart": 1.1596666666666668,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4193.200000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4041.5,
+      "scheduledMs": 4199.833333333334,
+      "audioStart": 1.1930000000000003,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4231.600000023842
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4045.2000000476837,
+      "scheduledMs": 4220.866666714351,
+      "audioStart": 1.2263333333333337,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4262.900000095367
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4073.5,
+      "scheduledMs": 4261.166666666667,
+      "audioStart": 1.2596666666666672,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4298
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4076.7000000476837,
+      "scheduledMs": 4287.033333381018,
+      "audioStart": 1.2930000000000006,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4320.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4079.600000023842,
+      "scheduledMs": 4323.266666690509,
+      "audioStart": 1.326333333333334,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4355.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4085.3000000715256,
+      "scheduledMs": 4362.3000000715265,
+      "audioStart": 1.3596666666666675,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4393.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4093.8000000715256,
+      "scheduledMs": 4393.466666738193,
+      "audioStart": 1.393000000000001,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4425
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4102.400000095367,
+      "scheduledMs": 4419.400000095368,
+      "audioStart": 1.4263333333333343,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4464.5
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4151.400000095367,
+      "scheduledMs": 4459.066666762035,
+      "audioStart": 1.4596666666666678,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4494.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4155.5,
+      "scheduledMs": 4496.500000000001,
+      "audioStart": 1.4930000000000012,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4533.300000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4174.100000023842,
+      "scheduledMs": 4521.76666669051,
+      "audioStart": 1.5263333333333347,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4553
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4213.200000047684,
+      "scheduledMs": 4562.2000000476855,
+      "audioStart": 1.559666666666668,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4587.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4240.600000023842,
+      "scheduledMs": 4585.600000023844,
+      "audioStart": 1.5930000000000015,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4622.600000023842
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4288.100000023842,
+      "scheduledMs": 4623.76666669051,
+      "audioStart": 1.626333333333335,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4657.5
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4310.100000023842,
+      "scheduledMs": 4652.433333357177,
+      "audioStart": 1.6596666666666684,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4692.100000023842
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4348.200000047684,
+      "scheduledMs": 4691.8666667143525,
+      "audioStart": 1.6930000000000018,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4727
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4382.100000023842,
+      "scheduledMs": 4721.766666690511,
+      "audioStart": 1.7263333333333353,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4750.200000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4423.100000023842,
+      "scheduledMs": 4764.100000023844,
+      "audioStart": 1.7596666666666687,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4796.600000023842
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4438.100000023842,
+      "scheduledMs": 4785.766666690511,
+      "audioStart": 1.7930000000000021,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4819.800000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4483.100000023842,
+      "scheduledMs": 4832.100000023844,
+      "audioStart": 1.8263333333333356,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4855
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4513.200000047684,
+      "scheduledMs": 4858.200000047686,
+      "audioStart": 1.859666666666669,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4895.300000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4543.100000023842,
+      "scheduledMs": 4889.433333357178,
+      "audioStart": 1.8930000000000025,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4924.800000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4588.100000023842,
+      "scheduledMs": 4919.766666690512,
+      "audioStart": 1.926333333333336,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4959.300000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4618.100000023842,
+      "scheduledMs": 4961.766666690512,
+      "audioStart": 1.9596666666666693,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 4994.400000095367
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4648.100000023842,
+      "scheduledMs": 4987.766666690512,
+      "audioStart": 1.9930000000000028,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5021.600000023842
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4693.100000023842,
+      "scheduledMs": 5018.100000023845,
+      "audioStart": 2.026333333333336,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5064
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4708.900000095367,
+      "scheduledMs": 5056.566666762037,
+      "audioStart": 2.0596666666666694,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5088.5
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4739.100000023842,
+      "scheduledMs": 5088.100000023845,
+      "audioStart": 2.0930000000000026,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5121.600000023842
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4783.100000023842,
+      "scheduledMs": 5128.100000023845,
+      "audioStart": 2.126333333333336,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5156.900000095367
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4813.100000023842,
+      "scheduledMs": 5154.100000023845,
+      "audioStart": 2.159666666666669,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5191.5
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4847.800000071526,
+      "scheduledMs": 5190.133333404861,
+      "audioStart": 2.1930000000000023,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5226.400000095367
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4893.400000095367,
+      "scheduledMs": 5221.066666762036,
+      "audioStart": 2.2263333333333355,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5261.300000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4922,
+      "scheduledMs": 5261.666666666669,
+      "audioStart": 2.2596666666666687,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5284.200000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4951.400000095367,
+      "scheduledMs": 5287.066666762036,
+      "audioStart": 2.293000000000002,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5330.800000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 4978.300000071526,
+      "scheduledMs": 5325.966666738194,
+      "audioStart": 2.326333333333335,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5354.100000023842
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5008.300000071526,
+      "scheduledMs": 5351.966666738193,
+      "audioStart": 2.3596666666666684,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5389
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5052.600000023842,
+      "scheduledMs": 5386.933333357177,
+      "audioStart": 2.3930000000000016,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5423.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5087.300000071526,
+      "scheduledMs": 5417.63333340486,
+      "audioStart": 2.426333333333335,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5458.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5114.800000071526,
+      "scheduledMs": 5457.13333340486,
+      "audioStart": 2.459666666666668,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5493.400000095367
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5147.300000071526,
+      "scheduledMs": 5485.63333340486,
+      "audioStart": 2.493000000000001,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5528.300000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5188.700000047684,
+      "scheduledMs": 5528.366666714352,
+      "audioStart": 2.5263333333333344,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5551.5
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5219,
+      "scheduledMs": 5554.666666666668,
+      "audioStart": 2.5596666666666676,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5586.5
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5249.300000071526,
+      "scheduledMs": 5586.3000000715265,
+      "audioStart": 2.593000000000001,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5620.900000095367
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5283,
+      "scheduledMs": 5626.666666666668,
+      "audioStart": 2.626333333333334,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5656.200000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5311.400000095367,
+      "scheduledMs": 5656.400000095368,
+      "audioStart": 2.6596666666666673,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5691
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5347.400000095367,
+      "scheduledMs": 5688.400000095368,
+      "audioStart": 2.6930000000000005,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5725.5
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5386.900000095367,
+      "scheduledMs": 5729.233333428701,
+      "audioStart": 2.7263333333333337,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5760.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5419.600000023842,
+      "scheduledMs": 5757.933333357176,
+      "audioStart": 2.759666666666667,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5783.900000095367
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5458.200000047684,
+      "scheduledMs": 5797.866666714351,
+      "audioStart": 2.793,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5818.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5473.100000023842,
+      "scheduledMs": 5819.433333357175,
+      "audioStart": 2.8263333333333334,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5853.400000095367
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5518.100000023842,
+      "scheduledMs": 5855.100000023842,
+      "audioStart": 2.8596666666666666,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5888.5
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5548.200000047684,
+      "scheduledMs": 5891.866666714351,
+      "audioStart": 2.893,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5923
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5578.300000071526,
+      "scheduledMs": 5923.300000071526,
+      "audioStart": 2.926333333333333,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5957.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5623.300000071526,
+      "scheduledMs": 5953.633333404859,
+      "audioStart": 2.9596666666666662,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 5992.800000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5653.400000095367,
+      "scheduledMs": 5995.7333334287005,
+      "audioStart": 2.9929999999999994,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6027.600000023842
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5668.400000095367,
+      "scheduledMs": 6017.4000000953665,
+      "audioStart": 3.0263333333333327,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6050.800000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5728.200000047684,
+      "scheduledMs": 6051.86666671435,
+      "audioStart": 3.059666666666666,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6085.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5743.200000047684,
+      "scheduledMs": 6089.533333381016,
+      "audioStart": 3.092999999999999,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6120.300000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5773.300000071526,
+      "scheduledMs": 6120.966666738192,
+      "audioStart": 3.1263333333333323,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6155.100000023842
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5818.400000095367,
+      "scheduledMs": 6151.4000000953665,
+      "audioStart": 3.1596666666666655,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6190
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5848.300000071526,
+      "scheduledMs": 6187.966666738191,
+      "audioStart": 3.1929999999999987,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6224.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5878.300000071526,
+      "scheduledMs": 6219.300000071524,
+      "audioStart": 3.226333333333332,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6259.900000095367
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5923.300000071526,
+      "scheduledMs": 6249.633333404858,
+      "audioStart": 3.259666666666665,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6294.700000047684
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5938.300000071526,
+      "scheduledMs": 6287.300000071524,
+      "audioStart": 3.2929999999999984,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6317.900000095367
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 5983.300000071526,
+      "scheduledMs": 6317.633333404857,
+      "audioStart": 3.3263333333333316,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6352.600000023842
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 6013.400000095367,
+      "scheduledMs": 6359.733333428699,
+      "audioStart": 3.359666666666665,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6387.400000095367
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 6043.400000095367,
+      "scheduledMs": 6385.733333428699,
+      "audioStart": 3.392999999999998,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6422
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 6088.400000095367,
+      "scheduledMs": 6421.400000095366,
+      "audioStart": 3.4263333333333312,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6456.800000071526
+    },
+    {
+      "round": 1,
+      "generation": 1,
+      "createdMs": 6118.400000095367,
+      "scheduledMs": 6458.066666762032,
+      "audioStart": 3.4596666666666644,
+      "duration": 0.029125,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 6491.700000047684
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9207.200000047684,
+      "scheduledMs": 9232.200000047684,
+      "audioStart": 6.2330000000000005,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 9254.700000047684
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9207.200000047684,
+      "scheduledMs": 9265.533333381018,
+      "audioStart": 6.266333333333334,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 9293.800000071526
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9207.300000071526,
+      "scheduledMs": 9298.966666738192,
+      "audioStart": 6.299666666666667,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 9324
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9207.300000071526,
+      "scheduledMs": 9332.300000071526,
+      "audioStart": 6.333,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 9362
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9212,
+      "scheduledMs": 9354.333333333334,
+      "audioStart": 6.366333333333333,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": 9370.200000047684,
+      "endedMs": 9371
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9217.300000071526,
+      "scheduledMs": 9392.966666738192,
+      "audioStart": 6.399666666666667,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": 9370.200000047684,
+      "endedMs": 9371
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9276.600000023842,
+      "scheduledMs": 9426.933333357176,
+      "audioStart": 6.433,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": 9370.200000047684,
+      "endedMs": 9371
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9279.300000071526,
+      "scheduledMs": 9452.300000071526,
+      "audioStart": 6.466333333333333,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": 9370.200000047684,
+      "endedMs": 9371
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9282.5,
+      "scheduledMs": 9488.833333333334,
+      "audioStart": 6.499666666666666,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": 9370.200000047684,
+      "endedMs": 9371
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9285.900000095367,
+      "scheduledMs": 9525.566666762033,
+      "audioStart": 6.5329999999999995,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": 9370.200000047684,
+      "endedMs": 9371
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9292.600000023842,
+      "scheduledMs": 9554.933333357174,
+      "audioStart": 6.566333333333333,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": 9370.200000047684,
+      "endedMs": 9371
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9298.100000023842,
+      "scheduledMs": 9593.766666690508,
+      "audioStart": 6.599666666666666,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": 9370.200000047684,
+      "endedMs": 9371
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9351.400000095367,
+      "scheduledMs": 9621.7333334287,
+      "audioStart": 6.632999999999999,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": 9370.200000047684,
+      "endedMs": 9371
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9356.700000047684,
+      "scheduledMs": 9660.36666671435,
+      "audioStart": 6.666333333333332,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": 9370.200000047684,
+      "endedMs": 9371
+    },
+    {
+      "round": 2,
+      "generation": 2,
+      "createdMs": 9360.800000071526,
+      "scheduledMs": 9687.133333404858,
+      "audioStart": 6.6996666666666655,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": 9370.200000047684,
+      "endedMs": 9371
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11558.100000023842,
+      "scheduledMs": 11583.100000023842,
+      "audioStart": 8.595666666666666,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 11611.200000047684
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11558.100000023842,
+      "scheduledMs": 11616.433333357176,
+      "audioStart": 8.629,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 11657.400000095367
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11558.100000023842,
+      "scheduledMs": 11649.766666690508,
+      "audioStart": 8.662333333333333,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 11680.600000023842
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11558.100000023842,
+      "scheduledMs": 11683.100000023842,
+      "audioStart": 8.695666666666666,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 11715.700000047684
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11561.300000071526,
+      "scheduledMs": 11719.63333340486,
+      "audioStart": 8.729,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 11750.600000023842
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11564.100000023842,
+      "scheduledMs": 11755.766666690508,
+      "audioStart": 8.762333333333332,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 11787.200000047684
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11619.400000095367,
+      "scheduledMs": 11785.7333334287,
+      "audioStart": 8.795666666666666,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 11820
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11622.900000095367,
+      "scheduledMs": 11811.900000095366,
+      "audioStart": 8.828999999999999,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 11855
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11625.900000095367,
+      "scheduledMs": 11848.2333334287,
+      "audioStart": 8.862333333333332,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 11881.800000071526
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11629.800000071526,
+      "scheduledMs": 11885.46666673819,
+      "audioStart": 8.895666666666665,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 11924.600000023842
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11634,
+      "scheduledMs": 11922.999999999998,
+      "audioStart": 8.928999999999998,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 11951.100000023842
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11637.800000071526,
+      "scheduledMs": 11949.466666738192,
+      "audioStart": 8.962333333333332,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 11982.700000047684
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11695.5,
+      "scheduledMs": 11981.833333333332,
+      "audioStart": 8.995666666666665,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12017.5
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11698.5,
+      "scheduledMs": 12018.166666666664,
+      "audioStart": 9.028999999999998,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12052.200000047684
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11704.400000095367,
+      "scheduledMs": 12046.733333428698,
+      "audioStart": 9.062333333333331,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12087.200000047684
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11728.200000047684,
+      "scheduledMs": 12077.200000047682,
+      "audioStart": 9.095666666666665,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12113.5
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11779.900000095367,
+      "scheduledMs": 12119.566666762032,
+      "audioStart": 9.128999999999998,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12145.300000071526
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11799.300000071526,
+      "scheduledMs": 12145.633333404856,
+      "audioStart": 9.162333333333331,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12180
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11833.200000047684,
+      "scheduledMs": 12180.866666714348,
+      "audioStart": 9.195666666666664,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12215.800000071526
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11870.300000071526,
+      "scheduledMs": 12213.96666673819,
+      "audioStart": 9.228999999999997,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12254
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11908.200000047684,
+      "scheduledMs": 12253.20000004768,
+      "audioStart": 9.26233333333333,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12284.800000071526
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11938.200000047684,
+      "scheduledMs": 12279.200000047682,
+      "audioStart": 9.295666666666664,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12324
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11983,
+      "scheduledMs": 12309.33333333333,
+      "audioStart": 9.328999999999997,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12354.200000047684
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 11998.100000023842,
+      "scheduledMs": 12347.100000023838,
+      "audioStart": 9.36233333333333,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12377.600000023842
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12043.5,
+      "scheduledMs": 12383.166666666664,
+      "audioStart": 9.395666666666664,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12412.100000023842
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12073.100000023842,
+      "scheduledMs": 12419.433333357172,
+      "audioStart": 9.428999999999997,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12447
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12103.100000023842,
+      "scheduledMs": 12450.766666690506,
+      "audioStart": 9.46233333333333,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12481.800000071526
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12148.100000023842,
+      "scheduledMs": 12481.100000023838,
+      "audioStart": 9.495666666666663,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12516.700000047684
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12178.200000047684,
+      "scheduledMs": 12523.20000004768,
+      "audioStart": 9.528999999999996,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12551.5
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12208.100000023842,
+      "scheduledMs": 12549.100000023838,
+      "audioStart": 9.56233333333333,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12586.200000047684
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12238.400000095367,
+      "scheduledMs": 12575.400000095364,
+      "audioStart": 9.595666666666663,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12621
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12268.300000071526,
+      "scheduledMs": 12617.300000071522,
+      "audioStart": 9.628999999999996,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12644.300000071526
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12313.200000047684,
+      "scheduledMs": 12647.533333381014,
+      "audioStart": 9.66233333333333,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12679.300000071526
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12343.100000023842,
+      "scheduledMs": 12678.766666690504,
+      "audioStart": 9.695666666666662,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12714.100000023842
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12373.200000047684,
+      "scheduledMs": 12715.533333381012,
+      "audioStart": 9.728999999999996,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12748.900000095367
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12403.300000071526,
+      "scheduledMs": 12746.966666738188,
+      "audioStart": 9.762333333333329,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12783.700000047684
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12448.100000023842,
+      "scheduledMs": 12777.100000023836,
+      "audioStart": 9.795666666666662,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12818.5
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12478.300000071526,
+      "scheduledMs": 12819.300000071522,
+      "audioStart": 9.828999999999995,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12853
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12508.100000023842,
+      "scheduledMs": 12845.100000023836,
+      "audioStart": 9.862333333333329,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12888
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12538.200000047684,
+      "scheduledMs": 12887.200000047678,
+      "audioStart": 9.895666666666662,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12911.400000095367
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12568.200000047684,
+      "scheduledMs": 12913.200000047678,
+      "audioStart": 9.928999999999995,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12946.100000023842
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12598.200000047684,
+      "scheduledMs": 12944.533333381012,
+      "audioStart": 9.962333333333328,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 12981
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12643.200000047684,
+      "scheduledMs": 12985.53333338101,
+      "audioStart": 9.995666666666661,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13027.900000095367
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12673.300000071526,
+      "scheduledMs": 13016.966666738188,
+      "audioStart": 10.028999999999995,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13062.5
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12703.200000047684,
+      "scheduledMs": 13042.866666714344,
+      "audioStart": 10.062333333333328,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13097.300000071526
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12748.200000047684,
+      "scheduledMs": 13089.200000047678,
+      "audioStart": 10.095666666666661,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13132.100000023842
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12763.100000023842,
+      "scheduledMs": 13110.766666690504,
+      "audioStart": 10.128999999999994,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13155.200000047684
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12808.300000071526,
+      "scheduledMs": 13146.633333404854,
+      "audioStart": 10.162333333333327,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13190
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12838.300000071526,
+      "scheduledMs": 13183.300000071518,
+      "audioStart": 10.19566666666666,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13225.100000023842
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12868.100000023842,
+      "scheduledMs": 13214.433333357169,
+      "audioStart": 10.228999999999994,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13259.900000095367
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12913.300000071526,
+      "scheduledMs": 13244.966666738186,
+      "audioStart": 10.262333333333327,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13294.600000023842
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12943.200000047684,
+      "scheduledMs": 13286.866666714344,
+      "audioStart": 10.29566666666666,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13329.400000095367
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 12973.100000023842,
+      "scheduledMs": 13312.766666690502,
+      "audioStart": 10.328999999999994,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13352.5
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 13018.200000047684,
+      "scheduledMs": 13359.200000047678,
+      "audioStart": 10.362333333333327,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13398.900000095367
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 13048.400000095367,
+      "scheduledMs": 13396.066666762028,
+      "audioStart": 10.39566666666666,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13422.100000023842
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 13078.200000047684,
+      "scheduledMs": 13427.200000047676,
+      "audioStart": 10.428999999999993,
+      "duration": 0.03333333333333333,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13456.900000095367
+    },
+    {
+      "round": 3,
+      "generation": 4,
+      "createdMs": 13123.300000071526,
+      "scheduledMs": 13457.633333404852,
+      "audioStart": 10.462333333333326,
+      "duration": 0.005166666666666667,
+      "contextRate": 24000,
+      "stoppedMs": null,
+      "endedMs": 13469.300000071526
+    }
+  ],
+  "private_harness_sha256": {
+    "voxastage_tts_app_browser.py": "acadfad30f684342df707130a786379d8b8ab10c733e6d151f99d433e987896c",
+    "voxastage_tts_app_remote.py": "82ff838e8ade30af94ab4fc64b0f8148c0bc42cec7e2eb16a99185b3f7956207"
+  },
+  "interruption_observations": {
+    "old_media_after_reset": 0,
+    "old_sources_created_after_reset": 0,
+    "dropped_stale_total": 1
+  }
+}
