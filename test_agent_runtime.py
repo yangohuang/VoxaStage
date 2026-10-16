@@ -34,6 +34,99 @@ class RuntimeTests(unittest.IsolatedAsyncioTestCase):
     async def collect(self, runtime):
         return [event async for event in runtime.stream([{'role': 'user', 'content': 'help'}])]
 
+    async def test_explicit_project_lookup_runs_before_first_model_answer(self):
+        backend = ScriptBackend([['根据文档回答。']])
+        runtime = AgentRuntime(backend, self.tools)
+        events = [e async for e in runtime.stream([{'role': 'user', 'content': '请查阅项目文档：Kanghui'}])]
+        tasks = [e for e in events if e['type'] == 'task']
+        self.assertEqual([e['state'] for e in tasks], ['running', 'completed'])
+        self.assertEqual(tasks[0]['label'], 'search_project')
+        self.assertEqual(len(backend.messages), 1)
+        self.assertIn('UNTRUSTED TOOL RESULT', backend.messages[0][-1]['content'])
+        self.assertIn('configured avatar is Kanghui', backend.messages[0][-1]['content'])
+        self.assertIn('Original user request: 请查阅项目文档：Kanghui', backend.messages[0][-1]['content'])
+
+    async def test_explicit_project_lookup_is_narrow_and_honors_disabled_tools(self):
+        for question in ['不要查阅项目文档：Kanghui', '“请查阅项目文档：Kanghui”是什么意思？',
+                         '请解释查阅项目文档的方法', '请查阅项目文档：先不要查询，解释含义', '普通对话']:
+            with self.subTest(question=question):
+                backend = ScriptBackend([['直接回答']])
+                events = [e async for e in AgentRuntime(backend, self.tools).stream([{'role': 'user', 'content': question}])]
+                self.assertFalse(any(e['type'] == 'task' for e in events))
+        runtime = AgentRuntime(ScriptBackend([['工具关闭']]), self.tools, max_tool_iterations=0)
+        events = [e async for e in runtime.stream([{'role': 'user', 'content': '请查阅项目文档：Kanghui'}])]
+        self.assertFalse(any(e['type'] == 'task' for e in events))
+
+    async def test_explicit_project_lookup_consumes_tool_budget(self):
+        backend = ScriptBackend([[call()]])
+        runtime = AgentRuntime(backend, self.tools, max_tool_iterations=1)
+        events = [e async for e in runtime.stream([{'role': 'user', 'content': '请查阅项目文档：Kanghui'}])]
+        completed = [e for e in events if e.get('state') == 'completed']
+        self.assertEqual(len(completed), 1)
+        self.assertEqual(completed[0]['label'], 'search_project')
+        self.assertEqual(events[-1]['state'], 'failed')
+
+    async def test_explicit_lookup_checks_negation_before_truncating_question(self):
+        questions = [
+            '请查阅项目文档：' + '甲' * 340 + '。不要查阅项目文档，先解释含义',
+            '请查阅项目文档：Kanghui。请勿查询，先解释含义',
+            '请查阅项目文档：Kanghui。不要进行搜索',
+            'Please read project docs: Kanghui. Do not actually search yet.',
+        ]
+        for question in questions:
+            with self.subTest(question=question[-70:]):
+                backend = ScriptBackend([['直接回答']])
+                events = [e async for e in AgentRuntime(backend, self.tools).stream(
+                    [{'role': 'user', 'content': question}])]
+                self.assertFalse(any(e['type'] == 'task' for e in events))
+
+    async def test_cancel_before_explicit_lookup_does_not_invoke_tool_or_model(self):
+        backend = ScriptBackend([['不应生成']])
+        runtime = AgentRuntime(backend, self.tools)
+        stream = runtime.stream([{'role': 'user', 'content': '请查阅项目文档：Kanghui'}])
+        event = await anext(stream)
+        self.assertEqual(event.get('state'), 'running')
+        runtime.cancel()
+        tail = [e async for e in stream]
+        self.assertEqual([e.get('state') for e in tail], ['cancelled'])
+        self.assertEqual(backend.messages, [])
+
+    async def test_explicit_lookup_english_and_empty_result_remain_untrusted(self):
+        for question in ['Please consult the project documentation for Kanghui', '请查看本项目的文档：unknown-absent']:
+            backend = ScriptBackend([['说明检索结果']])
+            events = [e async for e in AgentRuntime(backend, self.tools).stream([{'role': 'user', 'content': question}])]
+            self.assertEqual([e['state'] for e in events if e['type'] == 'task'], ['running', 'completed'])
+            self.assertIn('UNTRUSTED TOOL RESULT', backend.messages[0][-1]['content'])
+            if 'absent' in question:
+                self.assertIn('"matches": []', backend.messages[0][-1]['content'])
+
+    async def test_explicit_lookup_cancellation_discards_resistant_late_result(self):
+        started, release, finished = asyncio.Event(), asyncio.Event(), asyncio.Event()
+        class SlowTools(ToolRegistry):
+            async def execute(self, name, arguments):
+                started.set()
+                try:
+                    await release.wait()
+                except asyncio.CancelledError:
+                    await release.wait()
+                finished.set()
+                return {'matches': [{'excerpt': 'stale document'}]}
+        backend = ScriptBackend([['新的回答']])
+        runtime = AgentRuntime(backend, SlowTools(self.root))
+        async def collect_question(text):
+            return [e async for e in runtime.stream([{'role': 'user', 'content': text}])]
+        old = asyncio.create_task(collect_question('请查阅项目文档：Kanghui'))
+        await asyncio.wait_for(started.wait(), .5)
+        runtime.cancel()
+        old_events = await asyncio.wait_for(old, .5)
+        fresh = await collect_question('现在换个问题')
+        release.set()
+        await asyncio.wait_for(finished.wait(), .5)
+        self.assertEqual([e.get('state') for e in old_events], ['running', 'cancelled'])
+        self.assertEqual(fresh[-1]['text'], '新的回答')
+        self.assertEqual(len(backend.messages), 1)
+        self.assertNotIn('stale document', json.dumps(backend.messages))
+
     async def test_plain_answer_streams_before_model_finishes(self):
         release = asyncio.Event()
         class Backend:

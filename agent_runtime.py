@@ -6,6 +6,7 @@ Each runtime belongs to one conversation; starting a stream supersedes its old t
 
 import asyncio
 import json
+import re
 import time
 import uuid
 from dataclasses import dataclass, field
@@ -81,6 +82,23 @@ class _Parser:
     def finish(self):
         if self.buffer or (self.payload is not None and not self.closed):
             raise ValueError('Incomplete tool call')
+
+
+def _explicit_document_query(question):
+    """Recognize a narrow explicit read-only request, never quoted mentions."""
+    if re.search(r'(?:不要|不用|无需|不必|先不|暂不|请勿|勿|别)\s*(?:再|先|进行)?\s*(?:查|搜|检索|访问)', question):
+        return None
+    if re.search(r"\b(?:do not|don't|never)\s+(?:(?:actually|yet|first)\s+)?(?:search|read|consult|check|look up)\b", question, re.I):
+        return None
+    patterns = (
+        r'^\s*(?:请\s*)?(?:帮我\s*)?(?:查阅|查询|检索|搜索|查看|查一下)\s*(?:本|这个|该)?项目(?:的)?文档\s*[:：，,。\n]\s*(.+)',
+        r'^\s*(?:please\s+)?(?:search|read|consult|check|look up)\s+(?:(?:the|this)\s+)?project\s+(?:docs|documentation|documents)(?:\s*:\s*|\s+for\s+)(.+)',
+    )
+    for pattern in patterns:
+        match = re.match(pattern, question, re.I | re.S)
+        if match:
+            return match.group(1).strip()[:256] or None
+    return None
 
 
 class AgentRuntime:
@@ -183,6 +201,9 @@ class AgentRuntime:
         original_system = original_system.encode('utf-8')[:2048].decode('utf-8', errors='ignore')
         history = [m for m in history if m['role'] != 'system']
         original_question = next((m['content'] for m in reversed(history) if m['role'] == 'user'), '')
+        # Decide against the full retained request before shortening the reminder;
+        # a later 'do not search' must not be lost to the 1024-byte reminder limit.
+        explicit_query = _explicit_document_query(original_question)
         original_question = original_question.encode('utf-8')[:1024].decode('utf-8', errors='ignore')
         history.insert(0, {'role': 'system', 'content': original_system + '\n' + self._prompt()})
         emitted = 0
@@ -193,28 +214,35 @@ class AgentRuntime:
                 if not self._current(run):
                     raise _Superseded
                 parser = _Parser()
-                model_stream = self.backend.generate(history).__aiter__()
-                while True:
-                    try:
-                        chunk = await self._wait(anext(model_stream), run, deadline - time.monotonic())
-                    except StopAsyncIteration:
-                        break
-                    visible = parser.feed(chunk)
-                    if visible:
-                        encoded = visible.encode('utf-8')
-                        available = self.max_output_bytes - emitted
-                        bounded = encoded[:available].decode('utf-8', errors='ignore')
-                        if bounded and self._current(run):
-                            emitted += len(bounded.encode('utf-8'))
-                            yield {'type': 'text', 'text': bounded, 'generation': run.generation}
-                        if len(encoded) > available:
-                            raise ValueError('Agent output limit exceeded')
-                    if parser.closed:
-                        break
-                parser.finish()
-                if hasattr(model_stream, 'aclose'):
-                    await self._wait(model_stream.aclose(), run, deadline - time.monotonic())
-                model_stream = None
+                query = explicit_query if iteration == 0 and self.max_tool_iterations else None
+                if query:
+                    # Reuse the same bounded, cancellable execution and result path
+                    # as a model-selected tool; this consumes one tool iteration.
+                    parser.call = {'name': 'search_project', 'arguments': {'query': query, 'limit': 5}}
+                    parser.closed = True
+                else:
+                    model_stream = self.backend.generate(history).__aiter__()
+                    while True:
+                        try:
+                            chunk = await self._wait(anext(model_stream), run, deadline - time.monotonic())
+                        except StopAsyncIteration:
+                            break
+                        visible = parser.feed(chunk)
+                        if visible:
+                            encoded = visible.encode('utf-8')
+                            available = self.max_output_bytes - emitted
+                            bounded = encoded[:available].decode('utf-8', errors='ignore')
+                            if bounded and self._current(run):
+                                emitted += len(bounded.encode('utf-8'))
+                                yield {'type': 'text', 'text': bounded, 'generation': run.generation}
+                            if len(encoded) > available:
+                                raise ValueError('Agent output limit exceeded')
+                        if parser.closed:
+                            break
+                    parser.finish()
+                    if hasattr(model_stream, 'aclose'):
+                        await self._wait(model_stream.aclose(), run, deadline - time.monotonic())
+                    model_stream = None
                 if parser.call is None:
                     return
                 if iteration >= self.max_tool_iterations:

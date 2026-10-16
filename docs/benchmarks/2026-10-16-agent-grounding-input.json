@@ -1,0 +1,94 @@
+{
+  "scope": "Production-code text Agent probe, not avatar/session transport or ASR/TTS acceptance. One request per authored case; project facts already exist in production prompt. No intervention or speed comparison.",
+  "source_base": "bba3d85ebb62cac1520325c7e2c2d8f7c7925bbf",
+  "cases": [
+    {
+      "id": "compare-original",
+      "messages": [
+        {
+          "role": "user",
+          "content": "比较级联语音助手和端到端语音助手：分别说明可调试性、延迟、错误定位三个方面的取舍。"
+        }
+      ],
+      "rubric": [
+        "both architectures compared",
+        "debuggability tradeoff",
+        "latency depends on implementation, not unconditional superiority",
+        "error localization tradeoff"
+      ]
+    },
+    {
+      "id": "triage-original",
+      "messages": [
+        {
+          "role": "user",
+          "content": "语音助手识别出来的文字是对的，但回答总是答非所问。请按顺序给我三个排查步骤，每步说清检查什么和为什么。"
+        }
+      ],
+      "rubric": [
+        "inspect actual LLM input/history",
+        "inspect system prompt or instruction conflicts",
+        "test model response separately; not simply replace ASR"
+      ]
+    },
+    {
+      "id": "constraints-original",
+      "messages": [
+        {
+          "role": "user",
+          "content": "我只有一张24GB显卡，已有语音助手；不能用云API，也不能买新硬件。要改善回答质量，请给出三个可执行步骤，同时兼顾响应速度。"
+        }
+      ],
+      "rubric": [
+        "local only/no new hardware",
+        "three actionable steps",
+        "quality measurement",
+        "latency/memory consideration"
+      ]
+    },
+    {
+      "id": "project-roles",
+      "messages": [
+        {
+          "role": "user",
+          "content": "请查阅本项目文档：DINet、FlashHead、StreamingTalker分别负责什么？它们能直接提升ASR识别或LLM回答正确率吗？"
+        }
+      ],
+      "rubric": [
+        "retrieves project documentation",
+        "DINet and FlashHead 2D avatar video",
+        "StreamingTalker 3D mesh",
+        "does not attribute ASR/LLM quality improvements to renderers"
+      ]
+    },
+    {
+      "id": "visual-context",
+      "messages": [
+        {
+          "role": "user",
+          "content": "请查阅项目文档：视觉图片的采集时间和上下文历史如何管理？简短回答。"
+        }
+      ],
+      "rubric": [
+        "retrieves relevant source",
+        "explains capture timestamp",
+        "bounded last-two-image history",
+        "does not confuse vision enabling with capture timestamp"
+      ]
+    },
+    {
+      "id": "calculate",
+      "messages": [
+        {
+          "role": "user",
+          "content": "请使用计算工具计算137乘29加81，只回答结果。"
+        }
+      ],
+      "rubric": [
+        "executes calculate",
+        "answer 4054",
+        "no tool markup in spoken answer"
+      ]
+    }
+  ]
+}

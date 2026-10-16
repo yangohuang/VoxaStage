@@ -61,6 +61,36 @@ def _chinese_excerpt(content, pairs, size=600):
     return content[best_start:best_start + size]
 
 
+def _mixed_excerpt(content, pattern, pairs, size=600):
+    """Cover complete identifiers (weight 2) and Chinese pairs (weight 1)."""
+    hits = ([(m.start(), m.end(), m.group().casefold(), 2)
+             for m in pattern.finditer(content)] if pattern else [])
+    hits += [(i, i + 2, content[i:i + 2], 1) for i in range(len(content) - 1)
+             if content[i:i + 2] in pairs]
+    hits.sort()
+    counts = {}
+    left = right = best_start = best_score = score = 0
+    for start, _, _, _ in hits:
+        while right < len(hits) and hits[right][1] <= start + size:
+            term, weight = hits[right][2:]
+            if term not in counts:
+                score += weight
+            counts[term] = counts.get(term, 0) + 1
+            right += 1
+        while left < right and hits[left][0] < start:
+            term, weight = hits[left][2:]
+            counts[term] -= 1
+            if not counts[term]:
+                del counts[term]
+                score -= weight
+            left += 1
+        if score > best_score:
+            spare = size - (hits[right - 1][1] - start)
+            best_score = score
+            best_start = max(0, start - min(100, spare))
+    return content[best_start:best_start + size]
+
+
 class ToolRegistry:
     def __init__(self, project_root, *, documents=None, status_reader=None, max_result_bytes=8192):
         self.project_root = Path(project_root).resolve()
@@ -153,10 +183,24 @@ class ToolRegistry:
 
             matches = match(terms)
             if not matches:
-                # Keep exact/space-delimited search first; do not fragment Latin identifiers.
-                pairs = sorted({run[i:i + 2] for run in re.findall(r'[\u3400-\u9fff]+', query)
-                                for i in range(len(run) - 1)})
-                matches = match(pairs, fallback=True)
+                # Combine both languages: an incidental Latin name must not hide
+                # a stronger Chinese-topic match. Exact search above stays first.
+                identifiers = sorted(set(re.findall(r'[a-zA-Z][a-zA-Z0-9_-]*', query)), key=lambda v: (-len(v), v))
+                pairs = {run[i:i + 2] for run in re.findall(r'[\u3400-\u9fff]+', query)
+                         for i in range(len(run) - 1)}
+                pattern = None
+                if identifiers:
+                    pattern = re.compile(r'(?<![a-zA-Z0-9_-])(?:' + '|'.join(re.escape(v) for v in identifiers)
+                                         + r')(?![a-zA-Z0-9_-])', re.I)
+                for document_id, content, _ in documents:
+                    found = {m.group().casefold() for m in pattern.finditer(content)} if pattern else set()
+                    chinese = {pair for pair in pairs if pair in content}
+                    if len(chinese) < 2:
+                        chinese = set()
+                    if found or chinese:
+                        matches.append({'document_id': document_id, 'score': 2 * len(found) + len(chinese),
+                                        'excerpt': _mixed_excerpt(content, pattern, chinese)})
+                matches.sort(key=lambda item: (-item['score'], item['document_id']))
             result = {'matches': matches[:limit]}
         else:
             if self.status_reader is None:
