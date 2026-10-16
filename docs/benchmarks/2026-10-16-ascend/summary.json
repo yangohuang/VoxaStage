@@ -1,0 +1,68 @@
+{
+  "formal_requests": 120,
+  "warmups": 6,
+  "successes": 126,
+  "unique_utterances": 60,
+  "unique_speakers": 2,
+  "audio_seconds": 235.3000625,
+  "speaker_counts": {
+    "3": 32,
+    "17": 28
+  },
+  "topic_counts": {
+    "sports": 8,
+    "technology": 21,
+    "persona": 23,
+    "education": 8
+  },
+  "paired": {
+    "same": 54,
+    "improved": 4,
+    "worse": 2
+  },
+  "conditions": {
+    "plain": {
+      "metric": "normalized_cer",
+      "attempted": 60,
+      "failed": 0,
+      "scored_cases": 60,
+      "reference_characters": 1505,
+      "attempted_reference_characters": 1505,
+      "rate_scope": "successful_nonempty_references_only",
+      "edit_count": 142,
+      "exact_match_cases": 24,
+      "empty_reference_cases": 0,
+      "empty_reference_nonempty_outputs": 0,
+      "empty_reference_inserted_characters": 0,
+      "rate": 0.09435215946843854,
+      "reference_character_coverage": 1.0,
+      "complete": true,
+      "request_wall_p50_s": 0.15801361802732572,
+      "request_wall_p95_nearest_rank_s": 0.3073302359553054,
+      "timing_n": 60
+    },
+    "terms": {
+      "metric": "normalized_cer",
+      "attempted": 60,
+      "failed": 0,
+      "scored_cases": 60,
+      "reference_characters": 1505,
+      "attempted_reference_characters": 1505,
+      "rate_scope": "successful_nonempty_references_only",
+      "edit_count": 138,
+      "exact_match_cases": 26,
+      "empty_reference_cases": 0,
+      "empty_reference_nonempty_outputs": 0,
+      "empty_reference_inserted_characters": 0,
+      "rate": 0.09169435215946845,
+      "reference_character_coverage": 1.0,
+      "complete": true,
+      "request_wall_p50_s": 0.15553527692100033,
+      "request_wall_p95_nearest_rank_s": 0.28328783600591123,
+      "timing_n": 60
+    }
+  },
+  "production_changed": false,
+  "openjev_stopped": false,
+  "model_configuration_complete": false
+}

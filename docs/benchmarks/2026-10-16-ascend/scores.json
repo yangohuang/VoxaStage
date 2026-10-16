@@ -1,0 +1,1023 @@
+{
+  "schema_version": 1,
+  "normalization": "nfkc-casefold-no-punctuation-or-whitespace-v1",
+  "unit": "unicode_codepoint",
+  "aggregation": "sum_edits_divided_by_sum_reference_characters",
+  "quality_scope": "offline text comparison; no physical-device or perceptual quality claim",
+  "variants": {
+    "plain": {
+      "attempted": 60,
+      "succeeded": 60,
+      "failed": 0,
+      "complete": true,
+      "reference_groups": {
+        "human_transcript": {
+          "metric": "normalized_cer",
+          "attempted": 60,
+          "failed": 0,
+          "scored_cases": 60,
+          "reference_characters": 1505,
+          "attempted_reference_characters": 1505,
+          "rate_scope": "successful_nonempty_references_only",
+          "edit_count": 142,
+          "exact_match_cases": 24,
+          "empty_reference_cases": 0,
+          "empty_reference_nonempty_outputs": 0,
+          "empty_reference_inserted_characters": 0,
+          "rate": 0.09435215946843854,
+          "reference_character_coverage": 1.0,
+          "complete": true
+        }
+      },
+      "cases": [
+        {
+          "case_id": "ascend-00068@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 18,
+          "edit_count": 2,
+          "rate": 0.1111111111111111
+        },
+        {
+          "case_id": "ascend-00080@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 5,
+          "edit_count": 3,
+          "rate": 0.6
+        },
+        {
+          "case_id": "ascend-00081@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 15,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00143@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 29,
+          "edit_count": 5,
+          "rate": 0.1724137931034483
+        },
+        {
+          "case_id": "ascend-00150@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 18,
+          "edit_count": 3,
+          "rate": 0.16666666666666666
+        },
+        {
+          "case_id": "ascend-00190@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 21,
+          "edit_count": 2,
+          "rate": 0.09523809523809523
+        },
+        {
+          "case_id": "ascend-00211@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 54,
+          "edit_count": 7,
+          "rate": 0.12962962962962962
+        },
+        {
+          "case_id": "ascend-00214@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 9,
+          "edit_count": 4,
+          "rate": 0.4444444444444444
+        },
+        {
+          "case_id": "ascend-00226@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 26,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00239@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 14,
+          "edit_count": 1,
+          "rate": 0.07142857142857142
+        },
+        {
+          "case_id": "ascend-00246@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 15,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00256@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 18,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00311@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 21,
+          "edit_count": 1,
+          "rate": 0.047619047619047616
+        },
+        {
+          "case_id": "ascend-00317@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 16,
+          "edit_count": 1,
+          "rate": 0.0625
+        },
+        {
+          "case_id": "ascend-00332@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 32,
+          "edit_count": 4,
+          "rate": 0.125
+        },
+        {
+          "case_id": "ascend-00345@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 11,
+          "edit_count": 2,
+          "rate": 0.18181818181818182
+        },
+        {
+          "case_id": "ascend-00347@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 46,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00352@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 26,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00380@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 27,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00402@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 96,
+          "edit_count": 7,
+          "rate": 0.07291666666666667
+        },
+        {
+          "case_id": "ascend-00415@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 19,
+          "edit_count": 1,
+          "rate": 0.05263157894736842
+        },
+        {
+          "case_id": "ascend-00427@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 31,
+          "edit_count": 3,
+          "rate": 0.0967741935483871
+        },
+        {
+          "case_id": "ascend-00428@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 11,
+          "edit_count": 1,
+          "rate": 0.09090909090909091
+        },
+        {
+          "case_id": "ascend-00494@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 25,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00612@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 9,
+          "edit_count": 2,
+          "rate": 0.2222222222222222
+        },
+        {
+          "case_id": "ascend-00623@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 25,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00646@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 10,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00660@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 30,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00698@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 20,
+          "edit_count": 2,
+          "rate": 0.1
+        },
+        {
+          "case_id": "ascend-00701@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 54,
+          "edit_count": 13,
+          "rate": 0.24074074074074073
+        },
+        {
+          "case_id": "ascend-00722@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 25,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00748@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 22,
+          "edit_count": 1,
+          "rate": 0.045454545454545456
+        },
+        {
+          "case_id": "ascend-00803@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 14,
+          "edit_count": 7,
+          "rate": 0.5
+        },
+        {
+          "case_id": "ascend-00871@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 25,
+          "edit_count": 2,
+          "rate": 0.08
+        },
+        {
+          "case_id": "ascend-00891@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 20,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00920@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 20,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00933@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 14,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00944@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 31,
+          "edit_count": 14,
+          "rate": 0.45161290322580644
+        },
+        {
+          "case_id": "ascend-00966@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 13,
+          "edit_count": 1,
+          "rate": 0.07692307692307693
+        },
+        {
+          "case_id": "ascend-00990@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 12,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00995@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 24,
+          "edit_count": 1,
+          "rate": 0.041666666666666664
+        },
+        {
+          "case_id": "ascend-00999@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 12,
+          "edit_count": 4,
+          "rate": 0.3333333333333333
+        },
+        {
+          "case_id": "ascend-01001@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 14,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01006@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 43,
+          "edit_count": 3,
+          "rate": 0.06976744186046512
+        },
+        {
+          "case_id": "ascend-01041@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 39,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01055@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 55,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01068@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 38,
+          "edit_count": 1,
+          "rate": 0.02631578947368421
+        },
+        {
+          "case_id": "ascend-01081@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 35,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01094@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 51,
+          "edit_count": 6,
+          "rate": 0.11764705882352941
+        },
+        {
+          "case_id": "ascend-01128@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 26,
+          "edit_count": 11,
+          "rate": 0.4230769230769231
+        },
+        {
+          "case_id": "ascend-01130@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 15,
+          "edit_count": 1,
+          "rate": 0.06666666666666667
+        },
+        {
+          "case_id": "ascend-01142@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 42,
+          "edit_count": 3,
+          "rate": 0.07142857142857142
+        },
+        {
+          "case_id": "ascend-01149@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 32,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01157@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 15,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01166@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 5,
+          "edit_count": 4,
+          "rate": 0.8
+        },
+        {
+          "case_id": "ascend-01196@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 8,
+          "edit_count": 1,
+          "rate": 0.125
+        },
+        {
+          "case_id": "ascend-01213@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 28,
+          "edit_count": 5,
+          "rate": 0.17857142857142858
+        },
+        {
+          "case_id": "ascend-01276@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 14,
+          "edit_count": 13,
+          "rate": 0.9285714285714286
+        },
+        {
+          "case_id": "ascend-01278@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 40,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01284@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 22,
+          "edit_count": 0,
+          "rate": 0.0
+        }
+      ]
+    },
+    "terms": {
+      "attempted": 60,
+      "succeeded": 60,
+      "failed": 0,
+      "complete": true,
+      "reference_groups": {
+        "human_transcript": {
+          "metric": "normalized_cer",
+          "attempted": 60,
+          "failed": 0,
+          "scored_cases": 60,
+          "reference_characters": 1505,
+          "attempted_reference_characters": 1505,
+          "rate_scope": "successful_nonempty_references_only",
+          "edit_count": 138,
+          "exact_match_cases": 26,
+          "empty_reference_cases": 0,
+          "empty_reference_nonempty_outputs": 0,
+          "empty_reference_inserted_characters": 0,
+          "rate": 0.09169435215946845,
+          "reference_character_coverage": 1.0,
+          "complete": true
+        }
+      },
+      "cases": [
+        {
+          "case_id": "ascend-00068@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 18,
+          "edit_count": 2,
+          "rate": 0.1111111111111111
+        },
+        {
+          "case_id": "ascend-00080@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 5,
+          "edit_count": 3,
+          "rate": 0.6
+        },
+        {
+          "case_id": "ascend-00081@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 15,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00143@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 29,
+          "edit_count": 5,
+          "rate": 0.1724137931034483
+        },
+        {
+          "case_id": "ascend-00150@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 18,
+          "edit_count": 3,
+          "rate": 0.16666666666666666
+        },
+        {
+          "case_id": "ascend-00190@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 21,
+          "edit_count": 2,
+          "rate": 0.09523809523809523
+        },
+        {
+          "case_id": "ascend-00211@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 54,
+          "edit_count": 7,
+          "rate": 0.12962962962962962
+        },
+        {
+          "case_id": "ascend-00214@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 9,
+          "edit_count": 4,
+          "rate": 0.4444444444444444
+        },
+        {
+          "case_id": "ascend-00226@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 26,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00239@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 14,
+          "edit_count": 1,
+          "rate": 0.07142857142857142
+        },
+        {
+          "case_id": "ascend-00246@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 15,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00256@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 18,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00311@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 21,
+          "edit_count": 1,
+          "rate": 0.047619047619047616
+        },
+        {
+          "case_id": "ascend-00317@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 16,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00332@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 32,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00345@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 11,
+          "edit_count": 2,
+          "rate": 0.18181818181818182
+        },
+        {
+          "case_id": "ascend-00347@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 46,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00352@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 26,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00380@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 27,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00402@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 96,
+          "edit_count": 6,
+          "rate": 0.0625
+        },
+        {
+          "case_id": "ascend-00415@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 19,
+          "edit_count": 1,
+          "rate": 0.05263157894736842
+        },
+        {
+          "case_id": "ascend-00427@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 31,
+          "edit_count": 3,
+          "rate": 0.0967741935483871
+        },
+        {
+          "case_id": "ascend-00428@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 11,
+          "edit_count": 1,
+          "rate": 0.09090909090909091
+        },
+        {
+          "case_id": "ascend-00494@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 25,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00612@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 9,
+          "edit_count": 2,
+          "rate": 0.2222222222222222
+        },
+        {
+          "case_id": "ascend-00623@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 25,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00646@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 10,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00660@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 30,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00698@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 20,
+          "edit_count": 2,
+          "rate": 0.1
+        },
+        {
+          "case_id": "ascend-00701@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 54,
+          "edit_count": 13,
+          "rate": 0.24074074074074073
+        },
+        {
+          "case_id": "ascend-00722@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 25,
+          "edit_count": 4,
+          "rate": 0.16
+        },
+        {
+          "case_id": "ascend-00748@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 22,
+          "edit_count": 1,
+          "rate": 0.045454545454545456
+        },
+        {
+          "case_id": "ascend-00803@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 14,
+          "edit_count": 7,
+          "rate": 0.5
+        },
+        {
+          "case_id": "ascend-00871@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 25,
+          "edit_count": 2,
+          "rate": 0.08
+        },
+        {
+          "case_id": "ascend-00891@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 20,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00920@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 20,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00933@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 14,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00944@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 31,
+          "edit_count": 14,
+          "rate": 0.45161290322580644
+        },
+        {
+          "case_id": "ascend-00966@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 13,
+          "edit_count": 1,
+          "rate": 0.07692307692307693
+        },
+        {
+          "case_id": "ascend-00990@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 12,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-00995@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 24,
+          "edit_count": 1,
+          "rate": 0.041666666666666664
+        },
+        {
+          "case_id": "ascend-00999@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 12,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01001@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 14,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01006@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 43,
+          "edit_count": 3,
+          "rate": 0.06976744186046512
+        },
+        {
+          "case_id": "ascend-01041@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 39,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01055@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 55,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01068@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 38,
+          "edit_count": 1,
+          "rate": 0.02631578947368421
+        },
+        {
+          "case_id": "ascend-01081@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 35,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01094@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 51,
+          "edit_count": 6,
+          "rate": 0.11764705882352941
+        },
+        {
+          "case_id": "ascend-01128@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 26,
+          "edit_count": 11,
+          "rate": 0.4230769230769231
+        },
+        {
+          "case_id": "ascend-01130@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 15,
+          "edit_count": 1,
+          "rate": 0.06666666666666667
+        },
+        {
+          "case_id": "ascend-01142@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 42,
+          "edit_count": 3,
+          "rate": 0.07142857142857142
+        },
+        {
+          "case_id": "ascend-01149@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 32,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01157@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 15,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01166@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 5,
+          "edit_count": 6,
+          "rate": 1.2
+        },
+        {
+          "case_id": "ascend-01196@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 8,
+          "edit_count": 1,
+          "rate": 0.125
+        },
+        {
+          "case_id": "ascend-01213@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 28,
+          "edit_count": 5,
+          "rate": 0.17857142857142858
+        },
+        {
+          "case_id": "ascend-01276@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 14,
+          "edit_count": 13,
+          "rate": 0.9285714285714286
+        },
+        {
+          "case_id": "ascend-01278@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 40,
+          "edit_count": 0,
+          "rate": 0.0
+        },
+        {
+          "case_id": "ascend-01284@r0",
+          "status": "ok",
+          "reference_kind": "human_transcript",
+          "reference_characters": 22,
+          "edit_count": 0,
+          "rate": 0.0
+        }
+      ]
+    }
+  }
+}

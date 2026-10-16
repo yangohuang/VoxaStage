@@ -1,0 +1,1201 @@
+{
+  "version": 1,
+  "status": "passed",
+  "created_at": "2026-10-16T15:59:28.151712+00:00",
+  "execution": "http_worker",
+  "scope": "Completed WAV request/response timing; not streaming input or physical microphone latency.",
+  "trials": [
+    {
+      "phase": "warmup",
+      "repeat": -1,
+      "case_id": "ascend-01094",
+      "variant": "plain",
+      "audio_sha256": "701d2b9427a12077335a3afe48eabae83fd1bf35e02ba67334c9195c37e7de97",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "So it will work slowly and slowly, and then you you you should.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.19809742202050984,
+      "request_wall_s": 0.22534282808192074
+    },
+    {
+      "phase": "warmup",
+      "repeat": -1,
+      "case_id": "ascend-01094",
+      "variant": "terms",
+      "audio_sha256": "701d2b9427a12077335a3afe48eabae83fd1bf35e02ba67334c9195c37e7de97",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "So it will work slowly and slowly, and then you you you should.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1705730230314657,
+      "request_wall_s": 0.19740774400997907
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01094",
+      "variant": "plain",
+      "audio_sha256": "701d2b9427a12077335a3afe48eabae83fd1bf35e02ba67334c9195c37e7de97",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "So it will work slowly and slowly, and then you you you should.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.16854353598318994,
+      "request_wall_s": 0.19518214301206172
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01094",
+      "variant": "terms",
+      "audio_sha256": "701d2b9427a12077335a3afe48eabae83fd1bf35e02ba67334c9195c37e7de97",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "So it will work slowly and slowly, and then you you you should.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.17761746898759156,
+      "request_wall_s": 0.2042817820329219
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00933",
+      "variant": "terms",
+      "audio_sha256": "2558cf3fe3912a729cd98ad000c093655904b1b9a0fa317793c3a5217cc1d9ec",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "那To be honest，你觉得？",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.11182311398442835,
+      "request_wall_s": 0.12615608901251107
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00933",
+      "variant": "plain",
+      "audio_sha256": "2558cf3fe3912a729cd98ad000c093655904b1b9a0fa317793c3a5217cc1d9ec",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "那To be honest，你觉得？",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.0994945460697636,
+      "request_wall_s": 0.11528918601106852
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00226",
+      "variant": "plain",
+      "audio_sha256": "e36b10b007dc584975689d13d56cdcfa521250c248cd146f4074ea9d104ffbf9",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "对，所以我们以后可以一起去 play basketball。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1285939629888162,
+      "request_wall_s": 0.13927933597005904
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00226",
+      "variant": "terms",
+      "audio_sha256": "e36b10b007dc584975689d13d56cdcfa521250c248cd146f4074ea9d104ffbf9",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "对，所以我们以后可以一起去 play basketball。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.11559135699644685,
+      "request_wall_s": 0.17767018894664943
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00891",
+      "variant": "terms",
+      "audio_sha256": "ed811da8545555fe6e79e33780284891a2f00fb39128d3b57fb7bc9594da0a01",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "个人的 personalities，还有那个。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.11127501807641238,
+      "request_wall_s": 0.12583738390821964
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00891",
+      "variant": "plain",
+      "audio_sha256": "ed811da8545555fe6e79e33780284891a2f00fb39128d3b57fb7bc9594da0a01",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "个人的 personalities，还有那个。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.09877690800931305,
+      "request_wall_s": 0.1179221230559051
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01157",
+      "variant": "plain",
+      "audio_sha256": "bbbf1d5626e42da8de969e487744be1a04f2e68c82f64f6cc0e12d606e2a7ff0",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "哦，那个是那个是wind，好像是做。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1420922060497105,
+      "request_wall_s": 0.15929663903079927
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01157",
+      "variant": "terms",
+      "audio_sha256": "bbbf1d5626e42da8de969e487744be1a04f2e68c82f64f6cc0e12d606e2a7ff0",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "哦，那个是那个是Wind，好像是做。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.14176951395347714,
+      "request_wall_s": 0.16841520101297647
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00428",
+      "variant": "terms",
+      "audio_sha256": "25893e71e3f12fc8e585c1dfa1d519738de5f062b84a05c503040abb4d712476",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "呃，secret 方向走。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.09968200500588864,
+      "request_wall_s": 0.1116098859347403
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00428",
+      "variant": "plain",
+      "audio_sha256": "25893e71e3f12fc8e585c1dfa1d519738de5f062b84a05c503040abb4d712476",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "呃，secret方向走。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.09967987705022097,
+      "request_wall_s": 0.10873588104732335
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00256",
+      "variant": "plain",
+      "audio_sha256": "d000e6b2b428a0ac4f06bf6e92e54dc585f679169928ba14fc908848d386f690",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "就是会带我们组织一些activity。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1336242740508169,
+      "request_wall_s": 0.15227024292107671
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00256",
+      "variant": "terms",
+      "audio_sha256": "d000e6b2b428a0ac4f06bf6e92e54dc585f679169928ba14fc908848d386f690",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "就是会带我们组织一些 activity。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.11616009194403887,
+      "request_wall_s": 0.13231712498236448
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01166",
+      "variant": "terms",
+      "audio_sha256": "85629310887f27f2125c9076e954fc8511e382bf56384b4418adc15c09fa0726",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "Have uh so.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.08565216604620218,
+      "request_wall_s": 0.09824269590899348
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01166",
+      "variant": "plain",
+      "audio_sha256": "85629310887f27f2125c9076e954fc8511e382bf56384b4418adc15c09fa0726",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "Have, so.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.07326723600272089,
+      "request_wall_s": 0.08276155404746532
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00402",
+      "variant": "plain",
+      "audio_sha256": "114d62b045c3929b62c5145795a7dc5a6e389e5ae76e6f9679bb164468fafd86",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "所以那是跟那跟major没关系的。你说的major可能是哦，我接下来apply到graduate school的时候，我要往computer science，我要往electrical engineering。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.3445913429604843,
+      "request_wall_s": 0.3852762719616294
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00402",
+      "variant": "terms",
+      "audio_sha256": "114d62b045c3929b62c5145795a7dc5a6e389e5ae76e6f9679bb164468fafd86",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "所以那是跟那跟 major 没关系的。你说的 major 可能是哦，我接下来 apply 到 graduate school 的时候，我要往 computer science 或往 electrical engineering。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.4120455179363489,
+      "request_wall_s": 0.4917634589364752
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00246",
+      "variant": "terms",
+      "audio_sha256": "5146a62c3eba2a4e3986afb2db926b9e8a2760fc15cb08207fae812c14119cea",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "呃，大概一千位的 students。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.12088837299961597,
+      "request_wall_s": 0.1438583699055016
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00246",
+      "variant": "plain",
+      "audio_sha256": "5146a62c3eba2a4e3986afb2db926b9e8a2760fc15cb08207fae812c14119cea",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "呃，大概一千位的 students。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.10799667797982693,
+      "request_wall_s": 0.1256558020832017
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00081",
+      "variant": "plain",
+      "audio_sha256": "7c4005cffd2701f5b8926d7248dcfe46249efd4429d3321d619b467845718bd4",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "所以我上学期也学了Python。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1056084519950673,
+      "request_wall_s": 0.15136545803397894
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00081",
+      "variant": "terms",
+      "audio_sha256": "7c4005cffd2701f5b8926d7248dcfe46249efd4429d3321d619b467845718bd4",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "所以，我上学期也学了 Python。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1247099390020594,
+      "request_wall_s": 0.134898402960971
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00150",
+      "variant": "terms",
+      "audio_sha256": "d5aff3578b2e61cd500e86bc6830e4b80e36ed82121f8518eff46868cc609481",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "想过，但是因为这阵子 project 有点多。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.152494826936163,
+      "request_wall_s": 0.20834132691379637
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00150",
+      "variant": "plain",
+      "audio_sha256": "d5aff3578b2e61cd500e86bc6830e4b80e36ed82121f8518eff46868cc609481",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "想过，但是因为这阵子project有点多。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1432014680467546,
+      "request_wall_s": 0.16132599697448313
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01278",
+      "variant": "plain",
+      "audio_sha256": "763884eaa3f6fc4476a950a2937978d5eac472fc84a3e6de269406ba3731dc93",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "可以用mobile payments，但是大多数一些奢侈品品牌或者是一些mall里面。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.17910593003034592,
+      "request_wall_s": 0.20609970507211983
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-01278",
+      "variant": "terms",
+      "audio_sha256": "763884eaa3f6fc4476a950a2937978d5eac472fc84a3e6de269406ba3731dc93",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "可以用 mobile payments，但是大多数一些奢侈品品牌或者是一些 mall 里面。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1863032680703327,
+      "request_wall_s": 0.20913024607580155
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00999",
+      "variant": "terms",
+      "audio_sha256": "717524ccd7b0380793395dd970aa801963172e5af78a57ba199fca2b7055ba62",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "就是 hard choice.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.07346840400714427,
+      "request_wall_s": 0.0872746140230447
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00999",
+      "variant": "plain",
+      "audio_sha256": "717524ccd7b0380793395dd970aa801963172e5af78a57ba199fca2b7055ba62",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "It's a hard choice.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.10275498894043267,
+      "request_wall_s": 0.11538023396860808
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00311",
+      "variant": "plain",
+      "audio_sha256": "b1688bd1164fcba99ce8bd2c5b11600c8ec948e62980c7ea8d2f19e5e734c488",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "然后啊，或者是去book一个电影的票啊，或者是。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1802940130000934,
+      "request_wall_s": 0.20599056594073772
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00311",
+      "variant": "terms",
+      "audio_sha256": "b1688bd1164fcba99ce8bd2c5b11600c8ec948e62980c7ea8d2f19e5e734c488",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "然后啊，或者是去book一个电影的票啊，或者是。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1566658109659329,
+      "request_wall_s": 0.2638069619424641
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00748",
+      "variant": "terms",
+      "audio_sha256": "db649e263cad3e365ae184c20151b109ddd3f94083dfdd09982077b86270d39e",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "对他们来说，可以强化他们的 memory 啊什么的。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1568419560790062,
+      "request_wall_s": 0.17927417799364775
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00748",
+      "variant": "plain",
+      "audio_sha256": "db649e263cad3e365ae184c20151b109ddd3f94083dfdd09982077b86270d39e",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "对他们来说，可以强化他们的memory啊什么的。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.13168224599212408,
+      "request_wall_s": 0.14621587691362947
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00701",
+      "variant": "plain",
+      "audio_sha256": "ea51d95c1380916c4af33dafccb4594fec0669a55a2e790bb61ce9b1d8e4def2",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "He is faster, stronger, and more skillful than other players.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.18090080399997532,
+      "request_wall_s": 0.20927085995208472
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00701",
+      "variant": "terms",
+      "audio_sha256": "ea51d95c1380916c4af33dafccb4594fec0669a55a2e790bb61ce9b1d8e4def2",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "Is he is faster, stronger, and more skillful than other players.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.18050699797458947,
+      "request_wall_s": 0.216155000962317
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00612",
+      "variant": "terms",
+      "audio_sha256": "9a5ec0a3be91a61720def9270820a33b25b5a691acdb05d97415e05933dc343d",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "Like, like uh.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.08351193997077644,
+      "request_wall_s": 0.10722691193223
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00612",
+      "variant": "plain",
+      "audio_sha256": "9a5ec0a3be91a61720def9270820a33b25b5a691acdb05d97415e05933dc343d",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "Like, like uh.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.08162678102962673,
+      "request_wall_s": 0.09415284695569426
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00623",
+      "variant": "plain",
+      "audio_sha256": "3b7997be72446fa2a99883076e5f554f0a73f9c0d3e502cca21c2b63e8744adf",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "一个是 basketball，一个是 badminton。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.12306216603610665,
+      "request_wall_s": 0.15673059702385217
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00623",
+      "variant": "terms",
+      "audio_sha256": "3b7997be72446fa2a99883076e5f554f0a73f9c0d3e502cca21c2b63e8744adf",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "一个是 basketball, 一个是 badminton.",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.1145655830623582,
+      "request_wall_s": 0.13755032804328948
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00990",
+      "variant": "terms",
+      "audio_sha256": "eaa8309c1072ea612d71d01d0b5889977a677bec0d441bd662a7267016d9d94d",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef",
+      "status": "ok",
+      "text": "AI做出了一个错误的判断。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.11225414497312158,
+      "request_wall_s": 0.12431283795740455
+    },
+    {
+      "phase": "measured",
+      "repeat": 0,
+      "case_id": "ascend-00990",
+      "variant": "plain",
+      "audio_sha256": "eaa8309c1072ea612d71d01d0b5889977a677bec0d441bd662a7267016d9d94d",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "ok",
+      "text": "A.I.做出了一个错误的判断。",
+      "model": "Qwen3-ASR-1.7B",
+      "server_elapsed_s": 0.13381867902353406,
+      "request_wall_s": 0.14551243197638541
+    }
+  ],
+  "source_sha256": {
+    "asr_capture.py": "cf1f3646c2ca6efc25cc651559cdc41bf5698a657c95df94ec560c46a77e4deb",
+    "asr_scoring.py": "3d2b78ffa47e51dbde5640405e7c020ff9593ead5f17403f71b65ee04e143387"
+  },
+  "manifest_sha256": "9a105c49d5bc001d420efde59ed697f3fa1143200700cbbb55b0d12c409b24f2",
+  "variants_file_sha256": "45a9ed69b42159c2987c0bad0d86df963ff6cd03f5b1775591aeed86c88a6ac6",
+  "cases": [
+    {
+      "reference": "so you will walk slowly and slowly and then you you you should呃",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01094",
+      "audio_sha256": "701d2b9427a12077335a3afe48eabae83fd1bf35e02ba67334c9195c37e7de97",
+      "pcm_sha256": "f21a11141272024e532bc0f904a03ef34a946ca3d4aedead7455d7a3cbad4a56",
+      "input_samples": 77759,
+      "audio_s": 4.8599375
+    },
+    {
+      "reference": "那to be honest你觉得",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00933",
+      "audio_sha256": "2558cf3fe3912a729cd98ad000c093655904b1b9a0fa317793c3a5217cc1d9ec",
+      "pcm_sha256": "dc707c2894f2c4e909c35225dfdd6629fde07cff962e84ee6d7f33baf4c02104",
+      "input_samples": 30400,
+      "audio_s": 1.9
+    },
+    {
+      "reference": "对所以我们以后可以一起去play basketball",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00226",
+      "audio_sha256": "e36b10b007dc584975689d13d56cdcfa521250c248cd146f4074ea9d104ffbf9",
+      "pcm_sha256": "4c5c50c08a9dfa3716ef239ed53ae38ed7d71a248d2a1d798bc86ac82baf617e",
+      "input_samples": 36480,
+      "audio_s": 2.28
+    },
+    {
+      "reference": "个人的personalities还有那个",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00891",
+      "audio_sha256": "ed811da8545555fe6e79e33780284891a2f00fb39128d3b57fb7bc9594da0a01",
+      "pcm_sha256": "ea65e6b631e26084f06c3f8ff17d50e2062b0cba696298f77319665977ce3759",
+      "input_samples": 42560,
+      "audio_s": 2.66
+    },
+    {
+      "reference": "哦那个是那个是wind好像是做",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01157",
+      "audio_sha256": "bbbf1d5626e42da8de969e487744be1a04f2e68c82f64f6cc0e12d606e2a7ff0",
+      "pcm_sha256": "495d499c40fc2cc435750fa34814b5ac29ed1c4f72dc6f51e9969ad5e5d2a881",
+      "input_samples": 47040,
+      "audio_s": 2.94
+    },
+    {
+      "reference": "呃secrete方向走",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00428",
+      "audio_sha256": "25893e71e3f12fc8e585c1dfa1d519738de5f062b84a05c503040abb4d712476",
+      "pcm_sha256": "8013c536e13a47aaadb6eacffdfc7160ab999984cb59e171b446be53b2cc3222",
+      "input_samples": 27840,
+      "audio_s": 1.74
+    },
+    {
+      "reference": "就是会带我们组织一些activity",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00256",
+      "audio_sha256": "d000e6b2b428a0ac4f06bf6e92e54dc585f679169928ba14fc908848d386f690",
+      "pcm_sha256": "8609906ad01454150e8768c715ba963eba603ed1739f42f9d553972825439c10",
+      "input_samples": 47680,
+      "audio_s": 2.98
+    },
+    {
+      "reference": "还有呃so",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01166",
+      "audio_sha256": "85629310887f27f2125c9076e954fc8511e382bf56384b4418adc15c09fa0726",
+      "pcm_sha256": "d6f4c52e35898cbcc2b37dfcfe3e2ee1e6235d0a0093c197e602e963190e3068",
+      "input_samples": 20159,
+      "audio_s": 1.2599375
+    },
+    {
+      "reference": "所以但是跟那这跟major没关系的你说的major可能是哦我接下来要apply到graduate school的时候我要往computer science和往electric engineering",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00402",
+      "audio_sha256": "114d62b045c3929b62c5145795a7dc5a6e389e5ae76e6f9679bb164468fafd86",
+      "pcm_sha256": "929a9b03a39c513fca519c0ed4980a7f6cb7497e1fb871702a58229841599139",
+      "input_samples": 129920,
+      "audio_s": 8.12
+    },
+    {
+      "reference": "呃大概一千位的students",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00246",
+      "audio_sha256": "5146a62c3eba2a4e3986afb2db926b9e8a2760fc15cb08207fae812c14119cea",
+      "pcm_sha256": "b7ff4b6e4a48a767b5e4ed6bb727b42a57737e7e75fcd10d741c858e44b9724d",
+      "input_samples": 45440,
+      "audio_s": 2.84
+    },
+    {
+      "reference": "所以我上学期也学了python",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00081",
+      "audio_sha256": "7c4005cffd2701f5b8926d7248dcfe46249efd4429d3321d619b467845718bd4",
+      "pcm_sha256": "583bbb5e27dd6d3cb1fe5b5fc8a7b6fcf94f4baf8e77e346ad8e032f287c6570",
+      "input_samples": 29440,
+      "audio_s": 1.84
+    },
+    {
+      "reference": "想过但是因为最近project有点多",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00150",
+      "audio_sha256": "d5aff3578b2e61cd500e86bc6830e4b80e36ed82121f8518eff46868cc609481",
+      "pcm_sha256": "2b6ce207d0353497c3a4f238124545df070c322b663aada4bea1489e824bb491",
+      "input_samples": 44160,
+      "audio_s": 2.76
+    },
+    {
+      "reference": "可以用mobile payments但是大多数一些奢侈品品牌或者是一些mall里面",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-01278",
+      "audio_sha256": "763884eaa3f6fc4476a950a2937978d5eac472fc84a3e6de269406ba3731dc93",
+      "pcm_sha256": "4f2a75ba091af7a50baa18f3aba2a183abce04764ed3904ac6b076982580dfa4",
+      "input_samples": 80320,
+      "audio_s": 5.02
+    },
+    {
+      "reference": "就是hard choice",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00999",
+      "audio_sha256": "717524ccd7b0380793395dd970aa801963172e5af78a57ba199fca2b7055ba62",
+      "pcm_sha256": "1ad2219f69661dbb7efa0e3a817cbf7c2de72ef8c71a408f7033fe3f0dcd4ede",
+      "input_samples": 24960,
+      "audio_s": 1.56
+    },
+    {
+      "reference": "然后呃或者是去book一个电影的票啊或者是",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00311",
+      "audio_sha256": "b1688bd1164fcba99ce8bd2c5b11600c8ec948e62980c7ea8d2f19e5e734c488",
+      "pcm_sha256": "5168e35e3bc84350b78cdeb8c7f13a92b0bf4b6a9cd458e9dcc59095b86d3f44",
+      "input_samples": 94080,
+      "audio_s": 5.88
+    },
+    {
+      "reference": "对他们来说可以强化他们的memory呀什么的",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00748",
+      "audio_sha256": "db649e263cad3e365ae184c20151b109ddd3f94083dfdd09982077b86270d39e",
+      "pcm_sha256": "64b08f34a5b2dc45cf34e65c58da91ebe8f6ddb49d143c92b1bec24a75399c03",
+      "input_samples": 50880,
+      "audio_s": 3.18
+    },
+    {
+      "reference": "就是he's faster stronger and more scared for than the other players",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00701",
+      "audio_sha256": "ea51d95c1380916c4af33dafccb4594fec0669a55a2e790bb61ce9b1d8e4def2",
+      "pcm_sha256": "dc601f4ccbbc2b063875779b039361ddae97beeed65220a60d71f5567df448aa",
+      "input_samples": 103040,
+      "audio_s": 6.44
+    },
+    {
+      "reference": "like like呃",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00612",
+      "audio_sha256": "9a5ec0a3be91a61720def9270820a33b25b5a691acdb05d97415e05933dc343d",
+      "pcm_sha256": "92d5286c0bf19c64ea4fc2bbd1a838ca1e8ee96da4e33fd0bfd64f6e536d9419",
+      "input_samples": 41760,
+      "audio_s": 2.61
+    },
+    {
+      "reference": "一个是basketball一个是badminton",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00623",
+      "audio_sha256": "3b7997be72446fa2a99883076e5f554f0a73f9c0d3e502cca21c2b63e8744adf",
+      "pcm_sha256": "ffbfe694894ad4d2cae7c879fc8b320d3e436f69b2a261c83c9615b58c845307",
+      "input_samples": 43683,
+      "audio_s": 2.7301875
+    },
+    {
+      "reference": "AI做出了一个错误的判断",
+      "reference_kind": "human_transcript",
+      "transcript_reviewed": true,
+      "source": "human",
+      "id": "ascend-00990",
+      "audio_sha256": "eaa8309c1072ea612d71d01d0b5889977a677bec0d441bd662a7267016d9d94d",
+      "pcm_sha256": "3e7be681a9395b6cb3e10336c5eeed40e1253872895fe543f61dbbd93fd05bef",
+      "input_samples": 38720,
+      "audio_s": 2.42
+    }
+  ],
+  "variants": [
+    {
+      "id": "plain",
+      "context": "",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "terms",
+      "context": "agent, Pipecat, MiniCPM-o, DINet, FlashHead, StreamingTalker, VAD, ASR, WebRTC, Python",
+      "context_sha256": "bfa77437d84927b1b7a98a40c75179447d5ba96ba2942d522c55d871bec9fdef"
+    }
+  ],
+  "expected_model": "Qwen3-ASR-1.7B",
+  "declared_model_revision": null,
+  "reported_model_revision": null,
+  "rounds": 1,
+  "timeout_s": 30,
+  "order": "one warmup per variant, then rotate variants by round and case index",
+  "health_snapshot_sha256": "1e4b6b848c52e205f22bf2be3a13aa7d850c2ad3ed8f969ac284670cf654d183",
+  "reported_execution_metadata": {
+    "device": "cuda:0",
+    "dtype": "bfloat16",
+    "threads": null
+  },
+  "model_configuration_complete": false,
+  "planned_trials": 42,
+  "planned_measured_trials": 40,
+  "scoring": {
+    "schema_version": 1,
+    "normalization": "nfkc-casefold-no-punctuation-or-whitespace-v1",
+    "unit": "unicode_codepoint",
+    "aggregation": "sum_edits_divided_by_sum_reference_characters",
+    "quality_scope": "offline text comparison; no physical-device or perceptual quality claim",
+    "variants": {
+      "plain": {
+        "attempted": 20,
+        "succeeded": 20,
+        "failed": 0,
+        "complete": true,
+        "reference_groups": {
+          "human_transcript": {
+            "metric": "normalized_cer",
+            "attempted": 20,
+            "failed": 0,
+            "scored_cases": 20,
+            "reference_characters": 499,
+            "attempted_reference_characters": 499,
+            "rate_scope": "successful_nonempty_references_only",
+            "edit_count": 42,
+            "exact_match_cases": 10,
+            "empty_reference_cases": 0,
+            "empty_reference_nonempty_outputs": 0,
+            "empty_reference_inserted_characters": 0,
+            "rate": 0.0841683366733467,
+            "reference_character_coverage": 1.0,
+            "complete": true
+          }
+        },
+        "cases": [
+          {
+            "case_id": "ascend-00081@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 15,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00150@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 18,
+            "edit_count": 3,
+            "rate": 0.16666666666666666
+          },
+          {
+            "case_id": "ascend-00226@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 26,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00246@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 15,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00256@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 18,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00311@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 21,
+            "edit_count": 1,
+            "rate": 0.047619047619047616
+          },
+          {
+            "case_id": "ascend-00402@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 96,
+            "edit_count": 7,
+            "rate": 0.07291666666666667
+          },
+          {
+            "case_id": "ascend-00428@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 11,
+            "edit_count": 1,
+            "rate": 0.09090909090909091
+          },
+          {
+            "case_id": "ascend-00612@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 9,
+            "edit_count": 2,
+            "rate": 0.2222222222222222
+          },
+          {
+            "case_id": "ascend-00623@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 25,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00701@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 54,
+            "edit_count": 13,
+            "rate": 0.24074074074074073
+          },
+          {
+            "case_id": "ascend-00748@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 22,
+            "edit_count": 1,
+            "rate": 0.045454545454545456
+          },
+          {
+            "case_id": "ascend-00891@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 20,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00933@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 14,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00990@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 12,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00999@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 12,
+            "edit_count": 4,
+            "rate": 0.3333333333333333
+          },
+          {
+            "case_id": "ascend-01094@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 51,
+            "edit_count": 6,
+            "rate": 0.11764705882352941
+          },
+          {
+            "case_id": "ascend-01157@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 15,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-01166@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 5,
+            "edit_count": 4,
+            "rate": 0.8
+          },
+          {
+            "case_id": "ascend-01278@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 40,
+            "edit_count": 0,
+            "rate": 0.0
+          }
+        ]
+      },
+      "terms": {
+        "attempted": 20,
+        "succeeded": 20,
+        "failed": 0,
+        "complete": true,
+        "reference_groups": {
+          "human_transcript": {
+            "metric": "normalized_cer",
+            "attempted": 20,
+            "failed": 0,
+            "scored_cases": 20,
+            "reference_characters": 499,
+            "attempted_reference_characters": 499,
+            "rate_scope": "successful_nonempty_references_only",
+            "edit_count": 39,
+            "exact_match_cases": 11,
+            "empty_reference_cases": 0,
+            "empty_reference_nonempty_outputs": 0,
+            "empty_reference_inserted_characters": 0,
+            "rate": 0.0781563126252505,
+            "reference_character_coverage": 1.0,
+            "complete": true
+          }
+        },
+        "cases": [
+          {
+            "case_id": "ascend-00081@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 15,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00150@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 18,
+            "edit_count": 3,
+            "rate": 0.16666666666666666
+          },
+          {
+            "case_id": "ascend-00226@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 26,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00246@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 15,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00256@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 18,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00311@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 21,
+            "edit_count": 1,
+            "rate": 0.047619047619047616
+          },
+          {
+            "case_id": "ascend-00402@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 96,
+            "edit_count": 6,
+            "rate": 0.0625
+          },
+          {
+            "case_id": "ascend-00428@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 11,
+            "edit_count": 1,
+            "rate": 0.09090909090909091
+          },
+          {
+            "case_id": "ascend-00612@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 9,
+            "edit_count": 2,
+            "rate": 0.2222222222222222
+          },
+          {
+            "case_id": "ascend-00623@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 25,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00701@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 54,
+            "edit_count": 13,
+            "rate": 0.24074074074074073
+          },
+          {
+            "case_id": "ascend-00748@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 22,
+            "edit_count": 1,
+            "rate": 0.045454545454545456
+          },
+          {
+            "case_id": "ascend-00891@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 20,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00933@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 14,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00990@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 12,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-00999@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 12,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-01094@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 51,
+            "edit_count": 6,
+            "rate": 0.11764705882352941
+          },
+          {
+            "case_id": "ascend-01157@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 15,
+            "edit_count": 0,
+            "rate": 0.0
+          },
+          {
+            "case_id": "ascend-01166@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 5,
+            "edit_count": 6,
+            "rate": 1.2
+          },
+          {
+            "case_id": "ascend-01278@r0",
+            "status": "ok",
+            "reference_kind": "human_transcript",
+            "reference_characters": 40,
+            "edit_count": 0,
+            "rate": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "publication": {
+    "raw_sha256": "74f4eaab14fd4fa26c42cd610921cf69956b071c19befd8b0a82c3c58583b5fd",
+    "removed": [
+      "endpoint"
+    ],
+    "reference_review": "ASCEND annotators; no VoxaStage listening review",
+    "license": "CC-BY-SA-4.0"
+  }
+}
