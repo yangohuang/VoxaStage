@@ -1,0 +1,174 @@
+{
+  "series": "实时数字人，从模型到交互",
+  "audience": "AI工程师、数字人/多模态开发者和技术面试官",
+  "source_commit": "dd44878",
+  "timezone": "Asia/Shanghai",
+  "cadence": "每周三20:00，首次发布日由账号实际排期确定；不创建自动发布任务",
+  "first_batch": [
+    "01",
+    "02",
+    "03"
+  ],
+  "publication_started": false,
+  "articles": [
+    {
+      "id": "01",
+      "title": "做一个能听、能说、能行动的数字人，需要哪些模块？",
+      "file": "articles/01-system-map.md",
+      "status": "draft",
+      "body_han_range": [
+        2200,
+        2800
+      ],
+      "cover": "assets/01-cover.png",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "02",
+      "title": "级联还是端到端？把两条语音链路放进同一个系统之后",
+      "file": "articles/02-cascade-and-omni.md",
+      "status": "draft",
+      "body_han_range": [
+        2800,
+        3500
+      ],
+      "cover": "assets/02-cover.png",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "03",
+      "title": "用户说“停一下”之后，语音 Agent 还要处理什么？",
+      "file": "articles/03-interruption-and-tools.md",
+      "status": "draft",
+      "body_han_range": [
+        3000,
+        3800
+      ],
+      "cover": "assets/03-cover.png",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "04",
+      "title": "DINet 接入实战：为什么推理能跟上，数字人还是会卡？",
+      "file": "briefs/04-dinet.md",
+      "status": "brief",
+      "readiness": "已有固定部署对照；写作前复核图表与版本",
+      "body_range": "2800–3500",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "05",
+      "title": "把 FlashHead 接进实时对话：从生成视频到持续播放",
+      "file": "briefs/05-flashhead.md",
+      "status": "brief",
+      "readiness": "已有接入材料；效果录像需准备",
+      "body_range": "2500–3200",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "06",
+      "title": "StreamingTalker：浏览器如何让三维人脸跟着声音说话？",
+      "file": "briefs/06-streamingtalker.md",
+      "status": "brief",
+      "readiness": "已有网格与服务材料；效果录像需准备",
+      "body_range": "3000–3800",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "07",
+      "title": "声音、视频、网格各跑各的，怎么才能同步？",
+      "file": "briefs/07-media-clock.md",
+      "status": "brief",
+      "readiness": "已有播放器与采集材料；代表作",
+      "body_range": "3000–4000",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "08",
+      "title": "从真人嘴型到卡通企鹅：一次 3D 嘴部重定向实践",
+      "file": "briefs/08-cartoon-mouth.md",
+      "status": "brief",
+      "readiness": "已有单自由度回放证据；在线效果待验收",
+      "body_range": "2500–3300",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "09",
+      "title": "角色有六个动作，怎样从“轮播素材”走向交互？",
+      "file": "briefs/09-action-orchestration.md",
+      "status": "brief",
+      "readiness": "后续实现门槛；不作为已交付能力",
+      "body_range": "3000–4000",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "10",
+      "title": "语音 Agent 的每一个判断，都需要大模型生成一段话吗？",
+      "file": "briefs/10-jev-decision.md",
+      "status": "brief",
+      "readiness": "可写原理和候选设计；接入未确认",
+      "body_range": "2500–3200",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "11",
+      "title": "规则、LLM、JEV：谁更适合做实时交互决策？",
+      "file": "briefs/11-decision-evaluation.md",
+      "status": "brief",
+      "readiness": "待独立实验；代表作",
+      "body_range": "3200–4200",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "12",
+      "title": "数字人 Demo 跑通之后，怎样证明它真的可用？",
+      "file": "briefs/12-acceptance.md",
+      "status": "brief",
+      "readiness": "收官条件取决于验收；可诚实报告缺口",
+      "body_range": "3000–4000",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "S1",
+      "title": "“语音 agent”为什么总被听错？中英混合识别的排查与评测",
+      "file": "briefs/S1-mixed-asr.md",
+      "status": "brief",
+      "readiness": "储备：可写固定输入实验与局限",
+      "body_range": "2500–3500",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "S2",
+      "title": "识别明明正确，回答为什么仍然跑题？一次模型与提示对照",
+      "file": "briefs/S2-reply-quality.md",
+      "status": "brief",
+      "readiness": "储备：已有负结果与分段执行证据",
+      "body_range": "2800–3800",
+      "wechat_url": null,
+      "published_at": null
+    },
+    {
+      "id": "S3",
+      "title": "数字人看过一张图，就等于知道现在发生什么吗？",
+      "file": "briefs/S3-visual-time.md",
+      "status": "brief",
+      "readiness": "储备：已有静态图与时间上下文实验",
+      "body_range": "2800–3500",
+      "wechat_url": null,
+      "published_at": null
+    }
+  ]
+}

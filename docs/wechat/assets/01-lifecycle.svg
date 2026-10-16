@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1272" viewBox="0 0 1080 1272">
+<rect width="1080" height="1272" fill="#f4f7fa"/>
+<text x="60" y="42" font-family="Noto Sans CJK SC, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#007e87">VOXASTAGE  /  实时数字人，从模型到交互</text>
+<text x="60" y="100" font-family="Noto Sans CJK SC, sans-serif" font-size="46" dominant-baseline="text-before-edge" fill="#163044">用户改口，系统如何收尾？</text>
+<text x="60" y="168" font-family="Noto Sans CJK SC, sans-serif" font-size="30" dominant-baseline="text-before-edge" fill="#476579">交互机制示意，不代表实测耗时</text>
+<rect x="55" y="235" width="970" height="195" rx="20" fill="#ffffff" stroke="#d9e4eb" stroke-width="2"/>
+<rect x="55" y="235" width="8" height="195" rx="20" fill="#007e87" stroke="#007e87" stroke-width="2"/>
+<text x="88" y="259" font-family="Noto Sans CJK SC, sans-serif" font-size="38" dominant-baseline="text-before-edge" fill="#007e87">01 / 停止旧播放</text>
+<text x="88" y="318" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">停止音源，清理排队媒体</text>
+<text x="88" y="366" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">让当前可见、可听输出停止</text>
+<path d="M540 435v32m-10 -9l10 15 10 -15" stroke="#007e87" stroke-width="4" fill="none"/>
+<rect x="55" y="473" width="970" height="195" rx="20" fill="#ffffff" stroke="#d9e4eb" stroke-width="2"/>
+<rect x="55" y="473" width="8" height="195" rx="20" fill="#007e87" stroke="#007e87" stroke-width="2"/>
+<text x="88" y="497" font-family="Noto Sans CJK SC, sans-serif" font-size="38" dominant-baseline="text-before-edge" fill="#007e87">02 / 取消旧任务</text>
+<text x="88" y="556" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">旧话轮失效，尝试取消计算</text>
+<text x="88" y="604" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">取消信号不等于计算立即结束</text>
+<path d="M540 673v32m-10 -9l10 15 10 -15" stroke="#007e87" stroke-width="4" fill="none"/>
+<rect x="55" y="711" width="970" height="195" rx="20" fill="#ffffff" stroke="#d9e4eb" stroke-width="2"/>
+<rect x="55" y="711" width="8" height="195" rx="20" fill="#007e87" stroke="#007e87" stroke-width="2"/>
+<text x="88" y="735" font-family="Noto Sans CJK SC, sans-serif" font-size="38" dominant-baseline="text-before-edge" fill="#007e87">03 / 拒绝迟到结果</text>
+<text x="88" y="794" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">检查任务与话轮的有效性</text>
+<text x="88" y="842" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">旧工具、音频和画面不能接管新轮</text>
+<path d="M540 911v32m-10 -9l10 15 10 -15" stroke="#007e87" stroke-width="4" fill="none"/>
+<rect x="55" y="949" width="970" height="195" rx="20" fill="#ffffff" stroke="#d9e4eb" stroke-width="2"/>
+<rect x="55" y="949" width="8" height="195" rx="20" fill="#007e87" stroke="#007e87" stroke-width="2"/>
+<text x="88" y="973" font-family="Noto Sans CJK SC, sans-serif" font-size="38" dominant-baseline="text-before-edge" fill="#007e87">04 / 修正模型历史</text>
+<text x="88" y="1032" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">保留确认播完的完整语句段</text>
+<text x="88" y="1080" font-family="Noto Sans CJK SC, sans-serif" font-size="36" dominant-baseline="text-before-edge" fill="#163044">未确认内容记录为中断</text>
+<text x="60" y="1217" font-family="Noto Sans CJK SC, sans-serif" font-size="27" dominant-baseline="text-before-edge" fill="#476579">上下文依据段级播放确认；不等于逐词或声学确认。</text>
+</svg>
