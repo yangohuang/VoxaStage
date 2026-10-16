@@ -1,0 +1,274 @@
+{
+  "status": "failed",
+  "model": "Qwen3-4B",
+  "scope": "Precision diagnostic with12new authored text questions and2historical anchors; not a public benchmark, blind test, ASR test or production deployment. Score final answers and additional factual errors separately.",
+  "precision": "bf16",
+  "started_utc": "2026-10-16T09:17:54.332280+00:00",
+  "manifest_sha256": "bbbd1cb393dcf9b8e4a0290a034da4505f689b95f5555272161b23e72d2bba3e",
+  "collector_sha256": "60385371cd41e63c9a66798375708dfeae1b2b55391e0d19aa67be861cb2849c",
+  "rows": [
+    {
+      "case": "tail-choice",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "tail-choice",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "median-choice",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "median-choice",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "unknown-mean",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "unknown-mean",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "bf16-size",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "bf16-size",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "nf4-size",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "nf4-size",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "updated-facts",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "updated-facts",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "late-tool",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "late-tool",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "unexecuted-action",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "unexecuted-action",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "stale-snapshot",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "stale-snapshot",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "quoted-instruction",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "quoted-instruction",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "retrieval-triage",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "retrieval-triage",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "mixed-term-copy",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "mixed-term-copy",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "anchor-triage-original",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "anchor-triage-original",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "anchor-given-measurements",
+      "condition": "sample-direct",
+      "seed": 43,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    },
+    {
+      "case": "anchor-given-measurements",
+      "condition": "sample-direct",
+      "seed": 17,
+      "status": "pending",
+      "chunks": [],
+      "text": "",
+      "token_ids": []
+    }
+  ],
+  "warmup": null,
+  "minimum_free_bytes": 11811160064,
+  "quantization": "none, BF16 weights and computation",
+  "device": {
+    "name": "NVIDIA GeForce RTX 4090",
+    "total_bytes": 25243287552,
+    "free_at_admission_bytes": 4719050752,
+    "free_before_load_bytes": null
+  },
+  "error_type": "RuntimeError",
+  "finished_utc": "2026-10-16T09:17:56.391920+00:00"
+}
